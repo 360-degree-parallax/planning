@@ -1,25 +1,6 @@
 // AI 캐릭터 채팅 · 서브컬처 보강 (여성향·BL·남성향·공식 IP·글로벌, 2026-11-27 출처 확인)
 // 우리 적용은 질문권 Q&A(ask) 관점: 재화 단위, 답변 분량의 가치, 관계·호감도, 니치 장르, 창작자 정산, 성별 세그먼트
 
-# melting | 대화할수록 오르는 호감도를 파는 여성향 캐챗 | AI 채팅·캐릭터 서브컬처 | real | 앱스토어, 멜팅 약관·채용 공고
-D: deep
-S: 와트니의 멜팅은 AI 남자친구 같은 캐릭터와 연애하듯 대화하는 여성향 캐릭터 채팅이다. 대화할수록 실시간으로 바뀌는 호감도가 보이고, 기능을 쓸 때 '콘'이라는 포인트를 쓴다.
-X: AI 연인 대화가 딱딱하고 매번 처음 만나는 것 같다
-P: 대화가 쌓여도 '관계가 깊어진다'는 느낌이 없었다
-- O co | 캐릭터 수를 늘린다 | 캐릭터 채팅 앱 모두가 하는 경쟁이다 | 뻔함 || barrier=competition; holder=AI 캐릭터 채팅 앱
-- B cu | 호감도를 숫자로 보여 주고 오를수록 대화가 달라지게 한다 | 대화형 AI는 자연스러워야 하고 게임 장치는 몰입을 깬다는 통념 | 장르의 맹점 || barrier=belief; holder=대화형 AI 업계; ev=https://apps.apple.com/kr/app/id6745810835; test=질문권 구매자의 '나의 사주 캐릭터' 친밀도(질문 수에 따라 해석 말투가 깊어짐)를 보여 주는 군과 없는 군의 다음 질문률 비교; metric=next_question_rate
-- T ti | 어제 대화와 취향을 기억하게 한다 | 긴 맥락·기억 기능이 싸져서 관계 연출이 가능해졌다 | 기술 변화 || barrier=tech_change; holder=단기 대화 챗봇; changed=장기 기억·긴 맥락 LLM; year=2025
-- I cn | 모든 캐릭터를 회사가 직접 만든다 | 취향이 세분화돼 회사 제작만으로는 감당할 수 없다 | 비용 || barrier=cost; holder=캐릭터 제작비
-= 호감도 모드 + 감정 기억 + 이용자 캐릭터 제작, 포인트(콘) 과금
-L: '관계가 쌓인다'는 표시가 다음 대화의 이유가 된다. 사주 질문권에서도 '내 사주를 아는 해석가'가 질문 이력을 기억하면 다음 질문이 쉬워진다.
-R: https://apps.apple.com/kr/app/id6745810835
-R: https://intercom.help/melting/ko/articles/14075886-멜팅-운영-정책
-R: https://www.wanted.co.kr/wd/373940
-M: freemium | growth | b2c | kr
-K: next_question_rate | 관계가 쌓이지 않는 대화
-T: ask | 질문 이력을 기억해 답변 첫 줄에 '지난번 물으신 이직 이야기와 이어서 보면'처럼 잇는다. 질문 수가 쌓일수록 해석이 깊어진다는 표시(내 사주 해석 노트)를 보여 주되, 숫자 경쟁·뽑기 장치는 쓰지 않는다
-O: revenue | 출시 | 출시 4개월 만에 손익분기점, 한국 앱 마켓 전체 매출 30위 안(여성향 AI 캐릭터 1위) | 회사 채용 공고 기준 | https://www.wanted.co.kr/wd/373940
-
 # whif | 후발주자가 BL 하나로 월 56억을 만들다 | AI 채팅·캐릭터 서브컬처 | real | 바이라인네트워크, 벤처스퀘어
 D: deep
 S: 벙커키즈는 2025년 7월 캐릭터 채팅 위프(WHIF)를 한국·대만·태국에 내놓았다. 제타·크랙이 이끄는 시장에 늦게 들어가면서 BL(남성 간 로맨스) 장르에 집중했다. 출시 1년 2개월 만인 2026년 9월 월 매출 56억 원을 냈다.
@@ -39,24 +20,6 @@ K: ticket_purchase_rate | 니치 장르의 설정 붕괴
 T: ask | 니치 고민(동성 커플 궁합, 재회, 이혼 후 재혼) 질문은 전용 프롬프트로 답한다. 성별·관계 설정을 질문 전에 고르게 해 '그녀/그'를 틀리지 않게 하고, 이 입구를 광고 소재로 따로 시험한다
 O: revenue | 2025년 7월 출시 | 2026년 9월 월 매출 56억 원, 결제자 하루 평균 217분, 해외 매출 비중 40% | 회사 발표 | https://byline.network/2026/10/83492804328940/
 
-# rofan-ai | 로판 주인공과 대화하는 여성 크리에이터 생태계 | AI 채팅·캐릭터 서브컬처 | real | 로판AI 약관 정리, 나무위키, 이오플래닛
-D: deep
-S: 커뮤트의 로판AI는 로맨스판타지 웹툰·소설 속 주인공 같은 캐릭터와 대화하는 웹 서비스다. BL·HL·오메가버스 같은 여성향 태그가 촘촘하고, 여성 크리에이터가 주로 캐릭터를 만든다. 포인트를 팔고 가입 때와 24시간마다 무료 포인트를 준다.
-X: 장르 팬은 많은데 원하는 설정의 캐릭터를 찾기 어렵다
-P: 장르 문법(로판·오메가버스)을 아는 사람이 직접 캐릭터를 만들 공간이 필요했다
-- O co | 범용 캐릭터 채팅에 장르 카테고리를 단다 | 다들 하는 분류지만 장르 팬이 원하는 깊이가 안 나온다 | 뻔함 || barrier=competition; holder=범용 캐릭터 채팅
-- B ch | 장르 팬(여성 크리에이터)이 캐릭터를 만들고 태그로 찾게 한다 | 콘텐츠 품질은 회사가 관리해야 한다는 통념 | 통제의 맹점 || barrier=belief; holder=콘텐츠 플랫폼 업계; ev=https://eopla.net/magazines/29959
-- T pr | 24시간마다 무료 포인트를 줘 매일 들어오게 한다 | 포인트 원가(LLM 단가)가 낮아져 매일 무료 지급이 감당 가능해졌다 | 원가 변화 || barrier=tech_change; holder=유료 전용 채팅; changed=LLM 단가 하락; year=2024; ev=https://braindetox.kr/posts/rofan_ai_service_explained_2026.html; test=결과 구매자에게 '매주 1회 무료 짧은 질문'을 주는 군과 없는 군의 30일 재방문·질문권 매출 비교; metric=revisit_7d
-- I cn | 이미지로 캐릭터 외형을 인식시킨다 | 이미지 인식을 지원하지 않아 외형도 모두 글로 적어야 한다 | 기술 한계 || barrier=technology; holder=텍스트 전용 서비스 구조
-= 여성향 장르 태그 + 크리에이터 제작 캐릭터 + 포인트 판매·주기적 무료 포인트
-L: 장르를 아는 사람이 만든 캐릭터가 장르 팬을 붙잡는다. 주기적 무료 포인트는 재방문 장치다.
-R: https://braindetox.kr/posts/rofan_ai_service_explained_2026.html
-R: https://namu.moe/w/Rofan%20AI
-R: https://eopla.net/magazines/29959
-M: freemium | growth | c2c | kr
-K: revisit_7d | 장르 팬의 재방문
-T: ask | 리포트 구매자에게 '이번 주 한 줄 운세 질문' 무료 1회를 매주 주고, 답변 끝에 유료 질문권으로 이어지는 추천 질문을 붙인다. 무료 질문 원가 상한을 먼저 정한다
-
 # playtoon | 답 한 번에 웹소설 한 화, 글자 수로 파는 가성비 | AI 채팅·캐릭터 서브컬처 | real | 앱스토어, 포스타입 후기
 D: deep
 S: 플레이툰은 여성향 AI 채팅이다. 메시지 하나가 짧은 대답이 아니라 약 2000자의 '장면'으로 나오고, 웹소설 한 편보다 싸게 수십 편의 이야기를 만든다는 '글자 수 대비 가성비'를 내세운다. 분기점을 만들어 다른 엔딩을 볼 수 있다.
@@ -73,26 +36,6 @@ R: https://www.postype.com/@reviewingnoa/post/22093294
 M: pay_per_unit | early | b2c | kr
 K: answer_satisfaction | 단답과 비싼 재화
 T: ask | 질문권 1회 답변의 구성을 고정한다(결론 한 줄 · 명식 근거 · 시기 · 할 일 3가지, 약 1000~1500자). 결제 화면에 '이 분량으로 답합니다'를 예시와 함께 보여 준다
-
-# caveduck | 남성 크리에이터가 모인 '검열 없는' 캐챗 | AI 채팅·캐릭터 서브컬처 | real | 앱스토어, 유니콘팩토리, 이오플래닛
-D: deep
-S: 워프스페이스의 케이브덕은 이용자가 캐릭터를 만들어 공개·공유하고 대화하는 플랫폼이다. 남성 크리에이터 커뮤니티가 중심이고, 성인 인증 이용자에게 허용 범위가 넓다. 호감도·TRPG 주사위 같은 규칙을 직접 짜는 커스텀 프롬프트를 준다. 2026년 4월 시리즈A 43억 원을 받았다.
-X: 대형 캐릭터 채팅은 회피·설교 답변이 많아 성인 이용자가 떠난다
-P: 성인 이용자는 자기가 깐 상황극에 AI가 충실히 따라오길 원했다
-- O co | 대형 플랫폼과 같은 필터를 쓴다 | 차별이 없고 이용자가 다른 곳으로 옮긴다 | 뻔함 || barrier=competition; holder=대형 캐릭터 채팅
-- B cu | 성인 인증자에게 허용 범위를 넓히고 규칙(호감도·주사위)을 직접 만들게 한다 | 안전을 위해 모두에게 같은 필터를 써야 한다는 통념 | 일괄 필터의 맹점 || barrier=belief; holder=AI 채팅 업계; ev=https://namu.moe/w/CAVEDUCK; test=성인 인증 남성 이용자에게 '직설형 해석(돌려 말하지 않음)' 톤을 고르게 한 군과 기본 톤 군의 답변 만족도 비교; metric=answer_satisfaction
-- I cn | 미성년자 확인 없이 성인 콘텐츠를 연다 | 청소년 보호 규제와 앱 마켓 정책상 할 수 없다 | 규제 || barrier=regulation; holder=청소년 보호 규제·앱 마켓 정책
-- T ch | 캐릭터 공유로 크리에이터가 수익을 얻게 한다 | 캐릭터 채팅 이용량이 커지며 크리에이터 정산이 가능한 규모가 됐다 | 시장 변화 || barrier=market_change; holder=회사 제작 캐릭터; changed=캐릭터 채팅 이용 급증; year=2025
-= 캐릭터 제작·공유 + 크리에이터 수익 + 성인 인증 기반 넓은 허용 범위 + 커스텀 프롬프트
-L: 남성 이용자는 '돌려 말하지 않는 답'과 '내가 짠 규칙대로 움직이는 AI'를 원했다. 사주 질문에서도 남성 고객용 직설 톤이 따로 필요할 수 있다.
-R: https://www.unicornfactory.co.kr/article/2026040210374894277
-R: https://apps.apple.com/us/app/id6651829734
-R: https://namu.moe/w/CAVEDUCK
-R: https://eopla.net/magazines/29959
-M: freemium | growth | c2c | kr
-K: answer_satisfaction | 회피·설교 답변
-T: ask | 답변 톤 선택에 '직설형'을 둔다(결론 먼저, 위로 문장 최소화, 숫자·시기 중심). 남성 이용자와 재물·사업 질문에서 먼저 시험한다. 성적 주제는 성인 인증과 무관하게 다루지 않는다
-O: visitors | - | 앱스토어 소개 기준 30만 명 이용, 캐릭터 4만 개 이상 | 회사 표기 | https://apps.apple.com/us/app/id6651829734
 
 # babechat | 투자 없이 MRR 10억, 남성향 캐챗 | AI 채팅·캐릭터 서브컬처 | real | 이오플래닛, 베이비챗 도움말
 D: deep
@@ -112,25 +55,6 @@ M: freemium | growth | c2c | kr
 K: revenue | 무료 원가와 유료 이탈 사이
 T: ask | 질문권을 '빠른 답(짧은 결론)'과 '깊은 답(명식 근거·시기·행동 제안, 상위 모델)' 두 등급으로 나눈다. 빠른 답 끝에 '깊게 보기'를 붙여 업그레이드로 잇는다
 O: revenue | 2024년 매출 15억 원, MAU 10만 명 | MRR 10억 원, MAU 20만 명, 누적 메시지 4억 건 | 대표 공개 글 기준 | https://eopla.net/magazines/31537
-
-# grok-ani | 애니 캐릭터가 다운로드는 늘렸지만 돈은 덜 벌었다 | AI 채팅·캐릭터 서브컬처 | real | TechCrunch, Sensor Tower
-D: deep
-S: xAI는 2025년 7월 14일 Grok 앱에 3D 애니메이션 동반자 'Ani'를 넣었다. 호감도·의상 변경 같은 기능은 월 30달러 SuperGrok 구독자용이다. 일본 앱스토어 1위에 오르고 일본 DAU가 두 배 넘게 늘었다. 그러나 출시 다음 날 iOS 다운로드는 40% 늘었는데 매출은 9%만 늘었다.
-X: 남성향 캐릭터가 화제를 모았지만 매출로 덜 이어졌다
-P: 화제성 높은 캐릭터는 유입을 만들지만, 결제 이유는 다른 데(새 모델 성능)에 있었다
-- O ch | 화제 캐릭터를 더 추가한다 | 흔한 화제성 마케팅이다 | 뻔함 || barrier=competition; holder=AI 앱
-- B cu | 캐릭터 노출 자체보다 결제 이유(유료 기능)를 분명히 묶는다 | 화제가 되면 매출은 따라온다는 통념 | 화제성의 맹점 || barrier=belief; holder=소비자 앱 마케팅; ev=https://techcrunch.com/2025/07/21/groks-ai-companions-drove-downloads-but-its-latest-model-is-the-one-making-money; test=광고 소재를 '캐릭터 화제형'과 '내 질문에 답한다형'으로 나눠 유입당 질문권 매출 비교; metric=roas
-- T be | 애니 문화가 강한 일본에서 먼저 터진다 | 애니·서브컬처 소비 문화가 3D 캐릭터 동반자를 바로 받아들였다 | 문화·행동 || barrier=behavior_change; holder=텍스트 챗봇; changed=3D 실시간 캐릭터 동반자 등장; year=2025
-- I cn | 선정적 캐릭터를 모든 연령에 연다 | 선정성 논란과 미성년자 보호 문제로 지속할 수 없다 | 사회적 수용 || barrier=social; holder=사회적 비판·앱 마켓 정책
-= 애니 동반자 Ani(호감도·의상은 월 30달러 구독), 일본 1위·DAU 두 배, 매출 증가는 제한적
-L: 화제 캐릭터는 유입 비용을 낮추지만 결제는 '쓸모'가 만든다. 사주 광고에서 캐릭터 화제성과 질문 답변의 쓸모를 나눠 재야 한다.
-R: https://techcrunch.com/2025/07/21/groks-ai-companions-drove-downloads-but-its-latest-model-is-the-one-making-money
-R: https://sensortower.com/ja/blog/grok-with-ani-JP
-R: https://www.newsis.com/view/NISX20250718_0003257740
-M: subscription | scale | b2c | global
-K: roas | 화제성 대비 낮은 결제 전환
-T: acquire | 1p 주인공 캐릭터 화제형 광고와 '이 질문에 답합니다'형 광고를 나눠 유입당 리포트·질문권 매출을 비교한다. 남성 대상 소재에서 선정적 캐릭터는 쓰지 않는다
-O: revenue | 동반자 출시 전날 | 출시 다음 날 iOS 다운로드 40% 증가(하루 17만 1000건), 매출은 9% 증가(33만 7000달러) | Appfigures 집계 | https://techcrunch.com/2025/07/21/groks-ai-companions-drove-downloads-but-its-latest-model-is-the-one-making-money
 
 # crack-kr | 크래커 1개 1원, 대화량만큼 내는 캐챗 | AI 채팅·캐릭터 서브컬처 | real | 머니투데이, 지디넷, 딜사이트
 D: deep
@@ -162,7 +86,7 @@ P: 한국에서 검증한 '팬덤이 이야기를 오래 소비하는 구조'를
 - T ti | 북미에 캐릭터 채팅 수요가 커진 시점에 들어간다 | Character.AI가 미성년자 자유 대화를 막고 성인 이용자 대안 수요가 생겼다 | 시장 변화 || barrier=market_change; holder=Character.AI 중심 북미 시장; changed=Character.AI 정책 변화와 대안 수요; year=2026; test=일본어 사주 결과·질문권을 일본 이용자 소수에게 시범 판매하고 결제율을 국내와 비교; metric=ticket_purchase_rate
 - I cn | 한국 콘텐츠를 그대로 번역해 낸다 | 캐릭터 말투·관계성은 기계 번역만으로 살지 않아 현지화 인력이 필요하다 | 비용 || barrier=cost; holder=현지화 인력
 = 일본 캬라푸·북미 OOC 현지 브랜드, 현지화 번역팀, 해외 매출이 국내 추월
-L: 하위 사례 kyarapu · ooc-na 참고. 서브컬처 팬덤 구조는 국경을 넘는다. 사주는 문화 맥락이 강해 그대로는 어렵지만, 일본(점술 문화)처럼 가까운 시장은 질문권 단위로 먼저 시험할 수 있다.
+L: 하위 사례 ooc-na · crack-pricing 참고. 서브컬처 팬덤 구조는 국경을 넘는다. 사주는 문화 맥락이 강해 그대로는 어렵지만, 일본(점술 문화)처럼 가까운 시장은 질문권 단위로 먼저 시험할 수 있다.
 R: https://news.mtn.co.kr/news-detail/2026082606521087869
 R: https://www.wanted.co.kr/wd/397768
 R: https://quasa.io/ko/media/rwiteun-gieobgaci-1jo-weon-dolpabugmi-weolmaecul-100eog-weoni-mandeun-banjeon

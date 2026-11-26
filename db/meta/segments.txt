@@ -51,49 +51,20 @@ webvan | all
 calm | user_type:new; time_band:dawn,night
 justanswer | user_type:buyer
 intercom-fin | user_type:buyer
-poe-ppm | user_type:buyer
 costar-ask | user_type:buyer
 keen-psychic | user_type:buyer
-kasamba-audition | user_type:buyer,returning
-nebula-chat | user_type:buyer; age_band:30s,40s,50s+
-bing-turn-cap | user_type:buyer
-chatgpt-plus | user_type:buyer
-askup | user_type:buyer; device:mobile
-wrtn-free | user_type:buyer
 duolingo-explain | user_type:buyer
-chatgpt-kakao | user_type:buyer; device:mobile; channel:referral
 perplexity-cite | user_type:buyer
 chegg-ai | user_type:buyer; age_band:10s,20s
-stackoverflow-ai | user_type:buyer
-inflection-pi | user_type:buyer
 air-canada-bot | all
-bard-demo | user_type:new; channel:meta_ads,tiktok_ads,google_ads
-nyc-mycity | user_type:buyer; topic:health,money,career
-chevy-bot | all
-dpd-bot | user_type:buyer
-google-aio | user_type:buyer
 neda-tessa | all
-snap-myai | user_type:buyer
-klarna-ai | user_type:buyer
-klarna-rehire | user_type:buyer; age_band:40s,50s+
 naver-expert | user_type:buyer; topic:love,career
 hellobot | user_type:buyer; age_band:10s,20s
-cai-monetize | user_type:buyer
-cai-teen | age_band:10s
-replika-erp | user_type:buyer,returning
 iruda | user_type:buyer; topic:love,family
 zeta | age_band:10s,20s
-meta-personas | user_type:buyer
-chai-ugc | user_type:buyer
-woebot | user_type:buyer; topic:health,family
-speak-tutor | user_type:buyer; topic:love,money
-melting | user_type:buyer; gender:f; age_band:20s,30s
 whif | user_type:buyer; gender:f; topic:love
-rofan-ai | user_type:buyer,returning; gender:f
 playtoon | user_type:buyer; gender:f
-caveduck | user_type:buyer; gender:m; topic:money,career
 babechat | user_type:buyer; gender:m
-grok-ani | user_type:new; gender:m; channel:meta_ads,tiktok_ads,google_ads
 crack-kr | user_type:buyer; age_band:10s,20s
 crack-global | user_type:new
 naver-charchat | user_type:buyer; age_band:10s,20s
@@ -104,10 +75,15 @@ crack-spinoff | user_type:buyer,returning
 crack-creator | user_type:buyer; topic:career,love
 crack-memory | user_type:returning,buyer
 crack-teen | age_band:10s
-kyarapu | user_type:new,buyer
 ooc-na | user_type:buyer; age_band:10s,20s
 wrtn-pnl | all
 crack-pricing | user_type:buyer
 sajuai | user_type:new; age_band:20s,30s; channel:referral,organic_sns
 tight-saju | user_type:new; gender:f; age_band:20s,30s; topic:love
 tight-reunion | user_type:buyer; gender:f; age_band:20s,30s; topic:love
+tight-seo | user_type:new; gender:f; age_band:20s,30s; channel:naver_search,organic_sns,meta_ads
+tight-popup | user_type:buyer; age_band:20s,30s; channel:organic_sns,referral
+tight-trust | user_type:buyer
+tight-ip | user_type:buyer
+tight-adult | user_type:new; gender:f; age_band:20s,30s; topic:love
+tight-growth | user_type:new; channel:meta_ads,tiktok_ads

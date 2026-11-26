@@ -59,6 +59,7 @@ L = f'''# planning
 | [docs/idea-validation.md](docs/idea-validation.md) | 우리 아이디어의 적합성(Fit) 검증 + Why not yet |
 | [docs/crack-deep-dive.md](docs/crack-deep-dive.md) | 크랙·캬라푸·OOC 단계별 딥다이브 (타임라인·수익·원가·위험·질문권 적용 우선순위) |
 | [docs/saju-rivals-deep.md](docs/saju-rivals-deep.md) | 사주아이·타이트사주 딥다이브와 우리 서비스 비교 |
+| [docs/tightsaju-deep-dive.md](docs/tightsaju-deep-dive.md) | 타이트사주 단계별 딥다이브(유입·팝업·신뢰·IP·니치·성장) |
 | [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |
 | [docs/compliance.md](docs/compliance.md) | 실험 전 확인할 규정 체크리스트 |
 | [docs/tracking-plan.md](docs/tracking-plan.md) | 단계별 이벤트 정의 (도달 수 집계 기준) |

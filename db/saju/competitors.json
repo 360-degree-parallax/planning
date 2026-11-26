@@ -211,23 +211,6 @@
     "https://apps.apple.com/app/id1264782561",
     "https://www.bustle.com/life/co-star-astrology-app-ai-feature"
    ]
-  },
-  {
-   "id": "nebula",
-   "name": "Nebula (해외)",
-   "company": "OBRIO",
-   "model": "pay_per_unit",
-   "scale": "공개 수치 없음",
-   "case": "nebula-chat",
-   "has": {
-    "human_consult": true,
-    "free_question": true,
-    "currency": true
-   },
-   "notes": "사람 점성가 채팅을 잔액 충전으로 판매, 첫 3분 무료.",
-   "sources": [
-    "https://www.republicworld.com/initiatives/nebula-app-review-2026-features-cost-and-who-its-for-2026-09-16-137105"
-   ]
   }
  ]
 }

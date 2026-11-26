@@ -6,7 +6,7 @@
 - 뤼튼은 무료 범용 AI로 사람을 모은 뒤, 서브컬처 팬이 오래 읽는 '이야기'에 종량형으로 돈을 받는 구조로 바꿨다.
 - 돈을 낸 순간은 '더 많이'가 아니라 '더 잘'(상위 모델)이었다. 이용자가 먼저 요청한 품질 차이를 유료로 열었다 (crack-paywall).
 - 국내 MAU는 줄었는데 매출은 늘었다. 결제자 밀도가 핵심이었다 (crack-spinoff).
-- 같은 엔진을 일본 '캬라푸', 북미 'OOC'로 현지 브랜드화했고, 북미에서는 범주 이름을 '플레이 가능한 애니'로 바꿨다 (kyarapu, ooc-na).
+- 같은 엔진을 일본 '캬라푸', 북미 'OOC'로 현지 브랜드화했고, 북미에서는 범주 이름을 '플레이 가능한 애니'로 바꿨다 (ooc-na).
 - 매출이 커질수록 모델 호출비·수수료·광고비도 커져 아직 적자다. 단위 경제가 숙제다 (wrtn-pnl).
 
 ## 2. 타임라인
@@ -43,7 +43,7 @@
 - 보상 캐시 9월부터 1만 원 단위 현금 전환, 단일 IP 시리즈 누적 10억 원 정산 한도, 독점 공개작 정산 상향(크랙 온리). https://news.mtn.co.kr/news-detail/2026073108283754407
 - 크랙에서 반응이 검증된 IP를 게임·웹툰·애니로 넓히겠다는 계획. https://dealsite.co.kr/articles/173125
 
-## 6. 글로벌 (kyarapu, ooc-na)
+## 6. 글로벌 (ooc-na, crack-pricing)
 - 같은 엔진, 나라별 다른 이름과 장치: 일본은 추애(推し活) 장치(팬 랭킹·스테이지), 북미는 '플레이 가능한 애니'로 범주를 바꿨다. https://ascii.jp/elem/000/004/313/4313114/ · https://01net.it/wrtn-technologies-unveils-its-ai-interactive-storytelling-platform-ooc-the-playable-anime-in-north-america/
 - OOC는 기억을 장기·임시·관계·목표로 나눠 관리한다. https://c.m.163.com/news/a/L4DCPLSR05568DTV.html
 - 일본에서는 제타가 2025년 12월 엔터테인먼트 AI 앱 이용자 1위였다(경쟁 강도). https://www.digitaltoday.co.kr/en/view/1075/scatterlab-ai-fiction-platform-zeta-japan-revenue-tops-1-1-billion-won-in-december
@@ -64,7 +64,7 @@
 | 6 | 미성년자 질문권 월 상한·민감 주제 차단 | crack-teen | 위험 | 환불·민원 |
 | 7 | 명리 해석가의 주제별 질문 템플릿(정산은 나중) | crack-creator | 보류(템플릿만 시험) | 질문 제출률 |
 | 8 | 원 단위 가격 표시(재화 환산 없음) | crack-kr | 기본기 | 질문권 구매율 |
-| 9 | 해외판 질문권 | crack-global, kyarapu | 보류 | - |
+| 9 | 해외판 질문권 | crack-global | 보류 | - |
 
 ## 9. 아직 모르는 것
 - 크랙의 결제자 비율, 결제자 1인당 월 결제액, 재화 종류별 매출 구성은 공개되지 않았다.
