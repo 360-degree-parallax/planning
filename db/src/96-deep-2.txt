@@ -3,7 +3,7 @@
 @! kakaopage
 M: pay_per_unit | growth | b2c | kr
 K: first_pay_conv | 무료에 익숙한 독자의 유료 결제 거부
-T: paywall | 그대로 가져올 핵심 모델: 회차를 잘게 나누고 '기다리면 무료(예: 24시간·3일)'와 '바로 보기 결제'를 함께 둔다. 기다림이라는 비용을 고를 수 있게 하는 것이 결제 장벽을 낮춘다
+T: checkout | 그대로 가져올 핵심 모델: 회차를 잘게 나누고 '기다리면 무료(예: 24시간·3일)'와 '바로 보기 결제'를 함께 둔다. 기다림이라는 비용을 고를 수 있게 하는 것이 결제 장벽을 낮춘다
 R: https://www.economist.co.kr/article/view/ecn202104190004
 - O pr | 회차 가격 인하 | 무료와는 가격으로 경쟁할 수 없다 | 뻔함 || barrier=competition; holder=유료 콘텐츠 업계
 - O ch | 광고 수익 모델 | 단가가 낮고 독자 경험을 해친다 | 뻔함 || barrier=competition
@@ -14,10 +14,10 @@ O: revenue | 2014년 1분기 | 2015년 1분기 매출 전년 동기 대비 4배,
 @! naver-webtoon
 M: pay_per_unit | growth | b2c | kr
 K: first_pay_conv | 무료 웹툰의 유료화
-T: paywall | 무료 연재는 그대로 두고 '다음 회차를 먼저 보기(미리보기)'만 판다. 결제 단위는 원화 대신 전용 재화(예: 별·부적)로 만들어 결제 부담감을 줄이고, 자동 충전으로 재결제 마찰을 없앤다
+T: checkout | 무료 연재는 그대로 두고 '다음 회차를 먼저 보기(미리보기)'만 판다. 결제 단위는 원화 대신 전용 재화(예: 별·부적)로 만들어 결제 부담감을 줄이고, 자동 충전으로 재결제 마찰을 없앤다
 R: https://navercorp.com/story/storyDetail?seq=34209
 - O pr | 모든 회차 유료화 | 무료에 익숙한 독자가 떠난다 | 이탈 위험 || barrier=competition; holder=포털 웹툰
-- B pr | 무료 연재 + 다음 회차 미리보기 유료 | 무료 웹툰은 끝까지 무료여야 한다는 통념 | 무료 통념 || barrier=belief; holder=웹툰 업계·독자; year=2012; ev=https://navercorp.com/story/storyDetail?seq=34209; test=무료 회차 끝에 '다음 회차 미리보기' 버튼 노출 위치 A/B로 페이월 도달·첫 결제 비교; metric=paywall_view_rate
+- B pr | 무료 연재 + 다음 회차 미리보기 유료 | 무료 웹툰은 끝까지 무료여야 한다는 통념 | 무료 통념 || barrier=belief; holder=웹툰 업계·독자; year=2012; ev=https://navercorp.com/story/storyDetail?seq=34209; test=무료 회차 끝에 '다음 회차 미리보기' 버튼 노출 위치 A/B로 페이월 도달·첫 결제 비교; metric=marketing_hook_rate
 - B pr | 전용 재화 '쿠키'로 결제 | 원화 가격을 그대로 보여 줘야 정직하다는 통념. '쿠키를 굽는다'는 말이 유행할 만큼 결제의 심리적 장벽이 낮아졌다 | 결제 단위의 맹점 || barrier=belief; holder=콘텐츠 업계; year=2016; ev=https://www.dailian.co.kr/news/view/1584296; test=전용 재화 표시 vs 원화 표시 그룹의 첫 결제율 비교; metric=first_pay_conv
 - T ch | 자동 충전 | 잔여 재화가 기준보다 적으면 자동 충전하게 해 결제 번거로움을 줄였다 | 재결제 마찰 제거 || barrier=tech_change; changed=웹 정기결제 기능; year=2021; ev=https://economist.co.kr/article/view/ecn202204140014
 O: price_level | 쿠키 1개 안드로이드 100원 | iOS 120원(인앱 수수료), iOS 사용자는 충전을 덜 하는 경향 | 가격이 높을수록 앱 결제가 줄어드는 근거 | https://economist.co.kr/article/view/ecn202204140014
@@ -50,7 +50,7 @@ O: sub_conv | 연간 구독 비중 약 57%(2019년 말) | 약 71%(2020년 말) |
 @! nyt-paywall
 M: subscription | mature | b2c | us
 K: revenue | 무료 온라인 기사로 광고·종이 매출 감소
-T: paywall | 미터제: 한 달에 n회차까지 무료, 그 이상은 구독. 가끔 오는 사람은 무료로 두고 자주 오는 충성 사용자에게만 결제를 요구한다
+T: checkout | 미터제: 한 달에 n회차까지 무료, 그 이상은 구독. 가끔 오는 사람은 무료로 두고 자주 오는 충성 사용자에게만 결제를 요구한다
 R: https://d3.harvard.edu/platform-digit/?p=422
 - I pr | 전면 유료화 | 트래픽과 광고가 급감하고 검색 노출이 사라진다 | 위험 || barrier=structural; holder=신문사
 - O ch | 광고를 늘린다 | 광고 단가 하락이 계속된다 | 뻔함 || barrier=competition
@@ -59,7 +59,7 @@ O: sub_conv | 유료 디지털 구독자 없음 | 3개월 만에 28만 1천 명,
 
 @! substack
 M: subscription | growth | b2c | us
-K: arppu | 작가 수입 불안정
+K: aov | 작가 수입 불안정
 T: repeat_pay | 역술인·작가 개인의 팬덤을 구독으로: 특정 작가의 월간 운세 연재를 작가 이름으로 구독하게 해, 서비스가 아니라 '사람'에 대한 충성을 결제로 연결
 - O ch | 블로그 광고 수익 | 조회수 압박은 그대로다 | 뻔함 || barrier=competition; holder=광고 기반 매체
 - I ch | 신문사에 고용 | 자리가 적다 | 구조적 제약 || barrier=structural
@@ -68,11 +68,11 @@ T: repeat_pay | 역술인·작가 개인의 팬덤을 구독으로: 특정 작�
 
 @! patreon
 M: subscription | growth | b2c | us
-K: arppu | 창작자 수입 불규칙
+K: aov | 창작자 수입 불규칙
 T: expand | '응원하는 기분'을 판다: 좋아하는 작가·캐릭터에게 월 후원하고 비하인드 회차·이름 크레딧을 받는 등급형 멤버십
 - O ch | 일회성 기부 버튼 | 지속 수입이 안 된다 | 뻔함 || barrier=competition
 - O ch | 광고 수익 극대화 | 플랫폼 정책에 좌우된다 | 뻔함 || barrier=competition; holder=동영상 플랫폼
-- B pr | 팬이 매달 일정액을 후원하고 등급별 보상 | 콘텐츠는 무료로 보는 것이라는 통념 | 후원의 맹점 || barrier=belief; holder=콘텐츠 업계; test=등급형 후원(3단계) 출시 후 결제자 중 상위 등급 비중·ARPPU 측정; metric=arppu
+- B pr | 팬이 매달 일정액을 후원하고 등급별 보상 | 콘텐츠는 무료로 보는 것이라는 통념 | 후원의 맹점 || barrier=belief; holder=콘텐츠 업계; test=등급형 후원(3단계) 출시 후 결제자 중 상위 등급 비중·ARPPU 측정; metric=aov
 - T ch | 소셜 미디어 팬덤 | 창작자와 팬의 직접 관계가 생겼다 | 행동 변화 || barrier=behavior_change; changed=SNS 팬덤 문화
 
 @! fortnite
@@ -110,7 +110,7 @@ O: revenue | 패키지 판매 중심 | 2013 회계연도 매출이 전년보다 
 @! calm
 M: subscription | growth | b2c | global
 K: sub_conv | 명상은 마니아용이라 시장이 작다
-T: binge | 고객이 진짜 해결하려는 일에 맞춘다: '사주 공부'가 아니라 '잠 못 드는 밤의 불안 달래기'·'결정 전 확신'처럼 반복되는 순간을 위한 회차(자기 전 운세 오디오 등)를 만든다
+T: hook_story | 고객이 진짜 해결하려는 일에 맞춘다: '사주 공부'가 아니라 '잠 못 드는 밤의 불안 달래기'·'결정 전 확신'처럼 반복되는 순간을 위한 회차(자기 전 운세 오디오 등)를 만든다
 R: https://techcrunch.com/?p=1850922
 - O pr | 명상 앱 할인 | 진입 장벽은 그대로다 | 뻔함 || barrier=competition; holder=명상 앱 업계
 - O ch | 명상 교육 강화 | 어렵다는 인식은 그대로다 | 효과 없음 || barrier=not_core
@@ -119,10 +119,10 @@ O: sub_conv | 유료 구독자 소수 | 수면 스토리 1억 5천만 회 청취
 
 @! tiktok
 M: advertising | growth | b2c | global
-K: first_value_rate | 친구가 없으면 피드가 비어 신규 이탈
-T: taste | 첫 화면부터 재미있게: 생년월일만 넣으면 친구·가입 없이 바로 '나에 대한 짧은 회차'가 끝없이 이어지게. 회차별 체류·다음 회차 이동 데이터로 추천을 학습
+K: story_hook_rate | 친구가 없으면 피드가 비어 신규 이탈
+T: hook_story | 첫 화면부터 재미있게: 생년월일만 넣으면 친구·가입 없이 바로 '나에 대한 짧은 회차'가 끝없이 이어지게. 회차별 체류·다음 회차 이동 데이터로 추천을 학습
 - O ch | 친구 초대 보상 | 모든 앱이 하고 있다 | 뻔함 || barrier=competition; holder=소셜 앱 업계
-- B cu | 친구 관계 없이 관심사를 학습하는 전체 화면 짧은 영상 피드 | 소셜 미디어는 친구 관계가 중심이라는 통념 | 소셜 그래프 통념 || barrier=belief; holder=소셜 미디어 업계; test=가입 전 바로 보기 vs 가입 후 보기 그룹의 1화 완독·2화 이동 비교; metric=first_value_rate
+- B cu | 친구 관계 없이 관심사를 학습하는 전체 화면 짧은 영상 피드 | 소셜 미디어는 친구 관계가 중심이라는 통념 | 소셜 그래프 통념 || barrier=belief; holder=소셜 미디어 업계; test=가입 전 바로 보기 vs 가입 후 보기 그룹의 1화 완독·2화 이동 비교; metric=story_hook_rate
 - T ch | 추천 알고리즘 + 쉬운 영상 편집 | 머신러닝 추천과 모바일 편집 도구가 성숙했다 | 기술 조건 || barrier=tech_change; changed=추천 알고리즘·모바일 편집
 
 @! dollar-shave-club
@@ -160,20 +160,20 @@ O: visitors | 사용자 8만 5천 명(2009년 9월) | 45만 명(2010년 9월) | 
 @! house-of-cards
 M: subscription | growth | b2c | us
 K: churn | 판권 의존으로 협상력 부족
-T: binge | 시청 데이터로 오리지널을 만든다: 어떤 회차에서 이탈하고 어떤 회차에서 결제하는지 데이터로 '결제를 부르는 회차 유형'을 찾아 연재물을 기획한다
+T: hook_story | 시청 데이터로 오리지널을 만든다: 어떤 회차에서 이탈하고 어떤 회차에서 결제하는지 데이터로 '결제를 부르는 회차 유형'을 찾아 연재물을 기획한다
 R: https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html
 - I pr | 모든 콘텐츠를 자체 제작 | 초기엔 비용을 감당할 수 없다 | 비용 || barrier=cost
 - O ch | 방송사처럼 매주 공개 | 기존 방식과 차별화가 없다 | 뻔함 || barrier=competition; holder=방송 업계
 - B cu | 시청 데이터를 근거로 파일럿 없이 두 시즌 주문, 전편 공개 | 방송은 파일럿으로 검증하고 매주 공개한다는 관행 | 방송 관행의 맹점 || barrier=belief; holder=방송 업계; year=2013; ev=https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html; test=회차별 이탈·결제 데이터로 상위 회차 유형 3개를 뽑아 신작 연재에 적용 후 첫 결제 비교; metric=first_pay_conv
-O: payers | 두 시즌 제작비 약 1억 달러 | 공개 후 2년간 구독자 2,400만 명 늘어 5,700만 명 | 원작·감독·배우 선호 데이터 기반 | https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html
+O: buyers | 두 시즌 제작비 약 1억 달러 | 공개 후 2년간 구독자 2,400만 명 늘어 5,700만 명 | 원작·감독·배우 선호 데이터 기반 | https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html
 
 @! millie
 M: subscription | growth | b2c | kr
 K: sub_conv | 권당 구매가 시도를 막음
-T: paywall | 구독은 '시도 비용'을 0으로 만든다: 연애·재물·건강 등 여러 테마 회차를 구독 하나로 열어 주면 사용자가 여러 회차를 시도하며 몰입한다
+T: checkout | 구독은 '시도 비용'을 0으로 만든다: 연애·재물·건강 등 여러 테마 회차를 구독 하나로 열어 주면 사용자가 여러 회차를 시도하며 몰입한다
 - O pr | 전자책 할인 | 권당 구매 부담은 그대로다 | 뻔함 || barrier=competition; holder=출판·전자책 업계
 - I pr | 신간 전부 구독에 포함 | 출판사 계약상 어렵다 | 계약 제약 || barrier=structural; holder=출판사
-- B pr | 월 구독 무제한 읽기 + 오디오·요약 | 책은 소장하는 것이라는 통념 | 소유 통념 || barrier=belief; holder=출판 업계; test=테마 회차 무제한 구독 출시 후 구독자 1인당 열람 테마 수·해지율 측정; metric=episodes_per_user
+- B pr | 월 구독 무제한 읽기 + 오디오·요약 | 책은 소장하는 것이라는 통념 | 소유 통념 || barrier=belief; holder=출판 업계; test=테마 회차 무제한 구독 출시 후 구독자 1인당 열람 테마 수·해지율 측정; metric=consumption_rate
 - T ch | 출퇴근 오디오 소비 증가 | 오디오 콘텐츠 소비가 늘었다 | 행동 변화 || barrier=behavior_change
 
 @! saju
@@ -212,7 +212,7 @@ T: repeat_pay | 고객이 원하는 결과에 과금을 맞춘다: '맞힌 만�
 R: https://www.rolls-royce.com/media/press-releases/yr-2012/121030-the-hour.aspx
 - I cn | 엔진 고장을 아예 없앤다 | 기술적으로 불가능하다 | 불가능 || barrier=technology
 - O pr | 정비 할인 계약 | 이해관계는 그대로다 | 뻔함 || barrier=competition
-- B pr | 비행 시간당 고정 요금, 정비는 제조사 책임 | 제조사는 고장 나야 부품을 팔아 번다는 구조를 당연하게 여겼다 | 이해충돌의 맹점 || barrier=incentive; holder=엔진 제조사; year=1962; ev=https://www.rolls-royce.com/media/press-releases/yr-2012/121030-the-hour.aspx; test=질문 1회당 과금 vs 월 무제한 과금 A/B로 ARPPU·해지 비교; metric=arppu
+- B pr | 비행 시간당 고정 요금, 정비는 제조사 책임 | 제조사는 고장 나야 부품을 팔아 번다는 구조를 당연하게 여겼다 | 이해충돌의 맹점 || barrier=incentive; holder=엔진 제조사; year=1962; ev=https://www.rolls-royce.com/media/press-releases/yr-2012/121030-the-hour.aspx; test=질문 1회당 과금 vs 월 무제한 과금 A/B로 ARPPU·해지 비교; metric=aov
 
 @! webvan
 M: transaction | early | b2c | us

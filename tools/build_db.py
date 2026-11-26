@@ -14,7 +14,8 @@
     O: 지표 id | 이전 | 이후 | 기간·맥락 | https://근거
     T: 사주 퍼널 단계 id | 사주 서비스 적용 아이디어
 
-기존 사례에 덧붙이기:  @ id   (가설·R·M·K·O·T 줄 추가)
+기존 사례에 덧붙이기:  @ id   (가설·R·M·K·O·T 줄 추가, T는 덮어씀)
+    E: 가설 번호 | 검증 실험 | 지표 id   (기존 가설의 검증 실험을 덮어씀)
 기존 사례 가설 갈아끼우기(깊게 쓰기): @! id   (이 블록의 가설로 교체, depth=deep)
 
 가설 줄의 || 뒤 키: barrier(장벽 id), holder(장벽을 가진 주체), changed(무엇이 바꿨나),
@@ -85,7 +86,7 @@ def parse(path, extra):
         elif line.startswith('@! ') or line.startswith('@ '):
             replace = line.startswith('@!')
             cid = line.split(None, 1)[1].strip()
-            c = {'hyps': [], 'refs': [], 'outcomes': [], 'what': {}, '_replace': replace}
+            c = {'hyps': [], 'refs': [], 'outcomes': [], 'what': {}, 'tests': [], '_replace': replace}
             extra.setdefault(cid, []).append(c)
         elif c is None:
             fail(f'{where} 머리줄 전에 내용')
@@ -110,6 +111,11 @@ def parse(path, extra):
             if len(o) != 5:
                 fail(f'{where} 결과 줄은 5칸')
             c['outcomes'].append({'metric': o[0], 'before': o[1], 'after': o[2], 'context': o[3], 'evidence': o[4]})
+        elif line.startswith('E:'):
+            e = [x.strip() for x in line[2:].split(' | ')]
+            if len(e) != 3 or not e[0].isdigit():
+                fail(f'{where} E 줄은 번호 | 실험 | 지표')
+            c.setdefault('tests', []).append((int(e[0]), e[1], e[2]))
         elif line.startswith('T:'):
             t = [x.strip() for x in line[2:].split(' | ')]
             c['saju'] = {'stage': t[0], 'idea': t[1] if len(t) > 1 else ''}
@@ -168,6 +174,10 @@ def main():
             for k in ('business', 'problem_metric', 'saju'):
                 if k in b:
                     t[k] = b[k]
+            for n, exp, met in b.get('tests', []):
+                if n > len(t['hyps']):
+                    fail(f'{cid}: E {n}번 가설이 없음')
+                t['hyps'][n - 1]['test'] = {'experiment': exp, 'metric': met}
             if b.get('solution'):
                 t['solution'] = b['solution']
             if b.get('lesson'):

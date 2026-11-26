@@ -11,12 +11,12 @@ C = d['cases']
 PASS = {'blindspot', 'timing'}
 B = T['barriers']
 M = T['metrics']
-order = ['acquire', 'taste', 'binge', 'paywall', 'first_pay', 'repeat_pay', 'expand', 'refer', 'trust', 'economics']
+order = ['acquire', 'hook_story', 'hook_marketing', 'checkout', 'first_pay', 'consume', 'repeat_pay', 'expand', 'refer', 'trust', 'economics']
 
 H = [h for c in C for h in c['hyps']]
 L = []
 L += ['# AI 사주 결제 플레이북 (사례 DB에서 자동 생성)', '',
-      '기준: 웹툰형(회차 연재) AI 사주 · 최종 지표 = 결제. `python3 tools/report.py`로 다시 만든다.', '',
+      '기준: 커머스형 AI 사주(스토리 후킹 1p → 마케팅 후킹 2p → 결제 → 전체 결과 공개) · 최종 지표 = 결제. `python3 tools/report.py`로 다시 만든다.', '',
       f'사례 {len(C)}개 · deep {sum(c["depth"] == "deep" for c in C)}개 · 가설 {len(H)}개 · 근거 있는 결과 지표 {sum(len(c["outcomes"]) for c in C)}건', '',
       '> deep 사례의 장벽·실험·적용 아이디어는 직접 작성했고, tagged 사례의 장벽 유형은 규칙 추정(inferred)이다. 아래 분포는 둘을 합친 값이라 방향을 보는 용도로 쓴다.', '']
 

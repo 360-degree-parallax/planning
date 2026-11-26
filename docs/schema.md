@@ -2,42 +2,46 @@
 
 목표: 사례를 **결제 지표**와 연결해, "우리 서비스의 이 지표가 문제일 때 어떤 가설이 통했고, 왜 그동안 아무도 안 했는가"를 찾고 추론할 수 있게 한다.
 
-기준 서비스: **AI 사주 웹사이트 · 웹툰형(회차 연재) · 최종 지표 = 결제**
+기준 서비스: **AI 사주 웹사이트 · 커머스형(1회 구매로 전체 결과 공개) · 최종 지표 = 결제**
+
+구매 전 화면은 두 장이다: 웹툰형 **스토리 후킹 1p** → **마케팅 후킹 2p** → 결제 페이지. 회차 연재·구독이 아니다.
 
 ## 1. 결제 지표 트리
 
 ```
-결제 매출 (revenue)
-├─ 결제자 수 (payers)
-│  ├─ 신규 결제자 (new_payers)
-│  │   방문자 visitors
-│  │   × 가입 전환율 signup_rate
-│  │   × 첫 가치 도달률 first_value_rate      ← 1화(무료 풀이) 완독
-│  │   × 다음 회차 이동률 next_episode_rate   ← 웹툰형 몰입
-│  │   × 페이월 도달률 paywall_view_rate
-│  │   × 첫 결제 전환율 first_pay_conv
-│  └─ 재결제자 (repeat_payers)
-│      재결제율 repeat_pay_rate · 리텐션 d30_retention · 구독 전환 sub_conv · 휴면 복귀 reactivation
-└─ ARPPU (arppu)
-    객단가 aov · 결제 빈도 pay_frequency · 교차·상향 구매 upsell_rate · 가격 수준 price_level
+결제 매출 (revenue) = 신규 매출 + 재구매 매출
+├─ 구매자 수 (buyers)
+│   방문자 visitors
+│   × 스토리 후킹률 story_hook_rate      ← 1p(웹툰형 스토리) → 2p 이동
+│   × 마케팅 후킹률 marketing_hook_rate  ← 2p(마케팅) → 결제 페이지 이동
+│   × 결제 완료율 checkout_conv          ← 결제 페이지 → 구매 완료
+│   (= 구매 전환율 first_pay_conv)
+├─ 객단가 (aov)
+│   가격 수준 price_level · 교차·상향 구매 upsell_rate
+└─ 재구매 (repeat_revenue)
+    재구매율 repeat_pay_rate · 리텐션 d30_retention · 휴면 복귀 reactivation · LTV ltv
 
-가드레일: 환불률 refund_rate · 평점·신뢰 rating · 건당 원가 unit_cost(LLM 비용) · 매출총이익률 gross_margin · CAC
+가드레일: 환불률 refund_rate · 평점·신뢰 rating · 결과 열람률 consumption_rate
+        · 건당 원가 unit_cost(LLM 비용) · 매출총이익률 gross_margin · CAC
 ```
+
+구독형 사례(넷플릭스·스포티파이 등)의 `sub_conv`는 참고용으로만 남겨 두고, 사주 적용(`saju.idea`)은 모두 단건 구매 기준으로 다시 썼다.
 
 ## 2. 사주 퍼널 단계 (`saju.stage`)
 
 | id | 단계 | 사주 서비스에서 |
 |---|---|---|
-| acquire | 유입 | 검색·SNS·추천으로 들어온다 |
-| taste | 무료 맛보기 | 생년월일 입력 → 1화(무료 풀이) |
-| binge | 회차 몰입 | 다음 회차로 계속 넘어간다 |
-| paywall | 페이월 | 유료 회차·기다리면 무료·이용권 선택 |
-| first_pay | 첫 결제 | 이용권·캐시·단건 리포트 첫 결제 |
-| repeat_pay | 재결제·구독 | 다시 결제·정기 결제 |
-| expand | 확장 구매 | 궁합·신년운·월운·질문 상담 |
-| refer | 추천·공유 | 결과 공유·궁합 초대 |
+| acquire | 유입 | 검색·SNS·광고·추천으로 들어온다 |
+| hook_story | 스토리 후킹 (1p) | 웹툰형 스토리로 '내 이야기'라고 느끼게 한다 |
+| hook_marketing | 마케팅 후킹 (2p) | 무엇을 알려 주는지·가격·후기·포함 내용으로 설득한다 |
+| checkout | 결제 페이지 | 가격 표시·결제 수단·환불 보장·미리보기 |
+| first_pay | 구매 완료 | 결제 직후 전체 결과가 열린다 |
+| consume | 결과 열람·만족 | 생성 대기·열람·만족 (환불 방지) |
+| repeat_pay | 재구매 | 신년운·다른 주제·연간 상품 |
+| expand | 교차·상향 구매 | 궁합·상위 등급·추가 질문 |
+| refer | 추천·공유 | 공유 카드·궁합 초대 |
 | trust | 신뢰·품질 | 환불·정확도 의심 줄이기 |
-| economics | 원가·수익성 | 풀이 1건당 LLM 비용·마진 |
+| economics | 원가·수익성 | 리포트 1건당 LLM 비용·마진 |
 | none | 직접 적용 어려움 | 운영·제조 등 |
 
 ## 3. 사례 필드
