@@ -104,3 +104,5 @@ crack-teen | trust, checkout
 kyarapu | acquire
 ooc-na | hook_story, checkout
 wrtn-pnl | ask
+crack-pricing | ask, economics
+wrtn-plot | checkout, repeat_pay

@@ -22,5 +22,6 @@ jobs:
           python3 tools/readme.py
           python3 tools/diagnose.py --example
           python3 tools/diagnose.py
+          python3 tools/unit_econ.py
       - name: 생성 파일이 커밋돼 있는지 확인
         run: git diff --exit-code -- db/cases.json README.md docs/

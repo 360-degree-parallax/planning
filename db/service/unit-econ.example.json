@@ -1,0 +1,25 @@
+{
+ "note": "가짜 예시. 모든 단가·토큰 수·비율은 가정값이다. 실제 모델 계약 단가, 결제 수수료 계약, 답변 로그(토큰 수)로 바꾼 파일을 unit-econ.json으로 저장하면 그 파일을 읽는다.",
+ "fx_krw_per_usd": 1450,
+ "vat_rate": 0.10,
+ "refund_rate": 0.03,
+ "channels": [
+  {"id": "web_pg", "label": "웹 PG(카드)", "share": 0.85, "fee_rate": 0.033},
+  {"id": "easy_pay", "label": "간편결제", "share": 0.15, "fee_rate": 0.035}
+ ],
+ "models": {
+  "low": {"label": "저가 모델(가정)", "input_price_per_m": 0.30, "output_price_per_m": 1.20, "input_tokens": 4000, "output_tokens": 600, "regenerate_factor": 1.05},
+  "high": {"label": "상위 모델(가정)", "input_price_per_m": 3.00, "output_price_per_m": 15.00, "input_tokens": 7000, "output_tokens": 1500, "regenerate_factor": 1.15}
+ },
+ "routing": [
+  {"model": "low", "share": 0.6, "note": "짧은 질문·용어 풀이"},
+  {"model": "high", "share": 0.4, "note": "시기·궁합·대운 질문"}
+ ],
+ "review": {"share": 0.05, "cost_per_review": 3000, "note": "싫어요·민감 주제 답변의 사람 검수"},
+ "free": {"model": "low", "free_per_paid": 0.3, "note": "무료 질문 수 / 유료 질문 수"},
+ "packs": [
+  {"id": "qa-1", "questions": 1, "price": 3900},
+  {"id": "qa-5", "questions": 5, "price": 14900},
+  {"id": "qa-10", "questions": 10, "price": 24900}
+ ]
+}

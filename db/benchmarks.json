@@ -84,6 +84,56 @@
    "source": "한국경제",
    "url": "https://www.hankyung.com/article/2026021070861",
    "checked": "2026-11-27"
+  },
+  {
+   "id": "crack_cracker_unit",
+   "metric": "price_level",
+   "value": 1.33,
+   "label": "크랙 크래커 1개 앱 가격(원), 묶음별 1.26~1.40원, 웹 1원",
+   "context": "2026년 11월 한국 앱스토어 인앱 가격표. 웹이 앱보다 25~30% 싸다(마켓 수수료 반영으로 보임).",
+   "source": "App Store (Korea)",
+   "url": "https://apps.apple.com/kr/app/id6740223370",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "ooc_basic_response",
+   "metric": "price_level",
+   "value": 0.043,
+   "label": "OOC 기본 응답 1회 가격(달러), 30크레딧 × 1000크레딧당 약 1.43달러",
+   "context": "응답 등급별 30·60·90크레딧, 800토큰 초과 출력은 추가 차감. 도움말 예시 가격 기준.",
+   "source": "TechYorker (OOC Help Center 인용)",
+   "url": "https://techyorker.com/ooc-playable-anime-how-interactive-stories-credits-and-event-rewards-work/",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "plot_key_unit",
+   "metric": "price_level",
+   "value": 145,
+   "label": "플롯(뤼튼 사주 앱) 열쇠 1개 가격(원), 122~167원",
+   "context": "9개 1500원 ~ 450개 5만 5000원. 2026년 5월 월 무제한 플랜 도입.",
+   "source": "App Store (Korea)",
+   "url": "https://apps.apple.com/kr/app/id6759165551",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "wrtn_opex_ratio_2025",
+   "metric": "unit_cost",
+   "value": 2.25,
+   "label": "뤼튼 2025년 매출 1원당 영업비용(원)",
+   "context": "매출 471억 원, 영업비용 1059억 원(지급수수료 611억 원 = 매출의 130%, 광고선전비 294억 원 = 62%, 나머지 154억 원 = 33%). 2024년은 매출 31억 원, 영업비용 332억 원.",
+   "source": "딜사이트(감사보고서 인용)",
+   "url": "https://dealsite.co.kr/articles/167664",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "zeta_op_margin_2025",
+   "metric": "gross_margin",
+   "value": 0.115,
+   "label": "제타(스캐터랩) 2025년 영업이익률(추정, 매출 약 260억·영업이익 약 30억)",
+   "context": "광고 기반 무료 + 월 1만 900원 제타패스, 자체 소형 모델로 서버비 절감. 비율은 보도 수치로 계산한 값.",
+   "source": "벤처스퀘어",
+   "url": "https://www.venturesquare.net/1097430/",
+   "checked": "2026-11-27"
   }
  ]
 }

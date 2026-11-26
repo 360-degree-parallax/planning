@@ -206,3 +206,8 @@
 - 이벤트: result_view · q_open · q_submit · ticket_paid · answer_read · next_question · answer_feedback (`db/service/events.json`).
 - 규정: ai-answer-liability(챗봇 답변도 회사의 약속) · ai-disclosure(AI 기본법 생성물 표시, 2026-01-22 시행) · minor-ai-usage(미성년자 한도) · sensitive-advice(건강·법률·투자·위기 질문).
 - 새 사례를 처음부터 깊게 쓸 때는 `# 머리줄` 아래에 `D: deep` 한 줄을 넣는다.
+
+## 13. 질문권 단위 경제 (`tools/unit_econ.py`)
+- 입력: `db/service/unit-econ.json` (없으면 `unit-econ.example.json`, 모든 값은 가정). 모델 단가·토큰 수·라우팅 비중·결제 채널 수수료·환불률·검수 비율·무료 질문 비율·묶음 가격.
+- 출력: 묶음별 질문 1회 순매출·모델 원가·검수·무료 배분·수수료·환불·공헌이익·공헌이익률, 손익분기 판매가.
+- 근거 사례: crack-pricing, wrtn-pnl, wrtn-plot (docs/crack-deep-dive.md 10장).

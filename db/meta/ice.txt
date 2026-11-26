@@ -116,3 +116,5 @@ crack-teen 2 | 3 8 7 | -30% | revenue | 보호 규칙: 미성년자 결제 취�
 kyarapu 5 | 7 6 8 | +3%p | cost_per_answer | 무료 3회는 짧은 답으로 원가 제한
 ooc-na 2 | 6 5 8 | +10% | answer_satisfaction | '상담' 표현 금지 (sensitive-advice)
 wrtn-pnl 3 | 7 6 5 | -30% | answer_satisfaction | 원가 30% 절감, 만족도 하락 2%p 이내
+crack-pricing 2 | 6 5 8 | +5% | revenue | 회당 공헌이익이 오르고 매출이 -3% 이내면 채택
+wrtn-plot 3 | 5 4 6 | +10% | cost_per_answer | 하루 질문 상한 필수, 자동 갱신 고지 (dark-hidden-renewal)
