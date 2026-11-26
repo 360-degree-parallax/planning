@@ -138,3 +138,61 @@
 ## 8. 참고 기준값 (`db/benchmarks.json`)
 
 출처가 확인된 외부 수치만 둔다(장바구니 이탈률, 온라인 카드 승인률, 랜딩 전환율 중앙값 등). 업종·정의가 우리 퍼널과 같지 않으므로 목표값이 아니라 참고선으로만 쓴다.
+
+## 9. 방법론 순서 (WHAT 단계)
+
+```
+사례 → ① 적합성(Fit) 검증 → 우리 가설 → ② Why not yet → ③ 실험 → 실험 기록 → 적합성 조건 갱신
+```
+
+| 단계 | 묻는 것 | 거르는 것 | 파일 |
+|---|---|---|---|
+| ① 적합성 | 원 사례가 통한 **이유(인과 고리)와 그 이유가 작동한 조건**이 우리에게도 있나? | 겉모습만 닮은 유추 | `db/saju/fit.txt` |
+| ② Why not yet | 좋은 아이디어라면 **경쟁 사주 서비스는 왜 아직 안 했나?** | 뻔한(이미 흔한) 아이디어, 불가능한 아이디어 | `db/saju/ideas.txt` |
+| ③ 실험 | 실제로 움직이나? | 우리 고객에게 안 통하는 아이디어 | `db/meta/ice.txt`, `db/service/experiments.json` |
+
+이론 근거: 적합성은 겐트너의 구조 사상 이론(좋은 유추는 겉모습이 아니라 원인·결과 구조가 닮은 것)과 카트라이트·하디의 지원 조건(거기서 통한 원인이 여기서도 통하려면 그 원인을 작동시킨 조건이 여기에도 있어야 한다)을 따른다.
+
+### 적합성 (`saju.fit`)
+| 필드 | 내용 |
+|---|---|
+| `problem_match` | 문제 구조: `same` 같음 · `similar` 비슷함 · `different` 다름 |
+| `mechanism` | 원 사례가 통한 이유 한 줄 |
+| `support_factors[]` | 그 이유가 작동하는 데 필요한 조건과 우리에게 있는지: `yes` · `no` · `unknown`(실험에서 먼저 확인) |
+| `key_difference` | 업종·상품·상황의 결정적 차이 (구매 빈도·가격대·관여도·신뢰 구조·규정) |
+| `verdict` | `transfer` 그대로 옮김 · `adapt` 바꿔서 옮김 · `reject` 버림 |
+
+검사 규칙: 없는 조건(`no`)이 있으면 `transfer` 불가, 문제 구조가 `different`이면 `transfer` 불가, `reject`면 아이디어 역할은 `skip`.
+
+### 우리 아이디어의 Why not yet (`saju.wny`)
+| 필드 | 내용 |
+|---|---|
+| `verdict` · `barrier` | 판정(뻔함·불가능·맹점·타이밍)과 장벽 유형 (사례 가설과 같은 규칙) |
+| `role` | `table` 기본기(이미 흔함, 안 하면 손해, 차별은 아님) · `diff` 차별 후보 · `risk` 규정·신뢰 위험 · `skip` 보류 |
+| `competitors[]` | 근거가 된 경쟁사 id (`db/saju/competitors.json`) |
+| `compliance[]` | 실험 전에 확인할 규정 id (`db/compliance.json`) |
+
+## 10. 참고 데이터
+
+| 파일 | 내용 | 문서 |
+|---|---|---|
+| `db/saju/competitors.json` | 국내 운세·사주 경쟁사 기능 지도 (확인된 것만 ✓, 모르면 빈칸) | `docs/competitors.md` |
+| `db/compliance.json` | 다크패턴 6유형·거짓 할인·후기·디지털 콘텐츠 청약철회·미성년자 취소·생년월일 정보 | `docs/compliance.md` |
+| `db/service/events.json` | 트래킹 플랜: 단계별 이벤트, 보내는 조건, 중복 처리, 속성 | `docs/tracking-plan.md` |
+| `db/service/products.json` | 상품 목록 (가격·장 수·원가) | |
+| `db/service/creatives.json` | 1p·2p·광고·결제 소재 목록 (실험이 id로 참조) | |
+| `db/service/history/*.json` | 월별 baseline (추세·선행 지표 상관) | |
+| `db/service/cohorts.json` | 첫 구매 월별 재구매 코호트 | |
+| `db/service/calendar.json` | 사주 수요 시즌 (실험·기간 겹침 표시) | |
+| `docs/experiment-rules.md` | 실험 운영 규칙 (SRM, 최소 7일, 중간 확인 금지, 본페로니, 방문자당 매출) | |
+
+## 11. 데이터 품질 필드
+
+| 필드 | 내용 |
+|---|---|
+| `domain_group` | 분야 그룹 (`db/meta/domains.txt`, 14개). 원래 `domain`은 그대로 둔다 |
+| `source_status` | `verified` 출처 링크 있음 · `unverified` 없음 · `disputed` 널리 퍼졌지만 사실 여부 논란 (`db/meta/disputed.txt`, 이유 필수) |
+| `saju.idea_level` | `draft`: 분류 사례의 사주 적용 초안 (적합성·Why not yet 검증 전) |
+| `barrier.reviewed` | 규칙 추정 장벽을 사람이 검토함 (`db/meta/barrier-review.txt`) |
+| 가설 관점 | 핵심 사례는 관점 3개 이상 필수 (검사기) |
+| id | 한 번 정하면 바꾸지 않는다. 바꾸면 `db/meta/aliases.txt`에 옛 id를 남긴다. 공식 구조는 `schema/cases.schema.json` |

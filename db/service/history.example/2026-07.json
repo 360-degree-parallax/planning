@@ -1,0 +1,41 @@
+{
+ "example": true,
+ "note": "가짜 숫자입니다. 진단 리포트가 어떻게 나오는지 보여 주는 예시이며 실제 서비스 수치가 아닙니다.",
+ "service": "AI 사주 웹사이트 (예시)",
+ "funnel": "saju-default",
+ "funnel_version": 1,
+ "period": {
+  "from": "2026-07-01",
+  "to": "2026-07-30",
+  "days": 30
+ },
+ "reach": {
+  "story": 53400,
+  "input": 29370,
+  "marketing": 23140,
+  "checkout": 6678,
+  "pay_attempt": 3471,
+  "paid": 2937,
+  "opened": 2759,
+  "read_all": 1513
+ },
+ "economics": {
+  "aov": 39000,
+  "pg_fee_rate": 0.033,
+  "llm_cost_per_report": 600,
+  "free_llm_cost_per_visitor": 15,
+  "refund_rate": 0.04,
+  "discount_share": 0.35,
+  "ad_spend": 70000000,
+  "ad_revenue": 110000000
+ },
+ "post_purchase": {
+  "satisfaction_score": 3.9,
+  "accuracy_feel": 0.57,
+  "revisit_7d": 0.14,
+  "followup_use_rate": 0.22,
+  "share_rate": 0.05,
+  "repeat_pay_rate": 0.07,
+  "time_to_repurchase": 78
+ }
+}

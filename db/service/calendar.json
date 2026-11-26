@@ -1,0 +1,15 @@
+{
+ "note": "사주 수요가 평소와 달라지는 시즌. 실험 기간·baseline 기간이 겹치면 리포트에 표시한다. 음력 명절은 해마다 날짜가 바뀌므로 해당 연도 날짜를 넣는다(비어 있으면 표시하지 않음).",
+ "recurring": [
+  {"id": "year-end", "label": "연말연초 신년운 시즌", "from": "12-01", "to": "01-31", "effect": "신년운·총운 수요 급증, 광고 단가 상승"},
+  {"id": "ipchun", "label": "입춘 전후 (명리상 새해 시작)", "from": "02-01", "to": "02-10", "effect": "사주 기준 해가 바뀌는 시점, 신년운 2차 수요"},
+  {"id": "valentine", "label": "밸런타인데이 주간", "from": "02-07", "to": "02-14", "effect": "연애·궁합 수요"},
+  {"id": "whiteday", "label": "화이트데이 주간", "from": "03-07", "to": "03-14", "effect": "연애·궁합 수요"},
+  {"id": "half-year", "label": "하반기 시작", "from": "06-20", "to": "07-10", "effect": "하반기 운세 수요"}
+ ],
+ "dated": [
+  {"id": "seollal-2027", "label": "설날 연휴 2027", "from": null, "to": null, "effect": "신년운 마지막 수요, 이동·가족 모임으로 트래픽 패턴 변화"},
+  {"id": "chuseok-2027", "label": "추석 연휴 2027", "from": null, "to": null, "effect": "트래픽 패턴 변화"},
+  {"id": "suneung-2026", "label": "대학수학능력시험 2026", "from": null, "to": null, "effect": "수험·진로 운세 수요"}
+ ]
+}

@@ -1,0 +1,203 @@
+// 운세·사주 업계 사례 + 퍼널 구멍(입력·2p·결제) + 다크패턴 실패 사례 (2026-11-27 출처 확인)
+
+# cheongwoldang | 사주를 '읽는 글'이 아니라 '보는 이야기'로 팔 수 있을까 | 운세·사주 | real | 로켓AI 보도자료, 파이낸셜뉴스
+S: 온라인 사주는 대부분 긴 텍스트 풀이였다. 로켓AI는 웹툰형 사주 서비스 청월당을 내놓고, 챗GPT 스토어에도 사주·타로 GPT를 올렸다.
+X: 텍스트 풀이는 길고 지루해 끝까지 읽지 않는다
+P: 사주 결과를 '정보'가 아니라 몰입되는 '이야기 경험'으로 전달할 방법이 없었다
+- O pr | 텍스트 풀이 가격을 낮춘다 | 이미 저가 경쟁이 치열하다 | 뻔함 || barrier=competition; holder=사주 앱 업계
+- B cu | 사주 풀이를 웹툰 형식의 스토리로 보여 준다 | 사주는 정확한 해석이 본질이라 형식은 부차적이라는 업계 통념 | 형식은 부차적이라는 맹점 || barrier=belief; holder=명리 해석 중심 사주 업계; ev=https://www.newswire.co.kr/newsRead.php?no=1021564
+- T ch | 챗GPT 스토어에 무료 사주 GPT를 올려 유입 채널로 쓴다 | GPT 스토어가 열리기 전에는 이런 유통 채널이 없었다 | 플랫폼 변화 || barrier=market_change; holder=앱 마켓 중심 유통; changed=GPT 스토어 출시; year=2024; ev=https://www.fnnews.com/news/202506112114292592
+= 웹툰형 사주를 본 상품으로, GPT 스토어의 무료 사주·타로를 유입 채널로 쓴다
+L: 같은 해석이라도 전달 형식이 바뀌면 다른 상품이 된다. 우리 서비스와 가장 가까운 직접 경쟁자다.
+R: https://www.newswire.co.kr/newsRead.php?no=1021564
+R: https://www.fnnews.com/news/202506112114292592
+M: pay_per_unit | growth | b2c | kr
+K: story_hook_rate | 텍스트 풀이의 낮은 몰입
+T: hook_story | 직접 경쟁자의 1p 연출(캐릭터·컷 구성·첫 장면)을 분기마다 캡처해 우리 1p와 비교하고, 차별점(주인공 개인화·고민 주제별 서사)을 1p 첫 컷에 둔다
+O: visitors | 사주·타로 GPT 출시 | GPT 스토어 라이프스타일 부문 세계 1위(타로), 사주 GPT 재방문율 63% | 회사 발표 기준 | https://www.fnnews.com/news/202506112114292592
+
+# sajuai | 수만 원짜리 사주를 990원에 팔면 남을까 | 운세·사주 | real | 코리아데일리, 브런치(캡선생)
+S: 사주 상담은 보통 수만 원대였다. 1인 개발자가 AI 사주 서비스 사주아이를 만들어 2025년 7월 테스트를 시작하고 9월에 990원 유료 상품으로 바꿨다.
+X: 사주를 보고 싶어도 가격이 부담돼 시작하지 못한다
+P: 첫 결제의 심리적 장벽이 가격 자체보다 '수만 원을 걸어도 될까'라는 위험 판단이었다
+- O pr | 첫 구매 할인 쿠폰 | 이미 흔하고 정가 인식은 그대로다 | 뻔함 || barrier=competition; holder=사주 앱 업계
+- I cn | 무료로 전부 제공한다 | LLM 원가를 감당할 수 없다 | 비용 || barrier=cost; holder=LLM 사용 원가
+- T pr | 990원 초저가 단건 + 재화(츄르) 충전 방식 | LLM 덕분에 리포트 1건 생성 원가가 낮아져 초저가가 가능해졌다 | 원가 구조 변화 || barrier=tech_change; holder=사람이 쓰던 사주 풀이 원가; changed=LLM 상용화; year=2025; ev=https://www.koreadaily.com/article/20261024140033639
+- B cu | 고양이 캐릭터·재화 이름으로 놀이처럼 만든다 | 사주는 진지해야 한다는 통념 | 톤의 맹점 || barrier=belief; holder=전통 사주 업계
+= 990원 단건과 재화 충전으로 첫 결제 장벽을 낮추고 입소문으로 퍼진다
+L: 우리(4만 원대)와 정반대 가격 전략이다. 고객이 '싼 것으로 충분하다'고 느끼는 지점과 '4만 원을 낼 이유'를 2p에서 분명히 해야 한다.
+R: https://www.koreadaily.com/article/20261024140033639
+R: https://brunch.co.kr/@kap/1960
+M: pay_per_unit | growth | b2c | kr
+K: first_pay_conv | 고가 사주의 첫 결제 장벽
+T: hook_marketing | 저가 경쟁자 대비 4만 원의 이유를 2p에서 비교로 보여 준다: 분량·깊이·후속 질문·환불 기준을 나란히 놓고, 저가 상품으로 먼저 사 본 고객의 '업그레이드' 경로를 만든다
+O: buyers | 2025년 7월 테스트 버전 | 누적 유저 186만 명, 판매 600만 건 이상 | 2025년 9월 990원 유료화 이후 | https://www.koreadaily.com/article/20261024140033639
+
+# tight-saju | 모두를 위한 사주 대신 '나만을 위한 주제'로 | 운세·사주 | real | 머니투데이
+S: AI 사주 서비스가 늘면서 연애·재물·총운처럼 주제가 비슷해졌다. 사이버네틱스는 29금 사주, 퀴어 사주, 재회 자미두수처럼 좁은 주제를 내놓았다.
+X: 비슷한 주제끼리 경쟁하며 광고비가 오른다
+P: 고객의 구체적인 고민(재회, 정체성)을 정면으로 다루는 상품이 없었다
+- O pr | 총운 리포트를 더 싸게 판다 | 다들 하는 가격 경쟁이다 | 뻔함 || barrier=competition; holder=AI 사주 업계
+- B cu | 금기시되던 니치 주제를 상품으로 | 사주는 보편적 주제여야 넓게 팔린다는 통념, 민감한 주제를 피하는 관행 | 통념의 맹점 || barrier=belief; holder=사주 업계; ev=https://www.mt.co.kr/future/2026/08/16/2026080417541357071
+- T cn | 천문 데이터로 만세력 정확도를 높인다 | 범용 LLM의 만세력 계산 오류가 알려지면서 정확도가 차별점이 됐다 | 기술 변화 || barrier=tech_change; holder=범용 AI 사주; changed=LLM 사주 확산과 만세력 오류 문제; year=2025
+= 좁고 절실한 주제와 계산 정확도로 차별화한다
+L: 주제를 좁히면 2p 메시지가 선명해지고 광고 소재도 날카로워진다.
+R: https://www.mt.co.kr/future/2026/08/16/2026080417541357071
+M: pay_per_unit | growth | b2c | kr
+K: cac | 비슷한 주제 경쟁으로 오르는 광고비
+T: acquire | 고민 주제(재회·이직·궁합)별로 광고 소재와 1p 스토리를 따로 만든다. 니치 주제 하나를 골라 소재·1p·2p를 한 묶음으로 시험한다
+O: revenue | 2024년 대비 | 월 매출 10억 원 규모, 누적 이용자 500만 명 이상 | 외부 투자 없이, 회사 발표 기준 | https://www.mt.co.kr/future/2026/08/16/2026080417541357071
+
+# forceteller | 무료 운세로 어떻게 돈을 버나 | 운세·사주 | real | 이노포레스트, 아시아경제, 앱스토어
+S: 포스텔러는 2017년 출시한 운세 플랫폼으로 사주·타로·궁합·별자리 등 다양한 운세를 제공한다. 콘텐츠 대부분은 무료다.
+X: 무료 이용자는 많은데 결제로 이어지지 않는다
+P: 무료 운세로 모은 사람을 소수의 유료 콘텐츠로 연결하는 구조가 필요했다
+- O pr | 모든 운세를 유료로 | 경쟁 앱과 무료 운세가 넘쳐 유입이 끊긴다 | 뻔한 실패 || barrier=competition; holder=운세 앱 업계
+- B ch | 공유 버튼으로 무료 운세를 퍼뜨린다 | 운세는 개인적인 것이라 공유하지 않는다는 통념 | 통념의 맹점 || barrier=belief; holder=운세 업계; year=2017; ev=https://view.asiae.co.kr/article/2017042410090318478
+- B pr | 첫 가입 시 유료 운세 1개를 무료로 | 유료 콘텐츠를 공짜로 주면 매출이 준다는 통념 | 맛보기의 맹점 || barrier=belief; holder=콘텐츠 판매 업계; ev=https://apps.apple.com/us/app/%ED%8F%AC%EC%8A%A4%ED%85%94%EB%9F%AC-2025-%EC%8B%A0%EB%85%84%EC%9A%B4%EC%84%B8-%EC%9A%B4%EC%84%B8%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83/id1262949138?l=ko
+= 대부분 무료 + 약 5% 유료 콘텐츠, 공유와 궁합 친구 초대로 유입을 만든다
+L: 우리가 떠올린 공유 카드·궁합 초대·첫 유료 무료는 업계 1세대가 이미 하는 기본기다. 차별점이 아니라 기본 요건으로 봐야 한다.
+R: https://www.innoforest.co.kr/report/NS00000275
+R: https://view.asiae.co.kr/article/2017042410090318478
+M: freemium | scale | b2c | kr
+K: first_pay_conv | 무료 이용자의 유료 전환
+T: refer | 공유·궁합 초대는 차별점이 아니라 기본기다. 경쟁사 수준(결과 공유 + 궁합 초대 알림)을 먼저 맞추고, 차별은 공유 카드 속 '웹툰 한 컷'처럼 우리만의 형식에서 찾는다
+O: viral_coef | 출시 첫 달 | 가입자 4만 명, 일 방문자의 약 35%가 콘텐츠 공유 | 2017년 출시 직후 | https://view.asiae.co.kr/article/2017042410090318478
+
+# sajunaru | AI 시대에 사람 상담으로 1위를 할 수 있나 | 운세·사주 | real | 다음(종합)
+S: AI 사주가 늘어나는 동안 사주나루는 타로 마스터·무속인·사주 전문가 약 1,000명과 고객을 1:1로 연결하는 상담 플랫폼으로 성장했다.
+X: AI 풀이만으로는 '내 상황'을 깊이 다뤄 주지 않는다는 불만
+P: 고객이 원하는 것은 정답보다 내 사정을 듣고 답해 주는 경험이었다
+- O pr | AI 풀이를 더 많이 생성한다 | 다들 하고 있다 | 뻔함 || barrier=competition; holder=AI 사주 업계
+- B cu | 사람 전문가 1:1 연결에 집중 | AI가 사람을 대체할 것이라는 시장 분위기 | 대세의 맹점 || barrier=belief; holder=AI 운세 스타트업; ev=https://v.daum.net/v/20251211210300627
+- T ch | 비대면 상담 | 점집 방문 낙인을 피하려는 수요가 비대면 플랫폼으로 옮겨 왔다 | 행동 변화 || barrier=behavior_change; holder=대면 점술 시장; changed=비대면 상담 확산
+= 검증된 사람 전문가와 비대면 1:1 상담으로 '휴먼 터치'를 판다
+L: AI 리포트의 다음 단계로 사람 상담(또는 사람 검수)을 붙이면 고단가·재구매 상품이 될 수 있다.
+R: https://v.daum.net/v/20251211210300627
+M: marketplace | scale | b2c | kr
+K: revenue | 상담 매출
+T: expand | 4만 원 리포트 구매자에게 '전문가 1:1 해석 상담'을 상위 상품으로 제안한다. AI 리포트를 상담의 사전 자료로 쓰면 상담 시간과 원가가 줄어든다
+O: revenue | 2023년 매출 275.5억 원 | 2024년 매출 약 400억 원, 영업이익 79억 원 | 상담 플랫폼 중 첫 연매출 400억 원 | https://v.daum.net/v/20251211210300627
+
+# jeomsin | 운세 앱 트래픽을 어떻게 키우나 | 운세·사주 | real | 한국경제, 다음(종합)
+S: 테크랩스의 점신은 국내 대표 운세 앱으로 사주·타로·신점 상담을 함께 운영한다.
+X: 운세 앱은 매일 쓰는 앱이 아니라 재방문이 약하다
+P: 가끔 보는 운세를 매일 여는 습관으로 바꾸고, 그 트래픽을 상담 매출로 잇는 구조가 필요했다
+- O pr | 상담료 할인 | 상담사 수익이 줄어 공급이 빠진다 | 뻔한 함정 || barrier=competition; holder=상담 플랫폼
+- B ch | 매일 보는 무료 운세로 트래픽을 만들고 상담·광고로 수익화 | 운세는 연초에만 본다는 통념 | 통념의 맹점 || barrier=belief; holder=운세 업계
+- T ch | 비대면 전화·채팅 상담 입점 | 점술 소비가 대면에서 비대면으로 옮겨 갔다 | 행동 변화 || barrier=behavior_change; holder=대면 점술 시장; ev=https://www.hankyung.com/article/2026021070861
+= 무료 일일 운세로 트래픽을 모으고, 입점 상담사 수수료(상담 수익의 20~40%)로 번다
+L: 단건 커머스인 우리에게 일일 운세는 재구매 선행 지표(재방문)를 만드는 장치로 쓸 수 있다.
+R: https://www.hankyung.com/article/2026021070861
+R: https://v.daum.net/v/20251211210300627
+M: marketplace | scale | b2c | kr
+K: d30_retention | 운세 앱의 낮은 재방문
+T: repeat_pay | 구매자에게 무료 일일 한 줄 운세를 주고, 재방문을 재구매 선행 지표로 기록한다. 경쟁 앱 수준의 일일 콘텐츠는 기본기, 차별은 '내 리포트와 이어지는' 일일 문장
+O: revenue | 2023년 매출 830억 원 | 2024년 매출 약 979억 원(의료 마케팅 포함), 누적 다운로드 1,900만 건 | 회사 실적 | https://v.daum.net/v/20251211210300627
+
+# gpt-saju-substitute | 무료 GPT 사주가 유료 사주를 대체할까 | 운세·사주 | real | 에스콰이어 코리아
+S: 챗GPT·제미나이에 생년월일을 넣고 사주를 묻는 사람이 늘었다. 커뮤니티에는 사주 프롬프트가 돌고, 무료 사주 GPT도 많다.
+X: "이제 돈 주고 사주 볼 필요 없다"는 인식이 퍼진다
+P: 유료 사주의 가치가 '풀이 문장'에 있다고 보면 무료 AI와 구분되지 않는다
+- O pr | 가격을 무료 AI 수준으로 내린다 | 원가와 품질 차별을 버리는 출혈 경쟁이다 | 뻔함 || barrier=competition; holder=AI 사주 업계
+- B cn | 만세력 계산 정확도를 결제 전에 보여 준다 | 범용 AI가 만세력을 자주 틀린다는 사실을 고객 대부분이 모른다 | 정보 비대칭의 맹점 || barrier=definition; holder=무료 GPT 사주 이용자; ev=https://www.esquirekorea.co.kr/article/1895114
+- B cu | 풀이가 아니라 '내 결정을 돕는 구조'를 판다 | 사주 상품은 풀이 분량이 가치라는 통념 | 가치 정의의 맹점 || barrier=definition; holder=사주 업계
+= 정확한 명식 계산과 결정 중심 구성으로 무료 AI와 다른 가치를 보여 준다
+L: 무료 대체재가 있는 시장에서는 '무엇이 다른지'를 결제 전에 증명해야 한다.
+R: https://www.esquirekorea.co.kr/article/1895114
+M: freemium | growth | b2c | kr
+K: first_pay_conv | 무료 AI 대체재로 인한 결제 이유 약화
+T: hook_marketing | 2p에 '내 명식'(년·월·일·시 간지)을 먼저 정확히 보여 주고, 무료 AI가 자주 틀리는 지점(절기 경계·태어난 시간)을 짧게 설명해 유료의 이유를 만든다
+
+# expedia-field | 결제 버튼을 누르고도 주문이 끝나지 않는다 | 여행 | real | ZDNet(Joe Megibow 발표), FlowingData
+S: 익스피디아에서 많은 고객이 일정과 정보를 입력하고 '지금 구매'를 누른 뒤 거래를 마치지 못했다.
+X: 결제 직전 단계에서 이탈이 많다
+P: 선택 입력란 '회사명'이 고객을 헷갈리게 해 은행 이름을 적었고, 그 결과 카드 주소 확인이 실패했다
+- O pr | 결제 단계 할인 쿠폰 | 원인(입력 오류)을 건드리지 않는다 | 뻔함 || barrier=not_core; holder=마케팅팀
+- I cn | 카드 주소 확인 절차를 없앤다 | 사기 방지 규칙상 불가능하다 | 불가능 || barrier=regulation; holder=카드사 승인 규칙
+- B cu | 혼란을 주는 선택 입력란 하나를 지운다 | 선택 항목은 해가 없다는 통념, 데이터 분석 없이는 원인이 보이지 않았다 | 통념의 맹점 || barrier=belief; holder=폼 설계 관행; ev=https://hn.jakechampion.name/reader/http://www.zdnet.com/expedia-on-how-one-extra-data-field-can-cost-12m-3040153863/
+= 회사명 입력란을 삭제한다
+L: 입력 폼의 항목 하나가 결제 성공률을 바꾼다. 생년월일 입력 화면의 선택 항목(태어난 장소 등)도 같은 눈으로 본다.
+R: https://flowingdata.com/2010/11/05/simple-analysis-makes-expedia-extra-12m
+M: transaction | scale | b2c | us
+K: pay_success_rate | 결제 시도 후 승인 실패
+T: input | 생년월일 입력 화면의 항목을 '없으면 결과가 달라지는 것'만 남긴다. 태어난 시간 모름 선택지를 분명히 두고, 항목 하나씩 빼는 실험으로 입력 완료율을 본다
+O: revenue | 회사명 입력란 있음 | 삭제 후 연 1,200만 달러 이익 증가 | 입력란 하나 삭제, 2010년 발표 | https://flowingdata.com/2010/11/05/simple-analysis-makes-expedia-extra-12m
+
+# obama-splash | 첫 화면에서 가입을 더 받을 수 있을까 | 미디어 | real | Optimizely(Dan Siroker)
+S: 2008년 오바마 선거 캠프의 온라인 모금은 홈페이지 첫 화면에서 받은 이메일 가입이 출발점이었다.
+X: 첫 화면 방문자 대부분이 가입하지 않고 떠난다
+P: 캠프 직원들의 감(가장 좋아한 영상)으로 첫 화면을 정하고 있었다
+- O cu | 직원들이 가장 좋아한 영상을 건다 | 다들 감으로 정한다 | 뻔함 || barrier=not_core; holder=캠프 직원
+- B ch | 버튼 4개 × 이미지·영상 6개를 동시에 시험한다 | 첫 화면은 디자인 문제이지 실험 대상이 아니라는 통념 | 통념의 맹점 || barrier=belief; holder=캠프 운영진; year=2007; ev=https://www.optimizely.com/sv/insights/blog/how-obama-raised-60-million-by-running-a-simple-experiment
+- T ch | 무료 웹 실험 도구 | 구글 웹사이트 옵티마이저 같은 도구로 개발 없이 실험할 수 있게 됐다 | 도구 변화 || barrier=tech_change; holder=개발 인력 의존; changed=웹 A/B 도구 보급
+= 버튼 문구와 미디어 조합 24개를 시험해 가장 높은 조합으로 바꾼다
+L: 내부에서 가장 좋아한 안이 지는 경우가 많다. 2p 핵심 문구·이미지·버튼은 감이 아니라 실험으로 정한다.
+R: https://www.optimizely.com/sv/insights/blog/how-obama-raised-60-million-by-running-a-simple-experiment
+M: advertising | growth | b2c | us
+K: marketing_hook_rate | 첫 화면 가입률
+T: hook_marketing | 2p의 핵심 이미지·문구·버튼을 조합 실험한다. 내부 선호안은 대조군으로 두고, 조합 수가 많으면 표본이 커지므로 두 요소씩 나눠 돌린다
+O: marketing_hook_rate | 가입률 8.26% | 11.6% (+40.6%) | 버튼 '더 알아보기' + 가족 사진 조합 | https://www.optimizely.com/sv/insights/blog/how-obama-raised-60-million-by-running-a-simple-experiment
+
+# landing-reading-level | 랜딩 문장은 얼마나 쉬워야 하나 | 마케팅 | real | Unbounce 2024(MarketingProfs 인용)
+S: Unbounce는 랜딩 페이지 4만 1천여 개를 분석해 전환율과 문장 난이도의 관계를 발표했다.
+X: 전문성을 보이려고 어려운 말을 쓴 랜딩이 전환이 낮다
+P: '전문적으로 보이는 것'과 '이해되는 것'을 혼동했다
+- O cu | 문장을 더 길고 자세하게 | 자세할수록 설득된다는 흔한 생각 | 뻔함 || barrier=not_core; holder=마케터
+- B cu | 초등 고학년 수준의 쉬운 문장으로 다시 쓴다 | 쉬운 말은 전문성이 없어 보인다는 통념 | 통념의 맹점 || barrier=belief; holder=전문 서비스 마케팅; ev=https://marketingprofs.com/charts/2024/52374/landing-page-conversion-benchmarks
+- O ch | 이미지를 늘린다 | 문장 난이도 문제를 그대로 둔다 | 본질 아님 || barrier=not_core
+= 랜딩 문장을 쉬운 말로 다시 쓴다
+L: 사주는 한자 용어(용신·대운·신살)가 많다. 2p에서는 용어 대신 그 용어가 내 삶에 뜻하는 바를 쓴다.
+R: https://marketingprofs.com/charts/2024/52374/landing-page-conversion-benchmarks
+M: saas | mature | b2b | global
+K: marketing_hook_rate | 어려운 랜딩 문장
+T: hook_marketing | 2p 문장에서 명리 용어를 빼고 생활 언어로 바꾼 버전과 현재 버전을 비교한다. 용어는 결과 화면에서 설명한다
+O: first_pay_conv | 대학 수준 문장 랜딩 중앙값 5.3% | 초등 5~7학년 수준 문장 랜딩 중앙값 11.1% | 랜딩 4만 1천여 개 비교(인과가 아닌 상관) | https://marketingprofs.com/charts/2024/52374/landing-page-conversion-benchmarks
+
+# amazon-prime-ftc | 가입은 쉽게, 해지는 어렵게 하면 남는 게 있을까 | 커머스 | failure | FTC 합의(2025), Jurist, Fortune
+S: 미국 FTC는 2023년 6월 아마존이 소비자를 프라임에 모르게 가입시키고 해지를 어렵게 만들었다며 소송을 냈다.
+X: 해지율을 낮추려고 해지 절차를 복잡하게 만들었다
+P: 단기 리텐션 지표를 위해 고객 동의와 해지 권리를 해치는 설계를 했다
+- O cu | 해지 화면에 혜택을 한 번 더 안내 | 업계가 흔히 쓰는 방식 | 뻔함 || barrier=competition; holder=구독 업계
+- I cn | 해지 단계를 늘려 이탈을 막는다 | 규제 위반으로 지속 불가능 | 규제 || barrier=regulation; holder=FTC·ROSCA; ev=https://www.jurist.org/news/2025/09/ftc-settles-amazon-prime-deceptive-practices-suit-for-2-5b/
+- I pr | '무료 배송 원하지 않음' 같은 죄책감 유도 버튼 | 다크패턴으로 규제 대상 | 규제 || barrier=regulation; holder=FTC
+= (실패) 2025년 합의로 거액을 내고 해지 절차를 단순하게 바꿨다
+L: 재구매·연간 상품을 설계할 때 해지·취소를 가입만큼 쉽게 만든다. 국내도 2025년부터 같은 유형을 직접 규제한다.
+R: https://www.jurist.org/news/2025/09/ftc-settles-amazon-prime-deceptive-practices-suit-for-2-5b/
+R: https://fortune.com/2025/09/25/amazon-ftc-settlement-prime-automatic-renewal-lina-khan-dark-patterns/
+M: membership | mature | b2c | us
+K: churn | 해지 방해로 낮춘 해지율
+T: trust | 연간 이용권·자동 예약을 만들 때 해지 버튼을 구매 버튼과 같은 화면 깊이에 두고, 갱신·유료 전환 전에 별도 동의를 받는다
+O: refund_rate | 소송 제기 (2023.6) | 25억 달러 합의: 민사 제재금 10억 + 소비자 환급 15억 달러 | 2025년 9월 합의, 해지 절차 단순화 명령 | https://www.jurist.org/news/2025/09/ftc-settles-amazon-prime-deceptive-practices-suit-for-2-5b/
+
+# booking-scarcity | '남은 방 1개'는 전환을 올리지만 | 여행 | failure | 영국 CMA, Which?
+S: 영국 경쟁시장청(CMA)은 부킹닷컴·익스피디아 등 숙박 예약 사이트 6곳의 압박 판매와 할인 표시를 조사했다.
+X: 품절 임박·인기 문구로 예약을 서두르게 했다
+P: 사실과 다른 희소성·인기 표시로 결정을 서두르게 하는 것이 전환율 실험의 '승리안'이 되어 있었다
+- O pr | '지금 예약 시 할인' 문구 | 업계가 다 쓴다 | 뻔함 || barrier=competition; holder=온라인 여행사
+- I cu | 거짓 희소성 표시를 유지한다 | 규제기관이 압박 판매로 보고 시정을 요구 | 규제 || barrier=regulation; holder=CMA; ev=https://www.gov.uk/government/news/hotel-booking-sites-to-make-major-changes-after-cma-probe
+- B cu | 정확한 재고·조건만 표시하고 총액을 처음부터 보여 준다 | 압박 문구를 빼면 전환이 떨어진다는 통념 | 신뢰가 장기 지표라는 맹점 || barrier=belief; holder=전환율 중심 조직
+= (실패) 2019년 법적 구속력 있는 약속으로 압박 판매·숨은 요금 표시를 고쳤다
+L: 카운트다운·'n명이 보는 중' 같은 압박 장치는 실험에서 이겨도 규제·신뢰 비용이 따른다. 실험 가드레일에 규정 확인을 넣는다.
+R: https://www.gov.uk/government/news/hotel-booking-sites-to-make-major-changes-after-cma-probe
+R: https://www.which.co.uk/news/2019/09/booking-com-still-misleading-holidaymakers-with-1-room-left-claims/
+M: marketplace | mature | b2c | eu
+K: checkout_conv | 압박 문구로 올린 예약 전환
+T: checkout | 결제 페이지의 시간 한정·남은 수량 문구는 실제 조건일 때만 쓰고, 실험 전에 규정 확인을 거친다
+O: rating | 압박 판매 조사 | 6개사 2019년 9월까지 시정 약속, 이후 점검에서 부킹닷컴 '남은 방' 문구 10건 중 5건 부정확 | CMA 약속과 Which? 점검 | https://www.which.co.uk/news/2019/09/booking-com-still-misleading-holidaymakers-with-1-room-left-claims/
+
+# kr-dark-pattern-sanction | 국내 다크패턴 규제, 실제로 집행될까 | 커머스 | failure | 공정거래위원회 보도(언론 종합)
+S: 개정 전자상거래법이 2025년 2월 14일 시행되며 숨은갱신·순차공개 가격·사전선택·잘못된 계층구조·취소 방해·반복간섭 6개 유형이 직접 규제 대상이 됐다.
+X: 구독 해지·유료 전환 과정의 불만이 이어졌다
+P: '업계 관행'이던 화면 설계가 법 위반이 되었다
+- O cu | 관행대로 유지한다 | 다른 회사도 다 한다 | 뻔한 위험 || barrier=competition; holder=구독 플랫폼
+- I cn | 해지 절차를 가입보다 복잡하게 둔다 | 법 위반 | 규제 || barrier=regulation; holder=공정거래위원회(2025년 개정 전자상거래법); year=2025; ev=https://news.seoul.go.kr/economy/archives/566114?listPage=1
+- B cu | 해지·변경을 가입만큼 쉽게 만들고 그 사실을 알린다 | 해지를 쉽게 하면 매출이 준다는 통념 | 신뢰의 맹점 || barrier=belief; holder=구독 업계
+= (실패) 2025년 10월 OTT·음원·커머스 구독 4개사 첫 제재
+L: 연간 이용권·자동 예약·묶음 상품을 만들 때 6개 유형을 체크리스트로 본다.
+R: https://news.seoul.go.kr/economy/archives/566114?listPage=1
+R: https://www.nocutnews.co.kr/news/6456991
+M: subscription | mature | b2c | kr
+K: churn | 해지 방해
+T: trust | 결제·재구매 화면을 6개 다크패턴 유형 체크리스트로 점검하고, 위반 소지가 있는 실험안은 실험 전에 뺀다
+O: refund_rate | 법 시행 (2025.2.14) | 2025년 10월 15일 구독 플랫폼 4개사 시정명령·과태료 | 개정법 시행 후 첫 제재 | https://www.nocutnews.co.kr/news/6456991

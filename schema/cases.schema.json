@@ -1,0 +1,60 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/360-degree-parallax/planning/schema/cases.schema.json",
+ "title": "planning 사례 DB (db/cases.json)",
+ "description": "툴에서 읽을 공식 구조. 값의 목록(지표·단계·장벽 id)은 db/taxonomy.json이 기준이고, 교차 검사는 tools/check_db.mjs가 한다.",
+ "type": "object",
+ "required": ["v", "cases", "kinds", "taxonomy"],
+ "properties": {
+  "v": {"const": 4},
+  "taxonomy": {"type": "string"},
+  "kinds": {"type": "object"},
+  "cases": {"type": "array", "items": {"$ref": "#/$defs/case"}}
+ },
+ "$defs": {
+  "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "한 번 정하면 바꾸지 않는다. 바꾸면 db/meta/aliases.txt에 옛 id를 남긴다."},
+  "url": {"type": "string", "pattern": "^https://"},
+  "case": {
+   "type": "object",
+   "required": ["id", "kind", "domain", "title", "verified", "refs", "depth", "business", "problem_metric", "outcomes", "saju", "what", "hyps", "solution", "lesson"],
+   "properties": {
+    "id": {"$ref": "#/$defs/id"},
+    "kind": {"enum": ["real", "failure", "practice"]},
+    "domain": {"type": "string"},
+    "domain_group": {"type": "string"},
+    "title": {"type": "string"},
+    "source": {"type": "string"},
+    "source_status": {"enum": ["verified", "unverified", "disputed"]},
+    "source_note": {"type": ["string", "null"]},
+    "verified": {"type": "boolean"},
+    "refs": {"type": "array", "items": {"$ref": "#/$defs/url"}},
+    "depth": {"enum": ["deep", "tagged"]},
+    "business": {"type": "object", "required": ["model", "stage", "market", "region"]},
+    "problem_metric": {"type": "object", "required": ["id"]},
+    "outcomes": {"type": "array", "items": {"type": "object", "required": ["metric", "before", "after", "context", "evidence"],
+      "properties": {"evidence": {"$ref": "#/$defs/url"}}}},
+    "outcome_note": {"type": ["string", "null"]},
+    "saju": {"type": "object", "required": ["stage", "idea"], "properties": {
+      "stage": {"type": "string"}, "idea": {"type": "string"},
+      "idea_level": {"enum": ["draft"], "description": "draft: 분류 사례의 초안 (적합성·Why not yet 검증 전)"},
+      "also": {"type": "array", "items": {"type": "string"}},
+      "segments": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "string"}}},
+      "segments_inferred": {"type": "boolean"},
+      "wny": {"type": "object", "required": ["verdict", "role", "why_not_yet", "barrier", "competitors", "compliance"],
+        "properties": {"verdict": {"enum": ["obvious", "impossible", "blindspot", "timing"]}, "role": {"enum": ["table", "diff", "risk", "skip"]}}},
+      "fit": {"type": "object", "required": ["problem_match", "mechanism", "support_factors", "key_difference", "verdict"],
+        "properties": {"problem_match": {"enum": ["same", "similar", "different"]}, "verdict": {"enum": ["transfer", "adapt", "reject"]},
+          "support_factors": {"type": "array", "items": {"type": "object", "required": ["condition", "present"],
+            "properties": {"present": {"enum": ["yes", "no", "unknown"]}}}}}}}},
+    "what": {"type": "object", "required": ["situation", "symptom", "problem"]},
+    "hyps": {"type": "array", "minItems": 3, "items": {"type": "object", "required": ["text", "perspective", "why_not_yet", "verdict", "reason", "barrier"],
+      "properties": {"verdict": {"enum": ["obvious", "impossible", "blindspot", "timing"]},
+        "perspective": {"enum": ["customer", "timing", "price", "channel", "competitor", "constraint", "belief"]},
+        "barrier": {"type": "object", "required": ["type", "inferred"]},
+        "test": {"type": "object", "required": ["experiment", "metric"]}}}},
+    "solution": {"type": "string"},
+    "lesson": {"type": "string"}
+   }
+  }
+ }
+}

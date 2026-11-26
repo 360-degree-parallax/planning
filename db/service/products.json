@@ -1,0 +1,10 @@
+{
+ "note": "상품 목록. 가격·원가는 실제 값으로 교체한다. null은 아직 모름.",
+ "products": [
+  {"id": "main-report", "name": "종합 사주 리포트 (전체 장 공개)", "price": 40000, "price_note": "4만 원대 (사용자 제공 수준, 정확한 값으로 교체)", "chapters": null, "llm_cost": null, "status": "live"},
+  {"id": "compat", "name": "궁합 리포트", "price": null, "chapters": null, "llm_cost": null, "status": "idea"},
+  {"id": "yearly", "name": "신년운 리포트", "price": null, "chapters": null, "llm_cost": null, "status": "idea", "season": "new-year"},
+  {"id": "followup-pack", "name": "AI 후속 질문 묶음", "price": null, "chapters": null, "llm_cost": null, "status": "idea"},
+  {"id": "expert-consult", "name": "전문가 1:1 해석 상담", "price": null, "chapters": null, "llm_cost": null, "status": "idea"}
+ ]
+}

@@ -1,0 +1,54 @@
+// 우리 사주 아이디어(핵심 50개 사례의 saju.idea)에 붙이는 Why not yet
+// id | 판정 | 역할 | 경쟁 사주 서비스는 왜 안 했나 (또는 이미 하고 있나) | 장벽 id | 근거 경쟁사 id(쉼표, 없으면 -) | 확인할 규정 id(쉼표, 없으면 -)
+// 판정: O 뻔함 · I 불가능 · B 통념의 맹점 · T 타이밍
+// 역할: table 기본기(이미 흔함, 안 하면 손해·차별은 아님) · diff 차별 후보 · risk 규정·신뢰 위험이 큼 · skip 지금은 보류
+dental | O | table | 생성 대기 중 진행 단계를 보여 주는 것은 흔한 화면 설계라 차별점이 되기 어렵다. 경쟁사 적용 여부는 직접 확인 필요 | competition | - | -
+elevator | T | diff | 띠·오행별로 1p 주인공을 따로 그리면 제작비가 조합 수만큼 늘어 웹툰형 서비스도 공통 캐릭터를 쓰는 편이었다. 이미지 생성 원가가 내려가며 가능해졌다 | tech_change | cheongwoldang | birth-data-privacy
+baggage | O | table | 분석 과정을 연출하는 대기 화면은 흔한 장치다 | competition | - | -
+disney | O | table | 클리프행어로 다음 화면을 넘기게 하는 것은 웹툰 연출의 기본 문법이라 웹툰형 경쟁사도 쓴다 | competition | cheongwoldang | -
+cold | O | table | 환불 사유 분류는 운영 기본기다. 경쟁 우위가 아니라 빠뜨리면 안 되는 일 | not_core | - | -
+mri | B | diff | 운세 광고는 '올해 조심해야 할 것'처럼 불안을 자극하는 경고형이 클릭을 더 부른다는 관행에 기대 왔다. 불안한 방문자가 끝까지 보는 것은 오히려 극복 서사일 수 있다 | belief | - | false-discount-scarcity
+embrace | O | table | 시간대·상황별 광고 소재 운영은 퍼포먼스 마케팅의 기본기다 | competition | - | -
+airbnb | O | table | 후기 노출은 대부분의 서비스가 쓴다. 차별은 후기의 형식(적중 사례·작가 프로필)에서 나온다 | competition | - | fake-reviews
+netflix | T | table | 카운트다운·압박 문구는 실험에서 전환을 올린다는 이유로 유지돼 왔지만, 2025년 다크패턴 직접 규제로 제거가 선택이 아닌 필수가 됐다 | regulation_change | - | false-discount-scarcity,dark-sequential-price
+dyson | B | diff | 경쟁사 다수가 주제를 잘게 나눠 따로 팔거나(46개 주제) 재화를 충전하게 하는 구조라 '한 번 결제로 전부'를 내세우면 자기 객단가 구조와 부딪친다 | incentive | forceteller,sajuai | -
+febreze | O | table | 생일·연초 같은 시점 마케팅은 운세 업계 전반이 쓴다 | competition | forceteller | dark-nagging
+milkshake | B | diff | 하나의 랜딩으로 모든 고민을 받는 것이 관행이다. 니치 주제 경쟁사도 상품을 나눴을 뿐 같은 상품의 2p를 유입 고민별로 바꾸지는 않는 것으로 보인다(확인 필요) | belief | tight-saju | -
+southwest | O | table | 명식 계산 결과 캐시는 운영 기본기다 | not_core | - | -
+spotify | O | table | 무료 맛보기는 업계 표준이다. 포스텔러는 첫 가입 시 유료 운세 1개를 무료로 준다 | competition | forceteller | digital-withdrawal
+saju | T | diff | 리포트 뒤 1:1 후속 질문은 사람 상담 인건비 때문에 별도 유료 상품(상담 플랫폼)으로만 존재했다. LLM으로 리포트에 붙여 줄 수 있게 됐다 | tech_change | sajunaru,jeomsin | -
+amazon-prime | B | diff | 단건 판매 업계는 '다음 구매 할인 권리'가 정가 구매를 잠식한다고 보고 피해 왔다 | belief | - | -
+zappos | B | diff | 디지털 콘텐츠는 제공이 시작되면 철회를 제한할 수 있어 업계는 '환불 불가'를 기본값으로 둔다. 환불 보장은 그 반대 선택이라 아무도 앞에 내세우지 않았다 | incentive | - | digital-withdrawal
+warby-parker | B | diff | 결제 전에 개인화 풀이를 주면 원가가 들고 결제 이유가 줄어든다는 생각에, 맛보기는 따로 두고 1p 스토리 안에서 실제로 맞히는 장면은 넣지 않았다(경쟁사 확인 필요) | belief | - | birth-data-privacy
+dollar-shave-club | B | diff | 신비주의가 권위를 만든다는 업계 통념. 사주아이처럼 가벼운 톤이 통한 사례가 나오기 시작했다 | belief | sajuai | fake-reviews
+costco | B | risk | 단건 판매 업계는 연간 상품이 단건 매출을 줄인다고 보고 피했다. 반복 결제라 숨은갱신·해지 방해 규정 위험이 크다 | belief | - | dark-hidden-renewal,dark-cancel-obstruction
+coupang-rocket-wow | O | table | 재구매 할인은 흔한 방식이다 | competition | - | dark-preselect
+container | O | table | 생성 단계 비용 표준화는 운영 기본기다 | not_core | - | -
+slack | I | skip | 외부 팀에 내부 도구를 여는 것은 지금 사주 사업과 구조가 맞지 않는다 | structural | - | -
+shopify | I | skip | 외부 작가가 상품을 만들어 파는 공급 플랫폼은 검수·정산·품질 관리 비용이 커서 지금 단계에서 감당하기 어렵다 | cost | - | fake-reviews
+dropbox | O | table | 포스텔러는 궁합 친구 초대 기능이 있다. 양쪽 할인은 기본기 위에 얹는 조정이다 | competition | forceteller | birth-data-privacy
+mailchimp | O | table | 결과 공유는 포스텔러가 출시 때부터 해 온 기본기다(일 방문자 약 35% 공유) | competition | forceteller | birth-data-privacy
+square | O | table | 간편결제·소액결제 추가는 결제의 기본기다 | competition | - | minor-cancel
+mpesa | O | risk | 휴대폰 소액결제는 흔하지만, 10대 결제를 늘리면 미성년자 취소·고지 의무 위험이 함께 커진다 | competition | - | minor-cancel
+wise | T | table | 총액·포함 내용을 처음부터 보이는 것은 2025년 순차공개 가격 규제 이후 필수가 됐다 | regulation_change | - | dark-sequential-price
+netflix-streaming | B | risk | 단건 매출 중심 업계는 자동 예약을 잘 쓰지 않았다. 반복 결제라 숨은갱신 규정에 바로 걸린다 | incentive | - | dark-hidden-renewal,dark-cancel-obstruction
+house-of-cards | B | diff | 웹툰 연출을 작가의 감으로 정하는 제작 관행. 여러 1p를 동시에 돌릴 실험 인프라가 없었다 | belief | cheongwoldang | -
+instagram | B | diff | 많이 보여 줄수록 설득된다는 통념 때문에 2p에 혜택을 나열한다 | belief | - | -
+tiktok | B | diff | 포스텔러처럼 업계 표준 흐름은 생년월일·출생시각을 먼저 받는다. 입력이 있어야 개인화할 수 있다는 전제 때문에 이야기를 먼저 보여 주는 순서를 시험하지 않았다 | belief | forceteller | minor-cancel,birth-data-privacy
+kakaopage | O | table | 첫 장 미리보기는 업계 표준이다(포스텔러 6개월 운세 미리보기, 첫 유료 무료). 철회 제한 표시와 함께 쓰면 규정 요건도 채운다 | competition | forceteller | digital-withdrawal,false-discount-scarcity
+naver-webtoon | O | table | 가격 표시·버튼 문구 조정은 기본기다. '하루 n원' 표시는 총액과 함께 보여야 한다 | competition | - | dark-sequential-price
+fortnite | O | table | 신년운세·토정비결 같은 시즌 상품은 업계 전반이 판다 | competition | forceteller | -
+duolingo | O | table | 매일 보는 무료 운세는 점신·포스텔러가 이미 한다. 차별은 '내 리포트와 이어지는' 문장에서 나온다 | competition | jeomsin,forceteller | dark-nagging
+substack | B | diff | AI 사주에는 사람 작가가 없다는 전제 때문에 캐릭터를 '작가'로 세워 팔로우를 받는 시도가 드물다(확인 필요) | belief | - | -
+patreon | O | table | 등급형 가격표는 흔하다. 상위 등급을 미리 선택해 두거나 지나치게 강조하면 규정 위험 | competition | - | dark-preselect,dark-false-hierarchy
+nyt-paywall | O | table | 무료 공개 분량 조정은 기본기다 | competition | forceteller | digital-withdrawal
+millie | O | table | 포함 내용을 보여 주는 것은 기본기다 | competition | - | dark-sequential-price
+rolls-royce-power | T | diff | 사람 상담은 상담사 수익 때문에 건당·분당 과금이 기본이라 '기간 무제한'은 원가 위험이었다. LLM으로 추가 질문 원가가 낮아져 가능해졌다 | tech_change | sajunaru,jeomsin | dark-preselect
+aravind | O | table | 무료 구간 원가 상한 관리는 운영 기본기다 | not_core | - | -
+five-whys | O | table | 원인 분석은 운영 기본기다 | not_core | - | -
+lego-turnaround | B | diff | 긴 리포트가 곧 비싼 이유라는 업계 통념(방대한 텍스트 리포트를 내세움) 때문에 덜 읽히는 장을 줄이지 않았다 | belief | sajuai | -
+adobe-cc | B | risk | 연간 상품은 단건 매출 구조를 흔들고 반복 결제 규정 위험이 있다 | belief | - | dark-hidden-renewal,dark-cancel-obstruction
+kakao-emoticon | B | diff | 공유는 무료여야 퍼진다는 통념 때문에 '보내고 싶은 결과 카드'를 유료로 만들지 않았다 | belief | - | birth-data-privacy
+post-it | B | diff | 덜 읽히는 장은 실패한 콘텐츠라고 보고 다른 쓸 곳(공유·초대 미끼)을 찾지 않았다 | belief | - | birth-data-privacy
+webvan | B | diff | 콘텐츠를 다 만든 뒤 파는 제작 관행 때문에 '랜딩과 예약 결제로 수요부터 확인'하지 않았다 | belief | - | digital-withdrawal
+calm | B | diff | 운세 광고가 불안 자극형에 기대는 관행. 밤 시간 방문자에게 달래는 톤을 따로 쓰는 시도는 확인되지 않았다 | belief | - | -

@@ -31,13 +31,17 @@ L = f'''# planning
 - 뻔함·불가능 → 탈락 (뻔하거나 불가능한 아이디어 제거)
 - 통념의 맹점·타이밍 → 생존 (주목하지 않던 아이디어가 빛나는 아이디어였음을 발견)
 
+다른 업종 사례를 우리 서비스에 옮길 때는 그 앞에 **적합성(Fit) 검증**을 둔다: 원 사례가 통한 이유와 그 이유가 작동한 조건이 우리에게도 있는가? (사례 → 적합성 → 우리 가설 → Why not yet → 실험)
+
 기준 서비스: **AI 사주 웹사이트 · 커머스형 · 최종 지표 = 결제**. 웹툰형 스토리 후킹(1p) → 마케팅 후킹(2p) → 결제 → 한 번 구매로 전체 결과 공개. 모든 사례가 결제 지표 트리와 사주 퍼널 단계에 연결되어 있습니다.
 
 ## 규모 (스키마 v4)
 - 사례 **{len(cases)}개** (실제 {kc['real']} · 실패 {kc['failure']} · 연습 {kc['practice']}), 가설 **{nh}개**
 - **deep {len(deep)}개**: Why not yet 장벽 구조(유형·주체·바뀐 계기·연도·근거), 검증 실험과 지표, 사주 적용 아이디어 직접 작성. 근거 URL이 확인된 결과 지표 {nout}건 ({sum(1 for c in deep if c.get('outcomes'))}개 사례), 나머지 {sum(1 for c in deep if c.get('outcome_note'))}개는 수치가 없는 이유를 기록
-- **tagged {len(tagged)}개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계는 사람이 태깅, 장벽 유형과 적용 세그먼트는 규칙 추정(`inferred: true`)
-- 출처 링크 확인 {nref}개
+- **tagged {len(tagged)}개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계와 사주 적용 아이디어 초안은 사람이 작성, 장벽 유형과 적용 세그먼트는 규칙 추정(`inferred: true`, 결제 단계 생존 가설 {sum(1 for c in tagged for h in c['hyps'] if h['barrier'].get('reviewed'))}개는 사람 검토)
+- 출처 링크 확인 {nref}개, 논란 표시 {sum(1 for c in cases if c.get('source_status') == 'disputed')}개
+- 운세·사주 업계 사례 {sum(1 for c in cases if c.get('domain_group') == '운세·사주')}개, 경쟁사 지도 {len(json.load(open('db/saju/competitors.json'))['competitors'])}곳, 규정 {len(json.load(open('db/compliance.json'))['rules'])}개
+- 우리 아이디어 50개: 적합성 검증 + Why not yet (기본기 {sum(1 for c in deep if c['saju']['wny']['role'] == 'table')} · 차별 {sum(1 for c in deep if c['saju']['wny']['role'] == 'diff')} · 위험 {sum(1 for c in deep if c['saju']['wny']['role'] == 'risk')} · 보류 {sum(1 for c in deep if c['saju']['wny']['role'] == 'skip')})
 
 실제·실패 사례는 학습용으로 단순화한 재구성입니다. 가설과 Why not yet 판정은 해석이며, 해당 기업이 실제로 그렇게 판단했다는 기록이 아닙니다. 출처 링크가 없는 사례는 인용 전 확인이 필요합니다.
 
@@ -51,11 +55,16 @@ L = f'''# planning
 | `db/funnels/*.json` | 퍼널 단계 순서 설정 (순서를 바꿔도 사례·실험 연결 유지) |
 | `db/service/` | 우리 서비스 단계별 도달 수·수익 구조·실험 기록 (`*.example.json`은 가짜 예시) |
 | `db/benchmarks.json` | 출처 있는 외부 참고 기준값 |
-| [docs/diagnosis-example.md](docs/diagnosis-example.md) | 진단 리포트 예시: 병목 단계 → 추천 실험·표본 수, 세그먼트, 공헌이익 (가짜 숫자) |
+| [docs/idea-validation.md](docs/idea-validation.md) | 우리 아이디어 50개의 적합성(Fit) 검증 + Why not yet |
+| [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |
+| [docs/compliance.md](docs/compliance.md) | 실험 전 확인할 규정 체크리스트 |
+| [docs/tracking-plan.md](docs/tracking-plan.md) | 단계별 이벤트 정의 (도달 수 집계 기준) |
+| [docs/experiment-rules.md](docs/experiment-rules.md) | 실험 운영 규칙 |
+| [docs/diagnosis-example.md](docs/diagnosis-example.md) | 진단 리포트 예시: 병목 → 추천 실험·표본 수, 세그먼트, 공헌이익, 추세·코호트, 실험 점검 (가짜 숫자) |
 
 ## 만들기
 ```bash
-python3 tools/build_db.py && node tools/check_db.mjs && python3 tools/report.py && python3 tools/readme.py
+python3 tools/build_db.py && node tools/check_db.mjs && python3 -m unittest discover -s tests && python3 tools/report.py && python3 tools/docs.py && python3 tools/readme.py
 ```
 우리 수치 진단: `db/service/baseline.json`에 단계별 도달 수를 넣고 `python3 tools/diagnose.py` → `docs/diagnosis.md` (예시는 `--example`)
 원본: `db/base.json`(처음 30개) · `db/src/*.txt`(분야별 사례, `95·96-deep`은 핵심 50개, `97-commerce-remap`은 커머스 구조에 맞춘 사주 적용·실험 덮어쓰기, `98-outcomes`는 결과 지표 보강) · `db/meta/ice.txt`(실험 우선순위·채택 기준·가드레일) · `db/meta/also.txt`(보조 퍼널 단계) · `db/meta/segments.txt`(적용 세그먼트) · `db/meta/no-outcome.txt`(결과 수치가 없는 이유) · `db/meta/tags.txt`(분류 태그). 작성 형식은 `tools/build_db.py` 맨 위 설명을 보세요.

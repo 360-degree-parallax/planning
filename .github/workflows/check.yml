@@ -1,0 +1,26 @@
+name: check
+on: [push, pull_request]
+jobs:
+  db:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-node@v4
+        with: {node-version: '20'}
+      - name: 빌드
+        run: python3 tools/build_db.py
+      - name: 형식 검사
+        run: node tools/check_db.mjs
+      - name: 통계 함수 테스트
+        run: python3 -m unittest discover -s tests
+      - name: 문서 생성
+        run: |
+          python3 tools/report.py
+          python3 tools/docs.py
+          python3 tools/readme.py
+          python3 tools/diagnose.py --example
+          python3 tools/diagnose.py
+      - name: 생성 파일이 커밋돼 있는지 확인
+        run: git diff --exit-code -- db/cases.json README.md docs/

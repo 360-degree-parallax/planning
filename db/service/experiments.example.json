@@ -1,12 +1,148 @@
 [
- {"id": "exp-001", "case": "tiktok", "hyp": 2, "funnel": "saju-default", "funnel_version": 1, "metric": "input_complete_rate",
-  "start": "2026-10-01", "end": "2026-10-14", "result": "win",
-  "arms": [{"name": "입력을 1p 앞에", "n": 12000, "conv": 6300}, {"name": "입력을 1p 뒤에", "n": 12000, "conv": 7150}],
-  "guardrail": {"metric": "first_pay_conv", "control": 0.052, "variant": 0.055, "ok": true},
-  "note": "가짜 기록 예시"},
- {"id": "exp-002", "case": "zappos", "hyp": 3, "funnel": "saju-default", "funnel_version": 1, "metric": "checkout_conv",
-  "start": "2026-11-01", "end": null, "result": "running",
-  "arms": [{"name": "기본", "n": 2100, "conv": 880}, {"name": "환불 보장 문구", "n": 2080, "conv": 930}],
-  "guardrail": {"metric": "refund_rate", "control": null, "variant": null, "ok": null},
-  "note": "가짜 기록 예시"}
+ {
+  "id": "exp-001",
+  "case": "tiktok",
+  "hyp": 2,
+  "funnel": "saju-default",
+  "funnel_version": 1,
+  "metric": "input_complete_rate",
+  "start": "2026-10-01",
+  "end": "2026-10-14",
+  "result": "win",
+  "arms": [
+   {
+    "name": "입력을 1p 앞에",
+    "n": 12000,
+    "conv": 6300
+   },
+   {
+    "name": "입력을 1p 뒤에",
+    "n": 12000,
+    "conv": 7150
+   }
+  ],
+  "guardrail": {
+   "metric": "first_pay_conv",
+   "control": 0.052,
+   "variant": 0.055,
+   "ok": true
+  },
+  "note": "가짜 기록 예시",
+  "product": "main-report",
+  "creatives": {
+   "control": "story-v1",
+   "variant": "story-v1"
+  },
+  "planned_split": [
+   0.5,
+   0.5
+  ],
+  "planned_n": 12000,
+  "compliance_checked": [
+   "minor-cancel",
+   "birth-data-privacy"
+  ]
+ },
+ {
+  "id": "exp-002",
+  "case": "zappos",
+  "hyp": 3,
+  "funnel": "saju-default",
+  "funnel_version": 1,
+  "metric": "checkout_conv",
+  "start": "2026-11-01",
+  "end": null,
+  "result": "running",
+  "arms": [
+   {
+    "name": "기본",
+    "n": 2100,
+    "conv": 880,
+    "revenue_sum": 35200000,
+    "revenue_sumsq": 1408000000000
+   },
+   {
+    "name": "환불 보장 문구",
+    "n": 2080,
+    "conv": 930,
+    "revenue_sum": 37200000,
+    "revenue_sumsq": 1488000000000
+   }
+  ],
+  "guardrail": {
+   "metric": "refund_rate",
+   "control": null,
+   "variant": null,
+   "ok": null
+  },
+  "note": "가짜 기록 예시",
+  "product": "main-report",
+  "creatives": {
+   "control": "marketing-v1",
+   "variant": "marketing-v1"
+  },
+  "planned_split": [
+   0.5,
+   0.5
+  ],
+  "planned_n": 2200,
+  "planned_end": "2026-11-21",
+  "compliance_checked": []
+ },
+ {
+  "id": "exp-003",
+  "case": "patreon",
+  "hyp": 3,
+  "funnel": "saju-default",
+  "funnel_version": 1,
+  "metric": "checkout_conv",
+  "product": "main-report",
+  "creatives": {
+   "control": "marketing-v1",
+   "variant": "marketing-v1"
+  },
+  "start": "2026-12-03",
+  "end": "2026-12-09",
+  "planned_end": "2026-12-24",
+  "planned_n": 6000,
+  "planned_split": [
+   0.34,
+   0.33,
+   0.33
+  ],
+  "result": "win",
+  "compliance_checked": [
+   "dark-preselect"
+  ],
+  "arms": [
+   {
+    "name": "단일 가격",
+    "n": 2750,
+    "conv": 1050,
+    "revenue_sum": 42000000,
+    "revenue_sumsq": 1680000000000
+   },
+   {
+    "name": "3단 가격표 A",
+    "n": 2210,
+    "conv": 990,
+    "revenue_sum": 48010000,
+    "revenue_sumsq": 2500690000000
+   },
+   {
+    "name": "3단 가격표 B",
+    "n": 2190,
+    "conv": 1000,
+    "revenue_sum": 50150000,
+    "revenue_sumsq": 2706350000000
+   }
+  ],
+  "guardrail": {
+   "metric": "checkout_conv",
+   "control": 0.42,
+   "variant": 0.43,
+   "ok": true
+  },
+  "note": "가짜 기록 예시: 일찍 멈춤·배정 비율 이상·3군 보정·시즌 겹침을 보여 주기 위한 것"
+ }
 ]

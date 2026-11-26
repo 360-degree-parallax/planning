@@ -37,7 +37,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
-KEYS = ['id', 'kind', 'domain', 'title', 'source', 'verified', 'refs', 'depth', 'business', 'problem_metric',
+KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
         'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'lesson']
 
 
@@ -275,6 +275,40 @@ def main():
             if cid not in byid or not byid[cid].get('saju'):
                 fail(f'also.txt:{n} 없는 사례: {cid}')
             byid[cid]['saju']['also'] = [s.strip() for s in st.split(',') if s.strip()]
+    VV = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/saju/ideas.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 7 or p[0] not in byid or p[1] not in VV:
+            fail(f'saju/ideas.txt:{n} 형식: {line[:60]}')
+        cid, v, role, why, bar, comp, rules = p
+        byid[cid]['saju']['wny'] = {
+            'verdict': VV[v], 'role': role, 'why_not_yet': why, 'barrier': bar,
+            'competitors': [] if comp == '-' else [x.strip() for x in comp.split(',')],
+            'compliance': [] if rules == '-' else [x.strip() for x in rules.split(',')]}
+    FV = {'y': 'yes', 'n': 'no', '?': 'unknown'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/saju/fit.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 6 or p[0] not in byid:
+            fail(f'saju/fit.txt:{n} 6칸: {line[:60]}')
+        cid, prob, mech, conds, diff, verdict = p
+        if prob not in ('same', 'similar', 'different') or verdict not in ('transfer', 'adapt', 'reject'):
+            fail(f'saju/fit.txt:{n} 값: {prob} / {verdict}')
+        cs = []
+        for part in conds.split(';'):
+            k, _, v = part.strip().rpartition('=')
+            if v.strip() not in FV or not k:
+                fail(f'saju/fit.txt:{n} 지원 조건 형식: {part}')
+            cs.append({'condition': k.strip(), 'present': FV[v.strip()]})
+        byid[cid]['saju']['fit'] = {'problem_match': prob, 'mechanism': mech, 'support_factors': cs,
+                                    'key_difference': diff, 'verdict': verdict}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/saju-ideas.txt')):
+        cid, _, idea = line.partition(' | ')
+        if cid not in byid or not idea:
+            fail(f'saju-ideas.txt:{n} 형식: {line[:50]}')
+        if byid[cid]['saju'].get('idea'):
+            fail(f'saju-ideas.txt:{n} {cid}는 이미 아이디어가 있음')
+        byid[cid]['saju']['idea'] = idea
+        byid[cid]['saju']['idea_level'] = 'draft'
     nof = os.path.join(ROOT, 'db/meta/no-outcome.txt')
     for n, line in meta_lines(nof):
         cid, _, why = line.partition(' | ')
@@ -293,13 +327,35 @@ def main():
                 seg[dim] = [v.strip() for v in vals.split(',') if v.strip()]
         byid[cid]['saju']['segments'] = seg
         byid[cid]['saju']['segments_inferred'] = False
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/barrier-review.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        cid, _, hn = p[0].partition('#')
+        if len(p) != 5 or cid not in byid or not hn.isdigit() or int(hn) > len(byid[cid]['hyps']):
+            fail(f'barrier-review.txt:{n} 형식: {line[:50]}')
+        byid[cid]['hyps'][int(hn) - 1]['barrier'] = {
+            'type': p[1], 'holder': p[2], 'changed': '' if p[3] == '-' else p[3],
+            'year': int(p[4]) if p[4].isdigit() else None, 'evidence': '', 'inferred': False, 'reviewed': True}
     for c in cases:
         if c.get('saju') and 'segments' not in c['saju']:
             c['saju']['segments'] = infer_segments(c)
             c['saju']['segments_inferred'] = True
         c.setdefault('outcome_note', None)
+    groups = {}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/domains.txt')):
+        g, _, toks = line.partition(' | ')
+        for t in toks.split(','):
+            groups[t.strip()] = g.strip()
+    disputed = {}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/disputed.txt')):
+        cid, _, why = line.partition(' | ')
+        if cid not in byid:
+            fail(f'disputed.txt:{n} 없는 사례 {cid}')
+        disputed[cid] = why
     for c in cases:
+        c['domain_group'] = groups.get(c['domain'].split('·')[0].strip())
         c['refs'] = list(dict.fromkeys(c['refs']))
+        c['source_status'] = 'disputed' if c['id'] in disputed else ('verified' if c['refs'] else 'unverified')
+        c['source_note'] = disputed.get(c['id'])
         c['verified'] = bool(c['refs'])
         for h in c['hyps']:
             if 'barrier' not in h:

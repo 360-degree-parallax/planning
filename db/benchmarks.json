@@ -51,6 +51,39 @@
    "source": "MarketingProfs (Unbounce 2024 인용)",
    "url": "https://marketingprofs.com/charts/2024/52374/landing-page-conversion-benchmarks",
    "checked": "2026-11-27"
+  },
+  {
+   "id": "kr-mobile-share",
+   "metric": "visitors",
+   "value": 0.764,
+   "label": "국내 온라인쇼핑 거래액 중 모바일 비중 (2026년 9월)",
+   "context": "국가데이터처 온라인쇼핑동향. 상품 거래액 기준이라 방문자 비중과 다르지만, 1p·2p를 모바일 우선으로 설계할 근거로 쓴다.",
+   "source": "국가데이터처 (KDI 경제정보센터 게시)",
+   "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=288911&topic=O",
+   "checked": "2026-11-27",
+   "segment": {
+    "device": "mobile"
+   }
+  },
+  {
+   "id": "kr-forceteller-paid-share",
+   "metric": "first_pay_conv",
+   "value": null,
+   "label": "운세 앱 콘텐츠 중 유료 비중 약 5% (포스텔러)",
+   "context": "이노포레스트 분석. 전환율이 아니라 콘텐츠 구성 비중이다. 무료 중심 운세 앱의 수익 구조를 볼 때 참고.",
+   "source": "이노포레스트",
+   "url": "https://www.innoforest.co.kr/report/NS00000275",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "kr-consult-commission",
+   "metric": "gross_margin",
+   "value": null,
+   "label": "운세 상담 플랫폼 수수료: 상담 수익의 20~40%",
+   "context": "한국경제 보도. 전문가 상담 상품을 붙일 때 상담사 정산 비율 참고선.",
+   "source": "한국경제",
+   "url": "https://www.hankyung.com/article/2026021070861",
+   "checked": "2026-11-27"
   }
  ]
 }

@@ -1,0 +1,86 @@
+// 규칙으로 추정한 장벽을 사람이 검토한 결과 (결제 관련 단계: checkout·first_pay의 생존 가설부터)
+// id#가설번호 | 장벽 id | 장벽을 가진 주체 | 바뀐 계기 (없으면 -) | 연도 (모르면 -)
+toss#3 | regulation_change | 금융 당국·은행 인증 규정 | 공인인증서 의무 사용 폐지 | 2015
+toss#4 | belief | 은행·카드사 보안 부서 | - | -
+lunch#3 | market_change | 오프라인 외식업 | 원격 줄서기 서비스 보급 | -
+lunch#4 | belief | 외식 업계 | - | -
+cart#3 | belief | 이커머스 업계 | - | -
+mega-coffee#2 | belief | 카페 업계 | - | -
+hul-shakti#2 | definition | 다국적 생활용품 기업 | - | -
+hul-shakti#3 | belief | 소비재 유통망 | - | -
+jio#2 | incentive | 기존 인도 통신사 | - | 2016
+jio#3 | tech_change | 기존 인도 통신사 | 저가 스마트폰 보급 | 2016
+fiverr#2 | belief | 프리랜서 중개 업계 | - | -
+fiverr#4 | tech_change | 오프라인 외주 시장 | 온라인 결제·원격 협업 도구 | -
+booking#2 | belief | 온라인 여행 예약 업계 | - | -
+booking#4 | market_change | 오프라인 여행사 | 검색 광고 등장 | -
+fastfive#2 | belief | 오피스 임대 시장 | - | -
+fastfive#4 | market_change | 전통 임대 시장 | 스타트업 창업 증가 | -
+salesforce#2 | belief | 기업용 소프트웨어 업계 | - | 1999
+salesforce#3 | tech_change | 설치형 소프트웨어 업계 | 인터넷 속도·브라우저 성능 향상 | 1999
+stripe#2 | definition | 결제 대행 업계 | - | 2011
+stripe#3 | tech_change | 기존 결제 대행사 | 온라인 스타트업 급증 | 2011
+twilio#2 | belief | 통신사 | - | 2008
+twilio#4 | behavior_change | 통신사 | 클라우드 개발 확산 | 2008
+atlassian#2 | definition | 기업용 소프트웨어 영업 조직 | - | -
+atlassian#4 | behavior_change | 전사 구매 부서 | 팀 단위 도구 구매 확산 | -
+superhuman#2 | belief | 이메일 클라이언트 업계 | - | -
+superhuman#4 | market_change | 무료 이메일 서비스 | 이메일 중심 직군 증가 | -
+channeltalk#2 | belief | 쇼핑몰 운영자 | - | -
+channeltalk#4 | tech_change | 전화·이메일 고객센터 | 쇼핑몰 솔루션 API 연동 | -
+squarespace#2 | belief | 웹 에이전시 업계 | - | -
+squarespace#4 | market_change | 전문 사진·디자인 외주 | 스마트폰 사진 품질 향상 | -
+b2b-onboarding#3 | belief | SaaS 그로스 실무 | - | -
+b2b-onboarding#4 | tech_change | 빈 화면으로 시작하는 SaaS | 공개 API·AI 요약 | -
+paypal#2 | definition | 페이팔 창업팀 자신(원래 계획) | - | -
+paypal#3 | belief | 금융 업계 마케팅 | - | -
+robinhood#2 | incentive | 기존 증권사 | - | 2015
+robinhood#3 | behavior_change | PC 기반 증권 거래 | 모바일 금융 세대 성장 | 2015
+klarna#2 | belief | 카드 중심 온라인 결제 | - | 2005
+klarna#4 | tech_change | 오프라인 결제 | 온라인 쇼핑 성장 | -
+paytm#2 | shock | 현금 중심 소액 결제 | 인도 화폐 개혁 | 2016
+paytm#4 | belief | 카드 단말기 중심 결제 업계 | - | -
+finda#2 | regulation_change | 금융사별 개별 대출 조회 | 대출 중개 규제 정비·금융사 API | -
+finda#4 | definition | 대출 비교 서비스 | - | -
+quibi#3 | definition | 퀴비 경영진 | - | 2020
+siren-order#2 | tech_change | 매장 대면 주문 | 위치 기반 모바일 주문 | 2014
+siren-order#3 | belief | 커피 프랜차이즈 업계 | - | 2014
+xerox-914#2 | belief | 사무기기 판매 업계 | - | 1959
+ipod-itunes#2 | belief | 하드웨어 업계 | - | 2003
+ipod-itunes#4 | shock | 음반사 | 불법 다운로드로 인한 음반 매출 위기 | 2003
+roomba#2 | belief | 로봇 연구 업계 | - | 2002
+roomba#4 | tech_change | 고가 로봇 | 저가 센서·배터리 | 2002
+yeti#2 | belief | 아이스박스 업계 | - | 2006
+yeti#4 | market_change | 저가 아이스박스 시장 | 아웃도어 활동 증가 | -
+juicero#3 | belief | 주서로 경영진 | - | -
+hims#2 | regulation_change | 대면 진료 중심 의료 | 원격 진료 규제 완화 | -
+hims#3 | belief | 의료 업계 | - | -
+coursera#2 | tech_change | 대학 | 영상 스트리밍·자동 채점 | 2012
+coursera#3 | belief | 대학 | - | 2012
+megastudy#2 | tech_change | 오프라인 학원 | 초고속 인터넷 보급 | 2000
+megastudy#3 | belief | 학원 업계 | - | 2000
+lambda-isa#1 | belief | 교육 업계 | - | -
+fastcampus#2 | definition | 직무 교육 업계 | - | -
+fastcampus#3 | market_change | 오프라인 직무 교육 | 온라인 강의 수요 증가 | -
+solar-paygo#2 | tech_change | 오프라인 판매·현금 결제 | 휴대폰 소액 결제 보급 | -
+solar-paygo#3 | belief | 에너지 기업 | - | -
+amazon-1click#2 | belief | 이커머스 업계 | - | 1999
+amazon-1click#4 | tech_change | 매번 결제 정보 입력 | 결제 정보 보안 저장 | 1999
+hotel-checkin#2 | tech_change | 프런트 체크인 | 모바일 신원 확인·디지털 키 | -
+hotel-checkin#3 | belief | 호텔 업계 | - | -
+tesla-roadster#2 | belief | 자동차 업계 | - | 2008
+tesla-roadster#3 | tech_change | 전기차 업계 | 노트북용 리튬이온 배터리 대량 생산 | 2008
+tata-nano#1 | belief | 타타 자동차 | - | 2009
+pricing-saas#2 | belief | SaaS 가격 정책 | - | -
+pricing-saas#3 | belief | SaaS 가격 정책 | - | -
+b2b-sales-cycle#2 | belief | 엔터프라이즈 영업 | - | -
+b2b-sales-cycle#4 | tech_change | 기업 구매 절차 | 클라우드 마켓플레이스 | -
+local-commerce#2 | belief | 동네 반찬가게 | - | -
+local-commerce#3 | behavior_change | 방문 구매 | 단지 단체 채팅방 문화 | -
+coway-rental#2 | belief | 가전 업계 | - | 1998
+coway-rental#4 | market_change | 목돈 구매 가전 시장 | 외환위기로 목돈 지출 위축 | 1998
+rent-the-runway#2 | belief | 패션 업계 | - | 2009
+rent-the-runway#4 | market_change | 오프라인 대여 | 택배 왕복 물류 | -
+spanx#2 | definition | 속옷 업계 | - | 2000
+spanx#4 | market_change | 기존 속옷 유통 | 유명 방송인 추천 | 2000
+freemium-conversion#3 | belief | SaaS 가격 정책 | - | -

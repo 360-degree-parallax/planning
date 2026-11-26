@@ -29,13 +29,15 @@
   },
   "funnel_formula": "구매자 수 = 첫 단계 도달 × (퍼널 설정 순서대로 각 단계 통과율의 곱). 각 단계 통과율 = 다음 단계 도달 / 이 단계 도달",
   "guardrails": [
-   "refund_rate",
-   "rating",
-   "consumption_rate",
-   "unit_cost",
-   "gross_margin",
    "cac",
-   "discount_share"
+   "calc_accuracy",
+   "consumption_rate",
+   "discount_share",
+   "generation_failure_rate",
+   "gross_margin",
+   "rating",
+   "refund_rate",
+   "unit_cost"
   ],
   "leading": {
    "repeat_pay_rate": [
@@ -356,6 +358,36 @@
    "group": "economics",
    "stage": "economics",
    "formula": "비구매자 수 × 무료 구간 1인당 LLM 원가"
+  },
+  "generation_latency": {
+   "label": "리포트 생성 시간 (결제 → 결과 표시, 중앙값·95퍼센타일, 초)",
+   "group": "ai_quality",
+   "stage": "consume",
+   "formula": "generation_done.ts − purchase_paid.ts"
+  },
+  "generation_failure_rate": {
+   "label": "리포트 생성 실패율",
+   "group": "ai_quality",
+   "stage": "consume",
+   "formula": "generation_failed / generation_started"
+  },
+  "consistency_rate": {
+   "label": "같은 입력 → 같은 핵심 결론 비율 (재생성 표본 검사)",
+   "group": "ai_quality",
+   "stage": "trust",
+   "formula": "표본 입력을 2회 생성해 핵심 판단(용신·대운 흐름·주의 시기)이 같은 비율"
+  },
+  "calc_accuracy": {
+   "label": "명식 계산 정확도 (기준 만세력과 일치율)",
+   "group": "ai_quality",
+   "stage": "trust",
+   "formula": "검증 세트(절기 경계·윤달·자시·서머타임 포함)에서 년·월·일·시 간지 일치율"
+  },
+  "refund_reason_share": {
+   "label": "환불 사유 비중 (해석 불만 · 기대 불일치 · 결제 실수 · 기술 오류)",
+   "group": "trust",
+   "stage": "trust",
+   "formula": "사유별 환불 / 전체 환불"
   }
  },
  "business_models": {

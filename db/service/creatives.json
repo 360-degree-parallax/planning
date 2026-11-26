@@ -1,0 +1,10 @@
+{
+ "note": "1p·2p·광고·결제 화면 소재 목록. 실험 기록은 이 id로 대조군과 실험군을 가리킨다. example: true는 형식 예시다.",
+ "creatives": [
+  {"id": "story-v1", "page": "story", "concept": "현재 1p (기본)", "topic": "general", "tone": null, "cta": null, "status": "live", "example": true},
+  {"id": "story-overcome-v1", "page": "story", "concept": "불안한 고민 → 극복 서사", "topic": "love", "tone": "comfort", "cta": "내 이야기 이어 보기", "status": "draft", "example": true},
+  {"id": "marketing-v1", "page": "marketing", "concept": "현재 2p (기본)", "topic": "general", "tone": null, "cta": null, "status": "live", "example": true},
+  {"id": "ad-honest-v1", "page": "ad", "concept": "신비주의를 비트는 솔직한 톤", "topic": "general", "tone": "humor", "cta": null, "status": "draft", "example": true}
+ ],
+ "fields": {"page": ["ad", "story", "input", "marketing", "checkout", "result"], "tone": ["comfort", "decision", "humor", "mystic", "warning"]}
+}
