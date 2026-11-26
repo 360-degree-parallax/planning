@@ -1,0 +1,1377 @@
+{
+ "v": 3,
+ "about": "WHAT → 가설 → Why not yet 사례 DB. 비즈니스·스타트업 문제 해결 중심. 사례마다 WHAT(상황·현상·문제 정의)과 가설별 Why not yet 답·판정·이유를 담는다. 실제·실패 사례는 널리 알려진 이야기를 학습용으로 단순화해 재구성했다. verified=true(refs 있음)는 출처 링크를 확인한 것이고, false는 source에 적은 책·기사·일반 지식 기반이라 인용 전 확인이 필요하다.",
+ "verdicts": {
+  "obvious": {
+   "label": "뻔함",
+   "pass": false,
+   "desc": "이미 다들 하고 있어 차별화가 안 된다"
+  },
+  "impossible": {
+   "label": "불가능",
+   "pass": false,
+   "desc": "구조적으로 바꿀 수 없거나 비용이 너무 크다"
+  },
+  "blindspot": {
+   "label": "통념의 맹점",
+   "pass": true,
+   "desc": "다들 틀린 전제(통념·관행·이해관계)에 묶여 아무도 안 했다"
+  },
+  "timing": {
+   "label": "타이밍",
+   "pass": true,
+   "desc": "기술·규제·행동이 최근에야 바뀌어 이제 가능해졌다"
+  }
+ },
+ "perspectives": {
+  "customer": "고객",
+  "timing": "시점",
+  "price": "가격",
+  "channel": "채널",
+  "competitor": "경쟁",
+  "constraint": "제약",
+  "belief": "통념"
+ },
+ "cases": [
+  {
+   "id": "dental",
+   "kind": "real",
+   "domain": "의료·서비스",
+   "title": "치과 대기 경험",
+   "source": "패스트캠퍼스 기획 강의의 클라이언트 브리프 사례를 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "치과 환자들이 대기 경험에 불만이 많다. 원장은 대기실을 넓히거나 꾸미는 방안을 생각하고 있다.",
+    "symptom": "대기실 불만이 많다",
+    "problem": "환자들이 기다리는 시간을 지루하고 불안하게 느낀다 (공간의 질이 아니라 시간의 질)"
+   },
+   "hyps": [
+    {
+     "text": "대기공간이 좁아서 불편하다 → 대기실 확장",
+     "perspective": "constraint",
+     "why_not_yet": "공간 개선은 쉽고 흔한 해결책이라 많은 병원이 이미 했지만 대기 불만은 여전하다",
+     "verdict": "obvious",
+     "reason": "흔한 해결책을 써도 불만이 남으니 본질이 아니다"
+    },
+    {
+     "text": "의사 수를 늘려 대기 자체를 없앤다",
+     "perspective": "constraint",
+     "why_not_yet": "인건비와 진료실 수 때문에 감당할 수 없다",
+     "verdict": "impossible",
+     "reason": "비용·공간의 구조적 제약"
+    },
+    {
+     "text": "환자는 공간이 아니라 기다리는 시간(지루함·불확실성·불안) 때문에 힘들다",
+     "perspective": "customer",
+     "why_not_yet": "다들 대기 문제를 공간 문제라고 당연하게 여겨 시간 쪽은 아무도 안 봤다",
+     "verdict": "blindspot",
+     "reason": "업계 통념이 가린 관점"
+    },
+    {
+     "text": "예상 대기시간을 실시간으로 알려 준다",
+     "perspective": "timing",
+     "why_not_yet": "예전엔 접수 시스템이 따로 놀았지만 예약·알림 서비스가 흔해지며 가능해졌다",
+     "verdict": "timing",
+     "reason": "도구가 최근에야 보급됨"
+    }
+   ],
+   "solution": "대기 시간을 '예측 가능하고 쓸모 있는 시간'으로 바꾼다 (예상 시간 안내, 진료 과정 설명 콘텐츠)",
+   "lesson": "현상(대기실 불만)에서 바로 해결로 가면 공간 개선이라는 뻔한 답이 나온다. Why not yet이 그 답을 걸러 주자 시간의 질이 드러났다."
+  },
+  {
+   "id": "elevator",
+   "kind": "real",
+   "domain": "부동산·서비스",
+   "title": "느린 엘리베이터",
+   "source": "토마스 베델-베델스보르의 HBR 글 「Are You Solving the Right Problems?」(2017)과 책 『What's Your Problem?』의 대표 예시",
+   "verified": true,
+   "refs": [
+    "https://www.aspeninstitute.org/wp-content/uploads/2026/06/Are-You-Solving-the-Right-Problems_-Thomas-Wedell-Wedellsborg.pdf",
+    "https://www.weforum.org/stories/2021/07/to-solve-big-issues-like-climate-change-we-need-to-reframe-our-problems/"
+   ],
+   "what": {
+    "situation": "사무실 건물 세입자들이 엘리베이터가 느리다고 불평하고, 일부는 계약을 깨겠다고 한다.",
+    "symptom": "엘리베이터가 느리다는 불만",
+    "problem": "사람들은 기다리는 시간 자체가 짜증 나고 지루하다"
+   },
+   "hyps": [
+    {
+     "text": "엘리베이터를 새것으로 교체한다",
+     "perspective": "constraint",
+     "why_not_yet": "비용이 크고 공사 기간도 길어 당장 감당하기 어렵다",
+     "verdict": "impossible",
+     "reason": "구조적 비용"
+    },
+    {
+     "text": "모터를 더 강한 것으로 바꾼다",
+     "perspective": "competitor",
+     "why_not_yet": "누구나 먼저 떠올리는 해결이고 모두 '속도가 문제'라는 같은 전제를 깔고 있다",
+     "verdict": "obvious",
+     "reason": "뻔함 (같은 프레임 안의 답)"
+    },
+    {
+     "text": "운행 알고리즘을 개선한다",
+     "perspective": "timing",
+     "why_not_yet": "이미 업체들이 하는 최적화이고 체감 차이가 작다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "엘리베이터 옆에 거울을 단다",
+     "perspective": "customer",
+     "why_not_yet": "다들 문제를 '엘리베이터 속도'로만 보고, 기다림이 짜증 난다는 쪽은 아무도 안 봤다",
+     "verdict": "blindspot",
+     "reason": "문제 정의(속도 → 기다림)의 맹점"
+    }
+   ],
+   "solution": "엘리베이터는 그대로 두고 거울로 기다리는 시간을 다른 일(자기 모습 보기)로 채운다",
+   "lesson": "치과 사례와 같은 구조다. 해결책이 아니라 문제 정의를 바꾸면 비용이 거의 안 드는 답이 나온다."
+  },
+  {
+   "id": "baggage",
+   "kind": "real",
+   "domain": "교통·서비스",
+   "title": "공항 수하물 대기 불만",
+   "source": "미국 휴스턴 공항 사례로 널리 인용되는 이야기. 공항·연도 등 세부는 확인되지 않았다는 지적이 있어 '전해지는 이야기'로 다룬다",
+   "verified": true,
+   "refs": [
+    "https://joshblackman.com/blog/2014/05/06/how-do-airlines-decrease-complaints-about-waits-at-baggage-carousels-make-your-arrival-gate-further-from-carousel/",
+    "https://www.airtraveler.club/insider/airport-operations/houston-baggage-fix-cut-complaints-yet-nobody-can-verify-it-happened/"
+   ],
+   "what": {
+    "situation": "승객들이 수하물 찾는 곳에서 오래 기다린다고 불만을 쏟아낸다. 인력을 늘려 대기 시간을 줄였는데도 불만이 계속된다.",
+    "symptom": "수하물 대기 불만",
+    "problem": "승객은 전체 시간보다 '멍하니 서서 기다리는 시간'을 길게 느낀다"
+   },
+   "hyps": [
+    {
+     "text": "수하물 담당 인력을 더 늘린다",
+     "perspective": "constraint",
+     "why_not_yet": "이미 늘려서 대기 시간을 업계 기준 안으로 줄였지만 불만은 그대로였다",
+     "verdict": "obvious",
+     "reason": "해 봤는데 효과 없음 → 본질 아님"
+    },
+    {
+     "text": "수하물 컨베이어를 새로 깐다",
+     "perspective": "constraint",
+     "why_not_yet": "시설 공사 비용과 기간이 커서 당장 할 수 없다",
+     "verdict": "impossible",
+     "reason": "구조적 비용"
+    },
+    {
+     "text": "도착 게이트를 수하물 찾는 곳에서 멀리 배정해 걷는 시간을 늘린다",
+     "perspective": "customer",
+     "why_not_yet": "다들 '대기 시간을 줄여야 한다'고만 생각해서 걷는 시간을 늘리는 건 거꾸로라고 여겼다",
+     "verdict": "blindspot",
+     "reason": "시간 단축 통념의 맹점"
+    }
+   ],
+   "solution": "가방이 나오는 시간은 그대로 두고, 서서 기다리던 시간을 걷는 시간으로 바꾼다",
+   "lesson": "'빈 시간이 길게 느껴진다'는 같은 본질이 치과·엘리베이터·공항에 반복된다. 사례가 쌓이면 가설을 빨리 세울 수 있다."
+  },
+  {
+   "id": "disney",
+   "kind": "real",
+   "domain": "엔터테인먼트",
+   "title": "놀이공원 긴 줄",
+   "source": "디즈니 테마파크 대기열 설계(대기 심리학) 사례를 재구성",
+   "verified": true,
+   "refs": [
+    "https://queue-it.com/blog/disney-queue-psychology/",
+    "https://www.popsci.com/story/science/head-trip-disney-wait-lines/"
+   ],
+   "what": {
+    "situation": "인기 놀이기구 앞에 긴 줄이 생기고, 줄을 보고 포기하거나 지쳐서 불만을 갖는 손님이 많다.",
+    "symptom": "대기 줄이 길다",
+    "problem": "손님은 할 일 없이 끝이 안 보이는 줄에서 기다리는 걸 힘들어한다"
+   },
+   "hyps": [
+    {
+     "text": "놀이기구를 더 짓는다",
+     "perspective": "constraint",
+     "why_not_yet": "부지와 건설 비용 때문에 줄이 생길 때마다 늘릴 수 없다",
+     "verdict": "impossible",
+     "reason": "구조적 비용"
+    },
+    {
+     "text": "입장객 수를 제한한다",
+     "perspective": "price",
+     "why_not_yet": "매출이 줄어 운영자가 택하기 어렵고 다른 공원들도 쓰는 흔한 방법이다",
+     "verdict": "obvious",
+     "reason": "뻔하고 손해"
+    },
+    {
+     "text": "줄 서는 공간을 놀이기구의 이야기 무대로 꾸민다",
+     "perspective": "belief",
+     "why_not_yet": "줄은 그냥 거쳐 가는 통로라 돈 들일 곳이 아니라는 통념이 있었다",
+     "verdict": "blindspot",
+     "reason": "'대기열은 통로'라는 통념의 맹점"
+    },
+    {
+     "text": "벽과 굽은 길로 앞사람 수가 한눈에 안 보이게 한다",
+     "perspective": "customer",
+     "why_not_yet": "줄은 길이가 다 보여야 공정하다고 여겨 아무도 숨기지 않았다",
+     "verdict": "blindspot",
+     "reason": "대기 심리를 놓친 관점"
+    }
+   ],
+   "solution": "기다리는 시간을 체험의 일부로 만들고, 기다림이 덜 느껴지게 동선을 설계한다",
+   "lesson": "대기 문제를 '시간을 줄이기'가 아니라 '시간을 채우기'로 다시 정의한 대표 사례다."
+  },
+  {
+   "id": "cold",
+   "kind": "real",
+   "domain": "일상",
+   "title": "아이가 비를 맞고 감기에 걸렸다",
+   "source": "『기획은 2형식이다』(남충식)의 예시 흐름을 요약·재구성",
+   "verified": true,
+   "refs": [
+    "https://ridibooks.com/books/754046208"
+   ],
+   "what": {
+    "situation": "아이가 하굣길에 비를 맞고 감기에 걸렸다. 같은 일이 반복되지 않게 하고 싶다.",
+    "symptom": "아이가 감기에 걸렸다",
+    "problem": "갑자기 비가 올 때 아이 스스로 대비할 수단이 없다"
+   },
+   "hyps": [
+    {
+     "text": "엄마가 바빠 데리러 가지 못했다 → 엄마가 덜 바쁘면 된다",
+     "perspective": "constraint",
+     "why_not_yet": "엄마가 바쁜 건 바꿀 수 없는 조건이다",
+     "verdict": "impossible",
+     "reason": "해결할 수 없는 조건은 본질이 아니다"
+    },
+    {
+     "text": "감기약을 미리 사 둔다",
+     "perspective": "timing",
+     "why_not_yet": "누구나 이미 하는 사후 대처라 비를 맞는 문제는 그대로다",
+     "verdict": "obvious",
+     "reason": "원인을 건드리지 않는 뻔한 대처"
+    },
+    {
+     "text": "아이가 우산을 챙기지 않았다 → 우산을 미리 준비해 둔다",
+     "perspective": "customer",
+     "why_not_yet": "다들 '보호자가 데리러 가야 한다'는 쪽만 생각해서 아이 스스로 대비하는 쪽은 놓친다",
+     "verdict": "blindspot",
+     "reason": "보호자 중심 통념이 가린 해결책"
+    }
+   ],
+   "solution": "학교 사물함이나 가방에 접이식 우산을 상비한다",
+   "lesson": "'왜?'를 거듭하다 해결할 수 없는 원인을 만나면 본질이 아니라는 신호다. 한 단계 더 들어가야 한다."
+  },
+  {
+   "id": "mri",
+   "kind": "real",
+   "domain": "의료·디자인",
+   "title": "아이들이 MRI를 무서워한다",
+   "source": "GE 헬스케어 디자이너 더그 디츠(Doug Dietz)의 Adventure Series 사례",
+   "verified": true,
+   "refs": [
+    "https://www.dotmed.com/legal/print/story.html?nid=23433",
+    "https://www.milwaukeemag.com/AScannerNotSoDarkly/"
+   ],
+   "what": {
+    "situation": "최신 MRI 장비를 설계했는데, 정작 아이들은 겁에 질려 울고 상당수가 진정제를 맞아야 검사를 받는다.",
+    "symptom": "소아 진정제 사용이 많다",
+    "problem": "아이에게 MRI는 시끄럽고 낯선 기계 속에 갇히는 무서운 경험이다"
+   },
+   "hyps": [
+    {
+     "text": "기계를 더 빠르고 조용하게 만든다",
+     "perspective": "competitor",
+     "why_not_yet": "장비 업체들이 늘 하는 성능 경쟁이고 아이의 공포는 그대로다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "진정제를 더 안전하게 쓴다",
+     "perspective": "constraint",
+     "why_not_yet": "진정 자체가 위험과 비용을 늘리고, 숙련 인력이 있는 병원만 할 수 있다",
+     "verdict": "impossible",
+     "reason": "구조적 제약"
+    },
+    {
+     "text": "검사실과 기계를 해적선·캠핑 같은 모험 이야기로 꾸민다",
+     "perspective": "belief",
+     "why_not_yet": "의료기기는 기술 제품이라 성능이 전부라는 통념 때문에 환자 경험을 설계 대상으로 보지 않았다",
+     "verdict": "blindspot",
+     "reason": "'의료기기는 성능'이라는 통념의 맹점"
+    },
+    {
+     "text": "시끄러운 소음을 우주선 소리처럼 이야기에 녹인다",
+     "perspective": "customer",
+     "why_not_yet": "소음은 줄여야 할 결함으로만 여겨 이야기에 쓸 생각을 안 했다",
+     "verdict": "blindspot",
+     "reason": "결함을 자원으로 보는 관점"
+    }
+   ],
+   "solution": "장비는 그대로 두고 검사를 아이가 주인공인 모험으로 바꿔 진정제 필요를 줄인다",
+   "lesson": "사용자(아이)의 눈으로 보면 '기술 문제'가 '경험 문제'로 바뀐다."
+  },
+  {
+   "id": "embrace",
+   "kind": "real",
+   "domain": "의료·사회혁신",
+   "title": "저렴한 인큐베이터 만들기",
+   "source": "스탠퍼드 d.school 수업에서 나온 Embrace 유아 보온기 사례",
+   "verified": true,
+   "refs": [
+    "https://de.slideshare.net/GabrielleSantaDonato/dschool-methods-introduction",
+    "https://stanfordmag.org/contents/baby-it-s-cold-outside"
+   ],
+   "what": {
+    "situation": "개발도상국 병원을 위해 훨씬 싼 인큐베이터를 만들라는 과제를 받았다. 현지 병원에 가 보니 기증받은 인큐베이터가 대부분 비어 있었다.",
+    "symptom": "인큐베이터가 비싸다",
+    "problem": "미숙아 대부분이 병원에서 먼 농촌에서 태어나, 병원 인큐베이터까지 오지 못한다"
+   },
+   "hyps": [
+    {
+     "text": "부품을 줄여 값싼 병원용 인큐베이터를 만든다",
+     "perspective": "price",
+     "why_not_yet": "병원 인큐베이터를 싸게 만드는 시도는 이미 있었고, 병원에 못 오는 아기에겐 소용없다",
+     "verdict": "obvious",
+     "reason": "뻔하고 본질을 못 짚음"
+    },
+    {
+     "text": "농촌마다 병원을 짓는다",
+     "perspective": "constraint",
+     "why_not_yet": "재원과 인력이 없어 할 수 없다",
+     "verdict": "impossible",
+     "reason": "구조적 제약"
+    },
+    {
+     "text": "전기 없이 몇 시간 체온을 유지하는 침낭형 보온기",
+     "perspective": "belief",
+     "why_not_yet": "과제가 '인큐베이터'로 주어져 다들 병원 장비만 생각했다. 정작 필요한 곳은 병원 밖이었다",
+     "verdict": "blindspot",
+     "reason": "과제 정의(병원 장비)가 가린 사용 장소"
+    },
+    {
+     "text": "재사용 가능한 축열 소재로 전원 없이 보온",
+     "perspective": "timing",
+     "why_not_yet": "상변화 소재를 데워 오래 일정한 온도를 내는 방식으로 전기 문제를 피할 수 있었다",
+     "verdict": "timing",
+     "reason": "소재 기술 활용"
+    }
+   ],
+   "solution": "병원 장비가 아니라 엄마가 집에서 쓸 수 있는 저렴한 보온 침낭",
+   "lesson": "주어진 과제(WHAT)를 그대로 받으면 뻔한 답만 나온다. 현장에 가서 과제 자체를 다시 정의했다."
+  },
+  {
+   "id": "airbnb",
+   "kind": "real",
+   "domain": "여행·플랫폼",
+   "title": "행사 기간 숙소 부족",
+   "source": "에어비앤비 초기 이야기를 널리 알려진 내용으로 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "큰 행사가 열리는 기간에 도시의 호텔이 모두 차서 방문객이 묵을 곳이 없다.",
+    "symptom": "호텔 예약이 안 된다",
+    "problem": "숙소 공급이 수요가 몰리는 순간에 탄력적으로 늘지 않는다"
+   },
+   "hyps": [
+    {
+     "text": "호텔을 더 짓는다",
+     "perspective": "constraint",
+     "why_not_yet": "건설 비용과 기간 때문에 일시적인 수요에 맞출 수 없다",
+     "verdict": "impossible",
+     "reason": "구조적 비용"
+    },
+    {
+     "text": "숙박 가격 비교 사이트를 만든다",
+     "perspective": "price",
+     "why_not_yet": "이미 여러 회사가 하고 있고, 방이 없으면 비교해도 소용없다",
+     "verdict": "obvious",
+     "reason": "뻔하고 공급을 늘리지 못함"
+    },
+    {
+     "text": "빈 방이 있는 일반인 집을 방문객에게 빌려준다",
+     "perspective": "belief",
+     "why_not_yet": "낯선 사람 집에서 자는 건 위험하다는 통념 때문에 아무도 안 했다. 사실은 리뷰·프로필로 풀 수 있는 신뢰 문제였다",
+     "verdict": "blindspot",
+     "reason": "통념이 가린 기회"
+    },
+    {
+     "text": "사진·온라인 결제로 개인 숙소를 쉽게 등록하게 한다",
+     "perspective": "channel",
+     "why_not_yet": "디지털 사진과 온라인 결제가 흔해지면서 개인도 쉽게 할 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "조건 변화"
+    }
+   ],
+   "solution": "개인의 빈 방을 신뢰 장치(리뷰·프로필·결제 보호)와 함께 중개한다",
+   "lesson": "'위험하다'는 반대 이유가 실은 설계로 풀 수 있는 문제였다. 불가능처럼 보이는 Why not yet 답도 한 번 더 따져 본다."
+  },
+  {
+   "id": "netflix",
+   "kind": "real",
+   "domain": "미디어·구독",
+   "title": "비디오 대여 연체료 불만",
+   "source": "넷플릭스 DVD 우편 대여 이야기. 'Apollo 13 연체료' 창업담은 공동창업자 마크 랜돌프가 각색됐다고 밝혔고 초기엔 연체료도 받았다. 학습용으로 단순화했다",
+   "verified": true,
+   "refs": [
+    "https://www.cnbc.com/2017/05/23/netflix-ceo-reed-hastings-on-how-the-company-was-born.html",
+    "https://www.kuow.org/2019-11-07/the-story-of-netflix-from-one-of-its-co-founders"
+   ],
+   "what": {
+    "situation": "비디오·DVD 대여점 고객들이 반납 기한과 연체료, 매장 왕복에 불만이 크다.",
+    "symptom": "연체료 불만이 많다",
+    "problem": "고객은 '정해진 날까지 매장에 가야 하는' 대여 방식 자체를 번거로워한다"
+   },
+   "hyps": [
+    {
+     "text": "대여료를 내린다",
+     "perspective": "price",
+     "why_not_yet": "경쟁 대여점도 이미 할인 행사를 해서 차별화가 안 된다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "매장을 더 많이 열어 접근성을 높인다",
+     "perspective": "constraint",
+     "why_not_yet": "매장 임대료와 재고 비용 때문에 무한정 늘릴 수 없다",
+     "verdict": "impossible",
+     "reason": "구조적 비용"
+    },
+    {
+     "text": "연체료를 없앤다",
+     "perspective": "belief",
+     "why_not_yet": "대여점은 연체료가 큰 수익원이라 스스로 없앨 이유가 없었다",
+     "verdict": "blindspot",
+     "reason": "기존 업체의 이해관계가 막은 아이디어"
+    },
+    {
+     "text": "DVD를 우편으로 보내고 월정액으로 받는다",
+     "perspective": "channel",
+     "why_not_yet": "얇고 가벼운 DVD가 나오면서 우편으로 싸게 보낼 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "매체 변화로 이제 가능해짐"
+    }
+   ],
+   "solution": "월정액 + 우편 배송 + 연체료 없음으로 '반납 부담'을 없앤다",
+   "lesson": "기존 강자가 안 하는 이유가 '할 수 없어서'가 아니라 '하면 손해라서'일 때 맹점이 생긴다."
+  },
+  {
+   "id": "dyson",
+   "kind": "real",
+   "domain": "제조",
+   "title": "청소기 흡입력 저하",
+   "source": "다이슨 무봉투 청소기 이야기. 기존 제조사들이 교체용 봉투 수익 때문에 라이선스를 거절했다는 내용은 다이슨과 업계 기사에 나온다",
+   "verified": true,
+   "refs": [
+    "https://careers.dyson.com/who-we-are",
+    "https://manufacturingdigital.com/leadership/how-james-dyson-made-vacuum-cleaners-sexy"
+   ],
+   "what": {
+    "situation": "진공청소기를 쓰다 보면 흡입력이 점점 떨어져 소비자 불만이 생긴다.",
+    "symptom": "흡입력이 떨어진다",
+    "problem": "먼지봉투의 미세한 구멍이 막히면서 흡입력이 떨어지는 구조다"
+   },
+   "hyps": [
+    {
+     "text": "모터 출력을 높인다",
+     "perspective": "competitor",
+     "why_not_yet": "모든 제조사가 이미 출력 경쟁을 하고 있다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "먼지봉투를 자주 갈라고 안내한다",
+     "perspective": "customer",
+     "why_not_yet": "이미 설명서에 다 적혀 있고 소비자는 귀찮아한다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "봉투 없이 원심력으로 먼지를 분리한다",
+     "perspective": "belief",
+     "why_not_yet": "기존 제조사는 교체용 봉투 판매가 수익원이라 굳이 봉투를 없애지 않았다",
+     "verdict": "blindspot",
+     "reason": "업계 수익 구조가 가린 해결책"
+    }
+   ],
+   "solution": "봉투 없는 사이클론 방식으로 '쓸수록 약해지는' 구조 자체를 없앤다",
+   "lesson": "업계가 안 하는 이유가 소모품 수익이라면, 그 소모품을 없애는 쪽이 기회다."
+  },
+  {
+   "id": "febreze",
+   "kind": "real",
+   "domain": "소비재·마케팅",
+   "title": "냄새 제거제가 안 팔린다",
+   "source": "찰스 두히그 『습관의 힘』에 소개된 P&G 페브리즈 재출시 사례",
+   "verified": true,
+   "refs": [
+    "https://www.shortform.com/blog/?p=28545",
+    "https://business.columbia.edu/insights/brand-talk/power-knowing-your-consumers-habits"
+   ],
+   "what": {
+    "situation": "어떤 냄새든 없애는 무색·무취 스프레이를 만들었지만 출시 후 판매가 부진하다.",
+    "symptom": "판매 부진",
+    "problem": "냄새에 익숙해진 사람은 자기 집 냄새를 못 느껴서 쓸 계기(신호)가 없다"
+   },
+   "hyps": [
+    {
+     "text": "광고를 더 많이 한다",
+     "perspective": "channel",
+     "why_not_yet": "이미 냄새 제거 효과를 내세워 광고했는데 팔리지 않았다",
+     "verdict": "obvious",
+     "reason": "해 봤는데 효과 없음"
+    },
+    {
+     "text": "가격을 내린다",
+     "perspective": "price",
+     "why_not_yet": "흔한 처방이고 쓸 계기가 없다는 문제는 그대로다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "청소를 마친 뒤 '마무리 보상'으로 뿌리게 향을 넣는다",
+     "perspective": "belief",
+     "why_not_yet": "냄새 제거제는 나쁜 냄새를 없애는 제품이라는 통념 때문에 기존 청소 습관 끝에 붙이는 생각을 못 했다",
+     "verdict": "blindspot",
+     "reason": "제품 용도에 대한 통념의 맹점"
+    }
+   ],
+   "solution": "냄새 제거가 아니라 청소 습관의 '보상'으로 다시 자리 잡는다",
+   "lesson": "고객이 문제를 못 느끼면 문제 해결 제품은 안 팔린다. 고객의 기존 습관 안에서 다시 정의한다."
+  },
+  {
+   "id": "milkshake",
+   "kind": "real",
+   "domain": "F&B·마케팅",
+   "title": "밀크셰이크 매출 늘리기",
+   "source": "클레이튼 크리스텐슨의 '해야 할 일(Jobs to be Done)' 밀크셰이크 사례",
+   "verified": true,
+   "refs": [
+    "https://www.library.hbs.edu/working-knowledge/clay-christensens-milkshake-marketing",
+    "https://hbswk.hbs.edu/item/6496.html"
+   ],
+   "what": {
+    "situation": "패스트푸드 체인이 밀크셰이크 매출을 늘리려고 고객에게 맛·가격을 물어 개선했지만 효과가 없다. 그런데 상당량이 아침 출근길에 포장으로 팔린다.",
+    "symptom": "밀크셰이크 매출 정체",
+    "problem": "아침 고객은 '길고 지루한 운전을 버티며 배를 채울 것'을 사러 온다"
+   },
+   "hyps": [
+    {
+     "text": "더 달고 진한 맛으로 바꾼다",
+     "perspective": "customer",
+     "why_not_yet": "고객 설문으로 맛을 개선했지만 매출은 그대로였다",
+     "verdict": "obvious",
+     "reason": "해 봤는데 효과 없음"
+    },
+    {
+     "text": "가격을 내린다",
+     "perspective": "price",
+     "why_not_yet": "경쟁사도 하는 흔한 방법이다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "출근길 운전 동안 오래 먹을 수 있게 더 걸쭉하게, 빨리 사 가게",
+     "perspective": "customer",
+     "why_not_yet": "다들 경쟁자를 다른 밀크셰이크로만 보고, 진짜 경쟁자인 바나나·도넛·베이글과 같은 '출근길 간식'으로는 보지 않았다",
+     "verdict": "blindspot",
+     "reason": "경쟁 정의의 맹점"
+    }
+   ],
+   "solution": "아침 출근길이라는 '해야 할 일'에 맞춰 제품과 구매 동선을 바꾼다",
+   "lesson": "고객 속성(나이·취향)이 아니라 고객이 처한 상황과 해야 할 일로 문제를 정의한다."
+  },
+  {
+   "id": "southwest",
+   "kind": "real",
+   "domain": "항공",
+   "title": "비행기 한 대를 팔아야 하는 항공사",
+   "source": "사우스웨스트 항공의 '10분 턴어라운드'(1972년경) 사례",
+   "verified": true,
+   "refs": [
+    "https://www.npr.org/2015/06/28/418147961/the-man-who-saved-southwest-airlines-with-a-10-minute-idea",
+    "https://www.cnbc.com/id/43768488"
+   ],
+   "what": {
+    "situation": "초창기 항공사가 자금난으로 비행기 4대 중 1대를 팔아야 했다. 운항 편수를 줄이면 손님을 잃는다.",
+    "symptom": "비행기가 부족하다",
+    "problem": "비행기가 지상에 오래 머물러 있어 돈을 못 버는 시간이 길다"
+   },
+   "hyps": [
+    {
+     "text": "운항 편수를 줄인다",
+     "perspective": "customer",
+     "why_not_yet": "손님이 떠나 매출이 더 줄어드는 흔한 대응이다",
+     "verdict": "obvious",
+     "reason": "뻔하고 악순환"
+    },
+    {
+     "text": "비행기를 빌리거나 새로 산다",
+     "perspective": "constraint",
+     "why_not_yet": "자금이 바닥이라 할 수 없다",
+     "verdict": "impossible",
+     "reason": "자금 제약"
+    },
+    {
+     "text": "게이트에서 10분 만에 다시 띄워 3대로 4대 몫을 한다",
+     "perspective": "belief",
+     "why_not_yet": "업계는 회항 준비에 훨씬 긴 시간이 필요하다고 당연하게 여겼다",
+     "verdict": "blindspot",
+     "reason": "지상 시간에 대한 업계 통념의 맹점"
+    }
+   ],
+   "solution": "승무원·지상 직원이 함께 움직여 지상 시간을 극단적으로 줄인다",
+   "lesson": "'비행기가 부족하다'를 '비행기가 땅에 너무 오래 있다'로 바꾸자 자원 없이 풀렸다."
+  },
+  {
+   "id": "ikea",
+   "kind": "real",
+   "domain": "유통·제조",
+   "title": "가구가 비싸고 운반이 어렵다",
+   "source": "이케아 납작 포장 이야기를 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "완성형 가구는 비싸고 부피가 커서 사서 집까지 옮기기 어렵다.",
+    "symptom": "가구가 비싸다",
+    "problem": "가격의 상당 부분이 조립된 부피를 보관·운송하는 비용이다"
+   },
+   "hyps": [
+    {
+     "text": "무료 배송을 해 준다",
+     "perspective": "price",
+     "why_not_yet": "큰 가구 배송비는 구조적으로 커서 무료로 감당할 수 없다",
+     "verdict": "impossible",
+     "reason": "비용 구조"
+    },
+    {
+     "text": "공장 직판으로 유통 마진을 줄인다",
+     "perspective": "channel",
+     "why_not_yet": "직판 할인은 이미 많은 업체가 한다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "납작하게 포장하고 고객이 직접 조립하게 한다",
+     "perspective": "belief",
+     "why_not_yet": "고객은 완성품을 원하고 조립을 싫어한다는 통념 때문에 아무도 안 했다",
+     "verdict": "blindspot",
+     "reason": "'고객은 조립을 싫어한다'는 통념의 맹점"
+    }
+   ],
+   "solution": "납작 포장 + 셀프 조립으로 보관·운송 비용을 고객과 나눠 가격을 낮춘다",
+   "lesson": "고객에게 일을 넘기는 건 불가능해 보이지만, 가격이라는 보상이 크면 통념이 뒤집힌다."
+  },
+  {
+   "id": "wii",
+   "kind": "real",
+   "domain": "게임",
+   "title": "게임기 성능 경쟁",
+   "source": "닌텐도 Wii 전략을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "게임기 시장이 그래픽 성능 경쟁으로 치달아 개발비는 오르고 고객층은 게이머로 좁아졌다.",
+    "symptom": "후발 주자가 성능 경쟁에서 밀린다",
+    "problem": "시장 전체가 '게임을 하는 사람'만 고객으로 보고 있다"
+   },
+   "hyps": [
+    {
+     "text": "더 높은 그래픽 성능으로 경쟁한다",
+     "perspective": "competitor",
+     "why_not_yet": "경쟁사들이 이미 막대한 비용으로 하고 있다",
+     "verdict": "obvious",
+     "reason": "뻔하고 불리한 싸움"
+    },
+    {
+     "text": "게임 안 하던 가족·어르신을 위한 직관적 조작",
+     "perspective": "customer",
+     "why_not_yet": "업계는 비게이머가 게임을 사지 않는다고 당연하게 여겨 아무도 공략하지 않았다",
+     "verdict": "blindspot",
+     "reason": "고객 정의의 맹점"
+    },
+    {
+     "text": "몸을 움직여 조작하는 모션 컨트롤러",
+     "perspective": "timing",
+     "why_not_yet": "저렴한 동작 센서가 보급되면서 이제야 가정용 가격으로 가능해졌다",
+     "verdict": "timing",
+     "reason": "부품 가격 변화"
+    }
+   ],
+   "solution": "성능 대신 '누구나 바로 하는' 조작 경험으로 비게이머 시장을 연다",
+   "lesson": "경쟁 축(성능)을 그대로 두면 뻔함만 남는다. 고객 정의를 바꾸는 가설이 살아남았다."
+  },
+  {
+   "id": "spotify",
+   "kind": "real",
+   "domain": "음악·구독",
+   "title": "음원 불법 다운로드",
+   "source": "음악 스트리밍 등장 배경을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "음반 업계 매출이 줄고 불법 다운로드가 넘쳐난다.",
+    "symptom": "음반 매출 감소",
+    "problem": "합법적인 방법이 불법보다 불편하다"
+   },
+   "hyps": [
+    {
+     "text": "불법 다운로드 단속과 소송을 늘린다",
+     "perspective": "constraint",
+     "why_not_yet": "업계가 이미 해 왔지만 불법 이용은 줄지 않았다",
+     "verdict": "obvious",
+     "reason": "뻔하고 효과 없음"
+    },
+    {
+     "text": "곡당 가격을 내린다",
+     "perspective": "price",
+     "why_not_yet": "가격 인하는 이미 여러 번 시도됐다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "불법보다 빠르고 편한 무료(광고)+구독 스트리밍",
+     "perspective": "belief",
+     "why_not_yet": "사람들이 공짜라서 불법을 쓴다는 통념 때문에 '편의성'을 경쟁 무기로 보지 않았다",
+     "verdict": "blindspot",
+     "reason": "가격 통념의 맹점"
+    },
+    {
+     "text": "다운로드 없이 바로 재생",
+     "perspective": "timing",
+     "why_not_yet": "빠른 인터넷이 보급되면서 이제야 끊김 없이 가능해졌다",
+     "verdict": "timing",
+     "reason": "인프라 변화"
+    }
+   ],
+   "solution": "불법보다 편한 스트리밍으로 이용 습관 자체를 바꾼다",
+   "lesson": "한 해결책에 맹점과 타이밍이 함께 있을 때 가장 강하다."
+  },
+  {
+   "id": "toss",
+   "kind": "real",
+   "domain": "금융",
+   "title": "송금이 번거롭다",
+   "source": "국내 간편송금 서비스 등장 배경을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "친구에게 몇만 원 보내는 데도 은행 앱 로그인, 인증서, 보안카드까지 여러 단계를 거친다.",
+    "symptom": "송금 앱 이탈이 많다",
+    "problem": "소액 송금에도 고액 거래 수준의 인증 절차를 요구한다"
+   },
+   "hyps": [
+    {
+     "text": "은행 앱 화면을 더 깔끔하게 바꾼다",
+     "perspective": "channel",
+     "why_not_yet": "은행들이 이미 앱 개편을 반복했지만 단계 수는 그대로다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "한 회사가 인증 절차를 마음대로 줄인다",
+     "perspective": "constraint",
+     "why_not_yet": "규제상 정해진 인증 수단을 개별 회사가 생략할 수 없었다",
+     "verdict": "impossible",
+     "reason": "규제 제약"
+    },
+    {
+     "text": "규제가 풀린 범위 안에서 비밀번호만으로 소액 송금",
+     "perspective": "timing",
+     "why_not_yet": "인증 수단 규제가 완화되면서 이제야 가능해졌다",
+     "verdict": "timing",
+     "reason": "규제 변화"
+    },
+    {
+     "text": "보안 사고 책임을 감수하고 편의를 먼저 설계한다",
+     "perspective": "belief",
+     "why_not_yet": "금융사들은 사고 책임을 피하려 절차를 늘리는 걸 당연하게 여겼다",
+     "verdict": "blindspot",
+     "reason": "책임 회피 관행의 맹점"
+    }
+   ],
+   "solution": "소액 송금을 몇 단계로 줄인 간편송금",
+   "lesson": "같은 아이디어도 시점에 따라 불가능에서 타이밍으로 바뀐다. Why not yet 답은 날짜와 함께 다시 확인한다."
+  },
+  {
+   "id": "baemin",
+   "kind": "real",
+   "domain": "로컬·플랫폼",
+   "title": "배달 음식 주문의 불편",
+   "source": "배달 앱 등장 배경을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "배달 음식을 시키려면 집에 쌓인 전단지나 책자를 뒤져 전화해야 한다.",
+    "symptom": "전단지를 찾기 어렵다",
+    "problem": "동네 가게 정보가 흩어져 있어 비교하고 고르기 어렵다"
+   },
+   "hyps": [
+    {
+     "text": "동네 배달 책자를 만든다",
+     "perspective": "channel",
+     "why_not_yet": "이미 여러 책자가 있고 금방 낡는다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "모든 가게 주문을 대신 받는 콜센터",
+     "perspective": "constraint",
+     "why_not_yet": "상담 인력 비용이 커서 감당할 수 없다",
+     "verdict": "impossible",
+     "reason": "인건비"
+    },
+    {
+     "text": "위치 기반으로 주변 가게 목록·메뉴를 보여 주는 앱",
+     "perspective": "timing",
+     "why_not_yet": "스마트폰과 위치 정보가 보급되며 이제야 가능해졌다",
+     "verdict": "timing",
+     "reason": "기기 보급"
+    }
+   ],
+   "solution": "위치 기반 배달 가게 모음 앱",
+   "lesson": "예전에 불가능했던 이유(정보 수집·전달 비용)가 기술로 사라졌는지 확인하는 게 타이밍 판정이다."
+  },
+  {
+   "id": "daangn",
+   "kind": "real",
+   "domain": "로컬·플랫폼",
+   "title": "중고거래 사기와 택배 번거로움",
+   "source": "동네 기반 중고거래 서비스 등장 배경을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "중고거래에서 사기 걱정이 크고, 택배로 보내고 받는 과정이 번거롭다.",
+    "symptom": "중고거래 사기 신고가 많다",
+    "problem": "얼굴 모르는 먼 상대와 거래하니 신뢰와 전달 비용이 크다"
+   },
+   "hyps": [
+    {
+     "text": "안전결제(에스크로)를 도입한다",
+     "perspective": "price",
+     "why_not_yet": "기존 중고거래 플랫폼들이 이미 도입했다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "모든 물건을 검수센터에서 확인한다",
+     "perspective": "constraint",
+     "why_not_yet": "저가 물건까지 검수하면 비용이 물건값보다 커진다",
+     "verdict": "impossible",
+     "reason": "비용 구조"
+    },
+    {
+     "text": "같은 동네 사람끼리만 직거래하게 한다",
+     "perspective": "belief",
+     "why_not_yet": "거래 시장은 넓을수록 좋다는 통념 때문에 일부러 좁히는 생각을 안 했다",
+     "verdict": "blindspot",
+     "reason": "'넓을수록 좋다'는 통념의 맹점"
+    },
+    {
+     "text": "휴대폰 위치로 동네를 인증한다",
+     "perspective": "timing",
+     "why_not_yet": "스마트폰 위치 인증이 일상화되며 쉽게 할 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "기술 보급"
+    }
+   ],
+   "solution": "위치 인증 기반 동네 직거래",
+   "lesson": "시장을 좁히는 가설은 보통 첫눈에 탈락시키지만, Why not yet으로 보면 신뢰 문제를 푸는 열쇠였다."
+  },
+  {
+   "id": "kurly",
+   "kind": "real",
+   "domain": "커머스·물류",
+   "title": "맞벌이 가구의 장보기",
+   "source": "새벽배송 서비스 등장 배경을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "맞벌이 가구는 퇴근 후 마트에 갈 시간이 없어 신선식품을 제때 사기 어렵다.",
+    "symptom": "신선식품 구매 빈도가 낮다",
+    "problem": "신선식품이 필요한 시점(아침)과 살 수 있는 시점이 어긋난다"
+   },
+   "hyps": [
+    {
+     "text": "마트 영업시간을 늘린다",
+     "perspective": "timing",
+     "why_not_yet": "영업시간 규제와 인력 문제로 늘리기 어렵다",
+     "verdict": "impossible",
+     "reason": "규제·인력 제약"
+    },
+    {
+     "text": "일반 택배로 신선식품을 보낸다",
+     "perspective": "channel",
+     "why_not_yet": "이미 시도됐지만 하루 이상 걸려 신선도가 떨어진다",
+     "verdict": "obvious",
+     "reason": "뻔하고 품질 문제가 남음"
+    },
+    {
+     "text": "밤에 주문하면 아침 전에 문 앞에 둔다",
+     "perspective": "belief",
+     "why_not_yet": "신선식품은 직접 보고 사야 한다는 통념과 야간 냉장 물류가 비싸다는 생각 때문에 아무도 안 했다",
+     "verdict": "blindspot",
+     "reason": "통념의 맹점"
+    }
+   ],
+   "solution": "밤 주문 → 새벽 문 앞 배송",
+   "lesson": "시점 관점의 가설이 본질을 짚었다. 관점을 넓게 깔아야 이런 가설이 나온다."
+  },
+  {
+   "id": "coupang",
+   "kind": "real",
+   "domain": "커머스·물류",
+   "title": "오픈마켓 배송이 들쭉날쭉",
+   "source": "직매입·자체 물류 전략을 단순화해 재구성",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "온라인 쇼핑몰에서 판매자마다 배송 기간이 달라 언제 올지 알 수 없다.",
+    "symptom": "배송 지연 문의가 많다",
+    "problem": "플랫폼이 배송을 통제하지 못하는 구조다"
+   },
+   "hyps": [
+    {
+     "text": "판매자에게 배송 기준을 강하게 요구한다",
+     "perspective": "competitor",
+     "why_not_yet": "다른 오픈마켓도 이미 하지만 판매자 사정이 제각각이라 효과가 약하다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "택배사를 더 늘린다",
+     "perspective": "channel",
+     "why_not_yet": "흔한 방법이고 통제력은 그대로다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "상품을 직접 사들이고 자체 물류로 배송한다",
+     "perspective": "belief",
+     "why_not_yet": "온라인 회사는 재고와 물류 자산을 가볍게 가져가야 한다는 통념 때문에 막대한 투자를 피했다",
+     "verdict": "blindspot",
+     "reason": "'자산을 가볍게'라는 통념의 맹점"
+    }
+   ],
+   "solution": "직매입 + 자체 물류로 배송 약속을 플랫폼이 책임진다",
+   "lesson": "'비용이 너무 크다'는 불가능 판정이 사실은 업계 통념일 수 있다. 감수할 만한지 다시 묻는다."
+  },
+  {
+   "id": "cafe",
+   "kind": "practice",
+   "domain": "로컬·F&B",
+   "title": "동네 카페 평일 오후 매출",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "주택가 카페. 오전·저녁은 괜찮은데 평일 2~5시 매출이 낮다.",
+    "symptom": "평일 오후 매출이 낮다",
+    "problem": "평일 오후에 카페에 머물 이유가 있는 고객층을 놓치고 있다"
+   },
+   "hyps": [
+    {
+     "text": "가격이 비싸다 → 오후 할인",
+     "perspective": "price",
+     "why_not_yet": "주변 카페 모두 이미 할인 쿠폰을 뿌리고 있다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "유동인구가 적다 → 가게 이전",
+     "perspective": "constraint",
+     "why_not_yet": "임대 계약과 비용 때문에 사실상 불가능하다",
+     "verdict": "impossible",
+     "reason": "구조적 제약"
+    },
+    {
+     "text": "메뉴가 부족하다 → 신메뉴",
+     "perspective": "competitor",
+     "why_not_yet": "다들 시즌 메뉴를 내서 차별화가 안 된다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "오후엔 머물 이유가 없다 → 재택근무자용 콘센트석·작업권",
+     "perspective": "customer",
+     "why_not_yet": "카페들은 회전율이 떨어진다며 장시간 체류를 막아 왔다. 하지만 오후는 원래 빈 자리라 손해가 없다는 걸 놓쳤다",
+     "verdict": "blindspot",
+     "reason": "회전율 통념의 맹점"
+    },
+    {
+     "text": "근처 학원 하원 시간 → 학부모 대기 공간",
+     "perspective": "timing",
+     "why_not_yet": "아무도 이 고객층을 데이터로 안 봤다",
+     "verdict": "blindspot",
+     "reason": "놓친 고객층 (검증 필요)"
+    }
+   ],
+   "solution": "오후를 '머무는 시간'으로 팔고, 학부모·재택근무자를 표적으로 삼는다",
+   "lesson": "같은 가게의 빈 시간대는 회전율 통념이 적용되지 않는다."
+  },
+  {
+   "id": "saju",
+   "kind": "practice",
+   "domain": "콘텐츠·AI",
+   "title": "AI 사주 고단가 상품 재구매",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "AI 사주 사이트의 4만원대 총운 리포트가 잘 팔리지만 같은 고객이 다시 사지 않는다.",
+    "symptom": "고단가 상품 재구매율이 낮다",
+    "problem": "고단가 리포트가 고객의 결정·불안 시점과 연결되지 않아 한 번 소비되고 끝난다"
+   },
+   "hyps": [
+    {
+     "text": "리포트 만족도가 낮다 → 품질 개선",
+     "perspective": "customer",
+     "why_not_yet": "만족도가 높은 철학관 단골도 1년에 한두 번만 온다. 품질 경쟁은 이미 다들 한다",
+     "verdict": "obvious",
+     "reason": "본질이 아님"
+    },
+    {
+     "text": "월운·신년운 구독을 판다",
+     "perspective": "price",
+     "why_not_yet": "이미 대부분 사이트가 하고 있고 저단가라 4만원 가치를 못 만든다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "궁합·가족 사주로 확장한다",
+     "perspective": "competitor",
+     "why_not_yet": "흔한 상품이라 차별화가 안 된다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "구매한 리포트를 바탕으로 AI 후속 상담",
+     "perspective": "timing",
+     "why_not_yet": "예전엔 1:1 상담에 인건비가 들었지만 LLM 등장으로 상담 원가가 크게 낮아져 이제야 가능해졌다",
+     "verdict": "timing",
+     "reason": "조건 변화"
+    },
+    {
+     "text": "작년 예측을 돌아보는 회고 리포트",
+     "perspective": "belief",
+     "why_not_yet": "업계는 예측이 틀린 게 드러날까 봐 당연하게 피해 왔다",
+     "verdict": "blindspot",
+     "reason": "업계 관행의 맹점 (리스크 있음)"
+    }
+   ],
+   "solution": "리포트를 상담의 기반 데이터로 만들고, 상담에서 드러난 결정 시점에 심화 리포트를 제안한다",
+   "lesson": "재구매율이라는 지표 자체를 의심(같은 상품 재구매 → 다음 고단가 구매)하는 게 WHAT 재정의다."
+  },
+  {
+   "id": "gym",
+   "kind": "practice",
+   "domain": "로컬·서비스",
+   "title": "헬스장 재등록률",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "동네 헬스장. 3개월 등록 회원 상당수가 재등록하지 않는다.",
+    "symptom": "재등록률이 낮다",
+    "problem": "회원이 첫 몇 주 안에 운동 습관을 못 붙이고 사실상 그만둔다"
+   },
+   "hyps": [
+    {
+     "text": "재등록 할인을 준다",
+     "perspective": "price",
+     "why_not_yet": "주변 헬스장 모두 이미 하는 흔한 방법이다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "기구를 최신으로 바꾼다",
+     "perspective": "competitor",
+     "why_not_yet": "다들 리뉴얼 경쟁을 하고 있고 그만둔 회원은 기구 때문이 아니다",
+     "verdict": "obvious",
+     "reason": "뻔하고 본질이 아님"
+    },
+    {
+     "text": "첫 2주 출석을 함께 챙기는 습관 프로그램",
+     "perspective": "customer",
+     "why_not_yet": "업계는 등록만 하고 안 오는 회원이 오히려 수익이라고 여겨 굳이 챙기지 않았다",
+     "verdict": "blindspot",
+     "reason": "업계 수익 관행의 맹점"
+    },
+    {
+     "text": "무인 출입으로 새벽·심야에도 연다",
+     "perspective": "timing",
+     "why_not_yet": "무인 출입·결제 장비가 싸지면서 인력 없이 운영할 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "장비 가격 변화"
+    }
+   ],
+   "solution": "등록 직후 2주를 '습관 형성 구간'으로 설계하고 출석 데이터로 이탈 신호를 잡는다",
+   "lesson": "업계가 이탈을 방치하는 이유(안 오는 회원이 수익)가 곧 차별화 기회다."
+  },
+  {
+   "id": "onboarding",
+   "kind": "practice",
+   "domain": "IT·앱",
+   "title": "앱 가입 후 첫 주 이탈",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "생산성 앱. 다운로드는 많은데 가입 후 첫 주 안에 대부분 다시 열지 않는다.",
+    "symptom": "첫 주 리텐션이 낮다",
+    "problem": "사용자가 핵심 가치를 경험하기 전에 가입·설정 단계에서 지친다"
+   },
+   "hyps": [
+    {
+     "text": "푸시 알림을 늘린다",
+     "perspective": "channel",
+     "why_not_yet": "모든 앱이 이미 하고 있고 오히려 알림을 끄게 만든다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "튜토리얼을 더 자세하게 만든다",
+     "perspective": "customer",
+     "why_not_yet": "흔한 방법이고 긴 튜토리얼은 건너뛴다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "가입 없이 먼저 써 보게 하고 저장할 때 가입받는다",
+     "perspective": "belief",
+     "why_not_yet": "가입부터 받아야 데이터와 연락처를 확보한다는 관행 때문에 순서를 바꾸지 않았다",
+     "verdict": "blindspot",
+     "reason": "가입 우선 관행의 맹점"
+    },
+    {
+     "text": "사용자 상황을 물어 초기 설정을 AI가 대신 채운다",
+     "perspective": "timing",
+     "why_not_yet": "예전엔 규칙 기반 추천이 어설펐지만 LLM 덕분에 자연스러운 자동 설정이 가능해졌다",
+     "verdict": "timing",
+     "reason": "기술 변화"
+    }
+   ],
+   "solution": "핵심 가치 경험 → 가입 순서로 바꾸고, 초기 설정은 대화형으로 자동화한다",
+   "lesson": "단계의 순서를 뒤집는 가설은 관행 때문에 잘 안 나온다. 통념 관점을 일부러 채운다."
+  },
+  {
+   "id": "meeting",
+   "kind": "practice",
+   "domain": "조직·업무",
+   "title": "회의가 길고 결론이 없다",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "팀 회의가 매번 1시간을 넘기는데 결정되는 건 거의 없다.",
+    "symptom": "회의 시간이 길다",
+    "problem": "회의에서 무엇을 결정할지 미리 정해지지 않은 채 모인다"
+   },
+   "hyps": [
+    {
+     "text": "회의 시간을 30분으로 제한한다",
+     "perspective": "constraint",
+     "why_not_yet": "이미 많은 회사가 해 봤지만 결론 없이 끝나는 회의가 늘 뿐이다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "회의를 아예 없앤다",
+     "perspective": "constraint",
+     "why_not_yet": "협업 구조상 모여서 정할 일이 남아 있어 할 수 없다",
+     "verdict": "impossible",
+     "reason": "구조적 필요"
+    },
+    {
+     "text": "회의 전에 '결정할 질문'과 선택지를 문서로 돌린다",
+     "perspective": "belief",
+     "why_not_yet": "회의는 모여서 함께 생각하는 자리라는 통념 때문에 준비를 회의 밖으로 빼지 않았다",
+     "verdict": "blindspot",
+     "reason": "회의 통념의 맹점"
+    },
+    {
+     "text": "AI가 회의록과 결정·할 일을 자동 정리한다",
+     "perspective": "timing",
+     "why_not_yet": "음성 인식과 요약 품질이 최근에야 쓸 만해졌다",
+     "verdict": "timing",
+     "reason": "기술 변화"
+    }
+   ],
+   "solution": "결정할 질문을 미리 공유하고, 회의는 결정만 하며, 기록은 자동화한다",
+   "lesson": "시간 제한 같은 형식 해결은 뻔함으로 걸러진다. 회의의 목적을 재정의하는 가설이 남는다."
+  },
+  {
+   "id": "bookstore",
+   "kind": "practice",
+   "domain": "로컬·리테일",
+   "title": "동네 서점 매출 감소",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "동네 서점 매출이 해마다 줄고 손님 대부분은 구경만 하고 온라인으로 산다.",
+    "symptom": "책 판매량 감소",
+    "problem": "서점에서 사야 할 이유(온라인에 없는 가치)가 없다"
+   },
+   "hyps": [
+    {
+     "text": "온라인만큼 할인한다",
+     "perspective": "price",
+     "why_not_yet": "도서 할인 규제와 규모 차이 때문에 온라인 가격을 따라갈 수 없다",
+     "verdict": "impossible",
+     "reason": "규제·규모 제약"
+    },
+    {
+     "text": "문구·굿즈를 같이 판다",
+     "perspective": "competitor",
+     "why_not_yet": "대형 서점과 다른 동네 서점도 이미 한다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "주인의 큐레이션과 북클럽을 멤버십으로 판다",
+     "perspective": "belief",
+     "why_not_yet": "서점은 책을 파는 곳이라는 통념 때문에 '경험'을 상품으로 보지 않았다",
+     "verdict": "blindspot",
+     "reason": "업의 정의에 대한 통념의 맹점"
+    }
+   ],
+   "solution": "책이 아니라 '고른 사람과 함께 읽는 경험'을 판다",
+   "lesson": "가격 경쟁이 불가능으로 걸러지면, 업의 정의를 바꾸는 가설만 남는다."
+  },
+  {
+   "id": "lunch",
+   "kind": "practice",
+   "domain": "로컬·F&B",
+   "title": "점심 대기 줄에서 손님이 떠난다",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "직장가 식당. 점심 12시대 줄이 길어 기다리다 다른 곳으로 가는 손님이 많다.",
+    "symptom": "점심 손님 이탈",
+    "problem": "직장인의 점심 시간은 고정돼 있는데 대기 시간을 예측할 수 없다"
+   },
+   "hyps": [
+    {
+     "text": "좌석을 늘린다",
+     "perspective": "constraint",
+     "why_not_yet": "가게 면적이 정해져 있어 늘릴 수 없다",
+     "verdict": "impossible",
+     "reason": "공간 제약"
+    },
+    {
+     "text": "메뉴를 줄여 조리 속도를 높인다",
+     "perspective": "constraint",
+     "why_not_yet": "이미 많은 점심 식당이 하는 기본이다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "원격 줄서기로 사무실에서 기다리게 한다",
+     "perspective": "timing",
+     "why_not_yet": "원격 대기 서비스가 최근 흔해지면서 작은 가게도 쓸 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "도구 보급"
+    },
+    {
+     "text": "11시대 미리 주문·픽업으로 피크를 분산한다",
+     "perspective": "timing",
+     "why_not_yet": "점심은 12시에 먹는다는 통념 때문에 시간을 옮기는 상품을 아무도 안 만들었다",
+     "verdict": "blindspot",
+     "reason": "시간대 통념의 맹점"
+    }
+   ],
+   "solution": "대기를 예측 가능하게(원격 줄서기) 하고 피크를 옮긴다(사전 주문)",
+   "lesson": "치과 사례처럼 대기 문제의 본질은 공간이 아니라 시간의 불확실성인 경우가 많다."
+  },
+  {
+   "id": "cart",
+   "kind": "practice",
+   "domain": "커머스",
+   "title": "장바구니 이탈",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "온라인 쇼핑몰. 장바구니에 담고 결제 직전에 떠나는 비율이 높다.",
+    "symptom": "결제 직전 이탈률이 높다",
+    "problem": "결제 직전에야 배송비 등 총액이 드러나 기대가 깨진다"
+   },
+   "hyps": [
+    {
+     "text": "이탈 고객에게 할인 쿠폰을 다시 보낸다",
+     "perspective": "price",
+     "why_not_yet": "거의 모든 쇼핑몰이 이미 하고 있다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "결제 단계를 줄인다",
+     "perspective": "channel",
+     "why_not_yet": "간편결제 도입은 이미 흔하다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "상품 페이지부터 배송비 포함 총액을 보여 준다",
+     "perspective": "belief",
+     "why_not_yet": "배송비는 나중에 보여야 클릭률이 높다는 업계 관행 때문에 아무도 앞당기지 않았다",
+     "verdict": "blindspot",
+     "reason": "가격 표시 관행의 맹점"
+    }
+   ],
+   "solution": "처음부터 총액을 보여 줘 결제 직전의 '배신감'을 없앤다",
+   "lesson": "지표를 올리려는 관행(클릭률)이 다른 지표(결제)를 깎을 때 맹점이 생긴다."
+  },
+  {
+   "id": "course",
+   "kind": "practice",
+   "domain": "교육",
+   "title": "온라인 강의 완강률",
+   "source": "연습용 예시",
+   "verified": false,
+   "refs": [],
+   "what": {
+    "situation": "온라인 강의 플랫폼. 결제한 수강생 대부분이 초반 몇 강만 듣고 멈춘다.",
+    "symptom": "완강률이 낮다",
+    "problem": "혼자 듣다 막히면 도움받을 곳도, 이어 갈 이유도 없다"
+   },
+   "hyps": [
+    {
+     "text": "강의를 더 짧게 쪼갠다",
+     "perspective": "customer",
+     "why_not_yet": "이미 대부분 플랫폼이 짧은 강의로 바꿨다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "완강하면 수강료를 돌려준다",
+     "perspective": "price",
+     "why_not_yet": "환급 이벤트는 이미 흔하다",
+     "verdict": "obvious",
+     "reason": "뻔함"
+    },
+    {
+     "text": "같은 시기에 시작한 사람끼리 기수로 묶는다",
+     "perspective": "belief",
+     "why_not_yet": "온라인 강의의 장점은 언제든 혼자 듣는 것이라는 통념 때문에 일정을 묶지 않았다",
+     "verdict": "blindspot",
+     "reason": "자율성 통념의 맹점"
+    },
+    {
+     "text": "막히는 순간 바로 답하는 AI 튜터",
+     "perspective": "timing",
+     "why_not_yet": "예전엔 조교 인건비 때문에 즉답이 어려웠지만 LLM으로 원가가 크게 낮아졌다",
+     "verdict": "timing",
+     "reason": "기술 변화"
+    }
+   ],
+   "solution": "기수제로 이어 갈 이유를 만들고, AI 튜터로 막히는 순간을 없앤다",
+   "lesson": "온라인의 장점이라 믿던 것(혼자, 아무 때나)이 이탈의 원인일 수 있다."
+  }
+ ],
+ "kinds": {
+  "real": "실제 사례 재구성",
+  "failure": "실패 사례 재구성 (Why not yet이 경고한 경우)",
+  "practice": "연습용 가상 사례"
+ }
+}
