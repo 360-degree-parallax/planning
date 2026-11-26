@@ -94,3 +94,16 @@ meta-personas 2 | 4 5 8 | +5% | next_question_rate |
 chai-ugc 3 | 7 7 7 | +5% | cost_per_answer | 주 단위로 반복
 woebot 3 | 4 6 9 | +0% | ticket_purchase_rate | 표현 변경이 결제를 떨어뜨리지 않는지 확인 (비열등)
 speak-tutor 4 | 6 6 9 | +10% | answer_satisfaction |
+// AI 캐릭터 채팅 · 서브컬처
+melting 2 | 6 5 6 | +10% | answer_satisfaction | 친밀도는 숫자 경쟁·뽑기 없이 '해석 노트'로만 표시
+whif 2 | 7 6 6 | +15% | answer_refund_rate | 니치 주제 입구는 광고 소재와 묶어 시험
+rofan-ai 3 | 6 6 8 | +10% | cost_per_answer | 무료 질문 원가 상한을 먼저 정함
+playtoon 2 | 8 6 8 | +10% | generation_latency | 긴 답변일수록 대기·원가 증가 확인
+caveduck 2 | 5 5 8 | +5% | answer_refund_rate | 남성·재물/사업 질문에서 먼저
+babechat 2 | 7 6 6 | +10% | refund_rate | 두 등급 가격 차이와 '깊은 답' 구성 명시
+grok-ani 2 | 6 6 7 | +15% | refund_rate | 유입 수가 아니라 유입당 매출로 판정
+crack-kr 2 | 3 6 9 | +0% | refund_rate | 원 단위 표시가 이길 것이라는 가설의 확인 실험
+crack-global 3 | 5 3 3 | +0% | refund_rate | 국내 구조 안정 후. 명리 용어 번역 검수 필수
+naver-charchat 2 | 6 7 9 | +10% | answer_satisfaction |
+chat-gacha-risk 4 | 3 8 9 | +0% | revenue | 규정 준수 실험: 민원 0건이 기준
+zeta-vs-crack 4 | 4 6 9 | +5% | answer_satisfaction | 지표 운영 변경

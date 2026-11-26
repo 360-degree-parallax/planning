@@ -91,3 +91,16 @@ meta-personas | B | risk | 유명 역술가·가상 상담사 이름을 내세�
 chai-ugc | O | table | 답변별 좋아요·싫어요 수집은 AI 서비스의 기본기다 | competition | free-gpt | -
 woebot | B | risk | 운세 앱이 '고민 상담'을 내세우는 관행이 있어 표현 범위를 관리하지 않았다 | belief | - | sensitive-advice
 speak-tutor | B | diff | 사주 업계는 사람 상담의 대체재로 AI를 홍보하면서 'AI라서 덜 민망하다'는 장점을 메시지로 쓰지 않았다 | belief | - | -
+// AI 캐릭터 채팅 · 서브컬처
+melting | B | diff | 사주 업계는 매번 새로 보는 단건 풀이 관행이라 '내 질문 이력을 기억하는 해석가'를 상품 요소로 보지 않았다 | belief | - | birth-data-privacy
+whif | B | diff | 사주 서비스는 보편 주제가 넓게 팔린다는 통념으로 동성 커플 궁합·재회 같은 니치 고민의 전용 답변을 만들지 않았다 | belief | tight-saju | -
+rofan-ai | O | table | 주기적 무료 포인트·출석 보상은 앱 업계 기본기다 | competition | forceteller | -
+playtoon | B | diff | 사주 Q&A는 짧은 답이 기본이라는 채팅식 통념으로 '답 1회의 분량과 구성'을 가격 근거로 보여 주지 않았다 | belief | - | dark-sequential-price
+caveduck | B | diff | 운세는 위로하는 말투여야 한다는 통념으로 '직설형' 해석 톤을 따로 두지 않았다 | belief | - | sensitive-advice
+babechat | B | diff | 사주 앱은 콘텐츠 종류로 가격을 나누고, 같은 질문의 '답 깊이'로 등급을 나누지 않았다 | belief | - | dark-false-hierarchy
+grok-ani | O | table | 광고 소재별 유입당 매출 측정은 퍼포먼스 마케팅 기본기다 | competition | - | -
+crack-kr | O | table | 재화 대신 원 단위 가격 표시는 순차공개 가격 금지와도 맞는 기본 원칙이다 | competition | hellobot, sajuai | dark-sequential-price
+crack-global | I | skip | 명리 용어를 검수할 번역 인력이 없어 지금은 해외 질문권을 운영할 수 없다 | cost | - | -
+naver-charchat | O | table | 답변에서 리포트 해당 장으로 잇는 링크는 콘텐츠 연결의 기본기다 | competition | - | -
+chat-gacha-risk | T | risk | 규제 기관이 AI 채팅의 확률형 장치를 보기 시작해, 운세 뽑기에 돈을 거는 이벤트는 이제 위험하다 | regulation_change | - | probability-event
+zeta-vs-crack | O | table | 최종 지표를 결제로 두는 것은 우리 방법론의 전제다 | competition | - | -

@@ -87,3 +87,15 @@ meta-personas | user_type:buyer
 chai-ugc | user_type:buyer
 woebot | user_type:buyer; topic:health,family
 speak-tutor | user_type:buyer; topic:love,money
+melting | user_type:buyer; gender:f; age_band:20s,30s
+whif | user_type:buyer; gender:f; topic:love
+rofan-ai | user_type:buyer,returning; gender:f
+playtoon | user_type:buyer; gender:f
+caveduck | user_type:buyer; gender:m; topic:money,career
+babechat | user_type:buyer; gender:m
+grok-ani | user_type:new; gender:m; channel:meta_ads,tiktok_ads,google_ads
+crack-kr | user_type:buyer; age_band:10s,20s
+crack-global | user_type:new
+naver-charchat | user_type:buyer; age_band:10s,20s
+chat-gacha-risk | all
+zeta-vs-crack | user_type:buyer

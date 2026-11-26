@@ -40248,6 +40248,1951 @@
    ],
    "solution": "한국 먼저, AI 튜터 구독(80~200달러), 이후 기업·해외 확장",
    "lesson": "사람에게 묻기 민망한 질문일수록 AI에게 잘 묻는다. 연애·재회·돈 같은 사주 질문이 바로 그렇다."
+  },
+  {
+   "id": "melting",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "대화할수록 오르는 호감도를 파는 여성향 캐챗",
+   "source": "앱스토어, 멜팅 약관·채용 공고",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://apps.apple.com/kr/app/id6745810835",
+    "https://intercom.help/melting/ko/articles/14075886-멜팅-운영-정책",
+    "https://www.wanted.co.kr/wd/373940"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "growth",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "next_question_rate",
+    "note": "관계가 쌓이지 않는 대화"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "출시",
+     "after": "출시 4개월 만에 손익분기점, 한국 앱 마켓 전체 매출 30위 안(여성향 AI 캐릭터 1위)",
+     "context": "회사 채용 공고 기준",
+     "evidence": "https://www.wanted.co.kr/wd/373940"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "질문 이력을 기억해 답변 첫 줄에 '지난번 물으신 이직 이야기와 이어서 보면'처럼 잇는다. 질문 수가 쌓일수록 해석이 깊어진다는 표시(내 사주 해석 노트)를 보여 주되, 숫자 경쟁·뽑기 장치는 쓰지 않는다",
+    "also": [
+     "repeat_pay"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "사주 업계는 매번 새로 보는 단건 풀이 관행이라 '내 질문 이력을 기억하는 해석가'를 상품 요소로 보지 않았다",
+     "barrier": "belief",
+     "competitors": [],
+     "compliance": [
+      "birth-data-privacy"
+     ]
+    },
+    "fit": {
+     "problem_match": "similar",
+     "mechanism": "관계가 쌓인다는 표시가 다음 대화의 이유가 된다",
+     "support_factors": [
+      {
+       "condition": "질문 이력을 저장할 수 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "이용자가 반복 질문한다",
+       "present": "unknown"
+      }
+     ],
+     "key_difference": "연애 시뮬레이션 대 사주 해석 (게임 장치 금지)",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "gender": [
+      "f"
+     ],
+     "age_band": [
+      "20s",
+      "30s"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "와트니의 멜팅은 AI 남자친구 같은 캐릭터와 연애하듯 대화하는 여성향 캐릭터 채팅이다. 대화할수록 실시간으로 바뀌는 호감도가 보이고, 기능을 쓸 때 '콘'이라는 포인트를 쓴다.",
+    "symptom": "AI 연인 대화가 딱딱하고 매번 처음 만나는 것 같다",
+    "problem": "대화가 쌓여도 '관계가 깊어진다'는 느낌이 없었다"
+   },
+   "hyps": [
+    {
+     "text": "캐릭터 수를 늘린다",
+     "perspective": "competitor",
+     "why_not_yet": "캐릭터 채팅 앱 모두가 하는 경쟁이다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 캐릭터 채팅 앱",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "호감도를 숫자로 보여 주고 오를수록 대화가 달라지게 한다",
+     "perspective": "customer",
+     "why_not_yet": "대화형 AI는 자연스러워야 하고 게임 장치는 몰입을 깬다는 통념",
+     "verdict": "blindspot",
+     "reason": "장르의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "대화형 AI 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://apps.apple.com/kr/app/id6745810835",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "질문권 구매자의 '나의 사주 캐릭터' 친밀도(질문 수에 따라 해석 말투가 깊어짐)를 보여 주는 군과 없는 군의 다음 질문률 비교",
+      "metric": "next_question_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 5,
+       "ease": 6,
+       "score": 5.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "answer_satisfaction",
+      "note": "친밀도는 숫자 경쟁·뽑기 없이 '해석 노트'로만 표시"
+     }
+    },
+    {
+     "text": "어제 대화와 취향을 기억하게 한다",
+     "perspective": "timing",
+     "why_not_yet": "긴 맥락·기억 기능이 싸져서 관계 연출이 가능해졌다",
+     "verdict": "timing",
+     "reason": "기술 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "단기 대화 챗봇",
+      "changed": "장기 기억·긴 맥락 LLM",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "모든 캐릭터를 회사가 직접 만든다",
+     "perspective": "constraint",
+     "why_not_yet": "취향이 세분화돼 회사 제작만으로는 감당할 수 없다",
+     "verdict": "impossible",
+     "reason": "비용",
+     "barrier": {
+      "type": "cost",
+      "holder": "캐릭터 제작비",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "호감도 모드 + 감정 기억 + 이용자 캐릭터 제작, 포인트(콘) 과금",
+   "lesson": "'관계가 쌓인다'는 표시가 다음 대화의 이유가 된다. 사주 질문권에서도 '내 사주를 아는 해석가'가 질문 이력을 기억하면 다음 질문이 쉬워진다."
+  },
+  {
+   "id": "whif",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "후발주자가 BL 하나로 월 56억을 만들다",
+   "source": "바이라인네트워크, 벤처스퀘어",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://byline.network/2026/10/83492804328940/",
+    "https://www.venturesquare.net/1105230/",
+    "https://core.asiae.co.kr/article/2026071509224194853"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "growth",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "ticket_purchase_rate",
+    "note": "니치 장르의 설정 붕괴"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "2025년 7월 출시",
+     "after": "2026년 9월 월 매출 56억 원, 결제자 하루 평균 217분, 해외 매출 비중 40%",
+     "context": "회사 발표",
+     "evidence": "https://byline.network/2026/10/83492804328940/"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "니치 고민(동성 커플 궁합, 재회, 이혼 후 재혼) 질문은 전용 프롬프트로 답한다. 성별·관계 설정을 질문 전에 고르게 해 '그녀/그'를 틀리지 않게 하고, 이 입구를 광고 소재로 따로 시험한다",
+    "also": [
+     "acquire"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "사주 서비스는 보편 주제가 넓게 팔린다는 통념으로 동성 커플 궁합·재회 같은 니치 고민의 전용 답변을 만들지 않았다",
+     "barrier": "belief",
+     "competitors": [
+      "tight-saju"
+     ],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "similar",
+     "mechanism": "니치 장르 규칙을 아는 AI가 그 팬을 독점한다",
+     "support_factors": [
+      {
+       "condition": "니치 고민(동성 궁합·재회) 수요가 있다",
+       "present": "unknown"
+      },
+      {
+       "condition": "전용 프롬프트를 만들 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "장르 소설 대 고민 주제",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "gender": [
+      "f"
+     ],
+     "topic": [
+      "love"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "벙커키즈는 2025년 7월 캐릭터 채팅 위프(WHIF)를 한국·대만·태국에 내놓았다. 제타·크랙이 이끄는 시장에 늦게 들어가면서 BL(남성 간 로맨스) 장르에 집중했다. 출시 1년 2개월 만인 2026년 9월 월 매출 56억 원을 냈다.",
+    "symptom": "이성애 로맨스 중심 플랫폼에서는 BL 이용자의 설정이 자꾸 무너진다",
+    "problem": "범용 모델은 이용자를 남성으로 설정해도 '그녀'라고 부르는 등 니치 장르의 규칙을 몰랐다"
+   },
+   "hyps": [
+    {
+     "text": "일반 로맨스로 선발주자와 경쟁한다",
+     "perspective": "competitor",
+     "why_not_yet": "선발주자와 차별이 없다고 회사가 직접 판단했다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 캐릭터 채팅 시장",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "마이너 장르(BL)에 맞춰 프롬프트와 클리셰를 설계한다",
+     "perspective": "customer",
+     "why_not_yet": "시장이 작아 보이는 니치 장르는 큰 플랫폼이 우선순위에서 뺀다",
+     "verdict": "blindspot",
+     "reason": "시장 크기의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "대형 캐릭터 채팅 플랫폼",
+      "changed": "",
+      "year": null,
+      "evidence": "https://byline.network/2026/10/83492804328940/",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "특정 고민(재회·동성 연애·이혼 후 재혼) 전용 질문권 입구를 만든 군과 일반 입구 군의 질문권 구매율 비교",
+      "metric": "ticket_purchase_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "answer_refund_rate",
+      "note": "니치 주제 입구는 광고 소재와 묶어 시험"
+     }
+    },
+    {
+     "text": "범용 모델 그대로 니치 장르를 맞춘다",
+     "perspective": "constraint",
+     "why_not_yet": "학습 데이터가 이성애 로맨스에 쏠려 확률적으로 엇나간다",
+     "verdict": "impossible",
+     "reason": "기술 한계",
+     "barrier": {
+      "type": "technology",
+      "holder": "범용 LLM 학습 분포",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "대만·태국 등 아시아 여성향 시장에 동시에 낸다",
+     "perspective": "channel",
+     "why_not_yet": "아시아 BL 팬덤이 커지고 AI 번역 품질이 올라 동시 출시가 가능해졌다",
+     "verdict": "timing",
+     "reason": "시장 변화",
+     "barrier": {
+      "type": "market_change",
+      "holder": "국내 전용 캐릭터 채팅",
+      "changed": "아시아 BL 팬덤 확대와 번역 품질 향상",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "BL 특화 프롬프트·클리셰, 결제자 하루 평균 217분, 해외 매출 비중 40%",
+   "lesson": "니치 장르에서는 '규칙을 아는 AI'가 곧 품질이다. 사주에서도 동성 커플 궁합, 재회 같은 주제는 범용 답변이 틀리기 쉬운 니치다."
+  },
+  {
+   "id": "rofan-ai",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "로판 주인공과 대화하는 여성 크리에이터 생태계",
+   "source": "로판AI 약관 정리, 나무위키, 이오플래닛",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://braindetox.kr/posts/rofan_ai_service_explained_2026.html",
+    "https://namu.moe/w/Rofan%20AI",
+    "https://eopla.net/magazines/29959"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "growth",
+    "market": "c2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "revisit_7d",
+    "note": "장르 팬의 재방문"
+   },
+   "outcomes": [],
+   "outcome_note": "운영사가 이용자·매출 수치를 공개하지 않음. 약관과 장르 구성만 확인 (2026-11-27 검색)",
+   "saju": {
+    "stage": "ask",
+    "idea": "리포트 구매자에게 '이번 주 한 줄 운세 질문' 무료 1회를 매주 주고, 답변 끝에 유료 질문권으로 이어지는 추천 질문을 붙인다. 무료 질문 원가 상한을 먼저 정한다",
+    "also": [
+     "repeat_pay"
+    ],
+    "wny": {
+     "verdict": "obvious",
+     "role": "table",
+     "why_not_yet": "주기적 무료 포인트·출석 보상은 앱 업계 기본기다",
+     "barrier": "competition",
+     "competitors": [
+      "forceteller"
+     ],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "similar",
+     "mechanism": "주기적 무료 포인트가 재방문을 만든다",
+     "support_factors": [
+      {
+       "condition": "무료 질문 원가가 낮다",
+       "present": "yes"
+      },
+      {
+       "condition": "재방문 알림을 보낼 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "장르 창작 생태계는 없다",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer",
+      "returning"
+     ],
+     "gender": [
+      "f"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "커뮤트의 로판AI는 로맨스판타지 웹툰·소설 속 주인공 같은 캐릭터와 대화하는 웹 서비스다. BL·HL·오메가버스 같은 여성향 태그가 촘촘하고, 여성 크리에이터가 주로 캐릭터를 만든다. 포인트를 팔고 가입 때와 24시간마다 무료 포인트를 준다.",
+    "symptom": "장르 팬은 많은데 원하는 설정의 캐릭터를 찾기 어렵다",
+    "problem": "장르 문법(로판·오메가버스)을 아는 사람이 직접 캐릭터를 만들 공간이 필요했다"
+   },
+   "hyps": [
+    {
+     "text": "범용 캐릭터 채팅에 장르 카테고리를 단다",
+     "perspective": "competitor",
+     "why_not_yet": "다들 하는 분류지만 장르 팬이 원하는 깊이가 안 나온다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "범용 캐릭터 채팅",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "장르 팬(여성 크리에이터)이 캐릭터를 만들고 태그로 찾게 한다",
+     "perspective": "channel",
+     "why_not_yet": "콘텐츠 품질은 회사가 관리해야 한다는 통념",
+     "verdict": "blindspot",
+     "reason": "통제의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "콘텐츠 플랫폼 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://eopla.net/magazines/29959",
+      "inferred": false
+     }
+    },
+    {
+     "text": "24시간마다 무료 포인트를 줘 매일 들어오게 한다",
+     "perspective": "price",
+     "why_not_yet": "포인트 원가(LLM 단가)가 낮아져 매일 무료 지급이 감당 가능해졌다",
+     "verdict": "timing",
+     "reason": "원가 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "유료 전용 채팅",
+      "changed": "LLM 단가 하락",
+      "year": 2024,
+      "evidence": "https://braindetox.kr/posts/rofan_ai_service_explained_2026.html",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "결과 구매자에게 '매주 1회 무료 짧은 질문'을 주는 군과 없는 군의 30일 재방문·질문권 매출 비교",
+      "metric": "revisit_7d",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 8,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "cost_per_answer",
+      "note": "무료 질문 원가 상한을 먼저 정함"
+     }
+    },
+    {
+     "text": "이미지로 캐릭터 외형을 인식시킨다",
+     "perspective": "constraint",
+     "why_not_yet": "이미지 인식을 지원하지 않아 외형도 모두 글로 적어야 한다",
+     "verdict": "impossible",
+     "reason": "기술 한계",
+     "barrier": {
+      "type": "technology",
+      "holder": "텍스트 전용 서비스 구조",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "여성향 장르 태그 + 크리에이터 제작 캐릭터 + 포인트 판매·주기적 무료 포인트",
+   "lesson": "장르를 아는 사람이 만든 캐릭터가 장르 팬을 붙잡는다. 주기적 무료 포인트는 재방문 장치다."
+  },
+  {
+   "id": "playtoon",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "답 한 번에 웹소설 한 화, 글자 수로 파는 가성비",
+   "source": "앱스토어, 포스타입 후기",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://apps.apple.com/np/app/id6751233437",
+    "https://www.postype.com/@reviewingnoa/post/22093294"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "early",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "answer_satisfaction",
+    "note": "단답과 비싼 재화"
+   },
+   "outcomes": [],
+   "outcome_note": "출시 초기 서비스로 공개된 매출·이용자 수치가 없음 (안드로이드 설치 5000건 이상 표기만 확인)",
+   "saju": {
+    "stage": "ask",
+    "idea": "질문권 1회 답변의 구성을 고정한다(결론 한 줄 · 명식 근거 · 시기 · 할 일 3가지, 약 1000~1500자). 결제 화면에 '이 분량으로 답합니다'를 예시와 함께 보여 준다",
+    "also": [
+     "checkout"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "사주 Q&A는 짧은 답이 기본이라는 채팅식 통념으로 '답 1회의 분량과 구성'을 가격 근거로 보여 주지 않았다",
+     "barrier": "belief",
+     "competitors": [],
+     "compliance": [
+      "dark-sequential-price"
+     ]
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "1회 답변의 분량·밀도가 가격의 근거가 된다",
+     "support_factors": [
+      {
+       "condition": "답변 구성을 고정할 수 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "긴 답을 끝까지 읽는다",
+       "present": "unknown"
+      }
+     ],
+     "key_difference": "이야기 장면 대 해석 답변",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "gender": [
+      "f"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "플레이툰은 여성향 AI 채팅이다. 메시지 하나가 짧은 대답이 아니라 약 2000자의 '장면'으로 나오고, 웹소설 한 편보다 싸게 수십 편의 이야기를 만든다는 '글자 수 대비 가성비'를 내세운다. 분기점을 만들어 다른 엔딩을 볼 수 있다.",
+    "symptom": "캐릭터 채팅은 단답이 많고 재화가 비싸다는 불만이 크다",
+    "problem": "이용자는 '메시지 수'가 아니라 '읽을거리의 양과 질'에 돈을 낸다고 느꼈다"
+   },
+   "hyps": [
+    {
+     "text": "재화 가격을 깎는다",
+     "perspective": "price",
+     "why_not_yet": "흔한 가격 경쟁이다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 캐릭터 채팅",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "답 하나를 웹소설 한 화 분량의 장면으로 만든다",
+     "perspective": "customer",
+     "why_not_yet": "채팅은 짧고 빨라야 한다는 메신저식 통념",
+     "verdict": "blindspot",
+     "reason": "형식의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "채팅 앱 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://apps.apple.com/np/app/id6751233437",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "질문 1회 답변을 600자 요약형으로 주는 군과 1500자 장면형(근거·시기·행동 제안 포함)으로 주는 군의 답변 만족도·다음 질문률 비교",
+      "metric": "answer_satisfaction",
+      "ice": {
+       "impact": 8,
+       "confidence": 6,
+       "ease": 8,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "generation_latency",
+      "note": "긴 답변일수록 대기·원가 증가 확인"
+     }
+    },
+    {
+     "text": "채팅 내용으로 결정적 장면 일러스트를 만든다",
+     "perspective": "timing",
+     "why_not_yet": "이미지 생성 원가가 떨어져 매 장면 그림이 가능해졌다",
+     "verdict": "timing",
+     "reason": "기술 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "텍스트 전용 채팅",
+      "changed": "이미지 생성 원가 하락",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "긴 답변을 무제한으로 준다",
+     "perspective": "constraint",
+     "why_not_yet": "긴 출력일수록 원가가 커서 무제한은 적자다",
+     "verdict": "impossible",
+     "reason": "비용",
+     "barrier": {
+      "type": "cost",
+      "holder": "LLM 출력 토큰 원가",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "메시지당 약 2000자 장면 + 분기점 + 장면 일러스트, 글자 수 대비 가성비를 앞세움",
+   "lesson": "1문 1답 상품은 '한 번 답의 분량과 밀도'가 가격의 근거가 된다. 질문권 가격표에 '답변 약 OO자, 근거·시기·행동 제안 포함'을 적을 수 있다."
+  },
+  {
+   "id": "caveduck",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "남성 크리에이터가 모인 '검열 없는' 캐챗",
+   "source": "앱스토어, 유니콘팩토리, 이오플래닛",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://www.unicornfactory.co.kr/article/2026040210374894277",
+    "https://apps.apple.com/us/app/id6651829734",
+    "https://namu.moe/w/CAVEDUCK",
+    "https://eopla.net/magazines/29959"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "growth",
+    "market": "c2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "answer_satisfaction",
+    "note": "회피·설교 답변"
+   },
+   "outcomes": [
+    {
+     "metric": "visitors",
+     "before": "-",
+     "after": "앱스토어 소개 기준 30만 명 이용, 캐릭터 4만 개 이상",
+     "context": "회사 표기",
+     "evidence": "https://apps.apple.com/us/app/id6651829734"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "답변 톤 선택에 '직설형'을 둔다(결론 먼저, 위로 문장 최소화, 숫자·시기 중심). 남성 이용자와 재물·사업 질문에서 먼저 시험한다. 성적 주제는 성인 인증과 무관하게 다루지 않는다",
+    "also": [
+     "trust"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "운세는 위로하는 말투여야 한다는 통념으로 '직설형' 해석 톤을 따로 두지 않았다",
+     "barrier": "belief",
+     "competitors": [],
+     "compliance": [
+      "sensitive-advice"
+     ]
+    },
+    "fit": {
+     "problem_match": "similar",
+     "mechanism": "돌려 말하지 않는 답과 이용자가 정한 규칙이 성인 남성 이용자를 붙잡는다",
+     "support_factors": [
+      {
+       "condition": "남성 이용자 비중이 있다",
+       "present": "unknown"
+      },
+      {
+       "condition": "직설 톤을 만들 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "성인 롤플레이 대 운세 (성적 주제 제외)",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "gender": [
+      "m"
+     ],
+     "topic": [
+      "money",
+      "career"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "워프스페이스의 케이브덕은 이용자가 캐릭터를 만들어 공개·공유하고 대화하는 플랫폼이다. 남성 크리에이터 커뮤니티가 중심이고, 성인 인증 이용자에게 허용 범위가 넓다. 호감도·TRPG 주사위 같은 규칙을 직접 짜는 커스텀 프롬프트를 준다. 2026년 4월 시리즈A 43억 원을 받았다.",
+    "symptom": "대형 캐릭터 채팅은 회피·설교 답변이 많아 성인 이용자가 떠난다",
+    "problem": "성인 이용자는 자기가 깐 상황극에 AI가 충실히 따라오길 원했다"
+   },
+   "hyps": [
+    {
+     "text": "대형 플랫폼과 같은 필터를 쓴다",
+     "perspective": "competitor",
+     "why_not_yet": "차별이 없고 이용자가 다른 곳으로 옮긴다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "대형 캐릭터 채팅",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "성인 인증자에게 허용 범위를 넓히고 규칙(호감도·주사위)을 직접 만들게 한다",
+     "perspective": "customer",
+     "why_not_yet": "안전을 위해 모두에게 같은 필터를 써야 한다는 통념",
+     "verdict": "blindspot",
+     "reason": "일괄 필터의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "AI 채팅 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://namu.moe/w/CAVEDUCK",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "성인 인증 남성 이용자에게 '직설형 해석(돌려 말하지 않음)' 톤을 고르게 한 군과 기본 톤 군의 답변 만족도 비교",
+      "metric": "answer_satisfaction",
+      "ice": {
+       "impact": 5,
+       "confidence": 5,
+       "ease": 8,
+       "score": 6.0
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "answer_refund_rate",
+      "note": "남성·재물/사업 질문에서 먼저"
+     }
+    },
+    {
+     "text": "미성년자 확인 없이 성인 콘텐츠를 연다",
+     "perspective": "constraint",
+     "why_not_yet": "청소년 보호 규제와 앱 마켓 정책상 할 수 없다",
+     "verdict": "impossible",
+     "reason": "규제",
+     "barrier": {
+      "type": "regulation",
+      "holder": "청소년 보호 규제·앱 마켓 정책",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "캐릭터 공유로 크리에이터가 수익을 얻게 한다",
+     "perspective": "channel",
+     "why_not_yet": "캐릭터 채팅 이용량이 커지며 크리에이터 정산이 가능한 규모가 됐다",
+     "verdict": "timing",
+     "reason": "시장 변화",
+     "barrier": {
+      "type": "market_change",
+      "holder": "회사 제작 캐릭터",
+      "changed": "캐릭터 채팅 이용 급증",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "캐릭터 제작·공유 + 크리에이터 수익 + 성인 인증 기반 넓은 허용 범위 + 커스텀 프롬프트",
+   "lesson": "남성 이용자는 '돌려 말하지 않는 답'과 '내가 짠 규칙대로 움직이는 AI'를 원했다. 사주 질문에서도 남성 고객용 직설 톤이 따로 필요할 수 있다."
+  },
+  {
+   "id": "babechat",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "투자 없이 MRR 10억, 남성향 캐챗",
+   "source": "이오플래닛, 베이비챗 도움말",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://eopla.net/magazines/31537",
+    "https://eopla.net/magazines/26965",
+    "https://apps.apple.com/us/app/id6740225767"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "growth",
+    "market": "c2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "revenue",
+    "note": "무료 원가와 유료 이탈 사이"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "2024년 매출 15억 원, MAU 10만 명",
+     "after": "MRR 10억 원, MAU 20만 명, 누적 메시지 4억 건",
+     "context": "대표 공개 글 기준",
+     "evidence": "https://eopla.net/magazines/31537"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "질문권을 '빠른 답(짧은 결론)'과 '깊은 답(명식 근거·시기·행동 제안, 상위 모델)' 두 등급으로 나눈다. 빠른 답 끝에 '깊게 보기'를 붙여 업그레이드로 잇는다",
+    "also": [
+     "checkout",
+     "economics"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "사주 앱은 콘텐츠 종류로 가격을 나누고, 같은 질문의 '답 깊이'로 등급을 나누지 않았다",
+     "barrier": "belief",
+     "competitors": [],
+     "compliance": [
+      "dark-false-hierarchy"
+     ]
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "같은 질문에 더 좋은 답을 등급으로 판다",
+     "support_factors": [
+      {
+       "condition": "모델 등급별 품질 차이가 보인다",
+       "present": "unknown"
+      },
+      {
+       "condition": "두 등급 가격을 설명할 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "대화 무제한 대 1문 1답",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "gender": [
+      "m"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "베이비챗은 오리지널 캐릭터와 이용자 제작 캐릭터와 대화하는 '한계 없는' 캐릭터 채팅이다. 무료 채팅은 무제한이고, 더 좋은 모델로 대화하는 '프로챗'을 판다. 외부 투자 없이 2024년 매출 15억 원, 이후 MRR 10억 원, MAU 20만 명을 밝혔다.",
+    "symptom": "무료 채팅만으로는 비용을 감당할 수 없고, 유료를 걸면 이용자가 떠난다",
+    "problem": "이용자가 돈을 내고 싶은 순간은 '더 똑똑하게 몰입되는 대화'였다"
+   },
+   "hyps": [
+    {
+     "text": "대화 횟수를 제한하고 유료로 푼다",
+     "perspective": "price",
+     "why_not_yet": "흔한 방식이고 무료 이용자가 이탈한다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 채팅 앱",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "무료는 무제한으로 두고 상위 모델(프로챗)만 판다",
+     "perspective": "price",
+     "why_not_yet": "무제한 무료는 원가 때문에 불가능하다는 통념",
+     "verdict": "blindspot",
+     "reason": "원가의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "AI 채팅 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://apps.apple.com/us/app/id6740225767",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "같은 질문에 '빠른 답(기본 모델)'은 무료 1회, '깊은 답(상위 모델·근거 포함)'은 질문권으로 파는 군과 질문권만 있는 군의 매출 비교",
+      "metric": "revenue",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "두 등급 가격 차이와 '깊은 답' 구성 명시"
+     }
+    },
+    {
+     "text": "여러 최신 모델을 고르게 한다",
+     "perspective": "constraint",
+     "why_not_yet": "모델 공급이 다양해지며 등급별 모델을 팔 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "기술 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "단일 모델 서비스",
+      "changed": "다수 LLM 공급",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "크리에이터에게 '응원하기' 금액의 70~90%를 정산한다",
+     "perspective": "channel",
+     "why_not_yet": "플랫폼 몫을 크게 가져가야 한다는 통념",
+     "verdict": "blindspot",
+     "reason": "배분의 맹점",
+     "barrier": {
+      "type": "incentive",
+      "holder": "플랫폼 수수료 구조",
+      "changed": "",
+      "year": null,
+      "evidence": "https://docs.channel.io/babechat/ko/articles/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0-%ED%81%B4%EB%9F%BD-2634bb39",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "무료 무제한 + 상위 모델 프로챗 + 크리에이터 정산, 외부 투자 없이 성장",
+   "lesson": "'같은 질문, 더 좋은 답'을 등급으로 파는 방식이 무료 이용자를 지키며 돈을 번다. 질문권도 '빠른 답 / 깊은 답'으로 나눌 수 있다."
+  },
+  {
+   "id": "grok-ani",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "애니 캐릭터가 다운로드는 늘렸지만 돈은 덜 벌었다",
+   "source": "TechCrunch, Sensor Tower",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://techcrunch.com/2025/07/21/groks-ai-companions-drove-downloads-but-its-latest-model-is-the-one-making-money",
+    "https://sensortower.com/ja/blog/grok-with-ani-JP",
+    "https://www.newsis.com/view/NISX20250718_0003257740"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "subscription",
+    "stage": "scale",
+    "market": "b2c",
+    "region": "global"
+   },
+   "problem_metric": {
+    "id": "roas",
+    "note": "화제성 대비 낮은 결제 전환"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "동반자 출시 전날",
+     "after": "출시 다음 날 iOS 다운로드 40% 증가(하루 17만 1000건), 매출은 9% 증가(33만 7000달러)",
+     "context": "Appfigures 집계",
+     "evidence": "https://techcrunch.com/2025/07/21/groks-ai-companions-drove-downloads-but-its-latest-model-is-the-one-making-money"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "acquire",
+    "idea": "1p 주인공 캐릭터 화제형 광고와 '이 질문에 답합니다'형 광고를 나눠 유입당 리포트·질문권 매출을 비교한다. 남성 대상 소재에서 선정적 캐릭터는 쓰지 않는다",
+    "also": [
+     "ask"
+    ],
+    "wny": {
+     "verdict": "obvious",
+     "role": "table",
+     "why_not_yet": "광고 소재별 유입당 매출 측정은 퍼포먼스 마케팅 기본기다",
+     "barrier": "competition",
+     "competitors": [],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "화제 캐릭터는 유입을, 쓸모는 결제를 만든다",
+     "support_factors": [
+      {
+       "condition": "1p 주인공 캐릭터가 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "소재별 유입당 매출을 잴 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "범용 AI 대 사주",
+     "verdict": "transfer"
+    },
+    "segments": {
+     "user_type": [
+      "new"
+     ],
+     "gender": [
+      "m"
+     ],
+     "channel": [
+      "meta_ads",
+      "tiktok_ads",
+      "google_ads"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "xAI는 2025년 7월 14일 Grok 앱에 3D 애니메이션 동반자 'Ani'를 넣었다. 호감도·의상 변경 같은 기능은 월 30달러 SuperGrok 구독자용이다. 일본 앱스토어 1위에 오르고 일본 DAU가 두 배 넘게 늘었다. 그러나 출시 다음 날 iOS 다운로드는 40% 늘었는데 매출은 9%만 늘었다.",
+    "symptom": "남성향 캐릭터가 화제를 모았지만 매출로 덜 이어졌다",
+    "problem": "화제성 높은 캐릭터는 유입을 만들지만, 결제 이유는 다른 데(새 모델 성능)에 있었다"
+   },
+   "hyps": [
+    {
+     "text": "화제 캐릭터를 더 추가한다",
+     "perspective": "channel",
+     "why_not_yet": "흔한 화제성 마케팅이다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 앱",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "캐릭터 노출 자체보다 결제 이유(유료 기능)를 분명히 묶는다",
+     "perspective": "customer",
+     "why_not_yet": "화제가 되면 매출은 따라온다는 통념",
+     "verdict": "blindspot",
+     "reason": "화제성의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "소비자 앱 마케팅",
+      "changed": "",
+      "year": null,
+      "evidence": "https://techcrunch.com/2025/07/21/groks-ai-companions-drove-downloads-but-its-latest-model-is-the-one-making-money",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "광고 소재를 '캐릭터 화제형'과 '내 질문에 답한다형'으로 나눠 유입당 질문권 매출 비교",
+      "metric": "roas",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 7,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "유입 수가 아니라 유입당 매출로 판정"
+     }
+    },
+    {
+     "text": "애니 문화가 강한 일본에서 먼저 터진다",
+     "perspective": "belief",
+     "why_not_yet": "애니·서브컬처 소비 문화가 3D 캐릭터 동반자를 바로 받아들였다",
+     "verdict": "timing",
+     "reason": "문화·행동",
+     "barrier": {
+      "type": "behavior_change",
+      "holder": "텍스트 챗봇",
+      "changed": "3D 실시간 캐릭터 동반자 등장",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "선정적 캐릭터를 모든 연령에 연다",
+     "perspective": "constraint",
+     "why_not_yet": "선정성 논란과 미성년자 보호 문제로 지속할 수 없다",
+     "verdict": "impossible",
+     "reason": "사회적 수용",
+     "barrier": {
+      "type": "social",
+      "holder": "사회적 비판·앱 마켓 정책",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "애니 동반자 Ani(호감도·의상은 월 30달러 구독), 일본 1위·DAU 두 배, 매출 증가는 제한적",
+   "lesson": "화제 캐릭터는 유입 비용을 낮추지만 결제는 '쓸모'가 만든다. 사주 광고에서 캐릭터 화제성과 질문 답변의 쓸모를 나눠 재야 한다."
+  },
+  {
+   "id": "crack-kr",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "크래커 1개 1원, 대화량만큼 내는 캐챗",
+   "source": "머니투데이, 지디넷, 딜사이트",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://v.daum.net/v/20260414102924902",
+    "https://www.mt.co.kr/article/2026081709444987700",
+    "https://dealsite.co.kr/articles/167500",
+    "https://zdnet.co.kr/view/?no=20261119122756"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "growth",
+    "market": "c2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "ticket_purchase_rate",
+    "note": "범용 AI의 낮은 수익화"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "2024년 매출 약 31억 원",
+     "after": "2025년 매출 약 471억 원(약 15배), 순손실 약 581억 원",
+     "context": "회사 공시",
+     "evidence": "https://v.daum.net/v/20260414102924902"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "질문권은 원 단위 가격을 그대로 보인다(재화 환산 없음). 명리 해석가가 만든 '질문 템플릿'(예: 이직 타이밍 묻기)을 상품으로 올리고 판매분을 정산하는 구조는 나중 단계 후보로 둔다",
+    "also": [
+     "checkout"
+    ],
+    "wny": {
+     "verdict": "obvious",
+     "role": "table",
+     "why_not_yet": "재화 대신 원 단위 가격 표시는 순차공개 가격 금지와도 맞는 기본 원칙이다",
+     "barrier": "competition",
+     "competitors": [
+      "hellobot",
+      "sajuai"
+     ],
+     "compliance": [
+      "dark-sequential-price"
+     ]
+    },
+    "fit": {
+     "problem_match": "similar",
+     "mechanism": "서브컬처 팬덤은 오래 읽는 이야기에 반복 결제한다",
+     "support_factors": [
+      {
+       "condition": "질문을 반복 구매한다",
+       "present": "unknown"
+      }
+     ],
+     "key_difference": "종량형 재화 대 원 단위 질문권",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "age_band": [
+      "10s",
+      "20s"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "뤼튼은 2024년 3월 뤼튼 앱 안의 '캐릭터 챗'을 2025년 4월 별도 앱 '크랙'으로 분리했다. 대화·이미지 생성에 '크래커'를 쓰고 웹에서는 크래커 1개가 1원이다. 뤼튼 매출은 2024년 약 31억 원에서 2025년 약 471억 원이 됐다. 2026년 2월 국내 MAU는 크랙 98만 명, 제타 402만 명이었다.",
+    "symptom": "범용 AI 무료화로 이용자는 모았지만 돈을 벌지 못했다",
+    "problem": "돈을 내는 수요는 생산성 AI가 아니라 서브컬처 팬덤의 이야기 소비에 있었다"
+   },
+   "hyps": [
+    {
+     "text": "범용 AI 구독을 판다",
+     "perspective": "competitor",
+     "why_not_yet": "챗GPT와 같은 상품이라 이길 수 없다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "범용 AI 서비스",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "대화량에 비례해 내는 종량형 재화(크래커 1원)로 판다",
+     "perspective": "price",
+     "why_not_yet": "구독이 예측 가능해 낫다는 SaaS식 통념",
+     "verdict": "blindspot",
+     "reason": "과금 방식의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "구독 중심 AI 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.mt.co.kr/article/2026081709444987700",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "질문권 단가를 '1회 OOO원'으로 보여 주는 군과 '크레딧 OOO개(1개=1원)'로 보여 주는 군의 구매율·환불 문의 비교",
+      "metric": "ticket_purchase_rate",
+      "ice": {
+       "impact": 3,
+       "confidence": 6,
+       "ease": 9,
+       "score": 6.0
+      },
+      "target": {
+       "text": "+0%",
+       "value": 0.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "원 단위 표시가 이길 것이라는 가설의 확인 실험"
+     }
+    },
+    {
+     "text": "캐릭터 챗을 별도 앱으로 분리한다",
+     "perspective": "channel",
+     "why_not_yet": "앱 안 기능일 때는 따로 결제·마케팅할 수 없었는데 이용이 커지며 독립 앱이 됐다",
+     "verdict": "timing",
+     "reason": "시장 변화",
+     "barrier": {
+      "type": "market_change",
+      "holder": "범용 AI 앱 안의 부가 기능",
+      "changed": "캐릭터 챗 이용 급증",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "창작자에게 정산하고 현금화를 연다",
+     "perspective": "channel",
+     "why_not_yet": "콘텐츠는 회사가 만들어야 품질이 보장된다는 통념",
+     "verdict": "blindspot",
+     "reason": "창작자의 맹점",
+     "barrier": {
+      "type": "incentive",
+      "holder": "플랫폼 수익 배분",
+      "changed": "",
+      "year": null,
+      "evidence": "https://zdnet.co.kr/view/?no=20261119122756",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "종량형 재화 + 창작자 정산(정산 창작자 5500명, 최고 연 7억 원 이상) + 서브컬처 IP",
+   "lesson": "서브컬처 팬덤은 '오래 읽는 이야기'에 반복 결제한다. 다만 재화 단위는 사용자가 질문 하나에 얼마인지 셈하기 어렵게 만든다."
+  },
+  {
+   "id": "crack-global",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "한국 캐챗을 일본·북미로, 해외가 국내를 넘다",
+   "source": "MTN, 뤼튼 채용 공고, 지디넷",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://news.mtn.co.kr/news-detail/2026082606521087869",
+    "https://www.wanted.co.kr/wd/397768",
+    "https://quasa.io/ko/media/rwiteun-gieobgaci-1jo-weon-dolpabugmi-weolmaecul-100eog-weoni-mandeun-banjeon"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "scale",
+    "market": "c2c",
+    "region": "global"
+   },
+   "problem_metric": {
+    "id": "revenue",
+    "note": "국내 시장 한계"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "2026년 5월 북미 OOC 출시",
+     "after": "3개월 만에 OOC 월 매출 100억 원, 해외 매출이 국내 추월, 2026년 매출 2000억 원 이상 전망",
+     "context": "회사 발표",
+     "evidence": "https://news.mtn.co.kr/news-detail/2026082606521087869"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "국내에서 질문권 구조가 자리 잡은 뒤, 일본어 결과 요약 + 질문권을 소수에게 시범 판매해 결제율을 본다. 번역은 명리 용어 검수자를 둔다",
+    "also": [
+     "acquire"
+    ],
+    "wny": {
+     "verdict": "impossible",
+     "role": "skip",
+     "why_not_yet": "명리 용어를 검수할 번역 인력이 없어 지금은 해외 질문권을 운영할 수 없다",
+     "barrier": "cost",
+     "competitors": [],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "different",
+     "mechanism": "한국에서 검증한 팬덤 구조를 현지 브랜드로 옮긴다",
+     "support_factors": [
+      {
+       "condition": "해외 사주 수요가 있다",
+       "present": "unknown"
+      },
+      {
+       "condition": "명리 용어 번역 검수자가 있다",
+       "present": "no"
+      }
+     ],
+     "key_difference": "사주는 문화 맥락이 강하다",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "new"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "뤼튼은 크랙을 2025년 일본에 '캬라푸', 2026년 5월 북미에 'OOC'로 냈다. OOC는 출시 3개월 만에 월 매출 100억 원을 넘었고 해외 매출이 국내를 추월했다. 2026년 8월 1000억 원 시리즈C로 기업가치 1조 원 이상을 인정받았고, 2026년 매출 2000억 원 이상을 전망한다.",
+    "symptom": "국내 캐릭터 채팅은 제타에 밀리고 시장이 작다",
+    "problem": "한국에서 검증한 '팬덤이 이야기를 오래 소비하는 구조'를 더 큰 시장에 옮길 수 있는지가 문제였다"
+   },
+   "hyps": [
+    {
+     "text": "국내 점유율 경쟁에 집중한다",
+     "perspective": "competitor",
+     "why_not_yet": "선두(제타)와 MAU 격차가 4배라 비용만 든다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "국내 캐릭터 채팅 시장",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "나라별 이름·브랜드를 따로 내고 현지화한다",
+     "perspective": "channel",
+     "why_not_yet": "하나의 글로벌 브랜드가 효율적이라는 통념",
+     "verdict": "blindspot",
+     "reason": "브랜드의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "글로벌 앱 확장 관행",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.wanted.co.kr/wd/397768",
+      "inferred": false
+     }
+    },
+    {
+     "text": "북미에 캐릭터 채팅 수요가 커진 시점에 들어간다",
+     "perspective": "timing",
+     "why_not_yet": "Character.AI가 미성년자 자유 대화를 막고 성인 이용자 대안 수요가 생겼다",
+     "verdict": "timing",
+     "reason": "시장 변화",
+     "barrier": {
+      "type": "market_change",
+      "holder": "Character.AI 중심 북미 시장",
+      "changed": "Character.AI 정책 변화와 대안 수요",
+      "year": 2026,
+      "evidence": "",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "일본어 사주 결과·질문권을 일본 이용자 소수에게 시범 판매하고 결제율을 국내와 비교",
+      "metric": "ticket_purchase_rate",
+      "ice": {
+       "impact": 5,
+       "confidence": 3,
+       "ease": 3,
+       "score": 3.7
+      },
+      "target": {
+       "text": "+0%",
+       "value": 0.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "국내 구조 안정 후. 명리 용어 번역 검수 필수"
+     }
+    },
+    {
+     "text": "한국 콘텐츠를 그대로 번역해 낸다",
+     "perspective": "constraint",
+     "why_not_yet": "캐릭터 말투·관계성은 기계 번역만으로 살지 않아 현지화 인력이 필요하다",
+     "verdict": "impossible",
+     "reason": "비용",
+     "barrier": {
+      "type": "cost",
+      "holder": "현지화 인력",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "일본 캬라푸·북미 OOC 현지 브랜드, 현지화 번역팀, 해외 매출이 국내 추월",
+   "lesson": "서브컬처 팬덤 구조는 국경을 넘는다. 사주는 문화 맥락이 강해 그대로는 어렵지만, 일본(점술 문화)처럼 가까운 시장은 질문권 단위로 먼저 시험할 수 있다."
+  },
+  {
+   "id": "naver-charchat",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "웹툰 원작 캐릭터와 대화하니 원작 매출이 늘었다",
+   "source": "머니투데이, 네이버, 디지털데일리",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://www.mt.co.kr/tech/2024/07/19/2024071811242018425",
+    "https://www.navercorp.com/media/pressReleasesDetail?seq=34351",
+    "https://www.ddaily.co.kr/page/view/2025062310374795931"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "scale",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "upsell_rate",
+    "note": "무단 캐릭터와 원작 잠식"
+   },
+   "outcomes": [
+    {
+     "metric": "visitors",
+     "before": "2024년 6월 출시",
+     "after": "한 달 만에 누적 접속 100만 명·메시지 2000만 건, 1년 만에 누적 메시지 1억 건, 이용자 78%가 10~20대",
+     "context": "회사 발표",
+     "evidence": "https://www.ddaily.co.kr/page/view/2025062310374795931"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "질문 답변 끝에 근거가 된 리포트 장(예: 3장 재물운)으로 가는 링크를 단다. 1p 스토리의 주인공 캐릭터를 답변 화자로 쓰되, 캐릭터 말투 안전성 검사를 출시 전에 한다",
+    "also": [
+     "expand",
+     "hook_story"
+    ],
+    "wny": {
+     "verdict": "obvious",
+     "role": "table",
+     "why_not_yet": "답변에서 리포트 해당 장으로 잇는 링크는 콘텐츠 연결의 기본기다",
+     "barrier": "competition",
+     "competitors": [],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "similar",
+     "mechanism": "대화가 원작을 대체하지 않고 원작 소비로 돌아가게 한다",
+     "support_factors": [
+      {
+       "condition": "답변을 리포트 장과 연결할 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "웹툰 IP 대 사주 리포트",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "age_band": [
+      "10s",
+      "20s"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "네이버웹툰은 2024년 6월 웹툰 캐릭터와 대화하는 '캐릭터챗'을 내놓았다. 원작자와 협의한 공식 IP만 쓰고 안전성 테스트를 거친다. 한 달 만에 100만 명이 썼고, 누적 메시지 1억 건을 넘었다. 이용자의 78%가 10~20대이고, 원작 웹툰 소비가 늘었다. 2026년 2월 일본에 진출했다.",
+    "symptom": "무단 2차 창작 캐릭터 채팅이 넘쳐 저작권·선정성 문제가 생긴다",
+    "problem": "팬은 '진짜 그 캐릭터'와 이야기하고 싶었고, 원작자는 IP가 망가지지 않길 원했다"
+   },
+   "hyps": [
+    {
+     "text": "이용자 제작 캐릭터를 무제한 허용한다",
+     "perspective": "competitor",
+     "why_not_yet": "다른 플랫폼이 다 하는 방식이고 저작권 위험이 크다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 캐릭터 채팅",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "원작자 승인 IP만 쓰고 원작 소비로 다시 잇는다",
+     "perspective": "customer",
+     "why_not_yet": "캐릭터 채팅은 원작을 대체해 매출을 깎는다는 통념",
+     "verdict": "blindspot",
+     "reason": "잠식 우려의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "웹툰 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.navercorp.com/media/pressReleasesDetail?seq=34351",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "질문 답변 끝에 리포트 해당 장 바로가기를 붙인 군과 없는 군의 리포트 재열람·추가 리포트 구매 비교",
+      "metric": "upsell_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 7,
+       "ease": 9,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "answer_satisfaction",
+      "note": ""
+     }
+    },
+    {
+     "text": "모든 웹툰 캐릭터를 챗봇으로 만든다",
+     "perspective": "constraint",
+     "why_not_yet": "작가 협의와 안전성 검증에 캐릭터마다 비용이 든다",
+     "verdict": "impossible",
+     "reason": "비용",
+     "barrier": {
+      "type": "cost",
+      "holder": "IP 협의·안전성 검증",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "자체 LLM(하이퍼클로바X)에 세계관 데이터를 학습시킨다",
+     "perspective": "timing",
+     "why_not_yet": "자체 모델로 캐릭터 말투를 세밀하게 맞출 수 있게 됐다",
+     "verdict": "timing",
+     "reason": "기술 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "외부 범용 모델 의존",
+      "changed": "자체 LLM",
+      "year": 2024,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "공식 IP 캐릭터챗(유료), 출시마다 안전성 테스트, 원작 소비 증가, 일본 확장",
+   "lesson": "질문 대화가 원작(리포트)을 대체하지 않고 다시 원작으로 돌아가게 만들 수 있다. 질문 답변은 리포트의 해당 장과 이어져야 한다."
+  },
+  {
+   "id": "chat-gacha-risk",
+   "kind": "failure",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "캐챗에 확률형 이벤트가 붙자 사행성 검토 대상이 되다",
+   "source": "머니투데이, 국회입법조사처 보도",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://www.mt.co.kr/tech/2026/08/14/2026081310592540908",
+    "https://www.mt.co.kr/tech/2026/08/21/2026081711203078372",
+    "https://sigma.world/news/south-korea-gambling-ai-apps/",
+    "https://byline.network/2026/09/17-608/"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "growth",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "refund_rate",
+    "note": "확률형 장치의 규제 위험"
+   },
+   "outcomes": [],
+   "outcome_note": "규제 검토 단계의 위험 사례로, 실제 제재·매출 변화 수치가 아직 없음",
+   "saju": {
+    "stage": "ask",
+    "idea": "질문권·운세 이벤트에 확률형(랜덤 보상·뽑기) 장치를 넣지 않는다. 할인·무료 질문은 조건과 수량을 미리 정해 보여 준다",
+    "also": [
+     "trust",
+     "checkout"
+    ],
+    "wny": {
+     "verdict": "timing",
+     "role": "risk",
+     "why_not_yet": "규제 기관이 AI 채팅의 확률형 장치를 보기 시작해, 운세 뽑기에 돈을 거는 이벤트는 이제 위험하다",
+     "barrier": "regulation_change",
+     "competitors": [],
+     "compliance": [
+      "probability-event"
+     ]
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "대화 서비스에 확률·보상 장치를 붙이면 게임·사행성 규제 대상이 된다",
+     "support_factors": [
+      {
+       "condition": "운세 이벤트에 랜덤 보상을 쓸 계획이 있다",
+       "present": "unknown"
+      }
+     ],
+     "key_difference": "업종 무관 규제 위험",
+     "verdict": "transfer"
+    },
+    "segments": {},
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "캐릭터 채팅 앱에 호감도·스탯·주사위·배지·랭킹에 이어 유료 재화로 참여하는 확률형 이벤트가 등장했다. 2026년 8월 게임물관리위원회는 확률형 베팅 구조는 게임물, 심하면 사행성 검토 대상이 될 수 있다고 밝혔다. 국회입법조사처는 기본 형태의 AI 채팅은 게임일 가능성이 낮지만, 규칙·결과 장치가 늘수록 게임에 가까워진다고 봤다. 선정성 민원도 이어졌다.",
+    "symptom": "매출을 올리려 넣은 게임 장치가 규제와 여론의 표적이 됐다",
+    "problem": "대화 서비스에 확률·보상 장치를 붙이면 서비스의 법적 성격이 바뀐다"
+   },
+   "hyps": [
+    {
+     "text": "재화 할인 이벤트를 자주 한다",
+     "perspective": "price",
+     "why_not_yet": "흔한 매출 부양책이다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "AI 채팅 앱",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "확률형 이벤트로 결제를 늘린다",
+     "perspective": "customer",
+     "why_not_yet": "대화 앱은 게임이 아니라서 게임 규제와 무관하다는 업계 인식",
+     "verdict": "blindspot",
+     "reason": "규제 범위의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "AI 채팅 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.mt.co.kr/tech/2026/08/14/2026081310592540908",
+      "inferred": false
+     }
+    },
+    {
+     "text": "확률형 장치를 마음대로 운영한다",
+     "perspective": "constraint",
+     "why_not_yet": "게임물·사행성 판단을 받으면 등급 분류와 확률 공개 등 규제를 받는다",
+     "verdict": "impossible",
+     "reason": "규제",
+     "barrier": {
+      "type": "regulation",
+      "holder": "게임산업법·게임물관리위원회",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "규제 기관이 AI 채팅 앱을 보기 시작한다",
+     "perspective": "timing",
+     "why_not_yet": "이용 시간·매출이 게임 수준이 되며 규제 공백이 기사·국회 보고서로 드러났다",
+     "verdict": "timing",
+     "reason": "규제 변화",
+     "barrier": {
+      "type": "regulation_change",
+      "holder": "규제 밖 AI 채팅 앱",
+      "changed": "게임위 해석·국회입법조사처 검토",
+      "year": 2026,
+      "evidence": "https://sigma.world/news/south-korea-gambling-ai-apps/",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "운세 이벤트에서 뽑기형(랜덤 보상) 대신 정해진 혜택형만 쓰는 규칙을 적용하고 이벤트 매출·민원을 추적",
+      "metric": "refund_rate",
+      "ice": {
+       "impact": 3,
+       "confidence": 8,
+       "ease": 9,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+0%",
+       "value": 0.0,
+       "unit": "relative"
+      },
+      "guardrail": "revenue",
+      "note": "규정 준수 실험: 민원 0건이 기준"
+     }
+    }
+   ],
+   "solution": "(위험) 확률형 이벤트의 게임물·사행성 검토 가능성, 선정성 민원, 미성년자 보호 법안 논의",
+   "lesson": "'랜덤 운세 뽑기'에 돈을 걸게 하면 사주 서비스도 같은 문제에 걸린다. 질문권은 정해진 값에 정해진 답을 주는 구조를 지킨다."
+  },
+  {
+   "id": "zeta-vs-crack",
+   "kind": "real",
+   "domain": "AI 채팅·캐릭터 서브컬처",
+   "domain_group": "AI 채팅·Q&A",
+   "title": "같은 시장, 광고형과 종량형의 두 길",
+   "source": "딜사이트, 머니투데이",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://dealsite.co.kr/articles/167500",
+    "https://www.mt.co.kr/article/2026081709444987700"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "growth",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "questions_per_buyer",
+    "note": "이용 시간과 매출의 불일치"
+   },
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "2026년 2월 MAU 제타 402만 명, 크랙 98만 명",
+     "after": "구글플레이 엔터테인먼트 매출 순위 크랙 6위, 제타 8위 (2026년 8월 18일)",
+     "context": "와이즈앱·머니투데이 집계",
+     "evidence": "https://www.mt.co.kr/article/2026081709444987700"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "질문권 대시보드에서 체류 시간을 빼고 질문 1회당 매출·답변 만족도·다음 질문률·환불률만 본다",
+    "also": [
+     "economics"
+    ],
+    "wny": {
+     "verdict": "obvious",
+     "role": "table",
+     "why_not_yet": "최종 지표를 결제로 두는 것은 우리 방법론의 전제다",
+     "barrier": "competition",
+     "competitors": [],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "이용 시간과 결제는 다른 지표이고 수익 모델이 가른다",
+     "support_factors": [
+      {
+       "condition": "최종 지표가 결제다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "업종 차이 작음",
+     "verdict": "transfer"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "2026년 2월 국내 MAU는 제타 402만 명, 크랙 98만 명이었고 1인당 월 사용 시간은 제타 약 28.2시간, 크랙 약 10.1시간이었다. 그런데 구글플레이 엔터테인먼트 매출 순위는 크랙 6위, 제타 8위로 크랙이 앞섰다. 제타는 광고 기반 무료, 크랙은 종량형 재화가 중심이다.",
+    "symptom": "이용 시간 1위가 매출 1위가 아니다",
+    "problem": "이용 시간과 결제는 다른 지표이고, 수익 모델에 따라 갈린다"
+   },
+   "hyps": [
+    {
+     "text": "이용 시간을 늘리는 데 집중한다",
+     "perspective": "competitor",
+     "why_not_yet": "업계 공통 목표지만 매출과 직결되지 않는다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "not_core",
+      "holder": "AI 채팅 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "이용자당 결제를 키우는 종량형을 택한다",
+     "perspective": "price",
+     "why_not_yet": "많이 쓰게 하면 광고로 충분하다는 통념",
+     "verdict": "blindspot",
+     "reason": "수익 모델의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "광고형 소비자 앱",
+      "changed": "",
+      "year": null,
+      "evidence": "https://dealsite.co.kr/articles/167500",
+      "inferred": false
+     }
+    },
+    {
+     "text": "광고와 종량형을 모두 최대로 한다",
+     "perspective": "constraint",
+     "why_not_yet": "광고는 몰입을 깨고 종량형은 이용 시간을 줄여 서로 부딪힌다",
+     "verdict": "impossible",
+     "reason": "구조",
+     "barrier": {
+      "type": "structural",
+      "holder": "수익 모델 간 상충",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "청소년 보호 압력으로 광고형 무료 이용층 운영 비용이 커진다",
+     "perspective": "timing",
+     "why_not_yet": "미성년자 보호 요구가 커지며 무료 대량 이용층의 관리 비용이 늘었다",
+     "verdict": "timing",
+     "reason": "규제 변화",
+     "barrier": {
+      "type": "regulation_change",
+      "holder": "무료 대량 이용 모델",
+      "changed": "청소년 보호 법안·민원 증가",
+      "year": 2026,
+      "evidence": "",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "질문권 성과를 체류 시간이 아니라 '질문 1회당 매출과 만족'으로 주간 보고하고, 체류 시간 지표를 목표에서 뺀 뒤 매출 변화 추적",
+      "metric": "questions_per_buyer",
+      "ice": {
+       "impact": 4,
+       "confidence": 6,
+       "ease": 9,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "answer_satisfaction",
+      "note": "지표 운영 변경"
+     }
+    }
+   ],
+   "solution": "제타는 광고형 대량 이용, 크랙은 종량형 결제로 매출 우위",
+   "lesson": "우리 최종 지표는 결제다. 질문권 성과는 체류 시간이 아니라 질문 1회당 매출·만족·다음 질문률로 본다."
   }
  ],
  "kinds": {

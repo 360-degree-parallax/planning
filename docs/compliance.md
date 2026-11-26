@@ -122,3 +122,11 @@ AI 채팅 업계가 미성년자 이용을 제한하는 쪽으로 움직였다. 
 - 관련 단계: ask, trust
 - 출처: https://www.npr.org/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea
 
+## `probability-event` · 게임산업진흥에 관한 법률 (게임물·사행성 판단, 적용 여부는 법무 확인 필요)
+
+AI 캐릭터 채팅 앱의 유료 확률형 이벤트는 게임물에 포함될 수 있고, 심하면 사행성 검토 대상이 될 수 있다는 게임물관리위원회 해석이 2026년 8월 보도됐다. 국회입법조사처는 기본 형태는 게임일 가능성이 낮지만 규칙·결과 장치가 늘수록 게임에 가까워진다고 봤다.
+
+- **확인할 것**: 질문권·운세 이벤트에 유료 재화로 참여하는 랜덤 보상(뽑기·확률 당첨)이 있는가? 호감도·랭킹·주사위 같은 게임 장치를 결제와 묶었는가?
+- 관련 단계: ask, checkout, expand
+- 출처: https://www.mt.co.kr/tech/2026/08/14/2026081310592540908 · https://sigma.world/news/south-korea-gambling-ai-apps/
+

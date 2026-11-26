@@ -41,7 +41,7 @@ L = f'''# planning
 - **tagged {len(tagged)}개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계와 사주 적용 아이디어 초안은 사람이 작성, 장벽 유형과 적용 세그먼트는 규칙 추정(`inferred: true`, 결제 단계 생존 가설 {sum(1 for c in tagged for h in c['hyps'] if h['barrier'].get('reviewed'))}개는 사람 검토)
 - 출처 링크 확인 {nref}개, 논란 표시 {sum(1 for c in cases if c.get('source_status') == 'disputed')}개
 - 운세·사주 업계 사례 {sum(1 for c in cases if c.get('domain_group') == '운세·사주')}개, 경쟁사 지도 {len(json.load(open('db/saju/competitors.json'))['competitors'])}곳, 규정 {len(json.load(open('db/compliance.json'))['rules'])}개
-- AI 채팅·Q&A 업계 사례 {sum(1 for c in cases if c.get('domain_group') == 'AI 채팅·Q&A')}개: 질문권(질문 1회 → 답변 1회) 관점. 퍼널 `db/funnels/saju-qa.json`, 지표 {sum(1 for m in json.load(open('db/taxonomy.json'))['metrics'].values() if m.get('group') == 'qa')}개(`group: qa`)
+- AI 채팅·Q&A 업계 사례 {sum(1 for c in cases if c.get('domain_group') == 'AI 채팅·Q&A')}개(그중 캐릭터 채팅·서브컬처 {sum(1 for c in cases if c['domain'].startswith('AI 채팅·캐릭터'))}개): 질문권(질문 1회 → 답변 1회) 관점. 퍼널 `db/funnels/saju-qa.json`, 지표 {sum(1 for m in json.load(open('db/taxonomy.json'))['metrics'].values() if m.get('group') == 'qa')}개(`group: qa`)
 - 우리 아이디어 {len(deep)}개: 적합성 검증 + Why not yet (기본기 {sum(1 for c in deep if c['saju']['wny']['role'] == 'table')} · 차별 {sum(1 for c in deep if c['saju']['wny']['role'] == 'diff')} · 위험 {sum(1 for c in deep if c['saju']['wny']['role'] == 'risk')} · 보류 {sum(1 for c in deep if c['saju']['wny']['role'] == 'skip')})
 
 실제·실패 사례는 학습용으로 단순화한 재구성입니다. 가설과 Why not yet 판정은 해석이며, 해당 기업이 실제로 그렇게 판단했다는 기록이 아닙니다. 출처 링크가 없는 사례는 인용 전 확인이 필요합니다.

@@ -84,3 +84,15 @@ meta-personas | hook_story
 chai-ugc | trust
 woebot | hook_marketing
 speak-tutor | hook_marketing
+melting | repeat_pay
+whif | acquire
+rofan-ai | repeat_pay
+playtoon | checkout
+caveduck | trust
+babechat | checkout, economics
+grok-ani | ask
+crack-kr | checkout
+crack-global | acquire
+naver-charchat | expand, hook_story
+chat-gacha-risk | trust, checkout
+zeta-vs-crack | economics
