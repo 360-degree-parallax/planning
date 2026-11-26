@@ -30,6 +30,7 @@ for (const c of d.cases) {
   }
   if (!c.problem_metric || !T.metrics[c.problem_metric.id]) errs.push(`${at} problem_metric=${c.problem_metric?.id}`);
   if (!c.saju || !T.funnel_stages[c.saju.stage]) errs.push(`${at} saju.stage=${c.saju?.stage}`);
+  for (const a of c.saju?.also || []) if (!T.funnel_stages[a]) errs.push(`${at} saju.also=${a}`);
   for (const o of c.outcomes) {
     if (!T.metrics[o.metric]) errs.push(`${at} outcome metric=${o.metric}`);
     if (!url(o.evidence)) errs.push(`${at} outcome 근거는 https`);
@@ -44,6 +45,8 @@ for (const c of d.cases) {
     else if (!bt.verdicts.includes(h.verdict)) errs.push(`${hat} 장벽 ${h.barrier.type}는 ${h.verdict}와 맞지 않음`);
     if (h.barrier?.evidence && !url(h.barrier.evidence)) errs.push(`${hat} barrier 근거는 https`);
     if (h.test && h.test.metric && !T.metrics[h.test.metric]) errs.push(`${hat} test.metric=${h.test.metric}`);
+    if (h.test?.guardrail && !T.metrics[h.test.guardrail]) errs.push(`${hat} test.guardrail=${h.test.guardrail}`);
+    if (c.depth === 'deep' && h.test && !h.test.ice) errs.push(`${hat} deep 실험에 ICE·목표·가드레일 없음 (db/meta/ice.txt)`);
   });
   if (c.depth === 'deep') {
     if (!c.saju?.idea) errs.push(`${at} deep인데 사주 적용 아이디어 없음`);
@@ -51,6 +54,62 @@ for (const c of d.cases) {
     if (!c.hyps.some(h => h.test)) errs.push(`${at} deep인데 검증 실험 없음`);
     if (!c.outcomes.length) warns.push(`${at} deep인데 근거 있는 결과 지표 없음`);
   }
+}
+
+// 퍼널 설정 (db/funnels/*.json): 단계 순서는 자유, 단계·지표 id는 taxonomy에 있어야 함
+import { readdirSync } from 'node:fs';
+const funnels = {};
+for (const fn of readdirSync(new URL('../db/funnels/', import.meta.url))) {
+  const f = JSON.parse(readFileSync(new URL(`../db/funnels/${fn}`, import.meta.url)));
+  const at = `[funnel ${fn}]`;
+  funnels[f.id] = f;
+  if (!Number.isInteger(f.version)) errs.push(`${at} version은 정수`);
+  const sid = new Set();
+  f.steps.forEach((s, i) => {
+    if (sid.has(s.id)) errs.push(`${at} 단계 id 중복 ${s.id}`); sid.add(s.id);
+    if (!T.funnel_stages[s.stage]) errs.push(`${at} stage=${s.stage}`);
+    if (s.metric && !T.metrics[s.metric]) errs.push(`${at} metric=${s.metric}`);
+    if (s.metric && i === f.steps.length - 1) warns.push(`${at} 마지막 단계의 지표는 계산되지 않음`);
+  });
+  const pi = f.steps.findIndex(s => s.purchase);
+  if (pi < 1 || f.steps.filter(s => s.purchase).length !== 1) errs.push(`${at} 구매 단계(purchase)는 하나, 첫 단계가 아니어야 함`);
+  if (f.steps.slice(pi + 1).some(s => ['hook_story', 'hook_marketing', 'input', 'checkout'].includes(s.stage)))
+    errs.push(`${at} 구매 전 단계가 구매 뒤에 있음`);
+}
+
+// 서비스 수치·실험 기록 (db/service)
+const byId = Object.fromEntries(d.cases.map(c => [c.id, c]));
+for (const name of ['baseline.json', 'baseline.example.json']) {
+  const b = JSON.parse(readFileSync(new URL(`../db/service/${name}`, import.meta.url)));
+  const at = `[${name}]`, f = funnels[b.funnel];
+  if (!f) { errs.push(`${at} 없는 퍼널 ${b.funnel}`); continue; }
+  const ids = f.steps.map(s => s.id);
+  for (const k of Object.keys(b.reach)) if (!ids.includes(k)) errs.push(`${at} reach에 퍼널에 없는 단계 ${k}`);
+  const chk = (reach, w) => {
+    let prev = Infinity;
+    for (const id of ids) { const v = reach[id]; if (v == null) continue; if (v > prev) warns.push(`${w} ${id} 도달 수가 앞 단계보다 많음`); prev = v; }
+  };
+  chk(b.reach, at);
+  for (const g of b.segments || []) {
+    if (!T.segments[g.dim] || !T.segments[g.dim].values.includes(g.value)) errs.push(`${at} 세그먼트 ${g.dim}:${g.value}`);
+    chk(g.reach, `${at} ${g.dim}:${g.value}`);
+  }
+}
+for (const name of ['experiments.json', 'experiments.example.json']) {
+  for (const x of JSON.parse(readFileSync(new URL(`../db/service/${name}`, import.meta.url)))) {
+    const at = `[${name} ${x.id}]`, c = byId[x.case];
+    if (!c || !c.hyps[x.hyp - 1]) errs.push(`${at} 사례·가설 ${x.case} ${x.hyp}`);
+    if (!T.metrics[x.metric]) errs.push(`${at} metric=${x.metric}`);
+    if (!funnels[x.funnel]) errs.push(`${at} 없는 퍼널 ${x.funnel}`);
+    if (!['running', 'win', 'lose', 'flat', 'stopped'].includes(x.result)) errs.push(`${at} result`);
+    if (!Array.isArray(x.arms) || x.arms.length < 2 || x.arms.some(a => !(a.n > 0) || a.conv > a.n)) errs.push(`${at} arms`);
+    if (x.guardrail?.metric && !T.metrics[x.guardrail.metric]) errs.push(`${at} guardrail.metric`);
+  }
+}
+const B = JSON.parse(readFileSync(new URL('../db/benchmarks.json', import.meta.url)));
+for (const b of B.items) {
+  if (!T.metrics[b.metric]) errs.push(`[benchmark ${b.id}] metric=${b.metric}`);
+  if (!url(b.url)) errs.push(`[benchmark ${b.id}] 출처는 https`);
 }
 
 const cnt = f => d.cases.reduce((m, c) => { const k = f(c); m[k] = (m[k] || 0) + 1; return m; }, {});

@@ -1,0 +1,22 @@
+// 핵심 사례 결과 지표 보강 (2026-11-27 확인한 출처만)
+
+@ container
+O: unit_cost | 톤당 선적 비용 약 $5.83 (재래식 하역) | 톤당 $0.16 미만 (컨테이너) | 1956년 Ideal-X 운항 기준 McLean의 계산 | https://transportgeography.org/contents/chapter1/the-setting-of-global-transportation-systems/idealx-first-containeriship-1956/
+
+@ slack
+O: buyers | 유료 고객 59,000곳 (2018.1) | 88,000곳 (2019.1, +49%) | S-1 공개 시점, 일간 활성 사용자 1,000만 명 이상 | https://www.cnbc.com/2019/04/26/slack-releases-s-1-for-ipo.html
+
+@ substack
+O: buyers | 유료 구독 약 25만 건 (2020.12) | 100만 건 이상 (2021.11) | 유료 독자는 전체 독자의 약 5~10% | https://www.axios.com/2021/11/15/substack-1-million-paid-subscriptions
+
+@ embrace
+O: access | 출시 전 0명 | 10개국 아기 6만 명 이상 (2013) | 기존 인큐베이터 가격의 1% 미만 | https://www.weforum.org/organizations/embrace-innovations
+
+@ febreze
+O: revenue | 1998년 재출시 전 판매 부진 | 재출시 두 달 만에 판매 2배, 이후 연 매출 10억 달러 이상 | '청소 마무리의 향기'로 포지셔닝을 바꾼 뒤 | https://www.businessinsider.in/How-the-worlds-best-marketer-got-it-wrong-but-eventually-got-it-right/articleshow/55725321.cms
+
+@ square
+O: gmv | 2014년 4분기 GPV 약 69억 달러 | 2015년 4분기 GPV 102억 달러 (+47%) | 전년 동기 대비, 주주 서한 | https://mms.businesswire.com/media/20160309006294/en/513572/1/square-2015-q4-shareholder-letter.pdf
+
+@ patreon
+O: gmv | 누적 창작자 지급액 10억 달러 (2019, 후원자 400만 명) | 100억 달러 이상 (2025, 유료 멤버십 2,500만 건) | 2013년 창업 이후 누적 | https://www.tubefilter.com/2025/08/07/patreon-kajabi-10-billion-creator-economy-payouts-funding-since-launch/

@@ -55,7 +55,10 @@
    "outcomes": [],
    "saju": {
     "stage": "consume",
-    "idea": "결제 직후 리포트가 생성되는 대기 시간을 비워 두지 않는다. 예상 완료 시간과 진행 단계(명식 계산 → 대운 분석 → 문장 작성)를 보여 주고, 완성되면 메시지로 알려 열람률을 지킨다"
+    "idea": "결제 직후 리포트가 생성되는 대기 시간을 비워 두지 않는다. 예상 완료 시간과 진행 단계(명식 계산 → 대운 분석 → 문장 작성)를 보여 주고, 완성되면 메시지로 알려 열람률을 지킨다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "치과 환자들이 대기 경험에 불만이 많다. 원장은 대기실을 넓히거나 꾸미는 방안을 생각하고 있다.",
@@ -109,7 +112,20 @@
      },
      "test": {
       "experiment": "결제 후 생성 대기 화면에 예상 시간·진행 단계 표시 A/B로 결과 열람률·환불 문의 비교",
-      "metric": "consumption_rate"
+      "metric": "consumption_rate",
+      "ice": {
+       "impact": 5,
+       "confidence": 7,
+       "ease": 8,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+5%p",
+       "value": 5.0,
+       "unit": "pp"
+      },
+      "guardrail": "refund_rate",
+      "note": "생성 대기가 길수록 효과 큼"
      }
     },
     {
@@ -128,7 +144,20 @@
      },
      "test": {
       "experiment": "리포트 완성 알림(문자·메신저) 발송 그룹과 미발송 그룹의 24시간 내 열람률 비교",
-      "metric": "consumption_rate"
+      "metric": "consumption_rate",
+      "ice": {
+       "impact": 4,
+       "confidence": 7,
+       "ease": 9,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+5%p",
+       "value": 5.0,
+       "unit": "pp"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -168,7 +197,10 @@
    ],
    "saju": {
     "stage": "hook_story",
-    "idea": "거울처럼 '나'를 비춘다: 스토리 1p의 주인공을 방문자의 띠·오행 캐릭터로 바꿔 '내 이야기'로 느끼게 한다"
+    "idea": "거울처럼 '나'를 비춘다: 스토리 1p의 주인공을 방문자의 띠·오행 캐릭터로 바꿔 '내 이야기'로 느끼게 한다",
+    "also": [
+     "consume"
+    ]
    },
    "what": {
     "situation": "사무실 건물 세입자들이 엘리베이터가 느리다고 불평하고, 일부는 계약을 깨겠다고 한다.",
@@ -222,7 +254,20 @@
      },
      "test": {
       "experiment": "1p 주인공을 방문자 띠·오행 캐릭터로 개인화한 버전과 일반 캐릭터 버전의 2p 이동률 비교",
-      "metric": "story_hook_rate"
+      "metric": "story_hook_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "consumption_rate",
+      "note": "개인화 캐릭터 제작 비용 확인"
      }
     }
    ],
@@ -262,7 +307,10 @@
    ],
    "saju": {
     "stage": "consume",
-    "idea": "결제 후 기다리는 몇 초를 '서서 기다리는 시간'이 아니라 '걷는 시간'으로: 로딩 대신 분석 과정을 순서대로 보여 주는 연출로 체감 대기를 줄이고 열람 이탈을 막는다"
+    "idea": "결제 후 기다리는 몇 초를 '서서 기다리는 시간'이 아니라 '걷는 시간'으로: 로딩 대신 분석 과정을 순서대로 보여 주는 연출로 체감 대기를 줄이고 열람 이탈을 막는다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "승객들이 수하물 찾는 곳에서 오래 기다린다고 불만을 쏟아낸다. 인력을 늘려 대기 시간을 줄였는데도 불만이 계속된다.",
@@ -316,7 +364,20 @@
      },
      "test": {
       "experiment": "결제 후 대기 화면을 분석 단계 연출형과 로딩 스피너형으로 나눠 결과 열람률·환불률 비교",
-      "metric": "consumption_rate"
+      "metric": "consumption_rate",
+      "ice": {
+       "impact": 4,
+       "confidence": 6,
+       "ease": 8,
+       "score": 6.0
+      },
+      "target": {
+       "text": "+3%p",
+       "value": 3.0,
+       "unit": "pp"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -348,7 +409,10 @@
    "outcomes": [],
    "saju": {
     "stage": "hook_story",
-    "idea": "결제 전 두 페이지를 '통로'가 아니라 '무대'로: 1p 마지막 컷을 클리프행어(결정적 장면 직전)로 끝내 2p로 넘어가게 만든다"
+    "idea": "결제 전 두 페이지를 '통로'가 아니라 '무대'로: 1p 마지막 컷을 클리프행어(결정적 장면 직전)로 끝내 2p로 넘어가게 만든다",
+    "also": [
+     "consume"
+    ]
    },
    "what": {
     "situation": "인기 놀이기구 앞에 긴 줄이 생기고, 줄을 보고 포기하거나 지쳐서 불만을 갖는 손님이 많다.",
@@ -402,7 +466,20 @@
      },
      "test": {
       "experiment": "1p 마지막 컷을 클리프행어형과 일반 '다음' 버튼형으로 나눠 2p 이동률 비교",
-      "metric": "story_hook_rate"
+      "metric": "story_hook_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 8,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "marketing_hook_rate",
+      "note": "1p만 올리고 2p에서 빠지면 무의미"
      }
     },
     {
@@ -448,7 +525,10 @@
    "outcomes": [],
    "saju": {
     "stage": "trust",
-    "idea": "환불·불만이 반복되면 '왜'를 거듭 물어 근본 원인을 찾는다: '해석이 틀렸다'인지 '2p에서 약속한 내용과 달랐다'인지 구분한다"
+    "idea": "환불·불만이 반복되면 '왜'를 거듭 물어 근본 원인을 찾는다: '해석이 틀렸다'인지 '2p에서 약속한 내용과 달랐다'인지 구분한다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "아이가 하굣길에 비를 맞고 감기에 걸렸다. 같은 일이 반복되지 않게 하고 싶다.",
@@ -502,7 +582,20 @@
      },
      "test": {
       "experiment": "환불 사유를 '해석 불만'·'기대 불일치'·'결제 실수'로 나눠 한 달 기록 후 최다 사유 하나 개선, 다음 달 환불률 비교",
-      "metric": "refund_rate"
+      "metric": "refund_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 7,
+       "ease": 7,
+       "score": 6.7
+      },
+      "target": {
+       "text": "-20%",
+       "value": -20.0,
+       "unit": "relative"
+      },
+      "guardrail": "checkout_conv",
+      "note": "환불 사유 수집은 즉시 시작"
      }
     }
    ],
@@ -542,7 +635,10 @@
    ],
    "saju": {
     "stage": "hook_story",
-    "idea": "불안한 고민(이별·실직)을 겁주는 경고로 시작하지 말고 극복 서사로 시작한다: 1p 웹툰이 '나도 그랬는데 길이 보였다'는 흐름이면 불안한 방문자도 끝까지 본다"
+    "idea": "불안한 고민(이별·실직)을 겁주는 경고로 시작하지 말고 극복 서사로 시작한다: 1p 웹툰이 '나도 그랬는데 길이 보였다'는 흐름이면 불안한 방문자도 끝까지 본다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "최신 MRI 장비를 설계했는데, 정작 아이들은 겁에 질려 울고 상당수가 진정제를 맞아야 검사를 받는다.",
@@ -596,7 +692,20 @@
      },
      "test": {
       "experiment": "1p를 '극복 서사'형과 '경고'형으로 나눠 2p 이동률·이탈 지점 비교",
-      "metric": "story_hook_rate"
+      "metric": "story_hook_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 7,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -625,10 +734,21 @@
     "id": "access",
     "note": "미숙아 저체온"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "access",
+     "before": "출시 전 0명",
+     "after": "10개국 아기 6만 명 이상 (2013)",
+     "context": "기존 인큐베이터 가격의 1% 미만",
+     "evidence": "https://www.weforum.org/organizations/embrace-innovations"
+    }
+   ],
    "saju": {
     "stage": "acquire",
-    "idea": "과제를 그대로 받지 말고 실제 이용 장면을 본다: 방문자가 언제·어디서(새벽 침대, 출근길) 들어오는지 보고 광고 소재와 1p 첫 컷을 그 장면에 맞춘다"
+    "idea": "과제를 그대로 받지 말고 실제 이용 장면을 본다: 방문자가 언제·어디서(새벽 침대, 출근길) 들어오는지 보고 광고 소재와 1p 첫 컷을 그 장면에 맞춘다",
+    "also": [
+     "hook_story"
+    ]
    },
    "what": {
     "situation": "개발도상국 병원을 위해 훨씬 싼 인큐베이터를 만들라는 과제를 받았다. 현지 병원에 가 보니 기증받은 인큐베이터가 대부분 비어 있었다.",
@@ -682,7 +802,20 @@
      },
      "test": {
       "experiment": "시간대별 유입·구매 데이터를 2주 모아 상위 2개 시간대에 맞춘 광고 소재 테스트",
-      "metric": "first_pay_conv"
+      "metric": "first_pay_conv",
+      "ice": {
+       "impact": 5,
+       "confidence": 5,
+       "ease": 6,
+       "score": 5.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "cac",
+      "note": ""
      }
     },
     {
@@ -737,7 +870,11 @@
    ],
    "saju": {
     "stage": "hook_marketing",
-    "idea": "낯선 서비스를 믿게 만드는 장치를 2p에: 실제 구매자 후기, 적중 사례, 리포트를 쓴 캐릭터·작가 프로필을 마케팅 페이지에 둔다"
+    "idea": "낯선 서비스를 믿게 만드는 장치를 2p에: 실제 구매자 후기, 적중 사례, 리포트를 쓴 캐릭터·작가 프로필을 마케팅 페이지에 둔다",
+    "also": [
+     "checkout",
+     "trust"
+    ]
    },
    "what": {
     "situation": "큰 행사가 열리는 기간에 도시의 호텔이 모두 차서 방문객이 묵을 곳이 없다.",
@@ -791,7 +928,20 @@
      },
      "test": {
       "experiment": "2p에 실제 구매자 후기 3개 노출 A/B로 결제 페이지 이동률·환불률 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 8,
+       "confidence": 7,
+       "ease": 8,
+       "score": 7.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "후기는 실제 구매자 것만"
      }
     },
     {
@@ -838,7 +988,10 @@
    "outcomes": [],
    "saju": {
     "stage": "checkout",
-    "idea": "압박·벌로 돈을 벌지 않는다: 가짜 카운트다운, 숨은 자동 결제 같은 장치는 당장 결제를 늘려도 환불·불신을 키운다. 가격과 포함 내용을 명확히 보여 준다"
+    "idea": "압박·벌로 돈을 벌지 않는다: 가짜 카운트다운, 숨은 자동 결제 같은 장치는 당장 결제를 늘려도 환불·불신을 키운다. 가격과 포함 내용을 명확히 보여 준다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "비디오·DVD 대여점 고객들이 반납 기한과 연체료, 매장 왕복에 불만이 크다.",
@@ -892,7 +1045,20 @@
      },
      "test": {
       "experiment": "결제 페이지 카운트다운 타이머 제거 전후 결제 완료율과 환불률을 함께 비교",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 5,
+       "confidence": 5,
+       "ease": 9,
+       "score": 6.3
+      },
+      "target": {
+       "text": "-0%",
+       "value": -0.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "결제율 유지 + 환불률 하락이면 채택"
      }
     },
     {
@@ -939,7 +1105,10 @@
    "outcomes": [],
    "saju": {
     "stage": "hook_marketing",
-    "idea": "경쟁사가 주제별로 쪼개 파는 동안 '한 번 결제로 전체 결과 공개'가 우리 강점이다: 2p에서 포함 내용(연애·재물·건강·대운 등)을 전부 보여 주고 추가 결제 없음을 강조한다"
+    "idea": "경쟁사가 주제별로 쪼개 파는 동안 '한 번 결제로 전체 결과 공개'가 우리 강점이다: 2p에서 포함 내용(연애·재물·건강·대운 등)을 전부 보여 주고 추가 결제 없음을 강조한다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "진공청소기를 쓰다 보면 흡입력이 점점 떨어져 소비자 불만이 생긴다.",
@@ -993,7 +1162,20 @@
      },
      "test": {
       "experiment": "2p에 '한 번 결제로 모든 장 공개' 강조 블록을 넣은 버전과 없는 버전의 결제 페이지 이동률 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -1022,10 +1204,21 @@
     "id": "first_pay_conv",
     "note": "출시 후 판매 부진"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "revenue",
+     "before": "1998년 재출시 전 판매 부진",
+     "after": "재출시 두 달 만에 판매 2배, 이후 연 매출 10억 달러 이상",
+     "context": "'청소 마무리의 향기'로 포지셔닝을 바꾼 뒤",
+     "evidence": "https://www.businessinsider.in/How-the-worlds-best-marketer-got-it-wrong-but-eventually-got-it-right/articleshow/55725321.cms"
+    }
+   ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "새 습관을 만들지 말고 이미 있는 시점에 붙인다: 생일·연초·월초처럼 사람들이 원래 운세를 찾는 시점 직전에 재구매(신년운·올해 하반기 운) 제안을 보낸다"
+    "idea": "새 습관을 만들지 말고 이미 있는 시점에 붙인다: 생일·연초·월초처럼 사람들이 원래 운세를 찾는 시점 직전에 재구매(신년운·올해 하반기 운) 제안을 보낸다",
+    "also": [
+     "acquire"
+    ]
    },
    "what": {
     "situation": "어떤 냄새든 없애는 무색·무취 스프레이를 만들었지만 출시 후 판매가 부진하다.",
@@ -1079,7 +1272,20 @@
      },
      "test": {
       "experiment": "생일 7일 전 재구매 제안 그룹과 무작위 시점 그룹의 재구매율 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 7,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -1111,7 +1317,11 @@
    "outcomes": [],
    "saju": {
     "stage": "hook_marketing",
-    "idea": "고객이 사주를 '고용'하는 상황별로 2p 메시지를 바꾼다: 이직 결정 전, 연애 고민, 연초 계획 등 유입 키워드에 맞춰 2p의 약속(무엇을 알려 주는가)을 다르게 쓴다"
+    "idea": "고객이 사주를 '고용'하는 상황별로 2p 메시지를 바꾼다: 이직 결정 전, 연애 고민, 연초 계획 등 유입 키워드에 맞춰 2p의 약속(무엇을 알려 주는가)을 다르게 쓴다",
+    "also": [
+     "acquire",
+     "hook_story"
+    ]
    },
    "what": {
     "situation": "패스트푸드 체인이 밀크셰이크 매출을 늘리려고 고객에게 맛·가격을 물어 개선했지만 효과가 없다. 그런데 상당량이 아침 출근길에 포장으로 팔린다.",
@@ -1165,7 +1375,20 @@
      },
      "test": {
       "experiment": "유입 키워드(이직·연애·신년)별 맞춤 2p와 공통 2p의 결제 페이지 이동률 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 8,
+       "confidence": 6,
+       "ease": 5,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "주제별 2p 3종 필요"
      }
     }
    ],
@@ -1205,7 +1428,10 @@
    ],
    "saju": {
     "stage": "economics",
-    "idea": "같은 자원으로 더 많이 돌린다: 풀이 생성에 공통 계산(명식·대운)을 캐시해 재사용하고, LLM 호출은 개인화 문장에만 써서 건당 원가를 낮춘다"
+    "idea": "같은 자원으로 더 많이 돌린다: 풀이 생성에 공통 계산(명식·대운)을 캐시해 재사용하고, LLM 호출은 개인화 문장에만 써서 건당 원가를 낮춘다",
+    "also": [
+     "economics"
+    ]
    },
    "what": {
     "situation": "초창기 항공사가 자금난으로 비행기 4대 중 1대를 팔아야 했다. 운항 편수를 줄이면 손님을 잃는다.",
@@ -1259,7 +1485,20 @@
      },
      "test": {
       "experiment": "명식 계산 캐시 적용 전후 풀이 1건당 API 비용 측정",
-      "metric": "unit_cost"
+      "metric": "unit_cost",
+      "ice": {
+       "impact": 5,
+       "confidence": 8,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "-30%",
+       "value": -30.0,
+       "unit": "relative"
+      },
+      "guardrail": "satisfaction_score",
+      "note": "명식 계산은 결정적이라 캐시 안전"
      }
     }
    ],
@@ -1463,7 +1702,10 @@
    ],
    "saju": {
     "stage": "hook_marketing",
-    "idea": "무료 맛보기를 깔때기로: 2p에서 실제 내 결과의 한 문단(예: 성격 요약)을 무료로 보여 주고 나머지 장을 결제로 연다. 맛보기 품질이 좋을수록 결제가 오른다"
+    "idea": "무료 맛보기를 깔때기로: 2p에서 실제 내 결과의 한 문단(예: 성격 요약)을 무료로 보여 주고 나머지 장을 결제로 연다. 맛보기 품질이 좋을수록 결제가 오른다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "음반 업계 매출이 줄고 불법 다운로드가 넘쳐난다.",
@@ -1517,7 +1759,20 @@
      },
      "test": {
       "experiment": "2p에 내 결과 한 문단 무료 공개 버전과 미공개 버전의 결제 페이지 이동률·구매 전환 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 8,
+       "confidence": 7,
+       "ease": 6,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "free_tier_cost",
+      "note": "맛보기 문단 생성 원가 확인"
      }
     },
     {
@@ -2095,7 +2350,11 @@
    "outcomes": [],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "리포트를 '끝'이 아니라 다음 구매의 출발점으로: 구매자에게 AI 후속 질문 몇 회를 주고, 질문에서 드러난 결정 시점(이직·연애)에 맞춘 주제 리포트를 제안한다"
+    "idea": "리포트를 '끝'이 아니라 다음 구매의 출발점으로: 구매자에게 AI 후속 질문 몇 회를 주고, 질문에서 드러난 결정 시점(이직·연애)에 맞춘 주제 리포트를 제안한다",
+    "also": [
+     "consume",
+     "expand"
+    ]
    },
    "what": {
     "situation": "AI 사주 사이트의 4만원대 총운 리포트가 잘 팔리지만 같은 고객이 다시 사지 않는다.",
@@ -2149,7 +2408,20 @@
      },
      "test": {
       "experiment": "리포트 구매자 절반에게 무료 질문 3회 제공, 90일 재결제율 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "unit_cost",
+      "note": ""
      }
     },
     {
@@ -2168,7 +2440,20 @@
      },
      "test": {
       "experiment": "연말에 '올해 운세 돌아보기' 무료 페이지 발송 후 신년운 구매율 비교",
-      "metric": "upsell_rate"
+      "metric": "upsell_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 7,
+       "ease": 7,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "연말 시즌 한정"
      }
     }
    ],
@@ -2837,7 +3122,10 @@
    ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "다음 구매의 결제 고민을 미리 없앤다: 첫 구매자에게 '1년 안에 다른 주제 리포트 반값' 같은 권리를 주면, 고민 없이 다시 사는 고객이 늘어난다"
+    "idea": "다음 구매의 결제 고민을 미리 없앤다: 첫 구매자에게 '1년 안에 다른 주제 리포트 반값' 같은 권리를 주면, 고민 없이 다시 사는 고객이 늘어난다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "2005년 이전 온라인 쇼핑에서 고객은 주문할 때마다 붙는 배송비 때문에 작은 물건은 미루고 모아서 샀다. 배송도 대개 일주일 이상 걸렸다.",
@@ -2891,7 +3179,20 @@
      },
      "test": {
       "experiment": "첫 구매자 절반에게 '1년 내 추가 주제 50%' 권리 부여, 6개월 재구매율·결제 빈도 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 7,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "contribution_margin",
+      "note": ""
      }
     }
    ],
@@ -3017,7 +3318,10 @@
    ],
    "saju": {
     "stage": "checkout",
-    "idea": "위험을 회사가 진다: '결과가 마음에 안 들면 환불'을 결제 버튼 옆에 두면 결제 장벽이 낮아진다. 환불률을 가드레일로 함께 본다"
+    "idea": "위험을 회사가 진다: '결과가 마음에 안 들면 환불'을 결제 버튼 옆에 두면 결제 장벽이 낮아진다. 환불률을 가드레일로 함께 본다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "신발을 온라인으로 파는 회사. 고객은 사이즈와 착화감이 걱정돼 온라인 구매를 꺼린다.",
@@ -3071,7 +3375,20 @@
      },
      "test": {
       "experiment": "결제 버튼 옆 환불 보장 문구 노출 A/B로 결제 완료율과 환불률 동시 측정",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 8,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "환불률 상한을 미리 정함"
      }
     }
    ],
@@ -3103,7 +3420,10 @@
    "outcomes": [],
    "saju": {
     "stage": "hook_story",
-    "idea": "'써 보고 산다'를 페이지 안으로: 1p 스토리에 방문자의 사주 특징 하나를 실제로 맞히는 장면을 넣어 '이거 진짜네'를 결제 전에 경험하게 한다"
+    "idea": "'써 보고 산다'를 페이지 안으로: 1p 스토리에 방문자의 사주 특징 하나를 실제로 맞히는 장면을 넣어 '이거 진짜네'를 결제 전에 경험하게 한다",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "안경테 가격이 높은데, 소수 기업이 브랜드 라이선스와 유통을 쥐고 있어 가격이 내려가지 않는다.",
@@ -3157,7 +3477,20 @@
      },
      "test": {
       "experiment": "1p에 '성격 한 줄 맞히기' 장면을 넣은 버전과 일반 스토리 버전의 2p 이동률·구매 전환 비교",
-      "metric": "story_hook_rate"
+      "metric": "story_hook_rate",
+      "ice": {
+       "impact": 8,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -3211,7 +3544,10 @@
    ],
    "saju": {
     "stage": "acquire",
-    "idea": "광고비 대신 웃긴 바이럴 한 편: 사주 업계의 뻔한 신비주의를 비트는 솔직한 영상·웹툰 광고로 유입을 만들고, 그 톤을 1p 스토리와 이어지게 한다"
+    "idea": "광고비 대신 웃긴 바이럴 한 편: 사주 업계의 뻔한 신비주의를 비트는 솔직한 영상·웹툰 광고로 유입을 만들고, 그 톤을 1p 스토리와 이어지게 한다",
+    "also": [
+     "hook_story"
+    ]
    },
    "what": {
     "situation": "마트 면도날은 비싸고 도난 방지 진열장에 잠겨 있어 직원을 불러야 살 수 있다.",
@@ -3265,7 +3601,20 @@
      },
      "test": {
       "experiment": "유머·솔직형 광고 소재와 신비주의형 소재의 클릭률·구매 전환 비교",
-      "metric": "first_pay_conv"
+      "metric": "first_pay_conv",
+      "ice": {
+       "impact": 6,
+       "confidence": 4,
+       "ease": 6,
+       "score": 5.3
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -3320,7 +3669,10 @@
    ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "이익을 첫 구매 마진이 아니라 관계에서: 연간 이용권(1년간 모든 주제 리포트 구매 시 할인)을 두고, 갱신율을 재구매 지표로 본다"
+    "idea": "이익을 첫 구매 마진이 아니라 관계에서: 연간 이용권(1년간 모든 주제 리포트 구매 시 할인)을 두고, 갱신율을 재구매 지표로 본다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "창고형 할인점이 많아 가격 경쟁이 치열하고 마진이 얇다.",
@@ -3374,7 +3726,20 @@
      },
      "test": {
       "experiment": "연간 이용권 출시 후 이용권 구매자와 단건 구매자의 12개월 재구매율·매출 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 5,
+       "ease": 5,
+       "score": 5.7
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "contribution_margin",
+      "note": ""
      }
     }
    ],
@@ -5624,7 +5989,10 @@
    ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "멤버십은 핵심 강점과 묶일 때 통한다: 재구매 고객용 혜택을 '추가 주제 할인 + 후속 질문 + 신년운 무료 미리보기'처럼 핵심 가치에 묶는다"
+    "idea": "멤버십은 핵심 강점과 묶일 때 통한다: 재구매 고객용 혜택을 '추가 주제 할인 + 후속 질문 + 신년운 무료 미리보기'처럼 핵심 가치에 묶는다",
+    "also": [
+     "expand"
+    ]
    },
    "what": {
     "situation": "직매입·자체 물류로 익일배송을 하지만, 고객은 가격 비교로 여러 몰을 옮겨 다닌다.",
@@ -5663,7 +6031,20 @@
      },
      "test": {
       "experiment": "두 번째 구매 묶음 할인 2단계(20%·40%) 테스트로 재구매율·매출 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 8,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "contribution_margin",
+      "note": "할인율이 마진을 넘지 않게"
      }
     },
     {
@@ -7809,7 +8190,15 @@
     "id": "unit_cost",
     "note": "하역 비용이 해운 비용 대부분"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "unit_cost",
+     "before": "톤당 선적 비용 약 $5.83 (재래식 하역)",
+     "after": "톤당 $0.16 미만 (컨테이너)",
+     "context": "1956년 Ideal-X 운항 기준 McLean의 계산",
+     "evidence": "https://transportgeography.org/contents/chapter1/the-setting-of-global-transportation-systems/idealx-first-containeriship-1956/"
+    }
+   ],
    "saju": {
     "stage": "economics",
     "idea": "병목부터 찾는다: 풀이 1건 원가가 LLM 호출·이미지 생성·검수 중 어디서 가장 큰지 먼저 쪼개 보고, 가장 큰 병목을 표준화한다"
@@ -7866,7 +8255,20 @@
      },
      "test": {
       "experiment": "풀이 생성 단계별 비용을 한 달간 기록해 상위 1개 단계 표준화 전후 원가 비교",
-      "metric": "unit_cost"
+      "metric": "unit_cost",
+      "ice": {
+       "impact": 4,
+       "confidence": 8,
+       "ease": 6,
+       "score": 6.0
+      },
+      "target": {
+       "text": "-20%",
+       "value": -20.0,
+       "unit": "relative"
+      },
+      "guardrail": "satisfaction_score",
+      "note": ""
      }
     }
    ],
@@ -8695,7 +9097,15 @@
     "id": "revenue",
     "note": "주력 게임 실패"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "buyers",
+     "before": "유료 고객 59,000곳 (2018.1)",
+     "after": "88,000곳 (2019.1, +49%)",
+     "context": "S-1 공개 시점, 일간 활성 사용자 1,000만 명 이상",
+     "evidence": "https://www.cnbc.com/2019/04/26/slack-releases-s-1-for-ipo.html"
+    }
+   ],
    "saju": {
     "stage": "none",
     "idea": "직접 적용보다 원칙: 사주 서비스 운영팀이 내부에서 쓰는 도구(예: 상담 문장 검수기)가 다른 사주 사업자에게 팔릴 수 있는지 본다"
@@ -8737,7 +9147,20 @@
      },
      "test": {
       "experiment": "내부 도구를 3개 외부 팀에 무료로 써 보게 하고 주간 사용 유지율 측정",
-      "metric": "d30_retention"
+      "metric": "d30_retention",
+      "ice": {
+       "impact": 2,
+       "confidence": 4,
+       "ease": 5,
+       "score": 3.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "unit_cost",
+      "note": "확장 실험, 우선순위 낮음"
      }
     },
     {
@@ -8838,7 +9261,20 @@
      },
      "test": {
       "experiment": "외부 작가 5명에게 리포트·랜딩 템플릿을 주고 4주 내 유료 판매 발생 여부 확인",
-      "metric": "revenue"
+      "metric": "revenue",
+      "ice": {
+       "impact": 3,
+       "confidence": 3,
+       "ease": 4,
+       "score": 3.3
+      },
+      "target": {
+       "text": "+0%",
+       "value": 0.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "판매 발생 여부만 봄"
      }
     }
    ],
@@ -9145,7 +9581,11 @@
    ],
    "saju": {
     "stage": "refer",
-    "idea": "양쪽 보상 추천: 친구를 데려오면 나와 친구 모두에게 궁합 리포트 할인. 궁합은 원래 두 사람이 필요한 상품이라 추천과 잘 맞는다"
+    "idea": "양쪽 보상 추천: 친구를 데려오면 나와 친구 모두에게 궁합 리포트 할인. 궁합은 원래 두 사람이 필요한 상품이라 추천과 잘 맞는다",
+    "also": [
+     "expand",
+     "acquire"
+    ]
    },
    "what": {
     "situation": "USB를 잊고 오거나 이메일로 파일을 자기에게 보내는 일이 흔했다.",
@@ -9184,7 +9624,20 @@
      },
      "test": {
       "experiment": "구매자 결과 페이지에 '친구와 궁합 보기(양쪽 할인)' 초대 버튼 출시 후 초대 경유 구매 비율·CAC 비교",
-      "metric": "viral_coef"
+      "metric": "viral_coef",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "contribution_margin",
+      "note": ""
      }
     },
     {
@@ -9505,7 +9958,10 @@
    ],
    "saju": {
     "stage": "refer",
-    "idea": "무료 구간을 확산 엔진으로: 1p 스토리의 마지막 컷(내 띠 캐릭터·한 줄 운세)을 공유 카드로 만들어, 공유가 곧 유입이 되게 한다"
+    "idea": "무료 구간을 확산 엔진으로: 1p 스토리의 마지막 컷(내 띠 캐릭터·한 줄 운세)을 공유 카드로 만들어, 공유가 곧 유입이 되게 한다",
+    "also": [
+     "acquire"
+    ]
    },
    "what": {
     "situation": "이메일 마케팅 도구는 비싸고 복잡해 작은 가게는 쓰기 어려웠다.",
@@ -9559,7 +10015,20 @@
      },
      "test": {
       "experiment": "1p 끝에 공유 카드 버튼을 넣은 뒤 공유 경유 방문·구매 비율 측정",
-      "metric": "viral_coef"
+      "metric": "viral_coef",
+      "ice": {
+       "impact": 6,
+       "confidence": 5,
+       "ease": 8,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "story_hook_rate",
+      "note": ""
      }
     }
    ],
@@ -11566,10 +12035,21 @@
     "id": "first_pay_conv",
     "note": "작은 판매자의 카드 결제 불가로 판매 손실"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "gmv",
+     "before": "2014년 4분기 GPV 약 69억 달러",
+     "after": "2015년 4분기 GPV 102억 달러 (+47%)",
+     "context": "전년 동기 대비, 주주 서한",
+     "evidence": "https://mms.businesswire.com/media/20160309006294/en/513572/1/square-2015-q4-shareholder-letter.pdf"
+    }
+   ],
    "saju": {
     "stage": "checkout",
-    "idea": "결제 수단 장벽을 없앤다: 간편결제·휴대폰 소액결제·계좌이체를 붙이고, 결제 페이지 이탈을 결제 수단별로 본다"
+    "idea": "결제 수단 장벽을 없앤다: 간편결제·휴대폰 소액결제·계좌이체를 붙이고, 결제 페이지 이탈을 결제 수단별로 본다",
+    "also": [
+     "first_pay"
+    ]
    },
    "what": {
     "situation": "유리 공예가였던 공동창업자는 손님이 카드밖에 없어 수천 달러짜리 작품 판매를 놓쳤다. 작은 판매자는 카드 가맹점 심사, 비싼 단말기, 장기 계약 때문에 카드 결제를 받기 어려웠다.",
@@ -11623,7 +12103,20 @@
      },
      "test": {
       "experiment": "결제 수단 하나 추가 전후 결제 페이지 이탈률 비교",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 7,
+       "confidence": 8,
+       "ease": 7,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "결제 수단별 실패율 함께 기록"
      }
     }
    ],
@@ -12009,7 +12502,10 @@
    ],
    "saju": {
     "stage": "checkout",
-    "idea": "고객이 이미 쓰는 결제 습관에 맞춘다: 카드가 없는 10대·50대 이상도 결제할 수 있게 휴대폰 소액결제를 연다"
+    "idea": "고객이 이미 쓰는 결제 습관에 맞춘다: 카드가 없는 10대·50대 이상도 결제할 수 있게 휴대폰 소액결제를 연다",
+    "also": [
+     "first_pay"
+    ]
    },
    "what": {
     "situation": "케냐의 많은 사람이 은행 계좌가 없다. 도시에서 일하는 사람은 고향 가족에게 돈을 보내려고 버스 기사에게 현금을 맡기기도 했다.",
@@ -12048,7 +12544,20 @@
      },
      "test": {
       "experiment": "휴대폰 소액결제 추가 후 10대·50대 이상 결제 완료율 변화 측정",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 5,
+       "confidence": 7,
+       "ease": 7,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "대상 나이대만 비교"
      }
     },
     {
@@ -12104,7 +12613,10 @@
    ],
    "saju": {
     "stage": "checkout",
-    "idea": "숨은 비용을 없애는 것이 신뢰다: 결제 전에 총액·포함 내용·추가 결제 없음을 한 화면에 투명하게 보여 준다"
+    "idea": "숨은 비용을 없애는 것이 신뢰다: 결제 전에 총액·포함 내용·추가 결제 없음을 한 화면에 투명하게 보여 준다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "런던에 사는 두 에스토니아인은 각각 파운드→유로, 유로→파운드로 매달 돈을 보내며 은행 환율에 숨은 비용을 냈다. 그래서 서로의 국내 계좌에 돈을 넣어 주는 방식으로 바꿨다.",
@@ -12158,7 +12670,20 @@
      },
      "test": {
       "experiment": "결제 페이지에 '총액·포함 내용' 요약 박스 노출 A/B로 결제 완료율·환불률 비교",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -13255,7 +13780,10 @@
    "outcomes": [],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "지금 잘 팔리는 단건 리포트가 다음 구매 장치를 막지 않게: 재구매용 상품(연운 갱신·주제 추가)을 미리 만들고, 단건 매출과 별도로 재구매 지표를 본다"
+    "idea": "지금 잘 팔리는 단건 리포트가 다음 구매 장치를 막지 않게: 재구매용 상품(연운 갱신·주제 추가)을 미리 만들고, 단건 매출과 별도로 재구매 지표를 본다",
+    "also": [
+     "expand"
+    ]
    },
    "what": {
     "situation": "DVD 우편 대여 사업이 잘되고 있지만, 인터넷 속도가 빨라지며 영상을 바로 보는 시대가 오고 있었다.",
@@ -13309,7 +13837,20 @@
      },
      "test": {
       "experiment": "단건 구매자에게 '다음 해 운세 자동 예약' 옵션 제안 후 12개월 재구매율 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 5,
+       "confidence": 5,
+       "ease": 6,
+       "score": 5.3
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -13348,7 +13889,10 @@
    ],
    "saju": {
     "stage": "hook_story",
-    "idea": "데이터로 스토리를 기획한다: 어떤 1p 스토리 유형(연애·직장·가족)이 2p로 많이 넘기는지, 어떤 유형이 결제까지 가는지 보고 스토리를 고른다"
+    "idea": "데이터로 스토리를 기획한다: 어떤 1p 스토리 유형(연애·직장·가족)이 2p로 많이 넘기는지, 어떤 유형이 결제까지 가는지 보고 스토리를 고른다",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "스트리밍 회사가 남의 콘텐츠를 빌려 오면 판권료가 계속 오르고 경쟁사에 뺏길 수 있다.",
@@ -13402,7 +13946,20 @@
      },
      "test": {
       "experiment": "1p 스토리 유형 3종을 동시에 돌려 2p 이동률·구매 전환이 높은 유형 선택",
-      "metric": "story_hook_rate"
+      "metric": "story_hook_rate",
+      "ice": {
+       "impact": 8,
+       "confidence": 7,
+       "ease": 5,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "marketing_hook_rate",
+      "note": "3종 동시 실험은 표본이 3배 필요"
      }
     }
    ],
@@ -13521,7 +14078,10 @@
    ],
    "saju": {
     "stage": "hook_marketing",
-    "idea": "가장 강한 이유 하나만 남긴다: 2p에 혜택을 나열하지 말고 데이터상 가장 결제를 부르는 메시지 하나를 크게 보여 준다"
+    "idea": "가장 강한 이유 하나만 남긴다: 2p에 혜택을 나열하지 말고 데이터상 가장 결제를 부르는 메시지 하나를 크게 보여 준다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "위치 체크인 앱을 만들었는데 기능이 많고 복잡해 사용자가 늘지 않았다. 사람들은 사진 기능만 썼다.",
@@ -13560,7 +14120,20 @@
      },
      "test": {
       "experiment": "2p를 단일 핵심 메시지형과 혜택 나열형으로 나눠 결제 페이지 이동률 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -13683,7 +14256,10 @@
    "outcomes": [],
    "saju": {
     "stage": "hook_story",
-    "idea": "첫 화면부터 바로 재미있게: 가입·긴 입력 없이 1p 스토리를 먼저 보여 주고, 생년월일 입력은 2p로 넘어가는 순간에 받는다"
+    "idea": "첫 화면부터 바로 재미있게: 가입·긴 입력 없이 1p 스토리를 먼저 보여 주고, 생년월일 입력은 2p로 넘어가는 순간에 받는다",
+    "also": [
+     "input"
+    ]
    },
    "what": {
     "situation": "기존 소셜 앱은 친구를 맺어야 피드가 채워져, 새 사용자는 볼 게 없어 떠난다.",
@@ -13721,8 +14297,21 @@
       "inferred": false
      },
      "test": {
-      "experiment": "생년월일 입력을 1p 앞에 두는 버전과 1p 뒤에 두는 버전의 2p 이동률·입력 완료율 비교",
-      "metric": "story_hook_rate"
+      "experiment": "생년월일 입력을 1p 앞에 두는 버전과 1p 뒤에 두는 버전(퍼널 설정 순서만 바꿈)의 입력 완료율·구매 전환 비교",
+      "metric": "input_complete_rate",
+      "ice": {
+       "impact": 8,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "first_pay_conv",
+      "note": "순서만 바꾸면 되므로 가장 쉬움"
      }
     },
     {
@@ -13778,7 +14367,10 @@
    ],
    "saju": {
     "stage": "checkout",
-    "idea": "'무료 아니면 유료'의 이분법을 깬다: 결과의 일부(첫 장)는 결제 전에 보여 주고 전체는 결제로 연다. 시간 한정 첫 구매가를 쓸 때는 실제 조건으로만 쓴다"
+    "idea": "'무료 아니면 유료'의 이분법을 깬다: 결과의 일부(첫 장)는 결제 전에 보여 주고 전체는 결제로 연다. 시간 한정 첫 구매가를 쓸 때는 실제 조건으로만 쓴다",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "사람들은 웹소설·웹툰을 무료로 보는 데 익숙해 유료 결제를 꺼린다.",
@@ -13832,7 +14424,20 @@
      },
      "test": {
       "experiment": "결제 페이지에 첫 장 미리보기를 붙인 버전과 없는 버전의 결제 완료율·환불률 비교",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -13893,7 +14498,10 @@
    ],
    "saju": {
     "stage": "checkout",
-    "idea": "가격을 어떤 단위로 보여 주느냐가 결제 부담을 바꾼다: 총액, 하루 환산, 이용권 개수 등 표시 방식을 시험하고, 결제 버튼 문구·위치를 2p 끝에 맞춘다"
+    "idea": "가격을 어떤 단위로 보여 주느냐가 결제 부담을 바꾼다: 총액, 하루 환산, 이용권 개수 등 표시 방식을 시험하고, 결제 버튼 문구·위치를 2p 끝에 맞춘다",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "출판 만화를 휴대폰으로 보면 페이지를 넘기고 확대해야 해서 불편하다. 만화 잡지 시장은 줄고 있었다.",
@@ -13932,7 +14540,20 @@
      },
      "test": {
       "experiment": "2p 끝 '전체 결과 보기' 버튼 문구·위치 A/B로 결제 페이지 이동률 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 5,
+       "confidence": 7,
+       "ease": 10,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "checkout_conv",
+      "note": ""
      }
     },
     {
@@ -13951,7 +14572,20 @@
      },
      "test": {
       "experiment": "가격 표시를 총액형과 '하루 n원' 환산형으로 나눠 결제 완료율 비교",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 6,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -14712,7 +15346,10 @@
    ],
    "saju": {
     "stage": "expand",
-    "idea": "시즌을 상품으로: 연초(신년운), 봄(연애운), 하반기(재물운)처럼 시즌 한정 주제 리포트와 사주 캐릭터 카드를 추가 상품으로 판다"
+    "idea": "시즌을 상품으로: 연초(신년운), 봄(연애운), 하반기(재물운)처럼 시즌 한정 주제 리포트와 사주 캐릭터 카드를 추가 상품으로 판다",
+    "also": [
+     "repeat_pay"
+    ]
    },
    "what": {
     "situation": "게임을 패키지로 팔면 출시 초기에 매출이 몰리고 끝난다.",
@@ -14766,7 +15403,20 @@
      },
      "test": {
       "experiment": "시즌 한정 주제 리포트 출시 후 기존 구매자의 교차 구매율 측정",
-      "metric": "upsell_rate"
+      "metric": "upsell_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 5,
+       "ease": 5,
+       "score": 5.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -14827,7 +15477,10 @@
    ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "구매 후에도 매일 다시 오게: 구매자에게 '오늘의 한 줄' 무료 알림을 보내 관계를 유지하면 다음 주제 리포트 구매로 이어진다"
+    "idea": "구매 후에도 매일 다시 오게: 구매자에게 '오늘의 한 줄' 무료 알림을 보내 관계를 유지하면 다음 주제 리포트 구매로 이어진다",
+    "also": [
+     "refer"
+    ]
    },
    "what": {
     "situation": "언어 학습 앱을 깔아도 대부분 며칠 만에 그만둔다.",
@@ -14866,7 +15519,20 @@
      },
      "test": {
       "experiment": "구매자에게 매일 한 줄 운세 알림을 보내는 그룹과 없는 그룹의 30일 재방문·재구매 비교",
-      "metric": "d30_retention"
+      "metric": "d30_retention",
+      "ice": {
+       "impact": 6,
+       "confidence": 5,
+       "ease": 7,
+       "score": 6.0
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "unit_cost",
+      "note": ""
      }
     },
     {
@@ -14900,7 +15566,20 @@
      },
      "test": {
       "experiment": "올해+내년 묶음 상품(할인) 노출 A/B로 객단가·결제 완료율 비교",
-      "metric": "aov"
+      "metric": "aov",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 8,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "checkout_conv",
+      "note": "묶음 노출로 결제율이 떨어지면 기각"
      }
     }
    ],
@@ -15005,10 +15684,21 @@
     "id": "aov",
     "note": "작가 수입 불안정"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "buyers",
+     "before": "유료 구독 약 25만 건 (2020.12)",
+     "after": "100만 건 이상 (2021.11)",
+     "context": "유료 독자는 전체 독자의 약 5~10%",
+     "evidence": "https://www.axios.com/2021/11/15/substack-1-million-paid-subscriptions"
+    }
+   ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "사람에 대한 충성을 결제로: 리포트를 쓴 캐릭터·작가를 브랜드로 세우고, 팔로우한 구매자에게 그 작가의 새 주제 리포트를 먼저 알린다"
+    "idea": "사람에 대한 충성을 결제로: 리포트를 쓴 캐릭터·작가를 브랜드로 세우고, 팔로우한 구매자에게 그 작가의 새 주제 리포트를 먼저 알린다",
+    "also": [
+     "trust"
+    ]
    },
    "what": {
     "situation": "작가와 기자는 광고 중심 매체에서 조회수 압박을 받고 독자와 직접 관계가 없다.",
@@ -15062,7 +15752,20 @@
      },
      "test": {
       "experiment": "리포트 끝에 작가 팔로우 유도 후 팔로워와 비팔로워의 재구매율 비교",
-      "metric": "repeat_pay_rate"
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 4,
+       "confidence": 4,
+       "ease": 6,
+       "score": 4.7
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -15103,10 +15806,21 @@
     "id": "aov",
     "note": "창작자 수입 불규칙"
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "metric": "gmv",
+     "before": "누적 창작자 지급액 10억 달러 (2019, 후원자 400만 명)",
+     "after": "100억 달러 이상 (2025, 유료 멤버십 2,500만 건)",
+     "context": "2013년 창업 이후 누적",
+     "evidence": "https://www.tubefilter.com/2025/08/07/patreon-kajabi-10-billion-creator-economy-payouts-funding-since-launch/"
+    }
+   ],
    "saju": {
     "stage": "expand",
-    "idea": "등급형 가격: 기본 리포트 / 기본 + 상세 대운 / 기본 + 상세 + 1:1 질문으로 3단 가격표를 두면 일부는 상위 등급을 고른다"
+    "idea": "등급형 가격: 기본 리포트 / 기본 + 상세 대운 / 기본 + 상세 + 1:1 질문으로 3단 가격표를 두면 일부는 상위 등급을 고른다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "유튜브 창작자는 광고 수익이 적고 불규칙해 창작을 지속하기 어렵다.",
@@ -15160,7 +15874,20 @@
      },
      "test": {
       "experiment": "결제 페이지를 단일 가격과 3단 가격표로 나눠 객단가·결제 완료율 비교",
-      "metric": "aov"
+      "metric": "aov",
+      "ice": {
+       "impact": 8,
+       "confidence": 7,
+       "ease": 7,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "checkout_conv",
+      "note": "객단가↑ 결제율↓ 상쇄 여부를 매출로 판단"
      }
     },
     {
@@ -15214,7 +15941,10 @@
    ],
    "saju": {
     "stage": "checkout",
-    "idea": "얼마나 보여 주고 결제를 요구할지 정한다: 결제 전 무료 공개 분량이 너무 적으면 믿지 못하고, 너무 많으면 살 이유가 줄어든다"
+    "idea": "얼마나 보여 주고 결제를 요구할지 정한다: 결제 전 무료 공개 분량이 너무 적으면 믿지 못하고, 너무 많으면 살 이유가 줄어든다",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "신문사가 기사를 온라인에 무료로 풀자 종이 구독이 줄고 광고 단가도 떨어졌다.",
@@ -15268,7 +15998,20 @@
      },
      "test": {
       "experiment": "결제 전 무료 공개 분량(1문단 vs 3문단) A/B로 결제 완료율 비교",
-      "metric": "checkout_conv"
+      "metric": "checkout_conv",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 8,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],
@@ -15297,7 +16040,10 @@
    "outcomes": [],
    "saju": {
     "stage": "hook_marketing",
-    "idea": "시도 비용을 0으로 보이게: 2p에서 한 번 결제로 열리는 주제 목록(연애·재물·건강·직업·대운 등)을 시각적으로 보여 줘 '이 가격에 이걸 다'를 느끼게 한다"
+    "idea": "시도 비용을 0으로 보이게: 2p에서 한 번 결제로 열리는 주제 목록(연애·재물·건강·직업·대운 등)을 시각적으로 보여 줘 '이 가격에 이걸 다'를 느끼게 한다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "사람들이 책을 사도 끝까지 읽지 않고, 한 권 가격이 부담돼 여러 권을 시도하지 못한다.",
@@ -15351,7 +16097,20 @@
      },
      "test": {
       "experiment": "2p에 포함 주제 목록 시각화 블록을 넣은 버전과 없는 버전의 결제 페이지 이동률 비교",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 9,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -16703,7 +17462,10 @@
    "outcomes": [],
    "saju": {
     "stage": "expand",
-    "idea": "고객의 사용 패턴과 이해가 같은 과금: 추가 질문 상담은 '1회당' 과금과 '기간 무제한' 과금 중 고객이 덜 손해 보는 쪽을 고르게 한다"
+    "idea": "고객의 사용 패턴과 이해가 같은 과금: 추가 질문 상담은 '1회당' 과금과 '기간 무제한' 과금 중 고객이 덜 손해 보는 쪽을 고르게 한다",
+    "also": [
+     "economics"
+    ]
    },
    "what": {
     "situation": "항공기 운영사는 엔진을 산 뒤 예상치 못한 정비 비용과 고장으로 손실을 본다. 롤스로이스는 1962년 비즈니스 제트기 엔진에 처음 시간당 과금 서비스를 도입했다.",
@@ -16757,7 +17519,20 @@
      },
      "test": {
       "experiment": "추가 질문 상품을 1회당 과금과 7일 무제한 과금으로 나눠 객단가·만족도 비교",
-      "metric": "aov"
+      "metric": "aov",
+      "ice": {
+       "impact": 4,
+       "confidence": 5,
+       "ease": 6,
+       "score": 5.0
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "satisfaction_score",
+      "note": ""
      }
     }
    ],
@@ -18839,7 +19614,10 @@
    ],
    "saju": {
     "stage": "economics",
-    "idea": "무료 구간 원가를 유료 매출로 감당하는 구조를 수치로 설계한다: 무료 공개(1p·2p 개인화·맛보기 문단)에 드는 LLM 원가 × 방문자 수 ≤ 구매 매출의 n%"
+    "idea": "무료 구간 원가를 유료 매출로 감당하는 구조를 수치로 설계한다: 무료 공개(1p·2p 개인화·맛보기 문단)에 드는 LLM 원가 × 방문자 수 ≤ 구매 매출의 n%",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "인도에서 많은 사람이 수술만 받으면 고칠 수 있는 백내장으로 시력을 잃는다. 수술비가 비싸 가난한 사람은 받지 못한다.",
@@ -18878,7 +19656,20 @@
      },
      "test": {
       "experiment": "무료 개인화 구간 원가와 구매 매출을 주간 대시보드로 묶어 무료 개인화 범위 상한 정하기",
-      "metric": "gross_margin"
+      "metric": "gross_margin",
+      "ice": {
+       "impact": 5,
+       "confidence": 8,
+       "ease": 7,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+0%",
+       "value": 0.0,
+       "unit": "relative"
+      },
+      "guardrail": "first_pay_conv",
+      "note": "원가 상한 설정용, 결제율 유지가 조건"
      }
     },
     {
@@ -21298,7 +22089,10 @@
    "outcomes": [],
    "saju": {
     "stage": "trust",
-    "idea": "결제 이탈·환불의 근본 원인을 '왜'로 판다: 결제 이탈 → 왜? → 가격을 늦게 알아서 → 왜? → 2p에 가격이 없어서 → 2p에 가격 미리 표시"
+    "idea": "결제 이탈·환불의 근본 원인을 '왜'로 판다: 결제 이탈 → 왜? → 가격을 늦게 알아서 → 왜? → 2p에 가격이 없어서 → 2p에 가격 미리 표시",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "공장 기계가 과부하로 퓨즈가 끊어져 멈추는 일이 반복된다. 매번 퓨즈를 갈아 끼운다.",
@@ -21352,7 +22146,20 @@
      },
      "test": {
       "experiment": "결제 페이지 이탈·환불 사유 상위 3개를 '왜' 5단계로 분석해 개선 후 다음 달 결제 완료율·환불률 비교",
-      "metric": "refund_rate"
+      "metric": "refund_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 7,
+       "ease": 7,
+       "score": 6.7
+      },
+      "target": {
+       "text": "-20%",
+       "value": -20.0,
+       "unit": "relative"
+      },
+      "guardrail": "checkout_conv",
+      "note": ""
      }
     }
    ],
@@ -21486,7 +22293,10 @@
    ],
    "saju": {
     "stage": "economics",
-    "idea": "확장보다 핵심으로: 주제·장 구성이 늘수록 제작·검수 원가가 커진다. 매출·만족에 기여하는 장에 집중하고 덜 읽히는 장은 줄인다"
+    "idea": "확장보다 핵심으로: 주제·장 구성이 늘수록 제작·검수 원가가 커진다. 매출·만족에 기여하는 장에 집중하고 덜 읽히는 장은 줄인다",
+    "also": [
+     "consume"
+    ]
    },
    "what": {
     "situation": "2000년대 초 회사가 테마파크·의류·게임 등으로 사업을 늘리고, 고유 부품 종류가 1만 2천 개 이상으로 불어나 파산 직전까지 갔다.",
@@ -21540,7 +22350,20 @@
      },
      "test": {
       "experiment": "장별 열람률과 생성 원가를 뽑아 하위 장을 줄인 뒤 만족도·마진 비교",
-      "metric": "gross_margin"
+      "metric": "gross_margin",
+      "ice": {
+       "impact": 5,
+       "confidence": 6,
+       "ease": 6,
+       "score": 5.7
+      },
+      "target": {
+       "text": "+5%p",
+       "value": 5.0,
+       "unit": "pp"
+      },
+      "guardrail": "satisfaction_score",
+      "note": ""
      }
     }
    ],
@@ -21955,7 +22778,10 @@
    ],
    "saju": {
     "stage": "repeat_pay",
-    "idea": "가격 구조를 바꾸면 단기 매출이 흔들린다는 걸 미리 받아들인다: 할인 남발을 줄이거나 연간 상품을 도입할 때 전환 기간 지표(재구매율·LTV)를 따로 본다"
+    "idea": "가격 구조를 바꾸면 단기 매출이 흔들린다는 걸 미리 받아들인다: 할인 남발을 줄이거나 연간 상품을 도입할 때 전환 기간 지표(재구매율·LTV)를 따로 본다",
+    "also": [
+     "checkout"
+    ]
    },
    "what": {
     "situation": "비싼 패키지 소프트웨어는 몇 년마다 업그레이드 판매에 의존하고 불법 복제가 많았다.",
@@ -21994,7 +22820,20 @@
      },
      "test": {
       "experiment": "단건 구매자에게 '올해·내년 운세 연간 상품' 제안 후 12개월 LTV 비교",
-      "metric": "ltv"
+      "metric": "ltv",
+      "ice": {
+       "impact": 6,
+       "confidence": 4,
+       "ease": 5,
+       "score": 5.0
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "first_pay_conv",
+      "note": ""
      }
     },
     {
@@ -24203,7 +25042,10 @@
    ],
    "saju": {
     "stage": "expand",
-    "idea": "자기 표현은 돈을 낸다: 내 사주 캐릭터·오행 이모티콘·궁합 결과 카드처럼 '보내고 싶은 결과물'을 팔고, 외부 작가가 만들어 올리게 해 공급을 늘린다"
+    "idea": "자기 표현은 돈을 낸다: 내 사주 캐릭터·오행 이모티콘·궁합 결과 카드처럼 '보내고 싶은 결과물'을 팔고, 외부 작가가 만들어 올리게 해 공급을 늘린다",
+    "also": [
+     "refer"
+    ]
    },
    "what": {
     "situation": "텍스트만으로는 미묘한 감정이 전달되지 않는다. 메신저는 무료라 수익이 없었다.",
@@ -24257,7 +25099,20 @@
      },
      "test": {
       "experiment": "궁합 결과를 공유용 유료 카드로 팔고 구매율·공유 유입 측정",
-      "metric": "upsell_rate"
+      "metric": "upsell_rate",
+      "ice": {
+       "impact": 5,
+       "confidence": 5,
+       "ease": 6,
+       "score": 5.3
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     },
     {
@@ -24947,7 +25802,10 @@
    "outcomes": [],
    "saju": {
     "stage": "expand",
-    "idea": "덜 팔리는 콘텐츠의 쓸 곳을 다시 찾는다: 잘 안 읽히는 장(예: 짧은 풀이)을 공유 카드나 궁합 초대 미끼로 재활용한다"
+    "idea": "덜 팔리는 콘텐츠의 쓸 곳을 다시 찾는다: 잘 안 읽히는 장(예: 짧은 풀이)을 공유 카드나 궁합 초대 미끼로 재활용한다",
+    "also": [
+     "refer"
+    ]
    },
    "what": {
     "situation": "강력 접착제를 개발하다 붙었다 쉽게 떨어지는 약한 접착제가 나왔다. 몇 년간 쓸 곳을 찾지 못했다.",
@@ -25001,7 +25859,20 @@
      },
      "test": {
       "experiment": "열람률 낮은 장을 공유 카드로 바꿔 공유 수·유입 측정",
-      "metric": "viral_coef"
+      "metric": "viral_coef",
+      "ice": {
+       "impact": 4,
+       "confidence": 5,
+       "ease": 7,
+       "score": 5.3
+      },
+      "target": {
+       "text": "+20%",
+       "value": 20.0,
+       "unit": "relative"
+      },
+      "guardrail": "consumption_rate",
+      "note": ""
      }
     }
    ],
@@ -25387,7 +26258,10 @@
    ],
    "saju": {
     "stage": "economics",
-    "idea": "수요 검증 전에 고정비를 키우지 않는다: 새 주제 상품은 1p·2p 랜딩과 결제 버튼만 먼저 만들어 결제 의사부터 확인하고 리포트 생성은 그다음에 만든다"
+    "idea": "수요 검증 전에 고정비를 키우지 않는다: 새 주제 상품은 1p·2p 랜딩과 결제 버튼만 먼저 만들어 결제 의사부터 확인하고 리포트 생성은 그다음에 만든다",
+    "also": [
+     "hook_marketing"
+    ]
    },
    "what": {
     "situation": "닷컴 시절 식료품 온라인 배송 회사가 약 10억 달러 규모로 자동화 창고 건설을 계약하고 여러 도시로 동시에 확장했다. 창고는 수요보다 훨씬 크게 지어졌다.",
@@ -25441,7 +26315,20 @@
      },
      "test": {
       "experiment": "새 주제 상품을 랜딩 2페이지 + 사전 결제(예약)로 먼저 열어 결제 페이지 이동률 확인 후 제작",
-      "metric": "marketing_hook_rate"
+      "metric": "marketing_hook_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 8,
+       "ease": 8,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+0%",
+       "value": 0.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "수요 확인용: 예약 결제 발생 여부"
      }
     }
    ],
@@ -26093,7 +26980,10 @@
    ],
    "saju": {
     "stage": "hook_story",
-    "idea": "고객이 진짜 해결하려는 일에 톤을 맞춘다: 밤늦게 들어오는 방문자에게는 1p 스토리를 '불안을 달래는' 톤으로, 낮 방문자에게는 '결정을 돕는' 톤으로 보여 준다"
+    "idea": "고객이 진짜 해결하려는 일에 톤을 맞춘다: 밤늦게 들어오는 방문자에게는 1p 스토리를 '불안을 달래는' 톤으로, 낮 방문자에게는 '결정을 돕는' 톤으로 보여 준다",
+    "also": [
+     "acquire"
+    ]
    },
    "what": {
     "situation": "명상은 어렵고 종교적이라는 인식 때문에 일반인이 시작하지 않는다.",
@@ -26147,7 +27037,20 @@
      },
      "test": {
       "experiment": "밤 시간대 유입에 '불안 달래기' 톤 1p를 보여 주는 그룹과 기본 1p 그룹의 2p 이동률 비교",
-      "metric": "story_hook_rate"
+      "metric": "story_hook_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 5,
+       "ease": 7,
+       "score": 6.0
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": ""
      }
     }
    ],

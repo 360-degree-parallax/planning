@@ -1,389 +1,571 @@
 {
-  "v": 4,
-  "about": "사례 DB의 분류 체계. 모든 메타데이터는 여기 있는 id 중에서 고른다(집계·추론용). 기준 서비스: AI 사주 웹사이트 · 1회 구매로 전체 결과가 열리는 커머스형 · 구매 전 웹툰형 스토리 후킹 1페이지 + 마케팅 후킹 1페이지 · 최종 지표 = 결제.",
-  "payment_tree": {
-    "root": "revenue",
-    "formula": "결제 매출 = 신규 구매 매출 + 재구매·교차 구매 매출",
-    "nodes": {
-      "revenue": [
-        "new_revenue",
-        "repeat_revenue"
-      ],
-      "new_revenue": [
-        "buyers",
-        "aov"
-      ],
-      "buyers": [
-        "visitors",
-        "story_hook_rate",
-        "marketing_hook_rate",
-        "checkout_conv"
-      ],
-      "repeat_revenue": [
-        "repeat_pay_rate",
-        "upsell_rate",
-        "pay_frequency"
-      ],
-      "aov": [
-        "price_level",
-        "upsell_rate"
-      ]
-    },
-    "funnel_formula": "구매자 수 = 방문자 × 스토리 후킹 통과율(1p→2p) × 마케팅 후킹 통과율(2p→결제 페이지) × 결제 완료율",
-    "guardrails": [
-      "refund_rate",
-      "rating",
-      "consumption_rate",
-      "unit_cost",
-      "gross_margin",
-      "cac"
-    ]
+ "v": 4,
+ "about": "사례 DB의 분류 체계. 모든 메타데이터는 여기 있는 id 중에서 고른다(집계·추론용). 기준 서비스: AI 사주 웹사이트 · 1회 구매로 전체 결과가 열리는 커머스형 · 구매 전 웹툰형 스토리 후킹 1페이지 + 마케팅 후킹 1페이지 · 최종 지표 = 결제.",
+ "payment_tree": {
+  "root": "revenue",
+  "formula": "결제 매출 = 신규 구매 매출 + 재구매·교차 구매 매출",
+  "nodes": {
+   "revenue": [
+    "new_revenue",
+    "repeat_revenue"
+   ],
+   "new_revenue": [
+    "buyers",
+    "aov"
+   ],
+   "buyers": [
+    "visitors",
+    "step_rates"
+   ],
+   "repeat_revenue": [
+    "repeat_pay_rate",
+    "upsell_rate",
+    "pay_frequency"
+   ],
+   "aov": [
+    "price_level",
+    "upsell_rate"
+   ]
   },
-  "funnel_stages": {
-    "acquire": {
-      "label": "유입",
-      "saju": "광고·검색·SNS로 첫 페이지에 들어온다"
-    },
-    "hook_story": {
-      "label": "스토리 후킹 (1p)",
-      "saju": "웹툰형 스토리 1페이지로 '내 이야기 같다'는 몰입을 만든다"
-    },
-    "hook_marketing": {
-      "label": "마케팅 후킹 (2p)",
-      "saju": "상품 가치·후기·혜택을 보여 주는 마케팅 1페이지에서 결제 의사를 만든다"
-    },
-    "checkout": {
-      "label": "결제 페이지",
-      "saju": "가격·옵션·결제 수단을 보고 결제를 끝낸다"
-    },
-    "first_pay": {
-      "label": "구매 완료",
-      "saju": "1회 구매로 전체 결과(모든 장)가 열린다"
-    },
-    "consume": {
-      "label": "결과 열람·만족",
-      "saju": "구매 후 결과를 끝까지 읽고 만족한다 (환불·불만을 가르는 구간)"
-    },
-    "repeat_pay": {
-      "label": "재구매",
-      "saju": "시간이 지나 다시 산다 (신년운·다른 주제)"
-    },
-    "expand": {
-      "label": "교차 구매",
-      "saju": "궁합·상담·다른 주제 리포트를 추가로 산다"
-    },
-    "refer": {
-      "label": "추천·공유",
-      "saju": "결과를 공유하거나 친구를 데려온다 (궁합 초대 등)"
-    },
-    "trust": {
-      "label": "신뢰·품질",
-      "saju": "정확도 의심·환불을 줄인다"
-    },
-    "economics": {
-      "label": "원가·수익성",
-      "saju": "리포트 1건당 LLM 비용, 마진, CAC 회수"
-    },
-    "none": {
-      "label": "직접 적용 어려움",
-      "saju": "사주 서비스에 직접 옮기기 어려운 사례 (운영·제조 등)"
-    }
-  },
-  "metrics": {
-    "revenue": {
-      "label": "결제 매출",
-      "group": "monetization",
-      "stage": "first_pay"
-    },
-    "visitors": {
-      "label": "방문자·유입",
-      "group": "acquisition",
-      "stage": "acquire"
-    },
-    "signup_rate": {
-      "label": "가입 전환율",
-      "group": "acquisition",
-      "stage": "acquire"
-    },
-    "cac": {
-      "label": "고객 획득 비용(CAC)",
-      "group": "acquisition",
-      "stage": "acquire"
-    },
-    "viral_coef": {
-      "label": "추천·바이럴 계수",
-      "group": "acquisition",
-      "stage": "refer"
-    },
-    "first_pay_conv": {
-      "label": "구매 전환율 (방문 → 구매)",
-      "group": "monetization",
-      "stage": "first_pay"
-    },
-    "aov": {
-      "label": "객단가 (1회 결제 금액)",
-      "group": "monetization",
-      "stage": "checkout"
-    },
-    "price_level": {
-      "label": "가격 수준·가격 수용성",
-      "group": "monetization",
-      "stage": "checkout"
-    },
-    "pay_frequency": {
-      "label": "결제 빈도",
-      "group": "monetization",
-      "stage": "repeat_pay"
-    },
-    "repeat_pay_rate": {
-      "label": "재결제율",
-      "group": "monetization",
-      "stage": "repeat_pay"
-    },
-    "sub_conv": {
-      "label": "정기 결제 전환율 (참고: 구독형 사례)",
-      "group": "monetization",
-      "stage": "repeat_pay"
-    },
-    "upsell_rate": {
-      "label": "교차·상향 구매율",
-      "group": "monetization",
-      "stage": "expand"
-    },
-    "d30_retention": {
-      "label": "재방문·리텐션",
-      "group": "retention",
-      "stage": "repeat_pay"
-    },
-    "churn": {
-      "label": "이탈·해지율",
-      "group": "retention",
-      "stage": "repeat_pay"
-    },
-    "reactivation": {
-      "label": "휴면 복귀율",
-      "group": "retention",
-      "stage": "repeat_pay"
-    },
-    "refund_rate": {
-      "label": "환불·분쟁률",
-      "group": "trust",
-      "stage": "trust"
-    },
-    "rating": {
-      "label": "평점·만족도·신뢰",
-      "group": "trust",
-      "stage": "trust"
-    },
-    "unit_cost": {
-      "label": "건당 원가",
-      "group": "economics",
-      "stage": "economics"
-    },
-    "gross_margin": {
-      "label": "매출총이익률",
-      "group": "economics",
-      "stage": "economics"
-    },
-    "ltv": {
-      "label": "고객 생애 가치(LTV)",
-      "group": "economics",
-      "stage": "repeat_pay"
-    },
-    "gmv": {
-      "label": "거래액(GMV)",
-      "group": "marketplace",
-      "stage": "first_pay"
-    },
-    "supply_liquidity": {
-      "label": "공급·매물 충분도",
-      "group": "marketplace",
-      "stage": "none"
-    },
-    "market_share": {
-      "label": "점유율",
-      "group": "strategy",
-      "stage": "none"
-    },
-    "throughput": {
-      "label": "처리량·속도·리드타임",
-      "group": "operations",
-      "stage": "none"
-    },
-    "utilization": {
-      "label": "자산 가동률·재고",
-      "group": "operations",
-      "stage": "none"
-    },
-    "access": {
-      "label": "접근성(사회적 도달)",
-      "group": "impact",
-      "stage": "none"
-    },
-    "story_hook_rate": {
-      "label": "스토리 후킹 통과율 (1p → 2p)",
-      "group": "funnel",
-      "stage": "hook_story"
-    },
-    "marketing_hook_rate": {
-      "label": "마케팅 후킹 통과율 (2p → 결제 페이지)",
-      "group": "funnel",
-      "stage": "hook_marketing"
-    },
-    "checkout_conv": {
-      "label": "결제 완료율 (결제 페이지 → 결제)",
-      "group": "funnel",
-      "stage": "checkout"
-    },
-    "consumption_rate": {
-      "label": "구매 후 결과 열람·완독률",
-      "group": "engagement",
-      "stage": "consume"
-    },
-    "buyers": {
-      "label": "구매자 수",
-      "group": "monetization",
-      "stage": "first_pay"
-    }
-  },
-  "business_models": {
-    "subscription": "구독(정기 결제)",
-    "freemium": "무료 + 유료 전환",
-    "pay_per_unit": "건별 결제 (단건 리포트·이용권·회차)",
-    "transaction": "상품 판매",
-    "marketplace": "중개 수수료",
-    "advertising": "광고",
-    "membership": "회비 멤버십",
-    "razor_blade": "본체 + 소모품",
-    "usage_based": "사용량 과금",
-    "servitization": "제품의 서비스화(렌털·시간당 과금)",
-    "saas": "B2B 구독 소프트웨어",
-    "finance": "금융(이자·결제 수수료·보험)",
-    "hybrid_impact": "교차 보조·사회적 기업"
-  },
-  "stages": {
-    "early": "PMF 이전·초기",
-    "growth": "성장",
-    "scale": "대규모",
-    "mature": "성숙·기존 강자",
-    "turnaround": "위기·회생"
-  },
-  "markets": {
-    "b2c": "B2C",
-    "b2b": "B2B",
-    "c2c": "C2C·양면",
-    "b2b2c": "B2B2C"
-  },
-  "barriers": {
-    "competition": {
-      "label": "이미 경쟁 중",
-      "verdicts": [
-        "obvious"
-      ],
-      "desc": "다들 하고 있어 차별화가 안 된다"
-    },
-    "not_core": {
-      "label": "본질 아님",
-      "verdicts": [
-        "obvious",
-        "impossible"
-      ],
-      "desc": "해 봤거나 해도 문제가 그대로다"
-    },
-    "cost": {
-      "label": "비용·자본",
-      "verdicts": [
-        "impossible"
-      ],
-      "desc": "돈·인력·자산 부담을 감당할 수 없다"
-    },
-    "regulation": {
-      "label": "규제·법",
-      "verdicts": [
-        "impossible"
-      ],
-      "desc": "법·인허가로 막혀 있다"
-    },
-    "technology": {
-      "label": "기술 한계",
-      "verdicts": [
-        "impossible"
-      ],
-      "desc": "당시 기술로는 불가능하다"
-    },
-    "structural": {
-      "label": "구조적 조건",
-      "verdicts": [
-        "impossible"
-      ],
-      "desc": "바꿀 수 없는 조건(공간·시장 구조 등)"
-    },
-    "social": {
-      "label": "사회적 수용",
-      "verdicts": [
-        "impossible"
-      ],
-      "desc": "사생활·체면·반발로 받아들여지지 않는다"
-    },
-    "belief": {
-      "label": "업계·고객 통념",
-      "verdicts": [
-        "blindspot"
-      ],
-      "desc": "다들 당연하게 믿는 틀린 전제"
-    },
-    "incentive": {
-      "label": "기존 강자 이해관계",
-      "verdicts": [
-        "blindspot"
-      ],
-      "desc": "하면 자기 수익을 깎아서 안 했다"
-    },
-    "definition": {
-      "label": "문제·고객 정의",
-      "verdicts": [
-        "blindspot"
-      ],
-      "desc": "문제나 고객을 다르게 정의하지 못했다"
-    },
-    "tech_change": {
-      "label": "기술 변화",
-      "verdicts": [
-        "timing"
-      ],
-      "desc": "기술·원가가 바뀌어 이제 가능"
-    },
-    "regulation_change": {
-      "label": "규제 변화",
-      "verdicts": [
-        "timing"
-      ],
-      "desc": "법·제도가 바뀌어 이제 가능"
-    },
-    "behavior_change": {
-      "label": "행동·문화 변화",
-      "verdicts": [
-        "timing"
-      ],
-      "desc": "고객 습관·문화가 바뀌었다"
-    },
-    "market_change": {
-      "label": "시장·수요 변화",
-      "verdicts": [
-        "timing"
-      ],
-      "desc": "수요나 공급 구조가 바뀌었다"
-    },
-    "shock": {
-      "label": "외부 충격",
-      "verdicts": [
-        "timing"
-      ],
-      "desc": "팬데믹·재난·화폐개혁 등 일시적 충격"
-    }
-  },
-  "depth": {
-    "deep": "핵심 사례: 결과 지표·장벽 구조·검증 실험·사주 적용을 근거와 함께 작성",
-    "tagged": "분류 사례: 모델·지표·퍼널 단계는 사람이 태깅, 장벽 유형은 규칙으로 추정(inferred=true)"
+  "funnel_formula": "구매자 수 = 첫 단계 도달 × (퍼널 설정 순서대로 각 단계 통과율의 곱). 각 단계 통과율 = 다음 단계 도달 / 이 단계 도달",
+  "guardrails": [
+   "refund_rate",
+   "rating",
+   "consumption_rate",
+   "unit_cost",
+   "gross_margin",
+   "cac",
+   "discount_share"
+  ],
+  "leading": {
+   "repeat_pay_rate": [
+    "satisfaction_score",
+    "accuracy_feel",
+    "revisit_7d",
+    "followup_use_rate",
+    "share_rate"
+   ]
   }
+ },
+ "funnel_stages": {
+  "acquire": {
+   "label": "유입",
+   "saju": "광고·검색·SNS로 첫 페이지에 들어온다"
+  },
+  "hook_story": {
+   "label": "스토리 후킹 (1p)",
+   "saju": "웹툰형 스토리 1페이지로 '내 이야기 같다'는 몰입을 만든다"
+  },
+  "input": {
+   "label": "생년월일 입력",
+   "saju": "생년월일·태어난 시간·성별을 입력한다 (위치는 퍼널 설정에서 정함)"
+  },
+  "hook_marketing": {
+   "label": "마케팅 후킹 (2p)",
+   "saju": "상품 가치·후기·혜택을 보여 주는 마케팅 1페이지에서 결제 의사를 만든다"
+  },
+  "checkout": {
+   "label": "결제 페이지",
+   "saju": "가격·옵션·결제 수단을 보고 결제를 끝낸다"
+  },
+  "first_pay": {
+   "label": "구매 완료",
+   "saju": "1회 구매로 전체 결과(모든 장)가 열린다"
+  },
+  "consume": {
+   "label": "결과 열람·만족",
+   "saju": "구매 후 결과를 끝까지 읽고 만족한다 (환불·불만을 가르는 구간)"
+  },
+  "repeat_pay": {
+   "label": "재구매",
+   "saju": "시간이 지나 다시 산다 (신년운·다른 주제)"
+  },
+  "expand": {
+   "label": "교차 구매",
+   "saju": "궁합·상담·다른 주제 리포트를 추가로 산다"
+  },
+  "refer": {
+   "label": "추천·공유",
+   "saju": "결과를 공유하거나 친구를 데려온다 (궁합 초대 등)"
+  },
+  "trust": {
+   "label": "신뢰·품질",
+   "saju": "정확도 의심·환불을 줄인다"
+  },
+  "economics": {
+   "label": "원가·수익성",
+   "saju": "리포트 1건당 LLM 비용, 마진, CAC 회수"
+  },
+  "none": {
+   "label": "직접 적용 어려움",
+   "saju": "사주 서비스에 직접 옮기기 어려운 사례 (운영·제조 등)"
+  }
+ },
+ "metrics": {
+  "revenue": {
+   "label": "결제 매출",
+   "group": "monetization",
+   "stage": "first_pay"
+  },
+  "visitors": {
+   "label": "방문자·유입",
+   "group": "acquisition",
+   "stage": "acquire"
+  },
+  "signup_rate": {
+   "label": "가입 전환율",
+   "group": "acquisition",
+   "stage": "acquire"
+  },
+  "cac": {
+   "label": "고객 획득 비용(CAC)",
+   "group": "acquisition",
+   "stage": "acquire"
+  },
+  "viral_coef": {
+   "label": "추천·바이럴 계수",
+   "group": "acquisition",
+   "stage": "refer"
+  },
+  "first_pay_conv": {
+   "label": "구매 전환율 (방문 → 구매)",
+   "group": "monetization",
+   "stage": "first_pay",
+   "formula": "결제 성공 / 첫 단계 도달"
+  },
+  "aov": {
+   "label": "객단가 (1회 결제 금액)",
+   "group": "monetization",
+   "stage": "checkout"
+  },
+  "price_level": {
+   "label": "가격 수준·가격 수용성",
+   "group": "monetization",
+   "stage": "checkout"
+  },
+  "pay_frequency": {
+   "label": "결제 빈도",
+   "group": "monetization",
+   "stage": "repeat_pay"
+  },
+  "repeat_pay_rate": {
+   "label": "재결제율",
+   "group": "monetization",
+   "stage": "repeat_pay"
+  },
+  "sub_conv": {
+   "label": "정기 결제 전환율 (참고: 구독형 사례)",
+   "group": "monetization",
+   "stage": "repeat_pay"
+  },
+  "upsell_rate": {
+   "label": "교차·상향 구매율",
+   "group": "monetization",
+   "stage": "expand"
+  },
+  "d30_retention": {
+   "label": "재방문·리텐션",
+   "group": "retention",
+   "stage": "repeat_pay"
+  },
+  "churn": {
+   "label": "이탈·해지율",
+   "group": "retention",
+   "stage": "repeat_pay"
+  },
+  "reactivation": {
+   "label": "휴면 복귀율",
+   "group": "retention",
+   "stage": "repeat_pay"
+  },
+  "refund_rate": {
+   "label": "환불·분쟁률",
+   "group": "trust",
+   "stage": "trust"
+  },
+  "rating": {
+   "label": "평점·만족도·신뢰",
+   "group": "trust",
+   "stage": "trust"
+  },
+  "unit_cost": {
+   "label": "건당 원가",
+   "group": "economics",
+   "stage": "economics"
+  },
+  "gross_margin": {
+   "label": "매출총이익률",
+   "group": "economics",
+   "stage": "economics"
+  },
+  "ltv": {
+   "label": "고객 생애 가치(LTV)",
+   "group": "economics",
+   "stage": "repeat_pay"
+  },
+  "gmv": {
+   "label": "거래액(GMV)",
+   "group": "marketplace",
+   "stage": "first_pay"
+  },
+  "supply_liquidity": {
+   "label": "공급·매물 충분도",
+   "group": "marketplace",
+   "stage": "none"
+  },
+  "market_share": {
+   "label": "점유율",
+   "group": "strategy",
+   "stage": "none"
+  },
+  "throughput": {
+   "label": "처리량·속도·리드타임",
+   "group": "operations",
+   "stage": "none"
+  },
+  "utilization": {
+   "label": "자산 가동률·재고",
+   "group": "operations",
+   "stage": "none"
+  },
+  "access": {
+   "label": "접근성(사회적 도달)",
+   "group": "impact",
+   "stage": "none"
+  },
+  "story_hook_rate": {
+   "label": "스토리 후킹 통과율 (1p → 다음 단계)",
+   "group": "funnel",
+   "stage": "hook_story",
+   "formula": "다음 단계 도달 / 1p 도달"
+  },
+  "marketing_hook_rate": {
+   "label": "마케팅 후킹 통과율 (2p → 다음 단계)",
+   "group": "funnel",
+   "stage": "hook_marketing",
+   "formula": "다음 단계 도달 / 2p 도달"
+  },
+  "checkout_conv": {
+   "label": "결제 완료율 (결제 페이지 → 결제 성공, 시도율 × 성공률)",
+   "group": "funnel",
+   "stage": "checkout",
+   "formula": "결제 성공 / 결제 페이지 도달"
+  },
+  "consumption_rate": {
+   "label": "구매 후 결과 열람·완독률",
+   "group": "engagement",
+   "stage": "consume",
+   "formula": "결과 열람 / 결제 성공"
+  },
+  "buyers": {
+   "label": "구매자 수",
+   "group": "monetization",
+   "stage": "first_pay"
+  },
+  "input_complete_rate": {
+   "label": "생년월일 입력 완료율 (입력 화면 → 다음 단계)",
+   "group": "funnel",
+   "stage": "input",
+   "formula": "다음 단계 도달 / 입력 화면 도달"
+  },
+  "pay_attempt_rate": {
+   "label": "결제 시도율 (결제 페이지 → 결제 버튼·인증 시작)",
+   "group": "funnel",
+   "stage": "checkout",
+   "formula": "결제 시도 / 결제 페이지 도달"
+  },
+  "pay_success_rate": {
+   "label": "결제 성공률 (결제 시도 → 승인)",
+   "group": "funnel",
+   "stage": "checkout",
+   "formula": "결제 성공 / 결제 시도"
+  },
+  "read_complete_rate": {
+   "label": "끝까지 읽은 비율 (열람 → 마지막 장)",
+   "group": "engagement",
+   "stage": "consume",
+   "formula": "마지막 장 도달 / 결과 열람"
+  },
+  "chapter_read_rate": {
+   "label": "장별 열람률 (장마다 따로 잰다)",
+   "group": "engagement",
+   "stage": "consume"
+  },
+  "satisfaction_score": {
+   "label": "결과 만족도 (리포트 끝 1문항)",
+   "group": "leading",
+   "stage": "consume",
+   "leading_for": "repeat_pay_rate"
+  },
+  "accuracy_feel": {
+   "label": "'맞았다' 체감 비율",
+   "group": "leading",
+   "stage": "trust",
+   "leading_for": "repeat_pay_rate"
+  },
+  "revisit_7d": {
+   "label": "구매 후 7일 내 재방문율",
+   "group": "leading",
+   "stage": "repeat_pay",
+   "leading_for": "repeat_pay_rate"
+  },
+  "followup_use_rate": {
+   "label": "AI 후속 질문 사용률",
+   "group": "leading",
+   "stage": "repeat_pay",
+   "leading_for": "repeat_pay_rate"
+  },
+  "share_rate": {
+   "label": "공유·궁합 초대 발송률",
+   "group": "leading",
+   "stage": "refer",
+   "leading_for": "repeat_pay_rate"
+  },
+  "time_to_repurchase": {
+   "label": "재구매까지 걸린 기간 (중앙값, 일)",
+   "group": "retention",
+   "stage": "repeat_pay",
+   "formula": "첫 구매일 → 두 번째 구매일 (중앙값)"
+  },
+  "contribution_margin": {
+   "label": "주문 1건 공헌이익",
+   "group": "economics",
+   "stage": "economics",
+   "formula": "객단가 × (1 − PG 수수료율 − 환불률) − 리포트 1건 LLM 원가 − 구매자 1명당 CAC"
+  },
+  "roas": {
+   "label": "광고 수익률(ROAS)",
+   "group": "acquisition",
+   "stage": "acquire",
+   "formula": "광고 경유 매출 / 광고비"
+  },
+  "payback_days": {
+   "label": "CAC 회수 기간 (일)",
+   "group": "economics",
+   "stage": "economics",
+   "formula": "구매자 1명당 CAC / (구매자 1명당 일평균 공헌이익)"
+  },
+  "discount_share": {
+   "label": "할인 의존도 (할인·쿠폰 구매 비율)",
+   "group": "monetization",
+   "stage": "checkout",
+   "formula": "할인·쿠폰 적용 구매 / 전체 구매"
+  },
+  "free_tier_cost": {
+   "label": "무료 구간 원가 (비구매자에게 쓴 LLM 비용)",
+   "group": "economics",
+   "stage": "economics",
+   "formula": "비구매자 수 × 무료 구간 1인당 LLM 원가"
+  }
+ },
+ "business_models": {
+  "subscription": "구독(정기 결제)",
+  "freemium": "무료 + 유료 전환",
+  "pay_per_unit": "건별 결제 (단건 리포트·이용권·회차)",
+  "transaction": "상품 판매",
+  "marketplace": "중개 수수료",
+  "advertising": "광고",
+  "membership": "회비 멤버십",
+  "razor_blade": "본체 + 소모품",
+  "usage_based": "사용량 과금",
+  "servitization": "제품의 서비스화(렌털·시간당 과금)",
+  "saas": "B2B 구독 소프트웨어",
+  "finance": "금융(이자·결제 수수료·보험)",
+  "hybrid_impact": "교차 보조·사회적 기업"
+ },
+ "stages": {
+  "early": "PMF 이전·초기",
+  "growth": "성장",
+  "scale": "대규모",
+  "mature": "성숙·기존 강자",
+  "turnaround": "위기·회생"
+ },
+ "markets": {
+  "b2c": "B2C",
+  "b2b": "B2B",
+  "c2c": "C2C·양면",
+  "b2b2c": "B2B2C"
+ },
+ "barriers": {
+  "competition": {
+   "label": "이미 경쟁 중",
+   "verdicts": [
+    "obvious"
+   ],
+   "desc": "다들 하고 있어 차별화가 안 된다"
+  },
+  "not_core": {
+   "label": "본질 아님",
+   "verdicts": [
+    "obvious",
+    "impossible"
+   ],
+   "desc": "해 봤거나 해도 문제가 그대로다"
+  },
+  "cost": {
+   "label": "비용·자본",
+   "verdicts": [
+    "impossible"
+   ],
+   "desc": "돈·인력·자산 부담을 감당할 수 없다"
+  },
+  "regulation": {
+   "label": "규제·법",
+   "verdicts": [
+    "impossible"
+   ],
+   "desc": "법·인허가로 막혀 있다"
+  },
+  "technology": {
+   "label": "기술 한계",
+   "verdicts": [
+    "impossible"
+   ],
+   "desc": "당시 기술로는 불가능하다"
+  },
+  "structural": {
+   "label": "구조적 조건",
+   "verdicts": [
+    "impossible"
+   ],
+   "desc": "바꿀 수 없는 조건(공간·시장 구조 등)"
+  },
+  "social": {
+   "label": "사회적 수용",
+   "verdicts": [
+    "impossible"
+   ],
+   "desc": "사생활·체면·반발로 받아들여지지 않는다"
+  },
+  "belief": {
+   "label": "업계·고객 통념",
+   "verdicts": [
+    "blindspot"
+   ],
+   "desc": "다들 당연하게 믿는 틀린 전제"
+  },
+  "incentive": {
+   "label": "기존 강자 이해관계",
+   "verdicts": [
+    "blindspot"
+   ],
+   "desc": "하면 자기 수익을 깎아서 안 했다"
+  },
+  "definition": {
+   "label": "문제·고객 정의",
+   "verdicts": [
+    "blindspot"
+   ],
+   "desc": "문제나 고객을 다르게 정의하지 못했다"
+  },
+  "tech_change": {
+   "label": "기술 변화",
+   "verdicts": [
+    "timing"
+   ],
+   "desc": "기술·원가가 바뀌어 이제 가능"
+  },
+  "regulation_change": {
+   "label": "규제 변화",
+   "verdicts": [
+    "timing"
+   ],
+   "desc": "법·제도가 바뀌어 이제 가능"
+  },
+  "behavior_change": {
+   "label": "행동·문화 변화",
+   "verdicts": [
+    "timing"
+   ],
+   "desc": "고객 습관·문화가 바뀌었다"
+  },
+  "market_change": {
+   "label": "시장·수요 변화",
+   "verdicts": [
+    "timing"
+   ],
+   "desc": "수요나 공급 구조가 바뀌었다"
+  },
+  "shock": {
+   "label": "외부 충격",
+   "verdicts": [
+    "timing"
+   ],
+   "desc": "팬데믹·재난·화폐개혁 등 일시적 충격"
+  }
+ },
+ "depth": {
+  "deep": "핵심 사례: 결과 지표·장벽 구조·검증 실험·사주 적용을 근거와 함께 작성",
+  "tagged": "분류 사례: 모델·지표·퍼널 단계는 사람이 태깅, 장벽 유형은 규칙으로 추정(inferred=true)"
+ },
+ "funnel_stages_note": "단계는 부품(정의)이고, 순서는 db/funnels/*.json에서 정한다. 사례·실험은 단계 id에 연결되므로 순서를 바꿔도 연결이 유지된다.",
+ "segments": {
+  "channel": {
+   "label": "유입 채널",
+   "values": [
+    "meta_ads",
+    "google_ads",
+    "tiktok_ads",
+    "naver_search",
+    "organic_sns",
+    "referral",
+    "direct"
+   ]
+  },
+  "topic": {
+   "label": "고민 주제",
+   "values": [
+    "love",
+    "career",
+    "money",
+    "health",
+    "family",
+    "yearly",
+    "general"
+   ]
+  },
+  "device": {
+   "label": "기기",
+   "values": [
+    "mobile",
+    "desktop",
+    "app"
+   ]
+  },
+  "time_band": {
+   "label": "시간대",
+   "values": [
+    "dawn",
+    "morning",
+    "afternoon",
+    "evening",
+    "night"
+   ]
+  },
+  "user_type": {
+   "label": "방문자 유형",
+   "values": [
+    "new",
+    "returning",
+    "buyer"
+   ]
+  },
+  "age_band": {
+   "label": "나이대 (생년월일로 자동)",
+   "values": [
+    "10s",
+    "20s",
+    "30s",
+    "40s",
+    "50s+"
+   ]
+  },
+  "gender": {
+   "label": "성별",
+   "values": [
+    "f",
+    "m"
+   ]
+  }
+ }
 }

@@ -1,0 +1,10 @@
+{
+ "service": "AI 사주 웹사이트 (커머스형: 1회 구매로 전체 결과 공개)",
+ "funnel": "saju-default",
+ "funnel_version": 1,
+ "period": {"from": null, "to": null, "days": null},
+ "reach": {"story": null, "input": null, "marketing": null, "checkout": null, "pay_attempt": null, "paid": null, "opened": null, "read_all": null},
+ "segments": [],
+ "economics": {"aov": null, "pg_fee_rate": null, "llm_cost_per_report": null, "free_llm_cost_per_visitor": null, "refund_rate": null, "discount_share": null, "ad_spend": null, "ad_revenue": null},
+ "post_purchase": {"satisfaction_score": null, "accuracy_feel": null, "revisit_7d": null, "followup_use_rate": null, "share_rate": null, "repeat_pay_rate": null, "time_to_repurchase": null}
+}

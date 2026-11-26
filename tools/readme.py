@@ -48,12 +48,17 @@ L = f'''# planning
 | [docs/saju-playbook.md](docs/saju-playbook.md) | 사주 퍼널 단계별 사례·장벽·검증 실험·근거 수치 (자동 생성) |
 | `db/taxonomy.json` | 지표·모델·장벽·퍼널 분류 체계 |
 | `db/cases.json` | 완성된 DB (빌드 결과) |
+| `db/funnels/*.json` | 퍼널 단계 순서 설정 (순서를 바꿔도 사례·실험 연결 유지) |
+| `db/service/` | 우리 서비스 단계별 도달 수·수익 구조·실험 기록 (`*.example.json`은 가짜 예시) |
+| `db/benchmarks.json` | 출처 있는 외부 참고 기준값 |
+| [docs/diagnosis-example.md](docs/diagnosis-example.md) | 진단 리포트 예시: 병목 단계 → 추천 실험·표본 수, 세그먼트, 공헌이익 (가짜 숫자) |
 
 ## 만들기
 ```bash
 python3 tools/build_db.py && node tools/check_db.mjs && python3 tools/report.py && python3 tools/readme.py
 ```
-원본: `db/base.json`(처음 30개) · `db/src/*.txt`(분야별 사례, `95·96-deep`은 핵심 50개, `97-commerce-remap`은 커머스 구조에 맞춘 사주 적용·실험 덮어쓰기) · `db/meta/tags.txt`(분류 태그). 작성 형식은 `tools/build_db.py` 맨 위 설명을 보세요.
+우리 수치 진단: `db/service/baseline.json`에 단계별 도달 수를 넣고 `python3 tools/diagnose.py` → `docs/diagnosis.md` (예시는 `--example`)
+원본: `db/base.json`(처음 30개) · `db/src/*.txt`(분야별 사례, `95·96-deep`은 핵심 50개, `97-commerce-remap`은 커머스 구조에 맞춘 사주 적용·실험 덮어쓰기, `98-outcomes`는 결과 지표 보강) · `db/meta/ice.txt`(실험 우선순위·채택 기준·가드레일) · `db/meta/also.txt`(보조 퍼널 단계) · `db/meta/tags.txt`(분류 태그). 작성 형식은 `tools/build_db.py` 맨 위 설명을 보세요.
 
 ## 핵심 사례 (deep {len(deep)}개)
 

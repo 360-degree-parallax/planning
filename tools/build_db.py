@@ -16,6 +16,9 @@
 
 기존 사례에 덧붙이기:  @ id   (가설·R·M·K·O·T 줄 추가, T는 덮어씀)
     E: 가설 번호 | 검증 실험 | 지표 id   (기존 가설의 검증 실험을 덮어씀)
+
+실험 우선순위 (db/meta/ice.txt): id 가설번호 | 영향 확신 쉬움 | 목표 변화 | 가드레일 지표 | 메모
+보조 퍼널 단계 (db/meta/also.txt): id | 단계, 단계
 기존 사례 가설 갈아끼우기(깊게 쓰기): @! id   (이 블록의 가설로 교체, depth=deep)
 
 가설 줄의 || 뒤 키: barrier(장벽 id), holder(장벽을 가진 주체), changed(무엇이 바꿨나),
@@ -198,6 +201,43 @@ def main():
             c.setdefault('business', {'model': model, 'stage': stage, 'market': market, 'region': region})
             c.setdefault('problem_metric', {'id': metric, 'note': ''})
             c.setdefault('saju', {'stage': funnel, 'idea': ''})
+    icef = os.path.join(ROOT, 'db/meta/ice.txt')
+    if os.path.exists(icef):
+        for n, raw in enumerate(open(icef, encoding='utf-8'), 1):
+            line = raw.strip()
+            if not line or line.startswith('//'):
+                continue
+            p = [x.strip() for x in line.split('|')]
+            if len(p) != 5:
+                fail(f'ice.txt:{n} 5칸이어야 함: {line}')
+            head, ice, target, guard, note = p
+            cid, _, hn = head.partition(' ')
+            if cid not in byid or not hn.isdigit():
+                fail(f'ice.txt:{n} 사례·가설 번호: {head}')
+            hs = byid[cid]['hyps']
+            if int(hn) > len(hs) or 'test' not in hs[int(hn) - 1]:
+                fail(f'ice.txt:{n} {cid} {hn}번 가설에 실험이 없음')
+            sc = [int(x) for x in ice.split()]
+            if len(sc) != 3 or not all(1 <= x <= 10 for x in sc):
+                fail(f'ice.txt:{n} 점수는 1~10 세 개')
+            m = re.fullmatch(r'([+-])(\d+(?:\.\d+)?)(%p|%)', target)
+            if not m:
+                fail(f'ice.txt:{n} 목표 변화 형식(+10%, +3%p, -20%): {target}')
+            val = float(m.group(2)) * (1 if m.group(1) == '+' else -1)
+            hs[int(hn) - 1]['test'].update({
+                'ice': {'impact': sc[0], 'confidence': sc[1], 'ease': sc[2], 'score': round(sum(sc) / 3, 1)},
+                'target': {'text': target, 'value': val, 'unit': 'pp' if m.group(3) == '%p' else 'relative'},
+                'guardrail': guard, 'note': note})
+    alsof = os.path.join(ROOT, 'db/meta/also.txt')
+    if os.path.exists(alsof):
+        for n, raw in enumerate(open(alsof, encoding='utf-8'), 1):
+            line = raw.strip()
+            if not line or line.startswith('//'):
+                continue
+            cid, _, st = line.partition(' | ')
+            if cid not in byid or not byid[cid].get('saju'):
+                fail(f'also.txt:{n} 없는 사례: {cid}')
+            byid[cid]['saju']['also'] = [s.strip() for s in st.split(',') if s.strip()]
     for c in cases:
         c['refs'] = list(dict.fromkeys(c['refs']))
         c['verified'] = bool(c['refs'])

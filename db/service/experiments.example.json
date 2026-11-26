@@ -1,0 +1,12 @@
+[
+ {"id": "exp-001", "case": "tiktok", "hyp": 2, "funnel": "saju-default", "funnel_version": 1, "metric": "input_complete_rate",
+  "start": "2026-10-01", "end": "2026-10-14", "result": "win",
+  "arms": [{"name": "입력을 1p 앞에", "n": 12000, "conv": 6300}, {"name": "입력을 1p 뒤에", "n": 12000, "conv": 7150}],
+  "guardrail": {"metric": "first_pay_conv", "control": 0.052, "variant": 0.055, "ok": true},
+  "note": "가짜 기록 예시"},
+ {"id": "exp-002", "case": "zappos", "hyp": 3, "funnel": "saju-default", "funnel_version": 1, "metric": "checkout_conv",
+  "start": "2026-11-01", "end": null, "result": "running",
+  "arms": [{"name": "기본", "n": 2100, "conv": 880}, {"name": "환불 보장 문구", "n": 2080, "conv": 930}],
+  "guardrail": {"metric": "refund_rate", "control": null, "variant": null, "ok": null},
+  "note": "가짜 기록 예시"}
+]

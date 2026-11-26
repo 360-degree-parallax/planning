@@ -1,0 +1,56 @@
+{
+ "note": "출처가 확인된 외부 기준값만 둔다. 업종·정의가 우리 퍼널과 정확히 같지 않으므로 '참고선'으로만 쓰고, 목표값으로 쓰지 않는다.",
+ "items": [
+  {
+   "id": "cart_abandonment",
+   "metric": "checkout_conv",
+   "value": 0.2978,
+   "label": "장바구니 → 주문 완료 (평균 이탈률 70.22%의 반대)",
+   "range": "이탈률 55~84% (연구 50건)",
+   "context": "Baymard Institute, 2006~2025년 연구 50건의 단순 평균. 이커머스 장바구니 기준이라 '결제 페이지 도달'보다 앞 단계를 포함한다.",
+   "source": "Baymard Institute",
+   "url": "https://baymard.com/lists/cart-abandonment-rate",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "checkout_design_lift",
+   "metric": "checkout_conv",
+   "value": 0.35,
+   "label": "결제 흐름 디자인 개선만으로 가능한 평균 전환율 상승 추정",
+   "context": "Baymard 결제 사용성 연구의 추정치. 대형 이커머스 결제 흐름 기준.",
+   "source": "Baymard Institute",
+   "url": "https://baymard.com/research-articles/ecommerce-checkout-usability-report-and-benchmark",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "online_card_decline",
+   "metric": "pay_success_rate",
+   "value": 0.85,
+   "label": "온라인 카드 승인률 (거절률 약 15%, 대면 결제는 4%)",
+   "context": "Worldpay. 전 세계 카드 비대면 결제 기준. 국내 간편결제 비중이 높으면 실제 성공률은 더 높을 수 있다.",
+   "source": "Worldpay",
+   "url": "https://worldpay.com/en/insights/articles/declined-transactions-hidden-costs",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "landing_median",
+   "metric": "first_pay_conv",
+   "value": 0.066,
+   "label": "랜딩 페이지 전환율 중앙값 (전 업종)",
+   "context": "Unbounce 2024 보고서, 랜딩 페이지 41,000개. '전환'은 구매뿐 아니라 가입·문의 등을 포함하므로 구매 전환율보다 높게 나온다.",
+   "source": "Unbounce Conversion Benchmark Report 2024",
+   "url": "https://unbounce.com/conversion-benchmark-report/",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "landing_reading_level",
+   "metric": "marketing_hook_rate",
+   "value": null,
+   "label": "쉬운 문장(초등 5~7학년 수준) 랜딩 중앙값 11.1% vs 대학 수준 5.3%",
+   "context": "Unbounce 2024. 2p 문구를 쉽게 쓰는 실험의 근거로 쓴다.",
+   "source": "MarketingProfs (Unbounce 2024 인용)",
+   "url": "https://marketingprofs.com/charts/2024/52374/landing-page-conversion-benchmarks",
+   "checked": "2026-11-27"
+  }
+ ]
+}

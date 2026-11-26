@@ -1,0 +1,56 @@
+// 핵심 실험의 우선순위·판단 기준
+// id 가설번호 | 영향 확신 쉬움 (각 1~10) | 목표 변화 (+10% 상대, +3%p 절대, -20% 감소) | 가드레일 지표 id | 메모
+dental 3 | 5 7 8 | +5%p | refund_rate | 생성 대기가 길수록 효과 큼
+dental 4 | 4 7 9 | +5%p | refund_rate |
+elevator 3 | 7 6 6 | +10% | consumption_rate | 개인화 캐릭터 제작 비용 확인
+baggage 3 | 4 6 8 | +3%p | refund_rate |
+disney 3 | 7 6 8 | +10% | marketing_hook_rate | 1p만 올리고 2p에서 빠지면 무의미
+cold 3 | 6 7 7 | -20% | checkout_conv | 환불 사유 수집은 즉시 시작
+mri 3 | 6 6 7 | +10% | refund_rate |
+embrace 3 | 5 5 6 | +10% | cac |
+airbnb 3 | 8 7 8 | +10% | refund_rate | 후기는 실제 구매자 것만
+netflix 3 | 5 5 9 | -0% | refund_rate | 결제율 유지 + 환불률 하락이면 채택
+dyson 3 | 7 6 9 | +10% | refund_rate |
+febreze 3 | 6 6 7 | +20% | refund_rate |
+milkshake 3 | 8 6 5 | +15% | refund_rate | 주제별 2p 3종 필요
+southwest 3 | 5 8 6 | -30% | satisfaction_score | 명식 계산은 결정적이라 캐시 안전
+spotify 3 | 8 7 6 | +15% | free_tier_cost | 맛보기 문단 생성 원가 확인
+saju 3 | 7 6 6 | +20% | unit_cost |
+saju 4 | 7 7 7 | +20% | refund_rate | 연말 시즌 한정
+amazon-prime 3 | 6 6 7 | +20% | contribution_margin |
+zappos 3 | 8 6 9 | +10% | refund_rate | 환불률 상한을 미리 정함
+warby-parker 3 | 8 6 6 | +10% | refund_rate |
+dollar-shave-club 3 | 6 4 6 | +15% | refund_rate |
+costco 3 | 7 5 5 | +20% | contribution_margin |
+coupang-rocket-wow 2 | 6 6 8 | +20% | contribution_margin | 할인율이 마진을 넘지 않게
+container 3 | 4 8 6 | -20% | satisfaction_score |
+slack 2 | 2 4 5 | +10% | unit_cost | 확장 실험, 우선순위 낮음
+shopify 3 | 3 3 4 | +0% | refund_rate | 판매 발생 여부만 봄
+dropbox 2 | 7 6 6 | +20% | contribution_margin |
+mailchimp 3 | 6 5 8 | +20% | story_hook_rate |
+square 3 | 7 8 7 | +5% | refund_rate | 결제 수단별 실패율 함께 기록
+mpesa 2 | 5 7 7 | +10% | refund_rate | 대상 나이대만 비교
+wise 3 | 6 6 9 | +5% | refund_rate |
+netflix-streaming 3 | 5 5 6 | +15% | refund_rate |
+house-of-cards 3 | 8 7 5 | +10% | marketing_hook_rate | 3종 동시 실험은 표본이 3배 필요
+instagram 2 | 7 6 9 | +10% | refund_rate |
+tiktok 2 | 8 6 9 | +10% | first_pay_conv | 순서만 바꾸면 되므로 가장 쉬움
+kakaopage 3 | 7 6 6 | +10% | refund_rate |
+naver-webtoon 2 | 5 7 10 | +5% | checkout_conv |
+naver-webtoon 3 | 6 6 9 | +5% | refund_rate |
+fortnite 3 | 6 5 5 | +20% | refund_rate |
+duolingo 2 | 6 5 7 | +10% | unit_cost |
+duolingo 4 | 7 6 8 | +10% | checkout_conv | 묶음 노출로 결제율이 떨어지면 기각
+substack 3 | 4 4 6 | +15% | refund_rate |
+patreon 3 | 8 7 7 | +10% | checkout_conv | 객단가↑ 결제율↓ 상쇄 여부를 매출로 판단
+nyt-paywall 3 | 7 6 8 | +10% | refund_rate |
+millie 3 | 7 6 9 | +10% | refund_rate |
+rolls-royce-power 3 | 4 5 6 | +10% | satisfaction_score |
+aravind 2 | 5 8 7 | +0% | first_pay_conv | 원가 상한 설정용, 결제율 유지가 조건
+five-whys 3 | 6 7 7 | -20% | checkout_conv |
+lego-turnaround 3 | 5 6 6 | +5%p | satisfaction_score |
+adobe-cc 2 | 6 4 5 | +15% | first_pay_conv |
+kakao-emoticon 3 | 5 5 6 | +10% | refund_rate |
+post-it 3 | 4 5 7 | +20% | consumption_rate |
+webvan 3 | 6 8 8 | +0% | refund_rate | 수요 확인용: 예약 결제 발생 여부
+calm 3 | 6 5 7 | +10% | refund_rate |

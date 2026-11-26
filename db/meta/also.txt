@@ -1,0 +1,48 @@
+// 사례의 보조 퍼널 단계: id | 단계, 단계
+dental | trust
+elevator | consume
+baggage | trust
+disney | consume
+cold | checkout
+mri | trust
+embrace | hook_story
+airbnb | checkout, trust
+netflix | trust
+dyson | checkout
+febreze | acquire
+milkshake | acquire, hook_story
+southwest | economics
+spotify | checkout
+saju | consume, expand
+amazon-prime | checkout
+zappos | trust
+warby-parker | hook_marketing
+dollar-shave-club | hook_story
+costco | checkout
+coupang-rocket-wow | expand
+dropbox | expand, acquire
+mailchimp | acquire
+square | first_pay
+mpesa | first_pay
+wise | trust
+netflix-streaming | expand
+house-of-cards | hook_marketing
+instagram | checkout
+tiktok | input
+kakaopage | hook_marketing
+naver-webtoon | hook_marketing
+fortnite | repeat_pay
+duolingo | refer
+substack | trust
+patreon | checkout
+nyt-paywall | hook_marketing
+millie | checkout
+rolls-royce-power | economics
+aravind | hook_marketing
+five-whys | checkout
+lego-turnaround | consume
+adobe-cc | checkout
+kakao-emoticon | refer
+post-it | refer
+webvan | hook_marketing
+calm | acquire

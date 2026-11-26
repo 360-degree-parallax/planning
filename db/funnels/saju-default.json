@@ -1,0 +1,16 @@
+{
+ "id": "saju-default",
+ "version": 1,
+ "label": "기본: 1p → 입력 → 2p → 결제",
+ "note": "steps 순서를 바꾸면 통과율이 그 순서대로 다시 계산된다. 순서를 바꾸면 version을 올린다 (실험 기록이 버전을 참조).",
+ "steps": [
+  {"id": "story", "label": "스토리 후킹 1p 도달", "stage": "hook_story", "metric": "story_hook_rate"},
+  {"id": "input", "label": "생년월일 입력 화면", "stage": "input", "metric": "input_complete_rate"},
+  {"id": "marketing", "label": "마케팅 후킹 2p 도달", "stage": "hook_marketing", "metric": "marketing_hook_rate"},
+  {"id": "checkout", "label": "결제 페이지 도달", "stage": "checkout", "metric": "pay_attempt_rate"},
+  {"id": "pay_attempt", "label": "결제 시도", "stage": "checkout", "metric": "pay_success_rate"},
+  {"id": "paid", "label": "결제 성공 (전체 결과 공개)", "stage": "first_pay", "purchase": true, "metric": "consumption_rate"},
+  {"id": "opened", "label": "결과 열람", "stage": "consume", "metric": "read_complete_rate"},
+  {"id": "read_all", "label": "마지막 장까지 읽음", "stage": "consume"}
+ ]
+}
