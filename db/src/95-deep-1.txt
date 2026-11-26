@@ -1,0 +1,222 @@
+// 핵심 사례 깊게 쓰기 1 (depth=deep): 장벽 구조·검증 실험·결과 지표·AI 사주(웹툰형, 결제) 적용
+// 결과 지표(O:)는 근거 URL이 확인된 수치만 적는다.
+
+@! dental
+M: transaction | mature | b2c | kr
+K: rating | 대기 경험 불만
+T: paywall | '기다리면 무료' 대기 시간을 비워 두지 말 것. 남은 시간을 보여 주고, 기다리는 동안 오늘의 한 줄 운세·내 오행 그래프 같은 무료 조각을 채워 대기를 덜 지루하게 만든다
+- O cn | 대기실을 넓히고 꾸민다 | 공간 개선은 가장 먼저 떠오르는 흔한 해법이라 많은 병원이 이미 했다. 그런데도 대기 불만은 남아 있어 원인이 공간이 아니라는 신호다 | 해 봤는데 효과 없음 || barrier=not_core; holder=병원 업계 전반
+- I cn | 의사를 늘려 대기 자체를 없앤다 | 진료실 수와 인건비가 고정되어 있어 대기를 0으로 만들 수 없다 | 비용·공간 제약 || barrier=cost; holder=병원 운영 구조
+- B cu | 환자는 공간이 아니라 기다리는 시간의 지루함·불확실성 때문에 힘들다 | 업계가 대기 문제를 '공간' 문제로 당연하게 정의해서 '시간의 질'은 아무도 설계하지 않았다 | 문제 정의의 맹점 || barrier=definition; holder=병원 업계; test=대기실 한쪽에 예상 대기시간 표시판을 두고 2주간 불만 건수 비교; metric=rating
+- T ch | 예상 대기시간을 휴대폰으로 실시간 알린다 | 예약·알림 메시지 도구가 싸지면서 작은 병원도 쓸 수 있게 됐다 | 도구 보급 || barrier=tech_change; changed=예약·알림 메시지 서비스 보급; test=예약 환자 절반에게만 지연 알림 발송 후 불만·노쇼 비교; metric=rating
+
+@! elevator
+M: transaction | mature | b2b | us
+K: rating | 세입자 불만·계약 해지 위협
+T: paywall | 결과를 기다리는 화면(LLM 생성 대기)에 '거울'을 단다: 입력한 생년월일로 만든 내 사주 캐릭터·오행 분포를 먼저 보여 줘 기다림을 자기 탐색 시간으로 바꾼다
+R: https://www.aspeninstitute.org/wp-content/uploads/2026/06/Are-You-Solving-the-Right-Problems_-Thomas-Wedell-Wedellsborg.pdf
+- I cn | 엘리베이터를 교체한다 | 교체 비용이 크고 공사 기간 동안 건물 운영에 지장이 생긴다 | 비용 || barrier=cost; holder=건물주
+- O co | 모터 출력을 높이거나 운행 알고리즘을 바꾼다 | 모두가 '속도가 문제'라는 같은 틀 안에서 떠올리는 답이고, 체감 차이가 작다 | 같은 틀의 뻔한 답 || barrier=competition; holder=엘리베이터 업체
+- B cu | 엘리베이터 옆에 거울을 단다 | 문제를 '엘리베이터가 느리다'로만 정의해서 '기다림이 지루하다'는 쪽은 아무도 보지 않았다 | 문제 정의 전환 || barrier=definition; holder=건물 관리자·엔지니어; ev=https://www.weforum.org/stories/2021/07/to-solve-big-issues-like-climate-change-we-need-to-reframe-our-problems/; test=한 층에만 거울을 달고 불만 접수 수를 다른 층과 비교; metric=rating
+O: rating | 세입자 불만 다수 | 불만이 크게 줄었다고 전해짐(수치 미공개) | 문제 재정의의 대표 예시로 인용됨 | https://www.weforum.org/stories/2021/07/to-solve-big-issues-like-climate-change-we-need-to-reframe-our-problems/
+
+@! baggage
+M: transaction | mature | b2c | us
+K: rating | 수하물 대기 불만
+T: paywall | 유료 회차 결과를 만드는 몇 초를 '서서 기다리는 시간'으로 두지 말고 '걷는 시간'으로: 분석 단계(천간·지지·대운 계산)를 순서대로 보여 주는 연출로 체감 대기를 줄인다
+- O cn | 수하물 인력을 늘려 대기 시간을 줄인다 | 실제로 늘려서 대기 시간을 업계 기준 안으로 줄였지만 불만은 그대로였다 | 해 봤는데 효과 없음 || barrier=not_core; holder=공항 운영사
+- I cn | 컨베이어 시설을 새로 깐다 | 시설 공사 비용과 기간을 당장 감당할 수 없다 | 비용 || barrier=cost; holder=공항 운영사
+- B cu | 도착 게이트를 멀리 배정해 걷는 시간을 늘린다 | '대기 시간은 줄여야 한다'는 통념 때문에 시간을 일부러 늘리는 선택은 거꾸로라고 여겼다 | 시간 단축 통념의 맹점 || barrier=belief; holder=운영 관리자; ev=https://www.airtraveler.club/insider/airport-operations/houston-baggage-fix-cut-complaints-yet-nobody-can-verify-it-happened/; test=결과 화면 직전에 3초 분석 연출 A/B로 이탈률 비교; metric=paywall_view_rate
+O: rating | 걷기 1분 + 서서 대기 7분, 불만 다수 | 걷는 시간이 늘자 불만이 거의 사라졌다고 전해짐 | 공항·연도는 확인되지 않은 '전해지는 이야기' | https://www.airtraveler.club/insider/airport-operations/houston-baggage-fix-cut-complaints-yet-nobody-can-verify-it-happened/
+
+@! disney
+M: transaction | mature | b2c | us
+K: rating | 대기 줄 포기·불만
+T: binge | 회차 사이를 '통로'가 아니라 '무대'로: 다음 회차로 넘어가는 화면에 예고·복선(다음 달 운의 실마리)을 넣어 몰입을 이어 간다
+- I cn | 놀이기구를 더 짓는다 | 부지와 건설 비용 때문에 줄이 생길 때마다 늘릴 수 없다 | 비용 || barrier=cost; holder=테마파크 운영사
+- O pr | 입장객 수를 제한한다 | 매출이 줄고 다른 공원도 쓰는 흔한 수단이다 | 뻔하고 손해 || barrier=competition; holder=업계 전반
+- B be | 줄 서는 공간을 이야기 무대로 꾸민다 | 대기열은 돈 들일 곳이 아닌 통로라는 통념이 있었다 | '대기열은 통로' 통념의 맹점 || barrier=belief; holder=테마파크 업계; ev=https://queue-it.com/blog/disney-queue-psychology/; test=회차 전환 화면에 예고 문구를 넣은 그룹과 없는 그룹의 다음 회차 이동률 비교; metric=next_episode_rate
+- B cu | 굽은 동선으로 남은 줄 길이를 한눈에 안 보이게 한다 | 줄은 길이가 다 보여야 공정하다고 여겼다 | 대기 심리의 맹점 || barrier=definition; holder=운영 설계자
+
+@! cold
+M: transaction | mature | b2c | kr
+K: rating | 같은 문제 반복
+T: trust | '왜?'를 반복해 고객 불만의 근본 원인을 찾는 습관: 환불 요청 사유를 다섯 번 파고들어 '해석이 틀렸다'인지 '기대와 달랐다'인지 구분한다
+- I cn | 엄마가 덜 바쁘면 된다 | 보호자의 일정은 바꿀 수 없는 조건이라 해결책이 될 수 없다 | 해결 불가 조건 || barrier=structural; holder=가정 환경
+- O ti | 감기약을 미리 사 둔다 | 누구나 하는 사후 대처이고 비를 맞는 원인은 그대로다 | 원인 미해결 || barrier=not_core
+- B cu | 아이가 스스로 쓸 우산을 학교에 상비한다 | '보호자가 데리러 가야 한다'는 쪽만 생각해 아이 스스로 대비하는 길을 놓쳤다 | 주체 정의의 맹점 || barrier=definition; holder=보호자; test=사물함 우산 비치 후 한 학기 동안 비 맞고 귀가한 횟수 기록; metric=rating
+
+@! mri
+M: transaction | mature | b2b2c | us
+K: rating | 소아 진정제 사용·공포
+T: taste | 흉운·나쁜 소식을 겁주는 문장으로 던지지 말고 이야기(모험·극복 서사)로 전달해 1화 이탈을 줄인다
+R: https://www.dotmed.com/legal/print/story.html?nid=23433
+- O co | 장비를 더 빠르고 조용하게 | 장비 업체들의 성능 경쟁 축이고 아이의 공포는 그대로다 | 뻔함 || barrier=competition; holder=의료기기 업계
+- I cn | 진정제를 더 안전하게 쓴다 | 진정 자체가 위험·비용을 늘리고 숙련 인력이 있는 병원만 할 수 있다 | 구조적 제약 || barrier=structural; holder=병원
+- B be | 검사실과 장비를 해적선·캠핑 모험 이야기로 꾸민다 | 의료기기는 성능이 전부라는 통념 때문에 환자 경험을 설계 대상으로 보지 않았다 | 통념의 맹점 || barrier=belief; holder=의료기기 업계; ev=https://www.dotmed.com/legal/print/story.html?nid=23433; test=흉운 회차를 '극복 서사'형과 '직설'형으로 나눠 다음 회차 이동률 비교; metric=next_episode_rate
+O: rating | 다수 아동이 진정 후 검사 | 몰입한 아이들이 추가 진정 없이 검사받는 경우가 많아짐 | GE Adventure Series, 2008년 시범 도입 후 확대 | https://www.dotmed.com/legal/print/story.html?nid=23433
+
+@! embrace
+M: hybrid_impact | early | b2c | in
+K: access | 미숙아 저체온
+T: acquire | 과제를 그대로 받지 말고 현장(실제 이용 장면)을 본다: 사주를 언제·어디서 보는지(새벽 침대, 출근길) 관찰해 유입 채널과 화면을 다시 설계한다
+R: https://de.slideshare.net/GabrielleSantaDonato/dschool-methods-introduction
+- O pr | 병원용 인큐베이터를 싸게 만든다 | 병원 장비 원가 절감은 이미 시도됐고, 병원에 못 오는 아기에게는 소용없다 | 본질 미해결 || barrier=not_core; holder=과제 출제자
+- I cn | 농촌마다 병원을 짓는다 | 재원과 의료 인력이 없다 | 비용 || barrier=cost; holder=정부·의료 체계
+- B be | 전기 없이 쓰는 침낭형 보온기 | 과제가 '인큐베이터'로 주어져 다들 병원 장비만 생각했다. 현장에서 빈 인큐베이터를 보고서야 과제를 다시 정의했다 | 과제 정의의 맹점 || barrier=definition; holder=설계 팀·과제; ev=https://de.slideshare.net/GabrielleSantaDonato/dschool-methods-introduction; test=사용자 10명의 사주 앱 이용 시간·장소를 일주일 기록해 핵심 이용 장면 파악; metric=visitors
+- T cn | 상변화 소재로 전원 없이 체온 유지 | 데워 두면 일정 온도를 오래 내는 소재로 전기 문제를 피할 수 있었다 | 소재 활용 || barrier=tech_change; changed=상변화 소재 활용
+
+@! febreze
+M: transaction | growth | b2c | us
+K: first_pay_conv | 출시 후 판매 부진
+T: repeat_pay | 새 습관을 만들지 말고 기존 습관 끝에 붙인다: 아침 알람·출근길·자기 전 같은 이미 있는 루틴 직후에 '오늘의 운세 1화'를 보상처럼 배치해 재방문·재결제를 만든다
+R: https://www.shortform.com/blog/?p=28545
+- O ch | 냄새 제거 효과를 더 크게 광고 | 이미 그렇게 광고했는데 안 팔렸다 | 해 봤는데 효과 없음 || barrier=not_core; holder=마케팅 팀
+- O pr | 가격 인하 | 쓸 계기가 없는 문제는 그대로다 | 뻔함 || barrier=competition
+- B be | 청소를 마친 뒤 뿌리는 '마무리 보상'으로 향을 넣어 재출시 | 냄새 제거제는 나쁜 냄새를 없애는 제품이라는 통념 때문에 기존 청소 습관 끝에 붙이는 생각을 못 했다. 냄새에 익숙해진 사람은 문제를 느끼지 못했다 | 용도 통념의 맹점 || barrier=belief; holder=제조사 마케팅 팀; ev=https://business.columbia.edu/insights/brand-talk/power-knowing-your-consumers-habits; test=아침 알람 직후 운세 알림 그룹과 랜덤 시간 그룹의 7일 재방문 비교; metric=d30_retention
+
+@! milkshake
+M: transaction | mature | b2c | us
+K: revenue | 밀크셰이크 매출 정체
+T: first_pay | 고객이 사주를 '고용'하는 상황별로 상품을 쪼갠다: 이직 결정 전날 밤, 연애 고민, 연초 계획 등 '해야 할 일'마다 맞춤 회차·리포트를 페이월 앞에 둔다
+R: https://www.library.hbs.edu/working-knowledge/clay-christensens-milkshake-marketing
+- O cu | 고객 설문으로 맛을 개선 | 맛을 바꿨지만 매출은 그대로였다 | 해 봤는데 효과 없음 || barrier=not_core; holder=제품 팀
+- O pr | 가격 인하 | 경쟁사도 하는 흔한 수단이다 | 뻔함 || barrier=competition
+- B cu | 출근길 운전 동안 오래 먹을 수 있게 걸쭉하게, 빨리 사 가게 | 경쟁자를 다른 밀크셰이크로만 보고 바나나·베이글 같은 '출근길 간식'으로는 보지 않았다 | 경쟁·고객 정의의 맹점 || barrier=definition; holder=제품·마케팅 팀; ev=https://hbswk.hbs.edu/item/6496.html; test=유입 키워드(이직·연애·신년)별로 다른 첫 회차를 보여 주고 첫 결제 전환 비교; metric=first_pay_conv
+
+@! southwest
+M: transaction | early | b2c | us
+K: unit_cost | 비행기 1대를 팔아야 하는 자금난
+T: economics | 같은 자원으로 더 많이 돌린다: 풀이 생성에 공통 계산(명식·대운)을 캐시해 재사용하고, LLM 호출은 개인화 문장에만 써서 건당 원가를 낮춘다
+R: https://www.npr.org/2015/06/28/418147961/the-man-who-saved-southwest-airlines-with-a-10-minute-idea
+- O cu | 운항 편수를 줄인다 | 손님이 떠나 매출이 더 줄어드는 흔한 대응이다 | 악순환 || barrier=competition; holder=항공업계
+- I cn | 비행기를 빌리거나 산다 | 자금이 바닥이라 할 수 없었다 | 자금 제약 || barrier=cost; holder=회사 재무 상태
+- B be | 게이트에서 10분 만에 다시 띄워 3대로 4대 몫 | 업계는 회항 준비에 훨씬 긴 지상 시간이 필요하다고 당연하게 여겼다 | 지상 시간 통념의 맹점 || barrier=belief; holder=항공업계; year=1972; ev=https://www.npr.org/2015/06/28/418147961/the-man-who-saved-southwest-airlines-with-a-10-minute-idea; test=명식 계산 캐시 적용 전후 풀이 1건당 API 비용 측정; metric=unit_cost
+O: unit_cost | 비행기 4대 필요 | 10분 회항으로 3대로 같은 운항 유지 | 1972년 자금난 시기 | https://www.npr.org/2015/06/28/418147961/the-man-who-saved-southwest-airlines-with-a-10-minute-idea
+
+@! dyson
+M: transaction | early | b2c | eu
+K: rating | 흡입력 저하 불만
+T: expand | 기존 강자가 소모품 수익 때문에 안 하는 것을 노린다: 경쟁사가 회차마다 과금할 때 '한 번 사면 평생 보는 기본 명식 해설'을 미끼 상품으로 두고 확장 상품(연운·궁합)에서 수익
+R: https://careers.dyson.com/who-we-are
+- O co | 모터 출력 경쟁 | 모든 제조사가 하고 있다 | 뻔함 || barrier=competition; holder=청소기 제조사
+- O cu | 봉투를 자주 갈라고 안내 | 이미 설명서에 있고 소비자는 귀찮아한다 | 효과 없음 || barrier=not_core
+- B be | 봉투 없이 원심력으로 먼지 분리 | 기존 제조사는 교체용 봉투 판매가 너무 수익이 좋아 발명을 사려 하지 않았다 | 기존 강자 이해관계 || barrier=incentive; holder=기존 청소기 제조사; ev=https://careers.dyson.com/who-we-are; test=기본 명식 해설 무료 평생 제공 그룹과 회차 과금 그룹의 확장 상품 구매율 비교; metric=upsell_rate
+
+@! netflix
+M: subscription | early | b2c | us
+K: churn | 연체료·반납 부담
+T: paywall | 대기·연체 같은 '벌'로 돈을 벌지 않는다: 기다리면 무료의 대기 시간을 늘려 결제를 압박하기보다, 월 정액 패스로 대기 자체를 없애는 선택지를 준다
+R: https://www.kuow.org/2019-11-07/the-story-of-netflix-from-one-of-its-co-founders
+- O pr | 대여료 인하 | 경쟁 대여점도 하던 할인이다 | 뻔함 || barrier=competition; holder=대여점 업계
+- I cn | 매장을 늘린다 | 임대료·재고 비용 때문에 무한정 늘릴 수 없다 | 비용 || barrier=cost
+- B pr | 연체료를 없앤 월정액 | 대여점은 연체료가 큰 수익원이라 스스로 없앨 이유가 없었다 | 기존 강자 이해관계 || barrier=incentive; holder=블록버스터 등 대여 체인; test=대기 시간 단축형 월 패스를 일부 사용자에게 제안해 구독 전환율 측정; metric=sub_conv
+- T ch | DVD를 우편으로 보내고 받기 | 얇고 가벼운 DVD가 나오며 우편으로 싸게 보낼 수 있게 됐다 | 매체 변화 || barrier=tech_change; changed=DVD 보급; year=1997
+
+@! amazon-prime
+M: membership | growth | b2c | us
+K: pay_frequency | 배송비 때문에 구매를 미룸
+T: repeat_pay | 회차마다 '결제할까?'를 고민하게 하는 순간이 구매 빈도를 막는다: 월 정액 '사주 패스'(모든 회차·질문 n회)로 결제 고민 자체를 없애고, 첫 달은 낮은 가격으로 시작
+- O pr | 일정 금액 이상 무료배송 | 흔한 방식이고 금액을 채우려 고민하는 순간이 남는다 | 뻔함 || barrier=competition; holder=온라인 쇼핑 업계
+- I cn | 모든 주문 무조건 무료배송 | 물류비를 감당할 수 없다 | 비용 || barrier=cost
+- B pr | 연회비 79달러로 1년 내내 2일 배송 무료 | 재무팀 계산으로는 많이 사는 고객이 먼저 가입해 손실이 커 보였다. 하지만 회비를 낸 고객은 본전 생각에 더 자주 샀다 | 구독 효과의 맹점 || barrier=belief; holder=아마존 재무팀·업계; year=2005; ev=https://fortune.com/2015/02/03/inside-amazon-prime; test=회차 단건 결제 사용자 일부에게 월 패스 제안, 3개월 결제 빈도·ARPPU 비교; metric=pay_frequency
+O: pay_frequency | 비회원 연 약 700달러 지출 | 회원 연 약 1,300달러 지출 | CIRP 추정, 2017년. 차이는 주문 금액이 아니라 주문 빈도에서 나옴 | https://fortune.com/2017/10/18/amazon-prime-customer-spending/
+R: https://cirpamazon.substack.com/p/amazon-prime-member-shopping-power
+
+@! zappos
+M: transaction | growth | b2c | us
+K: first_pay_conv | 온라인 신발 구매 망설임
+T: first_pay | 위험을 회사가 진다: 첫 결제 회차가 마음에 안 들면 이용권을 돌려주는 '첫 결제 보장'으로 첫 결제 장벽을 낮추고, 환불률을 가드레일로 본다
+- O pr | 할인 쿠폰 | 다들 하는 방식이고 사이즈 걱정은 그대로다 | 뻔함 || barrier=competition; holder=온라인 쇼핑 업계
+- I cn | 온라인에서 착용 체험 | 기술적으로 불가능했다 | 불가능 || barrier=technology
+- B cu | 양방향 무료 배송 + 365일 무료 반품 | 반품 비용은 손실이라는 업계 통념 때문에 반품을 막으려고만 했다 | 반품=손실 통념 || barrier=belief; holder=온라인 쇼핑 업계; ev=https://www.bu.edu/goglobal/a/goglobal_courses/tm648/spain/zappos.pdf; test=첫 결제 보장 문구 노출 A/B로 첫 결제 전환과 환불률 동시 측정; metric=first_pay_conv
+O: repeat_pay_rate | 재구매 고객 비중 40%(2004) | 75% | 반품이 4건 중 1건 이상인데도 매출총이익률 31% 유지 | https://www.bu.edu/goglobal/a/goglobal_courses/tm648/spain/zappos.pdf
+O: aov | 첫 구매 평균 111.98달러 | 재구매 평균 143.22달러 | 2006년 4분기, 토니 셰이 발표 | https://www.slideshare.net/slideshow/zappos-lessons-building-a-customerfocused-culture/256107
+
+@! warby-parker
+M: transaction | early | b2c | us
+K: first_pay_conv | 안경 온라인 구매 불가 인식
+T: taste | '써 봐야 산다'는 장벽은 없애지 말고 집으로 옮긴다: 무료 1화를 '맛보기'가 아니라 내 사주의 핵심 한 가지를 실제로 맞혀 보는 체험으로 설계한다
+- O pr | 매장 할인 행사 | 흔하고 유통 구조는 그대로다 | 뻔함 || barrier=competition; holder=안경 유통 업계
+- I cn | 기존 대기업과 브랜드 라이선스 경쟁 | 라이선스 대부분을 기존 기업이 쥐고 있다 | 구조적 제약 || barrier=structural; holder=안경 대기업
+- B ch | 자체 브랜드 직판 + 테 5개 5일 무료 홈 트라이온 | 안경은 매장에서 써 봐야 한다는 통념 때문에 온라인 직판은 안 된다고 여겼다 | 유통 통념 || barrier=belief; holder=안경 업계; ev=https://techcrunch.com/?p=505240; test=1화를 '성격 맞히기'형과 '일반 해설'형으로 나눠 2화 이동률·첫 결제 비교; metric=first_value_rate
+- T ch | 가상 착용·매장 확대로 홈 트라이온 종료 | 매장과 가상 착용 기술이 늘자 2025년 홈 트라이온을 끝냈다. Why not yet 답이 시간에 따라 바뀐 예 | 조건 변화 || barrier=market_change; changed=매장·가상 착용 확대; year=2025; ev=https://www.retaildive.com/news/warby-parker-stores-home-try-on-target-partnership/760601/
+
+@! costco
+M: membership | mature | b2c | us
+K: gross_margin | 가격 경쟁으로 마진 감소
+T: repeat_pay | 이익을 회차 마진이 아니라 회비에서: 연간 멤버십 회원에게 회차를 원가 수준으로 열어 주고, 갱신율을 최상위 지표로 본다
+- O pr | 더 큰 할인 행사 | 경쟁사도 다 하고 마진만 줄어든다 | 뻔함 || barrier=competition; holder=유통 업계
+- O co | 품목 수를 늘린다 | 대형마트가 이미 하는 방식이고 재고 비용이 커진다 | 뻔함 || barrier=competition
+- B pr | 이익은 회비로, 상품 마진은 최대 14~15%, 품목 수는 적게 | 유통업은 상품 마진으로 번다는 통념 | 수익 구조의 맹점 || barrier=belief; holder=유통 업계; ev=https://www.inc.com/jeff-haden/how-does-costco-compete-with-amazon-by-doing-4-things-incredibly-well.html; test=연간 멤버십 출시 후 회원·비회원 12개월 재결제율·ARPPU 비교; metric=repeat_pay_rate
+O: repeat_pay_rate | 회원제 유통 일반 | 회원 갱신율 미국·캐나다 92.3%, 전 세계 89.8% | 2026년 초 보고 | https://www.aol.com/finance/nine-ten-costco-members-renew-134101709.html
+
+@! slack
+M: saas | early | b2b | us
+K: revenue | 주력 게임 실패
+T: none | 직접 적용보다 원칙: 사주 서비스 운영팀이 내부에서 쓰는 도구(예: 상담 문장 검수기)가 다른 사주 사업자에게 팔릴 수 있는지 본다
+R: https://techcrunch.com/2019/05/30/the-slack-origin-story
+- O co | 게임을 고쳐 다시 출시 | 시장 반응이 이미 확인됐다 | 본질 미해결 || barrier=not_core; holder=회사
+- B cu | 내부 팀 채팅 도구를 외부에 판다 | 업무 소통은 이메일이 표준이고 사내 메신저는 이미 많다는 통념 | 업무 소통 통념 || barrier=belief; holder=기업 IT 업계; test=내부 도구를 3개 외부 팀에 무료로 써 보게 하고 주간 사용 유지율 측정; metric=d30_retention
+- T ch | 검색·연동되는 클라우드 채팅 | 클라우드와 업무 도구 API 연동이 쉬워졌다 | 기술 조건 || barrier=tech_change; changed=클라우드·API 확산
+
+@! shopify
+M: saas | early | b2b | global
+K: revenue | 소규모 가게의 쇼핑몰 구축 어려움
+T: none | 원칙: 사주 콘텐츠 작가·역술인이 자기 웹툰형 사주 상품을 올려 파는 도구(작가 플랫폼)로 공급을 늘리는 확장 가능성
+- O co | 스노보드 판매에 집중 | 작은 시장이다 | 성장 한계 || barrier=not_core; holder=창업팀
+- I ch | 대형 쇼핑몰 입점 | 브랜드 통제가 안 되고 수수료가 크다 | 구조적 제약 || barrier=structural
+- B cu | 직접 만든 쇼핑몰 도구를 다른 판매자에게 판다 | 쇼핑몰은 개발 업체에 맡겨 만드는 것이라는 통념 | 구축 통념 || barrier=belief; holder=웹 에이전시 업계; year=2004; ev=https://www.npr.org/2019/08/02/747660923/shopify-tobias-l-tke; test=외부 작가 5명에게 사주 회차 제작 도구를 주고 4주 내 유료 판매 발생 여부 확인; metric=revenue
+
+@! square
+M: finance | early | b2b | us
+K: first_pay_conv | 작은 판매자의 카드 결제 불가로 판매 손실
+T: first_pay | 결제 수단 장벽을 없앤다: 간편결제·휴대폰 소액결제·계좌이체까지 붙이고, 결제 단계에서 이탈하는 비율을 결제 수단별로 본다
+R: https://www.technologyreview.com/2011/02/18/260197/the-new-money/
+- O pr | 단말기 할부 | 심사·계약 장벽은 그대로다 | 뻔함 || barrier=competition; holder=카드 결제 업계
+- T ch | 스마트폰에 꽂는 작은 카드 리더 | 스마트폰 보급으로 단말기를 대체할 수 있게 됐다 | 기술 보급 || barrier=tech_change; changed=스마트폰 보급; year=2009
+- B pr | 쉬운 가입·단일 수수료·장기 계약 없음 | 소상공인은 위험해서 심사를 엄격히 해야 한다는 업계 통념 | 위험 통념 || barrier=belief; holder=카드 가맹 업계; ev=https://stvp.stanford.edu/wp-content/uploads/sites/3/2024/09/the-idea-for-square-transcript.pdf; test=결제 수단 하나 추가 전후 결제 페이지 이탈률 비교; metric=first_pay_conv
+
+@! wise
+M: finance | early | b2c | eu
+K: price_level | 해외 송금에 숨은 비용
+T: trust | 숨은 비용을 없애고 공개하는 것이 신뢰다: 이용권 단가·회차당 가격·자동 충전 조건을 결제 전에 한 화면에 투명하게 보여 준다
+R: https://afr.com.au/companies/financial-services/this-billionaire-started-his-company-to-avoid-paying-bank-fees-20231213-p5er94
+- O pr | 은행 수수료 비교 | 환율에 숨은 비용은 잘 안 보인다 | 뻔함 || barrier=competition
+- B cn | 반대 방향 송금자끼리 매칭해 돈이 국경을 넘지 않게 | 송금은 돈이 실제로 이동해야 한다는 통념 | 송금 구조 통념 || barrier=belief; holder=은행·송금 업계; year=2011; ev=https://www.inkl.com/news/london-s-lonely-unicorn-two-frugal-expats-and-their-billion-dollar-startup
+- B pr | 실제 환율 공개와 투명한 수수료 | 비용을 숨기는 것이 업계 관행이었고 은행은 그 마진으로 벌었다 | 기존 강자 이해관계 || barrier=incentive; holder=은행; test=결제 전 '회차당 실제 가격' 표시 A/B로 첫 결제 전환·환불률 비교; metric=refund_rate
+O: price_level | 1만 파운드 송금에 약 500파운드가 환율 마진으로 숨어 있었음 | 중간 환율 기준 직접 교환으로 비용 대폭 절감 | 창업자 경험담 | https://afr.com.au/companies/financial-services/this-billionaire-started-his-company-to-avoid-paying-bank-fees-20231213-p5er94
+
+@! mpesa
+M: finance | growth | b2c | africa
+K: access | 은행 없는 송금 불가
+T: first_pay | 고객이 이미 쓰는 결제 습관에 맞춘다: 카드가 없는 10대·50대도 결제할 수 있게 휴대폰 소액결제·편의점 결제를 연다
+- I cn | 은행 지점 확대 | 비용 때문에 농촌까지 갈 수 없다 | 비용 || barrier=cost; holder=은행
+- B ch | 휴대폰 문자 송금 + 동네 대리점 현금 교환 | 금융은 은행이 하는 일이라는 통념 | 금융 주체 통념 || barrier=belief; holder=금융 당국·은행; year=2007; ev=https://www.vodafone.com/news/newsroom/digital-society/m-pesa-created; test=휴대폰 소액결제 추가 후 10대·50대 이상 첫 결제 전환 변화 측정; metric=first_pay_conv
+- T ch | 피처폰 보급 | 기본 휴대폰이 이미 널리 퍼져 있었다 | 조건 || barrier=market_change; changed=피처폰 대중화
+O: access | 은행 계좌 없는 가구 다수 | 194,000가구(케냐 가구의 약 2%)가 극빈층에서 벗어난 것으로 추정 | Suri·Jack, Science 2016 | https://news.mit.edu/2016/mobile-money-kenyans-out-poverty-1208
+
+@! container
+M: transaction | growth | b2b | us
+K: unit_cost | 하역 비용이 해운 비용 대부분
+T: economics | 병목부터 찾는다: 풀이 1건 원가가 LLM 호출·이미지 생성·검수 중 어디서 가장 큰지 먼저 쪼개 보고, 가장 큰 병목을 표준화한다
+- O cn | 더 빠른 배 | 항해가 아니라 하역이 병목이다 | 본질 아님 || barrier=not_core; holder=해운사
+- O cn | 부두 노동자를 늘린다 | 비용이 더 든다 | 뻔함 || barrier=competition
+- B cn | 트럭 짐칸째 싣는 표준 상자 | 해운은 배의 문제라는 통념 때문에 항구-트럭-배를 하나의 시스템으로 보지 않았다 | 시스템 관점의 맹점 || barrier=definition; holder=해운·항만 업계; year=1956; ev=https://www.rmg.co.uk/stories/ocean/unexpected-history-shipping-container; test=풀이 생성 단계별 비용을 한 달간 기록해 상위 1개 단계 표준화 전후 원가 비교; metric=unit_cost
+
+@! instagram
+M: advertising | early | b2c | us
+K: d30_retention | 기능 많은 체크인 앱의 사용자 정체
+T: taste | 사용 데이터가 가리키는 기능 하나만 남긴다: 가장 많이 재방문을 만드는 회차 유형(예: 오늘의 운세)을 첫 화면에 두고 나머지는 뒤로 뺀다
+- O co | 체크인 기능 강화 | 경쟁 앱이 이미 있었다 | 뻔함 || barrier=competition; holder=위치 기반 앱 업계
+- B cu | 사진·필터·좋아요만 남기고 다 뺀다 | 기능을 빼면 가치가 줄어든다는 통념 | 기능 통념 || barrier=belief; holder=창업팀; year=2010; ev=https://money.cnn.com/2011/09/13/technology/startups/instagram_burbn/index.htm; test=첫 화면을 단일 기능형과 다기능형으로 나눠 7일 리텐션 비교; metric=d30_retention
+- T ch | 저화질 폰 카메라 + 필터 수요 | 스마트폰 카메라가 퍼졌지만 화질이 낮아 필터가 필요했다 | 타이밍 || barrier=tech_change; changed=스마트폰 카메라 보급
+O: visitors | 출시 전 | 출시 1주 만에 10만 명, 3주 차 30만 명 | 2010년 10월 출시 | https://techcrunch.com/?p=241149
+
+@! post-it
+M: transaction | mature | b2c | us
+K: revenue | 쓸 곳 없는 약한 접착제
+T: expand | '실패한' 콘텐츠의 쓸 곳을 다시 찾는다: 안 팔린 회차(예: 너무 짧은 풀이)를 메신저 공유용 카드나 궁합 초대 미끼로 재활용
+- O co | 접착력을 높이는 연구 계속 | 원래 목표에 매달리는 것이다 | 뻔함 || barrier=not_core; holder=연구소
+- I cu | 약한 접착제를 산업용으로 | 산업용에는 강한 접착이 필요하다 | 용도 부적합 || barrier=structural
+- B cu | 찬송가 책 책갈피에서 착안한 붙였다 떼는 메모지 | 약한 접착력은 실패라는 기준으로만 평가했다 | 평가 기준의 맹점 || barrier=belief; holder=3M 연구·경영진; year=1974; ev=https://www.npr.org/2014/07/26/335402996/an-idea-that-stuck-how-a-hymnal-bookmark-helped-inspire-the-post-it-note; test=판매 저조 회차를 공유 카드로 바꿔 공유 수·유입 측정; metric=viral_coef
