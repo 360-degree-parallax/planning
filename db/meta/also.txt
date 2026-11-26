@@ -46,3 +46,41 @@ kakao-emoticon | refer
 post-it | refer
 webvan | hook_marketing
 calm | acquire
+justanswer | checkout, trust
+intercom-fin | trust
+poe-ppm | checkout
+costar-ask | consume, repeat_pay
+keen-psychic | first_pay
+kasamba-audition | trust
+nebula-chat | expand
+bing-turn-cap | economics
+chatgpt-plus | checkout, economics
+askup | acquire
+wrtn-free | economics
+duolingo-explain | consume
+chatgpt-kakao | refer
+perplexity-cite | trust
+chegg-ai | hook_marketing
+stackoverflow-ai | consume
+inflection-pi | economics
+air-canada-bot | trust
+bard-demo | hook_marketing, trust
+nyc-mycity | trust
+chevy-bot | economics
+dpd-bot | trust
+google-aio | trust
+neda-tessa | trust
+snap-myai | consume
+klarna-ai | consume
+klarna-rehire | expand
+naver-expert | repeat_pay
+hellobot | checkout
+cai-monetize | economics
+cai-teen | trust, checkout
+replika-erp | trust
+iruda | trust, input
+zeta | checkout, trust
+meta-personas | hook_story
+chai-ugc | trust
+woebot | hook_marketing
+speak-tutor | hook_marketing

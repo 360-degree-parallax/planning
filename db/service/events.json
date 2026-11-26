@@ -3,26 +3,317 @@
  "version": 1,
  "identity": "비로그인 방문자는 브라우저 식별자, 입력·결제 후에는 회원 id로 이어 붙인다. 기간 내 같은 사람은 단계마다 1번만 센다.",
  "events": [
-  {"id": "story", "name": "story_view", "trigger": "1p 첫 컷이 화면에 50% 이상 1초 이상 보였을 때", "dedupe": "사람 단위 1회", "props": ["channel", "campaign", "creative_id", "device", "time_band", "landing_topic"]},
-  {"id": "story_complete", "name": "story_complete", "trigger": "1p 마지막 컷이 화면에 보였을 때", "dedupe": "사람 단위 1회", "props": ["creative_id", "scroll_depth"], "note": "1p 안에서 몇 번째 컷에서 떠났는지 보려면 cut_view(컷 번호)를 함께 보낸다"},
-  {"id": "input", "name": "input_view", "trigger": "생년월일 입력 화면이 열렸을 때", "dedupe": "사람 단위 1회", "props": ["position_in_funnel"]},
-  {"id": "input_done", "name": "input_submit", "trigger": "필수 항목이 유효하게 제출됐을 때", "dedupe": "사람 단위 1회", "props": ["birth_time_known", "calendar_type", "age_band", "gender", "is_minor"]},
-  {"id": "marketing", "name": "marketing_view", "trigger": "2p 첫 블록이 화면에 보였을 때", "dedupe": "사람 단위 1회", "props": ["creative_id", "price_shown"]},
-  {"id": "marketing_block", "name": "marketing_block_view", "trigger": "2p의 각 블록(후기·포함 내용·가격·환불 기준)이 보였을 때", "dedupe": "블록별 사람 단위 1회", "props": ["block"]},
-  {"id": "checkout", "name": "checkout_view", "trigger": "결제 페이지가 열렸을 때", "dedupe": "사람 단위 1회", "props": ["product_id", "price", "discount_id"]},
-  {"id": "pay_attempt", "name": "payment_attempt", "trigger": "결제 버튼을 눌러 PG 창·인증이 시작됐을 때", "dedupe": "사람 단위 1회 (재시도는 attempt_no로)", "props": ["method", "attempt_no"]},
-  {"id": "pay_fail", "name": "payment_fail", "trigger": "PG가 실패·취소를 돌려줬을 때", "dedupe": "시도 단위", "props": ["method", "error_code", "user_cancel"]},
-  {"id": "paid", "name": "purchase_paid", "trigger": "서버가 PG 승인을 확인했을 때 (클라이언트 이벤트가 아님)", "dedupe": "주문 단위, 사람 수는 별도 집계", "props": ["order_id", "product_id", "amount", "discount_id", "method", "is_repeat"]},
-  {"id": "generation_started", "name": "generation_started", "trigger": "리포트 생성 작업 시작", "dedupe": "주문 단위", "props": ["order_id", "model"]},
-  {"id": "generation_done", "name": "generation_done", "trigger": "리포트 생성 완료", "dedupe": "주문 단위", "props": ["order_id", "latency_ms", "cost_krw", "chapters"]},
-  {"id": "generation_failed", "name": "generation_failed", "trigger": "생성 실패(재시도 전)", "dedupe": "시도 단위", "props": ["order_id", "error"]},
-  {"id": "opened", "name": "result_open", "trigger": "결과 첫 장이 화면에 보였을 때", "dedupe": "주문 단위 1회", "props": ["order_id", "minutes_since_paid", "notified"]},
-  {"id": "chapter", "name": "chapter_view", "trigger": "각 장의 제목이 화면에 보였을 때", "dedupe": "주문·장 단위 1회", "props": ["order_id", "chapter"]},
-  {"id": "read_all", "name": "result_complete", "trigger": "마지막 장 끝까지 스크롤했을 때", "dedupe": "주문 단위 1회", "props": ["order_id"]},
-  {"id": "feedback", "name": "result_feedback", "trigger": "리포트 끝 만족도·'맞았다' 문항 응답", "dedupe": "주문 단위 1회", "props": ["score", "accurate"]},
-  {"id": "followup", "name": "followup_question", "trigger": "AI 후속 질문을 보냈을 때", "dedupe": "질문 단위", "props": ["order_id", "topic"]},
-  {"id": "share", "name": "share_send", "trigger": "공유 카드·궁합 초대를 보냈을 때", "dedupe": "보낸 건 단위", "props": ["type", "channel"]},
-  {"id": "refund_request", "name": "refund_request", "trigger": "환불 요청 접수", "dedupe": "주문 단위", "props": ["order_id", "reason"], "note": "reason은 interpretation(해석 불만) · expectation(기대 불일치) · mistake(결제 실수) · technical(기술 오류) · other 중 하나"},
-  {"id": "experiment_exposure", "name": "experiment_exposure", "trigger": "실험 군이 배정되고 해당 화면이 처음 보였을 때", "dedupe": "실험·사람 단위 1회", "props": ["experiment_id", "arm"], "note": "배정이 아니라 노출을 기준으로 센다. 군별 노출 수로 배정 비율 이상(SRM)을 확인한다"}
+  {
+   "id": "story",
+   "name": "story_view",
+   "trigger": "1p 첫 컷이 화면에 50% 이상 1초 이상 보였을 때",
+   "dedupe": "사람 단위 1회",
+   "props": [
+    "channel",
+    "campaign",
+    "creative_id",
+    "device",
+    "time_band",
+    "landing_topic"
+   ]
+  },
+  {
+   "id": "story_complete",
+   "name": "story_complete",
+   "trigger": "1p 마지막 컷이 화면에 보였을 때",
+   "dedupe": "사람 단위 1회",
+   "props": [
+    "creative_id",
+    "scroll_depth"
+   ],
+   "note": "1p 안에서 몇 번째 컷에서 떠났는지 보려면 cut_view(컷 번호)를 함께 보낸다"
+  },
+  {
+   "id": "input",
+   "name": "input_view",
+   "trigger": "생년월일 입력 화면이 열렸을 때",
+   "dedupe": "사람 단위 1회",
+   "props": [
+    "position_in_funnel"
+   ]
+  },
+  {
+   "id": "input_done",
+   "name": "input_submit",
+   "trigger": "필수 항목이 유효하게 제출됐을 때",
+   "dedupe": "사람 단위 1회",
+   "props": [
+    "birth_time_known",
+    "calendar_type",
+    "age_band",
+    "gender",
+    "is_minor"
+   ]
+  },
+  {
+   "id": "marketing",
+   "name": "marketing_view",
+   "trigger": "2p 첫 블록이 화면에 보였을 때",
+   "dedupe": "사람 단위 1회",
+   "props": [
+    "creative_id",
+    "price_shown"
+   ]
+  },
+  {
+   "id": "marketing_block",
+   "name": "marketing_block_view",
+   "trigger": "2p의 각 블록(후기·포함 내용·가격·환불 기준)이 보였을 때",
+   "dedupe": "블록별 사람 단위 1회",
+   "props": [
+    "block"
+   ]
+  },
+  {
+   "id": "checkout",
+   "name": "checkout_view",
+   "trigger": "결제 페이지가 열렸을 때",
+   "dedupe": "사람 단위 1회",
+   "props": [
+    "product_id",
+    "price",
+    "discount_id"
+   ]
+  },
+  {
+   "id": "pay_attempt",
+   "name": "payment_attempt",
+   "trigger": "결제 버튼을 눌러 PG 창·인증이 시작됐을 때",
+   "dedupe": "사람 단위 1회 (재시도는 attempt_no로)",
+   "props": [
+    "method",
+    "attempt_no"
+   ]
+  },
+  {
+   "id": "pay_fail",
+   "name": "payment_fail",
+   "trigger": "PG가 실패·취소를 돌려줬을 때",
+   "dedupe": "시도 단위",
+   "props": [
+    "method",
+    "error_code",
+    "user_cancel"
+   ]
+  },
+  {
+   "id": "paid",
+   "name": "purchase_paid",
+   "trigger": "서버가 PG 승인을 확인했을 때 (클라이언트 이벤트가 아님)",
+   "dedupe": "주문 단위, 사람 수는 별도 집계",
+   "props": [
+    "order_id",
+    "product_id",
+    "amount",
+    "discount_id",
+    "method",
+    "is_repeat"
+   ]
+  },
+  {
+   "id": "generation_started",
+   "name": "generation_started",
+   "trigger": "리포트 생성 작업 시작",
+   "dedupe": "주문 단위",
+   "props": [
+    "order_id",
+    "model"
+   ]
+  },
+  {
+   "id": "generation_done",
+   "name": "generation_done",
+   "trigger": "리포트 생성 완료",
+   "dedupe": "주문 단위",
+   "props": [
+    "order_id",
+    "latency_ms",
+    "cost_krw",
+    "chapters"
+   ]
+  },
+  {
+   "id": "generation_failed",
+   "name": "generation_failed",
+   "trigger": "생성 실패(재시도 전)",
+   "dedupe": "시도 단위",
+   "props": [
+    "order_id",
+    "error"
+   ]
+  },
+  {
+   "id": "opened",
+   "name": "result_open",
+   "trigger": "결과 첫 장이 화면에 보였을 때",
+   "dedupe": "주문 단위 1회",
+   "props": [
+    "order_id",
+    "minutes_since_paid",
+    "notified"
+   ]
+  },
+  {
+   "id": "chapter",
+   "name": "chapter_view",
+   "trigger": "각 장의 제목이 화면에 보였을 때",
+   "dedupe": "주문·장 단위 1회",
+   "props": [
+    "order_id",
+    "chapter"
+   ]
+  },
+  {
+   "id": "read_all",
+   "name": "result_complete",
+   "trigger": "마지막 장 끝까지 스크롤했을 때",
+   "dedupe": "주문 단위 1회",
+   "props": [
+    "order_id"
+   ]
+  },
+  {
+   "id": "feedback",
+   "name": "result_feedback",
+   "trigger": "리포트 끝 만족도·'맞았다' 문항 응답",
+   "dedupe": "주문 단위 1회",
+   "props": [
+    "score",
+    "accurate"
+   ]
+  },
+  {
+   "id": "followup",
+   "name": "followup_question",
+   "trigger": "AI 후속 질문을 보냈을 때",
+   "dedupe": "질문 단위",
+   "props": [
+    "order_id",
+    "topic"
+   ]
+  },
+  {
+   "id": "share",
+   "name": "share_send",
+   "trigger": "공유 카드·궁합 초대를 보냈을 때",
+   "dedupe": "보낸 건 단위",
+   "props": [
+    "type",
+    "channel"
+   ]
+  },
+  {
+   "id": "refund_request",
+   "name": "refund_request",
+   "trigger": "환불 요청 접수",
+   "dedupe": "주문 단위",
+   "props": [
+    "order_id",
+    "reason"
+   ],
+   "note": "reason은 interpretation(해석 불만) · expectation(기대 불일치) · mistake(결제 실수) · technical(기술 오류) · other 중 하나"
+  },
+  {
+   "id": "experiment_exposure",
+   "name": "experiment_exposure",
+   "trigger": "실험 군이 배정되고 해당 화면이 처음 보였을 때",
+   "dedupe": "실험·사람 단위 1회",
+   "props": [
+    "experiment_id",
+    "arm"
+   ],
+   "note": "배정이 아니라 노출을 기준으로 센다. 군별 노출 수로 배정 비율 이상(SRM)을 확인한다"
+  },
+  {
+   "id": "result_view",
+   "name": "result_view",
+   "trigger": "결과(전체 장 또는 무료 요약) 화면이 처음 보였을 때, 질문 진입 버튼 노출 포함",
+   "dedupe": "주문·사람 단위 1회",
+   "props": [
+    "order_id",
+    "entry_placement"
+   ],
+   "note": "entry_placement는 질문 버튼 위치(chapter_end · floating · result_end)"
+  },
+  {
+   "id": "q_open",
+   "name": "question_open",
+   "trigger": "질문 입력창이 열렸을 때",
+   "dedupe": "세션 단위 1회",
+   "props": [
+    "entry_placement",
+    "suggested_question_id",
+    "tickets_left"
+   ],
+   "note": "추천 질문을 눌러 열었으면 suggested_question_id를 남긴다"
+  },
+  {
+   "id": "q_submit",
+   "name": "question_submit",
+   "trigger": "질문 제출 버튼을 눌렀을 때",
+   "dedupe": "질문 단위",
+   "props": [
+    "question_id",
+    "topic",
+    "length",
+    "is_free",
+    "tickets_left",
+    "sensitive_flag"
+   ],
+   "note": "tickets_left=0이면 질문권 결제 화면으로 간다. sensitive_flag는 건강·법률·투자·자해 등 분류 결과"
+  },
+  {
+   "id": "ticket_paid",
+   "name": "ticket_purchase",
+   "trigger": "질문권 결제 성공 (PG 승인)",
+   "dedupe": "주문 단위",
+   "props": [
+    "order_id",
+    "pack",
+    "price",
+    "question_id"
+   ],
+   "note": "pack은 q1 · q5 · q10. 결제를 부른 question_id를 같이 남겨 '질문 → 결제' 연결을 본다"
+  },
+  {
+   "id": "answer_read",
+   "name": "answer_read",
+   "trigger": "답변의 마지막 문단이 화면에 보였을 때",
+   "dedupe": "질문 단위 1회",
+   "props": [
+    "question_id",
+    "latency_ms",
+    "answer_length"
+   ],
+   "note": "latency_ms는 제출부터 첫 글자 표시까지"
+  },
+  {
+   "id": "next_question",
+   "name": "next_question",
+   "trigger": "답변을 읽은 뒤 24시간 안에 다음 질문을 제출",
+   "dedupe": "질문 단위",
+   "props": [
+    "question_id",
+    "prev_question_id"
+   ],
+   "note": "q_submit에서 파생 계산해도 된다"
+  },
+  {
+   "id": "answer_feedback",
+   "name": "answer_feedback",
+   "trigger": "답변 아래 좋아요·싫어요 또는 재답변 요청",
+   "dedupe": "질문 단위 마지막 값",
+   "props": [
+    "question_id",
+    "value",
+    "reason"
+   ],
+   "note": "value는 up · down · regenerate. reason은 off_topic · generic · wrong_calc · harmful · other"
+  }
  ]
 }

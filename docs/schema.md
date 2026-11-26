@@ -196,3 +196,13 @@
 | `barrier.reviewed` | 규칙 추정 장벽을 사람이 검토함 (`db/meta/barrier-review.txt`) |
 | 가설 관점 | 핵심 사례는 관점 3개 이상 필수 (검사기) |
 | id | 한 번 정하면 바꾸지 않는다. 바꾸면 `db/meta/aliases.txt`에 옛 id를 남긴다. 공식 구조는 `schema/cases.schema.json` |
+
+## 12. 질문권 Q&A (질문 1회 → 답변 1회)
+리포트를 산 뒤 궁금한 점을 한 번 묻고 한 번 답을 받는 추가 상품. 질문권은 1·5·10회 묶음으로 판다(`db/service/products.json`의 `qa-*`).
+
+- 단계: `ask` (`db/taxonomy.json` funnel_stages). AI 채팅·Q&A 업계 사례 38개는 대부분 이 단계에 연결된다.
+- 퍼널: `db/funnels/saju-qa.json` — 결과 화면 → 질문 입력창 → 질문 제출(질문권 없음 → 결제 화면) → 질문권 결제 → 답변 열람 → 24시간 내 다음 질문.
+- 지표 (`group: qa`): question_entry_rate · question_submit_rate · ticket_purchase_rate · free_question_use_rate · free_to_paid_question_rate · questions_per_buyer · pack_mix · ticket_breakage · answer_read_rate · answer_satisfaction · next_question_rate · answer_refund_rate · sensitive_question_share, 원가는 cost_per_answer.
+- 이벤트: result_view · q_open · q_submit · ticket_paid · answer_read · next_question · answer_feedback (`db/service/events.json`).
+- 규정: ai-answer-liability(챗봇 답변도 회사의 약속) · ai-disclosure(AI 기본법 생성물 표시, 2026-01-22 시행) · minor-ai-usage(미성년자 한도) · sensitive-advice(건강·법률·투자·위기 질문).
+- 새 사례를 처음부터 깊게 쓸 때는 `# 머리줄` 아래에 `D: deep` 한 줄을 넣는다.

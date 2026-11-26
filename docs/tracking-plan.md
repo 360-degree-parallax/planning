@@ -28,3 +28,10 @@
 | `share` | `share_send` | 공유 카드·궁합 초대를 보냈을 때 | 보낸 건 단위 | type, channel |
 | `refund_request` | `refund_request` | 환불 요청 접수 — reason은 interpretation(해석 불만) · expectation(기대 불일치) · mistake(결제 실수) · technical(기술 오류) · other 중 하나 | 주문 단위 | order_id, reason |
 | `experiment_exposure` | `experiment_exposure` | 실험 군이 배정되고 해당 화면이 처음 보였을 때 — 배정이 아니라 노출을 기준으로 센다. 군별 노출 수로 배정 비율 이상(SRM)을 확인한다 | 실험·사람 단위 1회 | experiment_id, arm |
+| `result_view` | `result_view` | 결과(전체 장 또는 무료 요약) 화면이 처음 보였을 때, 질문 진입 버튼 노출 포함 — entry_placement는 질문 버튼 위치(chapter_end · floating · result_end) | 주문·사람 단위 1회 | order_id, entry_placement |
+| `q_open` | `question_open` | 질문 입력창이 열렸을 때 — 추천 질문을 눌러 열었으면 suggested_question_id를 남긴다 | 세션 단위 1회 | entry_placement, suggested_question_id, tickets_left |
+| `q_submit` | `question_submit` | 질문 제출 버튼을 눌렀을 때 — tickets_left=0이면 질문권 결제 화면으로 간다. sensitive_flag는 건강·법률·투자·자해 등 분류 결과 | 질문 단위 | question_id, topic, length, is_free, tickets_left, sensitive_flag |
+| `ticket_paid` | `ticket_purchase` | 질문권 결제 성공 (PG 승인) — pack은 q1 · q5 · q10. 결제를 부른 question_id를 같이 남겨 '질문 → 결제' 연결을 본다 | 주문 단위 | order_id, pack, price, question_id |
+| `answer_read` | `answer_read` | 답변의 마지막 문단이 화면에 보였을 때 — latency_ms는 제출부터 첫 글자 표시까지 | 질문 단위 1회 | question_id, latency_ms, answer_length |
+| `next_question` | `next_question` | 답변을 읽은 뒤 24시간 안에 다음 질문을 제출 — q_submit에서 파생 계산해도 된다 | 질문 단위 | question_id, prev_question_id |
+| `answer_feedback` | `answer_feedback` | 답변 아래 좋아요·싫어요 또는 재답변 요청 — value는 up · down · regenerate. reason은 off_topic · generic · wrong_calc · harmful · other | 질문 단위 마지막 값 | question_id, value, reason |

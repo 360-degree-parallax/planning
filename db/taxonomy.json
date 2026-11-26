@@ -45,7 +45,9 @@
     "accuracy_feel",
     "revisit_7d",
     "followup_use_rate",
-    "share_rate"
+    "share_rate",
+    "next_question_rate",
+    "answer_satisfaction"
    ]
   }
  },
@@ -73,6 +75,10 @@
   "first_pay": {
    "label": "구매 완료",
    "saju": "1회 구매로 전체 결과(모든 장)가 열린다"
+  },
+  "ask": {
+   "label": "질문권 Q&A (질문 1회 → 답변 1회)",
+   "saju": "결과를 본 뒤 궁금한 점을 한 번 묻고 한 번 답을 받는다. 질문권(1·5·10회 묶음)을 사서 쓴다"
   },
   "consume": {
    "label": "결과 열람·만족",
@@ -388,6 +394,91 @@
    "group": "trust",
    "stage": "trust",
    "formula": "사유별 환불 / 전체 환불"
+  },
+  "question_entry_rate": {
+   "label": "질문 입력창 진입률",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "질문 입력창을 연 사람 / 결과 화면을 본 사람"
+  },
+  "question_submit_rate": {
+   "label": "질문 제출률",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "질문을 끝까지 써서 제출한 사람 / 질문 입력창을 연 사람"
+  },
+  "ticket_purchase_rate": {
+   "label": "질문권 구매율",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "질문권을 결제한 사람 / 질문을 제출했는데 남은 질문권이 없던 사람"
+  },
+  "free_question_use_rate": {
+   "label": "무료 질문 사용률",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "무료 질문(맛보기)을 쓴 사람 / 무료 질문을 받은 사람"
+  },
+  "free_to_paid_question_rate": {
+   "label": "무료 질문 → 유료 질문 전환율",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "무료 질문을 쓴 뒤 질문권을 산 사람 / 무료 질문을 쓴 사람"
+  },
+  "questions_per_buyer": {
+   "label": "구매자 1인당 질문 수 (기간)",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "기간 내 유료 질문 수 / 기간 내 질문권 구매자 수"
+  },
+  "pack_mix": {
+   "label": "질문권 묶음 구성비 (1·5·10회)",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "묶음별 판매 건수 / 질문권 전체 판매 건수"
+  },
+  "ticket_breakage": {
+   "label": "미사용 질문권 비율",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "기간 만료·장기 미사용 질문권 / 판매된 질문권 (높으면 환불·불만 위험)"
+  },
+  "answer_read_rate": {
+   "label": "답변 열람 완료율",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "답변을 끝까지 본 질문 / 답변이 전달된 질문"
+  },
+  "answer_satisfaction": {
+   "label": "답변 만족도 (질문 단위 좋아요 비율)",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "좋아요 / (좋아요 + 싫어요), 질문 단위"
+  },
+  "next_question_rate": {
+   "label": "다음 질문률 (답변 후 24시간 내 또 묻기)",
+   "group": "qa",
+   "stage": "ask",
+   "formula": "답변 후 24시간 안에 다음 질문을 제출한 질문 / 답변을 읽은 질문",
+   "leading_for": "repeat_pay_rate"
+  },
+  "answer_refund_rate": {
+   "label": "질문 단위 환불·재답변 요청률",
+   "group": "qa",
+   "stage": "trust",
+   "formula": "환불 또는 재답변 요청 질문 / 유료 질문"
+  },
+  "sensitive_question_share": {
+   "label": "민감 주제 질문 비중 (건강·법률·투자·자해 등)",
+   "group": "qa",
+   "stage": "trust",
+   "formula": "민감 주제로 분류된 질문 / 전체 질문 (안전 답변 규칙 적용 대상)"
+  },
+  "cost_per_answer": {
+   "label": "답변 1건 원가 (LLM·검수)",
+   "group": "economics",
+   "stage": "economics",
+   "formula": "(LLM 호출비 + 검수 인건비) / 답변 수"
   }
  },
  "business_models": {

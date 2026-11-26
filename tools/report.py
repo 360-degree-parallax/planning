@@ -11,7 +11,7 @@ C = d['cases']
 PASS = {'blindspot', 'timing'}
 B = T['barriers']
 M = T['metrics']
-order = ['acquire', 'hook_story', 'input', 'hook_marketing', 'checkout', 'first_pay', 'consume', 'repeat_pay', 'expand', 'refer', 'trust', 'economics']
+order = ['acquire', 'hook_story', 'input', 'hook_marketing', 'checkout', 'first_pay', 'ask', 'consume', 'repeat_pay', 'expand', 'refer', 'trust', 'economics']
 
 H = [h for c in C for h in c['hyps']]
 L = []

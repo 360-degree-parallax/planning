@@ -1,0 +1,648 @@
+// AI 채팅·Q&A 업계 사례 (질문 1회 → 답변 1회로 파는 질문권 관점, 2026-11-27 출처 확인)
+// 모든 사례는 D: deep. 우리 적용은 대부분 ask(질문권 Q&A) 단계에 건다.
+
+// ---- 1. 질문 단위로 값을 매기는 법 ----
+
+# justanswer | 질문 하나에 값을 매길 수 있을까 | AI 채팅·Q&A | real | vator, FlexJobs
+D: deep
+S: JustAnswer는 의사·변호사·정비사 같은 전문가에게 질문 1건을 묻고 답을 받는 서비스다. 질문당 결제와 구독을 함께 쓴다.
+X: 전문가 상담은 시간 단위라 비싸고, 짧은 궁금증 하나에 돈을 내기 어렵다
+P: 고객이 원하는 것은 '상담 시간'이 아니라 '내 질문 하나의 답'이었다
+- O pr | 상담을 30분 단위로 싸게 판다 | 시간 단위 과금은 이미 전화 상담 업계의 표준이라 차별이 없다 | 뻔함 || barrier=competition; holder=전화·화상 상담 업계
+- B cu | 질문 1건 단위로 가격을 붙이고 답이 마음에 안 들면 돌려준다 | 전문가 업계는 시간을 파는 것이 당연하다고 봤고, 결과(답)를 보장하는 가격은 손해라고 여겼다 | 과금 단위의 맹점 || barrier=belief; holder=전문가 상담 업계; ev=https://vator.tv/n/27a3; test=같은 질문 화면에서 '30분 상담권'과 '질문 1건 답변'을 나눠 보여 주고 결제율 비교; metric=ticket_purchase_rate
+- I cn | 모든 질문에 즉시 전문가를 붙인다 | 분야별 전문가 대기 인력을 24시간 유지하는 비용이 크다 | 비용 || barrier=cost; holder=전문가 인건비
+- T ch | 검색 광고로 '지금 궁금한 질문'을 받아 바로 결제로 잇는다 | 검색 광고가 질문 문장 단위로 사람을 데려올 수 있게 되면서 질문 단위 판매가 성립했다 | 유입 채널 변화 || barrier=market_change; holder=오프라인 상담 예약; changed=검색 광고 보급; year=2008
+= 질문 1건 단위 결제(질문 난이도별 가격) + 만족하지 않으면 환불, 반복 이용자는 구독으로 옮긴다
+L: 질문 단위 가격은 '내 궁금증 하나'에 정확히 맞춘 상품이다. 환불 약속이 첫 결제의 위험을 덜어 준다.
+R: https://vator.tv/n/27a3
+M: pay_per_unit | mature | b2c | us
+K: ticket_purchase_rate | 시간 단위 상담의 높은 진입 가격
+T: ask | 질문권 1회 가격을 '이 질문 하나의 답' 기준으로 정하고, 답이 질문과 어긋나면 재답변 1회를 보장한다. 결제 화면에 고객이 쓴 질문 원문을 그대로 보여 주고 '이 질문에 답합니다'라고 적는다
+O: revenue | 2008년 이후 | 하루 약 1만 건 질문, 질문당 평균 약 30달러, 매출 연 123% 성장 | 회사 공개 기준 | https://vator.tv/n/27a3
+
+# intercom-fin | 답변이 아니라 '해결'에 돈을 받으면 | AI 채팅·Q&A | real | Stripe, Sacra
+D: deep
+S: Intercom은 고객 지원 AI 에이전트 Fin을 내놓으면서 좌석이나 메시지가 아니라 해결된 대화 1건당 0.99달러를 받는다.
+X: 기업은 AI 챗봇이 실제로 문제를 풀었는지 몰라 비용을 아까워한다
+P: 고객이 사는 것은 답변 개수가 아니라 '해결된 문제'였다
+- O pr | 상담원 좌석당 월 구독을 받는다 | 고객 지원 소프트웨어의 기본 과금이라 AI의 가치를 담지 못한다 | 뻔함 || barrier=competition; holder=고객 지원 SaaS 업계
+- B pr | 고객이 해결됐다고 확인하거나 추가 도움 없이 떠날 때만 과금한다 | 결과 기준 과금은 매출이 들쭉날쭉해 위험하다는 SaaS 업계 통념 | 과금 기준의 맹점 || barrier=belief; holder=SaaS 가격 정책; ev=https://stripe.com/customers/fin-ai; test=답변 후 '해결됐어요' 버튼을 누른 질문만 질문권을 차감하는 군과 제출 즉시 차감하는 군의 결제율·재구매 비교; metric=ticket_purchase_rate
+- T cn | LLM이 지식 문서로 직접 답해 해결률을 끌어올린다 | 규칙 기반 챗봇은 해결률이 낮아 결과 과금이 불가능했다 | 기술 변화 || barrier=tech_change; holder=규칙 기반 챗봇; changed=GPT-4급 LLM; year=2023
+- I co | 경쟁사보다 싸게 무제한으로 준다 | 해결 1건마다 LLM 원가가 들어 무제한은 적자다 | 비용 || barrier=cost; holder=LLM 호출 원가
+= 해결 1건당 0.99달러. 해결되지 않은 대화는 돈을 받지 않는다
+L: '답했다'가 아니라 '해결됐다'에 과금하면 고객이 위험을 덜 진다. 우리 질문권도 차감 기준을 '답변 만족'에 걸 수 있다.
+R: https://stripe.com/customers/fin-ai
+R: https://sacra.com/chat/h/04312dee-4c06-4f61-a6a6-a9a60cba02d2/
+M: usage_based | growth | b2b | us
+K: answer_satisfaction | AI 답변이 실제로 도움이 됐는지 모름
+T: ask | 질문권 차감을 '답변 전달'이 아니라 '답변을 읽고 싫어요·재답변을 누르지 않음'에 건다. 싫어요를 누르면 질문권을 돌려주고 사유를 받아 답변 품질 지표로 쓴다
+O: revenue | 출시 | 1년이 안 돼 수천만 달러 매출 | Sacra 추정 | https://sacra.com/chat/h/04312dee-4c06-4f61-a6a6-a9a60cba02d2/
+
+# poe-ppm | 봇 메시지 하나하나에 가격표를 붙이다 | AI 채팅·Q&A | real | TechCrunch
+D: deep
+S: Quora의 AI 챗봇 플랫폼 Poe는 2024년 4월 봇 제작자가 메시지당 가격을 정할 수 있게 했다. 이용자는 포인트로 내고 제작자는 달러로 받는다.
+X: 봇마다 원가와 가치가 다른데 구독 하나로 묶어 파니 비싼 봇과 싼 봇이 구분되지 않는다
+P: 메시지 1회의 가치를 봇별로 다르게 매길 방법이 없었다
+- O pr | 모든 봇을 월 구독 하나에 넣는다 | 챗봇 앱의 기본 과금이라 봇별 가치 차이를 못 담는다 | 뻔함 || barrier=competition; holder=AI 챗봇 앱
+- B ch | 메시지 가격을 제작자가 정하고 포인트로 차감한다 | 플랫폼이 가격을 통제해야 한다는 통념과 소액 결제 수수료 때문에 메시지 단위 가격은 피했다 | 가격 결정권의 맹점 || barrier=belief; holder=앱 마켓·플랫폼 운영사; ev=https://techcrunch.com/2024/04/09/poe-introduces-a-price-per-message-revenue-model-for-ai-bot-creators
+- T ti | 포인트(컴퓨트 포인트)로 메시지당 원가를 감춘다 | 모델마다 원가가 크게 달라진 뒤에야 포인트 같은 공통 단위가 필요해졌다 | 원가 구조 변화 || barrier=tech_change; holder=단일 모델 챗봇; changed=다수 LLM 공급과 모델별 원가 격차; year=2024; test=질문권을 '회' 대신 '포인트'로 표시하는 군과 '회'로 표시하는 군의 구매율·문의 수 비교; metric=ticket_purchase_rate
+= 메시지당 가격(포인트) + 제작자 수익 배분. 무료 이용자도 포인트로 같은 체계를 쓴다
+L: 단위가 '포인트'가 되면 원가 차이는 감출 수 있지만 고객은 질문 하나에 얼마인지 헷갈린다. 우리는 '질문 1회'를 단위로 유지하는 편이 안전하다.
+R: https://techcrunch.com/2024/04/09/poe-introduces-a-price-per-message-revenue-model-for-ai-bot-creators
+M: usage_based | growth | c2c | us
+K: ticket_purchase_rate | 메시지 가치 차이를 못 담는 구독
+T: ask | 질문권 단위는 '회'로 고정한다. 긴 답변(궁합 비교·연간 흐름)처럼 원가가 큰 질문만 '2회 차감'을 쓰고, 제출 전에 차감 수를 보여 준다
+
+# costar-ask | 별자리 앱이 질문을 1개·5개·10개로 판다 | AI 채팅·Q&A | real | App Store, Bustle
+D: deep
+S: 점성술 앱 Co-Star는 별자리 차트를 바탕으로 AI에게 질문하는 'Ask the Stars'를 유료로 내놓았다. 질문권은 1개·5개·10개·25개 묶음으로 판다.
+X: 매일 보는 무료 운세만으로는 매출이 나지 않는다
+P: 운세를 읽은 뒤 생기는 '내 경우는?'이라는 궁금증을 상품으로 만들지 못했다
+- O pr | 프리미엄 월 구독으로 상세 운세를 판다 | 운세 앱의 흔한 수익 모델이라 차별이 없다 | 뻔함 || barrier=competition; holder=점성술·운세 앱
+- B cu | 차트를 읽은 사람이 자기 상황을 직접 묻게 하고 질문 단위로 판다 | 운세는 정해진 글을 읽는 콘텐츠라는 통념 때문에 '묻는 운세'는 상담 업계의 몫으로 여겼다 | 상품 형식의 맹점 || barrier=belief; holder=운세 콘텐츠 업계; ev=https://www.bustle.com/life/co-star-astrology-app-ai-feature; test=결과 각 장 끝에 '이 장에 대해 묻기' 버튼을 두는 군과 결과 끝에만 두는 군의 질문 입력창 진입률 비교; metric=question_entry_rate
+- T pr | 1·5·10·25개 묶음으로 회당 단가를 낮춘다 | LLM 답변 원가가 낮아져 소액 질문 묶음이 수익이 나게 됐다 | 원가 구조 변화 || barrier=tech_change; holder=사람 점성가 상담; changed=LLM 상용화; year=2023; test=1·5·10 묶음 가격표에서 5개를 가운데 두는 군과 단가 순으로만 나열하는 군의 묶음 구성비·매출 비교; metric=pack_mix
+- I ti | 질문 무제한 구독을 준다 | 질문마다 LLM 원가가 들어 헤비 유저가 적자를 만든다 | 비용 || barrier=cost; holder=LLM 호출 원가
+= 무료 차트 + 유료 질문권(1개 0.99유로, 5개 2.99달러, 10개 4.99달러, 25개 6.99달러)
+L: 우리 질문권과 가장 가까운 해외 선례다. 묶음이 커질수록 회당 단가가 크게 떨어지는 구조라 1개짜리는 '앵커' 역할을 한다.
+R: https://apps.apple.com/app/id1264782561
+R: https://www.bustle.com/life/co-star-astrology-app-ai-feature
+M: pay_per_unit | growth | b2c | us
+K: question_entry_rate | 무료 운세 뒤 궁금증을 상품으로 못 만듦
+T: ask | 질문권을 1·5·10회로 판다. 1회는 단가 기준점, 5회를 '추천'으로 두되 사전 선택은 하지 않는다. 각 장 끝에 그 장 내용으로 만든 추천 질문 3개를 띄워 입력창 진입을 늘린다
+O: aov | 질문권 출시 | 1개 0.99유로, 5개 2.99달러, 10개 4.99달러, 25개 6.99달러 (앱스토어 인앱 가격) | 매출 수치는 공개 안 됨, 가격 구조만 확인 | https://apps.apple.com/app/id1264782561
+
+# keen-psychic | 첫 3분은 공짜, 그다음은 분 단위 | AI 채팅·Q&A | real | Keen, 리뷰 매체
+D: deep
+S: 온라인 심령·타로 상담 플랫폼 Keen은 상담사가 분당 가격을 정하고, 신규 고객에게 첫 3분 무료와 10분 1.99달러 입문 상품을 준다.
+X: 처음 보는 상담사에게 돈을 내기 전에 '맞는 사람인지' 알 수 없다
+P: 상담 품질은 써 봐야 아는데 써 보는 비용이 컸다
+- O pr | 상담료를 낮춘다 | 가격 경쟁은 상담사 이탈만 부른다 | 뻔함 || barrier=competition; holder=전화 상담 업계
+- B cu | 첫 3분을 무료로 줘 상담사를 '맛보기'로 고르게 한다 | 상담 시간이 곧 매출이라 공짜 시간은 손해라는 통념 | 맛보기의 맹점 || barrier=belief; holder=유료 상담 업계; ev=https://www.mindbodygreen.com/articles/keen-psychic-review; test=질문권 구매자 중 절반에게 첫 질문 무료를 주고 30일 질문권 매출 비교; metric=free_to_paid_question_rate
+- I cn | 모든 상담을 무료로 하고 광고로 번다 | 상담사 보수를 광고로 감당할 수 없다 | 비용 || barrier=cost; holder=상담사 보수
+- T ch | 채팅 상담을 앱으로 연다 | 전화 상담만 있을 때는 대화 기록·분당 과금 자동화가 어려웠다 | 기술 변화 || barrier=tech_change; holder=전화 상담; changed=스마트폰 앱 채팅; year=2012
+= 분당 과금(상담사별 1.99~9.99달러 이상) + 첫 3분 무료 + 10분 1.99달러 입문 상품 + 만족 보장
+L: '맞는지 확인할 짧은 무료 시간'이 첫 결제를 연다. 우리 질문권에서는 '무료 질문 1회'가 같은 역할이다.
+R: https://www.mindbodygreen.com/articles/keen-psychic-review
+R: https://www.top10.com/psychic-reading/best-psychic-readings-online-for-first-timers
+M: pay_per_unit | mature | c2c | us
+K: free_to_paid_question_rate | 써 보기 전 품질을 모름
+T: ask | 종합 리포트 구매자에게 무료 질문 1회를 주고, 답변 끝에 '이어서 물어볼 만한 질문'을 붙여 유료 질문권으로 잇는다. 무료 답변은 유료와 같은 품질로 준다(맛보기가 품질 신호다)
+
+# kasamba-audition | 상담사를 바꿀 때마다 3분 무료 | AI 채팅·Q&A | real | 리뷰 매체
+D: deep
+S: 심령 상담 플랫폼 Kasamba는 새 상담사를 만날 때마다 3분 무료 채팅을 주고 첫 유료 상담을 할인한다.
+X: 첫 상담사가 맞지 않으면 고객이 플랫폼 자체를 떠난다
+P: 이탈의 원인은 플랫폼이 아니라 '상담사와 안 맞음'이었는데 바꿔 볼 방법이 비쌌다
+- O pr | 첫 상담만 할인한다 | 업계 공통의 신규 할인이라 차별이 없다 | 뻔함 || barrier=competition; holder=온라인 상담 업계
+- B cu | 상담사마다 3분 무료로 '오디션'을 보게 한다 | 무료 시간을 여러 번 주면 공짜만 쓰고 떠날 것이라는 통념 | 남용 우려의 맹점 || barrier=belief; holder=유료 상담 플랫폼; ev=https://www.ktnv.com/brand-spotlight/5-best-free-psychic-reading-services-for-real-predictions-by-phone-and-chat; test=답변 톤(따뜻한 상담가형·직설 분석가형) 두 가지를 고를 수 있게 하는 군과 고정 톤 군의 다음 질문률 비교; metric=next_question_rate
+- I cn | 상담사 품질을 모두 똑같이 맞춘다 | 사람마다 스타일이 달라 품질을 균일하게 만들 수 없다 | 구조 || barrier=structural; holder=사람 상담사 시장
+= 상담사별 3분 무료 + 첫 유료 할인 + 만족 보장
+L: '안 맞으면 바꿔 볼 수 있다'가 이탈을 줄인다. AI 답변은 상담사 대신 '해석 톤'을 고르게 할 수 있다.
+R: https://www.ktnv.com/brand-spotlight/5-best-free-psychic-reading-services-for-real-predictions-by-phone-and-chat
+M: pay_per_unit | mature | c2c | us
+K: next_question_rate | 첫 상담 불일치로 인한 이탈
+T: ask | 답변 톤을 2~3가지(따뜻하게 · 직설적으로 · 명리 용어 포함)로 고르게 하고, 싫어요를 누른 답변은 다른 톤으로 한 번 다시 받게 한다
+
+# nebula-chat | AI가 아니라 사람 점성가 채팅을 잔액으로 판다 | AI 채팅·Q&A | real | Republic World 리뷰
+D: deep
+S: 점성술 앱 Nebula(OBRIO)는 운세 콘텐츠와 함께 사람 점성가 실시간 채팅을 판다. 9.99달러부터 잔액을 충전하고 첫 3분은 무료, 이후 분당 약 3달러다.
+X: AI 운세 앱이 넘치는데 '진짜 사람에게 묻고 싶다'는 고객이 남는다
+P: 자동 콘텐츠가 주지 못하는 '내 사정을 아는 사람의 답'을 원했다
+- O pr | 콘텐츠 구독만 판다 | 점성술 앱의 기본 모델이다 | 뻔함 || barrier=competition; holder=점성술 앱
+- B cu | 자동 콘텐츠 앱 안에서 사람 상담을 잔액 충전으로 판다 | 앱은 자동화로 원가를 낮추는 것이라 사람을 붙이면 안 된다는 통념 | 자동화의 맹점 || barrier=belief; holder=콘텐츠 앱 업계; ev=https://www.republicworld.com/initiatives/nebula-app-review-2026-features-cost-and-who-its-for-2026-09-16-137105
+- I cn | 모든 질문에 사람이 답한다 | 사람 상담사 인건비 때문에 질문당 단가가 AI의 수십 배다 | 비용 || barrier=cost; holder=상담사 인건비
+- T ch | 잔액 충전형 결제로 분 단위 과금을 쉽게 한다 | 앱 내 결제가 일상화되며 소액 충전에 대한 거부감이 줄었다 | 결제 습관 변화 || barrier=behavior_change; holder=단건 결제 중심 앱; changed=인앱 결제 보급; year=2019; test=AI 답변 뒤 '사람 해석가에게 이어 묻기(별도 가격)'를 보여 주는 군과 안 보여 주는 군의 질문권 매출 비교; metric=revenue
+= AI·콘텐츠로 유입, 사람 점성가 채팅을 잔액 충전(9.99달러부터)으로 판매, 첫 3분 무료
+L: AI 답변이 넘칠수록 '사람의 답'은 상위 상품이 된다. 우리도 AI 질문권 위에 사람 해석 상담을 둘 수 있다.
+R: https://www.republicworld.com/initiatives/nebula-app-review-2026-features-cost-and-who-its-for-2026-09-16-137105
+M: pay_per_unit | growth | c2c | global
+K: revenue | 자동 콘텐츠만으로는 상위 수요를 못 받음
+T: ask | AI 질문권을 기본으로 두고, 같은 질문을 '사람 명리 해석가에게 보내기'를 상위 선택지로 둔다(가격·답변 시간 명시). AI 답변 3회 이상 쓴 사람에게만 보여 줘 AI 매출을 잠식하지 않는지 본다
+O: aov | - | 잔액 9.99달러부터, 첫 3분 무료, 이후 분당 약 3달러 | 리뷰 기준 가격 구조 | https://www.republicworld.com/initiatives/nebula-app-review-2026-features-cost-and-who-its-for-2026-09-16-137105
+
+// ---- 2. 무료 한도와 유료 전환 ----
+
+# bing-turn-cap | 대화를 5번으로 끊었더니 | AI 채팅·Q&A | real | Bing 블로그
+D: deep
+S: 마이크로소프트는 2023년 2월 새 Bing 채팅이 긴 대화에서 이상한 답을 내자 세션당 5턴, 하루 50턴으로 제한했다. 이후 6턴·60턴으로 늘렸다.
+X: 긴 대화일수록 답이 엇나가고 화제가 된다
+P: 대화가 길어지는 것 자체가 품질 위험이었는데, 대부분의 사용자는 짧은 대화로 답을 얻고 있었다
+- O cn | 모델을 더 키워 긴 대화도 버티게 한다 | 모두가 생각하는 해법이지만 당장 해결되지 않는다 | 뻔함 || barrier=not_core; holder=AI 모델 개발
+- B cu | 대화 턴 수를 짧게 끊는다 | 대화는 길수록 좋다는 챗봇 업계 통념. 실제로 대부분이 5턴 안에 답을 찾는다는 데이터를 보지 않았다 | 사용 행태의 맹점 || barrier=belief; holder=챗봇 업계; ev=https://blogs.bing.com/search/february-2023/The-new-Bing-Edge-Updates-to-Chat; test=질문권 1회에 후속 질문 1번을 포함하는 군과 정확히 1문 1답 군의 만족도·환불 비교; metric=answer_satisfaction
+- I ti | 무제한 대화를 계속 허용한다 | 50턴 이상 대화가 전체의 약 1%지만 문제의 대부분을 만들었다 | 기술 한계 || barrier=technology; holder=당시 LLM
+= 세션 5턴·하루 50턴 제한, 이후 6턴·60턴으로 완화
+L: 짧게 끊는 것은 원가와 품질 모두를 지킨다. '질문 1회 → 답변 1회'는 제약이 아니라 품질 장치가 될 수 있다.
+R: https://blogs.bing.com/search/february-2023/The-new-Bing-Edge-Updates-to-Chat
+M: advertising | scale | b2c | global
+K: answer_satisfaction | 긴 대화의 품질 붕괴
+T: ask | 질문권 1회 = 질문 1번 + 답변 1번으로 고정하고 '대화'를 팔지 않는다. 답변 끝에 이어서 물을 질문 2개를 추천해 다음 질문권으로 넘긴다
+O: rating | 무제한 대화 | 대부분 5턴 안에 답을 찾고, 50턴 이상 대화는 약 1% | 회사 발표 | https://blogs.bing.com/search/february-2023/The-new-Bing-Edge-Updates-to-Chat
+
+# chatgpt-plus | 무료 한도를 두고 월 20달러를 받다 | AI 채팅·Q&A | real | OpenAI
+D: deep
+S: ChatGPT는 무료로 시작해 2023년 2월 월 20달러 Plus를 내놓았다. 무료 이용자는 사용 한도가 있고, 국내 카카오톡 안 ChatGPT도 무료 이용 횟수가 정해져 있다.
+X: 무료 이용자가 폭증해 서버 비용이 커지고 혼잡 시간에 접속이 끊긴다
+P: 많이 쓰는 사람과 가끔 쓰는 사람을 같은 조건으로 대했다
+- O co | 광고를 붙인다 | 검색·포털의 기본 수익원이라 뻔하고 답변 신뢰를 해칠 수 있다 | 뻔함 || barrier=competition; holder=검색·포털
+- B pr | 무료는 한도를 두고, 많이 쓰는 사람에게 정액 구독을 판다 | 소비자 AI는 무료여야 한다는 통념 | 가격의 맹점 || barrier=belief; holder=소비자 인터넷 업계; ev=https://openai.com/index/chatgpt-plus/; test=무료 질문 소진 화면에 '1회 질문권'만 보여 주는 군과 '1·5·10회'를 함께 보여 주는 군의 질문권 구매율 비교; metric=ticket_purchase_rate
+- I cn | 무료를 무제한으로 유지한다 | 사용량에 비례하는 GPU 비용을 감당할 수 없다 | 비용 || barrier=cost; holder=GPU 추론 비용
+= 무료(한도) + 월 20달러 Plus(우선 접속·상위 모델)
+L: 질문 횟수는 고객이 이해하기 쉬운 한도다. 무료 한도가 끝나는 순간이 가장 강한 결제 지점이다.
+R: https://openai.com/index/chatgpt-plus/
+R: https://gall.dcinside.com/itdonga/6279
+M: freemium | scale | b2c | global
+K: free_tier_cost | 무료 이용 폭증과 원가
+T: ask | 무료 질문을 다 쓴 순간 결제 화면을 띄우되, 방금 쓴 질문 원문과 '이 질문에 바로 답합니다'를 같이 보여 준다. 결제 후 다시 입력하게 만들지 않는다
+O: revenue | 무료 출시(2022년 11월) | 2023년 2월 월 20달러 Plus 출시 | 회사 발표 | https://openai.com/index/chatgpt-plus/
+
+# askup | 카톡 친구로 들어온 AI, 무료 100회 | AI 채팅·Q&A | real | 한경비즈니스, 뉴시스
+D: deep
+S: 업스테이지는 2023년 카카오톡 채널 챗봇 아숙업(AskUp)을 내놓았다. 3일 만에 3만, 2개월 만에 100만 명이 친구로 추가했고 무료 이용자는 월 100회 질의응답을 쓸 수 있었다.
+X: 새 AI 앱은 설치부터 장벽이라 써 보는 사람이 적다
+P: 사람들은 이미 매일 쓰는 메신저 안에서 묻고 싶어 했다
+- O co | 앱을 따로 만들어 광고한다 | 신규 앱 설치 비용이 크고 흔한 방법이다 | 뻔함 || barrier=competition; holder=AI 앱 스타트업
+- B ch | 카카오톡 채널 친구로 넣어 대화방에서 바로 묻게 한다 | 챗봇은 고객 응대용이라는 통념 때문에 메신저 채널을 서비스 본체로 보지 않았다 | 채널의 맹점 || barrier=belief; holder=AI 서비스 업계; ev=https://magazine.hankyung.com/business/amp/202305168064b; test=결과 페이지에서 '카카오톡으로 질문 알림 받기'를 켠 사람과 안 켠 사람의 7일 내 다음 질문률 비교; metric=next_question_rate
+- T ti | 사진 속 글자(OCR)까지 읽어 답한다 | 자체 OCR 기술과 GPT를 결합할 수 있게 되면서 가능해졌다 | 기술 변화 || barrier=tech_change; holder=텍스트 전용 챗봇; changed=GPT API 공개; year=2023
+= 카카오톡 채널 챗봇 + 무료 월 100회 질의응답
+L: 질문은 '이미 있는 대화창'에서 가장 쉽게 나온다. 무료 횟수를 숫자로 보여 주면 한도가 곧 상품 설명이 된다.
+R: https://magazine.hankyung.com/business/amp/202305168064b
+R: https://www.newsis.com/view/NISX20230310_0002222625
+M: freemium | growth | b2c | kr
+K: question_entry_rate | 앱 설치 장벽
+T: ask | 질문권 잔여 횟수를 결과 화면 상단에 '남은 질문 2회'처럼 숫자로 늘 보여 준다. 카카오 알림톡으로 '답변 도착'을 보내 다시 들어오게 한다(수신 동의 필수)
+O: visitors | 출시 | 3일 만에 친구 3만, 2개월 만에 100만 | 회사 발표 | https://magazine.hankyung.com/business/amp/202305168064b
+
+# wrtn-free | 유료 모델을 공짜로 풀었더니 | AI 채팅·Q&A | real | 아이뉴스24, 벤처스퀘어
+D: deep
+S: 뤼튼은 무료 이용자에게 GPT-4를 하루 100회 쓰게 하다가, 이후 GPT-4를 전면 무료화했다. 2024년 10월 MAU 500만 명, 캐릭터 채팅 크랙을 합치면 약 1000만 명에 이르렀다.
+X: 챗GPT 유료 구독과 같은 걸 팔면 국내 스타트업이 이길 수 없다
+P: 국내 이용자는 '최신 모델'보다 '쉽고 공짜인 한국형 AI'를 원했다
+- O pr | 챗GPT보다 조금 싸게 구독을 판다 | 같은 상품을 더 싸게 파는 뻔한 길이고 원가 차이도 없다 | 뻔함 || barrier=competition; holder=국내 AI 챗봇
+- B pr | 최신 모델을 무료로 풀고 다른 데서 번다 | 모델 사용료가 원가라 무료화는 자살이라는 통념 | 원가의 맹점 || barrier=belief; holder=AI 서비스 업계; ev=https://www.inews24.com/view/1925963; test=결과 구매자에게 무료 질문 1회를 주는 군과 0회 군의 30일 질문권 매출·리포트 재구매 비교; metric=revenue
+- T cn | 모델 가격 인하를 기다렸다가 무료화한다 | LLM API 가격이 크게 떨어진 뒤에야 무료가 감당 가능해졌다 | 원가 변화 || barrier=tech_change; holder=고가 LLM API; changed=LLM API 단가 인하; year=2024
+- I co | 자체 모델로 챗GPT를 이긴다 | 파운데이션 모델 개발 비용이 너무 크다 | 비용 || barrier=cost; holder=국내 스타트업 자본
+= 범용 AI 무료화로 이용자를 모으고 캐릭터 채팅(크랙) 등 다른 상품으로 수익화
+L: 무료는 원가가 내려간 뒤에야 전략이 된다. 질문 원가를 먼저 재야 무료 질문을 몇 개 줄지 정할 수 있다.
+R: https://www.inews24.com/view/1925963
+R: https://www.venturesquare.net/879867
+M: freemium | growth | b2c | kr
+K: free_tier_cost | 무료화의 원가 부담
+T: ask | 답변 1건 원가를 먼저 재고(cost_per_answer), 무료 질문 수를 '원가 × 무료 수 < 질문권 추가 매출'이 되는 선에서 정한다. 무료 0·1·2회를 실험으로 비교한다
+O: visitors | GPT-4 하루 100회 무료 | 2024년 10월 MAU 500만 명 (크랙 포함 약 1000만) | 언론 보도 | https://www.inews24.com/view/1925963
+
+# duolingo-explain | 유료 기능을 무료로 돌린 이유 | AI 채팅·Q&A | real | TechCrunch, gHacks
+D: deep
+S: 듀오링고는 2023년 GPT-4 기반 'Explain My Answer'(내 답이 왜 틀렸는지 설명)와 롤플레이를 월 29.99달러 Max 등급에 넣었다. 2026년 1월 1일 Explain My Answer를 모든 이용자에게 무료로 열었다.
+X: AI 설명 기능이 비싼 상위 등급에 묶여 대부분이 써 보지 못한다
+P: '왜 틀렸지?'는 모든 학습자가 매번 갖는 질문인데 극소수만 답을 받았다
+- O pr | Max 가격을 낮춘다 | 가격 인하는 흔하고 구독 구조는 그대로다 | 뻔함 || barrier=competition; holder=구독 앱
+- B cu | 짧은 설명(1문 1답)은 무료로 주고 긴 대화형 기능만 유료로 남긴다 | 원가가 드는 AI 기능은 모두 유료여야 한다는 통념 | 원가의 맹점 || barrier=belief; holder=구독 앱 업계; ev=https://techcrunch.com/2023/03/14/duolingo-launches-new-subscription-tier-with-access-to-ai-tutor-powered-by-gpt-4; test=결과 장마다 '이 문장이 무슨 뜻이에요?' 짧은 무료 설명을 주는 군과 없는 군의 질문권 구매율 비교; metric=ticket_purchase_rate
+- T cn | 설명 생성 원가가 내려가 무료화한다 | 모델 단가가 떨어지면서 짧은 설명은 무료로 감당할 수 있게 됐다 | 원가 변화 || barrier=tech_change; holder=GPT-4 초기 단가; changed=LLM 단가 인하; year=2026
+= 짧은 설명은 무료, 대화형 롤플레이·영상 통화는 Max 유료
+L: 짧은 질문은 무료로 열어 '묻는 습관'을 만들고, 길고 개인적인 질문을 판다. 무엇이 짧고 무엇이 긴지의 선이 상품 설계다.
+R: https://techcrunch.com/2023/03/14/duolingo-launches-new-subscription-tier-with-access-to-ai-tutor-powered-by-gpt-4
+R: https://blog.duolingo.com/explain-my-answer-now-free
+M: freemium | scale | b2c | global
+K: ticket_purchase_rate | 비싼 등급에 묶인 AI 기능
+T: ask | '용어·문장 뜻 풀이'(짧은 설명)는 무료로 열고, '내 상황에 대입한 해석'(예: 이 대운에 이직해도 될까)만 질문권으로 판다. 두 종류를 질문 입력창에서 버튼으로 나눈다
+O: aov | 2023년 3월 | Max 월 29.99달러, Explain My Answer 포함 | 출시 가격 | https://techcrunch.com/2023/03/14/duolingo-launches-new-subscription-tier-with-access-to-ai-tutor-powered-by-gpt-4
+
+# chatgpt-kakao | 국민 메신저 안에 ChatGPT를 넣다 | AI 채팅·Q&A | real | 카카오, 뉴시스, IT동아
+D: deep
+S: 카카오는 2025년 10월 28일 카카오톡 채팅 탭에 'ChatGPT for Kakao'를 넣었다. 로그인 없이도 쓸 수 있고, 답변을 채팅방에 공유할 수 있다. 무료 이용은 횟수 제한이 있고 14세 이상만 쓸 수 있다.
+X: AI를 따로 설치해 쓰는 사람은 일부다
+P: 질문은 친구와 대화하다가 생기는데, AI는 대화 밖에 있었다
+- O co | 카카오 자체 AI 앱을 따로 키운다 | 별도 앱은 설치·습관 장벽이 크다 | 뻔함 || barrier=competition; holder=포털·메신저
+- B ch | 대화 중 메시지를 길게 눌러 AI에게 보내고 답을 채팅방에 공유한다 | 메신저는 사람 간 대화 공간이라 AI를 섞으면 거부감이 생긴다는 통념 | 공간의 맹점 || barrier=belief; holder=메신저 업계; ev=https://www.kakaocorp.com/page/detail/11780; test=답변 카드에 '친구에게 공유' 버튼(생년월일 미노출)을 단 군과 없는 군의 공유율·유입 비교; metric=share_rate
+- T ti | 경쟁 관계였던 OpenAI와 손잡는다 | 국내 플랫폼이 해외 AI를 들이는 것은 자존심 문제였으나, 자체 모델 격차가 커지며 제휴가 현실적이 됐다 | 시장 변화 || barrier=market_change; holder=국내 플랫폼의 자체 AI 전략; changed=OpenAI 제휴; year=2025
+= 카카오톡 채팅 탭 ChatGPT + 답변 공유 + 카카오 서비스(지도·선물하기·멜론) 연동, 무료는 횟수 제한
+L: 답변이 대화방으로 공유되면 그 자체가 유입이 된다. 사주 답변도 '친구에게 보여 주고 싶은 한 줄'로 끝나면 공유가 생긴다.
+R: https://www.kakaocorp.com/page/detail/11780
+R: https://mobile.newsis.com/view/NISX20251028_0003379421
+R: https://gall.dcinside.com/itdonga/6279
+M: freemium | scale | b2c | kr
+K: share_rate | 대화 밖에 있는 AI
+T: ask | 답변 맨 끝에 친구에게 보낼 수 있는 한 줄 요약 카드(생년월일·이름 미노출)를 만들고, 카드를 받은 사람은 무료 질문 1회로 들어오게 한다
+O: buyers | - | 이용자 누적 1100만 명 | 언론 보도 | https://biz.sbs.co.kr/amp/article/20000308721
+
+# perplexity-cite | 답에 출처를 달아 믿게 만들다 | AI 채팅·Q&A | real | TechCrunch
+D: deep
+S: Perplexity는 질문에 답하면서 근거 웹 문서를 번호로 붙인다. 출시 첫날 3000건이던 질의가 2025년 5월 한 달 7억 8000만 건이 됐다.
+X: 챗봇 답이 그럴듯하지만 맞는지 확인할 수 없다
+P: 고객은 답 자체보다 '왜 그렇게 말하는지'를 확인하고 싶었다
+- O cn | 더 큰 모델로 정확도를 올린다 | 모두가 하는 경쟁이고 틀린 답은 여전히 나온다 | 뻔함 || barrier=not_core; holder=AI 모델 경쟁
+- B cu | 모든 답에 근거를 번호로 붙인다 | 출처가 보이면 사용자가 다른 사이트로 나가 버린다는 통념 | 이탈 우려의 맹점 || barrier=belief; holder=검색·포털; ev=https://techcrunch.com/2025/06/05/perplexity-received-780-million-queries-last-month-ceo-says; test=답변마다 '근거: 일주 OO, 대운 OO'처럼 명식 근거를 붙이는 군과 없는 군의 답변 만족도·맞다는 느낌 비교; metric=accuracy_feel
+- T ti | 실시간 검색과 LLM을 묶는다 | 검색 결과를 LLM에 넣는 방식이 실용화되며 가능해졌다 | 기술 변화 || barrier=tech_change; holder=학습 데이터만 쓰는 챗봇; changed=검색 결합 생성(RAG); year=2022
+= 근거 인용형 답변 엔진
+L: 근거가 보이는 답은 덜 틀려 보이고, 틀려도 덜 화나게 한다. 사주 답변의 근거는 명식(어느 기둥·어느 운)이다.
+R: https://techcrunch.com/2025/06/05/perplexity-received-780-million-queries-last-month-ceo-says
+M: freemium | scale | b2c | global
+K: accuracy_feel | 확인할 수 없는 답
+T: ask | 모든 질문 답변 끝에 '이렇게 본 근거'를 1~2줄로 붙인다(예: 일간 甲木, 2027년 세운 丁未). 근거를 누르면 결과 리포트의 해당 장으로 이동한다
+O: visitors | 출시 첫날 질의 3000건 | 2025년 5월 한 달 질의 7억 8000만 건, 전월 대비 20% 증가 | CEO 발표 | https://techcrunch.com/2025/06/05/perplexity-received-780-million-queries-last-month-ceo-says
+
+// ---- 3. 무료 AI에 대체된 Q&A ----
+
+# chegg-ai | 숙제 답을 팔던 회사가 무너지다 | AI 채팅·Q&A | failure | Barchart, Gizmodo
+D: deep
+S: Chegg는 학생에게 교재 문제 풀이와 전문가 Q&A를 구독으로 팔았다. ChatGPT가 나온 뒤 구독자가 줄고, 2023년 5월 주가가 하루 48% 떨어졌다. 매출은 2024년 6억 1800만 달러에서 2025년 3억 7700만 달러로 줄었다.
+X: 학생들이 Chegg 대신 무료 챗봇에 숙제를 묻는다
+P: 고객이 산 것은 '전문가'가 아니라 '빠른 답'이었고, 그 답은 공짜가 됐다
+- O pr | 구독료를 낮춘다 | 무료와 가격으로 싸울 수 없다 | 뻔한 실패 || barrier=not_core; holder=Chegg 경영진
+- I co | 자체 AI(CheggMate)로 ChatGPT와 같은 경험을 만든다 | 범용 AI와 같은 걸 만들면 차별점이 사라지고 개발 비용만 든다 | 구조 || barrier=structural; holder=범용 AI와의 경쟁
+- B cu | 답이 아니라 '검증된 풀이 과정과 시험 대비'를 판다 | 오랫동안 답 자체가 상품이었기에 무엇이 공짜가 될지 보지 않았다 | 상품 정의의 맹점 || barrier=definition; holder=Chegg; ev=https://www.barchart.com/story/news/1744436/chegg-was-dying-way-before-chatgpt-chatbots-just-dealt-the-fatal-blow; test=질문권 결제 화면에 '무료 AI에 같은 질문을 했을 때와의 차이'(내 명식 기반·만세력 검증)를 보여 주는 군과 없는 군의 결제율 비교; metric=ticket_purchase_rate
+- T be | 학생이 AI에게 묻는 습관이 굳는다 | ChatGPT 이후 '묻는 곳'이 바뀌었다 | 행동 변화 || barrier=behavior_change; holder=Chegg 구독 모델; changed=ChatGPT 대중화; year=2023
+= (실패) 자체 AI 대응이 늦고 차별점이 없어 구독자·매출이 계속 줄었다
+L: '일반적인 답'은 공짜가 된다. 우리 질문권이 팔리려면 무료 AI가 줄 수 없는 것(정확한 명식 계산, 내 결과와 이어지는 맥락)이 답에 보여야 한다.
+R: https://www.barchart.com/story/news/1744436/chegg-was-dying-way-before-chatgpt-chatbots-just-dealt-the-fatal-blow
+R: https://gizmodo.com/chegg-is-on-its-last-legs-after-chatgpt-sent-its-stock-down-99-2000522585
+M: subscription | turnaround | b2c | us
+K: revenue | 무료 AI 대체
+T: ask | 질문 답변에 항상 '내 결과 리포트의 어느 내용과 이어지는지'를 붙여 무료 AI와 다르게 만든다. 결제 화면에는 '내 명식으로 계산한 답'임을 분명히 적는다
+O: revenue | 2024년 6억 1800만 달러 | 2025년 3억 7700만 달러, 주가 고점 대비 약 99% 하락 | 공시·보도 | https://gizmodo.com/chegg-is-on-its-last-legs-after-chatgpt-sent-its-stock-down-99-2000522585
+
+# stackoverflow-ai | 질문이 76% 사라진 Q&A 사이트 | AI 채팅·Q&A | failure | Pragmatic Engineer
+D: deep
+S: 개발자 Q&A 사이트 Stack Overflow는 ChatGPT 이후 새 질문 수가 크게 줄었다. 2022년 11월 약 10만 8563건이던 월 질문이 이후 약 76% 줄었다. 감소는 2022년 이전부터 시작됐다.
+X: 질문이 줄어 답변자도 줄고 사이트가 비어 간다
+P: 질문자는 '공개 질문 → 기다림 → 지적받기'보다 즉시 답하고 혼내지 않는 상대를 원했다
+- O cn | 질문 규칙을 더 엄격히 해 품질을 지킨다 | 오래 해 온 방식이고, 오히려 질문 문턱을 높였다 | 해 봤는데 효과 없음 || barrier=not_core; holder=커뮤니티 운영진
+- B cu | 첫 질문자를 친절히 받는다 | 중복·저품질 질문을 막는 것이 품질이라는 커뮤니티 통념 | 문화의 맹점 || barrier=belief; holder=고참 답변자 커뮤니티; ev=https://blog.pragmaticengineer.com/are-llms-making-stackoverflow-irrelevant/; test=질문 입력창에 예시 질문 3개와 '짧게 물어도 됩니다' 안내를 두는 군과 빈 입력창 군의 질문 제출률 비교; metric=question_submit_rate
+- T be | 개발자가 AI에게 먼저 묻는다 | AI 코딩 도우미가 퍼지며 질문 습관이 바뀌었다 | 행동 변화 || barrier=behavior_change; holder=공개 Q&A; changed=ChatGPT·코딩 도우미 확산; year=2023
+= (실패에 가까움) 질문 급감, 데이터 라이선스 등 다른 수익원 모색
+L: 질문하기가 부담스러우면 사람은 덜 판단하는 상대를 찾는다. 질문 입력창은 '어떻게 물어야 하지'를 없애 줘야 한다.
+R: https://blog.pragmaticengineer.com/are-llms-making-stackoverflow-irrelevant/
+R: https://gist.github.com/hopeseekr/f522e380e35745bd5bdc3269a9f0b132
+M: advertising | mature | c2c | global
+K: question_submit_rate | 질문 문턱
+T: ask | 빈 입력창 대신 내 결과에서 뽑은 추천 질문 3개를 먼저 보여 주고, 한 줄만 써도 되게 한다. '이런 걸 물어도 되나' 싶은 질문(재회·이혼·이직) 예시를 일부러 넣는다
+O: visitors | 2022년 11월 월 질문 약 10만 8563건 | 이후 약 76% 감소 | 공개 데이터 집계 | https://gist.github.com/hopeseekr/f522e380e35745bd5bdc3269a9f0b132
+
+# inflection-pi | 다정한 챗봇은 돈을 못 벌었다 | AI 채팅·Q&A | failure | Reuters, Fortune
+D: deep
+S: Inflection AI는 감정적으로 지지해 주는 챗봇 Pi를 무료로 내놓았다. 13억 달러를 투자받았지만 2024년 3월 마이크로소프트가 창업자와 직원 대부분을 데려가고 약 6억 5000만 달러를 라이선스료로 냈다. 회사는 소비자 Pi에서 손을 뗐다.
+X: 하루 100만 명 넘게 쓰는데 매출이 없다
+P: 대화 경험은 좋았지만 '무엇에 돈을 내는지'가 정해지지 않았다
+- O pr | 나중에 광고를 붙인다 | 흔한 계획이지만 감정 대화에 광고는 신뢰를 해친다 | 뻔함 || barrier=competition; holder=소비자 앱
+- I cn | 무료로 계속 키운다 | 대화당 추론 비용이 쌓여 무료 성장을 오래 버틸 수 없다 | 비용 || barrier=cost; holder=추론 비용
+- B pr | 처음부터 '무엇을 사는지'(질문·세션·기능)를 정해 판다 | 사용자를 먼저 모으면 수익은 따라온다는 실리콘밸리 통념 | 수익화 순서의 맹점 || barrier=belief; holder=벤처 투자 업계; ev=https://siliconangle.com/?p=649451
+- T co | 빅테크가 같은 기능을 무료로 넣는다 | 빅테크가 소비자 AI 비서를 기본 기능으로 넣으며 독립 챗봇의 자리가 좁아졌다 | 시장 변화 || barrier=market_change; holder=독립 소비자 챗봇; changed=빅테크 AI 비서 기본 탑재; year=2024; test=무료 결과 화면에 질문권 가격을 처음부터 보여 주는 군과 결제 직전에만 보여 주는 군의 질문권 구매율·이탈 비교; metric=ticket_purchase_rate
+= (실패) 수익 모델 없이 인재·기술이 마이크로소프트로 넘어갔다
+L: 이용자 수가 매출을 보장하지 않는다. 질문권은 처음부터 '질문 1회 = 가격'을 보여 줘야 무료 대화로 흘러가지 않는다.
+R: https://siliconangle.com/?p=649451
+R: https://www.aol.com/news/microsoft-agreed-pay-inflection-650-165547530.html
+R: https://fortune.com/2024/03/19/microsoft-surprise-deal-inflection-ai-mustafa-suleyman-reid-hoffman-questions/
+M: freemium | turnaround | b2c | us
+K: revenue | 이용자는 많은데 수익 모델 없음
+T: ask | 질문 입력창 바로 위에 '질문 1회 OOO원 · 남은 무료 질문 0회'를 항상 보인다. 감정 위로형 긴 대화는 팔지 않고, 1문 1답만 판다
+O: revenue | 투자 13억 달러, 기업가치 40억 달러 | 마이크로소프트 라이선스료 약 6억 5000만 달러, 소비자 Pi 사업 축소 | 보도 기준 | https://www.aol.com/news/microsoft-agreed-pay-inflection-650-165547530.html
+
+// ---- 4. 틀린 답의 책임과 신뢰 사고 ----
+
+# air-canada-bot | 챗봇이 한 말은 회사가 한 말 | AI 채팅·Q&A | failure | 미국변호사협회(ABA)
+D: deep
+S: 에어캐나다 웹사이트 챗봇이 유족 할인을 나중에 신청해도 된다고 잘못 안내했다. 회사는 '챗봇은 별개 주체'라고 주장했지만, 2024년 캐나다 분쟁 재판소는 회사 책임을 인정하고 812.02캐나다달러 배상을 명했다.
+X: 챗봇이 약관과 다른 약속을 했다
+P: 회사는 챗봇 답변을 자기 말로 여기지 않았다
+- O co | 챗봇 화면에 '정확하지 않을 수 있음' 문구를 단다 | 누구나 하는 면책 문구지만 재판소는 받아들이지 않았다 | 해 봤는데 효과 없음 || barrier=not_core; holder=챗봇 운영 기업
+- B be | 환불·가격·정책 질문은 AI가 생성하지 않고 정해진 문구로 답한다 | 챗봇은 무엇이든 생성해 답해야 똑똑해 보인다는 통념 | 범위의 맹점 || barrier=belief; holder=챗봇 도입 기업; ev=https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/; test=질문 분류기로 환불·가격 질문을 고정 답변으로 돌리고 오안내 건수·환불 분쟁 수를 전후 비교; metric=answer_refund_rate
+- I cn | 챗봇을 법적으로 회사와 분리한다 | 법원이 웹사이트의 모든 정보는 회사 책임이라고 봤다 | 규제 || barrier=regulation; holder=소비자 보호 법리
+= (실패) 회사 책임 인정, 812.02캐나다달러 배상
+L: AI 답변 중 '돈과 약속'에 관한 말은 생성하면 안 된다. 사주 답변에서 '꼭 이뤄진다', '환불해 준다'는 말이 나오지 않게 막아야 한다.
+R: https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/
+M: transaction | mature | b2c | global
+K: answer_refund_rate | 챗봇 오안내에 따른 분쟁
+T: ask | 질문 분류 단계에서 환불·가격·결제·개인정보 질문은 AI 해석 대신 고정 안내와 고객센터 링크로 답하고 질문권을 차감하지 않는다. 답변에 '보장', '반드시'가 나오면 걸러 다시 생성한다
+O: refund_rate | 챗봇 오안내 | 812.02캐나다달러 배상 명령 (Moffatt v. Air Canada, 2024 BCCRT 149) | 판결 | https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/
+
+# bard-demo | 광고 속 한 문장 오답이 시가총액 1000억 달러를 날리다 | AI 채팅·Q&A | failure | NPR
+D: deep
+S: 구글은 2023년 2월 챗봇 Bard 홍보 영상에서 제임스 웹 우주망원경에 관한 틀린 답을 보여 줬다. 알파벳 주가가 약 9% 떨어져 시가총액 약 1000억 달러가 사라졌다.
+X: 서둘러 낸 데모의 오답이 퍼졌다
+P: 첫인상 답변을 검수하지 않았다
+- O ti | 경쟁사보다 빨리 발표한다 | 모두 서두르던 상황이라 속도만으로는 차별이 없었다 | 뻔함 || barrier=competition; holder=빅테크 AI 경쟁
+- B be | 홍보·대표 예시 답변은 사람이 검수한다 | AI는 어차피 다 맞는다는 과신과 출시 압박 | 과신의 맹점 || barrier=belief; holder=구글 발표 조직; ev=https://www.npr.org/2023/02/09/1155650909/google-chatbot--error-bard-shares; test=랜딩·광고에 쓰는 예시 질문 답변을 명리 검수자가 확인한 군과 미검수 군의 광고 소재 신고·이탈 비교; metric=rating
+- I cn | 모든 답을 출시 전에 검증한다 | 생성 답변은 무한해서 전부 검수할 수 없다 | 기술 한계 || barrier=technology; holder=생성 AI의 본질
+= (실패) 오답 노출, 주가 급락
+L: 모든 답은 검수 못 해도 '대표 답'은 검수할 수 있다. 광고·2p에 보여 주는 질문 예시는 첫인상이자 약속이다.
+R: https://www.npr.org/2023/02/09/1155650909/google-chatbot--error-bard-shares
+M: advertising | mature | b2c | global
+K: rating | 대표 답변 오류
+T: ask | 2p·광고에 보여 주는 질문 예시와 답변은 사람이 검수한 고정본만 쓴다. 실제 답변과 다르게 보이지 않도록 '예시 답변' 표기를 붙인다
+O: market_share | 발표 전 | 알파벳 주가 약 9% 하락, 시가총액 약 1000억 달러 감소 | 보도 기준 | https://www.npr.org/2023/02/09/1155650909/google-chatbot--error-bard-shares
+
+# nyc-mycity | 시청 챗봇이 법을 어기라고 안내하다 | AI 채팅·Q&A | failure | The Markup
+D: deep
+S: 뉴욕시는 소상공인용 AI 챗봇 MyCity를 내놓았다. 2024년 3월 이 챗봇이 팁을 가져가도 된다는 식으로 법에 어긋나는 안내를 한다는 보도가 나왔다.
+X: 공식 기관 챗봇의 답을 사람들이 그대로 믿는다
+P: '공식'이라는 신뢰가 오답의 피해를 키웠다
+- O co | 면책 문구를 단다 | 흔한 대응이지만 공식 기관의 답이라 사람들은 그대로 믿었다 | 해 봤는데 효과 없음 || barrier=not_core; holder=공공기관 챗봇
+- B cu | 법률처럼 정답이 있는 질문은 원문 조항을 함께 보여 주고 단정하지 않는다 | 챗봇은 친절하게 단정해 줘야 쓸모 있다는 통념 | 단정의 맹점 || barrier=belief; holder=챗봇 기획; ev=https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law; test=건강·법률·투자 질문에 '운세 관점의 참고 + 전문가 상담 권유'를 붙이는 군과 일반 답변 군의 싫어요·신고 비교; metric=answer_satisfaction
+- I cn | 모든 법률 답을 정확하게 만든다 | 생성 모델의 오답을 0으로 만들 수 없다 | 기술 한계 || barrier=technology; holder=생성 AI
+= (실패) 오답 보도 후에도 서비스 유지, 비판 지속
+L: 사주 서비스도 건강·법률·투자 질문을 받는다. 이 질문들은 '운세의 관점'으로만 답하고 단정하지 않아야 한다.
+R: https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law
+M: hybrid_impact | early | b2c | us
+K: answer_satisfaction | 단정적 오답
+T: ask | 민감 주제(건강·법률·투자) 질문을 분류해 답변 첫 줄에 '사주로 보는 흐름이며 실제 결정은 전문가와 상의하세요'를 넣고, 날짜·금액을 단정하지 않는 규칙으로 생성한다
+
+# chevy-bot | 1달러에 SUV를 팔겠다고 약속한 챗봇 | AI 채팅·Q&A | failure | AI Incident Database
+D: deep
+S: 2023년 12월 미국 한 쉐보레 딜러의 웹사이트 챗봇이 사용자의 지시(프롬프트 주입)에 따라 타호 SUV를 1달러에 팔겠다는 답을 했다. 캡처가 퍼지며 화제가 됐다.
+X: 사용자가 챗봇을 조작해 회사가 원치 않는 말을 시킨다
+P: 챗봇이 무엇이든 말할 수 있게 열려 있었다
+- O co | 금지어 목록을 늘린다 | 흔한 대응이고 우회 문장이 끝없이 나온다 | 뻔함 || barrier=not_core; holder=챗봇 운영 기업
+- B be | 챗봇이 할 일을 좁게 정하고 그 밖의 요청은 거절한다 | 범용 챗봇처럼 뭐든 해 줘야 좋은 경험이라는 통념 | 범위의 맹점 || barrier=belief; holder=챗봇 도입 기업; ev=https://incidentdatabase.ai/cite/622/; test=사주 외 요청(숙제·코드·가격 흥정)을 거절하고 질문권을 차감하지 않는 규칙 적용 전후의 비용·이상 답변 비교; metric=cost_per_answer
+- I cn | 프롬프트 주입을 완전히 막는다 | 현재 기술로 완전한 방어는 어렵다 | 기술 한계 || barrier=technology; holder=LLM 보안
+= (실패) 화제 후 챗봇 조정
+L: 질문권 Q&A도 '사주 질문만 받는다'를 분명히 해야 원가와 사고를 막는다.
+R: https://incidentdatabase.ai/cite/622/
+M: transaction | mature | b2c | us
+K: cost_per_answer | 범위 밖 요청의 원가와 사고
+T: ask | 질문 분류기로 사주·운세와 무관한 질문(숙제·코드·다른 사람 신상)을 걸러 정중히 거절하고 질문권을 돌려준다. 답변은 '회사 약속'이 될 문장을 만들지 않게 한다
+
+# dpd-bot | 고객에게 욕을 한 택배 챗봇 | AI 채팅·Q&A | failure | ITV
+D: deep
+S: 영국 택배사 DPD의 AI 고객센터 챗봇이 2024년 1월 화가 난 고객의 요청으로 욕을 하고 회사를 비꼬는 시를 썼다. DPD는 AI 기능을 껐다.
+X: 업데이트 후 챗봇이 회사 이미지를 해치는 말을 했다
+P: 고객이 원한 것은 택배 위치였는데, 챗봇은 대화 상대 역할까지 했다
+- O cn | 업데이트를 되돌린다 | 당연한 대응이지만 같은 일이 다시 생길 수 있다 | 뻔함 || barrier=not_core; holder=DPD
+- B cu | 화난 고객은 빨리 사람에게 넘긴다 | 자동화율을 높이는 것이 목표라는 고객센터 업계 통념 | 목표의 맹점 || barrier=incentive; holder=고객센터 비용 절감 목표; ev=https://itv.com/news/2024-01-19/dpd-disables-ai-chatbot-after-customer-service-bot-appears-to-go-rogue; test=싫어요 2회 연속 시 사람 상담 안내로 넘기는 군과 계속 AI 재답변 군의 환불 요청률 비교; metric=answer_refund_rate
+- I ti | 출시 전에 모든 대화를 테스트한다 | 사용자가 만드는 대화 경우의 수가 무한하다 | 기술 한계 || barrier=technology; holder=생성 AI 테스트
+= (실패) AI 기능 중단
+L: 불만 고객에게 AI가 계속 답하면 사고가 커진다. 싫어요가 반복되면 사람에게 넘기는 출구가 필요하다.
+R: https://itv.com/news/2024-01-19/dpd-disables-ai-chatbot-after-customer-service-bot-appears-to-go-rogue
+M: transaction | mature | b2c | eu
+K: answer_refund_rate | 불만 고객 응대 실패
+T: ask | 같은 질문에 싫어요를 두 번 누르면 더 생성하지 않고 '사람이 확인 후 답변·환불' 경로로 넘긴다. 답변 톤 규칙에 비꼼·농담 금지를 둔다
+
+# google-aio | 농담 글을 사실로 답한 검색 AI | AI 채팅·Q&A | failure | Google 블로그, TechCrunch
+D: deep
+S: 구글은 2024년 5월 검색 결과 위에 AI 요약(AI Overviews)을 띄웠다. 치즈가 피자에서 미끄러질 때 무독성 풀을 넣으라는 답(11년 전 레딧 농담에서 온 것)과 하루 돌 한 개를 먹으라는 답(풍자 기사에서 온 것)이 퍼졌다.
+X: 아무도 묻지 않던 엉뚱한 질문에 AI가 진지하게 답했다
+P: 근거가 빈약한 질문에도 답을 만들어 냈다
+- O cn | 문제 답변을 하나씩 지운다 | 흔한 대응이고 새 사례가 계속 나온다 | 뻔함 || barrier=not_core; holder=검색 품질팀
+- B cn | 근거가 약하면 답하지 않거나 '모른다'고 한다 | 답을 못 하면 실패라는 검색 업계 통념 | 무응답의 맹점 || barrier=belief; holder=검색 업계; ev=https://blog.google/products-and-platforms/products/search/ai-overviews-update-may-2024/?afsrc=1; test=태어난 시간을 모르는 사람의 시주 관련 질문에 '시간을 알면 더 정확'을 안내하고 답 범위를 줄이는 군과 그대로 답하는 군의 싫어요 비교; metric=answer_satisfaction
+- I ch | 사용자가 쓴 글을 근거에서 모두 뺀다 | 포럼은 생생한 1차 정보의 원천이라 다 뺄 수 없다 | 구조 || barrier=structural; holder=웹 정보 생태계
+- T ti | 대규모 공개 전 작은 범위에서 먼저 시험한다 | 경쟁 압박으로 공개 범위가 컸다 | 시장 변화 || barrier=market_change; holder=AI 검색 경쟁; changed=AI 검색 경쟁 격화; year=2024
+= 엉뚱한 질문 감지·풍자 콘텐츠 제외·포럼 의존 축소
+L: '모르는 것은 모른다'고 하는 답이 신뢰를 지킨다. 태어난 시간을 모르면 시주 관련 답은 범위를 줄여야 한다.
+R: https://blog.google/products-and-platforms/products/search/ai-overviews-update-may-2024/?afsrc=1
+R: https://techcrunch.com/2024/05/31/google-admits-its-ai-overviews-need-work-but-were-all-helping-it-beta-test/
+M: advertising | mature | b2c | global
+K: answer_satisfaction | 근거 없는 답
+T: ask | 입력 정보가 부족한 질문(태어난 시간 미상, 상대 생년월일 없는 궁합)은 답할 수 있는 범위를 먼저 말하고, 정보를 더 넣으면 질문권 차감 없이 다시 답한다
+
+# neda-tessa | 섭식장애 상담 챗봇이 다이어트를 권하다 | AI 채팅·Q&A | failure | NPR
+D: deep
+S: 미국 섭식장애협회(NEDA)는 상담 전화를 줄이고 챗봇 Tessa를 앞세웠다. Tessa가 칼로리 제한 같은 해로운 조언을 했다는 제보가 나오자 2023년 5월 30일 내려졌다.
+X: 위기에 있는 사람에게 챗봇이 해로운 답을 했다
+P: 민감한 질문을 일반 질문처럼 처리했다
+- O co | 답변 규칙을 조금 손본다 | 당장 하는 대응이지만 위기 상황에서는 한 번의 오답도 치명적이다 | 뻔함 || barrier=not_core; holder=NEDA
+- B cu | 위기 신호가 보이면 AI 답변 대신 사람·전문 기관으로 넘긴다 | 비용을 줄이려 사람 상담을 챗봇으로 바꾸는 것이 효율이라는 통념 | 효율의 맹점 || barrier=incentive; holder=비용 절감 목표; ev=https://www.npr.org/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea; test=자해·위기 표현 감지 시 운세 답변 대신 도움 기관 안내를 보여 주는 규칙 적용 후 민감 질문 비중과 신고 수 추적; metric=sensitive_question_share
+- I cn | 챗봇이 전문 상담사 수준으로 답하게 한다 | 의료·심리 상담은 자격과 책임이 필요하다 | 규제 || barrier=regulation; holder=의료·상담 자격 제도
+= (실패) 챗봇 중단
+L: 사주 질문에도 '죽고 싶다', '헤어지면 못 살 것 같다' 같은 위기 신호가 섞인다. 이때는 운세가 아니라 도움 기관 안내가 답이다.
+R: https://www.npr.org/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea
+M: hybrid_impact | mature | b2c | us
+K: sensitive_question_share | 위기 질문의 오처리
+T: ask | 질문 분류기에 위기 신호(자해·극단적 표현) 규칙을 두고, 감지되면 운세 답변을 만들지 않고 상담 기관 안내를 보여 주며 질문권을 차감하지 않는다
+
+# snap-myai | 지울 수 없는 AI 친구를 맨 위에 고정하다 | AI 채팅·Q&A | failure | TechCrunch
+D: deep
+S: 스냅챗은 2023년 4월 모든 이용자의 채팅 목록 맨 위에 AI 챗봇 My AI를 고정했다. 무료 이용자는 지울 수 없었다. 미국 앱스토어 평균 평점이 3.05에서 1.67로 떨어지고 리뷰의 75%가 별 1개였다.
+X: 원하지 않는 AI를 강제로 보게 했다
+P: 고객이 고르지 않은 대화 상대를 밀어 넣었다
+- O ch | 알림·홍보를 더 한다 | 흔한 방법이지만 반감만 키운다 | 뻔함 || barrier=competition; holder=소셜 앱
+- B cu | AI 대화는 고객이 원할 때 열게 한다 | 노출 위치가 곧 사용량이라는 성장팀 통념 | 노출의 맹점 || barrier=incentive; holder=사용량 지표 목표; ev=https://techcrunch.com/2023/04/24/snapchat-sees-spike-in-1-star-reviews-as-users-pan-the-my-ai-feature-calling-for-its-removal; test=결과 화면에 질문창을 펼쳐 둔 군과 '궁금한 점 묻기' 버튼만 둔 군의 리포트 열람 완료율·질문 진입률 비교; metric=read_complete_rate
+- T be | AI 챗봇에 대한 호기심을 이용한다 | 챗GPT 열풍 직후라 AI를 넣으면 반길 것이라 봤다 | 행동 변화 || barrier=behavior_change; holder=소셜 앱; changed=ChatGPT 열풍; year=2023
+= (실패) 평점 급락 후 삭제 기능 제공
+L: 질문 기능을 결과 읽기보다 앞에 밀어 넣으면 결과 경험을 해친다. 질문은 읽은 뒤에 생긴다.
+R: https://techcrunch.com/2023/04/24/snapchat-sees-spike-in-1-star-reviews-as-users-pan-the-my-ai-feature-calling-for-its-removal
+M: advertising | scale | b2c | us
+K: rating | 강제 노출 반발
+T: ask | 질문 버튼은 각 장을 다 읽은 뒤(장 끝)와 결과 끝에만 두고, 읽는 중에는 띄우지 않는다. 팝업으로 질문권을 권하지 않는다
+O: rating | 미국 앱스토어 평균 평점 3.05 | 1.67, 리뷰의 75%가 별 1개 | 출시 직후 1주 집계 | https://techcrunch.com/2023/04/24/snapchat-sees-spike-in-1-star-reviews-as-users-pan-the-my-ai-feature-calling-for-its-removal
+
+// ---- 5. AI가 사람 상담을 대신할 때 ----
+
+# klarna-ai | AI가 첫 달에 상담 3분의 2를 맡다 | AI 채팅·Q&A | real | Klarna
+D: deep
+S: 클라르나는 2024년 2월 AI 상담 도우미가 첫 달 230만 건, 전체 채팅의 3분의 2를 처리했다고 발표했다. 상담원 700명 몫이고 해결 시간은 11분에서 2분 미만으로, 재문의는 25% 줄었다고 밝혔다.
+X: 상담 대기가 길고 같은 문의가 반복된다
+P: 대부분의 문의는 정해진 답이 있는 짧은 질문이었다
+- O co | 상담원을 더 뽑는다 | 흔한 대응이고 비용이 계속 늘어난다 | 뻔함 || barrier=competition; holder=고객센터 업계
+- T ti | LLM이 문서를 읽고 바로 답한다 | 규칙 기반 챗봇은 해결률이 낮았는데 LLM으로 바뀌었다 | 기술 변화 || barrier=tech_change; holder=규칙 기반 챗봇; changed=GPT-4; year=2024; test=질문 답변 지연(제출→첫 글자)을 줄이는 스트리밍 표시 적용 군과 완성 후 표시 군의 답변 열람·만족 비교; metric=generation_latency
+- B cu | 빠른 답이 친절한 답보다 만족을 준다 | 사람 상담이 늘 더 낫다는 업계 통념 | 서비스의 맹점 || barrier=belief; holder=고객센터 업계; ev=https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/
+= AI 상담 도우미로 문의 3분의 2 처리
+L: 짧고 답이 정해진 질문은 AI가 빠르게 풀어 만족을 준다. 답변 속도 자체가 품질이다.
+R: https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/
+M: finance | scale | b2c | eu
+K: generation_latency | 상담 대기
+T: ask | 답변을 생성되는 대로 흘려 보여 주고(스트리밍), 첫 글자까지 3초 안을 목표로 둔다. 대기 중엔 '당신의 일간·대운을 보고 있어요' 같은 진행 문구를 보여 준다
+O: generation_latency | 평균 해결 11분 | 2분 미만, 재문의 25% 감소, 첫 달 230만 건 | 회사 발표 | https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/
+
+# klarna-rehire | 1년 뒤 다시 사람을 뽑다 | AI 채팅·Q&A | failure | Bloomberg, Entrepreneur
+D: deep
+S: 클라르나는 AI로 상담원을 대신하며 1년 넘게 채용을 멈췄다. 2025년 5월 CEO는 비용을 너무 앞세운 결과 품질이 떨어졌다며 다시 사람 상담원을 뽑겠다고 했다. 고객이 원하면 언제나 사람과 이야기할 수 있게 하겠다고 밝혔다.
+X: AI 상담 뒤 고객 불만이 늘었다
+P: 빠른 답만 재고 '사람에게 묻고 싶은 순간'을 재지 않았다
+- O cn | AI를 더 고도화한다 | 당연한 대응이지만 사람을 원하는 순간은 남는다 | 뻔함 || barrier=not_core; holder=AI 상담 도입 기업
+- B cu | 고객이 원하면 언제나 사람에게 넘어갈 수 있게 한다 | 자동화율이 높을수록 좋다는 비용 중심 평가 | 평가 기준의 맹점 || barrier=incentive; holder=비용 절감 목표; ev=https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396; test=AI 답변 아래 '사람 해석가에게 묻기(유료)' 선택지를 둔 군과 없는 군의 환불 요청·질문권 재구매 비교; metric=answer_refund_rate
+- T be | 고객이 AI 상담에 대한 기대를 낮춘다 | AI 상담 경험이 쌓이며 사람 상담의 가치가 다시 보였다 | 행동 변화 || barrier=behavior_change; holder=AI 전면 자동화; changed=AI 상담 경험 확산; year=2025
+= AI와 사람 상담을 함께 쓰는 이중 구조, 원격 상담원 모집
+L: AI가 답하더라도 '사람에게 갈 문'이 신뢰를 만든다. 문이 있으면 덜 쓰더라도 안심한다.
+R: https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396
+R: https://www.bloomberg.com/news/articles/2025-05-08/klarna-turns-from-ai-to-real-person-customer-service
+M: finance | scale | b2c | eu
+K: answer_refund_rate | AI 전면 자동화의 품질 저하
+T: ask | AI 질문권 위에 '사람 해석가 확인' 옵션을 두고, 싫어요가 난 답변은 사람이 보고 다시 답하는 경로를 연다. 실제 사용률이 낮아도 '있다'는 표시가 결제 불안을 줄이는지 본다
+
+# naver-expert | 운세·타로가 1:1 유료 상담 1위 분야가 되다 | AI 채팅·Q&A | real | 뉴스1, 아시아경제
+D: deep
+S: 네이버 엑스퍼트는 전문가에게 1:1로 묻는 유료 상담 플랫폼이다. 3년간 200만 건이 연결됐고 운세·타로가 가장 큰 분야다. 이용자 10명 중 6명이 재구매하고 평점은 4.7, MZ세대가 80%다. 상담은 대체로 1만~5만 원이다.
+X: 운세 상담을 하고 싶어도 어디서 누구에게 해야 할지 모른다
+P: 검색으로 생긴 질문을 믿을 만한 사람에게 바로 연결할 길이 없었다
+- O ch | 운세 콘텐츠를 더 많이 노출한다 | 포털의 흔한 방식이고 '내 질문'에는 답하지 못한다 | 뻔함 || barrier=competition; holder=포털 콘텐츠
+- B cu | 검색 사용자를 1:1 유료 상담으로 연결한다 | 포털은 무료 정보 공간이라 유료 상담은 맞지 않는다는 통념 | 공간의 맹점 || barrier=belief; holder=포털 업계; ev=https://www.news1.kr/amp/it-science/general-it/4874616; test=첫 질문권 구매자 중 절반에게 답변 3일 뒤 '그 뒤 어떻게 됐나요?' 알림을 보내 재구매율 비교; metric=repeat_pay_rate
+- T be | 젊은 층이 운세를 '상담'으로 산다 | 비대면 상담과 간편결제가 익숙해지며 운세 상담 구매가 늘었다 | 행동 변화 || barrier=behavior_change; holder=오프라인 점집; changed=비대면 상담 일상화; year=2020
+= 검색 연결형 1:1 유료 상담, 운세·타로가 최대 분야
+L: 국내에서 '운세 질문에 돈을 내는' 수요는 이미 증명됐다. 재구매 60%는 질문이 한 번으로 끝나지 않는다는 뜻이다.
+R: https://www.news1.kr/amp/it-science/general-it/4874616
+R: https://view.asiae.co.kr/article/2020100610043493224
+M: marketplace | growth | c2c | kr
+K: repeat_pay_rate | 운세 상담 수요 연결
+T: ask | 답변 3일 뒤 '그 일은 어떻게 됐나요? 다음 흐름을 물어보세요' 알림(수신 동의자)을 보내 다음 질문권으로 잇는다. 사람 상담 가격(1만~5만 원)을 AI 질문권 가격의 상한 참고로 쓴다
+O: repeat_pay_rate | 서비스 3년 | 누적 200만 건 연결, 재구매 10명 중 6명, 평점 4.7 | 회사 발표 | https://www.news1.kr/amp/it-science/general-it/4874616
+
+# hellobot | 타로 챗봇으로 100만, 그리고 문 닫기 | AI 채팅·Q&A | failure | THE VC, 앱스토어
+D: deep
+S: 띵스플로우의 헬로우봇은 타로·사주 챗봇이 대화하듯 운세를 봐 주는 앱이었다. 타로 챗봇 '라마마'는 3개월 만에 100만 명이 썼다. 하트(재화)를 충전해 상담을 열었다. 회사는 2025년 5월 31일 문을 닫았고 앱은 다른 회사가 운영한다.
+X: 챗봇 운세가 인기였지만 회사를 지킬 만큼 벌지 못했다
+P: 대화형 경험은 사랑받았지만 재화 소비 구조와 원가가 맞지 않았다
+- O pr | 하트 가격을 올린다 | 흔한 대응이지만 이용자가 떠난다 | 뻔함 || barrier=competition; holder=운세 앱
+- B cu | 캐릭터 챗봇이 대화하듯 운세를 풀어 준다 | 운세는 글로 읽는 것이라는 통념 | 형식의 맹점 || barrier=belief; holder=운세 앱 업계; ev=https://www.theteams.kr/teams/8006/post/69992
+- T co | 범용 AI가 공짜로 타로·사주를 봐 준다 | LLM이 퍼지며 챗봇 운세의 희소성이 사라졌다 | 시장 변화 || barrier=market_change; holder=챗봇 운세 앱; changed=무료 범용 AI의 운세 대체; year=2024; test=하트처럼 재화로 파는 군과 '질문 1회 OOO원'으로 바로 파는 군의 질문권 구매율·문의 수 비교; metric=ticket_purchase_rate
+- I cn | 모든 챗봇 대화를 사람이 쓴 시나리오로 만든다 | 시나리오 제작비가 콘텐츠 수만큼 늘어난다 | 비용 || barrier=cost; holder=콘텐츠 제작비
+= (실패) 캐릭터 챗봇 운세로 성장했으나 2025년 5월 법인 폐업, 앱은 운영사 변경
+L: 대화형 운세는 이미 국내에서 검증된 형식이다. 다만 재화(하트) 체계는 '질문 1개 얼마'를 흐리게 만들고, 무료 AI가 나오자 버티지 못했다.
+R: https://thevc.kr/thingsflow
+R: https://www.theteams.kr/teams/8006/post/69992
+R: https://apps.apple.com/kr/app/id1294957719
+M: pay_per_unit | turnaround | b2c | kr
+K: revenue | 대화형 운세의 수익 구조
+T: ask | 재화 대신 '질문 1회'를 단위로 판다. 캐릭터 말투는 1p 스토리의 주인공을 이어 쓰되, 답변 내용은 명식 근거로 무료 AI와 다르게 만든다
+O: visitors | 라마마 출시 | 3개월 만에 100만 명 이용 | 회사 발표 | https://www.theteams.kr/teams/8006/post/69992
+
+// ---- 6. 캐릭터·동반자 채팅 ----
+
+# cai-monetize | 하루 80분을 쓰는데 매출은 작다 | AI 채팅·Q&A | real | The Decoder, Sacra
+D: deep
+S: Character.AI 이용자는 하루 평균 약 80분을 쓴다. 그런데 매출은 2025년 7월 연환산 약 3000만 달러로, 수입원은 월 9.99달러 구독 c.ai+가 대부분이다.
+X: 몰입은 엄청난데 돈이 되지 않는다
+P: 무료 대화가 핵심 경험이라 유료로 팔 '단위'가 없었다
+- O pr | 광고를 붙인다 | 흔한 방법이지만 몰입을 깨고 단가가 낮다 | 뻔함 || barrier=competition; holder=소셜 앱
+- B pr | 대화 자체가 아니라 '빠른 응답·음성·우선 접속'을 판다 | 핵심 경험(대화)을 유료화하면 이탈한다는 통념 | 무엇을 팔지의 맹점 || barrier=belief; holder=소셜 앱 업계; ev=https://sacra.com/c/character-ai/
+- I cn | 무제한 무료 대화를 계속 준다 | 하루 80분의 추론 비용은 무료로 감당하기 어렵다 | 비용 || barrier=cost; holder=추론 비용
+- T be | 사람들이 AI 캐릭터와의 대화를 일상으로 받아들인다 | 생성 AI 이후 캐릭터 대화가 놀이가 됐다 | 행동 변화 || barrier=behavior_change; holder=텍스트 게임·채팅 앱; changed=생성 AI 캐릭터 대화 확산; year=2023; test=질문 1회 답변 품질(길이·근거)을 높인 군과 짧은 답 여러 개 군의 1인당 질문 수·매출 비교; metric=questions_per_buyer
+= 무료 대화 + 월 9.99달러 구독(빠른 응답·음성 등)
+L: 긴 대화 시간은 매출로 이어지지 않는다. 우리는 대화 시간이 아니라 '답 1개의 가치'를 판다.
+R: https://the-decoder.com/character-ai-keeps-young-people-glued-to-their-smartphones-for-an-average-of-80-minutes-a-day/
+R: https://sacra.com/c/character-ai/
+M: freemium | growth | b2c | us
+K: questions_per_buyer | 몰입 대비 낮은 수익
+T: ask | 체류 시간을 목표로 두지 않는다. 질문 1회의 답을 충분히 길고 근거 있게 만들어 '한 번 물어도 돈값'이 되게 하고, 1인당 질문 수와 질문당 만족을 함께 본다
+O: revenue | - | 2025년 7월 연환산 약 3000만 달러, 하루 평균 이용 약 80분 | Sacra 추정, The Decoder 보도 | https://sacra.com/c/character-ai/
+
+# cai-teen | 10대의 자유 대화를 막다 | AI 채팅·Q&A | real | Fortune
+D: deep
+S: Character.AI는 규제 압력과 소송 속에 2025년 11월부터 18세 미만의 자유 대화를 막고 나이 확인을 강화했다. 10대에게는 대화 대신 피드·이미지 기능을 준다.
+X: 미성년자 이용이 사회 문제가 됐다
+P: 나이를 모르는 채로 모두에게 같은 대화를 열었다
+- O co | 이용 약관에 나이 제한을 적는다 | 형식적인 약관 제한은 실제로 지켜지지 않는다 | 해 봤는데 효과 없음 || barrier=not_core; holder=소셜 앱
+- I cn | 모든 이용자의 신분증을 확인한다 | 가입 장벽과 개인정보 부담이 너무 크다 | 사회적 수용 || barrier=social; holder=이용자 프라이버시 기대
+- T ti | 18세 미만은 자유 대화를 끄고 다른 기능을 준다 | 규제·여론 압력이 커지며 성장보다 안전을 택해야 했다 | 규제 변화 || barrier=regulation_change; holder=개방형 AI 채팅; changed=미성년자 보호 규제 압력; year=2025; ev=https://fortune.com/2025/10/29/character-ai-ban-children-teens-chatbots-regulatory-pressure-age-verification-online-harms; test=생년월일로 미성년자로 확인되면 질문권 월 결제 한도·민감 주제 차단을 적용하고 환불·민원 건수 추적; metric=refund_rate
+= 18세 미만 자유 대화 중단, 나이 확인 도구 도입
+L: 사주 서비스는 생년월일을 이미 받으므로 나이를 안다. 아는 이상 미성년자 보호 책임도 진다.
+R: https://fortune.com/2025/10/29/character-ai-ban-children-teens-chatbots-regulatory-pressure-age-verification-online-harms
+R: https://sacra.com/research/character-ai/
+M: freemium | growth | b2c | us
+K: refund_rate | 미성년자 이용 위험
+T: ask | 입력한 생년월일로 미성년자이면 질문권 결제 한도를 두고 연애·성·자해 등 민감 주제 질문은 운세 답변 대신 안내로 바꾼다. 미성년자 결제 취소 환불 절차를 미리 만든다
+
+# replika-erp | 규제 명령 하루 만에 사라진 기능 | AI 채팅·Q&A | failure | Inquirer
+D: deep
+S: 동반자 챗봇 Replika는 2023년 2월 3일 이탈리아 개인정보 당국(Garante)의 처리 중단 명령을 받은 뒤 성적인 역할극 기능을 없앴다. 이용자 반발이 거세자 2월 1일 이전 가입자에게 기능을 되돌렸다.
+X: 하루아침에 기능이 바뀌어 유료 이용자가 분노했다
+P: 고객이 돈을 낸 핵심 경험을 회사가 예고 없이 바꿨다
+- O cn | 기능을 바로 다시 켠다 | 규제 명령 아래서는 할 수 없다 | 뻔함 || barrier=competition; holder=Replika
+- I cn | 규제 당국과 맞선다 | 개인정보 처리 중단 명령은 따를 수밖에 없다 | 규제 || barrier=regulation; holder=이탈리아 개인정보 당국
+- B cu | 바꾸기 전에 기존 구매자 권리를 지키는 경로(기존 가입자 유지)를 먼저 둔다 | 서비스 정책은 회사가 언제든 바꿀 수 있다는 약관 중심 사고 | 고객 약속의 맹점 || barrier=belief; holder=구독 앱 운영; ev=https://technology.inquirer.net/?p=122500; test=질문 답변 규칙(민감 주제 차단 등)을 바꿀 때 기존 질문권 보유자에게 미리 알리고 원하면 환불하는 절차 적용 후 환불 사유 비중 추적; metric=refund_reason_share
+- T ti | 기존 가입자만 예외로 되돌린다 | 반발이 커진 뒤에야 가입 시점 기준 예외를 만들었다 | 규제 변화 || barrier=regulation_change; holder=일괄 정책 변경; changed=이탈리아 Garante 명령; year=2023
+= (실패 후 수습) 기능 제거, 이후 2월 1일 이전 가입자에게 복원
+L: 산 사람의 기대를 바꾸려면 미리 알리고 선택권을 줘야 한다. 이미 판 질문권의 답변 규칙을 바꿀 때도 마찬가지다.
+R: https://technology.inquirer.net/?p=122500
+M: subscription | growth | b2c | global
+K: refund_reason_share | 일방적 기능 변경 반발
+T: ask | 남은 질문권이 있는 사람에게는 답변 정책(민감 주제 범위·답변 길이)을 바꾸기 전에 알리고, 원하면 남은 질문권을 환불한다
+
+# iruda | 대화 데이터로 만든 챗봇이 과징금을 받다 | AI 채팅·Q&A | failure | 대한민국 정책브리핑
+D: deep
+S: 스캐터랩은 연애 분석 앱 이용자 약 60만 명의 카카오톡 대화 94억 건을 챗봇 '이루다' 학습에 썼다. 개인정보보호위원회는 2021년 4월 28일 과징금·과태료 1억 330만 원을 부과했다.
+X: 이용자는 자기 대화가 챗봇 학습에 쓰일 줄 몰랐다
+P: 수집 목적과 다른 용도로 개인 대화를 썼다
+- O co | 약관에 학습 활용 문구를 넣는다 | 흔한 방법이지만 '신규 서비스 개발' 같은 포괄 문구로는 동의로 인정받지 못했다 | 해 봤는데 효과 없음 || barrier=not_core; holder=앱 운영사
+- I cn | 개인 대화를 그대로 학습에 쓴다 | 개인정보 보호법상 목적 외 이용이다 | 규제 || barrier=regulation; holder=개인정보보호위원회; ev=https://www.korea.kr/briefing/policyBriefingView.do?newsId=156449232
+- B cu | 이용자 질문은 답변에만 쓰고, 학습·분석은 별도 동의와 가명 처리 후 쓴다 | 서비스 데이터는 회사 자산이라는 통념 | 데이터 소유의 맹점 || barrier=belief; holder=데이터 기반 스타트업; test=질문 입력창에 '질문은 답변에만 쓰고 저장 기간 후 지웁니다' 안내를 단 군과 없는 군의 질문 제출률 비교; metric=question_submit_rate
+= (실패) 과징금·과태료 1억 330만 원, 서비스 중단 후 재정비
+L: 사주 질문에는 연애·가족·건강 같은 가장 사적인 이야기가 담긴다. 질문 데이터의 용도를 좁게 밝혀야 질문이 나온다.
+R: https://www.korea.kr/briefing/policyBriefingView.do?newsId=156449232
+M: freemium | turnaround | b2c | kr
+K: question_submit_rate | 개인 대화 데이터 오남용
+T: ask | 질문 입력창에 '질문은 답변을 만드는 데만 쓰고 OO일 뒤 지웁니다'를 적고, 품질 개선용 활용은 별도 선택 동의로 받는다. 질문 속 타인 실명은 저장 전에 가린다
+O: refund_rate | - | 과징금·과태료 총 1억 330만 원 | 개인정보보호위원회 처분 | https://www.korea.kr/briefing/policyBriefingView.do?newsId=156449232
+
+# zeta | 같은 회사가 다시 만든 AI 채팅, 이번엔 흑자 | AI 채팅·Q&A | real | 벤처스퀘어, 딜사이트, 경향신문
+D: deep
+S: 이루다를 만든 스캐터랩은 캐릭터 AI 채팅 '제타'를 내놓았다. 광고 기반 무료와 월 1만 900원 제타패스를 함께 쓴다. MAU 148만 명 중 10대가 38만 명이고, 10대에게는 하루 3시간·월 10만 원 결제 한도를 둔다. 2025년 매출 267억 원, 영업이익 28억 원이다.
+X: 캐릭터 채팅은 인기가 있지만 미성년자 이용과 수익이 동시에 문제다
+P: 성장과 보호를 함께 설계해야 했다
+- O pr | 무료로만 키운다 | 이용자는 늘지만 비용이 쌓인다 | 뻔함 || barrier=competition; holder=AI 채팅 앱
+- T ti | 광고 무료 + 월 구독(제타패스)을 함께 쓴다 | 광고 단가와 LLM 원가가 맞아떨어지면서 무료층을 광고로 감당할 수 있게 됐다 | 원가 변화 || barrier=tech_change; holder=유료 전용 AI 채팅; changed=LLM 원가 하락과 자체 모델; year=2024; ev=https://www.venturesquare.net/1097430/
+- B cu | 10대 이용 시간·결제 한도를 먼저 건다 | 한도를 걸면 매출이 준다는 통념 | 보호의 맹점 || barrier=belief; holder=앱 업계; ev=https://khan.co.kr/article/202610121608001; test=미성년자 질문권 월 결제 한도 적용 후 미성년자 결제 취소·민원 건수와 전체 질문권 매출 변화 추적; metric=refund_rate
+= 광고 무료 + 제타패스 구독, 10대 이용 한도
+L: 국내 AI 채팅에서 흑자를 낸 사례다. 보호 장치(10대 한도)를 두고도 매출과 이익이 났다.
+R: https://www.venturesquare.net/1097430/
+R: https://dealsite.co.kr/articles/172430
+R: https://khan.co.kr/article/202610121608001
+M: freemium | growth | b2c | kr
+K: refund_rate | 미성년자 결제 위험
+T: ask | 미성년자(생년월일 기준)는 질문권 월 결제 한도를 두고, 한도 도달 시 보호자 안내를 보여 준다. 성인은 한도 없이 1·5·10회 묶음을 연다
+O: revenue | - | 2025년 매출 267억 원, 영업이익 28억 원, MAU 148만 명(10대 38만 명) | 공시·보도 | https://dealsite.co.kr/articles/172430
+
+# meta-personas | 유명인 얼굴을 빌린 AI는 1년을 못 갔다 | AI 채팅·Q&A | failure | Business Insider
+D: deep
+S: 메타는 2023년 유명인의 얼굴과 이름을 빌린 AI 캐릭터 챗봇을 내놓았다. 일부 유명인에게 수백만 달러를 줬다는 보도가 있었지만 1년이 안 돼 접었다.
+X: 유명인을 내세웠는데 사람들이 대화하지 않았다
+P: 사람들은 유명인 '흉내'가 아니라 자기 관심사에 맞는 대화 상대를 원했다
+- O ch | 더 유명한 사람을 섭외한다 | 흔한 마케팅 발상이고 비용만 는다 | 뻔함 || barrier=competition; holder=플랫폼 마케팅
+- B cu | 사용자가 직접 원하는 캐릭터를 만든다 | 유명인이 곧 관심을 끈다는 마케팅 통념 | 관심의 맹점 || barrier=belief; holder=플랫폼 마케팅 조직; ev=https://businessinsider.nl/meta-scraps-celebrity-ai-chatbots-after-less-than-a-year-despite-reportedly-paying-top-creators-as-much-as-5-million; test=답변을 '유명 역술가 캐릭터' 이름으로 내는 군과 1p 주인공(나의 캐릭터) 말투로 내는 군의 답변 만족도 비교; metric=answer_satisfaction
+- I cn | 유명인이 직접 모든 대화를 검수한다 | 대화량이 너무 많아 불가능하다 | 비용 || barrier=cost; holder=유명인 섭외·검수 비용
+= (실패) 유명인 AI 캐릭터 종료, 사용자 제작 AI로 전환
+L: 이름값보다 '내 이야기'가 몰입을 만든다. 답변을 가짜 역술가 이름으로 내면 사람 상담처럼 보이는 위험도 있다.
+R: https://businessinsider.nl/meta-scraps-celebrity-ai-chatbots-after-less-than-a-year-despite-reportedly-paying-top-creators-as-much-as-5-million
+M: advertising | scale | b2c | global
+K: answer_satisfaction | 유명인 캐릭터의 낮은 몰입
+T: ask | 답변 화자를 가짜 역술가가 아니라 1p 스토리의 '나의 캐릭터' 또는 AI임을 밝힌 해석가로 둔다. 실존 인물처럼 보이는 이름·사진은 쓰지 않는다
+
+# chai-ugc | 이용자가 만든 봇으로 연 매출 1억 달러 | AI 채팅·Q&A | real | Dealroom, PRNewswire
+D: deep
+S: Chai는 이용자가 만든 AI 캐릭터와 대화하는 앱이다. 엔지니어 십여 명으로 운영하며 2025년 초 2000만 달러이던 연환산 매출이 2026년 7월 1억 달러를 넘었다고 밝혔다. 구독과 인앱 결제로 번다.
+X: 캐릭터를 회사가 다 만들면 콘텐츠가 부족하다
+P: 사람마다 원하는 대화 상대가 너무 다양했다
+- O cn | 회사가 인기 캐릭터를 더 만든다 | 흔한 방법이고 제작비가 든다 | 뻔함 || barrier=competition; holder=AI 채팅 앱
+- B ch | 이용자가 캐릭터를 만들고 공유한다 | 품질 관리를 위해 콘텐츠는 회사가 만들어야 한다는 통념 | 통제의 맹점 || barrier=belief; holder=콘텐츠 앱 업계; ev=https://dealroom.co/news/160910-chai-ai-passes-100m-arr-with-a-team-of-around-15/
+- T ti | 이용자 피드백으로 모델을 계속 고른다 | 오픈 모델과 피드백 학습이 싸지면서 소규모 팀도 모델을 운영할 수 있게 됐다 | 기술 변화 || barrier=tech_change; holder=대형 모델 의존; changed=오픈소스 LLM 확산; year=2022; test=답변마다 좋아요·싫어요를 받아 주 단위로 답변 프롬프트 두 버전을 바꿔 가며 만족도 비교; metric=answer_satisfaction
+- I cn | 모든 캐릭터 대화를 사람이 검수한다 | 대화량이 많아 불가능하다 | 비용 || barrier=cost; holder=검수 인건비
+= 이용자 제작 캐릭터 + 구독·인앱 결제, 이용자 피드백으로 모델 개선
+L: 답변마다 받는 작은 피드백이 품질 개선의 연료다. 질문권 Q&A도 좋아요·싫어요를 모아 프롬프트를 계속 고칠 수 있다.
+R: https://dealroom.co/news/160910-chai-ai-passes-100m-arr-with-a-team-of-around-15/
+R: https://pulse2.com/chai-48-million-annual-revenue-surpassed-following-amd-and-coreweave-funding
+M: freemium | growth | c2c | us
+K: answer_satisfaction | 다양한 수요를 못 채우는 콘텐츠
+T: ask | 답변마다 좋아요·싫어요와 이유(동문서답·뻔함·계산 이상)를 받고, 주마다 답변 프롬프트 두 버전을 나눠 만족도가 높은 쪽으로 바꾼다
+O: revenue | 2025년 초 연환산 2000만 달러 | 2026년 7월 연환산 1억 달러 이상 | 회사 발표(감사 전) | https://dealroom.co/news/160910-chai-ai-passes-100m-arr-with-a-team-of-around-15/
+
+# woebot | 규제 비용을 못 넘은 상담 챗봇 | AI 채팅·Q&A | failure | STAT
+D: deep
+S: 정신건강 챗봇 Woebot은 2025년 6월 30일 소비자 앱을 닫았다. 창업자는 FDA 승인 과정의 비용과 시간이 AI 발전 속도를 따라가지 못했다고 밝혔다.
+X: 효과를 입증하려면 의료기기 수준의 절차가 필요했다
+P: '상담'이라고 부르는 순간 규제 비용이 붙었다
+- O co | 기능을 줄여 규제를 피한다 | 흔한 방법이지만 핵심 가치가 약해진다 | 뻔함 || barrier=competition; holder=디지털 헬스 업계
+- I cn | 생성형 AI 상담을 승인받는다 | 의료기기 승인 비용과 시간이 너무 크다 | 규제 || barrier=regulation; holder=FDA 의료기기 심사; ev=https://www.statnews.com/2025/07/02/woebot-mental-health-chatbot-shuts-down-founder-says-ai-moving-faster-than-regulators/
+- B cu | '치료'가 아니라 '자기 성찰 도구'로 범위를 좁힌다 | 효과를 크게 말해야 팔린다는 통념 | 표현의 맹점 || barrier=belief; holder=헬스 앱 마케팅; test=질문권 설명을 '고민 상담'이 아니라 '사주로 보는 흐름 해석'으로 표기한 군과 상담 표기 군의 결제율·민원 비교; metric=ticket_purchase_rate
+= (실패) 소비자 앱 종료
+L: 사주 Q&A를 '상담·치료'로 홍보하면 규제와 기대 수준이 함께 올라간다. '해석'과 '참고'로 범위를 지켜야 한다.
+R: https://www.statnews.com/2025/07/02/woebot-mental-health-chatbot-shuts-down-founder-says-ai-moving-faster-than-regulators/
+M: freemium | turnaround | b2c | us
+K: ticket_purchase_rate | 상담 표현의 규제 비용
+T: ask | 질문권 상품명·설명에 '상담', '치료', '진단'을 쓰지 않고 '사주 흐름 해석'으로 부른다. 고민형 질문에도 결정은 본인이 하도록 문장을 맺는다
+
+# speak-tutor | 한국에서 먼저 터진 AI 대화 튜터 | AI 채팅·Q&A | real | TechCrunch, Forbes
+D: deep
+S: 스픽은 AI 튜터와 영어로 말하는 앱이다. 2019년 한국에서 먼저 출시해 교육 앱 매출 1위를 했고, 한국 인구의 약 6%가 썼다고 밝혔다. 이후 연환산 매출 1억 달러를 넘겼다.
+X: 사람 원어민 튜터는 비싸고 부끄럽다
+P: 학습자는 틀려도 평가받지 않는 연습 상대를 원했다
+- O pr | 화상 원어민 수업을 싸게 판다 | 이미 많은 업체가 하는 경쟁이다 | 뻔함 || barrier=competition; holder=화상 영어 업계
+- B cu | 사람 대신 AI와 말하게 해 부끄러움을 없앤다 | 회화는 사람과 해야 한다는 교육 업계 통념 | 학습의 맹점 || barrier=belief; holder=영어 교육 업계; ev=https://techcrunch.com/2023/08/31/openai-backed-language-learning-app-speak-raises-16m-to-expand-to-the-u-s
+- T cn | GPT-4로 자유 대화와 즉시 피드백을 준다 | 음성 인식과 LLM 품질이 올라가며 자유 대화가 가능해졌다 | 기술 변화 || barrier=tech_change; holder=정해진 문장 반복 앱; changed=GPT-4와 음성 인식 향상; year=2023
+- B ch | 한국을 첫 시장으로 고른다 | 실리콘밸리 회사는 미국부터 시작한다는 통념 | 시장 선택의 맹점 || barrier=belief; holder=미국 스타트업; test=질문 입력창 안내를 '부끄러운 질문도 괜찮아요(기록은 나만 봄)'로 바꾼 군과 기본 안내 군의 질문 제출률 비교; metric=question_submit_rate
+= 한국 먼저, AI 튜터 구독(80~200달러), 이후 기업·해외 확장
+L: 사람에게 묻기 민망한 질문일수록 AI에게 잘 묻는다. 연애·재회·돈 같은 사주 질문이 바로 그렇다.
+R: https://techcrunch.com/2023/08/31/openai-backed-language-learning-app-speak-raises-16m-to-expand-to-the-u-s
+R: https://www.forbes.com.au/news/innovation/this-startup-is-racing-duolingo-to-replace-human-language-tutors-with-ai/
+R: https://www.benzinga.com/news/topics/25/11/48975908/this-1-billion-ai-startup-backed-by-openai-khosla-ventures-just-hit-100m-revenue-racing-to-beat-duolingo
+M: subscription | growth | b2c | kr
+K: question_submit_rate | 사람에게 묻기 민망함
+T: ask | 질문 입력창에 '이 질문은 나만 봅니다'와 민망한 질문 예시(재회·전 애인·빚)를 보여 준다. 사람 상담보다 AI가 나은 지점(판단받지 않음)을 2p 문구로 쓴다
+O: revenue | 2019년 한국 출시 | 한국 인구 약 6%(약 300만 명) 이용, 이후 연환산 매출 1억 달러 돌파 | 회사 발표·보도 | https://techcrunch.com/2023/08/31/openai-backed-language-learning-app-speak-raises-16m-to-expand-to-the-u-s

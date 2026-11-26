@@ -52,3 +52,42 @@ kakao-emoticon | B | diff | 공유는 무료여야 퍼진다는 통념 때문에
 post-it | B | diff | 덜 읽히는 장은 실패한 콘텐츠라고 보고 다른 쓸 곳(공유·초대 미끼)을 찾지 않았다 | belief | - | birth-data-privacy
 webvan | B | diff | 콘텐츠를 다 만든 뒤 파는 제작 관행 때문에 '랜딩과 예약 결제로 수요부터 확인'하지 않았다 | belief | - | digital-withdrawal
 calm | B | diff | 운세 광고가 불안 자극형에 기대는 관행. 밤 시간 방문자에게 달래는 톤을 따로 쓰는 시도는 확인되지 않았다 | belief | - | -
+// AI 채팅·Q&A (질문권) 사례
+justanswer | B | diff | 사주 상담은 시간·건 단위 사람 상담이 표준이라 '결제를 부른 질문 원문에 바로 답'하는 질문권 결제 화면은 확인되지 않았다 | belief | naver-expert | digital-withdrawal
+intercom-fin | B | diff | 운세 앱은 재화를 먼저 차감하는 관행이라 '만족해야 차감'은 매출 손해로 여겨 시도하지 않았다 | belief | hellobot | -
+poe-ppm | O | table | 질문 난이도별 차감은 재화형 운세 앱(하트·츄르)이 이미 쓰는 방식이다 | competition | hellobot, sajuai | dark-sequential-price
+costar-ask | T | diff | LLM 이전에는 질문마다 사람이 답해야 해 소액 질문 묶음이 불가능했다. 국내 사주 서비스에서 1·5·10 질문권 묶음은 아직 흔하지 않다 | tech_change | - | dark-preselect, dark-false-hierarchy
+keen-psychic | O | table | 첫 무료 맛보기는 운세 업계 기본기다(포스텔러 첫 유료 무료). 질문 1회로 옮기는 것뿐이다 | competition | forceteller, nebula | -
+kasamba-audition | B | diff | 사주 해석은 하나의 정답이 있다는 통념 때문에 '해석 톤 고르기'를 상품 요소로 보지 않았다 | belief | - | -
+nebula-chat | I | skip | 사람 명리 해석가 인력을 확보하지 못해 지금은 운영할 수 없다 | cost | nebula, naver-expert | ai-disclosure
+bing-turn-cap | B | diff | 챗봇은 대화가 길수록 좋다는 통념 때문에 '1문 1답 고정'을 품질 장치로 보지 않았다 | belief | hellobot | -
+chatgpt-plus | O | table | 무료 한도 소진 후 결제는 모든 AI 서비스의 기본 패턴이다 | competition | free-gpt | dark-sequential-price
+askup | O | table | 카카오 알림톡 재방문 알림은 커머스의 흔한 수단이다 | competition | - | -
+wrtn-free | I | skip | 커머스형(결제가 최종 지표)에서 무료 질문을 대량으로 주면 원가를 감당할 다른 수익원이 없다 | cost | free-gpt | -
+duolingo-explain | B | diff | 사주 업계는 해석 글 전체를 유료로 묶는 관행이라 '용어 풀이 무료 · 내 상황 해석 유료'로 나누지 않았다 | belief | forceteller | -
+chatgpt-kakao | O | table | 결과 공유 카드는 운세 업계 기본기다. 다만 생년월일 미노출은 꼭 지킨다 | competition | forceteller | birth-data-privacy
+perplexity-cite | B | diff | 사주 앱은 결론만 말하는 것이 신비감을 준다는 통념 때문에 답변마다 명식 근거를 달지 않았다 | belief | tight-saju | -
+chegg-ai | T | diff | 무료 AI가 사주에 답하기 전에는 '무료 AI와의 차이'를 결제 화면에서 말할 필요가 없었다 | market_change | free-gpt | -
+stackoverflow-ai | O | table | 추천 질문 예시는 AI 채팅 서비스의 흔한 입력 도우미다 | competition | - | -
+inflection-pi | O | table | 질문 가격을 미리 보여 주는 것은 상식이고 순차공개 가격 금지 규정과도 맞닿는다 | competition | - | dark-sequential-price
+air-canada-bot | B | risk | AI가 '보장'·'환불' 같은 약속을 하지 않게 막는 장치는 운세 앱에서 확인되지 않았다 | belief | - | ai-answer-liability
+bard-demo | O | table | 광고 예시 검수는 기본기다 | competition | - | ai-disclosure, fake-reviews
+nyc-mycity | B | risk | 운세는 재미라는 통념 때문에 건강·법률·투자 질문을 따로 다루지 않았다 | belief | - | sensitive-advice
+chevy-bot | O | table | 범위 밖 질문 거절은 챗봇 운영의 기본기다 | competition | - | ai-answer-liability
+dpd-bot | B | risk | 자동화율을 높이는 것이 목표라 반복 불만을 사람에게 넘기는 출구를 두지 않았다 | incentive | - | ai-answer-liability
+google-aio | B | diff | 사주 앱은 태어난 시간을 몰라도 그대로 답을 만드는 관행이 있어 '답할 수 있는 범위' 안내가 드물다 | belief | - | -
+neda-tessa | B | risk | 운세 질문에 위기 신호가 섞인다는 점을 업계가 다루지 않았다 | belief | - | sensitive-advice
+snap-myai | O | table | 기능을 강제로 노출하지 않는 것은 기본 원칙이다 | not_core | - | dark-nagging
+klarna-ai | O | table | 답변 스트리밍과 대기 문구는 AI 서비스의 기본 화면 설계다 | competition | free-gpt | -
+klarna-rehire | I | skip | 사람 해석가 인력이 없어 지금은 '사람에게 넘기기'를 상품으로 만들 수 없다. 환불 경로로 대신한다 | cost | naver-expert | -
+naver-expert | T | diff | 답변 뒤 며칠 지나 '그 뒤 어떻게 됐나요'를 묻는 알림은 사람 상담에서는 비용 때문에 못 했지만 AI 질문권에서는 거의 공짜다 | tech_change | naver-expert | -
+hellobot | O | table | 대화형 운세 챗봇은 헬로우봇이 이미 했다. 재화 대신 '질문 1회' 단위로 파는 것만 다르다 | competition | hellobot | -
+cai-monetize | B | diff | AI 채팅 업계는 체류 시간을 성공 지표로 삼는 관행이 있어 '질문 1회의 가치'를 높이는 쪽을 덜 봤다 | belief | - | -
+cai-teen | T | risk | 미성년자 보호 압력이 커지며 나이를 아는 서비스는 한도를 둬야 하는 때가 됐다 | regulation_change | - | minor-ai-usage, minor-cancel
+replika-erp | B | risk | 서비스 정책은 언제든 바꿀 수 있다는 약관 중심 사고로 남은 질문권 보유자 고지를 하지 않는다 | belief | - | digital-withdrawal
+iruda | I | risk | 질문 데이터를 목적 외로 쓰면 개인정보 보호법 위반이다 | regulation | - | birth-data-privacy
+zeta | B | risk | 한도를 걸면 매출이 준다는 통념으로 미성년자 질문권 결제 한도를 두지 않았다 | belief | - | minor-ai-usage, minor-cancel
+meta-personas | B | risk | 유명 역술가·가상 상담사 이름을 내세우는 관행이 있고, AI임을 가리면 표시 의무에 걸릴 수 있다 | belief | - | ai-disclosure
+chai-ugc | O | table | 답변별 좋아요·싫어요 수집은 AI 서비스의 기본기다 | competition | free-gpt | -
+woebot | B | risk | 운세 앱이 '고민 상담'을 내세우는 관행이 있어 표현 범위를 관리하지 않았다 | belief | - | sensitive-advice
+speak-tutor | B | diff | 사주 업계는 사람 상담의 대체재로 AI를 홍보하면서 'AI라서 덜 민망하다'는 장점을 메시지로 쓰지 않았다 | belief | - | -

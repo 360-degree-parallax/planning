@@ -13,47 +13,213 @@
   "niche_topics": "니치 주제(재회·29금·퀴어 등)",
   "calc_accuracy": "만세력 정확도를 내세움",
   "preview_future": "기간 운세 미리보기",
-  "currency": "재화 충전 방식"
+  "currency": "재화 충전 방식",
+  "qa_ticket": "질문 1회 단위 질문권 판매",
+  "free_question": "무료 질문(맛보기)",
+  "chat_bot": "대화형 AI·챗봇 운세"
  },
  "competitors": [
-  {"id": "forceteller", "name": "포스텔러", "company": "운칠기삼", "model": "freemium",
-   "scale": "가입자 750만 명(2026년 보도)", "case": "forceteller",
-   "has": {"free_majority": true, "first_paid_free": true, "share": true, "compat_invite": true, "preview_future": true, "webtoon_story": true},
+  {
+   "id": "forceteller",
+   "name": "포스텔러",
+   "company": "운칠기삼",
+   "model": "freemium",
+   "scale": "가입자 750만 명(2026년 보도)",
+   "case": "forceteller",
+   "has": {
+    "free_majority": true,
+    "first_paid_free": true,
+    "share": true,
+    "compat_invite": true,
+    "preview_future": true,
+    "webtoon_story": true
+   },
    "notes": "스토어 설명에 '운세툰'과 46개 주제, 6개월 운세 미리보기가 있다. 콘텐츠의 약 5%가 유료.",
-   "sources": ["https://www.hankyung.com/article/2026021070861", "https://www.innoforest.co.kr/report/NS00000275",
-               "https://apps.apple.com/us/app/%ED%8F%AC%EC%8A%A4%ED%85%94%EB%9F%AC-2025-%EC%8B%A0%EB%85%84%EC%9A%B4%EC%84%B8-%EC%9A%B4%EC%84%B8%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83/id1262949138?l=ko"]},
-  {"id": "jeomsin", "name": "점신", "company": "테크랩스", "model": "marketplace",
-   "scale": "누적 다운로드 1,900만 건, 2024년 매출 약 979억 원(의료 마케팅 포함)", "case": "jeomsin",
-   "has": {"human_consult": true, "free_majority": true},
+   "sources": [
+    "https://www.hankyung.com/article/2026021070861",
+    "https://www.innoforest.co.kr/report/NS00000275",
+    "https://apps.apple.com/us/app/%ED%8F%AC%EC%8A%A4%ED%85%94%EB%9F%AC-2025-%EC%8B%A0%EB%85%84%EC%9A%B4%EC%84%B8-%EC%9A%B4%EC%84%B8%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83/id1262949138?l=ko"
+   ]
+  },
+  {
+   "id": "jeomsin",
+   "name": "점신",
+   "company": "테크랩스",
+   "model": "marketplace",
+   "scale": "누적 다운로드 1,900만 건, 2024년 매출 약 979억 원(의료 마케팅 포함)",
+   "case": "jeomsin",
+   "has": {
+    "human_consult": true,
+    "free_majority": true
+   },
    "notes": "사주·타로·신점 상담을 함께 운영. 상담 플랫폼 수수료는 상담 수익의 20~40% 수준(업계 보도).",
-   "sources": ["https://www.hankyung.com/article/2026021070861", "https://v.daum.net/v/20251211210300627"]},
-  {"id": "sajunaru", "name": "사주나루", "company": null, "model": "marketplace",
-   "scale": "2024년 매출 약 400억 원, 영업이익 79억 원", "case": "sajunaru",
-   "has": {"human_consult": true},
+   "sources": [
+    "https://www.hankyung.com/article/2026021070861",
+    "https://v.daum.net/v/20251211210300627"
+   ]
+  },
+  {
+   "id": "sajunaru",
+   "name": "사주나루",
+   "company": null,
+   "model": "marketplace",
+   "scale": "2024년 매출 약 400억 원, 영업이익 79억 원",
+   "case": "sajunaru",
+   "has": {
+    "human_consult": true
+   },
    "notes": "AI가 아닌 사람 전문가 약 1,000명 1:1 연결.",
-   "sources": ["https://v.daum.net/v/20251211210300627"]},
-  {"id": "cheonmyeong", "name": "천명", "company": null, "model": "marketplace", "scale": null, "case": null,
-   "has": {"human_consult": true},
+   "sources": [
+    "https://v.daum.net/v/20251211210300627"
+   ]
+  },
+  {
+   "id": "cheonmyeong",
+   "name": "천명",
+   "company": null,
+   "model": "marketplace",
+   "scale": null,
+   "case": null,
+   "has": {
+    "human_consult": true
+   },
    "notes": "사주·타로·신점 상담 운영.",
-   "sources": ["https://www.hankyung.com/article/2026021070861"]},
-  {"id": "cheongwoldang", "name": "청월당 · 운세박사", "company": "로켓AI", "model": "pay_per_unit",
-   "scale": "회사는 매출 기준 국내 1위라고 발표(독립 검증 아님)", "case": "cheongwoldang",
-   "has": {"webtoon_story": true, "gpt_channel": true},
+   "sources": [
+    "https://www.hankyung.com/article/2026021070861"
+   ]
+  },
+  {
+   "id": "cheongwoldang",
+   "name": "청월당 · 운세박사",
+   "company": "로켓AI",
+   "model": "pay_per_unit",
+   "scale": "회사는 매출 기준 국내 1위라고 발표(독립 검증 아님)",
+   "case": "cheongwoldang",
+   "has": {
+    "webtoon_story": true,
+    "gpt_channel": true
+   },
    "notes": "우리와 가장 가까운 직접 경쟁자(웹툰형 사주). 웹 기반 서비스.",
-   "sources": ["https://www.newswire.co.kr/newsRead.php?no=1035505", "https://www.newswire.co.kr/newsRead.php?no=1021564"]},
-  {"id": "sajuai", "name": "사주아이", "company": "미오스타", "model": "pay_per_unit",
-   "scale": "누적 유저 186만 명, 판매 600만 건 이상", "case": "sajuai",
-   "has": {"cheap_entry": true, "currency": true},
+   "sources": [
+    "https://www.newswire.co.kr/newsRead.php?no=1035505",
+    "https://www.newswire.co.kr/newsRead.php?no=1021564"
+   ]
+  },
+  {
+   "id": "sajuai",
+   "name": "사주아이",
+   "company": "미오스타",
+   "model": "pay_per_unit",
+   "scale": "누적 유저 186만 명, 판매 600만 건 이상",
+   "case": "sajuai",
+   "has": {
+    "cheap_entry": true,
+    "currency": true
+   },
    "notes": "990원 초저가, 고양이 콘셉트 재화 '츄르' 충전.",
-   "sources": ["https://www.koreadaily.com/article/20261024140033639"]},
-  {"id": "tight-saju", "name": "타이트사주", "company": "사이버네틱스", "model": "pay_per_unit",
-   "scale": "누적 이용자 500만 명 이상, 월 매출 10억 원 규모", "case": "tight-saju",
-   "has": {"niche_topics": true, "calc_accuracy": true},
+   "sources": [
+    "https://www.koreadaily.com/article/20261024140033639"
+   ]
+  },
+  {
+   "id": "tight-saju",
+   "name": "타이트사주",
+   "company": "사이버네틱스",
+   "model": "pay_per_unit",
+   "scale": "누적 이용자 500만 명 이상, 월 매출 10억 원 규모",
+   "case": "tight-saju",
+   "has": {
+    "niche_topics": true,
+    "calc_accuracy": true
+   },
    "notes": "29금·퀴어 사주, 재회 자미두수 등 니치 주제. 천문 데이터로 만세력 정확도를 높였다고 발표.",
-   "sources": ["https://www.mt.co.kr/future/2026/08/16/2026080417541357071", "https://www.mt.co.kr/future/2026/08/05/2026080509064478829"]},
-  {"id": "free-gpt", "name": "무료 사주 GPT·범용 챗봇", "company": null, "model": "freemium", "scale": null, "case": "gpt-saju-substitute",
-   "has": {"cheap_entry": true},
+   "sources": [
+    "https://www.mt.co.kr/future/2026/08/16/2026080417541357071",
+    "https://www.mt.co.kr/future/2026/08/05/2026080509064478829"
+   ]
+  },
+  {
+   "id": "free-gpt",
+   "name": "무료 사주 GPT·범용 챗봇",
+   "company": null,
+   "model": "freemium",
+   "scale": null,
+   "case": "gpt-saju-substitute",
+   "has": {
+    "cheap_entry": true
+   },
    "notes": "대체재. 만세력 계산 오류가 자주 지적된다.",
-   "sources": ["https://www.esquirekorea.co.kr/article/1895114"]}
+   "sources": [
+    "https://www.esquirekorea.co.kr/article/1895114"
+   ]
+  },
+  {
+   "id": "hellobot",
+   "name": "헬로우봇",
+   "company": "띵스플로우 (2025년 5월 폐업, 이후 DLT파트너스 운영)",
+   "model": "pay_per_unit",
+   "scale": "타로 챗봇 라마마 3개월 만에 100만 명",
+   "case": "hellobot",
+   "has": {
+    "chat_bot": true,
+    "currency": true
+   },
+   "notes": "하트(재화)를 충전해 챗봇 운세·상담을 연다. 운영사가 바뀌어 현재 상품 구성은 다시 확인 필요.",
+   "sources": [
+    "https://thevc.kr/thingsflow",
+    "https://www.theteams.kr/teams/8006/post/69992"
+   ]
+  },
+  {
+   "id": "naver-expert",
+   "name": "네이버 엑스퍼트",
+   "company": "네이버",
+   "model": "marketplace",
+   "scale": "3년간 200만 건 연결, 운세·타로 최대 분야",
+   "case": "naver-expert",
+   "has": {
+    "human_consult": true
+   },
+   "notes": "사람 전문가 1:1 유료 상담. 재구매 10명 중 6명, 상담 대체로 1만~5만 원.",
+   "sources": [
+    "https://www.news1.kr/amp/it-science/general-it/4874616",
+    "https://view.asiae.co.kr/article/2020100610043493224"
+   ]
+  },
+  {
+   "id": "costar",
+   "name": "Co-Star (해외)",
+   "company": "Co–Star Astrology Society",
+   "model": "pay_per_unit",
+   "scale": "공개 수치 없음",
+   "case": "costar-ask",
+   "has": {
+    "qa_ticket": true,
+    "chat_bot": true,
+    "free_majority": true
+   },
+   "notes": "AI 'Ask the Stars' 질문권 1·5·10·25개 묶음. 국내 직접 경쟁자는 아니고 상품 구조 선례.",
+   "sources": [
+    "https://apps.apple.com/app/id1264782561",
+    "https://www.bustle.com/life/co-star-astrology-app-ai-feature"
+   ]
+  },
+  {
+   "id": "nebula",
+   "name": "Nebula (해외)",
+   "company": "OBRIO",
+   "model": "pay_per_unit",
+   "scale": "공개 수치 없음",
+   "case": "nebula-chat",
+   "has": {
+    "human_consult": true,
+    "free_question": true,
+    "currency": true
+   },
+   "notes": "사람 점성가 채팅을 잔액 충전으로 판매, 첫 3분 무료.",
+   "sources": [
+    "https://www.republicworld.com/initiatives/nebula-app-review-2026-features-cost-and-who-its-for-2026-09-16-137105"
+   ]
+  }
  ]
 }

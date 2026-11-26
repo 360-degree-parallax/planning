@@ -20,6 +20,7 @@
 실험 우선순위 (db/meta/ice.txt): id 가설번호 | 영향 확신 쉬움 | 목표 변화 | 가드레일 지표 | 메모
 보조 퍼널 단계 (db/meta/also.txt): id | 단계, 단계
 기존 사례 가설 갈아끼우기(깊게 쓰기): @! id   (이 블록의 가설로 교체, depth=deep)
+새 사례를 처음부터 깊게 쓰기: # 머리줄 아래에 D: deep
 
 가설 줄의 || 뒤 키: barrier(장벽 id), holder(장벽을 가진 주체), changed(무엇이 바꿨나),
                    year(바뀐 해), ev(근거 URL), test(가장 싼 검증 실험), metric(볼 지표 id)
@@ -55,7 +56,7 @@ def meta_lines(path):
 
 
 NEW = {'acquire', 'hook_story', 'input', 'hook_marketing', 'checkout', 'first_pay'}
-OLD = {'consume', 'trust', 'repeat_pay', 'expand', 'refer'}
+OLD = {'consume', 'ask', 'trust', 'repeat_pay', 'expand', 'refer'}
 SEG_RULES = [  # (정규식, 축, 값) — 사례 본문 키워드로 추정
     (r'추천|초대|입소문|소개', 'channel', 'referral'),
     (r'SNS|인스타|틱톡|유튜브|바이럴', 'channel', 'organic_sns'),
@@ -156,6 +157,10 @@ def parse(path, extra):
             if len(e) != 3 or not e[0].isdigit():
                 fail(f'{where} E 줄은 번호 | 실험 | 지표')
             c.setdefault('tests', []).append((int(e[0]), e[1], e[2]))
+        elif line.startswith('D:'):
+            if line[2:].strip() != 'deep':
+                fail(f'{where} D 줄은 D: deep 만 가능')
+            c['_deep'] = True
         elif line.startswith('T:'):
             t = [x.strip() for x in line[2:].split(' | ')]
             c['saju'] = {'stage': t[0], 'idea': t[1] if len(t) > 1 else ''}
@@ -196,7 +201,7 @@ def main():
         if c['id'] in byid:
             fail(f'id 중복: {c["id"]}')
         c.setdefault('outcomes', [])
-        c['depth'] = 'tagged'
+        c['depth'] = 'deep' if c.pop('_deep', False) else 'tagged'
         byid[c['id']] = c
     for cid, blocks in extra.items():
         if cid not in byid:
