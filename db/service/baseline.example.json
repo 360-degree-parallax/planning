@@ -4,13 +4,110 @@
  "service": "AI 사주 웹사이트 (예시)",
  "funnel": "saju-default",
  "funnel_version": 1,
- "period": {"from": "2026-10-01", "to": "2026-10-30", "days": 30},
- "reach": {"story": 60000, "input": 33000, "marketing": 26000, "checkout": 7800, "pay_attempt": 3900, "paid": 3300, "opened": 3100, "read_all": 1700},
+ "period": {
+  "from": "2026-10-01",
+  "to": "2026-10-30",
+  "days": 30
+ },
+ "reach": {
+  "story": 60000,
+  "input": 33000,
+  "marketing": 26000,
+  "checkout": 7800,
+  "pay_attempt": 3900,
+  "paid": 3300,
+  "opened": 3100,
+  "read_all": 1700
+ },
  "segments": [
-  {"dim": "channel", "value": "meta_ads", "reach": {"story": 38000, "input": 19000, "marketing": 14500, "checkout": 3900, "pay_attempt": 1900, "paid": 1600, "opened": 1500, "read_all": 800}},
-  {"dim": "channel", "value": "naver_search", "reach": {"story": 12000, "input": 8400, "marketing": 7000, "checkout": 2500, "pay_attempt": 1300, "paid": 1120, "opened": 1060, "read_all": 600}},
-  {"dim": "time_band", "value": "dawn", "reach": {"story": 9000, "input": 5600, "marketing": 4600, "checkout": 1500, "pay_attempt": 820, "paid": 700, "opened": 690, "read_all": 450}}
+  {
+   "dim": "channel",
+   "value": "meta_ads",
+   "reach": {
+    "story": 38000,
+    "input": 19000,
+    "marketing": 14500,
+    "checkout": 3900,
+    "pay_attempt": 1900,
+    "paid": 1600,
+    "opened": 1500,
+    "read_all": 800
+   }
+  },
+  {
+   "dim": "channel",
+   "value": "naver_search",
+   "reach": {
+    "story": 12000,
+    "input": 8400,
+    "marketing": 7000,
+    "checkout": 2500,
+    "pay_attempt": 1300,
+    "paid": 1120,
+    "opened": 1060,
+    "read_all": 600
+   }
+  },
+  {
+   "dim": "time_band",
+   "value": "dawn",
+   "reach": {
+    "story": 9000,
+    "input": 5600,
+    "marketing": 4600,
+    "checkout": 1500,
+    "pay_attempt": 820,
+    "paid": 700,
+    "opened": 690,
+    "read_all": 450
+   }
+  },
+  {
+   "dim": "age_band",
+   "value": "50s+",
+   "reach": {
+    "story": 5000,
+    "input": 2500,
+    "marketing": 1900,
+    "checkout": 560,
+    "pay_attempt": 200,
+    "paid": 150,
+    "opened": 140,
+    "read_all": 70
+   }
+  },
+  {
+   "dim": "device",
+   "value": "mobile",
+   "reach": {
+    "story": 51000,
+    "input": 27500,
+    "marketing": 21000,
+    "checkout": 6100,
+    "pay_attempt": 2950,
+    "paid": 2480,
+    "opened": 2330,
+    "read_all": 1230
+   }
+  }
  ],
- "economics": {"aov": 39000, "pg_fee_rate": 0.033, "llm_cost_per_report": 600, "free_llm_cost_per_visitor": 15, "refund_rate": 0.04, "discount_share": 0.35, "ad_spend": 70000000, "ad_revenue": 110000000},
- "post_purchase": {"satisfaction_score": 4.1, "accuracy_feel": 0.62, "revisit_7d": 0.18, "followup_use_rate": 0.27, "share_rate": 0.06, "repeat_pay_rate": 0.09, "time_to_repurchase": 74}
+ "economics": {
+  "aov": 39000,
+  "pg_fee_rate": 0.033,
+  "llm_cost_per_report": 600,
+  "free_llm_cost_per_visitor": 15,
+  "refund_rate": 0.04,
+  "discount_share": 0.35,
+  "ad_spend": 70000000,
+  "ad_revenue": 110000000
+ },
+ "post_purchase": {
+  "satisfaction_score": 4.1,
+  "accuracy_feel": 0.62,
+  "revisit_7d": 0.18,
+  "followup_use_rate": 0.27,
+  "share_rate": 0.06,
+  "repeat_pay_rate": 0.09,
+  "time_to_repurchase": 74
+ }
 }

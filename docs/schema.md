@@ -77,6 +77,13 @@
 
 `saju.also`: 보조 퍼널 단계 (`db/meta/also.txt`). 진단 리포트가 주 단계와 함께 검색한다.
 
+`saju.segments`: 이 사례를 먼저 적용할 방문자 세그먼트 (`{축: [값]}`, 빈 객체는 전체 방문자).
+- deep 50개는 `db/meta/segments.txt`에 직접 썼다 (`segments_inferred: false`).
+- tagged는 규칙으로 추정했다 (`segments_inferred: true`): 퍼널 단계로 방문자 유형(구매 전 단계 → new, 구매 후 단계 → buyer), 본문 키워드로 채널(추천·SNS·검색)·기기(모바일)·나이대(10대·20대·50대 이상).
+- 진단 리포트는 전체보다 약한 세그먼트에 대해, 그 세그먼트로 태깅된 핵심 사례를 추천한다.
+
+`outcome_note`: 결과 수치를 넣지 않은 이유 (`db/meta/no-outcome.txt`). 강의용 예시·방법론·가상 사례처럼 측정된 수치가 원래 없는 경우, 또는 1차 출처를 찾지 못한 경우를 구분해 적는다.
+
 ### 장벽 유형 (`barrier.type`)
 
 | 판정 | 장벽 유형 |

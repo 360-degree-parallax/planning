@@ -38,11 +38,48 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'title', 'source', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'saju', 'what', 'hyps', 'solution', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'lesson']
 
 
 def fail(msg):
     sys.exit(msg)
+
+
+def meta_lines(path):
+    if not os.path.exists(path):
+        return
+    for n, raw in enumerate(open(path, encoding='utf-8'), 1):
+        line = raw.strip()
+        if line and not line.startswith('//'):
+            yield n, line
+
+
+NEW = {'acquire', 'hook_story', 'input', 'hook_marketing', 'checkout', 'first_pay'}
+OLD = {'consume', 'trust', 'repeat_pay', 'expand', 'refer'}
+SEG_RULES = [  # (정규식, 축, 값) — 사례 본문 키워드로 추정
+    (r'추천|초대|입소문|소개', 'channel', 'referral'),
+    (r'SNS|인스타|틱톡|유튜브|바이럴', 'channel', 'organic_sns'),
+    (r'검색', 'channel', 'naver_search'),
+    (r'모바일|스마트폰|휴대폰', 'device', 'mobile'),
+    (r'노인|시니어|어르신|50대|60대', 'age_band', '50s+'),
+    (r'10대|청소년|중고생|중학생|고등학생|수험생', 'age_band', '10s'),
+    (r'20대|대학생|사회초년생|MZ', 'age_band', '20s'),
+]
+
+
+def infer_segments(c):
+    """분류 사례: 퍼널 단계로 방문자 유형, 본문 키워드로 채널·기기·시간대·나이대를 추정한다."""
+    st = c['saju']['stage']
+    seg = {}
+    if st in NEW:
+        seg['user_type'] = ['new']
+    elif st in OLD:
+        seg['user_type'] = ['buyer']
+    text = ' '.join([c['title'], *c['what'].values(), c.get('solution', '')])
+    for pat, dim, val in SEG_RULES:
+        if re.search(pat, text) and val not in seg.get(dim, []):
+            seg.setdefault(dim, []).append(val)
+    return seg
 
 
 def parse_hyp(body, where):
@@ -238,6 +275,29 @@ def main():
             if cid not in byid or not byid[cid].get('saju'):
                 fail(f'also.txt:{n} 없는 사례: {cid}')
             byid[cid]['saju']['also'] = [s.strip() for s in st.split(',') if s.strip()]
+    nof = os.path.join(ROOT, 'db/meta/no-outcome.txt')
+    for n, line in meta_lines(nof):
+        cid, _, why = line.partition(' | ')
+        if cid not in byid or not why:
+            fail(f'no-outcome.txt:{n} 형식: {line}')
+        byid[cid]['outcome_note'] = why
+    segf = os.path.join(ROOT, 'db/meta/segments.txt')
+    for n, line in meta_lines(segf):
+        cid, _, body = line.partition(' | ')
+        if cid not in byid:
+            fail(f'segments.txt:{n} 없는 사례: {cid}')
+        seg = {}
+        if body.strip() != 'all':
+            for part in body.split(';'):
+                dim, _, vals = part.strip().partition(':')
+                seg[dim] = [v.strip() for v in vals.split(',') if v.strip()]
+        byid[cid]['saju']['segments'] = seg
+        byid[cid]['saju']['segments_inferred'] = False
+    for c in cases:
+        if c.get('saju') and 'segments' not in c['saju']:
+            c['saju']['segments'] = infer_segments(c)
+            c['saju']['segments_inferred'] = True
+        c.setdefault('outcome_note', None)
     for c in cases:
         c['refs'] = list(dict.fromkeys(c['refs']))
         c['verified'] = bool(c['refs'])

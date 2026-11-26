@@ -31,6 +31,9 @@ for (const c of d.cases) {
   if (!c.problem_metric || !T.metrics[c.problem_metric.id]) errs.push(`${at} problem_metric=${c.problem_metric?.id}`);
   if (!c.saju || !T.funnel_stages[c.saju.stage]) errs.push(`${at} saju.stage=${c.saju?.stage}`);
   for (const a of c.saju?.also || []) if (!T.funnel_stages[a]) errs.push(`${at} saju.also=${a}`);
+  for (const [dim, vals] of Object.entries(c.saju?.segments || {}))
+    for (const v of vals) if (!T.segments[dim]?.values.includes(v)) errs.push(`${at} 세그먼트 ${dim}:${v}`);
+  if (c.depth === 'deep' && c.saju?.segments_inferred) errs.push(`${at} deep인데 세그먼트를 직접 쓰지 않음 (db/meta/segments.txt)`);
   for (const o of c.outcomes) {
     if (!T.metrics[o.metric]) errs.push(`${at} outcome metric=${o.metric}`);
     if (!url(o.evidence)) errs.push(`${at} outcome 근거는 https`);
@@ -52,7 +55,8 @@ for (const c of d.cases) {
     if (!c.saju?.idea) errs.push(`${at} deep인데 사주 적용 아이디어 없음`);
     if (c.hyps.some(h => h.barrier?.inferred)) errs.push(`${at} deep인데 장벽을 직접 쓰지 않은 가설이 있음`);
     if (!c.hyps.some(h => h.test)) errs.push(`${at} deep인데 검증 실험 없음`);
-    if (!c.outcomes.length) warns.push(`${at} deep인데 근거 있는 결과 지표 없음`);
+    if (!c.outcomes.length && !c.outcome_note) warns.push(`${at} deep인데 결과 지표도, 없는 이유(db/meta/no-outcome.txt)도 없음`);
+    if (c.outcomes.length && c.outcome_note) errs.push(`${at} 결과 지표가 있는데 no-outcome 사유도 있음`);
   }
 }
 

@@ -96,6 +96,7 @@ def main():
         if b.get('value') is not None:
             bmk.setdefault(b['metric'], b)
     tested = {(e['case'], e['hyp']): e for e in exps}
+    deep = [c for c in db['cases'] if c['depth'] == 'deep']
     L = [f"# 진단 리포트{' (예시: 가짜 숫자)' if ex else ''}", '',
          f"기간 {base['period'].get('from')} ~ {base['period'].get('to')} ({days}일) · 퍼널 `{f['id']}` v{f['version']} ({f['label']})",
          '', '`python3 tools/diagnose.py`로 다시 만든다. 기준값은 업종·정의가 달라 참고선으로만 본다.', '']
@@ -130,7 +131,6 @@ def main():
     L.append('')
 
     # 3. 추천 실험
-    deep = [c for c in db['cases'] if c['depth'] == 'deep']
     L += ['## 3. 병목 단계별 추천 실험', '',
           '이 단계 통과를 직접 재는 실험(결제 완료율처럼 여러 단계를 묶은 지표 포함)을 먼저, 그다음 ICE 점수(영향·확신·쉬움 평균) 순. 표본 수는 군당, 유의수준 5%·검정력 80%.', '']
     mr = metric_rates(R, pi)
@@ -163,6 +163,7 @@ def main():
         L += ['', f"같은 단계의 분류 사례 {len(tg)}개: {', '.join(f'`{x}`' for x in tg[:12])}{' …' if len(tg) > 12 else ''}" if tg else '같은 단계의 분류 사례: 없음 (핵심 사례만 있음)', '']
 
     # 4. 세그먼트
+    weak = []
     if base.get('segments'):
         L += ['## 4. 세그먼트', '', '전체보다 통과율이 20% 이상 낮은 칸을 **굵게** 표시했다.', '',
               '| 세그먼트 | ' + ' | '.join(s['label'] for s in R[:pi]) + ' | 구매 전환 |',
@@ -176,7 +177,29 @@ def main():
             gc = g['reach'].get(R[pi]['id']) / g['reach'].get(R[0]['id']) if g['reach'].get(R[0]['id']) else None
             seg = tax['segments'].get(g['dim'], {}).get('label', g['dim'])
             L.append(f"| {seg}: {g['value']} | " + ' | '.join(cells) + f' | {pct(gc, 2)} |')
+            weak_steps = [b for a, b in zip(gr[:pi], R[:pi]) if a['rate'] is not None and b['rate'] and a['rate'] < b['rate'] * 0.8]
+            if weak_steps or (gc is not None and conv and gc < conv * 0.8):
+                weak.append((g, seg, weak_steps))
         L.append('')
+        for g, seg, ws in weak:
+            hit = []
+            for c in deep:
+                sg = c['saju'].get('segments') or {}
+                if g['value'] not in sg.get(g['dim'], []):
+                    continue
+                stages = {c['saju']['stage'], *c['saju'].get('also', [])}
+                on = [b['label'] for b in ws if b['stage'] in stages]
+                hit.append((not on, c, on))
+            hit.sort(key=lambda x: x[0])
+            where = ', '.join(b['label'] for b in ws) or '구매 전환 전체'
+            L.append(f"**{seg}: {g['value']}** 약한 단계: {where}")
+            L.append('')
+            if hit:
+                for _, c, on in hit[:5]:
+                    L.append(f"- `{c['id']}` {c['title']}{' (같은 단계)' if on else ''}: {c['saju']['idea']}")
+            else:
+                L.append('- 이 세그먼트로 태깅된 핵심 사례가 없습니다. `db/meta/segments.txt`에 추가하면 여기 나옵니다.')
+            L.append('')
 
     # 5. 수익 구조
     e = base['economics']

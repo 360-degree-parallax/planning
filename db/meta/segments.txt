@@ -1,0 +1,51 @@
+// 사주 서비스에서 이 사례를 먼저 적용할 방문자 세그먼트: id | 축:값,값; 축:값   (all = 전체 방문자)
+dental | user_type:buyer
+elevator | user_type:new
+baggage | user_type:buyer
+disney | user_type:new
+cold | user_type:buyer
+mri | user_type:new; topic:love,career,health
+embrace | user_type:new; time_band:dawn,night
+airbnb | user_type:new
+netflix | user_type:new
+dyson | user_type:new
+febreze | user_type:buyer
+milkshake | user_type:new; topic:career,love,yearly
+southwest | all
+spotify | user_type:new
+saju | user_type:buyer
+amazon-prime | user_type:buyer
+zappos | user_type:new
+warby-parker | user_type:new
+dollar-shave-club | user_type:new; channel:meta_ads,tiktok_ads
+costco | user_type:buyer
+coupang-rocket-wow | user_type:buyer
+container | all
+slack | all
+shopify | all
+dropbox | user_type:buyer; topic:love
+mailchimp | user_type:new; channel:organic_sns,referral
+square | user_type:new; device:mobile
+mpesa | user_type:new; age_band:10s,50s+
+wise | user_type:new
+netflix-streaming | user_type:buyer
+house-of-cards | user_type:new
+instagram | user_type:new; device:mobile
+tiktok | user_type:new; device:mobile
+kakaopage | user_type:new
+naver-webtoon | user_type:new; device:mobile
+fortnite | user_type:buyer; topic:yearly,love,money
+duolingo | user_type:buyer
+substack | user_type:buyer
+patreon | user_type:new
+nyt-paywall | user_type:new
+millie | user_type:new
+rolls-royce-power | user_type:buyer
+aravind | all
+five-whys | all
+lego-turnaround | all
+adobe-cc | user_type:buyer
+kakao-emoticon | user_type:buyer; topic:love
+post-it | user_type:buyer; channel:referral
+webvan | all
+calm | user_type:new; time_band:dawn,night

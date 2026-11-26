@@ -20,3 +20,27 @@ O: gmv | 2014년 4분기 GPV 약 69억 달러 | 2015년 4분기 GPV 102억 달�
 
 @ patreon
 O: gmv | 누적 창작자 지급액 10억 달러 (2019, 후원자 400만 명) | 100억 달러 이상 (2025, 유료 멤버십 2,500만 건) | 2013년 창업 이후 누적 | https://www.tubefilter.com/2025/08/07/patreon-kajabi-10-billion-creator-economy-payouts-funding-since-launch/
+
+@ netflix
+O: buyers | 건별 대여 + 연체료 모델 (1999년 9월 이전) | 구독자 100만 명 돌파 (2003) | 1999년 12월 반납일·연체료 없는 정액제(Marquee) 출시 이후 | https://www.fundinguniverse.com/company-histories/netflix-inc-history
+
+@ warby-parker
+O: revenue | 출시 첫해 판매 목표 | 출시 3주 만에 첫해 목표 달성, 대기자 2만 명 | 2010년 2월 GQ·Vogue 소개 직후 | https://www.cnbc.com/2022/10/21/warby-parker-once-online-only-eyewear-sees-hundreds-of-more-stores.html
+
+@ shopify
+O: gmv | 2014년 GMV 약 37.6억 달러 | 2015년 GMV 77억 달러 (+105%), 가맹점 24.3만 곳 | 연간 실적 발표 | https://www.sec.gov/Archives/edgar/data/1594805/000159480516000018/q42015pressrelease.htm
+
+@ netflix-streaming
+O: buyers | 2011년 3분기 미국 DVD 구독 1,393만 | 2011년 4분기 스트리밍 2,167만 · DVD 1,117만 | DVD·스트리밍 요금제 분리 직후 한 분기 | https://nexttv.com/news/netflix-streaming-rebounds-q4-dvd-service-drops-28m-subs-298156
+
+@ tiktok
+O: visitors | 월간 활성 사용자 6.89억 명 (2020.7) | 10억 명 (2021.9, +45%) | 관심사 추천 피드 중심 | https://techcrunch.com/2021/09/27/tiktok-reached-1-billion-monthly-active-users
+
+@ millie
+O: buyers | 구독자 39만 명 (2021년 말) | 구독자 91만 명 (2022.8) | 누적 회원 418만 → 547만 명 같은 기간 | https://magazine.hankyung.com/business/article/202210264841b
+
+@ rolls-royce-power
+O: ltv | 정비 비용을 사건별로 청구하던 방식 | Trent 엔진 90% 이상이 비행시간당 과금 장기 계약 | 회사 투자자 자료 기준 | https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-ltsa-faq.pdf
+
+@ post-it
+O: revenue | 1977년 시험 판매 부진 | 전국 출시 4년 뒤 3M 최다 판매 제품, 10년 뒤 매출 1억 달러 초과 | 보이시 무료 샘플링(시험 사용자 90% 구매 의향) 이후 | https://www.encyclopedia.com/manufacturing/news-wires-white-papers-and-books/self-adhesive-note

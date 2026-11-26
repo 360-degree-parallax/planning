@@ -2,7 +2,7 @@
 
 기준: 커머스형 AI 사주(스토리 후킹 1p → 마케팅 후킹 2p → 결제 → 전체 결과 공개) · 최종 지표 = 결제. `python3 tools/report.py`로 다시 만든다.
 
-사례 305개 · deep 50개 · 가설 1087개 · 근거 있는 결과 지표 40건
+사례 305개 · deep 50개 · 가설 1087개 · 근거 있는 결과 지표 48건
 
 > deep 사례의 장벽·실험·적용 아이디어는 직접 작성했고, tagged 사례의 장벽 유형은 규칙 추정(inferred)이다. 아래 분포는 둘을 합친 값이라 방향을 보는 용도로 쓴다.
 
@@ -62,6 +62,7 @@
 **안경테가 너무 비싸다** (`warby-parker`)
 - 적용: '써 보고 산다'를 페이지 안으로: 1p 스토리에 방문자의 사주 특징 하나를 실제로 맞히는 장면을 넣어 '이거 진짜네'를 결제 전에 경험하게 한다
 - 실험: 1p에 '성격 한 줄 맞히기' 장면을 넣은 버전과 일반 스토리 버전의 2p 이동률·구매 전환 비교 → 지표: 스토리 후킹 통과율 (1p → 다음 단계)
+- 근거: 결제 매출 출시 첫해 판매 목표 → 출시 3주 만에 첫해 목표 달성, 대기자 2만 명 (2010년 2월 GQ·Vogue 소개 직후) [출처](https://www.cnbc.com/2022/10/21/warby-parker-once-online-only-eyewear-sees-hundreds-of-more-stores.html)
 
 **오리지널 드라마에 큰돈을 걸어야 할까** (`house-of-cards`)
 - 적용: 데이터로 스토리를 기획한다: 어떤 1p 스토리 유형(연애·직장·가족)이 2p로 많이 넘기는지, 어떤 유형이 결제까지 가는지 보고 스토리를 고른다
@@ -71,6 +72,7 @@
 **친구가 없으면 소셜 앱이 재미없다** (`tiktok`)
 - 적용: 첫 화면부터 바로 재미있게: 가입·긴 입력 없이 1p 스토리를 먼저 보여 주고, 생년월일 입력은 2p로 넘어가는 순간에 받는다
 - 실험: 생년월일 입력을 1p 앞에 두는 버전과 1p 뒤에 두는 버전(퍼널 설정 순서만 바꿈)의 입력 완료율·구매 전환 비교 → 지표: 생년월일 입력 완료율 (입력 화면 → 다음 단계)
+- 근거: 방문자·유입 월간 활성 사용자 6.89억 명 (2020.7) → 10억 명 (2021.9, +45%) (관심사 추천 피드 중심) [출처](https://techcrunch.com/2021/09/27/tiktok-reached-1-billion-monthly-active-users)
 
 **명상 앱은 마니아용이다** (`calm`)
 - 적용: 고객이 진짜 해결하려는 일에 톤을 맞춘다: 밤늦게 들어오는 방문자에게는 1p 스토리를 '불안을 달래는' 톤으로, 낮 방문자에게는 '결정을 돕는' 톤으로 보여 준다
@@ -112,6 +114,7 @@
 **책을 사서 끝까지 안 읽는다** (`millie`)
 - 적용: 시도 비용을 0으로 보이게: 2p에서 한 번 결제로 열리는 주제 목록(연애·재물·건강·직업·대운 등)을 시각적으로 보여 줘 '이 가격에 이걸 다'를 느끼게 한다
 - 실험: 2p에 포함 주제 목록 시각화 블록을 넣은 버전과 없는 버전의 결제 페이지 이동률 비교 → 지표: 마케팅 후킹 통과율 (2p → 다음 단계)
+- 근거: 구매자 수 구독자 39만 명 (2021년 말) → 구독자 91만 명 (2022.8) (누적 회원 418만 → 547만 명 같은 기간) [출처](https://magazine.hankyung.com/business/article/202210264841b)
 
 ### 결제 페이지 (`checkout`) — 사례 33개
 
@@ -122,6 +125,7 @@
 **비디오 대여 연체료 불만** (`netflix`)
 - 적용: 압박·벌로 돈을 벌지 않는다: 가짜 카운트다운, 숨은 자동 결제 같은 장치는 당장 결제를 늘려도 환불·불신을 키운다. 가격과 포함 내용을 명확히 보여 준다
 - 실험: 결제 페이지 카운트다운 타이머 제거 전후 결제 완료율과 환불률을 함께 비교 → 지표: 결제 완료율 (결제 페이지 → 결제 성공, 시도율 × 성공률)
+- 근거: 구매자 수 건별 대여 + 연체료 모델 (1999년 9월 이전) → 구독자 100만 명 돌파 (2003) (1999년 12월 반납일·연체료 없는 정액제(Marquee) 출시 이후) [출처](https://www.fundinguniverse.com/company-histories/netflix-inc-history)
 
 **신발은 신어 봐야 산다** (`zappos`)
 - 적용: 위험을 회사가 진다: '결과가 마음에 안 들면 환불'을 결제 버튼 옆에 두면 결제 장벽이 낮아진다. 환불률을 가드레일로 함께 본다
@@ -219,6 +223,7 @@
 **DVD 우편 대여가 잘되는데 바꿔야 할까** (`netflix-streaming`)
 - 적용: 지금 잘 팔리는 단건 리포트가 다음 구매 장치를 막지 않게: 재구매용 상품(연운 갱신·주제 추가)을 미리 만들고, 단건 매출과 별도로 재구매 지표를 본다
 - 실험: 단건 구매자에게 '다음 해 운세 자동 예약' 옵션 제안 후 12개월 재구매율 비교 → 지표: 재결제율
+- 근거: 구매자 수 2011년 3분기 미국 DVD 구독 1,393만 → 2011년 4분기 스트리밍 2,167만 · DVD 1,117만 (DVD·스트리밍 요금제 분리 직후 한 분기) [출처](https://nexttv.com/news/netflix-streaming-rebounds-q4-dvd-service-drops-28m-subs-298156)
 
 **언어 공부를 꾸준히 못 한다** (`duolingo`)
 - 적용: 구매 후에도 매일 다시 오게: 구매자에게 '오늘의 한 줄' 무료 알림을 보내 관계를 유지하면 다음 주제 리포트 구매로 이어진다
@@ -257,6 +262,7 @@
 **항공사가 엔진 정비 비용을 예측할 수 없다** (`rolls-royce-power`)
 - 적용: 고객의 사용 패턴과 이해가 같은 과금: 추가 질문 상담은 '1회당' 과금과 '기간 무제한' 과금 중 고객이 덜 손해 보는 쪽을 고르게 한다
 - 실험: 추가 질문 상품을 1회당 과금과 7일 무제한 과금으로 나눠 객단가·만족도 비교 → 지표: 객단가 (1회 결제 금액)
+- 근거: 고객 생애 가치(LTV) 정비 비용을 사건별로 청구하던 방식 → Trent 엔진 90% 이상이 비행시간당 과금 장기 계약 (회사 투자자 자료 기준) [출처](https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-ltsa-faq.pdf)
 
 **메신저로 감정을 전하기 어렵다** (`kakao-emoticon`)
 - 적용: 자기 표현은 돈을 낸다: 내 사주 캐릭터·오행 이모티콘·궁합 결과 카드처럼 '보내고 싶은 결과물'을 팔고, 외부 작가가 만들어 올리게 해 공급을 늘린다
@@ -266,6 +272,7 @@
 **접착력이 약한 실패작 접착제** (`post-it`)
 - 적용: 덜 팔리는 콘텐츠의 쓸 곳을 다시 찾는다: 잘 안 읽히는 장(예: 짧은 풀이)을 공유 카드나 궁합 초대 미끼로 재활용한다
 - 실험: 열람률 낮은 장을 공유 카드로 바꿔 공유 수·유입 측정 → 지표: 추천·바이럴 계수
+- 근거: 결제 매출 1977년 시험 판매 부진 → 전국 출시 4년 뒤 3M 최다 판매 제품, 10년 뒤 매출 1억 달러 초과 (보이시 무료 샘플링(시험 사용자 90% 구매 의향) 이후) [출처](https://www.encyclopedia.com/manufacturing/news-wires-white-papers-and-books/self-adhesive-note)
 
 같은 단계의 다른 사례: 동네 서점 매출 감소(`bookstore`), 대형마트와 가격·구색으로 싸울 수 없다(`trader-joes`), 여행 가방이 비싸고 고장 난다(`away`), 선크림·파운데이션 바르기가 번거롭다(`amore-cushion`), 오토바이 택시 기사가 하루 대부분을 기다린다(`gojek`), 서버 장애 원인을 찾기 어렵다(`datadog`), 업무 앱끼리 연결이 안 된다(`zapier`), 커피를 더 비싸게 팔 수 있을까(`starbucks`), 패스트푸드는 건강하지 않다(`chipotle`), 못생긴 신발이 안 팔린다(`crocs`), 만화 캐릭터 판권만 팔아서는 남는 게 없다(`marvel`), 저가 항공권으로도 이익을 내야 한다(`ryanair`), 연비 좋은 차는 너무 비싸다(`toyota-prius`), 휴대용과 거치형 게임기를 둘 다 만들기 벅차다(`nintendo-switch`), 팬 활동이 여러 플랫폼에 흩어져 있다(`hybe-weverse`), 협심증 치료제 임상이 기대에 못 미쳤다(`viagra`), 벽지 세정제 수요가 사라졌다(`play-doh`), 입체 벽지가 안 팔린다(`bubble-wrap`)
 
@@ -345,6 +352,7 @@
 | 평점·만족도·신뢰 | 아이들이 MRI를 무서워한다 | 다수 아동이 진정 후 검사 → 몰입한 아이들이 추가 진정 없이 검사받는 경우가 많아짐 | GE Adventure Series, 2008년 시범 도입 후 확대 [출처](https://www.dotmed.com/legal/print/story.html?nid=23433) |
 | 접근성(사회적 도달) | 저렴한 인큐베이터 만들기 | 출시 전 0명 → 10개국 아기 6만 명 이상 (2013) | 기존 인큐베이터 가격의 1% 미만 [출처](https://www.weforum.org/organizations/embrace-innovations) |
 | 공급·매물 충분도 | 행사 기간 숙소 부족 | 행사 기간 호텔 매진 → 첫 주말 에어매트리스 3개, 1박 80달러로 3명 숙박 | 2007년 10월 샌프란시스코 디자인 콘퍼런스 [출처](https://www.newsweek.com/an-80-idea-changed-travel-forever-12283773) |
+| 구매자 수 | 비디오 대여 연체료 불만 | 건별 대여 + 연체료 모델 (1999년 9월 이전) → 구독자 100만 명 돌파 (2003) | 1999년 12월 반납일·연체료 없는 정액제(Marquee) 출시 이후 [출처](https://www.fundinguniverse.com/company-histories/netflix-inc-history) |
 | 결제 매출 | 냄새 제거제가 안 팔린다 | 1998년 재출시 전 판매 부진 → 재출시 두 달 만에 판매 2배, 이후 연 매출 10억 달러 이상 | '청소 마무리의 향기'로 포지셔닝을 바꾼 뒤 [출처](https://www.businessinsider.in/How-the-worlds-best-marketer-got-it-wrong-but-eventually-got-it-right/articleshow/55725321.cms) |
 | 건당 원가 | 비행기 한 대를 팔아야 하는 항공사 | 비행기 4대 필요 → 10분 회항으로 3대로 같은 운항 유지 | 1972년 자금난 시기 [출처](https://www.npr.org/2015/06/28/418147961/the-man-who-saved-southwest-airlines-with-a-10-minute-idea) |
 | 정기 결제 전환율 (참고: 구독형 사례) | 음원 불법 다운로드 | 유료 비중 오랫동안 약 25% 수준 → 2017년 말 유료 7,100만 명, 광고형 서비스가 신규 유료 가입의 60% 이상을 만들어 냄 | 2014년 2월부터 추적, F-1 공시 [출처](https://www.sec.gov/Archives/edgar/data/0001639920/000119312518089087/d494294df1a.htm) |
@@ -352,19 +360,23 @@
 | 결제 빈도 | 배송비 때문에 장바구니를 망설인다 | 비회원 연 약 700달러 지출 → 회원 연 약 1,300달러 지출 | CIRP 추정, 2017년. 차이는 주문 금액이 아니라 주문 빈도에서 나옴 [출처](https://fortune.com/2017/10/18/amazon-prime-customer-spending/) |
 | 재결제율 | 신발은 신어 봐야 산다 | 재구매 고객 비중 40%(2004) → 75% | 반품이 4건 중 1건 이상인데도 매출총이익률 31% 유지 [출처](https://www.bu.edu/goglobal/a/goglobal_courses/tm648/spain/zappos.pdf) |
 | 객단가 (1회 결제 금액) | 신발은 신어 봐야 산다 | 첫 구매 평균 111.98달러 → 재구매 평균 143.22달러 | 2006년 4분기, 토니 셰이 발표 [출처](https://www.slideshare.net/slideshow/zappos-lessons-building-a-customerfocused-culture/256107) |
+| 결제 매출 | 안경테가 너무 비싸다 | 출시 첫해 판매 목표 → 출시 3주 만에 첫해 목표 달성, 대기자 2만 명 | 2010년 2월 GQ·Vogue 소개 직후 [출처](https://www.cnbc.com/2022/10/21/warby-parker-once-online-only-eyewear-sees-hundreds-of-more-stores.html) |
 | 고객 획득 비용(CAC) | 면도날이 비싸고 사기 귀찮다 | 제작비 4,500달러 영상 한 편 → 공개 당일 주문 1만 2천 건, 2016년 구독자 300만 명 이상, 유니레버가 10억 달러에 인수 | 2012년 3월 공개 [출처](https://www.aol.com/finance/dollar-shave-club-one-ad-151837465.html) |
 | 재결제율 | 대량 구매 고객을 붙잡아야 한다 | 회원제 유통 일반 → 회원 갱신율 미국·캐나다 92.3%, 전 세계 89.8% | 2026년 초 보고 [출처](https://www.aol.com/finance/nine-ten-costco-members-renew-134101709.html) |
 | 결제 빈도 | 빠른 배송 고객을 묶어 두려면 | 비회원 → 와우 회원 주문 빈도가 비회원의 9배, 오래된 회원은 신규 회원보다 2.5배 지출 | 2024년 3분기 실적 발표 [출처](https://v.daum.net/v/bbOxshVZwo) |
 | 가격 수준·가격 수용성 | 빠른 배송 고객을 묶어 두려면 | 월 4,990원 → 7,890원으로 58% 인상 후에도 1인당 매출 8% 증가 | 2024년 8월 인상 [출처](https://v.daum.net/v/bbOxshVZwo) |
 | 건당 원가 | 배에 짐 싣고 내리는 데 며칠 걸린다 | 톤당 선적 비용 약 $5.83 (재래식 하역) → 톤당 $0.16 미만 (컨테이너) | 1956년 Ideal-X 운항 기준 McLean의 계산 [출처](https://transportgeography.org/contents/chapter1/the-setting-of-global-transportation-systems/idealx-first-containeriship-1956/) |
 | 구매자 수 | 게임 회사가 망하기 직전이다 | 유료 고객 59,000곳 (2018.1) → 88,000곳 (2019.1, +49%) | S-1 공개 시점, 일간 활성 사용자 1,000만 명 이상 [출처](https://www.cnbc.com/2019/04/26/slack-releases-s-1-for-ipo.html) |
+| 거래액(GMV) | 온라인 스노보드 가게를 만들 도구가 없다 | 2014년 GMV 약 37.6억 달러 → 2015년 GMV 77억 달러 (+105%), 가맹점 24.3만 곳 | 연간 실적 발표 [출처](https://www.sec.gov/Archives/edgar/data/1594805/000159480516000018/q42015pressrelease.htm) |
 | 추천·바이럴 계수 | 파일을 여러 기기에서 쓰기 번거롭다 | 가입 성장 정체 → 15개월간 사용자 3,900% 증가, 추천이 가입을 영구적으로 60% 끌어올림 | 2008~2010년 [출처](https://referralrock.com/blog/dropbox-referral-program/) |
 | 방문자·유입 | 작은 가게도 이메일 마케팅을 하고 싶다 | 사용자 8만 5천 명(2009년 9월) → 45만 명(2010년 9월) | 무료:유료 비율 약 10:1 [출처](https://productfruits.substack.com/p/from-side-hustle-to-a-12-billion) |
 | 거래액(GMV) | 작은 가게는 카드 결제를 받을 수 없다 | 2014년 4분기 GPV 약 69억 달러 → 2015년 4분기 GPV 102억 달러 (+47%) | 전년 동기 대비, 주주 서한 [출처](https://mms.businesswire.com/media/20160309006294/en/513572/1/square-2015-q4-shareholder-letter.pdf) |
 | 접근성(사회적 도달) | 케냐에서 송금하기가 어렵다 | 은행 계좌 없는 가구 다수 → 194,000가구(케냐 가구의 약 2%)가 극빈층에서 벗어난 것으로 추정 | Suri·Jack, Science 2016 [출처](https://news.mit.edu/2016/mobile-money-kenyans-out-poverty-1208) |
 | 가격 수준·가격 수용성 | 해외 송금 수수료가 숨어 있다 | 1만 파운드 송금에 약 500파운드가 환율 마진으로 숨어 있었음 → 중간 환율 기준 직접 교환으로 비용 대폭 절감 | 창업자 경험담 [출처](https://afr.com.au/companies/financial-services/this-billionaire-started-his-company-to-avoid-paying-bank-fees-20231213-p5er94) |
+| 구매자 수 | DVD 우편 대여가 잘되는데 바꿔야 할까 | 2011년 3분기 미국 DVD 구독 1,393만 → 2011년 4분기 스트리밍 2,167만 · DVD 1,117만 | DVD·스트리밍 요금제 분리 직후 한 분기 [출처](https://nexttv.com/news/netflix-streaming-rebounds-q4-dvd-service-drops-28m-subs-298156) |
 | 구매자 수 | 오리지널 드라마에 큰돈을 걸어야 할까 | 두 시즌 제작비 약 1억 달러 → 공개 후 2년간 구독자 2,400만 명 늘어 5,700만 명 | 원작·감독·배우 선호 데이터 기반 [출처](https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html) |
 | 방문자·유입 | 위치 체크인 앱이 복잡하다 | 출시 전 → 출시 1주 만에 10만 명, 3주 차 30만 명 | 2010년 10월 출시 [출처](https://techcrunch.com/?p=241149) |
+| 방문자·유입 | 친구가 없으면 소셜 앱이 재미없다 | 월간 활성 사용자 6.89억 명 (2020.7) → 10억 명 (2021.9, +45%) | 관심사 추천 피드 중심 [출처](https://techcrunch.com/2021/09/27/tiktok-reached-1-billion-monthly-active-users) |
 | 결제 매출 | 웹소설 유료 결제를 안 한다 | 2014년 1분기 → 2015년 1분기 매출 전년 동기 대비 4배, 일 매출 1억 원 | 출시 2년, 기다리면 무료 도입 이후 [출처](https://www.kakaocorp.com/page/detail/7723) |
 | 가격 수준·가격 수용성 | 만화책은 휴대폰으로 보기 불편하다 | 쿠키 1개 안드로이드 100원 → iOS 120원(인앱 수수료), iOS 사용자는 충전을 덜 하는 경향 | 가격이 높을수록 앱 결제가 줄어드는 근거 [출처](https://economist.co.kr/article/view/ecn202204140014) |
 | 결제 매출 | 만화책은 휴대폰으로 보기 불편하다 | 미리보기 도입 전 작가 수익 제한적 → 2022년 거래액 1억 원 이상 작품 900개 | PPS(페이지 수익 배분) 10년 [출처](https://byline.network/2023/04/25-257) |
@@ -374,9 +386,12 @@
 | 구매자 수 | 작가가 글로 돈을 벌기 어렵다 | 유료 구독 약 25만 건 (2020.12) → 100만 건 이상 (2021.11) | 유료 독자는 전체 독자의 약 5~10% [출처](https://www.axios.com/2021/11/15/substack-1-million-paid-subscriptions) |
 | 거래액(GMV) | 창작자가 꾸준한 수입이 없다 | 누적 창작자 지급액 10억 달러 (2019, 후원자 400만 명) → 100억 달러 이상 (2025, 유료 멤버십 2,500만 건) | 2013년 창업 이후 누적 [출처](https://www.tubefilter.com/2025/08/07/patreon-kajabi-10-billion-creator-economy-payouts-funding-since-launch/) |
 | 정기 결제 전환율 (참고: 구독형 사례) | 신문 온라인 광고 수익이 줄어든다 | 유료 디지털 구독자 없음 → 3개월 만에 28만 1천 명, 4년 만에 100만 명 이상 | 2011년 미터제 도입 [출처](https://www.cjr.org/the_audit/the_nyt_paywall_is_working.php) |
+| 구매자 수 | 책을 사서 끝까지 안 읽는다 | 구독자 39만 명 (2021년 말) → 구독자 91만 명 (2022.8) | 누적 회원 418만 → 547만 명 같은 기간 [출처](https://magazine.hankyung.com/business/article/202210264841b) |
+| 고객 생애 가치(LTV) | 항공사가 엔진 정비 비용을 예측할 수 없다 | 정비 비용을 사건별로 청구하던 방식 → Trent 엔진 90% 이상이 비행시간당 과금 장기 계약 | 회사 투자자 자료 기준 [출처](https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-ltsa-faq.pdf) |
 | 건당 원가 | 백내장 수술을 받지 못해 실명한다 | 미국 백내장 수술 약 3,000달러 → 아라빈드 약 50달러, 환자의 50~60%를 무료·원가로 진료 | 유료 40~50%가 교차 보조 [출처](https://d3.harvard.edu/platform-rctom/submission/aravind-eye-care-system-mcdonaldization-of-eye-care/) |
 | 매출총이익률 | 장난감 회사가 위기다 | 고유 부품 1만 2천 종 이상 → 약 절반 수준으로 축소, 소수 제품이 매출 대부분 | 2004년 위기 이후 [출처](https://www.g-co.agency/insights/lego-case-study-the-brand-strategy-behind-a-historic-turnaround) |
 | 결제 매출 | 소프트웨어 불법 복제와 업그레이드 주기 | 패키지 판매 중심 → 2013 회계연도 매출이 전년보다 감소(예상된 전환기 하락), 반복 매출 비중 확대 | 낮은 진입 가격으로 신규 사용자 확보 목표 [출처](https://www.sec.gov/Archives/edgar/data/0000796343/000079634314000004/adbe10kfy13.htm) |
 | 결제 매출 | 메신저로 감정을 전하기 어렵다 | 2011년 출시 → 10년간 창작 생태계 기여 약 7,000억 원, 누적 매출 1억 원 이상 이모티콘 1,392개 | 2021년 10주년 발표 [출처](https://www.kakaocorp.com/page/detail/9609) |
+| 결제 매출 | 접착력이 약한 실패작 접착제 | 1977년 시험 판매 부진 → 전국 출시 4년 뒤 3M 최다 판매 제품, 10년 뒤 매출 1억 달러 초과 | 보이시 무료 샘플링(시험 사용자 90% 구매 의향) 이후 [출처](https://www.encyclopedia.com/manufacturing/news-wires-white-papers-and-books/self-adhesive-note) |
 | 건당 원가 | 식료품 온라인 배송을 대규모로 | 창고 1곳 약 3,500만 달러 → 대부분 창고가 수용력의 3분의 1 수준으로 가동, 약 12억 달러 소진 후 2001년 파산 | 닷컴 버블 [출처](https://d3.harvard.edu/platform-rctom/submission/webvans-demise-or-when-technology-fails-to-meet-operations) |
 | 정기 결제 전환율 (참고: 구독형 사례) | 명상 앱은 마니아용이다 | 유료 구독자 소수 → 수면 스토리 1억 5천만 회 청취, 유료 구독자 200만 명, 2018년 매출 4배로 연 반복 매출 1억 5천만 달러 | 2019년 발표 [출처](https://techcrunch.com/?p=1850922) |

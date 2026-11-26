@@ -35,8 +35,8 @@ L = f'''# planning
 
 ## 규모 (스키마 v4)
 - 사례 **{len(cases)}개** (실제 {kc['real']} · 실패 {kc['failure']} · 연습 {kc['practice']}), 가설 **{nh}개**
-- **deep {len(deep)}개**: Why not yet 장벽 구조(유형·주체·바뀐 계기·연도·근거), 검증 실험과 지표, 사주 적용 아이디어 직접 작성. 근거 URL이 확인된 결과 지표 {nout}건
-- **tagged {len(tagged)}개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계는 사람이 태깅, 장벽 유형은 규칙 추정(`inferred: true`)
+- **deep {len(deep)}개**: Why not yet 장벽 구조(유형·주체·바뀐 계기·연도·근거), 검증 실험과 지표, 사주 적용 아이디어 직접 작성. 근거 URL이 확인된 결과 지표 {nout}건 ({sum(1 for c in deep if c.get('outcomes'))}개 사례), 나머지 {sum(1 for c in deep if c.get('outcome_note'))}개는 수치가 없는 이유를 기록
+- **tagged {len(tagged)}개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계는 사람이 태깅, 장벽 유형과 적용 세그먼트는 규칙 추정(`inferred: true`)
 - 출처 링크 확인 {nref}개
 
 실제·실패 사례는 학습용으로 단순화한 재구성입니다. 가설과 Why not yet 판정은 해석이며, 해당 기업이 실제로 그렇게 판단했다는 기록이 아닙니다. 출처 링크가 없는 사례는 인용 전 확인이 필요합니다.
@@ -58,7 +58,7 @@ L = f'''# planning
 python3 tools/build_db.py && node tools/check_db.mjs && python3 tools/report.py && python3 tools/readme.py
 ```
 우리 수치 진단: `db/service/baseline.json`에 단계별 도달 수를 넣고 `python3 tools/diagnose.py` → `docs/diagnosis.md` (예시는 `--example`)
-원본: `db/base.json`(처음 30개) · `db/src/*.txt`(분야별 사례, `95·96-deep`은 핵심 50개, `97-commerce-remap`은 커머스 구조에 맞춘 사주 적용·실험 덮어쓰기, `98-outcomes`는 결과 지표 보강) · `db/meta/ice.txt`(실험 우선순위·채택 기준·가드레일) · `db/meta/also.txt`(보조 퍼널 단계) · `db/meta/tags.txt`(분류 태그). 작성 형식은 `tools/build_db.py` 맨 위 설명을 보세요.
+원본: `db/base.json`(처음 30개) · `db/src/*.txt`(분야별 사례, `95·96-deep`은 핵심 50개, `97-commerce-remap`은 커머스 구조에 맞춘 사주 적용·실험 덮어쓰기, `98-outcomes`는 결과 지표 보강) · `db/meta/ice.txt`(실험 우선순위·채택 기준·가드레일) · `db/meta/also.txt`(보조 퍼널 단계) · `db/meta/segments.txt`(적용 세그먼트) · `db/meta/no-outcome.txt`(결과 수치가 없는 이유) · `db/meta/tags.txt`(분류 태그). 작성 형식은 `tools/build_db.py` 맨 위 설명을 보세요.
 
 ## 핵심 사례 (deep {len(deep)}개)
 
