@@ -56,7 +56,7 @@
 - `webvan`: 없음
 - `milkshake`: 유입 키워드로 고민을 알 수 있다
 
-같은 단계의 분류 사례 4개: `sajuai`, `gpt-saju-substitute`, `obama-splash`, `landing-reading-level`
+같은 단계의 분류 사례 3개: `gpt-saju-substitute`, `obama-splash`, `landing-reading-level`
 
 ### 결제 페이지 도달 (통과율 50.0%, 하루 260명 도달)
 

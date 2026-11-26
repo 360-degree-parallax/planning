@@ -33443,15 +33443,18 @@
    "domain": "운세·사주",
    "domain_group": "운세·사주",
    "title": "수만 원짜리 사주를 990원에 팔면 남을까",
-   "source": "코리아데일리, 브런치(캡선생)",
+   "source": "중앙일보(코리아데일리), 브런치(캡선생), 패스트캠퍼스, 에스콰이어",
    "source_status": "verified",
    "source_note": null,
    "verified": true,
    "refs": [
     "https://www.koreadaily.com/article/20261024140033639",
-    "https://brunch.co.kr/@kap/1960"
+    "https://brunch.co.kr/@kap/1960",
+    "https://brunch.co.kr/@kap/1964",
+    "https://fastcampus.co.kr/story_interview_sajuvibecoding",
+    "https://www.esquirekorea.co.kr/article/1897739"
    ],
-   "depth": "tagged",
+   "depth": "deep",
    "business": {
     "model": "pay_per_unit",
     "stage": "growth",
@@ -33469,26 +33472,74 @@
      "after": "누적 유저 186만 명, 판매 600만 건 이상",
      "context": "2025년 9월 990원 유료화 이후",
      "evidence": "https://www.koreadaily.com/article/20261024140033639"
+    },
+    {
+     "metric": "revenue",
+     "before": "2025년 9월 유료화",
+     "after": "광고비 없이 1년 만에 매출 약 60억 원(판매 1건당 약 1000원, 이용자 1명당 약 3200원으로 계산)",
+     "context": "언론 보도·계산값",
+     "evidence": "https://www.koreadaily.com/article/20261024140033639"
     }
    ],
    "outcome_note": null,
    "saju": {
     "stage": "hook_marketing",
-    "idea": "저가 경쟁자 대비 4만 원의 이유를 2p에서 비교로 보여 준다: 분량·깊이·후속 질문·환불 기준을 나란히 놓고, 저가 상품으로 먼저 사 본 고객의 '업그레이드' 경로를 만든다",
+    "idea": "저가 경쟁자 대비 4만 원의 이유를 2p에서 비교로 보여 준다: 분량이 아니라 1p 주인공 스토리·질문권 포함·명식 근거·환불 기준. 저가 단건으로 먼저 사 본 고객을 위한 '업그레이드' 경로(이미 본 주제는 빼고 차액 결제)를 만든다",
+    "also": [
+     "refer",
+     "trust"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "사주아이는 990원이라 '다른 주제 하나 더'로 파는 구조이고, 이미 본 주제를 빼고 차액만 내는 업그레이드 경로는 확인되지 않았다",
+     "barrier": "belief",
+     "competitors": [
+      "sajuai"
+     ],
+     "compliance": [
+      "dark-sequential-price"
+     ]
+    },
+    "fit": {
+     "problem_match": "different",
+     "mechanism": "초저가 단건이 첫 결제 위험을 없애고 공유·궁합이 무광고 유입을 만든다",
+     "support_factors": [
+      {
+       "condition": "우리 가격이 초저가다",
+       "present": "no"
+      },
+      {
+       "condition": "공유 구조를 만들 수 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "계산 정확도를 검증할 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "990원 대 4만 원대: 가격 전략은 반대, 공유·정확도만 옮긴다",
+     "verdict": "adapt"
+    },
     "segments": {
      "user_type": [
       "new"
      ],
+     "age_band": [
+      "20s",
+      "30s"
+     ],
      "channel": [
-      "referral"
+      "referral",
+      "organic_sns"
      ]
     },
-    "segments_inferred": true
+    "segments_inferred": false
    },
    "what": {
-    "situation": "사주 상담은 보통 수만 원대였다. 1인 개발자가 AI 사주 서비스 사주아이를 만들어 2025년 7월 테스트를 시작하고 9월에 990원 유료 상품으로 바꿨다.",
-    "symptom": "사주를 보고 싶어도 가격이 부담돼 시작하지 못한다",
-    "problem": "첫 결제의 심리적 장벽이 가격 자체보다 '수만 원을 걸어도 될까'라는 위험 판단이었다"
+    "situation": "인사혁신처 사무관 출신 정현아 대표(미오스타)가 1인 개발로 웹 사주 서비스 사주아이를 만들었다. 2025년 7월 테스트, 9월 990원 유료화. 앱 설치 없이 웹에서 이름·생년월일을 넣고 연애·재물·직업·신년·월간 운세를 고르며, 고양이 캐릭터와 재화 '츄르' 충전 방식을 쓴다. 광고비 없이 누적 이용자 186만 명, 판매 600만 건, 1년 만에 매출 60억 원을 냈다고 밝혔다.",
+    "symptom": "사주를 보고 싶어도 수만 원 상담은 시작 장벽이 높다",
+    "problem": "첫 결제의 장벽은 가격 자체보다 '수만 원을 걸어도 될까'라는 위험 판단이었고, 결과를 친구와 나누는 재미가 빠져 있었다"
    },
    "hyps": [
     {
@@ -33509,20 +33560,20 @@
     {
      "text": "무료로 전부 제공한다",
      "perspective": "constraint",
-     "why_not_yet": "LLM 원가를 감당할 수 없다",
+     "why_not_yet": "LLM 호출비와 서버비를 감당할 수 없다. 이용자가 늘자 서버 사양과 API 등급을 올려야 했다",
      "verdict": "impossible",
      "reason": "비용",
      "barrier": {
       "type": "cost",
-      "holder": "LLM 사용 원가",
+      "holder": "LLM·서버 원가",
       "changed": "",
       "year": null,
-      "evidence": "",
+      "evidence": "https://fastcampus.co.kr/story_interview_sajuvibecoding",
       "inferred": false
      }
     },
     {
-     "text": "990원 초저가 단건 + 재화(츄르) 충전 방식",
+     "text": "990원 초저가 단건 + 재화(츄르) 충전",
      "perspective": "price",
      "why_not_yet": "LLM 덕분에 리포트 1건 생성 원가가 낮아져 초저가가 가능해졌다",
      "verdict": "timing",
@@ -33537,9 +33588,9 @@
      }
     },
     {
-     "text": "고양이 캐릭터·재화 이름으로 놀이처럼 만든다",
+     "text": "고양이 캐릭터와 재화 이름으로 놀이처럼 만들고 '990원 고양이 사주'로 기억시킨다",
      "perspective": "customer",
-     "why_not_yet": "사주는 진지해야 한다는 통념",
+     "why_not_yet": "사주는 진지해야 권위가 선다는 통념",
      "verdict": "blindspot",
      "reason": "톤의 맹점",
      "barrier": {
@@ -33547,13 +33598,77 @@
       "holder": "전통 사주 업계",
       "changed": "",
       "year": null,
-      "evidence": "",
+      "evidence": "https://brunch.co.kr/@kap/1960",
       "inferred": false
+     }
+    },
+    {
+     "text": "결과·궁합을 공유 링크로 친구에게 보내게 해 광고 없이 퍼뜨린다",
+     "perspective": "channel",
+     "why_not_yet": "사주는 개인적인 것이라 남과 나누지 않는다는 통념",
+     "verdict": "blindspot",
+     "reason": "공유의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "운세 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.esquirekorea.co.kr/article/1896492",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "결과 끝 '친구 궁합 같이 보기' 링크(친구는 무료 요약, 상세는 유료)를 단 군과 일반 공유 버튼 군의 공유당 유입·구매 비교",
+      "metric": "viral_coef",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 7,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "친구 요약에 생년월일·이름 노출 금지 (birth-data-privacy)"
+     }
+    },
+    {
+     "text": "만세력은 AI에 맡기지 않고 직접 계산 로직을 만든다",
+     "perspective": "constraint",
+     "why_not_yet": "AI가 다 해 준다는 바이브코딩 통념. 실제로 AI가 만든 만세력이 자주 틀렸다",
+     "verdict": "blindspot",
+     "reason": "기술 과신의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "AI 1인 개발 관행",
+      "changed": "",
+      "year": null,
+      "evidence": "https://fastcampus.co.kr/story_interview_sajuvibecoding",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "절기 경계·자시·윤달이 포함된 검증 세트 200건으로 우리 명식 계산 일치율을 재고 오류 건 수정 전후의 '안 맞는다' 환불 사유 비중 비교",
+      "metric": "calc_accuracy",
+      "ice": {
+       "impact": 6,
+       "confidence": 8,
+       "ease": 7,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+3%p",
+       "value": 3.0,
+       "unit": "pp"
+      },
+      "guardrail": "refund_reason_share",
+      "note": "계산 정확도 일치율 목표 99% 이상"
      }
     }
    ],
-   "solution": "990원 단건과 재화 충전으로 첫 결제 장벽을 낮추고 입소문으로 퍼진다",
-   "lesson": "우리(4만 원대)와 정반대 가격 전략이다. 고객이 '싼 것으로 충분하다'고 느끼는 지점과 '4만 원을 낼 이유'를 2p에서 분명히 해야 한다."
+   "solution": "990원 단건 + 츄르 재화 + 고양이 캐릭터 + 공유·궁합으로 무광고 성장, 카피캣에는 더 싸고 니치한 신상품과 주기적 브랜드 개편으로 대응",
+   "lesson": "우리(4만 원대)와 정반대 가격 전략이다. 판매 1건당 매출이 약 1000원(60억 원 ÷ 600만 건)이고 이용자 1명이 평균 3건 남짓 산다. 싼 가격이 '여러 번·여러 주제·친구와 함께' 사게 만든 구조다. 4만 원을 낼 이유는 분량이 아니라 1p 스토리 몰입, 질문권, 근거 있는 해석에서 나와야 한다."
   },
   {
    "id": "tight-saju",
@@ -33561,14 +33676,17 @@
    "domain": "운세·사주",
    "domain_group": "운세·사주",
    "title": "모두를 위한 사주 대신 '나만을 위한 주제'로",
-   "source": "머니투데이",
+   "source": "머니투데이, 위키트리, 서플, 원티드 채용 공고",
    "source_status": "verified",
    "source_note": null,
    "verified": true,
    "refs": [
-    "https://www.mt.co.kr/future/2026/08/16/2026080417541357071"
+    "https://www.mt.co.kr/future/2026/08/16/2026080417541357071",
+    "https://www.wikitree.co.kr/articles/1152791",
+    "https://supple.kr/news/cmsfv0llz003ok37unrnqgyvx",
+    "https://www.wanted.co.kr/wd/372241"
    ],
-   "depth": "tagged",
+   "depth": "deep",
    "business": {
     "model": "pay_per_unit",
     "stage": "growth",
@@ -33583,26 +33701,76 @@
     {
      "metric": "revenue",
      "before": "2024년 대비",
-     "after": "월 매출 10억 원 규모, 누적 이용자 500만 명 이상",
+     "after": "월 매출 10억 원 규모(2025년 월 매출 성장률 1만%), 누적 이용자 500만 명 이상, 재구매율 약 35%, 평균 체류 1시간 이상",
      "context": "외부 투자 없이, 회사 발표 기준",
      "evidence": "https://www.mt.co.kr/future/2026/08/16/2026080417541357071"
+    },
+    {
+     "metric": "buyers",
+     "before": "-",
+     "after": "여성 75.4%, 그중 2030 여성 61.8%",
+     "context": "회사 공개 이용자 구성",
+     "evidence": "https://www.wikitree.co.kr/articles/1152791"
     }
    ],
    "outcome_note": null,
    "saju": {
     "stage": "acquire",
     "idea": "고민 주제(재회·이직·궁합)별로 광고 소재와 1p 스토리를 따로 만든다. 니치 주제 하나를 골라 소재·1p·2p를 한 묶음으로 시험한다",
+    "also": [
+     "hook_story"
+    ],
+    "wny": {
+     "verdict": "obvious",
+     "role": "table",
+     "why_not_yet": "니치 주제별 소재·1p·2p는 타이트사주가 이미 하는 방식이라 따라잡아야 할 기본기다",
+     "barrier": "competition",
+     "competitors": [
+      "tight-saju"
+     ],
+     "compliance": []
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "좁고 절실한 주제 + 보는 콘텐츠 연출이 광고 효율과 재구매를 만든다",
+     "support_factors": [
+      {
+       "condition": "웹툰형 1p가 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "니치 주제 소재를 만들 수 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "2030 여성 비중이 높다",
+       "present": "unknown"
+      }
+     ],
+     "key_difference": "직접 경쟁자, 구조가 거의 같다",
+     "verdict": "transfer"
+    },
     "segments": {
      "user_type": [
       "new"
+     ],
+     "gender": [
+      "f"
+     ],
+     "age_band": [
+      "20s",
+      "30s"
+     ],
+     "topic": [
+      "love"
      ]
     },
-    "segments_inferred": true
+    "segments_inferred": false
    },
    "what": {
-    "situation": "AI 사주 서비스가 늘면서 연애·재물·총운처럼 주제가 비슷해졌다. 사이버네틱스는 29금 사주, 퀴어 사주, 재회 자미두수처럼 좁은 주제를 내놓았다.",
+    "situation": "2023년 설립된 사이버네틱스의 타이트사주는 AI 심리 상담·ADHD 커뮤니티 같은 멘탈 헬스 서비스를 만들다가 이용자가 가장 많이 찾은 사주·타로로 방향을 틀었다. 웹툰형·숏폼형 콘텐츠와 인터랙션을 결합한 리포트를 팔고, 29금 사주·퀴어 사주·재회 자미두수처럼 좁은 주제와 'MZ무당 범산도령'·'MZ무녀 피안' 같은 자체 캐릭터 IP를 쓴다. 사주 전문가 50명 이상과 알고리즘을 만들고 NASA·한국천문연구원 데이터로 만세력 정확도를 높였다. 외부 투자 없이 월 매출 10억 원 규모, 누적 이용자 500만 명 이상, 재구매율 약 35%를 밝혔다.",
     "symptom": "비슷한 주제끼리 경쟁하며 광고비가 오른다",
-    "problem": "고객의 구체적인 고민(재회, 정체성)을 정면으로 다루는 상품이 없었다"
+    "problem": "고객의 구체적인 고민(재회, 정체성, 성)을 정면으로 다루는 상품이 없었다"
    },
    "hyps": [
     {
@@ -33633,6 +33801,23 @@
       "year": null,
       "evidence": "https://www.mt.co.kr/future/2026/08/16/2026080417541357071",
       "inferred": false
+     },
+     "test": {
+      "experiment": "니치 주제 하나(재회)를 골라 광고 소재·1p·2p를 한 묶음으로 만든 군과 총운 묶음 군의 유입당 매출·재구매 비교",
+      "metric": "roas",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 6,
+       "score": 6.3
+      },
+      "target": {
+       "text": "+15%",
+       "value": 15.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "니치 주제 하나로 소재·1p·2p 묶음"
      }
     },
     {
@@ -33649,10 +33834,55 @@
       "evidence": "",
       "inferred": false
      }
+    },
+    {
+     "text": "웹툰형·숏폼형 연출과 자체 무당 캐릭터 IP로 리포트를 '보는 콘텐츠'로 만든다",
+     "perspective": "channel",
+     "why_not_yet": "사주 리포트는 긴 글이어야 깊어 보인다는 통념",
+     "verdict": "blindspot",
+     "reason": "형식의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "텍스트 리포트 중심 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.mt.co.kr/future/2026/08/16/2026080417541357071",
+      "inferred": false
+     }
+    },
+    {
+     "text": "멘탈 헬스 서비스를 하다가 이용자가 실제로 찾는 사주로 바꾼다",
+     "perspective": "belief",
+     "why_not_yet": "사주는 비과학이라 심리 서비스와 섞으면 안 된다는 통념",
+     "verdict": "blindspot",
+     "reason": "수요의 맹점",
+     "barrier": {
+      "type": "definition",
+      "holder": "멘탈 헬스 스타트업 관행",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.wanted.co.kr/wd/372241",
+      "inferred": false
+     }
+    },
+    {
+     "text": "전문가 상담을 모든 주제에 붙인다",
+     "perspective": "constraint",
+     "why_not_yet": "니치 주제마다 사람 전문가를 두면 원가가 감당되지 않는다",
+     "verdict": "impossible",
+     "reason": "비용",
+     "barrier": {
+      "type": "cost",
+      "holder": "전문가 인건비",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
     }
    ],
-   "solution": "좁고 절실한 주제와 계산 정확도로 차별화한다",
-   "lesson": "주제를 좁히면 2p 메시지가 선명해지고 광고 소재도 날카로워진다."
+   "solution": "좁고 절실한 주제 + 웹툰·숏폼 연출 + 자체 캐릭터 IP + 계산 정확도, 다음 단계로 전문가 페르소나 캐릭터챗과 아시아 확장 준비",
+   "lesson": "우리 서비스(웹툰형 1p + 리포트 구매)와 구조가 가장 가까운 직접 경쟁자다. 주제를 좁히면 2p 메시지가 선명해지고 광고 소재도 날카로워진다. 이용자의 약 70%가 2030 여성이라 연애·재회가 주력이고, 30~40대 남성이 늘고 있다."
   },
   {
    "id": "forceteller",
@@ -34643,6 +34873,179 @@
    ],
    "solution": "(실패) 2025년 10월 OTT·음원·커머스 구독 4개사 첫 제재",
    "lesson": "연간 이용권·자동 예약·묶음 상품을 만들 때 6개 유형을 체크리스트로 본다."
+  },
+  {
+   "id": "tight-reunion",
+   "kind": "real",
+   "domain": "운세·사주",
+   "domain_group": "운세·사주",
+   "title": "재회 하나만 깊게: 재회 자미두수",
+   "source": "서플(유니콘팩토리)",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://supple.kr/news/cmsfv0llz003ok37unrnqgyvx"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "growth",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "repeat_pay_rate",
+    "note": "같은 고민의 재구매 부재"
+   },
+   "outcomes": [
+    {
+     "metric": "repeat_pay_rate",
+     "before": "기존 재회사주(2030 여성 64%)",
+     "after": "출시 두 달 만에 이용자 5만 3000명, 2030 여성 71%, 재구매율 서비스 평균의 2.6배, 평점 4.3",
+     "context": "회사 발표",
+     "evidence": "https://supple.kr/news/cmsfv0llz003ok37unrnqgyvx"
+    }
+   ],
+   "outcome_note": null,
+   "saju": {
+    "stage": "ask",
+    "idea": "재회 주제 구매자에게 '시기로 보기·상대 쪽 흐름 보기·궁합 시점 보기' 세 갈래 후속 질문을 추천해 질문권으로 잇는다. '재회 확률 OO%' 같은 단정 표현은 쓰지 않는다",
+    "also": [
+     "ask",
+     "repeat_pay"
+    ],
+    "wny": {
+     "verdict": "timing",
+     "role": "diff",
+     "why_not_yet": "체계별 해석을 AI로 만들 수 있게 되며 같은 고민을 다른 관점으로 이어 묻는 상품이 가능해졌다. 리포트가 아닌 질문권으로 잇는 방식은 확인되지 않았다",
+     "barrier": "tech_change",
+     "competitors": [
+      "tight-saju"
+     ],
+     "compliance": [
+      "ai-answer-liability"
+     ]
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "절실한 고민을 다른 각도로 다시 보게 하면 재구매가 오른다",
+     "support_factors": [
+      {
+       "condition": "재회 주제 구매자가 있다",
+       "present": "unknown"
+      },
+      {
+       "condition": "후속 질문권이 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "별도 리포트 대 질문권",
+     "verdict": "adapt"
+    },
+    "segments": {
+     "user_type": [
+      "buyer"
+     ],
+     "gender": [
+      "f"
+     ],
+     "age_band": [
+      "20s",
+      "30s"
+     ],
+     "topic": [
+      "love"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "타이트사주는 동양 점성술 자미두수로 이별 원인·상대의 속마음·앞으로의 관계 흐름을 풀어 주는 '재회자미두수'를 냈다. 명궁·부부궁·복덕궁 같은 궁 구조로 관계와 '감정의 잔상'을 해석한다. 출시 두 달 만에 이용자 5만 3000명, 구매자의 90%가 2030, 2030 여성 비율 71%(기존 재회사주 64%), 재구매율은 서비스 평균의 2.6배, 평점 4.3이었다.",
+    "symptom": "같은 재회 고민인데 사주 하나로만 보면 금방 '더 볼 게 없다'고 느낀다",
+    "problem": "절실한 고민일수록 '다른 각도로 한 번 더' 보고 싶어 하는데, 같은 주제를 다른 해석 체계로 다시 파는 상품이 없었다"
+   },
+   "hyps": [
+    {
+     "text": "재회사주 가격을 낮춘다",
+     "perspective": "price",
+     "why_not_yet": "흔한 대응이고 같은 상품을 싸게 팔 뿐이다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "사주 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "같은 고민(재회)을 다른 해석 체계(자미두수)로 한 번 더 판다",
+     "perspective": "customer",
+     "why_not_yet": "한 사람에게 같은 주제를 두 번 팔면 중복이라 불만이 생긴다는 통념",
+     "verdict": "blindspot",
+     "reason": "중복의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "운세 상품 기획 관행",
+      "changed": "",
+      "year": null,
+      "evidence": "https://supple.kr/news/cmsfv0llz003ok37unrnqgyvx",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "재회 리포트 구매자에게 '다른 관점(궁합 시점·상대 쪽 흐름)으로 한 번 더' 질문권을 제안하는 군과 일반 추천 군의 30일 재구매율 비교",
+      "metric": "repeat_pay_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 8,
+       "score": 7.0
+      },
+      "target": {
+       "text": "+5%p",
+       "value": 5.0,
+       "unit": "pp"
+      },
+      "guardrail": "answer_refund_rate",
+      "note": "단정 표현 금지 (ai-answer-liability)"
+     }
+    },
+    {
+     "text": "자미두수 같은 비주류 체계를 AI로 상품화한다",
+     "perspective": "constraint",
+     "why_not_yet": "해석 체계별로 사람 전문가를 두기 어려웠는데 LLM으로 체계별 해석 생성이 가능해졌다",
+     "verdict": "timing",
+     "reason": "기술 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "체계별 전문가 의존",
+      "changed": "LLM 해석 생성",
+      "year": 2025,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "재회 가능성을 확률로 단정한다",
+     "perspective": "constraint",
+     "why_not_yet": "결과를 보장하는 표현은 분쟁·규제 위험이 있다",
+     "verdict": "impossible",
+     "reason": "규제",
+     "barrier": {
+      "type": "regulation",
+      "holder": "표시·광고 책임과 AI 답변 책임",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "재회 전용 자미두수 상품, 2030 여성 집중, 재구매율 평균의 2.6배",
+   "lesson": "절실한 니치 고민은 '다른 해석으로 한 번 더'가 재구매를 만든다. 우리 질문권은 같은 재회 고민을 시기·상대 흐름·궁합 시점으로 나눠 이어 묻게 할 수 있다."
   },
   {
    "id": "justanswer",
@@ -43751,175 +44154,6 @@
    ],
    "solution": "한국: 볼륨 보너스형 + 웹 1원 / 북미·일본: 단가 고정 + 첫 구매·시즌 팩 할인 + 기간 패스(일본) + 응답 등급·출력 길이별 차감",
    "lesson": "해외판일수록 단가를 고정하고 할인을 '첫 구매'에만 쓴다. 웹 결제는 같은 재화를 25~30% 싸게 팔 여지를 만든다. 우리는 웹사이트라 이 차이가 처음부터 우리 편이다."
-  },
-  {
-   "id": "wrtn-plot",
-   "kind": "real",
-   "domain": "운세·사주",
-   "domain_group": "운세·사주",
-   "title": "크랙의 회사가 만든 사주 앱: 열쇠·월 무제한·'사주 정령에게 묻기'",
-   "source": "앱스토어, 구글플레이",
-   "source_status": "verified",
-   "source_note": null,
-   "verified": true,
-   "refs": [
-    "https://play.google.com/store/apps/details?id=com.wrtn.flot",
-    "https://apps.apple.com/kr/app/id6759165551"
-   ],
-   "depth": "deep",
-   "business": {
-    "model": "pay_per_unit",
-    "stage": "early",
-    "market": "b2c",
-    "region": "kr"
-   },
-   "problem_metric": {
-    "id": "revenue",
-    "note": "대형 AI 회사의 사주 시장 진입"
-   },
-   "outcomes": [
-    {
-     "metric": "price_level",
-     "before": "2026년 3월 출시",
-     "after": "열쇠 개당 122~167원(9개 1500원 ~ 450개 5만 5000원), 5월 월 무제한 플랜 도입, 11월 구글플레이 5000건 이상·평점 3.9",
-     "context": "앱스토어·구글플레이 표기",
-     "evidence": "https://apps.apple.com/kr/app/id6759165551"
-    }
-   ],
-   "outcome_note": null,
-   "saju": {
-    "stage": "ask",
-    "idea": "플롯의 '사주 정령에게 묻기'를 분기마다 직접 써 보고(답변 길이·근거·가격) 우리 질문권과 나란히 비교표를 만든다. 우리는 1p 주인공 캐릭터·리포트 장 연결·명식 근거로 차별한다",
-    "also": [
-     "checkout",
-     "repeat_pay"
-    ],
-    "wny": {
-     "verdict": "obvious",
-     "role": "table",
-     "why_not_yet": "질문형 사주와 재화·월 무제한은 플롯이 이미 한다. 차별이 아니라 따라잡아야 할 기본기다",
-     "barrier": "competition",
-     "competitors": [
-      "wrtn-plot"
-     ],
-     "compliance": [
-      "dark-hidden-renewal"
-     ]
-    },
-    "fit": {
-     "problem_match": "same",
-     "mechanism": "사주 리포트 위에 질문형 상품과 재화·구독을 얹는다",
-     "support_factors": [
-      {
-       "condition": "질문형 수요가 있다",
-       "present": "unknown"
-      },
-      {
-       "condition": "하루 상한 있는 무제한 플랜의 원가를 감당한다",
-       "present": "unknown"
-      }
-     ],
-     "key_difference": "직접 경쟁 선례",
-     "verdict": "adapt"
-    },
-    "segments": {
-     "user_type": [
-      "new",
-      "buyer"
-     ],
-     "topic": [
-      "love",
-      "yearly"
-     ]
-    },
-    "segments_inferred": false
-   },
-   "what": {
-    "situation": "뤼튼은 2026년 3월 16일 사주 앱 '플롯 - 나를 읽는 즐거움'(구글플레이 표기: 신년운·연애운·재회운·결혼운)을 냈다. 개인 맞춤 프리미엄 사주 리포트, '사주 정령에게 묻기'(지금의 선택·시기 질문), 3~10명 단체 궁합, 무료 기본 사주를 준다. 재화는 '열쇠'로 9개 1500원(개당 166.7원)부터 450개 5만 5000원(122.2원)까지이고, 5월 27일 업데이트로 월 무제한 플랜을 도입했다. 2026년 11월 기준 구글플레이 다운로드 5000건 이상, 평점 3.9(리뷰 12건), 앱스토어 평점 3.1(18건)이다.",
-    "symptom": "크랙의 엔진·결제 노하우를 가진 회사가 사주 시장에 들어왔다",
-    "problem": "사주 앱 시장에 '질문형'과 '재화·구독 혼합'이 대형 AI 회사의 방식으로 들어오고 있다"
-   },
-   "hyps": [
-    {
-     "text": "기존 사주 앱처럼 리포트 단건만 판다",
-     "perspective": "competitor",
-     "why_not_yet": "포스텔러·점신 등이 이미 하는 방식이다",
-     "verdict": "obvious",
-     "reason": "뻔함",
-     "barrier": {
-      "type": "competition",
-      "holder": "사주 앱 업계",
-      "changed": "",
-      "year": null,
-      "evidence": "",
-      "inferred": false
-     }
-    },
-    {
-     "text": "'사주 정령에게 묻기'로 내 상황 질문을 상품에 넣는다",
-     "perspective": "customer",
-     "why_not_yet": "사주는 정해진 풀이를 읽는 것이라는 업계 통념",
-     "verdict": "blindspot",
-     "reason": "상품 형식의 맹점",
-     "barrier": {
-      "type": "belief",
-      "holder": "사주 콘텐츠 업계",
-      "changed": "",
-      "year": null,
-      "evidence": "https://play.google.com/store/apps/details?id=com.wrtn.flot",
-      "inferred": false
-     }
-    },
-    {
-     "text": "열쇠 재화에 월 무제한 플랜을 더한다",
-     "perspective": "price",
-     "why_not_yet": "출시 두 달 만에 구독을 붙인 것은 재화만으로 재방문이 약했다는 신호일 수 있다(추정)",
-     "verdict": "timing",
-     "reason": "시장 변화",
-     "barrier": {
-      "type": "market_change",
-      "holder": "재화 단건 판매",
-      "changed": "월 무제한 플랜 도입",
-      "year": 2026,
-      "evidence": "https://apps.apple.com/kr/app/id6759165551",
-      "inferred": false
-     },
-     "test": {
-      "experiment": "질문권 묶음만 파는 군과 '30일 질문 무제한(하루 상한)'을 함께 보여 주는 군의 30일 매출·질문당 원가 비교",
-      "metric": "revenue",
-      "ice": {
-       "impact": 5,
-       "confidence": 4,
-       "ease": 6,
-       "score": 5.0
-      },
-      "target": {
-       "text": "+10%",
-       "value": 10.0,
-       "unit": "relative"
-      },
-      "guardrail": "cost_per_answer",
-      "note": "하루 질문 상한 필수, 자동 갱신 고지 (dark-hidden-renewal)"
-     }
-    },
-    {
-     "text": "다운로드를 빨리 키운다",
-     "perspective": "constraint",
-     "why_not_yet": "출시 8개월 다운로드 5000건 수준으로, 같은 회사라도 운세는 서브컬처 팬덤처럼 퍼지지 않았다",
-     "verdict": "impossible",
-     "reason": "구조",
-     "barrier": {
-      "type": "structural",
-      "holder": "운세 시장의 분산된 경쟁",
-      "changed": "",
-      "year": null,
-      "evidence": "",
-      "inferred": false
-     }
-    }
-   ],
-   "solution": "사주 리포트 + 질문형(사주 정령에게 묻기) + 단체 궁합 + 열쇠 재화 + 월 무제한 플랜",
-   "lesson": "대형 AI 회사가 우리와 같은 '질문형 사주'를 이미 시험 중이다. 다만 초기 지표(다운로드 5000건, 평점 3점대)는 약하다. 차별은 1p 스토리 몰입과 결과 리포트와 이어지는 답변에서 나와야 한다."
   }
  ],
  "kinds": {

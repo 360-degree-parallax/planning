@@ -117,4 +117,7 @@ kyarapu 5 | 7 6 8 | +3%p | cost_per_answer | 무료 3회는 짧은 답으로 원
 ooc-na 2 | 6 5 8 | +10% | answer_satisfaction | '상담' 표현 금지 (sensitive-advice)
 wrtn-pnl 3 | 7 6 5 | -30% | answer_satisfaction | 원가 30% 절감, 만족도 하락 2%p 이내
 crack-pricing 2 | 6 5 8 | +5% | revenue | 회당 공헌이익이 오르고 매출이 -3% 이내면 채택
-wrtn-plot 3 | 5 4 6 | +10% | cost_per_answer | 하루 질문 상한 필수, 자동 갱신 고지 (dark-hidden-renewal)
+sajuai 5 | 7 6 7 | +10% | refund_rate | 친구 요약에 생년월일·이름 노출 금지 (birth-data-privacy)
+sajuai 6 | 6 8 7 | +3%p | refund_reason_share | 계산 정확도 일치율 목표 99% 이상
+tight-saju 2 | 7 6 6 | +15% | refund_rate | 니치 주제 하나로 소재·1p·2p 묶음
+tight-reunion 2 | 7 6 8 | +5%p | answer_refund_rate | 단정 표현 금지 (ai-answer-liability)

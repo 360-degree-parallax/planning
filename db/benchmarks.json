@@ -106,16 +106,6 @@
    "checked": "2026-11-27"
   },
   {
-   "id": "plot_key_unit",
-   "metric": "price_level",
-   "value": 145,
-   "label": "플롯(뤼튼 사주 앱) 열쇠 1개 가격(원), 122~167원",
-   "context": "9개 1500원 ~ 450개 5만 5000원. 2026년 5월 월 무제한 플랜 도입.",
-   "source": "App Store (Korea)",
-   "url": "https://apps.apple.com/kr/app/id6759165551",
-   "checked": "2026-11-27"
-  },
-  {
    "id": "wrtn_opex_ratio_2025",
    "metric": "unit_cost",
    "value": 2.25,
@@ -133,6 +123,36 @@
    "context": "광고 기반 무료 + 월 1만 900원 제타패스, 자체 소형 모델로 서버비 절감. 비율은 보도 수치로 계산한 값.",
    "source": "벤처스퀘어",
    "url": "https://www.venturesquare.net/1097430/",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "sajuai_rev_per_sale",
+   "metric": "aov",
+   "value": 1000,
+   "label": "사주아이 판매 1건당 매출(원), 매출 약 60억 원 ÷ 판매 600만 건",
+   "context": "990원 단건·츄르 재화. 이용자 1명당 매출 약 3200원(÷186만 명). 보도 수치로 계산한 값.",
+   "source": "중앙일보(코리아데일리)",
+   "url": "https://www.koreadaily.com/article/20261024140033639",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "tightsaju_repurchase",
+   "metric": "repeat_pay_rate",
+   "value": 0.35,
+   "label": "타이트사주 재구매율 약 35%",
+   "context": "월 매출 10억 원 규모, 누적 500만 명, 2030 여성 약 70%. 회사 발표.",
+   "source": "머니투데이",
+   "url": "https://www.mt.co.kr/future/2026/08/16/2026080417541357071",
+   "checked": "2026-11-27"
+  },
+  {
+   "id": "human_saju_report_price",
+   "metric": "price_level",
+   "value": 35000,
+   "label": "사람이 쓰는 1인 종합 사주 리포트(100p 안팎) 가격대 대표값(원), 범위 25,000~59,000원",
+   "context": "당근 지역 사주 업체들의 1인 종합사주 표시가(25,000·34,900·35,000·39,000·44,800원 등), 고민 1개 추가 시 59,000원. 우리 4만 원대 상품의 사람 상담 대비 기준점.",
+   "source": "당근 지역 프로필 (사주친구·사주비기·영월당·오늘의사주 등)",
+   "url": "https://daangn.com/kr/local-profile/%EC%98%81%EC%9B%94%EB%8B%B9-34ictc2np9uh/",
    "checked": "2026-11-27"
   }
  ]

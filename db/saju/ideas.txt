@@ -114,4 +114,6 @@ kyarapu | O | table | 신규 무료 혜택 크기 실험은 기본기다 | compe
 ooc-na | B | diff | 사주 Q&A는 '상담' 범주로만 여겨, 1p 웹툰 스토리의 '다음 장'으로 질문권을 연출하지 않았다 | definition | cheongwoldang | ai-disclosure, sensitive-advice
 wrtn-pnl | B | diff | 사주 AI 서비스는 모델 하나로 모든 질문에 답하는 관행이라 질문 종류별 모델 라우팅으로 원가를 나누지 않았다 | belief | sajuai | -
 crack-pricing | B | diff | 사주 앱은 게임식 대량 할인 재화가 표준이라 '단가 고정 + 첫 구매 할인 + 길이별 차감'으로 회당 마진을 지키는 설계를 쓰지 않았다 | belief | hellobot, sajuai | dark-sequential-price, dark-false-hierarchy
-wrtn-plot | O | table | 질문형 사주와 재화·월 무제한은 플롯이 이미 한다. 차별이 아니라 따라잡아야 할 기본기다 | competition | wrtn-plot | dark-hidden-renewal
+sajuai | B | diff | 사주아이는 990원이라 '다른 주제 하나 더'로 파는 구조이고, 이미 본 주제를 빼고 차액만 내는 업그레이드 경로는 확인되지 않았다 | belief | sajuai | dark-sequential-price
+tight-saju | O | table | 니치 주제별 소재·1p·2p는 타이트사주가 이미 하는 방식이라 따라잡아야 할 기본기다 | competition | tight-saju | -
+tight-reunion | T | diff | 체계별 해석을 AI로 만들 수 있게 되며 같은 고민을 다른 관점으로 이어 묻는 상품이 가능해졌다. 리포트가 아닌 질문권으로 잇는 방식은 확인되지 않았다 | tech_change | tight-saju | ai-answer-liability

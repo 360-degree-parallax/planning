@@ -210,4 +210,4 @@
 ## 13. 질문권 단위 경제 (`tools/unit_econ.py`)
 - 입력: `db/service/unit-econ.json` (없으면 `unit-econ.example.json`, 모든 값은 가정). 모델 단가·토큰 수·라우팅 비중·결제 채널 수수료·환불률·검수 비율·무료 질문 비율·묶음 가격.
 - 출력: 묶음별 질문 1회 순매출·모델 원가·검수·무료 배분·수수료·환불·공헌이익·공헌이익률, 손익분기 판매가.
-- 근거 사례: crack-pricing, wrtn-pnl, wrtn-plot (docs/crack-deep-dive.md 10장).
+- 근거 사례: crack-pricing, wrtn-pnl (docs/crack-deep-dive.md 10장).

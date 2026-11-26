@@ -105,4 +105,6 @@ kyarapu | acquire
 ooc-na | hook_story, checkout
 wrtn-pnl | ask
 crack-pricing | ask, economics
-wrtn-plot | checkout, repeat_pay
+sajuai | refer, trust
+tight-saju | hook_story
+tight-reunion | ask, repeat_pay

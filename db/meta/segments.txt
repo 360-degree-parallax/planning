@@ -108,4 +108,6 @@ kyarapu | user_type:new,buyer
 ooc-na | user_type:buyer; age_band:10s,20s
 wrtn-pnl | all
 crack-pricing | user_type:buyer
-wrtn-plot | user_type:new,buyer; topic:love,yearly
+sajuai | user_type:new; age_band:20s,30s; channel:referral,organic_sns
+tight-saju | user_type:new; gender:f; age_band:20s,30s; topic:love
+tight-reunion | user_type:buyer; gender:f; age_band:20s,30s; topic:love
