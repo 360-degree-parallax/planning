@@ -99,3 +99,11 @@ crack-global | user_type:new
 naver-charchat | user_type:buyer; age_band:10s,20s
 chat-gacha-risk | all
 zeta-vs-crack | user_type:buyer
+crack-paywall | user_type:buyer
+crack-spinoff | user_type:buyer,returning
+crack-creator | user_type:buyer; topic:career,love
+crack-memory | user_type:returning,buyer
+crack-teen | age_band:10s
+kyarapu | user_type:new,buyer
+ooc-na | user_type:buyer; age_band:10s,20s
+wrtn-pnl | all

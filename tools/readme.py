@@ -57,6 +57,7 @@ L = f'''# planning
 | `db/service/` | 우리 서비스 단계별 도달 수·수익 구조·실험 기록 (`*.example.json`은 가짜 예시) |
 | `db/benchmarks.json` | 출처 있는 외부 참고 기준값 |
 | [docs/idea-validation.md](docs/idea-validation.md) | 우리 아이디어의 적합성(Fit) 검증 + Why not yet |
+| [docs/crack-deep-dive.md](docs/crack-deep-dive.md) | 크랙·캬라푸·OOC 단계별 딥다이브 (타임라인·수익·원가·위험·질문권 적용 우선순위) |
 | [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |
 | [docs/compliance.md](docs/compliance.md) | 실험 전 확인할 규정 체크리스트 |
 | [docs/tracking-plan.md](docs/tracking-plan.md) | 단계별 이벤트 정의 (도달 수 집계 기준) |

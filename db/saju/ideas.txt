@@ -104,3 +104,12 @@ crack-global | I | skip | 명리 용어를 검수할 번역 인력이 없어 지
 naver-charchat | O | table | 답변에서 리포트 해당 장으로 잇는 링크는 콘텐츠 연결의 기본기다 | competition | - | -
 chat-gacha-risk | T | risk | 규제 기관이 AI 채팅의 확률형 장치를 보기 시작해, 운세 뽑기에 돈을 거는 이벤트는 이제 위험하다 | regulation_change | - | probability-event
 zeta-vs-crack | O | table | 최종 지표를 결제로 두는 것은 우리 방법론의 전제다 | competition | - | -
+// 크랙·캬라푸·OOC 딥다이브
+crack-paywall | B | diff | 사주 앱은 콘텐츠 종류로만 유료를 나눠, 같은 질문의 '깊은 답' 미리보기로 품질 차이를 보여 주지 않았다 | belief | forceteller, jeomsin | dark-sequential-price
+crack-spinoff | O | table | 구매자용 별도 보관함(내 질문함)은 커머스 마이페이지의 기본기다 | competition | - | -
+crack-creator | I | skip | 정산 운영 인력과 외부 해석가 풀이 없어 지금은 정산 마켓을 운영할 수 없다. 추천 질문 템플릿만 먼저 시험 | cost | naver-expert | -
+crack-memory | T | diff | 요약 기반 기억 비용이 떨어지기 전에는 질문마다 이력을 반영하기 어려웠다. 사주 Q&A에서 질문 이력 반영은 아직 드물다 | tech_change | hellobot | birth-data-privacy
+crack-teen | T | risk | 청소년 보호 규제 압력이 커져 생년월일을 받는 사주 서비스도 미성년자 상한을 둘 때가 됐다 | regulation_change | - | minor-ai-usage, minor-cancel
+kyarapu | O | table | 신규 무료 혜택 크기 실험은 기본기다 | competition | forceteller | -
+ooc-na | B | diff | 사주 Q&A는 '상담' 범주로만 여겨, 1p 웹툰 스토리의 '다음 장'으로 질문권을 연출하지 않았다 | definition | cheongwoldang | ai-disclosure, sensitive-advice
+wrtn-pnl | B | diff | 사주 AI 서비스는 모델 하나로 모든 질문에 답하는 관행이라 질문 종류별 모델 라우팅으로 원가를 나누지 않았다 | belief | sajuai | -

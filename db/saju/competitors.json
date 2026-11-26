@@ -220,6 +220,20 @@
    "sources": [
     "https://www.republicworld.com/initiatives/nebula-app-review-2026-features-cost-and-who-its-for-2026-09-16-137105"
    ]
+  },
+  {
+   "id": "wrtn-plot",
+   "name": "플롯 (뤼튼)",
+   "company": "뤼튼테크놀로지스",
+   "model": "pay_per_unit",
+   "scale": "공개 수치 없음",
+   "case": "crack-kr",
+   "has": {},
+   "notes": "뤼튼이 운영하는 운세·자기분석 앱. 구글플레이 표기 '신년운 · 연애운 · 재회운 · 결혼운', 앱스토어 '나를 읽는 즐거움'. 크랙의 종량형·서브컬처 엔진을 가진 회사가 운세에 들어온 신호로 분기마다 확인한다. 기능은 아직 직접 확인 못 함(null).",
+   "sources": [
+    "https://play.google.com/store/apps/developer?id=wrtn",
+    "https://apps.apple.com/kr/developer/id1684966734"
+   ]
   }
  ]
 }

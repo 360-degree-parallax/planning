@@ -96,3 +96,11 @@ crack-global | acquire
 naver-charchat | expand, hook_story
 chat-gacha-risk | trust, checkout
 zeta-vs-crack | economics
+crack-paywall | first_pay, checkout
+crack-spinoff | repeat_pay
+crack-creator | expand
+crack-memory | repeat_pay, trust
+crack-teen | trust, checkout
+kyarapu | acquire
+ooc-na | hook_story, checkout
+wrtn-pnl | ask

@@ -142,7 +142,7 @@ P: 돈을 내는 수요는 생산성 AI가 아니라 서브컬처 팬덤의 이�
 - T ch | 캐릭터 챗을 별도 앱으로 분리한다 | 앱 안 기능일 때는 따로 결제·마케팅할 수 없었는데 이용이 커지며 독립 앱이 됐다 | 시장 변화 || barrier=market_change; holder=범용 AI 앱 안의 부가 기능; changed=캐릭터 챗 이용 급증; year=2025
 - B ch | 창작자에게 정산하고 현금화를 연다 | 콘텐츠는 회사가 만들어야 품질이 보장된다는 통념 | 창작자의 맹점 || barrier=incentive; holder=플랫폼 수익 배분; ev=https://zdnet.co.kr/view/?no=20261119122756
 = 종량형 재화 + 창작자 정산(정산 창작자 5500명, 최고 연 7억 원 이상) + 서브컬처 IP
-L: 서브컬처 팬덤은 '오래 읽는 이야기'에 반복 결제한다. 다만 재화 단위는 사용자가 질문 하나에 얼마인지 셈하기 어렵게 만든다.
+L: 서브컬처 팬덤은 '오래 읽는 이야기'에 반복 결제한다. 다만 재화 단위는 사용자가 질문 하나에 얼마인지 셈하기 어렵게 만든다. 단계별 하위 사례: crack-paywall · crack-spinoff · crack-creator · crack-memory · crack-teen · wrtn-pnl (docs/crack-deep-dive.md)
 R: https://v.daum.net/v/20260414102924902
 R: https://www.mt.co.kr/article/2026081709444987700
 R: https://dealsite.co.kr/articles/167500
@@ -162,7 +162,7 @@ P: 한국에서 검증한 '팬덤이 이야기를 오래 소비하는 구조'를
 - T ti | 북미에 캐릭터 채팅 수요가 커진 시점에 들어간다 | Character.AI가 미성년자 자유 대화를 막고 성인 이용자 대안 수요가 생겼다 | 시장 변화 || barrier=market_change; holder=Character.AI 중심 북미 시장; changed=Character.AI 정책 변화와 대안 수요; year=2026; test=일본어 사주 결과·질문권을 일본 이용자 소수에게 시범 판매하고 결제율을 국내와 비교; metric=ticket_purchase_rate
 - I cn | 한국 콘텐츠를 그대로 번역해 낸다 | 캐릭터 말투·관계성은 기계 번역만으로 살지 않아 현지화 인력이 필요하다 | 비용 || barrier=cost; holder=현지화 인력
 = 일본 캬라푸·북미 OOC 현지 브랜드, 현지화 번역팀, 해외 매출이 국내 추월
-L: 서브컬처 팬덤 구조는 국경을 넘는다. 사주는 문화 맥락이 강해 그대로는 어렵지만, 일본(점술 문화)처럼 가까운 시장은 질문권 단위로 먼저 시험할 수 있다.
+L: 하위 사례 kyarapu · ooc-na 참고. 서브컬처 팬덤 구조는 국경을 넘는다. 사주는 문화 맥락이 강해 그대로는 어렵지만, 일본(점술 문화)처럼 가까운 시장은 질문권 단위로 먼저 시험할 수 있다.
 R: https://news.mtn.co.kr/news-detail/2026082606521087869
 R: https://www.wanted.co.kr/wd/397768
 R: https://quasa.io/ko/media/rwiteun-gieobgaci-1jo-weon-dolpabugmi-weolmaecul-100eog-weoni-mandeun-banjeon

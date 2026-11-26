@@ -1,0 +1,164 @@
+// 크랙(국내) · 캬라푸(일본) · OOC(북미) 단계별 딥다이브 (2026-11-27 출처 확인)
+// 상위 사례 crack-kr · crack-global을 단계별로 쪼갠 하위 사례. 우리 적용은 질문권 Q&A(ask) 관점.
+
+# crack-paywall | 무료 캐릭터챗에 '더 좋은 모델'만 유료로 걸었더니 | AI 채팅·캐릭터 서브컬처 | real | 아이뉴스24, 한국경제, Sacra
+D: deep
+S: 뤼튼의 캐릭터 챗은 무료였다. 이용자들이 고성능 유료 모델을 쓰게 해 달라고 요청하자 2024년 10월 말 '슈퍼챗' 등 상위 모델을 유료로 여는 부분 유료화를 했다. 한 달 만에 월 매출 10억 원, 12월 20억 원을 냈고 이후 월 30억 원 수준으로 컸다.
+X: 무료로 이용자는 많은데 매출이 거의 없었다
+P: 돈을 낼 이유가 '더 많이'가 아니라 '더 잘'에 있었는데, 무료와 유료의 차이가 없었다
+- O pr | 무료 대화 횟수를 줄이고 횟수를 판다 | 흔한 방식이고 무료 이용자가 이탈한다 | 뻔함 || barrier=competition; holder=AI 채팅 앱
+- B cu | 같은 대화를 상위 모델로 하면 맥락을 더 잘 잇는다는 차이를 판다 | 이용자는 모델 차이를 모른다는 통념 | 품질 체감의 맹점 || barrier=belief; holder=AI 서비스 업계; ev=https://www.inews24.com/view/1789057; test=같은 질문의 '기본 답'과 '깊은 답' 첫 3줄을 나란히 미리 보여 주는 군과 설명 문구만 있는 군의 깊은 답 구매율 비교; metric=ticket_purchase_rate
+- T ti | 유료 모델 요청이 쌓인 시점에 유료화한다 | 무료로 1년 가까이 쓰며 '맛본 뒤 돌아가기 어려운' 차이를 이용자가 먼저 느꼈다 | 행동 변화 || barrier=behavior_change; holder=무료 전용 운영; changed=고성능 모델 체감 확산; year=2024; ev=https://www.hankyung.com/article/2025020302711
+- I cn | 모든 이용자에게 상위 모델을 무료로 준다 | 상위 모델 호출비가 대화량에 비례해 감당할 수 없다 | 비용 || barrier=cost; holder=외부 LLM API 비용
+= 기본 무료 + 상위 모델(슈퍼챗) 유료, 무료 서비스는 유지
+L: 유료화 지점은 '이용자가 먼저 요청한 품질 차이'였다. 질문권도 무료 답과 유료 답의 차이를 고객이 눈으로 확인할 수 있어야 팔린다.
+R: https://www.inews24.com/view/1789057
+R: https://www.hankyung.com/article/202503310073i
+R: https://sacra.com/c/wrtn/
+R: https://demoday.co.kr/funding/insights/44
+M: freemium | growth | c2c | kr
+K: first_pay_conv | 무료 이용자의 낮은 수익화
+T: ask | 무료 질문 답변 아래에 같은 질문의 '깊은 답' 첫 3줄을 흐리게 보여 주고 질문권으로 연다. 흐림 처리는 결제 후 받는 내용과 정확히 같아야 한다
+O: revenue | 2024년 10월 말 부분 유료화 | 1개월 만에 월 매출 10억 원, 12월 20억 원 | 회사 발표 | https://www.hankyung.com/article/202503310073i
+O: revenue | 2024년 12월 월 20억 원 | 크랙 분리 출시 무렵 월 30억 원(하루 약 1억 원) | 투자 분석 자료 | https://demoday.co.kr/funding/insights/44
+
+# crack-spinoff | 앱을 따로 떼어 내자 이용자는 줄고 매출은 늘었다 | AI 채팅·캐릭터 서브컬처 | real | MTN, 딜사이트, 머니투데이, 디지털데일리
+D: deep
+S: 뤼튼은 2025년 4월 3일 캐릭터 챗을 별도 웹·앱 '크랙'으로 분리했다. 2025년 4월 크랙 MAU는 192만 명이었지만 2026년 2월 98만 명, 2026년 7월 80만 명으로 줄었다. 같은 기간 크랙 연환산 매출은 2025년 말 7000만 달러(약 1000억 원)에 이르렀다.
+X: 범용 AI 앱 안에 있으면 캐릭터챗 이용자에게 맞춘 결제·마케팅을 할 수 없다
+P: 무료 범용 AI 이용자와 돈을 내는 서브컬처 팬은 다른 고객이었다
+- O ch | 범용 앱 안에 탭으로 둔다 | 흔한 방식이지만 서브컬처 팬에게 맞춘 화면·결제가 어렵다 | 뻔함 || barrier=competition; holder=슈퍼앱 전략
+- B cu | 돈을 내는 팬만을 위한 앱으로 분리한다 | 이용자 수를 합쳐야 크게 보인다는 MAU 중심 통념 | 지표의 맹점 || barrier=belief; holder=투자·홍보용 MAU 지표; ev=https://dealsite.co.kr/articles/167500; test=질문권 화면을 리포트 결과 안의 탭으로 두는 군과 '내 사주 질문함'이라는 별도 화면으로 두는 군의 1인당 질문 수 비교; metric=questions_per_buyer
+- T pr | 대화량 비례 재화(크래커)로 바꾼다 | 상위 모델 수요가 확인되자 종량형이 매출을 키웠다 | 시장 변화 || barrier=market_change; holder=범용 AI 무료 모델; changed=부분 유료화 성공; year=2025
+- I co | 국내 MAU 1위(제타)를 이용 시간으로 따라잡는다 | 제타의 MAU가 4배, 사용 시간이 11배라 광고비로 메울 수 없다 | 구조 || barrier=structural; holder=제타의 선점
+= 별도 앱 분리 + 종량형 재화, 국내 MAU는 줄었지만 결제 중심 매출은 증가
+L: 이용자 수보다 결제자 밀도가 중요했다. 우리도 질문권 성과를 '질문한 사람 수'보다 '구매자 1인당 질문 수'로 본다.
+R: https://news.mtn.co.kr/news-detail/2025061715142744765
+R: https://dealsite.co.kr/articles/167500
+R: https://www.mt.co.kr/tech/2026/08/21/2026081709444987700
+M: pay_per_unit | growth | c2c | kr
+K: questions_per_buyer | 이용자 수와 결제의 불일치
+T: ask | 질문권 성공 지표를 '질문 진입자 수'가 아니라 '구매자 1인당 질문 수·질문당 매출'로 정한다. 질문 이력을 모아 보는 '내 사주 질문함'을 결과 화면과 따로 둬 재방문 입구로 쓴다
+O: visitors | 2025년 4월 크랙 MAU 192만 명 | 2026년 2월 98만 명, 2026년 7월 이용자 80만 명 | THE VC·와이즈앱 집계 | https://dealsite.co.kr/articles/167500
+O: revenue | 2025년 4월 분리 출시 | 2025년 말 크랙 연환산 매출 7000만 달러(약 1000억 원) | 회사 발표 | https://dealsite.co.kr/articles/167500
+
+# crack-creator | 창작자에게 현금을 주자 독점 콘텐츠가 모였다 | AI 채팅·캐릭터 서브컬처 | real | MTN, 지디넷, 디지털투데이
+D: deep
+S: 크랙은 이용자가 만든 캐릭터·세계관에 정산을 한다. 2026년 7월 보상 캐시를 9월부터 1만 원 단위로 현금 전환하게 하고, 8월 12일 플랫폼 독점 공개작의 정산 비율을 올리는 '크랙 온리'를 도입했다. 단일 IP 시리즈에는 누적 10억 원 정산 한도가 있다. 2026년 11월 정산 창작자는 5500명을 넘었고 최고 수익자는 연 7억 원 이상을 받았다.
+X: 인기 창작자가 여러 플랫폼에 같은 캐릭터를 올려 차별이 사라진다
+P: 콘텐츠 공급이 플랫폼 경쟁력인데 창작자를 붙잡을 장치가 약했다
+- O co | 회사가 오리지널 콘텐츠를 더 만든다 | 흔한 방식이고 취향 다양성을 따라가지 못한다 | 뻔함 || barrier=competition; holder=콘텐츠 플랫폼
+- B ch | 독점 공개작에 더 높은 정산을 주고 현금화를 연다 | 창작자 보상은 앱 내 재화로만 줘야 돈이 밖으로 새지 않는다는 통념 | 보상의 맹점 || barrier=incentive; holder=플랫폼 재화 경제; ev=https://news.mtn.co.kr/news-detail/2026073108283754407
+- T cn | 크랙에서 검증된 IP를 게임·웹툰·애니로 확장한다 | 이용자 반응 데이터가 쌓여 흥행 IP를 고를 수 있게 됐다 | 시장 변화 || barrier=market_change; holder=감에 의존한 IP 기획; changed=이용자 반응 데이터 축적; year=2026; ev=https://dealsite.co.kr/articles/173125
+- I cn | 창작자 정산을 무제한으로 연다 | 단일 IP 쏠림과 정산 남용 위험 때문에 한도가 필요하다 | 구조 || barrier=structural; holder=정산 재무 위험
+- B cu | 명리 해석가가 만든 질문 템플릿을 상품으로 판다 | 사주 서비스는 해석을 회사가 독점 제작해야 품질이 지켜진다는 통념 | 공급의 맹점 || barrier=belief; holder=사주 콘텐츠 업계; test=명리 해석가 2명이 만든 '주제별 질문 템플릿'(예: 이직 타이밍 3문항)을 추천 질문으로 노출한 군과 회사 기본 추천 질문 군의 질문 제출률 비교; metric=question_submit_rate
+= 창작자 정산 + 현금화 + 독점작 정산 상향(크랙 온리) + IP 확장
+L: 공급자(창작자)를 묶는 정산 구조가 콘텐츠 해자가 된다. 사주 질문권에서는 '좋은 질문을 만드는 사람'이 공급자가 될 수 있다.
+R: https://news.mtn.co.kr/news-detail/2026073108283754407
+R: https://zdnet.co.kr/view/?no=20261119122756
+R: https://www.digitaltoday.co.kr/jp/view/87575/ai-content-platform-crack-introduces-cashout-for-creator-rewards
+M: marketplace | growth | c2c | kr
+K: question_submit_rate | 창작자 이탈과 콘텐츠 차별 상실
+T: ask | 1단계는 사내·외부 명리 해석가가 만든 '주제별 질문 템플릿'을 추천 질문으로 시험한다. 판매 정산은 템플릿 경유 질문권 매출이 확인된 뒤 검토한다
+O: revenue | 정산 제도 운영 | 정산 창작자 5500명 이상, 최고 수익자 연 정산액 7억 원 이상 | 회사 발표(2026년 11월 지스타) | https://zdnet.co.kr/view/?no=20261119122756
+
+# crack-memory | '기억'을 유료 기능으로 팔다 | AI 채팅·캐릭터 서브컬처 | real | 网易(扬帆出海), Sacra
+D: deep
+S: 크랙에는 AI 캐릭터가 며칠 전 대화까지 기억하게 하는 유료 '장기 기억 강화' 기능이 있었다. 북미판 OOC는 기억을 장기 기억·임시 기억·인물 관계·현재 목표로 나눠 관리한다. 긴 대화에서 기억이 끊기면 그 자체가 '캐릭터 붕괴(OOC)'가 되기 때문이다.
+X: 대화가 길어지면 캐릭터가 설정과 과거 사건을 잊는다
+P: 이용자가 가장 화나는 순간은 답이 틀릴 때보다 '나를 잊을 때'였다
+- O cn | 맥락 창을 늘린다 | 모두가 기다리는 기술 개선이고 원가가 커진다 | 뻔함 || barrier=not_core; holder=LLM 공급사
+- B cu | 기억을 여러 층(장기·임시·관계·목표)으로 나눠 관리하고 강화 기억을 판다 | 기억은 기본 기능이라 돈을 받을 수 없다는 통념 | 기능 가치의 맹점 || barrier=belief; holder=AI 채팅 업계; ev=https://c.m.163.com/news/a/L4DCPLSR05568DTV.html; test=질문권 구매자에게 '내 사주 요약 + 지난 질문 3개'를 매 답변에 반영하는 군과 매번 새로 답하는 군의 다음 질문률·만족도 비교; metric=next_question_rate
+- T ti | 요약·검색 기반 기억 기술을 쓴다 | 긴 대화를 요약해 다시 넣는 기법이 싸지면서 가능해졌다 | 기술 변화 || barrier=tech_change; holder=단순 맥락 창 의존; changed=요약·검색 결합 기억; year=2025
+- I pr | 모든 대화를 원문 그대로 계속 넣는다 | 대화가 길수록 입력 토큰 원가가 계속 커진다 | 비용 || barrier=cost; holder=입력 토큰 원가
+= 기억의 다층 구조 + 기억 강화 유료 기능
+L: 1문 1답 상품에서도 '나를 기억하는가'가 다음 질문을 부른다. 질문 이력과 명식 요약을 답변마다 반영해야 한다.
+R: https://c.m.163.com/news/a/L4DCPLSR05568DTV.html
+R: https://sacra.com/chat/h/33445b3a-7f32-4c3e-a085-8a0652c6c496/
+M: pay_per_unit | growth | c2c | global
+K: next_question_rate | 기억 끊김에 따른 몰입 붕괴
+T: ask | 질문 답변 생성 시 항상 '명식 요약 + 지난 질문 3개 + 그때 답의 핵심'을 넣는다. 원문 대화는 넣지 않고 요약만 넣어 원가를 묶는다. 저장 기간과 삭제 방법을 입력창에 적는다
+
+# crack-teen | 청소년 하루 3시간·월 10만 원 상한을 스스로 걸다 | AI 채팅·캐릭터 서브컬처 | real | SBS Biz, 이코노미스트, MTN, 코리아타임스
+D: deep
+S: 2026년 9월 뤼튼은 크랙 청소년 이용을 하루 최대 3시간, 월 결제 10만 원(기존 50만 원)으로 제한하고, 넘으면 보호자 인증·동의를 받겠다고 발표했다. 시스템을 2026년 말까지 만들고 2027년 초 시행한다. 현재 통신사 PASS 인증으로 성인과 청소년을 나누고, 7월에는 AI 윤리·철학·법 전문가 이용자 위원회를 꾸렸다.
+X: 청소년 과몰입·선정성 민원과 국정감사 압박이 커졌다
+P: 성장이 청소년 이용에 기대는 동안 보호 장치는 뒤처졌다
+- O cn | 약관에 연령 제한을 적는다 | 형식적 대응이라 실효성이 없다는 비판을 받는다 | 해 봤는데 효과 없음 || barrier=not_core; holder=AI 채팅 업계
+- T ti | 법이 생기기 전에 자율 상한을 건다 | 국회 법안·방송통신 심의·국감 압박이 커져 먼저 움직일 때가 됐다 | 규제 변화 || barrier=regulation_change; holder=규제 밖 AI 채팅; changed=우리 아이 AI 안심 패키지법 상정·방미심위 심의 추진; year=2026; ev=https://zdnet.co.kr/view/?no=20261117154347; test=생년월일상 미성년자의 질문권 월 결제 상한을 두고 상한 도달자의 이탈·환불·민원을 3개월 추적; metric=refund_rate
+- B cu | 상한을 넘을 때 차단 대신 보호자 동의로 넘긴다 | 막지 않으면 보호가 아니라는 통념 | 보호 방식의 맹점 || barrier=belief; holder=청소년 보호 논의; ev=https://economist.co.kr/article/view/ecn202609080043
+- I cn | 모든 이용자의 나이를 정확히 확인한다 | 휴대폰 인증만으로는 명의 도용을 못 막아 추가 인증 수단이 필요하다 | 기술 한계 || barrier=technology; holder=연령 인증 기술
+= 청소년 하루 3시간·월 10만 원 상한 + 보호자 동의 + PASS 인증 + 이용자 위원회·자율 가이드라인
+L: 나이를 아는 서비스는 상한과 예외 절차를 먼저 만들어야 한다. 사주는 생년월일을 받으므로 나이를 이미 안다.
+R: https://biz.sbs.co.kr/amp/article/20000333378
+R: https://economist.co.kr/article/view/ecn202609080043
+R: https://news.mtn.co.kr/news-detail/2026090808564087580
+R: https://koreatimes.co.kr/business/tech-science/20260826/wrtn-raises-72-mil-in-series-c-funding-round
+M: pay_per_unit | growth | c2c | kr
+K: refund_rate | 청소년 결제·과몰입 위험
+T: ask | 입력한 생년월일이 미성년자면 질문권 월 결제 상한을 두고, 연애·성·자해 등 민감 주제는 운세 답변 대신 안내로 바꾼다. 상한 도달 시 보호자 안내를 보여 준다
+O: refund_rate | 청소년 월 결제 상한 50만 원 | 10만 원으로 하향, 하루 3시간 초과·10만 원 초과 시 보호자 동의 (2027년 초 시행 예정) | 회사 발표 | https://news.mtn.co.kr/news-detail/2026090808564087580
+
+# kyarapu | 같은 엔진, 일본 이름으로: 캬라푸 | AI 채팅·캐릭터 서브컬처 | real | 앱스토어(일본), PR TIMES, 지디넷
+D: deep
+S: 뤼튼은 2025년 일본에 크랙의 일본판 '캬라푸(キャラぷ)'를 냈다. 가입만 하면 채팅 최대 100회분 골드를 주고, 상위 품질 채팅 모드(슈퍼챗·울트라챗)를 판다. 여러 캐릭터가 나오는 이야기형 대화, 표정·장면 이미지·상태 표시, 팬 랭킹과 '스테이지' 같은 팬 활동 장치를 붙였다. 일본에서는 제타도 2025년 12월 엔터테인먼트 AI 앱 이용자 1위였다.
+X: 한국에서 통한 캐릭터챗을 그대로 번역하면 일본 팬의 취향과 말투를 못 맞춘다
+P: 같은 엔진이라도 '추애(推し活) 문화'에 맞춘 이름·장치·말투가 필요했다
+- O ch | 한국판을 번역해 그대로 낸다 | 흔한 진출 방식이지만 캐릭터 말투·관계성이 살지 않는다 | 뻔함 || barrier=competition; holder=글로벌 앱 확장 관행
+- B cu | '추애 활동'(응원·팬 랭킹·스테이지)을 붙여 현지 팬 문화로 판다 | 대화 품질만 좋으면 어디서나 통한다는 기술 중심 통념 | 문화의 맹점 || barrier=belief; holder=AI 서비스 업계; ev=https://ascii.jp/elem/000/004/313/4313114/
+- T ti | 애니·서브컬처 소비가 강한 일본에 먼저 간다 | 일본은 캐릭터 IP 소비 문화가 커 AI 캐릭터를 바로 받아들였다 | 문화·행동 || barrier=behavior_change; holder=한국 전용 서비스; changed=일본 AI 캐릭터 앱 수요 확대; year=2025
+- I co | 일본 1위 제타를 바로 넘는다 | 제타가 일본에서도 이용자 1위라 선점 효과가 크다 | 구조 || barrier=structural; holder=제타의 일본 선점; ev=https://www.digitaltoday.co.kr/en/view/1075/scatterlab-ai-fiction-platform-zeta-japan-revenue-tops-1-1-billion-won-in-december
+- O pr | 가입 보상으로 채팅 100회분을 준다 | 신규 보상은 업계 기본기다 | 뻔함 || barrier=competition; holder=앱 업계; test=신규 리포트 구매자에게 '무료 질문 1회' 대신 '무료 질문 3회(짧은 답)'를 주는 군의 30일 질문권 매출 비교; metric=free_to_paid_question_rate
+= 현지 브랜드 캬라푸 + 가입 보상 골드 + 상위 채팅 모드 + 팬 활동 장치
+L: 같은 엔진이라도 현지 팬 문화 장치가 결제 이유를 만든다. 사주의 해외판은 번역이 아니라 현지 점술 문화에 맞춘 질문 주제가 먼저다.
+R: https://apps.apple.com/jp/app/id6744629457
+R: https://ascii.jp/elem/000/004/313/4313114/
+R: https://v.daum.net/v/20260414102924902
+M: pay_per_unit | growth | c2c | jp
+K: free_to_paid_question_rate | 현지화 실패 위험
+T: ask | 신규 구매자 무료 질문 수(1회 대 3회 짧은 답)를 실험하고, 무료 질문을 쓴 사람의 질문권 전환율로 판정한다. 해외 진출은 국내 구조가 안정된 뒤 일본 점술 주제(연애·궁합)부터 검토한다
+O: visitors | 2025년 일본 출시 | 다운로드 10만 5000건 이상, 평점 4.2 (2천 건 이상) | 앱 분석 서비스 추정 | https://mwm.ai/apps/app/6744629457
+
+# ooc-na | '플레이 가능한 애니'로 이름을 바꿔 북미에서 월 100억 | AI 채팅·캐릭터 서브컬처 | real | Business Wire, MTN, Sacra, Adapty
+D: deep
+S: 뤼튼은 2026년 4월 15일 앱스토어에 북미판 'OOC: The Playable Anime'을 냈다. OOC는 롤플레이 용어 'Out Of Character'에서 왔다. 캐릭터챗이 아니라 '플레이 가능한 애니'라는 새 범주로 포지셔닝하고, 일본 진출에서 얻은 현지화 경험을 서구식 이야기 문법에 맞췄다. 크레딧은 2000개 2.89달러부터 10만 개 142.99달러까지 판다. 출시 3개월 만에 월 매출 100억 원(8월 약 720만 달러)을 넘었고 해외 매출이 국내를 추월했다.
+X: 북미 캐릭터챗 시장은 Character.AI·Talkie 등으로 붐볐다
+P: '또 하나의 AI 친구 앱'으로는 눈에 띌 수 없었다
+- O co | Character.AI와 같은 '동반자 채팅'으로 경쟁한다 | 선두와 같은 범주라 차별이 없다 | 뻔함 || barrier=competition; holder=북미 AI 동반자 앱
+- B cu | 범주 이름을 '플레이 가능한 애니'로 바꿔 이야기 상품으로 판다 | 캐릭터챗은 동반자·관계 상품이라는 시장 통념 | 범주 정의의 맹점 || barrier=definition; holder=북미 AI 동반자 시장; ev=https://01net.it/wrtn-technologies-unveils-its-ai-interactive-storytelling-platform-ooc-the-playable-anime-in-north-america/; test=질문권 상품명을 '사주 Q&A'와 '내 운명 이어 보기(다음 장 열기)'로 나눠 같은 화면에서 구매율 비교; metric=ticket_purchase_rate
+- T ti | Character.AI가 미성년자 자유 대화를 막은 뒤 들어간다 | 선두의 정책 변화로 성인 이용자 대안 수요가 생겼다 | 시장 변화 || barrier=market_change; holder=Character.AI 중심 시장; changed=Character.AI 18세 미만 자유 대화 중단; year=2026
+- I pr | 북미 이용자에게 구독 하나로 무제한을 준다 | 대화량 비례 원가 때문에 무제한 구독은 헤비 유저 적자를 만든다 | 비용 || barrier=cost; holder=LLM 원가
+- B pr | 크레딧 묶음을 크게 할수록 단가를 낮추고 시즌 팩을 판다 | 소액 결제 중심 시장에서 고액 묶음은 안 팔린다는 통념 | 가격대의 맹점 || barrier=belief; holder=모바일 앱 가격 관행; ev=https://adapty.io/paywall-library/ooc/
+= 범주 재정의(플레이 가능한 애니) + 현지 브랜드 + 크레딧 종량제·시즌 팩 + 다층 기억
+L: 같은 제품도 범주 이름을 바꾸면 경쟁 상대가 바뀐다. 사주 질문권도 '상담'이 아니라 '내 이야기의 다음 장'으로 부르면 1p 스토리와 이어진다.
+R: https://www.businesswire.com/news/home/20260415199414/en/Wrtn-Technologies-Unveils-its-AI-Interactive-Storytelling-Platform-OOC-The-Playable-Anime-in-North-America
+R: https://news.mtn.co.kr/news-detail/2026082606521087869
+R: https://sacra.com/c/wrtn/
+R: https://adapty.io/paywall-library/ooc/
+R: https://worldbusinessoutlook.com/?p=55679
+M: pay_per_unit | scale | c2c | us
+K: revenue | 붐비는 북미 동반자 시장
+T: ask | 질문권을 1p 웹툰 스토리의 '다음 장'으로 연출한다: 답변 첫머리를 주인공 캐릭터의 한 장면으로 열고, 본문은 명식 근거 해석으로 쓴다(상담 표현 금지)
+O: revenue | 2026년 5월 북미 출시 | 3개월 만에 월 매출 100억 원, 8월 약 720만 달러, 해외 매출이 국내 추월 | 회사 발표·Sacra | https://sacra.com/c/wrtn/
+O: rating | - | 앱스토어 평점 4.7 (리뷰 1만 1526건) | Adapty 집계 | https://adapty.io/paywall-library/ooc/
+
+# wrtn-pnl | 매출 15배, 손실도 커졌다: 종량형 AI 엔터의 원가 구조 | AI 채팅·캐릭터 서브컬처 | real | 지디넷, 코리아타임스, Sacra, 딜사이트
+D: deep
+S: 뤼튼 매출은 2024년 약 31억 원에서 2025년 약 471억 원으로 늘었다. 같은 해 영업비용은 약 1060억 원(광고선전비 약 294억 원, 지급수수료 약 611억 원)이었고 영업손실은 약 588억 원으로 커졌다. 결제 이용자 유지율은 70%를 넘는다고 밝혔다. 2026년 8월 기업가치 1조 원 이상으로 1000억 원을 투자받았고, 2026년 매출 2000억 원 이상을 전망한다.
+X: 매출이 늘수록 모델 호출비·앱 마켓 수수료·광고비도 같이 커진다
+P: 종량형 AI 엔터는 매출과 원가가 함께 늘어, 단위 경제가 맞는지가 핵심이었다
+- O pr | 가격을 올린다 | 흔한 대응이지만 경쟁 앱으로 옮겨 간다 | 뻔함 || barrier=competition; holder=AI 채팅 시장
+- I cn | 외부 모델 비용 없이 운영한다 | 상위 품질을 위해 외부 모델을 써야 해 호출비가 매출에 비례한다 | 비용 || barrier=cost; holder=외부 LLM API·앱 마켓 수수료
+- B cn | 여러 모델을 상황별로 섞어 품질·속도·원가를 함께 맞춘다 | 최고 모델 하나를 쓰는 것이 품질이라는 통념 | 모델 선택의 맹점 || barrier=belief; holder=AI 서비스 업계; ev=https://www.inews24.com/view/1925963; test=질문 분류로 짧은 질문은 저가 모델, 시기·궁합 질문은 상위 모델로 보내는 라우팅 적용 전후의 답변 1건 원가와 만족도 비교; metric=cost_per_answer
+- T ti | 해외 매출로 고정비를 나눈다 | 북미 매출이 붙으며 같은 엔진의 고정비를 더 큰 매출로 나눌 수 있게 됐다 | 시장 변화 || barrier=market_change; holder=국내 단일 시장; changed=OOC 북미 매출; year=2026
+= 다중 모델 조합 + 종량형 과금 + 해외 확장으로 원가를 나누는 구조, 아직 적자
+L: 질문권도 답변 1건 원가(모델·수수료·검수)가 가격의 바닥이다. 질문 종류별로 모델을 나누면 원가를 낮출 수 있다.
+R: https://v.daum.net/v/20260414102924902
+R: https://www.koreatimes.co.kr/business/tech-science/20260414/wrtn-posts-15-fold-revenue-growth-in-1st-regulatory-filing
+R: https://www.woshipm.com/operate/6441577.html
+R: https://news.mtn.co.kr/news-detail/2026082606521087869
+M: pay_per_unit | scale | c2c | kr
+K: contribution_margin | 매출과 함께 커지는 원가
+T: economics | 질문권 가격을 정하기 전에 답변 1건 원가(모델 호출 + PG·앱 수수료 + 검수)를 질문 종류별로 재고, 짧은 질문은 저가 모델로 보내는 라우팅을 시험한다
+O: revenue | 2024년 매출 약 31억 원 | 2025년 매출 약 471억 원, 영업비용 약 1060억 원(광고 약 294억 원·지급수수료 약 611억 원), 영업손실 약 588억 원 | 감사보고서 공시 | https://www.koreatimes.co.kr/business/tech-science/20260414/wrtn-posts-15-fold-revenue-growth-in-1st-regulatory-filing
+O: repeat_pay_rate | - | 결제 이용자 유지율 70% 이상, 일반 이용자 하루 평균 약 2시간 | 회사 공개(로이터 인용) | https://www.woshipm.com/operate/6441577.html

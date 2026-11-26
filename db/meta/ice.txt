@@ -107,3 +107,12 @@ crack-global 3 | 5 3 3 | +0% | refund_rate | 국내 구조 안정 후. 명리 �
 naver-charchat 2 | 6 7 9 | +10% | answer_satisfaction |
 chat-gacha-risk 4 | 3 8 9 | +0% | revenue | 규정 준수 실험: 민원 0건이 기준
 zeta-vs-crack 4 | 4 6 9 | +5% | answer_satisfaction | 지표 운영 변경
+// 크랙·캬라푸·OOC 딥다이브
+crack-paywall 2 | 8 7 8 | +15% | refund_rate | 미리보기 내용과 결제 후 내용이 같아야 함 (dark-sequential-price)
+crack-spinoff 2 | 5 5 6 | +10% | read_complete_rate | 별도 화면이 리포트 읽기를 방해하지 않는지
+crack-creator 5 | 6 4 5 | +10% | answer_satisfaction | 해석가 섭외 후. 정산은 매출 확인 뒤
+crack-memory 2 | 8 6 6 | +10% | cost_per_answer | 요약만 넣어 원가 상한 유지, 저장 고지 (birth-data-privacy)
+crack-teen 2 | 3 8 7 | -30% | revenue | 보호 규칙: 미성년자 결제 취소·민원 감소가 목적
+kyarapu 5 | 7 6 8 | +3%p | cost_per_answer | 무료 3회는 짧은 답으로 원가 제한
+ooc-na 2 | 6 5 8 | +10% | answer_satisfaction | '상담' 표현 금지 (sensitive-advice)
+wrtn-pnl 3 | 7 6 5 | -30% | answer_satisfaction | 원가 30% 절감, 만족도 하락 2%p 이내
