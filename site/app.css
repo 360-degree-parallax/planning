@@ -463,3 +463,8 @@ svg.curve{max-height:220px}
 .rp-ch{display:flex;flex-wrap:wrap;gap:6px}.rp-ch a{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none;padding:2px 8px;border-radius:6px;background:light-dark(#eef4ff,#1c2740)}
 .rp-empty{padding:30px;text-align:center;color:var(--t3)}
 @media(max-width:640px){.rp-how{grid-template-columns:1fr}.rp-bar{position:static}.rp-bar input{min-width:0;flex-basis:100%;order:3}.rp-card{padding:14px}.rp-meta time{margin-left:0;width:100%}}
+.rp-card .pts{margin:10px 0 0;padding:10px 14px;border-radius:8px;background:var(--surface)}
+.rp-card .pts b{display:block;font-size:12px;color:var(--t2);margin-bottom:4px}
+.rp-card .pts ul{margin:0;padding-left:18px}
+.rp-card .pts li{font-size:13.5px;line-height:1.65;color:var(--t1);margin:2px 0}
+.rp-card .pts li::marker{color:var(--accent)}

@@ -27,7 +27,7 @@ const match = r => {
   if (st.cat !== '전체' && p.cat !== st.cat) return false;
   if (st.pub && r.pub !== st.pub) return false;
   if (!st.q) return true;
-  const hay = [r.title, r.gist, r.use, r.type, p.name, ...r.tags].join(' ').toLowerCase();
+  const hay = [r.title, r.gist, r.use, r.type, p.name, ...r.tags, ...(r.pts || [])].join(' ').toLowerCase();
   return st.q.toLowerCase().split(/\s+/).every(w => hay.includes(w));
 };
 const key = d => /^\d{4}/.test(d) ? d.replace('~', '').padEnd(7, '-00') : '0000';
@@ -37,6 +37,7 @@ const card = r => {
 <div class="rp-meta"><span class="tag on">${esc(p.name)}</span><span class="tag">${esc(p.cat)}</span><span class="tag">${esc(r.type)}</span><time>${esc(r.date)}</time></div>
 <h3><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)} ↗</a></h3>
 <p class="gist">${esc(r.gist)}</p>
+${r.pts && r.pts.length ? `<div class="pts"><b>핵심 수치 · 포인트</b><ul>${r.pts.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
 <p class="use"><i>이럴 때 쓴다</i>${esc(r.use)}</p>
 <div class="rp-foot"><span class="rp-tags">${r.tags.map(t => `<button type="button" class="tag" data-t="${esc(t)}">#${esc(t)}</button>`).join('')}</span>${r.ch.length ? `<span class="rp-ch">${r.ch.map(([v, id, l]) => `<a href="${href(v, id)}">${CH[v]} · ${esc(l)}</a>`).join('')}</span>` : ''}</div>
 </article>`;
