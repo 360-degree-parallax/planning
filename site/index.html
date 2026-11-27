@@ -17,18 +17,17 @@
 </header>
 <nav class="topnav" aria-label="장">
   <a href="index.html" aria-current="page"><b>1</b>1장 기획의 여섯 단계</a>
+  <a href="ch2.html"><b>2</b>2장 인사이트 도출</a>
   <a href="db.html"><b>DB</b>사례 DB</a>
 </nav>
-<div class="wrap chap">
-  <div class="cgrid">
-    <article id="doc" class="doc"></article>
-    <aside class="toc-side" id="tocSide" aria-label="목차"></aside>
-  </div>
+<div class="wrap chap" data-chapter="theory">
+  <div class="cgrid"><article class="doc"></article><aside class="toc-side" aria-label="목차"></aside></div>
+  <button class="toc-fab" aria-label="목차 열기">목차</button>
+  <div class="toc-sheet" hidden></div>
 </div>
-<button class="toc-fab" id="tocFab" aria-label="목차 열기">목차</button>
-<div class="toc-sheet" id="tocSheet" hidden></div>
 <script src="shared.js"></script>
 <script src="theory.js"></script>
+<script src="ch2.js"></script>
 <script src="viz.js"></script>
 <script src="theory-page.js"></script>
 </body>

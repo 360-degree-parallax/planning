@@ -406,3 +406,20 @@ svg.curve{width:100%;height:auto}svg.curve text{font:600 11px var(--font);fill:v
   .two,.spark3{grid-template-columns:1fr}.pyr2 .row{grid-template-columns:1fr 1fr}
   .tree2 .t-br{grid-template-columns:1fr}.g2{grid-template-columns:44px 1fr 1fr}.stairs>div{font-size:11px}
 }
+.tri{display:flex;flex-direction:column;align-items:center;gap:8px}
+.tri .t2{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.tri .tc{font-size:13px;font-weight:700;color:var(--accent)}
+.ladder3{display:flex;flex-direction:column;gap:6px}
+.ladder3>div{margin-left:calc(var(--i)*12%);padding:10px 14px;border:1px solid var(--line2);border-radius:10px;font-size:13px}
+.ladder3>div b{display:block;font-size:14px}
+.ladder3>div.on{background:var(--dark);border-color:transparent;color:var(--ondark)}
+.ladder3>div.on2{background:light-dark(#1f5fd6,#2c4f9a);border-color:transparent;color:#fff}
+.cyc{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}.cyc i{font-style:normal;color:var(--t3);font-size:18px}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.week>div{padding:10px 8px;border-radius:10px;background:var(--surface);font-size:12px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.week>div b{font-size:14px;color:var(--accent)}.week>div.on{background:var(--dark);color:var(--ondark)}.week>div.on b{color:inherit}
+@media(max-width:640px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.topnav a b{flex:none}
+@media(max-width:640px){.topnav a b{display:none}.topnav a{padding:0 10px;font-size:14px}}
+svg.curve{max-height:220px}
+@media(max-width:640px){.ex,.prose{overflow-x:auto}.ex table.t td,.ex table.t th,.prose table.t td,.prose table.t th{min-width:76px}}

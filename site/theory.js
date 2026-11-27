@@ -499,3 +499,5 @@ window.THEORY = [
  try:'내 기획 하나를 골라 위 표처럼 원칙별로 한 줄씩 채워 보자.'}
 
 ];
+window.CHAPTERS = window.CHAPTERS || [];
+window.CHAPTERS.unshift({view:'theory', no:1, title:'기획의 여섯 단계 — WHAT · WHY · HOW', desc:'문제를 발견하고(WHAT), 근거를 만들고(WHY), 솔루션을 제안하는(HOW) 과정을 한 장에 줄글로 정리했어요. 목차를 누르면 그 위치로 가요.', PARTS: window.PARTS, T: window.THEORY});

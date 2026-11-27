@@ -162,6 +162,11 @@ const R = {
     return `<ol class="chain">${(c.hyps || []).map(h => `<li>${esc(h.text)} ${tag(L.verdict[h.verdict] || h.verdict, L.pass[h.verdict] ? 'ok' : 'no')}</li>`).join('')}</ol>${b ? `<p class="muted" style="margin:0 0 6px">${esc(b.target)}: ${L.bcg[b.before]} → ${L.bcg[b.after]} — ${esc(b.why)}</p>` : ''}<div class="concl">${esc((c.so_what && c.so_what.conclusion) || c.solution)}</div>${c.lesson ? `<p class="muted" style="margin:8px 0 0">교훈: ${esc(c.lesson)}</p>` : ''}`; },
   followup(c){ const a = c.ansoff, b = c.bcg;
     return `<dl class="kv">${a ? `<dt>이번 단계</dt><dd><b>${esc(L.ansoff[a.cell])}</b>${a.focus ? ' (집중)' : ''} — ${esc(a.why)}</dd>` : ''}${b ? `<dt>포트폴리오</dt><dd>${b.units.map(u => `${esc(u.name)}(${L.bcg[u.cell]})`).join(', ')}</dd><dt>이 사업</dt><dd>${esc(b.target)}: ${L.bcg[b.before]} → ${L.bcg[b.after]}</dd>${b.funders.length ? `<dt>돈줄</dt><dd>${b.funders.map(esc).join(', ')}</dd>` : ''}` : ''}<dt>다음 기준</dt><dd>${esc((c.key_metrics || {}).north_star || '-')}</dd></dl>`; },
+  /* 2장: 사례가 정보를 어디서 얻었나 */
+  ins_exp(c){ return R.method(c); }, ins_living(c){ return R.method(c); },
+  method(c){ const sm = (c.key_metrics || {}).select_method || {}, w = c.what || {};
+    return `<p style="margin:0 0 8px">${(sm.methods || []).map(m => tag(L.method[m] || m, m === 'observation' || m === 'interview' ? 'on' : '')).join(' ')} <b>${esc(sm.how || '')}</b></p>${srcLine(sm)}
+    <dl class="kv" style="margin-top:10px"><dt>본 상황</dt><dd>${esc(w.situation)}</dd><dt>뽑아낸 것</dt><dd><b>${esc(w.problem)}</b></dd>${c.pro_opinion ? `<dt>들은 말</dt><dd>“${esc(c.pro_opinion.says)}” <span class="muted">— ${esc(c.pro_opinion.who)}</span></dd>` : ''}<dt>그래서</dt><dd>${esc(c.solution)}</dd></dl>`; },
   solution(c){ const o = (c.outcomes || []).filter(x => x.after);
     return `<p style="margin:0;font-size:15px"><b>${esc(c.solution)}</b></p>${o.map(x => `<p class="muted" style="margin:8px 0 0">결과: ${esc(x.before)} → <b>${esc(x.after)}</b>${x.context ? ' (' + esc(x.context) + ')' : ''}${isUrl(x.evidence) ? ' · ' + link(x.evidence) : ''}</p>`).join('')}
     ${c.lesson ? `<div class="note" style="margin-bottom:0">교훈: ${esc(c.lesson)}</div>` : ''}
@@ -188,7 +193,7 @@ function theme(){
 
 /* 묶음(한 파일) 페이지에서는 이론↔DB 링크를 같은 파일 안의 보기 전환으로 바꾼다 */
 const BUNDLE = !!window.__BUNDLE;
-const PAGES = {theory:'index.html', db:'db.html'};
+const PAGES = {theory:'index.html', ch2:'ch2.html', db:'db.html'};
 /* 링크 주소: 사이트는 page.html#id, 한 파일 묶음은 #view:id */
 const href = (view, id) => BUNDLE ? `#${view}:${id ? encodeURIComponent(id) : ''}` : `${PAGES[view]}${id ? '#' + encodeURIComponent(id) : ''}`;
 const hashFor = view => { const h = decodeURIComponent(location.hash.slice(1)); if (!BUNDLE) return h; return h.startsWith(view + ':') ? h.slice(view.length + 1) : null; };
