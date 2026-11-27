@@ -1,0 +1,93 @@
+// 선별 방법: 그 사례가 중요한 항목·지표를 무엇으로 골랐나(또는 고를 수 있었나).
+// 코드: fgi(포커스 그룹) interview(1:1·JTBD 인터뷰) observation(현장 관찰·사용성) voc(문의·리뷰·환불 사유 집계) quant(퍼널·코호트·상관 분석) survey(카노·MaxDiff·컨조인트) experiment(A/B·가짜 문·사전 예약) scoring(ICE·RICE·전문가 합의)
+// 형식: id | 코드, 코드 | 어떻게 골랐나 | 근거 URL 또는 추정
+dental | observation, voc | 대기실에서 환자 행동을 보고 불만 내용을 분류 | 추정
+elevator | voc, observation | 입주자 불만을 보고 기다리는 모습을 관찰 | 추정
+baggage | voc, quant | 불만 건수와 실제 도착-수령 시간을 비교 | 추정
+disney | observation, quant | 줄에서의 행동 관찰과 체감·실제 대기 비교 | 추정
+cold | interview, observation | 학부모·아이 이야기와 하굣길 관찰 | 추정
+mri | observation, interview | 검사실에서 아이 반응을 보고 부모와 이야기 | https://www.milwaukeemag.com/AScannerNotSoDarkly/
+embrace | observation, interview | 현지 병원·농촌을 방문해 빈 인큐베이터와 산모를 직접 봄 | https://stanfordmag.org/contents/baby-it-s-cold-outside
+airbnb | interview, observation | 창업자가 호스트를 직접 찾아가 사진을 찍고 이야기 | 추정
+netflix | voc, interview | 연체료 불만(창업자 경험 포함)에서 출발 | 추정
+dyson | observation, experiment | 막힘 현상 관찰과 수천 개 시제품 반복 실험 | 추정
+febreze | observation, interview | 가정 방문 영상으로 실제 사용 행동을 관찰 | https://www.shortform.com/blog/?p=28545
+milkshake | observation, interview | 매장에서 아침 구매자를 관찰하고 인터뷰(JTBD) | https://hbswk.hbs.edu/item/6496.html
+southwest | quant, scoring | 지상 시간과 가동률 계산, 운영팀 합의 | 추정
+spotify | quant, experiment | 불법 이용 패턴 분석과 무료·유료 전환 실험 | 추정
+saju | interview, voc | 상담 기록에서 결정 시점을 찾음 | 추정
+amazon-prime | quant, experiment | 회원 구매 빈도 분석과 회비 도입 | 추정
+zappos | quant, experiment | 반품 정책과 재구매율 비교 | 추정
+warby-parker | interview, experiment | 고객 구매 장벽 인터뷰와 홈 트라이온 시도 | 추정
+dollar-shave-club | interview, experiment | 고객 불만 듣기와 구독 판매 시도 | 추정
+costco | quant, scoring | 회비·마진 구조 분석 | 추정
+coupang-rocket-wow | quant, experiment | 회원 구매 빈도 분석 | 추정
+container | observation, quant | 항구 하역 과정 관찰과 비용 분해 | 추정
+slack | observation, quant | 팀이 매일 쓰던 내부 도구 사용 관찰과 팀 활성화 지표 | 추정
+shopify | interview, observation | 창업자 본인의 판매 경험과 판매자 이야기 | 추정
+dropbox | quant, experiment | 추천 프로그램 실험과 가입 경로 분석 | 추정
+mailchimp | quant, experiment | 유료 기반 확인 후 무료 전환 실험 | 추정
+square | interview, observation | 작은 가게가 카드를 못 받는 상황을 직접 겪고 관찰 | 추정
+mpesa | observation, experiment | 현지 시범 운영에서 실제 쓰임(송금)을 관찰 | 추정
+wise | interview, quant | 창업자 본인 송금 경험과 비용 분해 | 추정
+netflix-streaming | quant, scoring | 시청 패턴 분석과 경영진 판단 | 추정
+house-of-cards | quant | 시청 데이터로 감독·배우·장르 선호를 분석 | https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html
+instagram | quant, observation | 앱 사용 데이터에서 사진 공유만 쓰이는 것을 확인 | 추정
+tiktok | quant, experiment | 시청 행동 데이터로 추천 실험 | 추정
+kakaopage | quant, experiment | 결제 전환 데이터와 기다리면 무료 실험 | 추정
+naver-webtoon | quant, voc | 회차 열람·완독 데이터와 독자 반응 | 추정
+fortnite | quant, experiment | 동시 접속·구매 데이터와 시즌 운영 실험 | 추정
+duolingo | experiment, quant | 대규모 A/B 테스트로 습관 장치를 검증 | 추정
+substack | interview, quant | 작가 인터뷰와 유료 전환 데이터 | 추정
+patreon | interview, quant | 창작자 이야기와 후원 데이터 | 추정
+nyt-paywall | quant, experiment | 열람량 분포 분석과 미터제 시도 | 추정
+millie | quant, survey | 열람 패턴과 구독 의향 조사 | 추정
+rolls-royce-power | quant, interview | 고장·정비 데이터와 항공사 요구 | 추정
+aravind | observation, quant | 수술 공정 관찰과 원가 분해 | 추정
+five-whys | observation | 현장에서 '왜'를 반복해 원인을 직접 확인 | https://www.lean.org/lexicon/five-whys
+lego-turnaround | quant, voc | 부품 수·수익성 분석과 팬 의견 | 추정
+adobe-cc | quant, scoring | 업그레이드 주기·매출 변동 분석 | 추정
+kakao-emoticon | quant, voc | 표현 사용 데이터와 이용자 반응 | 추정
+post-it | observation, experiment | 사내 배포 후 실제 쓰임 관찰 | 추정
+webvan | quant | (실패) 수요·단위 경제 검증 없이 확장 | 추정
+calm | quant, voc | 콘텐츠 이용 데이터에서 수면 수요 확인 | 추정
+sajuai | quant, voc | 결제·공유 데이터와 이용자 후기 | 추정
+tight-saju | experiment, quant | 주제·소재를 대량으로 시험해 반응 좋은 것을 남김 | https://demoday.co.kr/recruits/8930
+tight-reunion | quant | 상품별 재구매율 비교 | https://supple.kr/news/cmsfv0llz003ok37unrnqgyvx
+justanswer | quant, experiment | 질문 단위 결제 전환과 구독 전환 실험 | 추정
+intercom-fin | quant | Fin 이전부터 대화 해결을 추적해 온 데이터로 성공 정의 | https://www.chargebee.com/blog/how-intercom-built-its-outcome-based-pricing-model-for-ai/
+costar-ask | quant, experiment | 차트 이용 데이터와 질문 기능 출시 | 추정
+keen-psychic | quant, experiment | 첫 상담 전환 데이터와 무료 시간 실험 | 추정
+duolingo-explain | quant, experiment | 유료 기능 이용 데이터 후 무료 개방 | 추정
+perplexity-cite | quant, voc | 재방문 데이터와 신뢰 관련 피드백 | 추정
+chegg-ai | quant | (실패) 구독 감소 데이터를 늦게 반영 | 추정
+air-canada-bot | voc | (실패) 분쟁이 생긴 뒤에야 문제 확인 | 추정
+neda-tessa | voc | (실패) 이용자·활동가 신고로 문제 확인 | 추정
+naver-expert | quant | 분야별 매출·연령 데이터 | https://www.munhwa.com/article/11336690
+hellobot | quant | 재화 소비·원가 데이터 | 추정
+iruda | voc | (실패) 이용자 문제 제기와 감독 기관 조사 | 추정
+zeta | voc, quant | 학부모·국감 지적과 청소년 이용 데이터 | https://khan.co.kr/article/202610121608001
+whif | interview, observation | BL 이용자였던 CPO가 직접 겪은 불편에서 출발 | https://byline.network/2026/10/83492804328940/
+playtoon | quant, voc | 결제자 읽기 데이터와 리뷰 | 추정
+babechat | quant, experiment | 무료·상위 모델 이용 데이터 | 추정
+crack-kr | quant | 결제 고객 구성 분석(팬덤 중심) | 추정
+crack-global | quant, experiment | 국가별 결제 데이터와 현지 브랜드 출시 | 추정
+naver-charchat | quant | 출시 전후 원작 열람 회차 내부 분석 | https://www.inews24.com/view/1834320
+chat-gacha-risk | voc, scoring | 민원·언론 지적과 법률 검토 | 추정
+zeta-vs-crack | quant | 이용 시간과 매출 비교 | 추정
+crack-paywall | quant, experiment | 모델별 전환 데이터 | 추정
+crack-spinoff | quant | MAU와 결제 매출 분리 분석 | 추정
+crack-creator | quant | 정산·플레이 데이터 | 추정
+crack-memory | voc, quant | '기억 못 함' 불만과 장기 대화 데이터 | 추정
+crack-teen | voc, scoring | 사회적 우려와 전문가 자문 | https://biz.sbs.co.kr/amp/article/20000333378
+ooc-na | experiment, quant | 범주 이름·현지 브랜드로 출시해 반응 확인 | 추정
+wrtn-pnl | quant | 매출·원가 구조 분석 | 추정
+crack-pricing | quant, experiment | 채널별 원가와 가격 실험 | 추정
+tight-seo | quant, experiment | 키워드별 유입·결제 데이터 | 추정
+tight-popup | quant | 방문·굿즈·해시태그 집계 | https://inblog.ai/sajutight/타이트-사주-더현대-서울-미아점과-팝업-스토어-성황리-개최-62554
+tight-trust | voc, scoring | 계산 오류 불만과 전문가 협업 | https://www.teamblind.com/kr/post/타이트사주-개빡치네-ㅋㅋㅋㅋㅋㅋ-g1wm2rpo
+tight-ip | experiment, quant | 캐릭터 연출 콘텐츠 반응 | 추정
+tight-adult | experiment, quant | 니치 주제 광고 반응 | 추정
+tight-growth | experiment, quant | 생성형 소재를 대량으로 A/B 테스트 | https://demoday.co.kr/recruits/8930
+ux-explore-diagnose | observation, scoring | 두 앱 화면을 비교 관찰한 분석 | https://brunch.co.kr/@uibowl/403
+kr-dark-pattern | voc, scoring | 소비자 피해·민원과 법제화 | https://www.lawtimes.co.kr/news/articleView.html?idxno=228371

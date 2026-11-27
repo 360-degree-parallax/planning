@@ -113,6 +113,8 @@
 - **이슈트리** (`issue_tree`, `db/meta/issuetree.txt`): `id | 루트 질문 | 가지: 하위, 하위 ; *가지: 하위, 하위 ; 가지: 하위, 하위 || 고른 이유`. 가지 2개 이상, 가지마다 하위 이슈 필수, 공략한 가지(`*`)는 정확히 1개.
 - **파레토 요약** (`pareto`, `db/meta/pareto.txt`): `id | 핵심 소수 | 그것이 만드는 결과 | 근거 URL 또는 추정`. 실제 비율이 확인된 것만 URL을 단다.
 - **속도×임팩트 선별** (`pareto.matrix`, `db/meta/speed-impact.txt`): `id | 속도/임팩트 칸들(가지는 ' ; ', 하위 이슈는 공백, 고른 것은 *) || 선별 이유`. 이슈트리 순서와 같아야 한다. 사분면은 자동 계산(퀵윈·큰 베팅·잡일·보류), 임팩트 4 미만은 고를 수 없다.
+- **대체 왜** (`deep_why`, `db/meta/deep-why.txt`): `id | 의도 유형 | 대체 왜 1 > 대체 왜 2 || 진짜 의도 | 의도 지표`. 유형은 revenue·profit·retention·growth·risk·trust·mission. 의도 지표는 `key_metrics.intent_metric`에도 들어간다.
+- **선별 방법** (`key_metrics.select_method`, `db/meta/select-method.txt`): `id | 코드, 코드 | 어떻게 골랐나 | 근거 URL 또는 추정`. 코드는 fgi·interview·observation·voc·quant·survey·experiment·scoring.
 - **중요 지표 선별** (`key_metrics`, `db/meta/key-metrics.txt`): `id | 선행 지표(1~3, 쉼표) | 가드레일 | 허영 지표`. 북극성은 `goal.metric`을 그대로 쓴다.
 
 ### 장벽 유형 (`barrier.type`)

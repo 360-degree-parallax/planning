@@ -85,9 +85,10 @@ L = ['# 본질 파악·구조화 체인', '',
      '| 7. 목표 재분석 | 목표 재분석 | 처음 목표를 본질에 맞게 다시 정의하면 무엇인가 |',
      '| 8. 이슈트리 | 이슈트리 | 재정의한 목표를 MECE로 쪼개면 어느 가지를 공략했나 |',
      '| 9. 파레토 | 파레토(속도×임팩트) | 이슈트리 하위 이슈를 속도·임팩트로 매겨 중요한 소수만 고른다 |',
-     '| 10. 중요 지표 선별 | 핵심 지표 | 북극성 1개(목표 지표), 선행 지표 1~3개(고른 항목을 움직이면 바로 변함), 가드레일 1개, 허영 지표(쫓지 않음) |', '',
+     '| 10. 대체 왜 | 대체 왜 | 이 목표를 대체 왜 원하나를 다시 의심해 목표를 세운 사람의 진짜 사업 의도(매출·이익·유지 등)를 찾는다 |',
+     '| 11. 중요 지표 선별 | 핵심 지표 | 의도 지표(진짜 의도), 북극성 1개(목표 지표), 선행 지표 1~3개, 가드레일 1개, 허영 지표(쫓지 않음), 선별 방법 |', '',
      '사분면: 퀵윈(속도 4+·임팩트 4+), 큰 베팅(속도 3 이하·임팩트 4+), 잡일(속도 4+·임팩트 3 이하), 보류(나머지). 임팩트 4 미만은 선별하지 않는다.', '',
-     '1~6은 문제를 깨닫고 본질을 찾는 단계, 7~10은 찾은 문제를 구조화하고 중요한 것만 남기는 단계다. 4·5·7~10은 deep 사례에만 있다.', '',
+     '1~6은 문제를 깨닫고 본질을 찾는 단계, 7~11은 찾은 문제를 구조화하고 중요한 것만 남기는 단계다. 4·5·7~11은 deep 사례에만 있다.', '',
      '- 해결은 그 사례가 실제로 한 것이다. 체인·오피니언·트레이드온은 그 해결이 왜 그 모양이 되었는지를 보여 주는 해석이다.',
      '- 오피니언 출처가 "추정"인 것은 사례 내용에서 도출한 해석이며 실제 발언 기록이 아니다. 출처 URL이 붙은 것만 실제 목소리에 근거한다.',
      '- 긍정·안티 오피니언은 deep 사례에만 있다. 원본: `db/meta/sowhat.txt`, `db/meta/pro.txt`, `db/meta/anti.txt`, `db/meta/tradeon.txt`', '']
@@ -131,9 +132,19 @@ for g, items in groups.items():
                 Q = {'quick_win': '퀵윈', 'big_bet': '큰 베팅', 'chore': '잡일', 'drop': '보류'}
                 sel = [f"{i['issue']}({i['speed']}/{i['impact']}·{Q[i['quadrant']]})" for i in pa['matrix'] if i['selected']]
                 L.append(f"  - 속도×임팩트 선별: {', '.join(sel)} — {pa['why']}")
+        if c.get('deep_why'):
+            dw = c['deep_why']
+            IT = {'revenue': '매출', 'profit': '이익·원가', 'retention': '유지·재구매', 'growth': '성장', 'risk': '위험', 'trust': '신뢰', 'mission': '사명'}
+            L.append(f"- **대체 왜**: {' → '.join(dw['whys'])}")
+            L.append(f"  - 진짜 의도({IT[dw['type']]}): {dw['intent']} (의도 지표: {dw['intent_metric']})")
         if c.get('key_metrics'):
             k = c['key_metrics']
-            L.append(f"- **중요 지표**: 북극성 {k['north_star']} / 선행 {', '.join(k['leading'])} / 가드레일 {k['guardrail']} / 허영(쫓지 않음) {k['vanity']}")
+            L.append(f"- **중요 지표**: 의도 {k.get('intent_metric', '-')} / 북극성 {k['north_star']} / 선행 {', '.join(k['leading'])} / 가드레일 {k['guardrail']} / 허영(쫓지 않음) {k['vanity']}")
+            if k.get('select_method'):
+                M = {'fgi': 'FGI', 'interview': '인터뷰', 'observation': '관찰', 'voc': '고객 목소리 데이터', 'quant': '정량 분석', 'survey': '설문 기법', 'experiment': '실험', 'scoring': '내부 점수화'}
+                sm = k['select_method']
+                src = '추정' if sm['inferred'] else f"[근거]({sm['source']})"
+                L.append(f"  - 선별 방법: {', '.join(M[x] for x in sm['methods'])} — {sm['how']} ({src})")
         L.append(f"- **해결**: {sw['solution']}")
         L.append('')
 write('docs/so-what.md', L)

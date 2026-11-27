@@ -321,6 +321,15 @@
     ],
     "why": "남은 시간 안내는 하루 만에 붙이고 불만의 원인을 바로 친다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "대기 불만을 왜 줄이나: 불만이 쌓이면 환자가 떠난다",
+     "떠나면 왜 문제인가: 치과 매출은 재방문과 소개에서 나온다"
+    ],
+    "intent": "재방문·소개 환자를 지켜 매출 유지",
+    "intent_metric": "재방문율·소개 환자 수"
+   },
    "key_metrics": {
     "north_star": "대기 관련 불만 건수",
     "leading": [
@@ -328,7 +337,17 @@
      "대기 중 콘텐츠 시청률"
     ],
     "guardrail": "실제 대기 시간",
-    "vanity": "대기실 인테리어 만족도"
+    "vanity": "대기실 인테리어 만족도",
+    "intent_metric": "재방문율·소개 환자 수",
+    "select_method": {
+     "methods": [
+      "observation",
+      "voc"
+     ],
+     "how": "대기실에서 환자 행동을 보고 불만 내용을 분류",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "현상(대기실 불만)에서 바로 해결로 가면 공간 개선이라는 뻔한 답이 나온다. Why not yet이 그 답을 걸러 주자 시간의 질이 드러났다."
   },
@@ -603,6 +622,15 @@
     ],
     "why": "거울 하나가 가장 빠르고 체감 대기를 크게 줄인다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "대기 불만을 왜 줄이나: 입주자 불만이 커진다",
+     "왜 문제인가: 불만이 공실과 임대료 협상력 약화로 이어진다"
+    ],
+    "intent": "공실을 막고 임대료를 지키기",
+    "intent_metric": "임대 갱신율·공실률"
+   },
    "key_metrics": {
     "north_star": "대기 불만 건수",
     "leading": [
@@ -610,7 +638,17 @@
      "체감 대기 응답"
     ],
     "guardrail": "실제 대기 시간",
-    "vanity": "엘리베이터 속도 스펙"
+    "vanity": "엘리베이터 속도 스펙",
+    "intent_metric": "임대 갱신율·공실률",
+    "select_method": {
+     "methods": [
+      "voc",
+      "observation"
+     ],
+     "how": "입주자 불만을 보고 기다리는 모습을 관찰",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "치과 사례와 같은 구조다. 해결책이 아니라 문제 정의를 바꾸면 비용이 거의 안 드는 답이 나온다."
   },
@@ -892,6 +930,15 @@
     ],
     "why": "게이트 배정만 바꾸면 되는 일이 서 있는 시간을 없앤다"
    },
+   "deep_why": {
+    "type": "trust",
+    "whys": [
+     "수하물 불만을 왜 줄이나: 공항 평가가 나빠진다",
+     "왜 문제인가: 항공사 유치와 이용객 선택에 영향을 준다"
+    ],
+    "intent": "공항 평판으로 항공사·이용객 유치",
+    "intent_metric": "공항 만족도 순위·취항 항공사 수"
+   },
    "key_metrics": {
     "north_star": "수하물 대기 불만 건수",
     "leading": [
@@ -899,7 +946,17 @@
      "벨트 앞 대기 시간"
     ],
     "guardrail": "총 도착-수령 시간",
-    "vanity": "수하물 처리 속도 순위"
+    "vanity": "수하물 처리 속도 순위",
+    "intent_metric": "공항 만족도 순위·취항 항공사 수",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "불만 건수와 실제 도착-수령 시간을 비교",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'빈 시간이 길게 느껴진다'는 같은 본질이 치과·엘리베이터·공항에 반복된다. 사례가 쌓이면 가설을 빨리 세울 수 있다."
   },
@@ -1175,6 +1232,15 @@
     ],
     "why": "남은 시간 표시는 빠른 승리, 이야기 연출은 큰 베팅"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "대기 고통을 왜 줄이나: 하루 만족이 떨어진다",
+     "왜 문제인가: 재방문과 파크 안 소비(음식·굿즈)가 줄어든다"
+    ],
+    "intent": "재방문과 파크 내 지출 늘리기",
+    "intent_metric": "1인당 파크 내 지출·재방문율"
+   },
    "key_metrics": {
     "north_star": "체감 대기 시간·만족도",
     "leading": [
@@ -1182,7 +1248,17 @@
      "대기 중 연출 체험률"
     ],
     "guardrail": "시간당 탑승 인원",
-    "vanity": "대기열 길이 자체"
+    "vanity": "대기열 길이 자체",
+    "intent_metric": "1인당 파크 내 지출·재방문율",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "줄에서의 행동 관찰과 체감·실제 대기 비교",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "대기 문제를 '시간을 줄이기'가 아니라 '시간을 채우기'로 다시 정의한 대표 사례다."
   },
@@ -1440,6 +1516,15 @@
     ],
     "why": "우산 상비가 가장 싸고 빠르다"
    },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "아이가 왜 스스로 대비해야 하나: 보호자가 늘 갈 수 없다",
+     "왜 학교가 신경 쓰나: 아이 안전과 학부모 신뢰가 학교의 책임이다"
+    ],
+    "intent": "아이 안전과 학부모 신뢰 지키기",
+    "intent_metric": "학부모 신뢰도"
+   },
    "key_metrics": {
     "north_star": "비 오는 날 젖은 채 귀가한 아이 수",
     "leading": [
@@ -1447,7 +1532,17 @@
      "우산 사용률"
     ],
     "guardrail": "우산 분실률",
-    "vanity": "보호자 문자 발송 건수"
+    "vanity": "보호자 문자 발송 건수",
+    "intent_metric": "학부모 신뢰도",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "학부모·아이 이야기와 하굣길 관찰",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'왜?'를 거듭하다 해결할 수 없는 원인을 만나면 본질이 아니라는 신호다. 한 단계 더 들어가야 한다."
   },
@@ -1725,6 +1820,15 @@
     ],
     "why": "장비 교체보다 꾸미기가 훨씬 빠르고 진정제를 줄인다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "진정제 사용을 왜 줄이나: 아이에게 위험하다",
+     "병원은 왜 신경 쓰나: 진정에는 마취 인력·회복 시간·비용이 든다"
+    ],
+    "intent": "검사 비용을 줄이고 하루 검사 건수 늘리기",
+    "intent_metric": "검사당 비용·일일 검사 건수"
+   },
    "key_metrics": {
     "north_star": "진정제 사용률",
     "leading": [
@@ -1732,7 +1836,17 @@
      "이야기 연출 적용률"
     ],
     "guardrail": "검사 재촬영률",
-    "vanity": "장비 대수"
+    "vanity": "장비 대수",
+    "intent_metric": "검사당 비용·일일 검사 건수",
+    "select_method": {
+     "methods": [
+      "observation",
+      "interview"
+     ],
+     "how": "검사실에서 아이 반응을 보고 부모와 이야기",
+     "source": "https://www.milwaukeemag.com/AScannerNotSoDarkly/",
+     "inferred": false
+    }
    },
    "lesson": "사용자(아이)의 눈으로 보면 '기술 문제'가 '경험 문제'로 바뀐다."
   },
@@ -2018,6 +2132,15 @@
     ],
     "why": "병원 밖 보온 도구가 사망 원인의 대부분을 친다"
    },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "왜 병원 밖 보온인가: 아기가 병원에 못 온다",
+     "왜 이 일을 하나: 사회적 기업의 목적은 사망률을 낮추는 것이다"
+    ],
+    "intent": "미숙아 생존이라는 사명 달성",
+    "intent_metric": "사용 지역 미숙아 생존율"
+   },
    "key_metrics": {
     "north_star": "저체온 미숙아 사망률",
     "leading": [
@@ -2025,7 +2148,17 @@
      "사용법 교육 이수율"
     ],
     "guardrail": "기기 안전 사고",
-    "vanity": "병원 인큐베이터 판매량"
+    "vanity": "병원 인큐베이터 판매량",
+    "intent_metric": "사용 지역 미숙아 생존율",
+    "select_method": {
+     "methods": [
+      "observation",
+      "interview"
+     ],
+     "how": "현지 병원·농촌을 방문해 빈 인큐베이터와 산모를 직접 봄",
+     "source": "https://stanfordmag.org/contents/baby-it-s-cold-outside",
+     "inferred": false
+    }
    },
    "lesson": "주어진 과제(WHAT)를 그대로 받으면 뻔한 답만 나온다. 현장에 가서 과제 자체를 다시 정의했다."
   },
@@ -2314,6 +2447,15 @@
     ],
     "why": "프로필·리뷰·결제 보호가 예약 포기의 원인을 바로 푼다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "신뢰를 왜 만드나: 예약이 성사된다",
+     "왜 예약인가: 플랫폼 수익은 성사된 예약의 수수료다"
+    ],
+    "intent": "예약 수수료 매출 키우기",
+    "intent_metric": "총 예약액·수수료 매출"
+   },
    "key_metrics": {
     "north_star": "예약 성사율·재예약률",
     "leading": [
@@ -2321,7 +2463,17 @@
      "첫 리뷰 작성률"
     ],
     "guardrail": "분쟁·사고 비율",
-    "vanity": "등록 숙소 수"
+    "vanity": "등록 숙소 수",
+    "intent_metric": "총 예약액·수수료 매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "창업자가 호스트를 직접 찾아가 사진을 찍고 이야기",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'위험하다'는 반대 이유가 실은 설계로 풀 수 있는 문제였다. 불가능처럼 보이는 Why not yet 답도 한 번 더 따져 본다."
   },
@@ -2606,6 +2758,15 @@
     ],
     "why": "연체료 폐지가 빠르고 불만의 핵심이다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "연체료를 왜 없애나: 고객이 화내지 않는다",
+     "왜 그게 중요한가: 구독 사업은 오래 머물러야 돈이 된다"
+    ],
+    "intent": "구독 유지로 장기 매출 확보",
+    "intent_metric": "구독 유지 기간·고객 생애 가치"
+   },
    "key_metrics": {
     "north_star": "구독 유지율",
     "leading": [
@@ -2613,7 +2774,17 @@
      "구독 첫 달 유지율"
     ],
     "guardrail": "배송 지연률",
-    "vanity": "총 회원 가입 수"
+    "vanity": "총 회원 가입 수",
+    "intent_metric": "구독 유지 기간·고객 생애 가치",
+    "select_method": {
+     "methods": [
+      "voc",
+      "interview"
+     ],
+     "how": "연체료 불만(창업자 경험 포함)에서 출발",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "기존 강자가 안 하는 이유가 '할 수 없어서'가 아니라 '하면 손해라서'일 때 맹점이 생긴다."
   },
@@ -2879,6 +3050,15 @@
     ],
     "why": "봉투 막힘 해결은 느리지만 성능 불만의 대부분을 없앤다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "흡입력 유지를 왜 하나: 성능 불만이 사라진다",
+     "왜 성능인가: 고가에도 사게 만드는 차별점이 된다"
+    ],
+    "intent": "프리미엄 가격으로 팔기",
+    "intent_metric": "평균 판매가·매출"
+   },
    "key_metrics": {
     "north_star": "사용 기간별 흡입력 유지",
     "leading": [
@@ -2886,7 +3066,17 @@
      "필터 막힘 문의율"
     ],
     "guardrail": "제품 원가",
-    "vanity": "모터 출력 수치"
+    "vanity": "모터 출력 수치",
+    "intent_metric": "평균 판매가·매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "experiment"
+     ],
+     "how": "막힘 현상 관찰과 수천 개 시제품 반복 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "업계가 안 하는 이유가 소모품 수익이라면, 그 소모품을 없애는 쪽이 기회다."
   },
@@ -3157,6 +3347,15 @@
     ],
     "why": "향을 넣어 습관 끝에 붙이는 일이 빠르고 구매를 바꾼다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "사용 습관을 왜 만드나: 쓸 계기가 생긴다",
+     "왜 계기인가: 소모품은 반복 구매로 매출이 난다"
+    ],
+    "intent": "반복 구매 매출",
+    "intent_metric": "재구매율·매출"
+   },
    "key_metrics": {
     "north_star": "재구매율",
     "leading": [
@@ -3164,7 +3363,17 @@
      "향 선호도"
     ],
     "guardrail": "재구매 간격",
-    "vanity": "광고 노출 수"
+    "vanity": "광고 노출 수",
+    "intent_metric": "재구매율·매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "interview"
+     ],
+     "how": "가정 방문 영상으로 실제 사용 행동을 관찰",
+     "source": "https://www.shortform.com/blog/?p=28545",
+     "inferred": false
+    }
    },
    "lesson": "고객이 문제를 못 느끼면 문제 해결 제품은 안 팔린다. 고객의 기존 습관 안에서 다시 정의한다."
   },
@@ -3450,6 +3659,15 @@
     ],
     "why": "걸쭉함과 빠른 구매 동선이 아침 판매를 바꾼다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "출근길을 왜 잘 도와야 하나: 아침에 산다",
+     "왜 아침인가: 비어 있던 시간대 매출이 생긴다"
+    ],
+    "intent": "아침 시간대 매출",
+    "intent_metric": "아침 시간대 매출"
+   },
    "key_metrics": {
     "north_star": "아침 시간대 판매량",
     "leading": [
@@ -3457,7 +3675,17 @@
      "셰이크 섭취 지속 시간"
     ],
     "guardrail": "다른 메뉴 매출 잠식",
-    "vanity": "맛 평가 점수"
+    "vanity": "맛 평가 점수",
+    "intent_metric": "아침 시간대 매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "interview"
+     ],
+     "how": "매장에서 아침 구매자를 관찰하고 인터뷰(JTBD)",
+     "source": "https://hbswk.hbs.edu/item/6496.html",
+     "inferred": false
+    }
    },
    "lesson": "고객 속성(나이·취향)이 아니라 고객이 처한 상황과 해야 할 일로 문제를 정의한다."
   },
@@ -3720,6 +3948,15 @@
     ],
     "why": "지상 시간 단축이 가동률을 바로 올린다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "지상 시간을 왜 줄이나: 가동률이 오른다",
+     "왜 가동률인가: 같은 비행기로 더 벌어 낮은 운임에도 이익이 난다"
+    ],
+    "intent": "저운임에서도 이익 내기",
+    "intent_metric": "좌석 마일당 비용·영업이익률"
+   },
    "key_metrics": {
     "north_star": "항공기 1대당 일일 운항 횟수",
     "leading": [
@@ -3727,7 +3964,17 @@
      "정시 출발률"
     ],
     "guardrail": "안전 점검 준수율",
-    "vanity": "보유 항공기 수"
+    "vanity": "보유 항공기 수",
+    "intent_metric": "좌석 마일당 비용·영업이익률",
+    "select_method": {
+     "methods": [
+      "quant",
+      "scoring"
+     ],
+     "how": "지상 시간과 가동률 계산, 운영팀 합의",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'비행기가 부족하다'를 '비행기가 땅에 너무 오래 있다'로 바꾸자 자원 없이 풀렸다."
   },
@@ -3835,6 +4082,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객에게 일을 넘기는 건 불가능해 보이지만, 가격이라는 보상이 크면 통념이 뒤집힌다."
   },
@@ -3946,6 +4194,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "경쟁 축(성능)을 그대로 두면 뻔함만 남는다. 고객 정의를 바꾸는 가설이 살아남았다."
   },
@@ -4237,6 +4486,15 @@
     ],
     "why": "즉시 재생과 검색이 불법 이용 동기를 대체한다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 불법보다 편해야 하나: 사람들이 옮겨 온다",
+     "왜 옮겨 와야 하나: 무료 이용자가 늘어야 유료 전환 매출이 생긴다"
+    ],
+    "intent": "유료 구독 매출",
+    "intent_metric": "유료 구독자 수·매출"
+   },
    "key_metrics": {
     "north_star": "유료 전환율",
     "leading": [
@@ -4244,7 +4502,17 @@
      "검색 성공률"
     ],
     "guardrail": "아티스트 정산액",
-    "vanity": "다운로드 앱 수"
+    "vanity": "다운로드 앱 수",
+    "intent_metric": "유료 구독자 수·매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "불법 이용 패턴 분석과 무료·유료 전환 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "한 해결책에 맹점과 타이밍이 함께 있을 때 가장 강하다."
   },
@@ -4373,6 +4641,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 아이디어도 시점에 따라 불가능에서 타이밍으로 바뀐다. Why not yet 답은 날짜와 함께 다시 확인한다."
   },
@@ -4484,6 +4753,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "예전에 불가능했던 이유(정보 수집·전달 비용)가 기술로 사라졌는지 확인하는 게 타이밍 판정이다."
   },
@@ -4610,6 +4880,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "시장을 좁히는 가설은 보통 첫눈에 탈락시키지만, Why not yet으로 보면 신뢰 문제를 푸는 열쇠였다."
   },
@@ -4721,6 +4992,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "시점 관점의 가설이 본질을 짚었다. 관점을 넓게 깔아야 이런 가설이 나온다."
   },
@@ -4832,6 +5104,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'비용이 너무 크다'는 불가능 판정이 사실은 업계 통념일 수 있다. 감수할 만한지 다시 묻는다."
   },
@@ -4973,6 +5246,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 가게의 빈 시간대는 회전율 통념이 적용되지 않는다."
   },
@@ -5264,6 +5538,15 @@
     ],
     "why": "상담 기록을 리포트와 잇는 것이 재구매를 만든다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 결정 시점에 다시 찾게 하나: 재구매가 생긴다",
+     "왜 재구매인가: 고단가 신규 고객 획득은 비싸다"
+    ],
+    "intent": "재구매로 고객 생애 가치 높이기",
+    "intent_metric": "고객당 누적 매출"
+   },
    "key_metrics": {
     "north_star": "재구매율·재구매 간격",
     "leading": [
@@ -5271,7 +5554,17 @@
      "결정 시점 제안 클릭률"
     ],
     "guardrail": "환불률",
-    "vanity": "리포트 판매 건수"
+    "vanity": "리포트 판매 건수",
+    "intent_metric": "고객당 누적 매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "voc"
+     ],
+     "how": "상담 기록에서 결정 시점을 찾음",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "재구매율이라는 지표 자체를 의심(같은 상품 재구매 → 다음 고단가 구매)하는 게 WHAT 재정의다."
   },
@@ -5398,6 +5691,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "업계가 이탈을 방치하는 이유(안 오는 회원이 수익)가 곧 차별화 기회다."
   },
@@ -5524,6 +5818,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "단계의 순서를 뒤집는 가설은 관행 때문에 잘 안 나온다. 통념 관점을 일부러 채운다."
   },
@@ -5646,6 +5941,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "시간 제한 같은 형식 해결은 뻔함으로 걸러진다. 회의의 목적을 재정의하는 가설이 남는다."
   },
@@ -5757,6 +6053,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "가격 경쟁이 불가능으로 걸러지면, 업의 정의를 바꾸는 가설만 남는다."
   },
@@ -5885,6 +6182,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "치과 사례처럼 대기 문제의 본질은 공간이 아니라 시간의 불확실성인 경우가 많다."
   },
@@ -5997,6 +6295,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "지표를 올리려는 관행(클릭률)이 다른 지표(결제)를 깎을 때 맹점이 생긴다."
   },
@@ -6123,6 +6422,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "온라인의 장점이라 믿던 것(혼자, 아무 때나)이 이탈의 원인일 수 있다."
   },
@@ -6405,6 +6705,15 @@
     ],
     "why": "회비로 배송비 계산을 없애는 것이 구매 빈도를 바꾼다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "배송비 고민을 왜 없애나: 더 자주 산다",
+     "왜 빈도인가: 회원 연간 지출이 비회원보다 커진다"
+    ],
+    "intent": "회원 지출 늘리기",
+    "intent_metric": "회원 연간 지출액"
+   },
    "key_metrics": {
     "north_star": "회원당 연간 구매 횟수",
     "leading": [
@@ -6412,7 +6721,17 @@
      "무료 배송 이용률"
     ],
     "guardrail": "배송비 손실",
-    "vanity": "회원 가입 수"
+    "vanity": "회원 가입 수",
+    "intent_metric": "회원 연간 지출액",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "회원 구매 빈도 분석과 회비 도입",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "문제를 '배송비가 비싸다'가 아니라 '주문할 때마다 계산하게 만든다'로 다시 정의했다."
   },
@@ -6520,6 +6839,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "내 매출을 깎는 것처럼 보이는 선택이 고객 경험(구색·가격)을 키우면 결국 플랫폼이 커진다."
   },
@@ -6799,6 +7119,15 @@
     ],
     "why": "무료 반품이 사이즈 불안을 없앤다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "사이즈 불안을 왜 없애나: 안심하고 산다",
+     "왜 안심인가: 온라인에서 신발을 사는 사람 자체가 늘어난다"
+    ],
+    "intent": "온라인 신발 매출 키우기",
+    "intent_metric": "매출·재구매율"
+   },
    "key_metrics": {
     "north_star": "재구매율",
     "leading": [
@@ -6806,7 +7135,17 @@
      "첫 구매 후 재구매율"
     ],
     "guardrail": "반품 비용",
-    "vanity": "사이트 방문 수"
+    "vanity": "사이트 방문 수",
+    "intent_metric": "매출·재구매율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "반품 정책과 재구매율 비교",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "고객의 위험을 대신 지는 것이 가장 강력한 전환 장치일 수 있다."
   },
@@ -7090,6 +7429,15 @@
     ],
     "why": "홈 트라이온이 온라인 구매 장벽을 없앤다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "써 보기를 왜 집에서 하나: 온라인으로 산다",
+     "왜 온라인인가: 직판 마진을 지키며 판다"
+    ],
+    "intent": "높은 마진의 직판 매출",
+    "intent_metric": "직판 매출·마진"
+   },
    "key_metrics": {
     "north_star": "홈 트라이온 후 구매 전환율",
     "leading": [
@@ -7097,7 +7445,17 @@
      "트라이온 후 구매율"
     ],
     "guardrail": "테 회수율",
-    "vanity": "SNS 팔로워 수"
+    "vanity": "SNS 팔로워 수",
+    "intent_metric": "직판 매출·마진",
+    "select_method": {
+     "methods": [
+      "interview",
+      "experiment"
+     ],
+     "how": "고객 구매 장벽 인터뷰와 홈 트라이온 시도",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'써 봐야 한다'는 장벽을 없애지 않고 집으로 옮겼다. 매장과 가상 착용 기술이 늘자 2025년 홈 트라이온을 종료했다. Why not yet의 답은 시간에 따라 바뀐다."
   },
@@ -7386,6 +7744,15 @@
     ],
     "why": "구독 배송은 빠르고 번거로움을 없앤다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "날이 왜 안 떨어지게 하나: 구독이 유지된다",
+     "왜 구독인가: 반복 매출이 회사 가치를 만든다"
+    ],
+    "intent": "반복 구독 매출",
+    "intent_metric": "구독 유지율·월 반복 매출"
+   },
    "key_metrics": {
     "north_star": "구독 유지율",
     "leading": [
@@ -7393,7 +7760,17 @@
      "배송 주기 적합도"
     ],
     "guardrail": "날 품질 불만",
-    "vanity": "바이럴 영상 조회수"
+    "vanity": "바이럴 영상 조회수",
+    "intent_metric": "구독 유지율·월 반복 매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "experiment"
+     ],
+     "how": "고객 불만 듣기와 구독 판매 시도",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "고객이 원한 건 더 좋은 날이 아니라 '신경 안 써도 되는 면도'였다."
   },
@@ -7678,6 +8055,15 @@
     ],
     "why": "회비 수익 전환이 핵심이고 품목 축소는 빠른 승리"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "가격 신뢰를 왜 쌓나: 회원이 갱신한다",
+     "왜 갱신인가: 회비가 이익의 핵심이다"
+    ],
+    "intent": "회비 이익 지키기",
+    "intent_metric": "회원 갱신율·회비 수익"
+   },
    "key_metrics": {
     "north_star": "회원 갱신율",
     "leading": [
@@ -7685,7 +8071,17 @@
      "회원당 방문 빈도"
     ],
     "guardrail": "상품 마진율 하한",
-    "vanity": "매장 수"
+    "vanity": "매장 수",
+    "intent_metric": "회원 갱신율·회비 수익",
+    "select_method": {
+     "methods": [
+      "quant",
+      "scoring"
+     ],
+     "how": "회비·마진 구조 분석",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "무엇으로 돈을 버는지를 바꾸면 경쟁 축(가격)에서 압도적 우위를 만들 수 있다."
   },
@@ -7812,6 +8208,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "약점(작은 매장)을 강점(큐레이션)으로 다시 정의했다."
   },
@@ -7934,6 +8331,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "데이터가 생기자 '가설 → 검증' 루프를 매장 직원에게 맡길 수 있게 됐다."
   },
@@ -8041,6 +8439,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'더 잘 맞히기'에서 '틀려도 빨리 고치기'로 문제를 바꿨다."
   },
@@ -8148,6 +8547,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "시장 테스트를 생산 공정 안에 넣었다. (노동·환경 논란도 함께 따져야 하는 사례)"
   },
@@ -8259,6 +8659,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 산 건 옷이 아니라 '고르지 않아도 되는 것'이었다."
   },
@@ -8370,6 +8771,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "반복 구매 상품은 '다음 구매'를 자동화하는 것이 본질이다."
   },
@@ -8477,6 +8879,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "실패한 선례가 있어도 '왜 실패했나'를 보면 다른 구조가 보인다."
   },
@@ -8588,6 +8991,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "결제 수단 자체가 신뢰 장치가 될 수 있다."
   },
@@ -8702,6 +9106,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 상품도 '사는 방식'을 바꾸면 새 고객층이 열린다."
   },
@@ -8831,6 +9236,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "신뢰가 있는 곳(사람)을 채널로 삼았다."
   },
@@ -8960,6 +9366,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 이미 모여 있는 곳에서 팔면 광고비가 필요 없다."
   },
@@ -9071,6 +9478,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 원하는 건 상품 정보가 아니라 '비슷한 집의 실제 모습'이었다."
   },
@@ -9182,6 +9590,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고가 상품에서는 검수 비용이 곧 상품 가치다."
   },
@@ -9311,6 +9720,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "공급자가 잘게 쪼개져 있을수록 모아 주는 쪽에 가치가 생긴다."
   },
@@ -9437,6 +9847,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기존 강자와 같은 축이면 뻔함으로 탈락한다. 다른 축을 찾는다."
   },
@@ -9551,6 +9962,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "제품이 쓰이는 '여행 전체'를 보면 새 기능이 보인다."
   },
@@ -9677,6 +10089,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "내용물이 아니라 '담는 방식'을 바꾼 혁신이다."
   },
@@ -9788,6 +10201,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "단점이 콘텐츠가 되는 순간 장점으로 바뀐다."
   },
@@ -9899,6 +10313,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "정통성보다 현지 고객의 익숙함이 진입의 열쇠다."
   },
@@ -10026,6 +10441,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 커피라도 고객이 산 건 '공간'이 아니라 '매일의 카페인'일 수 있다."
   },
@@ -10133,6 +10549,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "좋은 모델과 무리한 성장은 별개다. 불가능 판정을 무시하면 위험하다."
   },
@@ -10259,6 +10676,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "습관 상품은 '사람'이 가장 강한 채널일 수 있다."
   },
@@ -10372,6 +10790,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 '싸게' 원하는 게 아니라 '작게' 사야 하는 상황일 수 있다."
   },
@@ -10488,6 +10907,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기존 강자가 지키는 수익원이 신규 진입자의 기회다."
   },
@@ -10599,6 +11019,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'작은 시장'이 경쟁 없는 시장이면 오히려 큰 기회다."
   },
@@ -10725,6 +11146,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "구매 빈도가 낮은 상품은 '방문 이유'를 따로 만들어야 한다."
   },
@@ -11014,6 +11436,15 @@
     ],
     "why": "회비 본전 심리가 반복 구매를 묶는다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "반복 구매를 왜 묶나: 쿠팡부터 연다",
+     "왜 습관인가: 경쟁사로 가지 않게 잠근다"
+    ],
+    "intent": "고객 잠금으로 점유율 확보",
+    "intent_metric": "회원 구매 비중·점유율"
+   },
    "key_metrics": {
     "north_star": "회원 구매 빈도",
     "leading": [
@@ -11021,7 +11452,17 @@
      "혜택 이용률"
     ],
     "guardrail": "배송 노동 강도 지표",
-    "vanity": "회원 가입 수"
+    "vanity": "회원 가입 수",
+    "intent_metric": "회원 구매 비중·점유율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "회원 구매 빈도 분석",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "같은 장치(멤버십)도 핵심 강점(배송)과 묶일 때 효과가 난다."
   },
@@ -11148,6 +11589,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "타이밍(스마트폰)과 맹점(일반인 기사·변동 요금)이 겹쳤다. 다만 규제 문제는 나라마다 다르게 나타났다."
   },
@@ -11274,6 +11716,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객 가치가 맞아도 '불가능(규제)' 판정을 가볍게 보면 사업 전체가 무너진다."
   },
@@ -11400,6 +11843,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 모델도 현지의 '당연한 조건'을 바꾸지 않으면 안 된다."
   },
@@ -11511,6 +11955,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "공급자의 빈 시간을 다른 서비스로 채우면 플랫폼이 넓어진다."
   },
@@ -11637,6 +12082,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'효율이 낮다'는 통념을 데이터로 다시 확인해 보면 기회가 숨어 있다."
   },
@@ -11759,6 +12205,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'도구로 시작해 네트워크로'는 양면 시장 초기 문제를 푸는 고전적 방법이다."
   },
@@ -11881,6 +12328,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "큰 시장 안의 작은 정체성이 커뮤니티를 만든다."
   },
@@ -12007,6 +12455,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "신뢰를 중앙이 아니라 참여자들이 만들게 할 수 있다."
   },
@@ -12135,6 +12584,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "거래 비용이 큰 시장은 '표준화'가 해결책일 수 있다."
   },
@@ -12261,6 +12711,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "해외의 검증된 구조도 현지 신뢰 문제를 푸는 방식으로 적용해야 한다."
   },
@@ -12387,6 +12838,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "에어비앤비와 같은 구조. '남의 집은 위험하다'는 통념이 반복된다."
   },
@@ -12509,6 +12961,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "놀고 있는 자산 + 신뢰 장치 = 공유 플랫폼의 기본 공식."
   },
@@ -12635,6 +13088,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "빈자리라는 '버려지는 공급'이 핵심 자원이었다."
   },
@@ -12757,6 +13211,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "이용 단위(시간)와 장소(동네)를 바꾸자 새 시장이 열렸다."
   },
@@ -12864,6 +13319,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "타이밍은 맞았지만 '불가능(규제)' 쪽 신호를 함께 관리해야 했다."
   },
@@ -12992,6 +13448,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객 불안을 없애는 방향으로 돈 흐름을 바꿨다."
   },
@@ -13118,6 +13575,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "이름과 정보 공개만으로 카테고리 인식이 바뀔 수 있다."
   },
@@ -13244,6 +13702,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'내 집 가치'라는 강한 호기심이 트래픽 엔진이 됐다."
   },
@@ -13366,6 +13825,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'왜 아무도 안 했나'의 답이 '재고 위험이 너무 커서'라면 그 위험을 어떻게 다룰지가 기획의 중심이어야 한다."
   },
@@ -13480,6 +13940,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "정보 비대칭 시장에서는 '믿을 수 있는 정보'가 상품이다."
   },
@@ -13608,6 +14069,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 공간도 '파는 단위'를 바꾸면 다른 고객이 생긴다. (위워크처럼 장기 임대·단기 재임대의 위험은 함께 관리해야 함)"
   },
@@ -13730,6 +14192,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "Why not yet의 답 '기존 임대업자들이 이 위험 때문에 안 했다'를 진지하게 봐야 했다."
   },
@@ -13837,6 +14300,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "낡은 산업의 '당연한 불편'이 소프트웨어 기회다."
   },
@@ -14122,6 +14586,15 @@
     ],
     "why": "화물 형태 표준화는 느리지만 비용의 대부분을 없앤다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "하역을 왜 기계화하나: 비용이 준다",
+     "왜 비용인가: 운임을 낮춰 더 많은 화물을 가져온다"
+    ],
+    "intent": "운송 비용 우위로 물량 확보",
+    "intent_metric": "톤당 운송 비용·물동량"
+   },
    "key_metrics": {
     "north_star": "톤당 하역 비용",
     "leading": [
@@ -14129,7 +14602,17 @@
      "표준 컨테이너 비율"
     ],
     "guardrail": "화물 손상률",
-    "vanity": "선박 크기"
+    "vanity": "선박 크기",
+    "intent_metric": "톤당 운송 비용·물동량",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "항구 하역 과정 관찰과 비용 분해",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "병목이 어디인지 먼저 확인하면 '빠른 배'라는 뻔한 답을 피할 수 있다."
   },
@@ -14252,6 +14735,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "직관에 반하는 '돌아가는 길'이 시스템 전체로는 가장 빠를 수 있다."
   },
@@ -14374,6 +14858,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "측정 기준(거리)을 바꾸면(시간·위험) 답이 달라진다."
   },
@@ -14481,6 +14966,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "선진국보다 인프라가 부족한 곳에서 신기술이 먼저 쓸모를 찾았다."
   },
@@ -14603,6 +15089,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 매출도 '어떤 형태로 받느냐'가 공급자 수용성을 좌우한다."
   },
@@ -14725,6 +15212,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "들쭉날쭉한 수요는 모으면 평평해진다."
   },
@@ -14851,6 +15339,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "수익화 시점을 미루는 것도 기획 선택지다. (이후 독과점 논란은 별도 과제)"
   },
@@ -14977,6 +15466,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "단순함과 무료가 기존 산업(신문 광고)을 무너뜨릴 수 있다."
   },
@@ -15084,6 +15574,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "신뢰 범위를 좁히면(같은 회사) 공유가 쉬워진다."
   },
@@ -15197,6 +15688,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "제품이 아니라 '도입 방식'을 바꾼 혁신이다."
   },
@@ -15451,6 +15943,15 @@
     ],
     "why": "이미 있던 내부 도구라 빠르고 핵심 가치다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "팀 소통을 왜 개선하나: 팀이 매일 쓴다",
+     "왜 매일인가: 쓰는 팀이 늘어야 유료 좌석이 팔린다"
+    ],
+    "intent": "유료 좌석 매출",
+    "intent_metric": "유료 팀 수·좌석 매출"
+   },
    "key_metrics": {
     "north_star": "팀 일일 활성 사용자",
     "leading": [
@@ -15458,7 +15959,17 @@
      "일일 메시지 수"
     ],
     "guardrail": "알림 피로 지표",
-    "vanity": "다운로드 수"
+    "vanity": "다운로드 수",
+    "intent_metric": "유료 팀 수·좌석 매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "팀이 매일 쓰던 내부 도구 사용 관찰과 팀 활성화 지표",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "실패한 프로젝트 안에 쓰던 도구가 진짜 제품일 수 있다."
   },
@@ -15720,6 +16231,15 @@
     ],
     "why": "개설 기술 장벽 제거가 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "개설 장벽을 왜 없애나: 가게가 늘어난다",
+     "왜 가게 수인가: 구독료와 결제 수수료가 가게 수와 거래액에 비례한다"
+    ],
+    "intent": "구독·결제 매출",
+    "intent_metric": "가게 수·총 거래액"
+   },
    "key_metrics": {
     "north_star": "개설 가게 수",
     "leading": [
@@ -15727,7 +16247,17 @@
      "첫 판매 도달률"
     ],
     "guardrail": "가게 폐점률",
-    "vanity": "가입자 수"
+    "vanity": "가입자 수",
+    "intent_metric": "가게 수·총 거래액",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "창업자 본인의 판매 경험과 판매자 이야기",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "내 문제를 풀려고 만든 도구가 남의 문제도 푼다면 그게 사업이다."
   },
@@ -15841,6 +16371,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "누가 실제로 결정하는가(고객)를 다시 정의하면 같은 시장에서 다른 제품이 나온다."
   },
@@ -15969,6 +16500,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "무거운 인프라를 '호출 한 번'으로 쪼개 팔 수 있다."
   },
@@ -16091,6 +16623,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "내부 비용 센터가 외부 수익 사업이 될 수 있다."
   },
@@ -16395,6 +16928,15 @@
     ],
     "why": "동기화는 큰 베팅, 추천 보상은 빠른 승리"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "추천을 왜 키우나: 빠르게 퍼진다",
+     "왜 빠르게인가: 광고 없이 싸게 사용자를 모은다"
+    ],
+    "intent": "낮은 획득 비용으로 성장",
+    "intent_metric": "사용자 획득 비용·가입자 성장률"
+   },
    "key_metrics": {
     "north_star": "추천 가입 수·유료 전환율",
     "leading": [
@@ -16402,7 +16944,17 @@
      "초대 수락률"
     ],
     "guardrail": "무료 저장 비용",
-    "vanity": "총 가입자 수"
+    "vanity": "총 가입자 수",
+    "intent_metric": "사용자 획득 비용·가입자 성장률",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "추천 프로그램 실험과 가입 경로 분석",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'이미 있다'는 답에는 '그런데 왜 아무도 안 쓰나?'를 이어서 묻는다."
   },
@@ -16514,6 +17066,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "레드오션처럼 보여도 고객 불만이 크면 기회다."
   },
@@ -16645,6 +17198,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "구매자(개발팀)가 직접 써 보고 사게 하면 영업 비용이 사라진다."
   },
@@ -16774,6 +17328,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객 행동이 바뀌면(검색) 마케팅 방향도 뒤집어야 한다."
   },
@@ -17062,6 +17617,15 @@
     ],
     "why": "무료 전환이 시작 장벽을 없앤다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "무료를 왜 주나: 시작이 쉽다",
+     "왜 시작인가: 자란 고객이 유료로 옮긴다"
+    ],
+    "intent": "성장한 고객의 유료 매출",
+    "intent_metric": "유료 전환 매출"
+   },
    "key_metrics": {
     "north_star": "무료→유료 전환율",
     "leading": [
@@ -17069,7 +17633,17 @@
      "첫 발송까지 걸린 시간"
     ],
     "guardrail": "스팸 신고율",
-    "vanity": "무료 가입자 수"
+    "vanity": "무료 가입자 수",
+    "intent_metric": "유료 전환 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "유료 기반 확인 후 무료 전환 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "무료 고객은 비용이 아니라 미래의 유료 고객 파이프라인이다."
   },
@@ -17181,6 +17755,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "시장을 '전문가'에서 '모두'로 바꾸면 경쟁자가 사라진다."
   },
@@ -17292,6 +17867,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "도구의 사용자를 '팀 전체'로 넓히면 협업이 제품이 된다."
   },
@@ -17418,6 +17994,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사용자가 직접 조립하게 하면 하나의 도구로 여러 필요를 채운다."
   },
@@ -17546,6 +18123,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'모두가 무료로 쓰는 것'도 특정 고객에게는 비싸게 팔 수 있다."
   },
@@ -17657,6 +18235,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "조직 간 마찰이 제품 기회가 된다."
   },
@@ -17779,6 +18358,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "묶여 있는 두 자원을 떼어 내는 것이 원가 구조 혁신이 될 수 있다."
   },
@@ -17905,6 +18485,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "복잡한 업무를 '모르는 사람도 쓰게' 만드는 것이 B2B SaaS의 큰 기회다."
   },
@@ -18016,6 +18597,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "글로벌 SaaS가 못 채우는 현지 규칙이 진입 기회다."
   },
@@ -18142,6 +18724,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "자동화가 덜 됐을 때는 '사람'으로 품질을 먼저 확보하는 선택이 맞을 수 있다."
   },
@@ -18270,6 +18853,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "상담을 비용이 아니라 전환 채널로 보면 다른 제품이 나온다."
   },
@@ -18396,6 +18980,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "경쟁자가 기능을 더할 때 빼는 것도 차별화다."
   },
@@ -18522,6 +19107,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "다른 제품들이 늘어날수록 그 사이를 잇는 제품의 가치가 커진다."
   },
@@ -18648,6 +19234,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 있는 곳(제품 안)에서 대화하면 응답률이 달라진다."
   },
@@ -18774,6 +19361,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'동시에'라는 전제를 빼면 회의 상당수가 사라진다."
   },
@@ -18900,6 +19488,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "링크를 받은 사람이 다음 사용자가 되는 확산 구조까지 생겼다."
   },
@@ -19022,6 +19611,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "법·제도 변화(타이밍)가 오래된 불편을 한 번에 없앨 수 있다."
   },
@@ -19148,6 +19738,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "익숙한 모양(엑셀)에 강력한 구조(DB)를 숨긴다."
   },
@@ -19274,6 +19865,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기술 도구 위에 '사람의 협업'을 얹으면 네트워크가 생긴다."
   },
@@ -19402,6 +19994,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "대부분의 고객은 '맞춤'보다 '충분히 예쁜 기본값'을 원한다."
   },
@@ -19533,6 +20126,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "협업 제품의 활성화 단위는 개인이 아니라 팀이다."
   },
@@ -19647,6 +20241,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "B2B 도입 실패는 기능이 아니라 '누가 입력하느냐'에서 생기는 경우가 많다."
   },
@@ -19760,6 +20355,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사용자가 실제로 쓰는 곳을 보고 계획을 바꿨다."
   },
@@ -20042,6 +20638,15 @@
     ],
     "why": "쉬운 가입과 무계약이 진짜 장벽을 푼다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "가입을 왜 쉽게 하나: 작은 가게가 들어온다",
+     "왜 작은 가게인가: 수수료 매출이 거래액에 비례한다"
+    ],
+    "intent": "결제 수수료 매출",
+    "intent_metric": "총 결제액·수수료 매출"
+   },
    "key_metrics": {
     "north_star": "가맹점 수·결제액",
     "leading": [
@@ -20049,7 +20654,17 @@
      "첫 결제까지 걸린 시간"
     ],
     "guardrail": "사기 거래율",
-    "vanity": "단말기 출하 대수"
+    "vanity": "단말기 출하 대수",
+    "intent_metric": "총 결제액·수수료 매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "작은 가게가 카드를 못 받는 상황을 직접 겪고 관찰",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "하나의 혁신이 아니라 여러 개의 작은 혁신을 쌓아 기존 강자가 따라 하기 어렵게 만들었다."
   },
@@ -20176,6 +20791,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기능 같은 송금도 맥락(친구 사이 놀이)을 바꾸면 확산 방식이 달라진다."
   },
@@ -20292,6 +20908,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "수익 모델을 바꾼 대가로 새로운 이해충돌이 생길 수 있다는 점까지 봐야 한다."
   },
@@ -20421,6 +21038,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객의 고통에서 돈을 버는 구조는 경쟁자에게 기회다."
   },
@@ -20532,6 +21150,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "독과점 시장의 불만은 디지털 신규 진입자에게 기회다."
   },
@@ -20819,6 +21438,15 @@
     ],
     "why": "휴대폰·대리점 조합이 계좌 없는 송금을 연다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "송금을 왜 쉽게 하나: 많이 쓴다",
+     "왜 통신사가 하나: 송금 수수료와 가입자 유지가 생긴다"
+    ],
+    "intent": "송금 수수료와 가입자 잠금",
+    "intent_metric": "송금 수수료 매출·가입자 이탈률"
+   },
    "key_metrics": {
     "north_star": "활성 사용자·송금액",
     "leading": [
@@ -20826,7 +21454,17 @@
      "월 송금 건수"
     ],
     "guardrail": "사기·분실 건수",
-    "vanity": "가입 SIM 수"
+    "vanity": "가입 SIM 수",
+    "intent_metric": "송금 수수료 매출·가입자 이탈률",
+    "select_method": {
+     "methods": [
+      "observation",
+      "experiment"
+     ],
+     "how": "현지 시범 운영에서 실제 쓰임(송금)을 관찰",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "원래는 소액 대출 상환용으로 시작했지만, 사람들이 송금에 쓰는 걸 보고 방향을 바꿨다."
   },
@@ -21107,6 +21745,15 @@
     ],
     "why": "계좌 풀 상계가 비용의 원인을 없앤다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "비용을 왜 투명하게 하나: 고객이 믿는다",
+     "왜 신뢰인가: 은행 고객을 빼앗아 송금량을 키운다"
+    ],
+    "intent": "송금량 점유율 키우기",
+    "intent_metric": "송금액·고객 수"
+   },
    "key_metrics": {
     "north_star": "송금당 비용·송금액",
     "leading": [
@@ -21114,7 +21761,17 @@
      "처리 시간"
     ],
     "guardrail": "규제 위반 건수",
-    "vanity": "앱 설치 수"
+    "vanity": "앱 설치 수",
+    "intent_metric": "송금액·고객 수",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "창업자 본인 송금 경험과 비용 분해",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "창업자 자신의 문제가 해결책의 구조를 알려 줬다."
   },
@@ -21243,6 +21900,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "자포스(무료 반품)와 같은 구조. 고객의 위험을 대신 진다. (과소비·연체 논란도 함께 봐야 함)"
   },
@@ -21354,6 +22012,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "신뢰 문제는 홍보가 아니라 돈의 흐름을 바꿔야 풀린다."
   },
@@ -21468,6 +22127,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "규제가 열린 순간(타이밍) 사용성(맹점)으로 차별화했다."
   },
@@ -21582,6 +22242,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 아이디어도 제도 이전(스크래핑)과 이후(마이데이터)의 실행 조건이 다르다."
   },
@@ -21711,6 +22372,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "무료 정보가 신뢰를 만들고, 신뢰가 추천 수익이 된다."
   },
@@ -21842,6 +22504,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "외부 충격은 오랫동안 '아직 안 된' 아이디어를 한 번에 '이제 된다'로 바꾼다."
   },
@@ -21970,6 +22633,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "금융 비교 서비스의 'Why not yet'은 대부분 규제다. 규제가 언제 바뀌는지가 핵심."
   },
@@ -22096,6 +22760,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "제도로 '불가능'이 풀리면, 남은 건 고객이 행동하는 시점을 잡는 일이다."
   },
@@ -22210,6 +22875,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "행동을 바꾸려면 의지가 아니라 기본값(default)을 바꾼다."
   },
@@ -22332,6 +22998,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "대체 데이터가 기존 신용평가의 사각지대를 메운다."
   },
@@ -22454,6 +23121,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'갚지 않을 것'이라는 통념을 실제 상환율로 뒤집었다. (이후 과잉 대출 문제도 논쟁됨)"
   },
@@ -22580,6 +23248,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "업계 문화(탈규제)를 거슬러 일반인의 신뢰를 택했다."
   },
@@ -22857,6 +23526,15 @@
     ],
     "why": "즉시 시청 전환은 느려도 고객 이동의 대부분이다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 즉시 시청인가: 고객이 원한다",
+     "왜 먼저인가: 시장의 다음 주인이 되어야 성장이 계속된다"
+    ],
+    "intent": "다음 시장 선점",
+    "intent_metric": "스트리밍 구독자 성장"
+   },
    "key_metrics": {
     "north_star": "스트리밍 구독자 수",
     "leading": [
@@ -22864,7 +23542,17 @@
      "즉시 재생 성공률"
     ],
     "guardrail": "기존 고객 이탈률",
-    "vanity": "DVD 보유 타이틀 수"
+    "vanity": "DVD 보유 타이틀 수",
+    "intent_metric": "스트리밍 구독자 성장",
+    "select_method": {
+     "methods": [
+      "quant",
+      "scoring"
+     ],
+     "how": "시청 패턴 분석과 경영진 판단",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "블록버스터가 못 한 일(자기 사업 잠식)을 했다."
   },
@@ -23128,6 +23816,15 @@
     ],
     "why": "데이터 기반 오리지널이 협상력을 만든다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 오리지널인가: 협상력이 생긴다",
+     "왜 협상력인가: 라이선스 비용 인상에 끌려가지 않는다"
+    ],
+    "intent": "콘텐츠 비용 통제",
+    "intent_metric": "콘텐츠 비용 대비 구독 매출"
+   },
    "key_metrics": {
     "north_star": "오리지널 시청 비중",
     "leading": [
@@ -23135,7 +23832,16 @@
      "오리지널 첫 주 완주율"
     ],
     "guardrail": "제작비 대비 시청 시간",
-    "vanity": "화제성 기사 수"
+    "vanity": "화제성 기사 수",
+    "intent_metric": "콘텐츠 비용 대비 구독 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "시청 데이터로 감독·배우·장르 선호를 분석",
+     "source": "https://www.inc.com/associated-press/why-house-of-cards-is-the-foundation-of-netflixs-colossal-growth.html",
+     "inferred": false
+    }
    },
    "lesson": "몰아보기라는 새 시청 행동이 제작·공개 방식까지 바꿨다."
   },
@@ -23247,6 +23953,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사용자가 실제로 올리는 콘텐츠를 보고 용도를 넓혔다."
   },
@@ -23512,6 +24219,15 @@
     ],
     "why": "기능을 빼는 것이 가장 빠르고 실제 사용을 남긴다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 기능을 빼나: 사진 공유가 쉬워진다",
+     "왜 쉬움인가: 사용자가 빨리 늘어야 가치가 커진다"
+    ],
+    "intent": "빠른 사용자 성장",
+    "intent_metric": "일일 활성 사용자 성장"
+   },
    "key_metrics": {
     "north_star": "일일 업로드 수",
     "leading": [
@@ -23519,7 +24235,17 @@
      "필터 사용률"
     ],
     "guardrail": "앱 크래시율",
-    "vanity": "기능 수"
+    "vanity": "기능 수",
+    "intent_metric": "일일 활성 사용자 성장",
+    "select_method": {
+     "methods": [
+      "quant",
+      "observation"
+     ],
+     "how": "앱 사용 데이터에서 사진 공유만 쓰이는 것을 확인",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "사용 데이터가 가리킨 단 하나의 기능에 집중했다."
   },
@@ -23631,6 +24357,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "위기 때 사내 실험에서 다음 사업이 나왔다."
   },
@@ -23917,6 +24644,15 @@
     ],
     "why": "관심사 학습이 첫날 잔존을 결정한다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 첫날 재미인가: 신규가 남는다",
+     "왜 남아야 하나: 체류 시간이 광고 매출이 된다"
+    ],
+    "intent": "체류 시간 기반 광고 매출",
+    "intent_metric": "광고 매출·체류 시간"
+   },
    "key_metrics": {
     "north_star": "신규 이용자 첫날 체류 시간",
     "leading": [
@@ -23924,7 +24660,17 @@
      "추천 피드 완주율"
     ],
     "guardrail": "유해 콘텐츠 노출률",
-    "vanity": "다운로드 수"
+    "vanity": "다운로드 수",
+    "intent_metric": "광고 매출·체류 시간",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "시청 행동 데이터로 추천 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "첫 화면부터 재미있으면 '친구 0명' 문제가 사라진다."
   },
@@ -24227,6 +24973,15 @@
     ],
     "why": "기다리면 무료가 결제 첫 경험을 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 결제 첫 경험인가: 결제자가 생긴다",
+     "왜 결제자인가: 결제자가 작품 매출을 만든다"
+    ],
+    "intent": "유료 콘텐츠 매출",
+    "intent_metric": "결제자 수·매출"
+   },
    "key_metrics": {
     "north_star": "첫 결제 전환율",
     "leading": [
@@ -24234,7 +24989,17 @@
      "기다리면 무료 이용률"
     ],
     "guardrail": "작가 정산액",
-    "vanity": "작품 수"
+    "vanity": "작품 수",
+    "intent_metric": "결제자 수·매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "결제 전환 데이터와 기다리면 무료 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "같은 콘텐츠도 '기다림'을 가격의 일부로 만들면 결제가 생긴다."
   },
@@ -24559,6 +25324,15 @@
     ],
     "why": "세로 스크롤 형식이 완독을 바꾼다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 화면 형식인가: 끝까지 읽는다",
+     "왜 완독인가: 독자가 쌓여야 미리보기·광고·IP 매출이 생긴다"
+    ],
+    "intent": "독자 기반의 콘텐츠·IP 매출",
+    "intent_metric": "유료 매출·IP 매출"
+   },
    "key_metrics": {
     "north_star": "회차 완독률·연재 독자 수",
     "leading": [
@@ -24566,7 +25340,17 @@
      "연재 구독률"
     ],
     "guardrail": "작가 휴재율",
-    "vanity": "페이지뷰"
+    "vanity": "페이지뷰",
+    "intent_metric": "유료 매출·IP 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "회차 열람·완독 데이터와 독자 반응",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "매체가 바뀌면 콘텐츠 형식부터 다시 설계해야 한다."
   },
@@ -24693,6 +25477,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "전체 중 가장 빠르게 자라는 한 부분을 떼어 내는 것도 피벗이다."
   },
@@ -24819,6 +25604,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "슬랙과 같은 구조. 실패한 게임 회사의 내부 도구가 진짜 제품이었다."
   },
@@ -24933,6 +25719,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "타이밍과 가입 마찰 제거가 겹치자 순식간에 표준이 됐다."
   },
@@ -25044,6 +25831,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사회적 경험(재난)이 제품의 방향을 정했다."
   },
@@ -25170,6 +25958,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기능을 늘리지 않고 '그냥 잘 되는 것'에 집중했다."
   },
@@ -25296,6 +26085,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기능을 '없애는 것'이 가치가 됐다."
   },
@@ -25422,6 +26212,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "좁은 시장에서 밀도를 먼저 만들었다."
   },
@@ -25533,6 +26324,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "이전 실패에서 쌓은 자산(위치 데이터)이 다음 성공의 기반이 됐다."
   },
@@ -25835,6 +26627,15 @@
     ],
     "why": "무료 진입과 시즌 패스가 함께 간다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 무료인가: 친구를 데려온다",
+     "왜 친구인가: 플레이어가 많을수록 꾸미기 매출이 커진다"
+    ],
+    "intent": "아이템 매출",
+    "intent_metric": "아이템 매출·결제자 비율"
+   },
    "key_metrics": {
     "north_star": "동시 접속자·시즌 패스 구매율",
     "leading": [
@@ -25842,7 +26643,17 @@
      "시즌 패스 구매율"
     ],
     "guardrail": "미성년 결제 분쟁",
-    "vanity": "다운로드 수"
+    "vanity": "다운로드 수",
+    "intent_metric": "아이템 매출·결제자 비율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "동시 접속·구매 데이터와 시즌 운영 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "무료가 진입 장벽을 없애고, 시즌 구조가 반복 방문을 만든다."
   },
@@ -26152,6 +26963,15 @@
     ],
     "why": "연속 기록 장치가 매일 복귀를 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 매일 오게 하나: 습관이 된다",
+     "왜 습관인가: 매일 오는 사람이 유료로 전환된다"
+    ],
+    "intent": "유료 구독 매출",
+    "intent_metric": "유료 구독자 수"
+   },
    "key_metrics": {
     "north_star": "일일 활성 사용자·연속 학습일",
     "leading": [
@@ -26159,7 +26979,17 @@
      "일일 활성 비율"
     ],
     "guardrail": "학습 성취도",
-    "vanity": "앱 설치 수"
+    "vanity": "앱 설치 수",
+    "intent_metric": "유료 구독자 수",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "대규모 A/B 테스트로 습관 장치를 검증",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "콘텐츠보다 '다시 오게 하는 장치'가 지속의 핵심이다."
   },
@@ -26271,6 +27101,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "타이밍으로 생긴 수요를 일시적인지 구조적인지 구분해야 한다."
   },
@@ -26564,6 +27395,15 @@
     ],
     "why": "독자 직접 구독이 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 작가 직접 구독인가: 작가가 돈을 번다",
+     "왜 플랫폼이 신경 쓰나: 구독 매출의 수수료가 플랫폼 수입이다"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "유료 구독 거래액"
+   },
    "key_metrics": {
     "north_star": "유료 구독자 수",
     "leading": [
@@ -26571,7 +27411,17 @@
      "이메일 오픈율"
     ],
     "guardrail": "구독 해지율",
-    "vanity": "무료 구독자 수"
+    "vanity": "무료 구독자 수",
+    "intent_metric": "유료 구독 거래액",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "작가 인터뷰와 유료 전환 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "소수의 열성 독자가 광고보다 큰 수익이 될 수 있다."
   },
@@ -26864,6 +27714,15 @@
     ],
     "why": "정기 후원과 등급 보상이 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 정기 후원인가: 창작자 생계가 된다",
+     "왜 플랫폼이 신경 쓰나: 후원액의 수수료가 플랫폼 수입이다"
+    ],
+    "intent": "후원 수수료 매출",
+    "intent_metric": "총 후원액"
+   },
    "key_metrics": {
     "north_star": "후원자 수·창작자 수입",
     "leading": [
@@ -26871,7 +27730,17 @@
      "등급 상향률"
     ],
     "guardrail": "창작자 이탈률",
-    "vanity": "가입 창작자 수"
+    "vanity": "가입 창작자 수",
+    "intent_metric": "총 후원액",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "창작자 이야기와 후원 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "콘텐츠가 아니라 '창작자를 지원하는 기분'을 판다."
   },
@@ -27167,6 +28036,15 @@
     ],
     "why": "미터제가 많이 읽는 독자를 고른다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 직접 받나: 광고가 줄어든다",
+     "왜 독자 매출인가: 광고 의존을 벗어나야 저널리즘을 지속한다"
+    ],
+    "intent": "독자 구독 매출",
+    "intent_metric": "디지털 구독 매출"
+   },
    "key_metrics": {
     "north_star": "디지털 유료 구독자 수",
     "leading": [
@@ -27174,7 +28052,17 @@
      "구독자 월 열람 기사 수"
     ],
     "guardrail": "전체 트래픽",
-    "vanity": "페이지뷰"
+    "vanity": "페이지뷰",
+    "intent_metric": "디지털 구독 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "열람량 분포 분석과 미터제 시도",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "뉴스 하나가 아니라 '매일 여는 이유'를 묶어 팔았다."
   },
@@ -27466,6 +28354,15 @@
     ],
     "why": "월 구독이 시도 비용을 없앤다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 시도를 싸게 하나: 더 많이 읽는다",
+     "왜 많이 읽게 하나: 많이 읽는 구독자가 해지하지 않는다"
+    ],
+    "intent": "구독 유지",
+    "intent_metric": "구독 유지율"
+   },
    "key_metrics": {
     "north_star": "구독자당 열람 권수",
     "leading": [
@@ -27473,7 +28370,17 @@
      "첫 달 유지율"
     ],
     "guardrail": "출판사 정산 단가",
-    "vanity": "보유 도서 수"
+    "vanity": "보유 도서 수",
+    "intent_metric": "구독 유지율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "survey"
+     ],
+     "how": "열람 패턴과 구독 의향 조사",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "구독은 '시도 비용'을 0으로 만든다."
   },
@@ -27600,6 +28507,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "콘텐츠 수출은 번역이 아니라 생태계 이식이다."
   },
@@ -27711,6 +28619,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "커뮤니티 활동의 핵심 지표는 '첫 글이 받은 반응'이다."
   },
@@ -27825,6 +28734,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'이제 가능해졌다'가 아니라 '지금만 원한다'인지 구분해야 한다."
   },
@@ -27940,6 +28850,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'왜 아무도 안 했나'의 답이 '무료로 충분해서'일 때는 돈을 내게 할 이유를 증명해야 한다."
   },
@@ -28066,6 +28977,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 원재료도 '무엇을 파는가'를 바꾸면 가격대가 달라진다."
   },
@@ -28182,6 +29094,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "대기 문제를 '줄 바깥에서 주문하기'로 풀었다."
   },
@@ -28293,6 +29206,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "솔직함이 브랜드 신뢰를 회복시키는 전략이 될 수 있다."
   },
@@ -28415,6 +29329,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "선택지를 줄이면 속도·가격·품질 일관성이 함께 좋아진다."
   },
@@ -28541,6 +29456,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "두 가치가 충돌한다는 통념을 공정 설계로 깼다."
   },
@@ -28652,6 +29568,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객 정의(채식인 → 고기 먹는 사람)를 바꾸자 기술 목표가 바뀌었다."
   },
@@ -28778,6 +29695,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "바리스타라는 '신뢰받는 사용자'를 첫 고객으로 삼았다."
   },
@@ -28904,6 +29822,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기존 평가 기준에서 지면 기준 자체를 바꾼다."
   },
@@ -29015,6 +29934,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기술(바리스타 실력)을 제품(캡슐) 안에 넣었다."
   },
@@ -29141,6 +30061,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "반복 구매 구조가 생기면 첫 판매는 투자가 된다. (훗날 구독 D2C가 이 구조를 공격)"
   },
@@ -29268,6 +30189,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "가치가 '사용'에서 나오면 가격도 사용에 붙인다."
   },
@@ -29554,6 +30476,15 @@
     ],
     "why": "정비 책임과 시간 과금이 함께 이해를 맞춘다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 정비 책임을 지나: 고객 가동률이 오른다",
+     "왜 제조사에 이득인가: 장기 서비스 계약이 안정 매출을 만든다"
+    ],
+    "intent": "장기 서비스 매출",
+    "intent_metric": "서비스 계약 매출"
+   },
    "key_metrics": {
     "north_star": "엔진 가동률",
     "leading": [
@@ -29561,7 +30492,17 @@
      "비계획 정비 건수"
     ],
     "guardrail": "정비 비용",
-    "vanity": "엔진 판매 대수"
+    "vanity": "엔진 판매 대수",
+    "intent_metric": "서비스 계약 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "interview"
+     ],
+     "how": "고장·정비 데이터와 항공사 요구",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "제조사와 고객의 이해(엔진이 오래 잘 도는 것)를 같은 방향으로 맞췄다."
   },
@@ -29688,6 +30629,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "제품을 서비스로 바꾸면 고객의 진짜 목표(가동률)를 팔 수 있다."
   },
@@ -29814,6 +30756,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "롤스로이스·힐티와 같은 '제품의 서비스화' 패턴."
   },
@@ -29928,6 +30871,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "화면이 곧 인터페이스가 되자 앱 생태계가 가능해졌다."
   },
@@ -30056,6 +31000,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "경험 전체를 묶으면 개별 기능 경쟁을 벗어난다."
   },
@@ -30167,6 +31112,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "아무도 신경 안 쓰는 제품이 디자인과 자동화로 '갖고 싶은 제품'이 될 수 있다."
   },
@@ -30296,6 +31242,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "작은 일상 불편(초인종)에서 보안 플랫폼이 시작됐다."
   },
@@ -30424,6 +31371,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'충분히 좋은' 수준을 정하는 것이 가격을 정한다."
   },
@@ -30553,6 +31501,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "팬 커뮤니티가 마케팅과 개발을 동시에 했다."
   },
@@ -30679,6 +31628,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "경쟁사 리뷰가 가장 값싼 시장조사다."
   },
@@ -30790,6 +31740,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "창업자 자신의 취미 속 불편이 새 카테고리가 됐다."
   },
@@ -30916,6 +31867,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사용자 커뮤니티가 레시피(콘텐츠)를 만들어 제품 가치를 키웠다."
   },
@@ -31042,6 +31994,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "불닭처럼 단점을 정체성으로 바꿨다."
   },
@@ -31168,6 +32121,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "영향력 있는 소수(강사)를 통한 확산."
   },
@@ -31294,6 +32248,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "차별화 불가능해 보이는 상품도 이미지 축을 뒤집으면 차별화된다."
   },
@@ -31422,6 +32377,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "저가 카테고리에도 프리미엄 고객층이 숨어 있다."
   },
@@ -31548,6 +32504,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "업계 전체가 같은 메시지를 낼 때 반대 메시지가 차별화가 된다."
   },
@@ -31674,6 +32631,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "관찰(걸레 빠는 시간)이 문제 정의를 바꿨다."
   },
@@ -31800,6 +32758,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기능을 빼서 새 사용 장면(걷기)을 만들었다."
   },
@@ -31907,6 +32866,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "Why not yet의 답이 '우리 자신이 손해라서'라면 경쟁자가 그 일을 한다."
   },
@@ -32018,6 +32978,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "내 고객이 누구인지가 바뀌는 순간을 Why not yet으로 다시 점검해야 한다."
   },
@@ -32130,6 +33091,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'왜 아무도 안 했나'의 답이 '필요 없어서'일 수 있다."
   },
@@ -32237,6 +33199,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "기술의 Why not yet(이제 가능)만 보고 사회·규제의 Why not yet을 무시하면 실패한다."
   },
@@ -32348,6 +33311,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 기술도 '누가 어디서 쓰느냐'에 따라 불가능과 기회가 갈린다."
   },
@@ -32621,6 +33585,15 @@
     ],
     "why": "공정 표준화가 원가와 품질을 함께 잡는다"
    },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "왜 원가를 낮추나: 무료 수술을 지속한다",
+     "왜 지속인가: 실명을 없애는 것이 병원의 사명이다"
+    ],
+    "intent": "실명 퇴치라는 사명",
+    "intent_metric": "연간 시력 회복 환자 수"
+   },
    "key_metrics": {
     "north_star": "연간 수술 건수·무료 수술 비중",
     "leading": [
@@ -32628,7 +33601,17 @@
      "합병증률"
     ],
     "guardrail": "무료 수술 비중",
-    "vanity": "병원 규모"
+    "vanity": "병원 규모",
+    "intent_metric": "연간 시력 회복 환자 수",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "수술 공정 관찰과 원가 분해",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "맥도날드식 공정이 의료 접근성을 바꿀 수 있다."
   },
@@ -32751,6 +33734,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "규모의 경제가 품질과 원가를 함께 개선할 수 있다."
   },
@@ -32877,6 +33861,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "정보 비대칭이 큰 시장에서 가격 공개 자체가 사업이다."
   },
@@ -33003,6 +33988,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "포장 단위를 '고객의 하루'에 맞췄다."
   },
@@ -33116,6 +34102,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "감정(수치심)이 장벽이면 경험 설계가 해결책이다."
   },
@@ -33242,6 +34229,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "규제가 '임시로' 풀린 타이밍은 언제든 다시 닫힐 수 있다는 점을 기획에 넣어야 한다."
   },
@@ -33368,6 +34356,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "투명성 자체가 서비스다. (의료 광고 규제와의 긴장을 관리해야 함)"
   },
@@ -33490,6 +34479,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "지불자(보험사·기업)가 비용을 아끼는 구조를 찾으면 확산이 빨라진다."
   },
@@ -33601,6 +34591,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "Why not yet 답이 '과학적으로 불가능'이면 그 증거를 가장 먼저 검증해야 한다."
   },
@@ -33712,6 +34703,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "영상은 '멈추고 다시 볼 수 있다'는 점에서 사람보다 나은 선생님이 된다."
   },
@@ -33825,6 +34817,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "콘텐츠가 아니라 '인증'에 돈을 받는 구조. (낮은 완강률은 남은 과제)"
   },
@@ -33954,6 +34947,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'막힌 순간'이라는 시점을 잡는 것이 교육 서비스의 핵심이다."
   },
@@ -34083,6 +35077,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "학습 시간 절약이 곧 가치다."
   },
@@ -34209,6 +35204,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'시작'을 막는 작은 장애물을 없애면 전환율이 오른다."
   },
@@ -34322,6 +35318,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "공급자(강사)의 인센티브를 바꾸자 최고의 공급이 플랫폼으로 왔다."
   },
@@ -34434,6 +35431,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "인센티브 설계(맹점)만큼 성과 측정(불가능 여부)이 중요하다."
   },
@@ -34547,6 +35545,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "교육 상품의 핵심은 '누가 가르치느냐'다."
   },
@@ -34673,6 +35672,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'수동적 구직자'라는 숨은 공급을 드러냈다."
   },
@@ -34799,6 +35799,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'주면 받는다' 구조로 민감한 데이터를 모았다."
   },
@@ -34928,6 +35929,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "이미 효과적인 행동(추천)에 보상을 붙여 규모를 키웠다."
   },
@@ -35057,6 +36059,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "지그재그처럼 흩어진 공급을 모으는 구조."
   },
@@ -35170,6 +36173,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객의 '현재 지출'을 기준선으로 삼으면 가격 저항이 줄어든다."
   },
@@ -35296,6 +36300,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "좋은 의도의 모델도 현지 영향(현지 신발 산업)을 검증해야 한다."
   },
@@ -35422,6 +36427,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "이탈 문제는 '들어온 뒤'가 아니라 '들어오기 전 기대'에서 시작된다."
   },
@@ -35548,6 +36554,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "부도는 '의지' 문제가 아니라 '변경이 귀찮다'는 마찰 문제일 수 있다."
   },
@@ -35659,6 +36666,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "결과(성적)가 나오기 전의 '진척'을 보여 주는 것이 이탈 방지의 핵심이다."
   },
@@ -35770,6 +36778,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "보이지 않는 효과를 보이게 만들면 행동이 바뀐다."
   },
@@ -35877,6 +36886,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "마트 진열대의 '필요한 만큼 가져가는' 방식을 공장에 적용했다."
   },
@@ -36157,6 +37167,15 @@
     ],
     "why": "거름망 하나로 반복 고장의 원인을 막는다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 근본 원인인가: 같은 고장이 안 난다",
+     "왜 중요한가: 라인 정지 손실이 줄어든다"
+    ],
+    "intent": "생산 손실 줄이기",
+    "intent_metric": "라인 가동률"
+   },
    "key_metrics": {
     "north_star": "재발 건수",
     "leading": [
@@ -36164,7 +37183,16 @@
      "재발 건수"
     ],
     "guardrail": "조치 비용",
-    "vanity": "수리 건수"
+    "vanity": "수리 건수",
+    "intent_metric": "라인 가동률",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "현장에서 '왜'를 반복해 원인을 직접 확인",
+     "source": "https://www.lean.org/lexicon/five-whys",
+     "inferred": false
+    }
    },
    "lesson": "감기 사례와 같은 '왜?' 반복의 원조다."
   },
@@ -36287,6 +37315,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "비용 항목(임금)을 투자로 다시 보면 계산이 바뀐다."
   },
@@ -36551,6 +37580,15 @@
     ],
     "why": "부품 축소와 핵심 집중이 비용을 줄이고 팬 의견은 빠른 승리"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 핵심 집중인가: 비용이 준다",
+     "왜 비용인가: 회사가 적자에서 벗어나야 한다"
+    ],
+    "intent": "수익성 회복",
+    "intent_metric": "영업이익률"
+   },
    "key_metrics": {
     "north_star": "영업이익률",
     "leading": [
@@ -36558,7 +37596,17 @@
      "브릭 제품 매출 비중"
     ],
     "guardrail": "신제품 출시 속도",
-    "vanity": "사업 영역 수"
+    "vanity": "사업 영역 수",
+    "intent_metric": "영업이익률",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "부품 수·수익성 분석과 팬 의견",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "턴어라운드의 Why not yet은 '우리가 잘하는 것으로 돌아가는 걸 왜 안 했나'다."
   },
@@ -36685,6 +37733,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "덜 유명한 캐릭터만 남아 있었기에 '세계관 연결'이 해법이 됐다."
   },
@@ -36807,6 +37856,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "빼는 것도 전략이다."
   },
@@ -36929,6 +37979,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "경쟁자를 다시 정의하면(자동차) 가격 기준이 바뀐다."
   },
@@ -37055,6 +38106,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "묶여 있던 상품을 풀면(언번들링) 가격 경쟁력이 생긴다."
   },
@@ -37334,6 +38386,15 @@
     ],
     "why": "구독 전환은 아프지만 매출 안정의 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 구독인가: 매출이 안정된다",
+     "왜 안정인가: 반복 매출이 기업 가치를 높인다"
+    ],
+    "intent": "반복 매출과 기업 가치",
+    "intent_metric": "연 반복 매출"
+   },
    "key_metrics": {
     "north_star": "구독 매출 비중",
     "leading": [
@@ -37341,7 +38402,17 @@
      "구독 해지율"
     ],
     "guardrail": "불법 복제율",
-    "vanity": "신버전 출시 수"
+    "vanity": "신버전 출시 수",
+    "intent_metric": "연 반복 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "scoring"
+     ],
+     "how": "업그레이드 주기·매출 변동 분석",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "전환기의 일시적 매출 하락을 견딜 수 있는가가 Why not yet의 진짜 답이었다."
   },
@@ -37471,6 +38542,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "광고주·사용자·플랫폼의 이해를 같은 방향으로 맞춘 경매 설계."
   },
@@ -37599,6 +38671,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "장바구니 이탈 연습 사례와 같은 문제를 '단계 제거'로 풀었다."
   },
@@ -37715,6 +38788,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "대기 문제의 두 갈래: 없애기(타이밍) 또는 채우기(맹점)."
   },
@@ -37837,6 +38911,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 실제로 쓰는 것에만 투자한다."
   },
@@ -37959,6 +39034,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "조직 문제도 WHAT(규칙 부족 vs 인재 밀도)을 어떻게 정의하느냐에 따라 답이 반대가 된다."
   },
@@ -38081,6 +39157,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "소통 자체를 줄이는 구조가 소통을 개선하는 것보다 낫다."
   },
@@ -38203,6 +39280,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "피드백에서 권한을 빼면 솔직함이 생긴다."
   },
@@ -38314,6 +39392,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객은 연비뿐 아니라 '친환경적인 나'를 보여 주는 것도 샀다."
   },
@@ -38427,6 +39506,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "진입 순서를 바꾸면 '불가능'이 단계적으로 가능해진다."
   },
@@ -38553,6 +39633,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "두 시장을 합치면 개발 자원도 하나로 모인다."
   },
@@ -38665,6 +39746,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 사는 이유(지위)를 WHAT에 넣지 않으면 기술적 성공도 실패한다."
   },
@@ -38772,6 +39854,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "넷플릭스 사례의 반대편. 같은 Why not yet을 기존 강자는 못 풀었다."
   },
@@ -38883,6 +39966,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "1위 기업의 Why not yet 답은 대개 '지금 방식으로도 잘되니까'다."
   },
@@ -38997,6 +40081,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 '어디서 시작하는가'가 바뀌면 관문이 바뀐다."
   },
@@ -39123,6 +40208,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "가격 대신 경험으로 채널을 옮긴다."
   },
@@ -39234,6 +40320,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "해지 대신 '잠시 멈춤'을 만들면 이탈이 줄어든다."
   },
@@ -39347,6 +40434,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "가격 문제는 숫자보다 '가치와의 연결'을 먼저 설계한다."
   },
@@ -39475,6 +40563,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "결재 구조를 바꿀 수 없으면 결재가 필요 없는 크기로 시작한다."
   },
@@ -39586,6 +40675,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "공급이 부족하면 공급자의 '일'을 대신하는 것이 가장 빠르다."
   },
@@ -39699,6 +40789,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "수요 예측 문제를 '선주문'으로 바꾸면 폐기와 품절이 함께 준다."
   },
@@ -39810,6 +40901,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "만족도 = 결과 - 기대. 결과를 못 바꾸면 기대를 관리한다."
   },
@@ -39939,6 +41031,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "검색 품질 문제를 '콘텐츠 공급' 문제로 다시 정의했다."
   },
@@ -40067,6 +41160,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "힐티·롤스로이스와 같은 '제품의 서비스화'가 한국 가전에서 나타났다."
   },
@@ -40196,6 +41290,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객 관계를 남의 플랫폼에 맡기면 데이터와 수익이 새어 나간다."
   },
@@ -40307,6 +41402,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "커뮤니티가 이미 검증한 아이디어를 제대로 만드는 것도 기회다."
   },
@@ -40592,6 +41688,15 @@
     ],
     "why": "유료 이모티콘과 작가 시장이 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 감정 표현을 파나: 이용자가 산다",
+     "왜 메신저가 파나: 무료 메신저의 수익원이 필요하다"
+    ],
+    "intent": "메신저 수익화",
+    "intent_metric": "이모티콘 매출"
+   },
    "key_metrics": {
     "north_star": "이모티콘 구매자 수",
     "leading": [
@@ -40599,7 +41704,17 @@
      "작가 입점 수"
     ],
     "guardrail": "저품질 이모티콘 신고",
-    "vanity": "무료 이모티콘 배포 수"
+    "vanity": "무료 이모티콘 배포 수",
+    "intent_metric": "이모티콘 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "표현 사용 데이터와 이용자 반응",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "무료 서비스 안에서 '자기 표현'은 돈을 낼 만한 가치가 된다."
   },
@@ -40726,6 +41841,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "무료 기본 서비스가 인터넷 포털의 관문이 됐다."
   },
@@ -40840,6 +41956,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "노키아·코닥과 같은 구조. 지금 돈 버는 방식이 다음 단계를 막는다."
   },
@@ -40970,6 +42087,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "무신사·오늘의집과 같은 '커뮤니티 → 커머스' 패턴."
   },
@@ -41092,6 +42210,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "누가 언제 돈을 내는지 설계가 공급자 품질과 플랫폼 수익을 정한다."
   },
@@ -41218,6 +42337,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "언어·문화가 같은 공급자가 신뢰의 지름길이다."
   },
@@ -41347,6 +42467,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "평가 데이터가 쌓이면 그것 자체가 서비스가 된다."
   },
@@ -41473,6 +42594,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "대형 플랫폼 옆에서도 '깊은 니치'는 살아남는다."
   },
@@ -41755,6 +42877,15 @@
     ],
     "why": "용도 전환이 가치를 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 새 용도인가: 실패작이 팔린다",
+     "왜 팔아야 하나: 연구 투자를 매출로 회수한다"
+    ],
+    "intent": "연구 투자의 매출화",
+    "intent_metric": "신제품 매출"
+   },
    "key_metrics": {
     "north_star": "신제품 매출",
     "leading": [
@@ -41762,7 +42893,17 @@
      "재구매율"
     ],
     "guardrail": "제조 원가",
-    "vanity": "접착력 수치"
+    "vanity": "접착력 수치",
+    "intent_metric": "신제품 매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "experiment"
+     ],
+     "how": "사내 배포 후 실제 쓰임 관찰",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "실패작의 '약점'이 맞는 문제를 만나면 강점이 된다."
   },
@@ -41889,6 +43030,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "예상 밖 결과를 버리지 말고 새 문제와 연결해 본다."
   },
@@ -42015,6 +43157,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객이 제품을 '다르게 쓰는' 모습이 다음 시장을 알려 준다."
   },
@@ -42126,6 +43269,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 제품도 맞는 고객과 시점을 만나야 한다."
   },
@@ -42237,6 +43381,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "공급자(가게)에게 손해인 구조는 오래가지 않는다."
   },
@@ -42512,6 +43657,15 @@
     ],
     "why": "고정비를 줄이고 주문당 비용을 맞추는 것이 먼저였다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 단위 경제인가: 손실이 준다",
+     "왜 먼저인가: 돈이 떨어지기 전에 이익 구조가 있어야 산다"
+    ],
+    "intent": "생존 가능한 이익 구조",
+    "intent_metric": "주문당 공헌이익"
+   },
    "key_metrics": {
     "north_star": "주문당 공헌이익",
     "leading": [
@@ -42519,7 +43673,16 @@
      "창고 가동률"
     ],
     "guardrail": "배송 품질",
-    "vanity": "서비스 도시 수"
+    "vanity": "서비스 도시 수",
+    "intent_metric": "주문당 공헌이익",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 수요·단위 경제 검증 없이 확장",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "인스타카트(마트 활용)와 비교하면, 같은 문제를 자산 없이 푼 쪽이 살아남았다."
   },
@@ -42627,6 +43790,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "츄이(정기배송·물류 효율)는 같은 시장을 다른 구조로 풀었다."
   },
@@ -42734,6 +43898,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "플랫폼의 Why not yet에는 '공급자가 왜 남아 있을까'가 포함돼야 한다."
   },
@@ -42860,6 +44025,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "왜 아무도 안 했나 → '통제 불가능한 부작용' 때문이라면 그 대책이 핵심 기획이다."
   },
@@ -42967,6 +44133,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "하나의 성공 가설이 모든 확장 가설을 정당화하지 않는다."
   },
@@ -43095,6 +44262,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사용 빈도가 낮은 고가품은 대여 모델 후보다. (세탁·물류 비용 관리가 관건)"
   },
@@ -43217,6 +44385,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "중고 명품 연습 사례의 해법(방문 수거)과 같은 구조."
   },
@@ -43343,6 +44512,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "고객 여정에서 가장 싫은 단계를 떼어 대신해 준다. (구독 유지율이 과제)"
   },
@@ -43612,6 +44782,15 @@
     ],
     "why": "수면 콘텐츠가 실제 방문 이유를 잡는다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 수면 콘텐츠인가: 실제 수요다",
+     "왜 수요인가: 매일 쓰는 이유가 유료 구독을 만든다"
+    ],
+    "intent": "유료 구독 매출",
+    "intent_metric": "유료 구독자 수"
+   },
    "key_metrics": {
     "north_star": "유료 구독자·수면 콘텐츠 이용률",
     "leading": [
@@ -43619,7 +44798,17 @@
      "유료 전환율"
     ],
     "guardrail": "해지율",
-    "vanity": "명상 강좌 수"
+    "vanity": "명상 강좌 수",
+    "intent_metric": "유료 구독자 수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "콘텐츠 이용 데이터에서 수면 수요 확인",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "고객이 해결하려는 일(잠)에 맞추면 시장이 커진다. 밀크셰이크와 같은 구조."
   },
@@ -43746,6 +44935,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "'자기 표현'이 아니라 '계획'을 위한 소셜은 광고(구매 의도)와 잘 맞는다."
   },
@@ -43872,6 +45062,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "공급(커뮤니티 생성)을 사용자에게 넘기면 무한히 확장된다."
   },
@@ -43998,6 +45189,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "인프라가 없는 시장에서는 인프라 자체가 경쟁력이다."
   },
@@ -44124,6 +45316,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "와이즈와 같은 문제를 '여행자 지갑' 형태로 풀었다."
   },
@@ -44252,6 +45445,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "실제 사용자 본인의 '꼼수'가 제품 아이디어가 된다."
   },
@@ -44378,6 +45572,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "콘텐츠(블로그)로 먼저 모은 고객이 제품 개발의 원천이 된다."
   },
@@ -44489,6 +45684,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "정확성보다 '첫 가치까지의 시간'이 리텐션을 정한다."
   },
@@ -44601,6 +45797,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "무엇을 막느냐보다 '언제 막느냐'가 전환을 정한다."
   },
@@ -44715,6 +45912,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "페이스북(한 학교부터)처럼 양면 시장은 작은 지역 밀도에서 시작한다."
   },
@@ -44826,6 +46024,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "넷플릭스의 전편 공개도 모든 상황의 정답은 아니다. 목표(가입 vs 유지)에 따라 다르다."
   },
@@ -44937,6 +46136,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "선물 상품을 '일상 상품'으로 바꾸면 매출이 평평해진다."
   },
@@ -45063,6 +46263,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "B2B 리텐션의 본질은 고객 사업의 성공이다."
   },
@@ -45189,6 +46390,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "개별 가게가 못 하는 일은 '공동 인프라'로 푼다."
   },
@@ -45310,6 +46512,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "같은 해석이라도 전달 형식이 바뀌면 다른 상품이 된다. 우리 서비스와 가장 가까운 직접 경쟁자다."
   },
@@ -45665,6 +46868,15 @@
     ],
     "why": "990원·놀이와 공유가 첫 결제와 무광고 유입을 함께 만든다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 990원·공유인가: 첫 결제와 유입이 생긴다",
+     "왜 유입인가: 광고비 없이 규모를 키운다"
+    ],
+    "intent": "광고비 없는 성장",
+    "intent_metric": "신규 결제자 수·광고비 0 유지"
+   },
    "key_metrics": {
     "north_star": "첫 결제 전환율·공유 유입",
     "leading": [
@@ -45672,7 +46884,17 @@
      "공유 링크 유입 비율"
     ],
     "guardrail": "결과 공유 시 개인정보 노출",
-    "vanity": "앱 다운로드 수"
+    "vanity": "앱 다운로드 수",
+    "intent_metric": "신규 결제자 수·광고비 0 유지",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "결제·공유 데이터와 이용자 후기",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "우리(4만 원대)와 정반대 가격 전략이다. 판매 1건당 매출이 약 1000원(60억 원 ÷ 600만 건)이고 이용자 1명이 평균 3건 남짓 산다. 싼 가격이 '여러 번·여러 주제·친구와 함께' 사게 만든 구조다. 4만 원을 낼 이유는 분량이 아니라 1p 스토리 몰입, 질문권, 근거 있는 해석에서 나와야 한다."
   },
@@ -46009,6 +47231,15 @@
     ],
     "why": "니치 주제가 가장 빠르게 광고를 날카롭게 한다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 니치 주제인가: 광고가 먹힌다",
+     "왜 광고 효율인가: 광고비 대비 매출이 성장 속도를 정한다"
+    ],
+    "intent": "광고 효율 기반 매출 성장",
+    "intent_metric": "광고비 대비 매출"
+   },
    "key_metrics": {
     "north_star": "주제별 결제 전환율·재구매율",
     "leading": [
@@ -46016,7 +47247,17 @@
      "니치 소재 광고 반응률"
     ],
     "guardrail": "환불률",
-    "vanity": "콘텐츠 발행 수"
+    "vanity": "콘텐츠 발행 수",
+    "intent_metric": "광고비 대비 매출",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "주제·소재를 대량으로 시험해 반응 좋은 것을 남김",
+     "source": "https://demoday.co.kr/recruits/8930",
+     "inferred": false
+    }
    },
    "lesson": "우리 서비스(웹툰형 1p + 리포트 구매)와 구조가 가장 가까운 직접 경쟁자다. 주제를 좁히면 2p 메시지가 선명해지고 광고 소재도 날카로워진다. 이용자의 약 70%가 2030 여성이라 연애·재회가 주력이고, 30~40대 남성이 늘고 있다."
   },
@@ -46141,6 +47382,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "우리가 떠올린 공유 카드·궁합 초대·첫 유료 무료는 업계 1세대가 이미 하는 기본기다. 차별점이 아니라 기본 요건으로 봐야 한다."
   },
@@ -46261,6 +47503,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "AI 리포트의 다음 단계로 사람 상담(또는 사람 검수)을 붙이면 고단가·재구매 상품이 될 수 있다."
   },
@@ -46382,6 +47625,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "단건 커머스인 우리에게 일일 운세는 재구매 선행 지표(재방문)를 만드는 장치로 쓸 수 있다."
   },
@@ -46494,6 +47738,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "무료 대체재가 있는 시장에서는 '무엇이 다른지'를 결제 전에 증명해야 한다."
   },
@@ -46614,6 +47859,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "입력 폼의 항목 하나가 결제 성공률을 바꾼다. 생년월일 입력 화면의 선택 항목(태어난 장소 등)도 같은 눈으로 본다."
   },
@@ -46734,6 +47980,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "내부에서 가장 좋아한 안이 지는 경우가 많다. 2p 핵심 문구·이미지·버튼은 감이 아니라 실험으로 정한다."
   },
@@ -46854,6 +48101,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "사주는 한자 용어(용신·대운·신살)가 많다. 2p에서는 용어 대신 그 용어가 내 삶에 뜻하는 바를 쓴다."
   },
@@ -46975,6 +48223,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "재구매·연간 상품을 설계할 때 해지·취소를 가입만큼 쉽게 만든다. 국내도 2025년부터 같은 유형을 직접 규제한다."
   },
@@ -47096,6 +48345,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "카운트다운·'n명이 보는 중' 같은 압박 장치는 실험에서 이겨도 규제·신뢰 비용이 따른다. 실험 가드레일에 규정 확인을 넣는다."
   },
@@ -47217,6 +48467,7 @@
    "goal": null,
    "issue_tree": null,
    "pareto": null,
+   "deep_why": null,
    "key_metrics": null,
    "lesson": "연간 이용권·자동 예약·묶음 상품을 만들 때 6개 유형을 체크리스트로 본다."
   },
@@ -47512,6 +48763,15 @@
     ],
     "why": "다른 해석 체계 상품이 재구매를 만든다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 다른 해석으로 다시 파나: 재구매가 생긴다",
+     "왜 재구매인가: 신규 획득보다 싸게 매출을 만든다"
+    ],
+    "intent": "재구매 매출",
+    "intent_metric": "재구매율·고객당 매출"
+   },
    "key_metrics": {
     "north_star": "재구매율",
     "leading": [
@@ -47519,7 +48779,16 @@
      "교차 구매율"
     ],
     "guardrail": "환불률",
-    "vanity": "상품 수"
+    "vanity": "상품 수",
+    "intent_metric": "재구매율·고객당 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "상품별 재구매율 비교",
+     "source": "https://supple.kr/news/cmsfv0llz003ok37unrnqgyvx",
+     "inferred": false
+    }
    },
    "lesson": "절실한 니치 고민은 '다른 해석으로 한 번 더'가 재구매를 만든다. 우리 질문권은 같은 재회 고민을 시기·상대 흐름·궁합 시점으로 나눠 이어 묻게 할 수 있다."
   },
@@ -47805,6 +49074,15 @@
     ],
     "why": "질문 단위 가격과 만족 보장이 시도를 쉽게 한다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 질문 단위인가: 시도가 쉽다",
+     "왜 시도인가: 첫 질문 고객을 구독으로 옮긴다"
+    ],
+    "intent": "구독 매출",
+    "intent_metric": "구독 전환율·구독 매출"
+   },
    "key_metrics": {
     "north_star": "질문당 만족도·반복 이용률",
     "leading": [
@@ -47812,7 +49090,17 @@
      "반복 질문률"
     ],
     "guardrail": "원치 않은 구독 전환 민원",
-    "vanity": "무료 체험 가입 수"
+    "vanity": "무료 체험 가입 수",
+    "intent_metric": "구독 전환율·구독 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "질문 단위 결제 전환과 구독 전환 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "질문 단위 가격은 '내 궁금증 하나'에 정확히 맞춘 상품이다. 환불 약속이 첫 결제의 위험을 덜어 준다."
   },
@@ -48096,6 +49384,15 @@
     ],
     "why": "해결당 과금이 도입 저항을 없앤다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 해결당 과금인가: 도입이 쉽다",
+     "왜 도입인가: 좌석이 줄어드는 시대에 새 매출원이 필요하다"
+    ],
+    "intent": "AI 해결 매출로 좌석 매출 대체",
+    "intent_metric": "해결 매출·순매출 유지율"
+   },
    "key_metrics": {
     "north_star": "해결률·해결 건수",
     "leading": [
@@ -48103,7 +49400,16 @@
      "해결당 비용"
     ],
     "guardrail": "고객 재문의율",
-    "vanity": "AI 응답 건수"
+    "vanity": "AI 응답 건수",
+    "intent_metric": "해결 매출·순매출 유지율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "Fin 이전부터 대화 해결을 추적해 온 데이터로 성공 정의",
+     "source": "https://www.chargebee.com/blog/how-intercom-built-its-outcome-based-pricing-model-for-ai/",
+     "inferred": false
+    }
    },
    "lesson": "'답했다'가 아니라 '해결됐다'에 과금하면 고객이 위험을 덜 진다. 우리 질문권도 차감 기준을 '답변 만족'에 걸 수 있다."
   },
@@ -48406,6 +49712,15 @@
     ],
     "why": "질문 단위 상품이 비어 있던 궁금증을 판다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 질문권인가: 궁금증을 판다",
+     "왜 팔아야 하나: 무료 앱의 수익원이 필요하다"
+    ],
+    "intent": "무료 앱 수익화",
+    "intent_metric": "질문권 매출"
+   },
    "key_metrics": {
     "north_star": "질문권 구매율",
     "leading": [
@@ -48413,7 +49728,17 @@
      "질문권 구매율"
     ],
     "guardrail": "답변 만족도",
-    "vanity": "일일 운세 열람 수"
+    "vanity": "일일 운세 열람 수",
+    "intent_metric": "질문권 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "차트 이용 데이터와 질문 기능 출시",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "우리 질문권과 가장 가까운 해외 선례다. 묶음이 커질수록 회당 단가가 크게 떨어지는 구조라 1개짜리는 '앵커' 역할을 한다."
   },
@@ -48689,6 +50014,15 @@
     ],
     "why": "첫 3분 무료가 시도 비용을 없앤다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 첫 3분 무료인가: 시작한다",
+     "왜 시작인가: 맞는 상담사를 찾은 고객이 분당 매출을 오래 만든다"
+    ],
+    "intent": "장기 상담 매출",
+    "intent_metric": "고객당 상담 매출"
+   },
    "key_metrics": {
     "north_star": "첫 상담 후 재상담률",
     "leading": [
@@ -48696,7 +50030,17 @@
      "재상담률"
     ],
     "guardrail": "환불·불만률",
-    "vanity": "상담사 수"
+    "vanity": "상담사 수",
+    "intent_metric": "고객당 상담 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "첫 상담 전환 데이터와 무료 시간 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'맞는지 확인할 짧은 무료 시간'이 첫 결제를 연다. 우리 질문권에서는 '무료 질문 1회'가 같은 역할이다."
   },
@@ -48961,6 +50305,15 @@
     ],
     "why": "무료 개방이 가장 빠르고 접근을 넓힌다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 설명을 무료로 푸나: 모두가 쓴다",
+     "왜 무료인가: 학습이 이어져야 활성 이용자와 유료 전환이 유지된다"
+    ],
+    "intent": "학습 지속으로 활성·전환 유지",
+    "intent_metric": "학습 지속률·유료 전환"
+   },
    "key_metrics": {
     "north_star": "설명 이용률·학습 지속률",
     "leading": [
@@ -48968,7 +50321,17 @@
      "설명 후 재도전 정답률"
     ],
     "guardrail": "오답 설명 신고율",
-    "vanity": "AI 기능 수"
+    "vanity": "AI 기능 수",
+    "intent_metric": "학습 지속률·유료 전환",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "유료 기능 이용 데이터 후 무료 개방",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "짧은 질문은 무료로 열어 '묻는 습관'을 만들고, 길고 개인적인 질문을 판다. 무엇이 짧고 무엇이 긴지의 선이 상품 설계다."
   },
@@ -49232,6 +50595,15 @@
     ],
     "why": "출처 표시가 신뢰를 만든다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 출처인가: 믿는다",
+     "왜 신뢰인가: 검색 대체재로 이용자를 빼앗는다"
+    ],
+    "intent": "검색 점유율 성장",
+    "intent_metric": "질의 수 성장"
+   },
    "key_metrics": {
     "north_star": "재방문율·질의 수",
     "leading": [
@@ -49239,7 +50611,17 @@
      "재방문율"
     ],
     "guardrail": "출처 오류율",
-    "vanity": "질의 수"
+    "vanity": "질의 수",
+    "intent_metric": "질의 수 성장",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "재방문 데이터와 신뢰 관련 피드백",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "근거가 보이는 답은 덜 틀려 보이고, 틀려도 덜 화나게 한다. 사주 답변의 근거는 명식(어느 기둥·어느 운)이다."
   },
@@ -49523,6 +50905,15 @@
     ],
     "why": "남을 가치를 찾는 일은 느리지만 유일한 길이었다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 남을 가치를 찾나: 구독자가 떠난다",
+     "왜 구독자인가: 매출 전부가 구독이다"
+    ],
+    "intent": "구독 매출 방어",
+    "intent_metric": "구독자 수"
+   },
    "key_metrics": {
     "north_star": "구독자 수",
     "leading": [
@@ -49530,7 +50921,16 @@
      "시험 대비 기능 이용률"
     ],
     "guardrail": "구독 해지율",
-    "vanity": "답 데이터베이스 크기"
+    "vanity": "답 데이터베이스 크기",
+    "intent_metric": "구독자 수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 구독 감소 데이터를 늦게 반영",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'일반적인 답'은 공짜가 된다. 우리 질문권이 팔리려면 무료 AI가 줄 수 없는 것(정확한 명식 계산, 내 결과와 이어지는 맥락)이 답에 보여야 한다."
   },
@@ -49790,6 +51190,15 @@
     ],
     "why": "정책 질문 고정 답이 가장 빠르고 위험을 없앤다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 정책 답을 고정하나: 오답을 막는다",
+     "왜 오답이 문제인가: 회사가 법적 책임을 진다"
+    ],
+    "intent": "법적 책임 위험 줄이기",
+    "intent_metric": "챗봇 관련 분쟁 건수"
+   },
    "key_metrics": {
     "north_star": "오답 관련 분쟁 건수",
     "leading": [
@@ -49797,7 +51206,16 @@
      "사람 이관률"
     ],
     "guardrail": "오답 분쟁 건수",
-    "vanity": "자동 응답 비율"
+    "vanity": "자동 응답 비율",
+    "intent_metric": "챗봇 관련 분쟁 건수",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "(실패) 분쟁이 생긴 뒤에야 문제 확인",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "AI 답변 중 '돈과 약속'에 관한 말은 생성하면 안 된다. 사주 답변에서 '꼭 이뤄진다', '환불해 준다'는 말이 나오지 않게 막아야 한다."
   },
@@ -50049,6 +51467,15 @@
     ],
     "why": "위기 신호 감지와 사람 연결이 피해를 막는다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 위기 신호를 잡나: 피해를 막는다",
+     "왜 기관이 신경 쓰나: 피해가 나면 기관 신뢰와 존립이 흔들린다"
+    ],
+    "intent": "이용자 안전과 기관 신뢰",
+    "intent_metric": "유해 사건 건수"
+   },
    "key_metrics": {
     "north_star": "유해 답변 건수",
     "leading": [
@@ -50056,7 +51483,16 @@
      "사람 연결 시간"
     ],
     "guardrail": "유해 답변 건수",
-    "vanity": "챗봇 대화 수"
+    "vanity": "챗봇 대화 수",
+    "intent_metric": "유해 사건 건수",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "(실패) 이용자·활동가 신고로 문제 확인",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "사주 질문에도 '죽고 싶다', '헤어지면 못 살 것 같다' 같은 위기 신호가 섞인다. 이때는 운세가 아니라 도움 기관 안내가 답이다."
   },
@@ -50329,6 +51765,15 @@
     ],
     "why": "1:1 연결과 전문가 검증이 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 1:1로 잇나: 상담이 팔린다",
+     "왜 포털이 하나: 검색 트래픽을 거래 수수료로 바꾼다"
+    ],
+    "intent": "검색의 거래 수익화",
+    "intent_metric": "상담 거래액"
+   },
    "key_metrics": {
     "north_star": "재구매율·상담 건수",
     "leading": [
@@ -50336,7 +51781,16 @@
      "재구매율"
     ],
     "guardrail": "상담 품질 불만",
-    "vanity": "입점 전문가 수"
+    "vanity": "입점 전문가 수",
+    "intent_metric": "상담 거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "분야별 매출·연령 데이터",
+     "source": "https://www.munhwa.com/article/11336690",
+     "inferred": false
+    }
    },
    "lesson": "국내에서 '운세 질문에 돈을 내는' 수요는 이미 증명됐다. 재구매 60%는 질문이 한 번으로 끝나지 않는다는 뜻이다."
   },
@@ -50621,6 +52075,15 @@
     ],
     "why": "재화 소비와 모델 원가를 맞추는 일이 생존을 가른다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 원가를 맞추나: 손실이 준다",
+     "왜 손실인가: 맞추지 못하면 회사가 존속하지 못한다"
+    ],
+    "intent": "생존 가능한 단위 경제",
+    "intent_metric": "이용자당 공헌이익"
+   },
    "key_metrics": {
     "north_star": "이용자당 공헌이익",
     "leading": [
@@ -50628,7 +52091,16 @@
      "재화 소비 속도"
     ],
     "guardrail": "이용자 만족도",
-    "vanity": "다운로드 수"
+    "vanity": "다운로드 수",
+    "intent_metric": "이용자당 공헌이익",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "재화 소비·원가 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "대화형 운세는 이미 국내에서 검증된 형식이다. 다만 재화(하트) 체계는 '질문 1개 얼마'를 흐리게 만들고, 무료 AI가 나오자 버티지 못했다."
   },
@@ -50897,6 +52369,15 @@
     ],
     "why": "수집 목적과 동의가 법적 위험의 전부다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 동의를 받나: 법적 위험이 사라진다",
+     "왜 위험인가: 제재와 서비스 중단이 사업 전체를 멈춘다"
+    ],
+    "intent": "서비스 존속",
+    "intent_metric": "개인정보 제재 건수"
+   },
    "key_metrics": {
     "north_star": "동의 기반 데이터 비중",
     "leading": [
@@ -50904,7 +52385,16 @@
      "가명 처리율"
     ],
     "guardrail": "대화 품질",
-    "vanity": "학습 데이터 크기"
+    "vanity": "학습 데이터 크기",
+    "intent_metric": "개인정보 제재 건수",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "(실패) 이용자 문제 제기와 감독 기관 조사",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "사주 질문에는 연애·가족·건강 같은 가장 사적인 이야기가 담긴다. 질문 데이터의 용도를 좁게 밝혀야 질문이 나온다."
   },
@@ -51173,6 +52663,15 @@
     ],
     "why": "시간·결제 한도가 가장 빠르게 우려를 줄인다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 한도를 거나: 과몰입이 준다",
+     "왜 과몰입인가: 규제가 오면 성장 자체가 막힌다"
+    ],
+    "intent": "규제 위험을 줄이며 성장 지속",
+    "intent_metric": "청소년 보호 지표·매출 성장"
+   },
    "key_metrics": {
     "north_star": "청소년 과몰입 지표·결제 한도 준수",
     "leading": [
@@ -51180,7 +52679,17 @@
      "청소년 월 결제 한도 초과 비율"
     ],
     "guardrail": "성인 이용자 만족도",
-    "vanity": "총 이용 시간"
+    "vanity": "총 이용 시간",
+    "intent_metric": "청소년 보호 지표·매출 성장",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "학부모·국감 지적과 청소년 이용 데이터",
+     "source": "https://khan.co.kr/article/202610121608001",
+     "inferred": false
+    }
    },
    "lesson": "국내 AI 채팅에서 흑자를 낸 사례다. 보호 장치(10대 한도)를 두고도 매출과 이익이 났다."
   },
@@ -51471,6 +52980,15 @@
     ],
     "why": "장르 규칙과 호칭을 지키는 것이 몰입을 지킨다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 장르 규칙인가: 마니아가 머문다",
+     "왜 마니아인가: 지출이 큰 소수가 매출을 만든다"
+    ],
+    "intent": "마니아 지출 매출",
+    "intent_metric": "결제자당 매출"
+   },
    "key_metrics": {
     "north_star": "결제자 체류 시간",
     "leading": [
@@ -51478,7 +52996,17 @@
      "장르 규칙 위반 신고율"
     ],
     "guardrail": "결제자당 지출 상한",
-    "vanity": "총 이용자 수"
+    "vanity": "총 이용자 수",
+    "intent_metric": "결제자당 매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "BL 이용자였던 CPO가 직접 겪은 불편에서 출발",
+     "source": "https://byline.network/2026/10/83492804328940/",
+     "inferred": false
+    }
    },
    "lesson": "니치 장르에서는 '규칙을 아는 AI'가 곧 품질이다. 사주에서도 동성 커플 궁합, 재회 같은 주제는 범용 답변이 틀리기 쉬운 니치다."
   },
@@ -51757,6 +53285,15 @@
     ],
     "why": "긴 장면이 결제 가치를 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 긴 장면인가: 결제 가치가 오른다",
+     "왜 결제 가치인가: 결제자당 매출이 커진다"
+    ],
+    "intent": "결제자당 매출",
+    "intent_metric": "결제자당 매출"
+   },
    "key_metrics": {
     "north_star": "결제자당 읽은 글자 수",
     "leading": [
@@ -51764,7 +53301,17 @@
      "장면 완독률"
     ],
     "guardrail": "응답 원가",
-    "vanity": "메시지 수"
+    "vanity": "메시지 수",
+    "intent_metric": "결제자당 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "결제자 읽기 데이터와 리뷰",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "1문 1답 상품은 '한 번 답의 분량과 밀도'가 가격의 근거가 된다. 질문권 가격표에 '답변 약 OO자, 근거·시기·행동 제안 포함'을 적을 수 있다."
   },
@@ -52053,6 +53600,15 @@
     ],
     "why": "상위 모델 품질 차이가 결제 순간을 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 상위 모델인가: 결제가 생긴다",
+     "왜 결제인가: 무료 원가를 덮을 매출이 필요하다"
+    ],
+    "intent": "유료 매출로 무료 원가 회수",
+    "intent_metric": "유료 매출·원가 회수율"
+   },
    "key_metrics": {
     "north_star": "프로챗 전환율",
     "leading": [
@@ -52060,7 +53616,17 @@
      "프로챗 재구매율"
     ],
     "guardrail": "무료 이용자 만족도",
-    "vanity": "무료 메시지 수"
+    "vanity": "무료 메시지 수",
+    "intent_metric": "유료 매출·원가 회수율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "무료·상위 모델 이용 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'같은 질문, 더 좋은 답'을 등급으로 파는 방식이 무료 이용자를 지키며 돈을 번다. 질문권도 '빠른 답 / 깊은 답'으로 나눌 수 있다."
   },
@@ -52349,6 +53915,15 @@
     ],
     "why": "팬덤 결제자와 종량형 재화가 매출의 핵심이다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 팬덤인가: 많이 쓴다",
+     "왜 많이 쓰나: 종량형이라 쓴 만큼 매출이 된다"
+    ],
+    "intent": "종량형 매출",
+    "intent_metric": "매출"
+   },
    "key_metrics": {
     "north_star": "결제자당 매출",
     "leading": [
@@ -52356,7 +53931,16 @@
      "재화 재구매율"
     ],
     "guardrail": "이용자 불만(가격·품질)",
-    "vanity": "MAU"
+    "vanity": "MAU",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "결제 고객 구성 분석(팬덤 중심)",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "서브컬처 팬덤은 '오래 읽는 이야기'에 반복 결제한다. 다만 재화 단위는 사용자가 질문 하나에 얼마인지 셈하기 어렵게 만든다. 단계별 하위 사례: crack-paywall · crack-spinoff · crack-creator · crack-memory · crack-teen · wrtn-pnl (docs/crack-deep-dive.md)"
   },
@@ -52639,6 +54223,15 @@
     ],
     "why": "현지 브랜드와 감성이 해외 매출을 만든다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 현지화인가: 해외에서 팔린다",
+     "왜 해외인가: 국내 시장만으로는 성장이 한계다"
+    ],
+    "intent": "해외 매출 성장",
+    "intent_metric": "해외 매출 비중"
+   },
    "key_metrics": {
     "north_star": "해외 매출 비중",
     "leading": [
@@ -52646,7 +54239,17 @@
      "현지화 품질 평가"
     ],
     "guardrail": "현지 규제 이슈",
-    "vanity": "진출 국가 수"
+    "vanity": "진출 국가 수",
+    "intent_metric": "해외 매출 비중",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "국가별 결제 데이터와 현지 브랜드 출시",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "하위 사례 ooc-na · crack-pricing 참고. 서브컬처 팬덤 구조는 국경을 넘는다. 사주는 문화 맥락이 강해 그대로는 어렵지만, 일본(점술 문화)처럼 가까운 시장은 질문권 단위로 먼저 시험할 수 있다."
   },
@@ -52930,6 +54533,15 @@
     ],
     "why": "원작자 승인과 안전 테스트가 공식성을 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 공식 캐릭터챗인가: 팬이 몰입한다",
+     "왜 몰입인가: 원작 열람과 유료 메시지 매출이 늘어난다"
+    ],
+    "intent": "원작·메시지 매출 동반 성장",
+    "intent_metric": "원작 매출·메시지 매출"
+   },
    "key_metrics": {
     "north_star": "원작 열람 증가율·유료 메시지 비중",
     "leading": [
@@ -52937,7 +54549,16 @@
      "유료 메시지 비중"
     ],
     "guardrail": "캐릭터 일관성 불만",
-    "vanity": "챗봇 수"
+    "vanity": "챗봇 수",
+    "intent_metric": "원작 매출·메시지 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "출시 전후 원작 열람 회차 내부 분석",
+     "source": "https://www.inews24.com/view/1834320",
+     "inferred": false
+    }
    },
    "lesson": "질문 대화가 원작(리포트)을 대체하지 않고 다시 원작으로 돌아가게 만들 수 있다. 질문 답변은 리포트의 해당 장과 이어져야 한다."
   },
@@ -53208,6 +54829,15 @@
     ],
     "why": "법적 성격 검토가 결제 장치보다 먼저다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 법적 성격을 검토하나: 위험을 피한다",
+     "왜 위험인가: 게임물·사행성 판정이 나면 사업 구조가 바뀐다"
+    ],
+    "intent": "사업 구조 위험 회피",
+    "intent_metric": "규제 조치 건수"
+   },
    "key_metrics": {
     "north_star": "규제 리스크 건수",
     "leading": [
@@ -53215,7 +54845,17 @@
      "규제 검토 완료율"
     ],
     "guardrail": "미성년 결제 비중",
-    "vanity": "이벤트 참여 수"
+    "vanity": "이벤트 참여 수",
+    "intent_metric": "규제 조치 건수",
+    "select_method": {
+     "methods": [
+      "voc",
+      "scoring"
+     ],
+     "how": "민원·언론 지적과 법률 검토",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "'랜덤 운세 뽑기'에 돈을 걸게 하면 사주 서비스도 같은 문제에 걸린다. 질문권은 정해진 값에 정해진 답을 주는 구조를 지킨다."
   },
@@ -53493,6 +55133,15 @@
     ],
     "why": "이용자당 매출이 매출 차이를 가른다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 이용자당 매출인가: 매출 차이를 가른다",
+     "왜 차이인가: 같은 이용 시간도 수익 모델에 따라 매출이 다르다"
+    ],
+    "intent": "매출",
+    "intent_metric": "매출"
+   },
    "key_metrics": {
     "north_star": "이용자당 매출",
     "leading": [
@@ -53500,7 +55149,16 @@
      "결제 전환율"
     ],
     "guardrail": "과몰입 지표",
-    "vanity": "총 이용 시간"
+    "vanity": "총 이용 시간",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "이용 시간과 매출 비교",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "우리 최종 지표는 결제다. 질문권 성과는 체류 시간이 아니라 질문 1회당 매출·만족·다음 질문률로 본다."
   },
@@ -53797,6 +55455,15 @@
     ],
     "why": "상위 모델 품질 차이가 유료 전환을 만든다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 상위 모델 품질인가: 유료로 옮긴다",
+     "왜 유료인가: 무료를 유지하려면 유료 매출이 필요하다"
+    ],
+    "intent": "유료 매출",
+    "intent_metric": "유료 매출"
+   },
    "key_metrics": {
     "north_star": "상위 모델 전환율",
     "leading": [
@@ -53804,7 +55471,17 @@
      "상위 모델 재사용률"
     ],
     "guardrail": "무료 이용자 이탈률",
-    "vanity": "무료 메시지 수"
+    "vanity": "무료 메시지 수",
+    "intent_metric": "유료 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "모델별 전환 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "유료화 지점은 '이용자가 먼저 요청한 품질 차이'였다. 질문권도 무료 답과 유료 답의 차이를 고객이 눈으로 확인할 수 있어야 팔린다."
   },
@@ -54091,6 +55768,15 @@
     ],
     "why": "팬 전용 앱 분리가 결제에 집중시킨다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 앱을 나누나: 결제에 집중한다",
+     "왜 집중인가: MAU가 아니라 매출이 회사 가치다"
+    ],
+    "intent": "결제 매출",
+    "intent_metric": "결제 매출"
+   },
    "key_metrics": {
     "north_star": "결제 매출",
     "leading": [
@@ -54098,7 +55784,16 @@
      "결제자당 매출"
     ],
     "guardrail": "기존 이용자 혼란 문의",
-    "vanity": "MAU"
+    "vanity": "MAU",
+    "intent_metric": "결제 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "MAU와 결제 매출 분리 분석",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "이용자 수보다 결제자 밀도가 중요했다. 우리도 질문권 성과를 '질문한 사람 수'보다 '구매자 1인당 질문 수'로 본다."
   },
@@ -54402,6 +56097,15 @@
     ],
     "why": "현금화와 독점작 정산이 창작자를 붙잡는다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 창작자를 붙잡나: 공급이 늘어난다",
+     "왜 공급인가: 좋은 작품이 이용자와 매출을 데려온다"
+    ],
+    "intent": "공급 기반 성장",
+    "intent_metric": "인기 작품 수·매출"
+   },
    "key_metrics": {
     "north_star": "정산 창작자 수·독점작 수",
     "leading": [
@@ -54409,7 +56113,16 @@
      "독점작 비중"
     ],
     "guardrail": "저품질 작품 비율",
-    "vanity": "등록 캐릭터 수"
+    "vanity": "등록 캐릭터 수",
+    "intent_metric": "인기 작품 수·매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "정산·플레이 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "공급자(창작자)를 묶는 정산 구조가 콘텐츠 해자가 된다. 사주 질문권에서는 '좋은 질문을 만드는 사람'이 공급자가 될 수 있다."
   },
@@ -54689,6 +56402,15 @@
     ],
     "why": "장기·관계 기억이 관계 유지의 핵심이다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 기억인가: 관계가 유지된다",
+     "왜 관계인가: 오래 쓰는 이용자가 매출을 만든다"
+    ],
+    "intent": "장기 이용자 매출",
+    "intent_metric": "장기 이용자 비율·매출"
+   },
    "key_metrics": {
     "north_star": "장기 대화 지속률",
     "leading": [
@@ -54696,7 +56418,17 @@
      "기억 강화 구매율"
     ],
     "guardrail": "기억 오류 신고율",
-    "vanity": "대화 수"
+    "vanity": "대화 수",
+    "intent_metric": "장기 이용자 비율·매출",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "'기억 못 함' 불만과 장기 대화 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "1문 1답 상품에서도 '나를 기억하는가'가 다음 질문을 부른다. 질문 이력과 명식 요약을 답변마다 반영해야 한다."
   },
@@ -54980,6 +56712,15 @@
     ],
     "why": "상한과 보호자 동의가 보호와 이용을 양립시킨다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 상한과 동의인가: 보호와 이용이 양립한다",
+     "왜 양립인가: 규제와 여론 위험을 줄여야 사업을 지속한다"
+    ],
+    "intent": "규제 위험 관리로 사업 지속",
+    "intent_metric": "청소년 보호 지표"
+   },
    "key_metrics": {
     "north_star": "과몰입·과결제 지표",
     "leading": [
@@ -54987,7 +56728,17 @@
      "보호자 동의 처리율"
     ],
     "guardrail": "우회 가입률",
-    "vanity": "청소년 이용자 수"
+    "vanity": "청소년 이용자 수",
+    "intent_metric": "청소년 보호 지표",
+    "select_method": {
+     "methods": [
+      "voc",
+      "scoring"
+     ],
+     "how": "사회적 우려와 전문가 자문",
+     "source": "https://biz.sbs.co.kr/amp/article/20000333378",
+     "inferred": false
+    }
    },
    "lesson": "나이를 아는 서비스는 상한과 예외 절차를 먼저 만들어야 한다. 사주는 생년월일을 받으므로 나이를 이미 안다."
   },
@@ -55304,6 +57055,15 @@
     ],
     "why": "범주 이름은 가장 빠르고 첫인상을 바꾼다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 범주 이름인가: 첫인상이 바뀐다",
+     "왜 첫인상인가: 북미 신규 설치가 늘어난다"
+    ],
+    "intent": "북미 시장 진입 성장",
+    "intent_metric": "북미 설치·매출"
+   },
    "key_metrics": {
     "north_star": "신규 설치·결제 전환",
     "leading": [
@@ -55311,7 +57071,17 @@
      "결제 전환율"
     ],
     "guardrail": "리뷰 평점",
-    "vanity": "광고 노출 수"
+    "vanity": "광고 노출 수",
+    "intent_metric": "북미 설치·매출",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "범주 이름·현지 브랜드로 출시해 반응 확인",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "같은 제품도 범주 이름을 바꾸면 경쟁 상대가 바뀐다. 사주 질문권도 '상담'이 아니라 '내 이야기의 다음 장'으로 부르면 1p 스토리와 이어진다."
   },
@@ -55600,6 +57370,15 @@
     ],
     "why": "모델 조합과 출력 길이가 원가를 정한다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 모델 조합인가: 원가가 준다",
+     "왜 원가인가: 적자를 벗어나야 상장과 투자 유치가 된다"
+    ],
+    "intent": "흑자 전환",
+    "intent_metric": "영업이익률"
+   },
    "key_metrics": {
     "north_star": "매출 대비 원가율",
     "leading": [
@@ -55607,7 +57386,16 @@
      "응답당 원가"
     ],
     "guardrail": "응답 품질 평가",
-    "vanity": "총 매출"
+    "vanity": "총 매출",
+    "intent_metric": "영업이익률",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "매출·원가 구조 분석",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "질문권도 답변 1건 원가(모델·수수료·검수)가 가격의 바닥이다. 질문 종류별로 모델을 나누면 원가를 낮출 수 있다."
   },
@@ -55913,6 +57701,15 @@
     ],
     "why": "채널 수수료와 응답 등급 반영이 마진을 지킨다"
    },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 원가를 반영하나: 마진이 남는다",
+     "왜 마진인가: 팔수록 손해면 성장이 독이 된다"
+    ],
+    "intent": "공헌이익 확보",
+    "intent_metric": "공헌이익률"
+   },
    "key_metrics": {
     "north_star": "공헌이익률",
     "leading": [
@@ -55920,7 +57717,17 @@
      "등급별 차감 정확도"
     ],
     "guardrail": "가격 불만 리뷰",
-    "vanity": "재화 판매량"
+    "vanity": "재화 판매량",
+    "intent_metric": "공헌이익률",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "채널별 원가와 가격 실험",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "해외판일수록 단가를 고정하고 할인을 '첫 구매'에만 쓴다. 웹 결제는 같은 재화를 25~30% 싸게 팔 여지를 만든다. 우리는 웹사이트라 이 차이가 처음부터 우리 편이다."
   },
@@ -56217,6 +58024,15 @@
     ],
     "why": "매력·연애 언어가 검색 유입당 결제를 바꾼다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 매력·연애 언어인가: 검색 유입이 는다",
+     "왜 검색인가: 광고비 없이 신규를 데려온다"
+    ],
+    "intent": "낮은 비용 신규 유입",
+    "intent_metric": "자연 유입 결제 매출"
+   },
    "key_metrics": {
     "north_star": "검색 유입당 결제율",
     "leading": [
@@ -56224,7 +58040,17 @@
      "매력·연애 키워드 유입 비중"
     ],
     "guardrail": "브랜드 신뢰 지표",
-    "vanity": "블로그 방문 수"
+    "vanity": "블로그 방문 수",
+    "intent_metric": "자연 유입 결제 매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "키워드별 유입·결제 데이터",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "2030 여성의 사주 첫 관심은 '내 매력'이다. 1p 첫 컷과 광고 소재의 후킹 언어를 총운이 아니라 매력·연애로 바꿔 시험할 가치가 있다. 실존 연예인 사주는 광고 소재로 쓰지 않는다."
   },
@@ -56518,6 +58344,15 @@
     ],
     "why": "오프라인 경험은 큰 베팅, 해시태그 인증은 빠른 승리"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 오프라인 경험인가: 기억에 남는다",
+     "왜 기억인가: 인지도와 SNS 유입이 신규를 데려온다"
+    ],
+    "intent": "브랜드 인지도와 신규 유입",
+    "intent_metric": "팝업 후 신규 유입"
+   },
    "key_metrics": {
     "north_star": "팝업 후 SNS 언급·유입",
     "leading": [
@@ -56525,7 +58360,16 @@
      "팝업발 온라인 유입"
     ],
     "guardrail": "팝업 운영 손익",
-    "vanity": "팝업 방문객 수"
+    "vanity": "팝업 방문객 수",
+    "intent_metric": "팝업 후 신규 유입",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "방문·굿즈·해시태그 집계",
+     "source": "https://inblog.ai/sajutight/타이트-사주-더현대-서울-미아점과-팝업-스토어-성황리-개최-62554",
+     "inferred": false
+    }
    },
    "lesson": "사주는 '가 보는 경험'과 '보여 줄 거리'가 있을 때 퍼진다. 우리는 오프라인보다 먼저, 결과를 굿즈처럼 저장·공유하는 '내 사주 카드'로 같은 효과를 싸게 시험할 수 있다."
   },
@@ -56814,6 +58658,15 @@
     ],
     "why": "계산 보정이 핵심이고 환불 경로 노출은 빠른 승리"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 계산을 고치나: 믿게 된다",
+     "왜 믿음인가: 환불이 줄고 재구매가 생긴다"
+    ],
+    "intent": "환불 감소와 재구매 매출",
+    "intent_metric": "환불률·재구매율"
+   },
    "key_metrics": {
     "north_star": "계산 오류 불만·환불 사유 비중",
     "leading": [
@@ -56821,7 +58674,17 @@
      "명식 수정 요청률"
     ],
     "guardrail": "입력 완료율",
-    "vanity": "해석 문장 길이"
+    "vanity": "해석 문장 길이",
+    "intent_metric": "환불률·재구매율",
+    "select_method": {
+     "methods": [
+      "voc",
+      "scoring"
+     ],
+     "how": "계산 오류 불만과 전문가 협업",
+     "source": "https://www.teamblind.com/kr/post/타이트사주-개빡치네-ㅋㅋㅋㅋㅋㅋ-g1wm2rpo",
+     "inferred": false
+    }
    },
    "lesson": "빠른 성장 뒤에 '계산부터 틀렸다'는 후기가 따라왔다. 우리는 출시 전에 검증 세트로 계산 일치율을 재고, 결과 첫 화면에서 명식을 보여 주고 고칠 길을 열어야 한다. 환불 경로를 숨기면 후기로 돌아온다."
   },
@@ -57099,6 +58962,15 @@
     ],
     "why": "해석자 캐릭터가 재방문 이유를 만든다"
    },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 캐릭터 해석자인가: 다시 찾는다",
+     "왜 다시 찾아야 하나: 재방문이 재구매 매출이 된다"
+    ],
+    "intent": "재구매 매출",
+    "intent_metric": "재구매율"
+   },
    "key_metrics": {
     "north_star": "재방문율",
     "leading": [
@@ -57106,7 +58978,17 @@
      "캐릭터 호감도"
     ],
     "guardrail": "AI 표시 준수율",
-    "vanity": "캐릭터 수"
+    "vanity": "캐릭터 수",
+    "intent_metric": "재구매율",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "캐릭터 연출 콘텐츠 반응",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "해석자에게 얼굴과 말투를 주면 리포트가 '누군가의 이야기'가 된다. 우리는 1p 주인공 옆에 길잡이 캐릭터를 두고, AI임을 분명히 표시한다."
   },
@@ -57391,6 +59273,15 @@
     ],
     "why": "금기 주제가 광고 반응을 만든다(규제 위험 동반)"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 금기 주제인가: 광고가 먹힌다",
+     "왜 광고인가: 높은 전환이 매출을 키운다"
+    ],
+    "intent": "니치 상품 매출",
+    "intent_metric": "니치 상품 매출"
+   },
    "key_metrics": {
     "north_star": "니치 상품 결제 전환",
     "leading": [
@@ -57398,7 +59289,17 @@
      "성인 인증 완료율"
     ],
     "guardrail": "미성년 노출 건수",
-    "vanity": "광고 클릭 수"
+    "vanity": "광고 클릭 수",
+    "intent_metric": "니치 상품 매출",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "니치 주제 광고 반응",
+     "source": null,
+     "inferred": true
+    }
    },
    "lesson": "니치는 날카로울수록 광고가 잘 먹히지만 성인 주제는 연령 확인·규제·브랜드 위험을 함께 진다. 우리는 생년월일로 나이를 아는 만큼, 성인 주제 대신 '관계 패턴·연애 성향' 수준의 니치로 먼저 시험한다."
   },
@@ -57688,6 +59589,15 @@
     ],
     "why": "주제 피벗과 소재 대량 생산이 투자 없이 성장을 만든다"
    },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 실험 속도인가: 이기는 주제를 빨리 찾는다",
+     "왜 빨리인가: 투자 없이 매출로 성장해야 한다"
+    ],
+    "intent": "무투자 매출 성장",
+    "intent_metric": "월 매출 성장률"
+   },
    "key_metrics": {
     "north_star": "월 매출·소재 실험 속도",
     "leading": [
@@ -57695,7 +59605,17 @@
      "상위 소재 매출 비중"
     ],
     "guardrail": "환불률",
-    "vanity": "제작 소재 수"
+    "vanity": "제작 소재 수",
+    "intent_metric": "월 매출 성장률",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "생성형 소재를 대량으로 A/B 테스트",
+     "source": "https://demoday.co.kr/recruits/8930",
+     "inferred": false
+    }
    },
    "lesson": "직접 경쟁자의 성장 엔진은 '주제 × 소재' 실험 속도다. 우리 방법론의 실험 운영(ICE·표본 수·SRM)을 소재 실험에 그대로 쓴다."
   },
@@ -57981,6 +59901,15 @@
     ],
     "why": "감정 상태별 화면이 결제 반응을 가른다"
    },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 감정별 화면인가: 결제가 늘어난다",
+     "왜 결제인가: 운세 앱 매출은 유료 콘텐츠·상담 결제에서 나온다"
+    ],
+    "intent": "결제 매출",
+    "intent_metric": "결제 전환율·매출"
+   },
    "key_metrics": {
     "north_star": "화면 유형별 결제 전환",
     "leading": [
@@ -57988,7 +59917,17 @@
      "감정 상태별 이탈률"
     ],
     "guardrail": "환불률",
-    "vanity": "화면 체류 시간"
+    "vanity": "화면 체류 시간",
+    "intent_metric": "결제 전환율·매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "scoring"
+     ],
+     "how": "두 앱 화면을 비교 관찰한 분석",
+     "source": "https://brunch.co.kr/@uibowl/403",
+     "inferred": false
+    }
    },
    "lesson": "화면 톤은 브랜드 하나로 고정하지 말고 고민의 온도에 맞춘다. 다만 진단형도 '주의할 점'은 1개만, 해결 방향과 함께 보여 준다. 불안을 키우는 쪽으로 쓰지 않는다."
   },
@@ -58262,6 +60201,15 @@
     ],
     "why": "총액·환불 조건 표시가 가장 빠르고 신뢰를 지킨다"
    },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 투명하게 하나: 신뢰를 지킨다",
+     "왜 지금인가: 법 위반이면 제재와 환불 비용이 생긴다"
+    ],
+    "intent": "제재 위험 피하며 매출 지키기",
+    "intent_metric": "제재·환불 비용"
+   },
    "key_metrics": {
     "north_star": "환불률·민원 건수",
     "leading": [
@@ -58269,7 +60217,17 @@
      "결제 후 환불 요청률"
     ],
     "guardrail": "결제 전환율 하락폭",
-    "vanity": "결제 버튼 클릭 수"
+    "vanity": "결제 버튼 클릭 수",
+    "intent_metric": "제재·환불 비용",
+    "select_method": {
+     "methods": [
+      "voc",
+      "scoring"
+     ],
+     "how": "소비자 피해·민원과 법제화",
+     "source": "https://www.lawtimes.co.kr/news/articleView.html?idxno=228371",
+     "inferred": false
+    }
    },
    "lesson": "결제 화면 디자인은 '전환을 올리는 장치'보다 '금지선'을 먼저 정한다. 카운트다운, 미리 체크, 나중에 붙는 금액, 해지 숨기기는 쓰지 않는다. 대신 총액과 환불 조건을 먼저 보여 주는 것이 신뢰 차별점이 된다."
   }

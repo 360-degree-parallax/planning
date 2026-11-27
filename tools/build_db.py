@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'key_metrics', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
 
 
 def fail(msg):
@@ -464,6 +464,37 @@ def main():
         if c.get('key_metrics'):
             fail(f'key-metrics.txt:{n} {p[0]} 중복')
         c['key_metrics'] = {'north_star': c['goal']['metric'], 'leading': lead, 'guardrail': p[2], 'vanity': p[3]}
+    IT = {'revenue', 'profit', 'retention', 'growth', 'risk', 'trust', 'mission'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/deep-why.txt')):
+        head, _, tail = line.partition(' || ')
+        p = [x.strip() for x in head.split(' | ')]
+        t = [x.strip() for x in tail.split(' | ')]
+        if len(p) != 3 or len(t) != 2 or p[0] not in byid or p[1] not in IT or not all(t):
+            fail(f'deep-why.txt:{n} 형식: {line[:60]}')
+        whys = [x.strip() for x in p[2].split(' > ') if x.strip()]
+        if len(whys) < 2:
+            fail(f'deep-why.txt:{n} {p[0]} 대체 왜는 2단계 이상')
+        c = byid[p[0]]
+        if not c.get('pareto') or not c.get('key_metrics'):
+            fail(f'deep-why.txt:{n} {p[0]} 파레토·중요 지표가 먼저 필요')
+        if c.get('deep_why'):
+            fail(f'deep-why.txt:{n} {p[0]} 중복')
+        c['deep_why'] = {'type': p[1], 'whys': whys, 'intent': t[0], 'intent_metric': t[1]}
+        c['key_metrics']['intent_metric'] = t[1]
+    SM = {'fgi', 'interview', 'observation', 'voc', 'quant', 'survey', 'experiment', 'scoring'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/select-method.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 4 or p[0] not in byid or not p[2]:
+            fail(f'select-method.txt:{n} 형식: {line[:60]}')
+        codes = [x.strip() for x in p[1].split(',') if x.strip()]
+        if not codes or any(x not in SM for x in codes):
+            fail(f'select-method.txt:{n} 방법 코드: {p[1]}')
+        if p[3] != '추정' and not p[3].startswith('http'):
+            fail(f'select-method.txt:{n} 근거는 URL 또는 추정')
+        if not byid[p[0]].get('key_metrics'):
+            fail(f'select-method.txt:{n} {p[0]} 중요 지표가 먼저 필요')
+        byid[p[0]]['key_metrics']['select_method'] = {'methods': codes, 'how': p[2],
+                                                     'source': None if p[3] == '추정' else p[3], 'inferred': p[3] == '추정'}
     groups = {}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/domains.txt')):
         g, _, toks = line.partition(' | ')
@@ -488,7 +519,7 @@ def main():
         c.setdefault('trade_on', None)
         c.setdefault('anti_opinion', None)
         c.setdefault('pro_opinion', None)
-        for k in ('goal', 'issue_tree', 'pareto', 'key_metrics'):
+        for k in ('goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
             c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)
