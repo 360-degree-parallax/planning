@@ -68,6 +68,7 @@
 | [docs/saju-rivals-deep.md](docs/saju-rivals-deep.md) | 사주아이·타이트사주 비교와 두 사례의 본질 |
 | [docs/tightsaju-deep-dive.md](docs/tightsaju-deep-dive.md) | 타이트사주 단계별 사례와 본질(유입·팝업·신뢰·IP·니치·성장) |
 | [docs/design-ux-cases.md](docs/design-ux-cases.md) | 디자인·UX·브랜드 사례 모음(운세 서비스 화면 문법, 캐릭터, 결제 화면 규제) |
+| [docs/3c-section-a.md](docs/3c-section-a.md) | 3C Section A 디깅: 니즈는 있는데 아무도 안 들어간 영역, 사례별 Why not yet·So what, 실패 사례 |
 | [docs/method-guide.md](docs/method-guide.md) | 본질 파악 방법론 가이드: 이론을 처음부터 끝까지, 한 사례로 따라가기, 자주 하는 실수, 체크리스트 |
 | [docs/so-what.md](docs/so-what.md) | 본질 파악·구조화 체인: 의심 → 관습 파괴 → 긍정·안티 오피니언 → 트레이드온 → 목표 재분석 → 이슈트리 → 파레토 → 대체 왜 → 중요 지표 → 해결 |
 | [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |

@@ -181,3 +181,35 @@ for g, items in groups.items():
         L.append(f"- **해결**: {sw['solution']}")
         L.append('')
 write('docs/so-what.md', L)
+
+# 3C Section A 디깅: 고객 니즈는 있는데 아직 아무도 들어가지 않은 영역
+_cs = J('db/cases.json')
+_cs = _cs['cases'] if isinstance(_cs, dict) else _cs
+A_ok = [c for c in _cs if 'A' in c['three_c']['entry'] and '(실패)' not in c['three_c']['entry_why']]
+A_fail = [c for c in _cs if 'A' in c['three_c']['entry'] and '(실패)' in c['three_c']['entry_why']]
+L = ['# 3C Section A 디깅: 니즈는 있는데 아직 아무도 들어가지 않은 영역', '',
+     '`db/cases.json`에서 생성(`tools/docs.py`). 3C 겹침에서 진입 칸으로 A를 고른 사례만 모았다.',
+     'A가 왜 아직 비어 있는지는 곧 **의심(Why not yet)**의 답이다. 그래서 사례마다 A 칸, Why not yet, So what 결론을 나란히 둔다.', '',
+     '- A: 고객 니즈는 있는데 아직 아무도 들어가지 않은 영역',
+     '- E: 현재 고객은 없지만 경쟁사와 우리가 싸우는 영역',
+     '- H: 아무도 아직 발견하지 못해 언제 G·A·F가 될지 알 수 없는 영역', '',
+     '## A를 진짜 A로 확인하는 질문', '',
+     '1. 니즈가 진짜인가: 고객이 지금 다른 방법(돈·시간·불편)으로 이 문제를 버티고 있나? 버티는 행동이 없으면 A가 아니라 H다.',
+     '2. 왜 아직 비었나(Why not yet): 통념, 강자의 수익원 충돌, 비고객이라 안 보임, 기술·제도가 막 열림, 작다고 무시, 신뢰 장치 부재 중 무엇인가?',
+     '3. 우리는 들어갈 수 있나: 들어가는 순간 A는 C(우리만 채움)가 된다. C로 만들 역량이 없으면 A는 그림의 떡이다.',
+     '4. 얼마나 버티나: 경쟁이 따라오면 C는 B·D가 된다. 따라오기 어렵게 만드는 장치(데이터, 네트워크, 규제, 원가)가 있나?', '',
+     f'## 진입 A 사례 {len(A_ok)}건', '']
+cur = None
+for c in sorted(A_ok, key=lambda x: (x['domain_group'], x['id'])):
+    if c['domain_group'] != cur:
+        cur = c['domain_group']
+        L += ['', f'### {cur}', '', '| 사례 | A (빈 니즈) | 왜 아직 비었나 (Why not yet) | So what |', '|---|---|---|---|']
+    t = c['three_c']
+    L.append(f"| {c['title']} (`{c['id']}`) | {t['overlap']['A']} | {c['so_what']['why_not_yet']} | {c['so_what']['conclusion']} |")
+L += ['', f'## A를 봤지만 실패한 사례 {len(A_fail)}건', '',
+      'A가 맞아도 C로 만들지 못하면 실패한다. 니즈 검증, 단위 경제, 안전 장치 중 무엇이 빠졌는지 본다.', '',
+      '| 사례 | A (빈 니즈) | 왜 실패했나 |', '|---|---|---|']
+for c in A_fail:
+    t = c['three_c']
+    L.append(f"| {c['title']} (`{c['id']}`) | {t['overlap']['A']} | {t['entry_why'].replace('(실패) ', '')} |")
+write('docs/3c-section-a.md', L)
