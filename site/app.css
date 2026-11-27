@@ -427,3 +427,4 @@ svg.curve{max-height:220px}
 .pyr>div.g2b{background:var(--surface);opacity:.8}.pyr>div:nth-child(2){background:var(--dark);color:var(--ondark)}.pyr>div:nth-child(2) small{color:inherit;opacity:.85}
 .t td.hi-cell{background:var(--dark);color:var(--ondark)}
 .two .g2{margin-top:6px}
+.topnav a{flex:none}.topnav{scrollbar-width:none}.topnav::-webkit-scrollbar{display:none}
