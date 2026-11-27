@@ -101,6 +101,10 @@
 - `db/meta/swot-st.txt`: `id | 위협 | ST 전략`
 - SO: 강점으로 기회를 잡는다. WO: 그 기회로 옮겨 가려고 약점을 메운다. ST: 강점으로 위협을 막는다.
 
+### 분석 팩 (`db/meta/packs/*.txt`)
+
+deep이 아닌 사례에 분석 칸 15개를 한 덩어리로 쓴다. `@ id`로 시작하고 `5why` `pest` `swot`(강점|기회|SO|약점|WO|위협|ST) `3c` `sowhat` `pro` `anti` `goal` `tree` `pareto` `si` `why` `mode` `metrics` `method` 줄이 이어진다. 값 형식은 각 칸의 원본 파일과 같다. 15칸을 모두 갖춘 사례는 `analysis_full: true`(분석 완료)로 집계한다.
+
 ### 3C (`three_c`, `db/meta/three-c.txt`, deep 필수)
 
 형식: `id | 고객: ... ; 경쟁: ... ; 자사: ... || 빈자리`. 빈자리는 고객이 원하는데 경쟁은 못 채우고 자사는 채울 수 있는 곳이다.

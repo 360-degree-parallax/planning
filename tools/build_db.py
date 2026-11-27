@@ -39,20 +39,74 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'analysis_full', 'lesson']
 
 
 def fail(msg):
     sys.exit(msg)
 
 
+PACK_KEYS = {'5why': 'five-why.txt', 'pest': 'pest.txt', 'swot': None, '3c': 'three-c.txt', 'sowhat': 'sowhat-conclusion.txt',
+             'pro': 'pro.txt', 'anti': 'anti.txt', 'goal': 'goal.txt', 'tree': 'issuetree.txt', 'pareto': 'pareto.txt',
+             'si': 'speed-impact.txt', 'why': 'deep-why.txt', 'mode': 'intent-mode.txt', 'metrics': 'key-metrics.txt',
+             'method': 'select-method.txt'}
+
+
+def load_packs():
+    """db/meta/packs/*.txt: 사례 하나의 분석 칸 15개를 한 덩어리로 쓴다. '@ id'로 시작하고 '키: 값' 줄이 이어진다."""
+    out = {}
+    d = os.path.join(ROOT, 'db/meta/packs')
+    if not os.path.isdir(d):
+        return out
+    for fn in sorted(os.listdir(d)):
+        if not fn.endswith('.txt'):
+            continue
+        cid, got = None, {}
+        def flush(at):
+            if cid is None:
+                return
+            miss = set(PACK_KEYS) - set(got)
+            if miss:
+                fail(f'packs/{fn}:{at} {cid} 빠진 칸: {sorted(miss)}')
+            for k, v in got.items():
+                if k == 'swot':
+                    f = [x.strip() for x in v.split(' | ')]
+                    if len(f) != 7:
+                        fail(f'packs/{fn} {cid} swot은 강점|기회|SO|약점|WO|위협|ST 7칸')
+                    out.setdefault('swot-so-wo.txt', []).append((f'pack:{fn}', f'{cid} | ' + ' | '.join(f[:5])))
+                    out.setdefault('swot-st.txt', []).append((f'pack:{fn}', f'{cid} | {f[5]} | {f[6]}'))
+                else:
+                    out.setdefault(PACK_KEYS[k], []).append((f'pack:{fn}', f'{cid} | {v}'))
+        for n, raw in enumerate(open(os.path.join(d, fn), encoding='utf-8'), 1):
+            line = raw.strip()
+            if not line or line.startswith('//'):
+                continue
+            if line.startswith('@ '):
+                flush(n)
+                cid, got = line[2:].strip(), {}
+                continue
+            k, _, v = line.partition(': ')
+            if cid is None or k not in PACK_KEYS or not v.strip() or k in got:
+                fail(f'packs/{fn}:{n} 형식: {line[:50]}')
+            got[k] = v.strip()
+        flush('end')
+    return out
+
+
+PACKS = None
+
+
 def meta_lines(path):
-    if not os.path.exists(path):
-        return
-    for n, raw in enumerate(open(path, encoding='utf-8'), 1):
-        line = raw.strip()
-        if line and not line.startswith('//'):
-            yield n, line
+    global PACKS
+    if os.path.exists(path):
+        for n, raw in enumerate(open(path, encoding='utf-8'), 1):
+            line = raw.strip()
+            if line and not line.startswith('//'):
+                yield n, line
+    if PACKS is None:
+        PACKS = load_packs()
+    for n, line in PACKS.get(os.path.basename(path), []):
+        yield n, line
 
 
 NEW = {'acquire', 'hook_story', 'input', 'hook_marketing', 'checkout', 'first_pay'}
@@ -597,12 +651,17 @@ def main():
             c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)
+    AF = ('five_why', 'pest', 'swot', 'three_c', 'pro_opinion', 'anti_opinion', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics')
+    for c in cases:
+        c['analysis_full'] = bool(all(c.get(k) for k in AF) and c['pareto'].get('matrix') and c['swot'].get('st')
+                                  and c['deep_why'].get('mode') and c['key_metrics'].get('select_method')
+                                  and c.get('so_what') and not c['so_what'].get('conclusion_auto'))
     base['v'] = 4
     base['taxonomy'] = 'db/taxonomy.json'
     base['cases'] = [{k: c[k] for k in KEYS} for c in cases]
     json.dump(base, open(os.path.join(ROOT, 'db/cases.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     deep = sum(c['depth'] == 'deep' for c in cases)
-    print(f'{len(cases)} cases (deep {deep}) → db/cases.json')
+    print(f'{len(cases)} cases (deep {deep}, 분석 완료 {sum(c["analysis_full"] for c in cases)}) → db/cases.json')
 
 
 if __name__ == '__main__':

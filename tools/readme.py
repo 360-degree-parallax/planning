@@ -68,6 +68,7 @@ L = f'''# planning
 
 ## 규모 (스키마 v4)
 - 사례 **{len(cases)}개** (실제 {kc['real']} · 실패 {kc['failure']} · 연습 {kc['practice']}), 가설 **{nh}개**
+- **분석 완료 {sum(1 for c in cases if c.get('analysis_full'))}개**: 5 Why·PEST·SWOT·3C·So what 결론·긍정·안티 오피니언·목표 재분석·이슈트리·파레토·대체 왜·중요 지표·선별 방법을 모두 갖춘 사례 (deep이 아닌 사례는 `db/meta/packs/`)
 - **deep {len(deep)}개**: Why not yet 장벽 구조(유형·주체·바뀐 계기·연도·근거), 검증 실험과 지표, 사주 적용 아이디어 직접 작성. 근거 URL이 확인된 결과 지표 {nout}건 ({sum(1 for c in deep if c.get('outcomes'))}개 사례), 나머지 {sum(1 for c in deep if c.get('outcome_note'))}개는 수치가 없는 이유를 기록
 - **tagged {len(tagged)}개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계와 사주 적용 아이디어 초안은 사람이 작성, 장벽 유형과 적용 세그먼트는 규칙 추정(`inferred: true`, 결제 단계 생존 가설 {sum(1 for c in tagged for h in c['hyps'] if h['barrier'].get('reviewed'))}개는 사람 검토)
 - 출처 링크 확인 {nref}개, 논란 표시 {sum(1 for c in cases if c.get('source_status') == 'disputed')}개
