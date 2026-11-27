@@ -72,6 +72,10 @@ window.VIZ = {
   tone_action: () => fig(`<div class="two"><div class="msg no"><b>모호</b><br><u>빠르게</u> 대응해 주세요</div><div class="msg ok"><b>명확</b><br>점심·퇴근 이후 <u>제외</u>하고 <u>90분</u> 안에 <u>답장</u></div></div>` + flow([chip('누가'), chip('무엇을(동사)'), chip('기준(숫자)'), chip('예외', 'on')]), '형용사를 행동 · 숫자 · 예외로'),
   tone_schedule: () => fig(flow([chip('금주 안<br>인식 조사 완료'), chip('OO사 연락<br>변경 진행'), chip('다음 달 10일<br>로고 결정', 'on'), chip('큰 프로모션', 'warn')]) + `<div class="vf h small"><i>← 최종 마감에서 거꾸로 중간 마감을 만든다</i></div>`, '마감과 그 마감 뒤에 걸린 일을 함께 알린다'),
   tone_fear: () => fig(`<div class="cards5" style="grid-template-columns:repeat(3,1fr)">${[['제도 · 숫자', '인사평가 0.1점 차감'], ['장면', '프로모션에 예전 로고'], ['사람', '회장님이 언짢아하심']].map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join('')}</div><div class="vf h small">${chip('행동')}<i>+</i>${chip('일정')}<i>+</i>${chip('디테일한 디메리트', 'on')}<i>=</i>${chip('일이 된다', 'warn')}</div>`, '사실인 결과만, 사람이 아니라 일에 대해'),
+
+  srv_two: () => fig(`<div class="two"><div class="msg ok"><b>SURVEY · 앙케이트</b><br>많은 사람 · 닫힌 질문 · 몇 분<br>→ <u>얼마나</u> (비율 · 순위)</div><div class="msg no" style="background:var(--surface)"><b>FGI · 포커스 그룹 인터뷰</b><br>3~5명 · 열린 질문 · 1~3시간<br>→ <u>왜 · 어떻게</u> (이유 · 맥락)</div></div>`, '서베이는 넓게, FGI는 깊게'),
+  srv_stage: () => fig(flow([chip('1단계 · 가설 세우기<br><b>FGI</b>', 'on'), chip('2단계 · 가설 검증하기<br><b>SURVEY</b>')]) + `<div class="vf h small">${chip('FGI → 컨슈머 저니의 단계 · 고통 지점')}<i>+</i>${chip('SURVEY → 단계별 비율', 'warn')}</div>`, '시간이 없을수록 FGI부터 — 앙케이트는 숫자가 필요할 때'),
+  srv_fgi: () => fig(flow([chip('FGI 10명<br>1~3시간'), chip('인사이트풀한 20%<br>2명 선별', 'on'), chip('추가 정보<br>카드명세서 · 컨슈머 저니'), chip('말 ≠ 기록<br>→ 가설', 'warn')]), '말이 아니라 실제 행동의 기록으로 가설을 다진다'),
   pen: () => fig(flow([chip('믿지 마라<br><small>디지털 전환은 해석</small>'), chip('자기부정<br><small>전자펜 → U턴</small>'), chip('해답의 수<br><small>의료용·바디페인팅</small>'), chip('누수 확인<br><small>인증·판로·비용</small>'), chip('후속 액션<br><small>PHASE + 책임자</small>', 'on')]), '볼펜 회사 한 사례로 다섯 원칙을 차례로')
 };
 })();
