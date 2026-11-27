@@ -4533,10 +4533,41 @@
     "symptom": "가구가 비싸다",
     "problem": "가격의 상당 부분이 조립된 부피를 보관·운송하는 비용이다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 가구가 비싼가: 보관·운송비가 크다",
+     "왜 크나: 조립된 부피를 옮긴다",
+     "왜 조립해서 파나: 고객은 조립을 싫어한다는 통념"
+    ],
+    "root_cause": "조립된 부피가 비용을 키운다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "물류비",
+    "social": "젊은 가구의 저가 수요",
+    "technological": "납작 포장 설계",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "디자인·납작 포장 설계",
+    "opportunity": "젊은 가구 증가",
+    "so": "셀프 조립 저가 가구",
+    "weakness": "조립 번거로움",
+    "wo": "설명서·조립 서비스",
+    "threat": "저가 온라인 가구",
+    "st": "매장 경험과 디자인으로 방어"
+   },
+   "three_c": {
+    "customer": "싸고 예쁜 가구를 원하는 젊은 가구",
+    "competitor": "완성품 가구점",
+    "company": "납작 포장 설계",
+    "gap": "싸고 디자인 좋은 셀프 조립 가구"
+   },
    "hyps": [
     {
      "text": "무료 배송을 해 준다",
@@ -4595,21 +4626,150 @@
     ],
     "solution": "납작 포장 + 셀프 조립",
     "mode": "break",
-    "conclusion": "부피를 줄이고 조립을 고객과 나누면 가격이 내려간다",
-    "conclusion_auto": true
+    "conclusion": "부피를 줄이고 조립을 고객과 나눠 가격을 낮춰라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "싸고 예쁘다",
+    "reveals": "가격과 디자인의 조합이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "조립이 너무 힘들다",
+    "reveals": "조립 부담이 이탈 원인이다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 가격 대 좋은 디자인",
     "how": "납작 포장·셀프 조립으로 물류비를 빼 디자인을 유지하며 값을 낮췄다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "가구 판매",
+    "reframed": "보관·운송 비용 줄여 가격 낮추기",
+    "metric": "평균 판매가 대비 원가"
+   },
+   "issue_tree": {
+    "root": "가구 가격을 낮추려면",
+    "branches": [
+     {
+      "issue": "생산",
+      "chosen": false,
+      "sub": [
+       "소재",
+       "공장"
+      ]
+     },
+     {
+      "issue": "부피",
+      "chosen": true,
+      "sub": [
+       "납작 포장",
+       "셀프 조립"
+      ]
+     },
+     {
+      "issue": "유통",
+      "chosen": false,
+      "sub": [
+       "대형 매장",
+       "온라인"
+      ]
+     }
+    ],
+    "why": "비용의 큰 몫이 부피에서 나온다"
+   },
+   "pareto": {
+    "vital_few": "납작 포장",
+    "effect": "원가 절감의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "생산",
+      "issue": "소재",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "생산",
+      "issue": "공장",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "부피",
+      "issue": "납작 포장",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "부피",
+      "issue": "셀프 조립",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유통",
+      "issue": "대형 매장",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "유통",
+      "issue": "온라인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "납작 포장과 셀프 조립이 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 원가를 낮추나: 싸게 판다",
+     "왜 싸게인가: 많이 팔아 규모 이익을 낸다"
+    ],
+    "intent": "대량 판매 이익",
+    "intent_metric": "영업이익",
+    "mode": "raise",
+    "criterion": "영업이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "평균 판매가 대비 원가",
+    "leading": [
+     "상품당 물류비",
+     "매장 객단가"
+    ],
+    "guardrail": "조립 불만",
+    "vanity": "매장 방문 수",
+    "intent_metric": "영업이익",
+    "select_method": {
+     "methods": [
+      "quant",
+      "observation"
+     ],
+     "how": "물류비 분석과 고객 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객에게 일을 넘기는 건 불가능해 보이지만, 가격이라는 보상이 크면 통념이 뒤집힌다."
   },
   {
@@ -5839,10 +5999,41 @@
     "symptom": "신선식품 구매 빈도가 낮다",
     "problem": "신선식품이 필요한 시점(아침)과 살 수 있는 시점이 어긋난다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 맞벌이가 장보기 힘든가: 시간이 없다",
+     "왜 아침이 문제인가: 신선식품이 필요한 시점에 살 수 없다",
+     "왜 못 사나: 야간 냉장 물류가 비싸다고 여겼다"
+    ],
+    "root_cause": "필요 시점과 구매 시점의 불일치"
+   },
+   "pest": {
+    "political": "야간 노동 규제",
+    "economic": "냉장 물류 투자",
+    "social": "맞벌이·1인 가구",
+    "technological": "냉장 물류·수요 예측",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "새벽 냉장 물류",
+    "opportunity": "맞벌이 증가",
+    "so": "밤 주문 새벽 배송",
+    "weakness": "적자 구조",
+    "wo": "묶음 배송 밀도 높이기",
+    "threat": "대형 유통의 새벽 배송",
+    "st": "상품 큐레이션으로 차별"
+   },
+   "three_c": {
+    "customer": "아침 식재료가 필요한 맞벌이",
+    "competitor": "낮 배송 마트",
+    "company": "새벽 냉장 물류",
+    "gap": "새벽 문 앞 신선식품"
+   },
    "hyps": [
     {
      "text": "마트 영업시간을 늘린다",
@@ -5901,21 +6092,149 @@
     ],
     "solution": "밤 주문 → 새벽 배송",
     "mode": "break",
-    "conclusion": "밤 주문을 새벽에 문 앞까지 보내면 된다",
-    "conclusion_auto": true
+    "conclusion": "필요한 시점에 맞춰 밤 주문을 새벽에 보내라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "아침에 문 앞에 와 있다",
+    "reveals": "시점 맞춤이 프리미엄이다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "적자가 계속된다",
+    "reveals": "물류 투자 회수가 과제다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "신선도 대 배송 비용",
     "how": "야간 냉장 물류를 새벽 묶음 배송으로 밀도 있게 돌려 둘 다 잡았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "신선식품 판매",
+    "reframed": "필요 시점 배송",
+    "metric": "재주문률"
+   },
+   "issue_tree": {
+    "root": "아침 식재료를 제때 주려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "묶음"
+      ]
+     },
+     {
+      "issue": "배송 시점",
+      "chosen": true,
+      "sub": [
+       "새벽 배송",
+       "밤 주문 마감"
+      ]
+     },
+     {
+      "issue": "상품",
+      "chosen": false,
+      "sub": [
+       "큐레이션",
+       "신선도"
+      ]
+     }
+    ],
+    "why": "시점이 핵심 가치다"
+   },
+   "pareto": {
+    "vital_few": "새벽 배송",
+    "effect": "재주문의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "묶음",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "배송 시점",
+      "issue": "새벽 배송",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "배송 시점",
+      "issue": "밤 주문 마감",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "큐레이션",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "신선도",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "새벽 배송이 핵심이고 큐레이션은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 새벽인가: 다시 주문한다",
+     "왜 재주문인가: 물류 고정비를 반복 주문으로 회수한다"
+    ],
+    "intent": "반복 주문 매출",
+    "intent_metric": "월 재주문률",
+    "mode": "raise",
+    "criterion": "월 재주문률이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재주문률",
+    "leading": [
+     "새벽 정시 도착률",
+     "재주문률"
+    ],
+    "guardrail": "배송 원가",
+    "vanity": "앱 설치 수",
+    "intent_metric": "월 재주문률",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "주문 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "시점 관점의 가설이 본질을 짚었다. 관점을 넓게 깔아야 이런 가설이 나온다."
   },
   {
@@ -5958,10 +6277,41 @@
     "symptom": "배송 지연 문의가 많다",
     "problem": "플랫폼이 배송을 통제하지 못하는 구조다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 배송이 들쭉날쭉한가: 판매자가 따로 보낸다",
+     "왜 통제가 안 되나: 플랫폼이 물류를 갖지 않았다",
+     "왜 안 가졌나: 자산을 가볍게 하라는 통념"
+    ],
+    "root_cause": "플랫폼이 배송을 통제하지 못한다"
+   },
+   "pest": {
+    "political": "노동·유통 규제",
+    "economic": "물류 투자 규모",
+    "social": "빠른 배송 기대",
+    "technological": "자체 물류·수요 예측",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "자체 물류 투자",
+    "opportunity": "빠른 배송 기대",
+    "so": "직매입·로켓배송",
+    "weakness": "막대한 투자·적자",
+    "wo": "규모로 단가 낮추기",
+    "threat": "노동 이슈",
+    "st": "물류 자동화"
+   },
+   "three_c": {
+    "customer": "빠른 배송을 원하는 고객",
+    "competitor": "오픈마켓 판매자 배송",
+    "company": "자체 물류",
+    "gap": "약속을 지키는 배송"
+   },
    "hyps": [
     {
      "text": "판매자에게 배송 기준을 강하게 요구한다",
@@ -6020,21 +6370,150 @@
     ],
     "solution": "직매입 + 자체 물류(로켓배송)",
     "mode": "break",
-    "conclusion": "직접 사고 직접 배송하면 약속을 플랫폼이 책임진다",
-    "conclusion_auto": true
+    "conclusion": "배송 약속을 지키려면 물류를 직접 가져라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "내일 온다고 하면 진짜 온다",
+    "reveals": "약속 이행이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "택배 노동자",
+    "says": "노동 강도가 너무 높다",
+    "reveals": "속도의 비용이 노동에 쌓인다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 배송 약속 대 자산 부담",
     "how": "직매입·자체 물류에 투자해 약속을 지키고 규모로 단가를 낮췄다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "판매 확대",
+    "reframed": "배송 약속을 플랫폼이 책임지기",
+    "metric": "정시 배송률"
+   },
+   "issue_tree": {
+    "root": "배송을 믿게 하려면",
+    "branches": [
+     {
+      "issue": "판매자 관리",
+      "chosen": false,
+      "sub": [
+       "배송 기준",
+       "페널티"
+      ]
+     },
+     {
+      "issue": "물류 직접 운영",
+      "chosen": true,
+      "sub": [
+       "직매입",
+       "자체 배송"
+      ]
+     },
+     {
+      "issue": "정보",
+      "chosen": false,
+      "sub": [
+       "도착 예정",
+       "추적"
+      ]
+     }
+    ],
+    "why": "남의 손이면 약속을 지킬 수 없다"
+   },
+   "pareto": {
+    "vital_few": "직매입 자체 배송",
+    "effect": "배송 신뢰의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "판매자 관리",
+      "issue": "배송 기준",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "판매자 관리",
+      "issue": "페널티",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "물류 직접 운영",
+      "issue": "직매입",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "물류 직접 운영",
+      "issue": "자체 배송",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "정보",
+      "issue": "도착 예정",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "정보",
+      "issue": "추적",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "직매입과 자체 배송이 큰 베팅이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 물류인가: 고객이 몰린다",
+     "왜 점유율인가: 1위가 되면 규모의 경제가 생긴다"
+    ],
+    "intent": "시장 점유율",
+    "intent_metric": "거래액 점유율",
+    "mode": "raise",
+    "criterion": "거래액 점유율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "정시 배송률",
+    "leading": [
+     "정시 배송률",
+     "재구매율"
+    ],
+    "guardrail": "노동 사고·이슈",
+    "vanity": "상품 수",
+    "intent_metric": "거래액 점유율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "배송 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'비용이 너무 크다'는 불가능 판정이 사실은 업계 통념일 수 있다. 감수할 만한지 다시 묻는다."
   },
   {
@@ -7875,10 +8354,41 @@
     "symptom": "결제 직전 이탈률이 높다",
     "problem": "결제 직전에야 배송비 등 총액이 드러나 기대가 깨진다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 장바구니에서 떠나나: 결제를 안 한다",
+     "왜 안 하나: 총액에 놀란다",
+     "왜 놀라나: 배송비를 마지막에 보여 준다"
+    ],
+    "root_cause": "총액이 늦게 드러난다"
+   },
+   "pest": {
+    "political": "순차공개 가격 규제(다크패턴)",
+    "economic": "배송비",
+    "social": "가격 투명성 기대",
+    "technological": "결제 화면 설계",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "결제 화면 설계 권한",
+    "opportunity": "투명 가격 규제",
+    "so": "상품 페이지 총액 표시",
+    "weakness": "클릭률 하락 우려",
+    "wo": "무료 배송 기준 안내",
+    "threat": "경쟁몰의 저가 노출",
+    "st": "신뢰로 결제 완료율 확보"
+   },
+   "three_c": {
+    "customer": "결제 직전 놀라기 싫은 고객",
+    "competitor": "배송비를 늦게 보이는 몰",
+    "company": "화면 설계",
+    "gap": "처음부터 보이는 총액"
+   },
    "hyps": [
     {
      "text": "이탈 고객에게 할인 쿠폰을 다시 보낸다",
@@ -7938,21 +8448,150 @@
     ],
     "solution": "상품 페이지부터 배송비 포함 총액 표시",
     "mode": "break",
-    "conclusion": "총액을 처음부터 보이면 직전 이탈이 준다",
-    "conclusion_auto": true
+    "conclusion": "숨긴 비용이 배신감을 만든다, 처음부터 보여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "처음 본 가격 그대로라 믿고 샀다",
+    "reveals": "투명성이 결제 완료를 만든다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "마케터",
+    "says": "클릭률이 떨어진다",
+    "reveals": "클릭과 결제를 함께 봐야 한다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "상품 페이지 클릭률 대 결제 완료",
     "how": "총액을 미리 보여 클릭은 조금 줄어도 결제 직전 이탈을 줄였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "클릭률 높이기",
+    "reframed": "결제 직전 배신감 없애기",
+    "metric": "결제 완료율"
+   },
+   "issue_tree": {
+    "root": "장바구니 이탈을 줄이려면",
+    "branches": [
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "쿠폰",
+       "무료 배송"
+      ]
+     },
+     {
+      "issue": "총액 노출",
+      "chosen": true,
+      "sub": [
+       "상품 페이지 총액",
+       "배송비 안내"
+      ]
+     },
+     {
+      "issue": "결제 단계",
+      "chosen": false,
+      "sub": [
+       "단계 축소",
+       "간편결제"
+      ]
+     }
+    ],
+    "why": "놀람이 이탈의 원인이다"
+   },
+   "pareto": {
+    "vital_few": "결제 직전 배송비 노출",
+    "effect": "장바구니 이탈의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인",
+      "issue": "쿠폰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "무료 배송",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "총액 노출",
+      "issue": "상품 페이지 총액",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "총액 노출",
+      "issue": "배송비 안내",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제 단계",
+      "issue": "단계 축소",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "결제 단계",
+      "issue": "간편결제",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "총액 표시가 가장 빠르고 효과가 크다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 이탈을 줄이나: 결제가 는다",
+     "왜 결제인가: 이미 데려온 고객을 매출로 바꾼다"
+    ],
+    "intent": "결제 매출",
+    "intent_metric": "결제 완료율",
+    "mode": "raise",
+    "criterion": "결제 완료율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "결제 완료율",
+    "leading": [
+     "상품 페이지 총액 노출률",
+     "장바구니 이탈률"
+    ],
+    "guardrail": "상품 페이지 클릭률",
+    "vanity": "장바구니 담기 수",
+    "intent_metric": "결제 완료율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "퍼널 분석과 A/B 테스트",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "지표를 올리려는 관행(클릭률)이 다른 지표(결제)를 깎을 때 맹점이 생긴다."
   },
   {
@@ -8472,10 +9111,41 @@
     "symptom": "고객이 찾는 상품이 없다",
     "problem": "구색 확대가 회사의 재고 투자 속도에 묶여 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 구색이 느리게 느나: 재고를 사야 한다",
+     "왜 사야 하나: 직접 판다",
+     "왜 직접만 하나: 경쟁자를 들이면 매출을 뺏긴다는 통념"
+    ],
+    "root_cause": "구색이 재고 투자 속도에 묶여 있다"
+   },
+   "pest": {
+    "political": "플랫폼 공정거래 규제",
+    "economic": "재고 투자 부담",
+    "social": "한곳에서 다 사려는 습관",
+    "technological": "판매자 도구",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "고객 트래픽",
+    "opportunity": "수많은 판매자",
+    "so": "제3자 판매자 입점",
+    "weakness": "품질 관리",
+    "wo": "평점·FBA로 관리",
+    "threat": "위조품·규제",
+    "st": "판매자 검증"
+   },
+   "three_c": {
+    "customer": "모든 걸 한곳에서 사고 싶은 고객",
+    "competitor": "전문몰·자체 재고몰",
+    "company": "트래픽",
+    "gap": "재고 없이 무한한 구색"
+   },
    "hyps": [
     {
      "text": "투자를 받아 재고를 더 산다",
@@ -8534,21 +9204,149 @@
     ],
     "solution": "같은 상품 페이지에 제3자 판매자 입점",
     "mode": "break",
-    "conclusion": "재고 투자 없이 구색이 늘어난다",
-    "conclusion_auto": true
+    "conclusion": "경쟁자를 내 매장에 들여 구색을 늘려라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "아마존에 없는 게 없다",
+    "reveals": "구색이 첫 방문지를 만든다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "판매자",
+    "says": "수수료가 높고 아마존이 경쟁한다",
+    "reveals": "플랫폼과 판매자의 이해충돌",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "구색 확대 대 재고 투자",
     "how": "제3자 판매자에게 열어 재고 없이 구색을 늘렸다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "상품 수 늘리기",
+    "reframed": "재고 없이 구색 확대",
+    "metric": "판매 상품 수"
+   },
+   "issue_tree": {
+    "root": "구색을 빨리 늘리려면",
+    "branches": [
+     {
+      "issue": "직매입",
+      "chosen": false,
+      "sub": [
+       "재고",
+       "카테고리"
+      ]
+     },
+     {
+      "issue": "외부 판매자",
+      "chosen": true,
+      "sub": [
+       "입점",
+       "같은 페이지 경쟁"
+      ]
+     },
+     {
+      "issue": "데이터",
+      "chosen": false,
+      "sub": [
+       "수요 예측",
+       "추천"
+      ]
+     }
+    ],
+    "why": "남이 팔아도 고객은 남는다"
+   },
+   "pareto": {
+    "vital_few": "제3자 판매자",
+    "effect": "상품 수의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "직매입",
+      "issue": "재고",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "직매입",
+      "issue": "카테고리",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "외부 판매자",
+      "issue": "입점",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "외부 판매자",
+      "issue": "같은 페이지 경쟁",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "데이터",
+      "issue": "수요 예측",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "데이터",
+      "issue": "추천",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "외부 판매자 입점이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 구색인가: 고객이 머문다",
+     "왜 사업에 좋은가: 판매 수수료와 물류 매출이 생긴다"
+    ],
+    "intent": "수수료·물류 매출",
+    "intent_metric": "제3자 판매 수수료",
+    "mode": "raise",
+    "criterion": "제3자 판매 수수료가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "판매 상품 수",
+    "leading": [
+     "판매자 수",
+     "같은 페이지 가격 경쟁도"
+    ],
+    "guardrail": "위조품 신고",
+    "vanity": "상품 페이지 수",
+    "intent_metric": "제3자 판매 수수료",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "판매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "내 매출을 깎는 것처럼 보이는 선택이 고객 경험(구색·가격)을 키우면 결국 플랫폼이 커진다."
   },
   {
@@ -9992,10 +10790,39 @@
     "symptom": "객단가와 방문이 줄어든다",
     "problem": "대형마트와 같은 게임(많은 브랜드, 많은 품목)을 하고 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 대형마트를 못 이기나: 가격·구색에서 진다",
+     "왜 지나: 같은 게임을 한다",
+     "왜 같은가: 선택지가 많아야 한다는 통념"
+    ],
+    "root_cause": "대형마트와 같은 게임을 한다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "가격 경쟁",
+    "social": "발견의 재미 추구",
+    "technological": "해당 적음",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "자체 브랜드 개발",
+    "opportunity": "독특한 상품 선호",
+    "so": "적은 품목 자체 브랜드",
+    "weakness": "선택지 적음",
+    "wo": "순환 신상품으로 재미",
+    "threat": "대형마트 할인",
+    "st": "다른 게임으로 비교 회피"
+   },
+   "three_c": {
+    "customer": "독특한 상품을 찾는 고객",
+    "competitor": "대형마트",
+    "company": "자체 브랜드",
+    "gap": "발견하는 재미의 마트"
+   },
    "hyps": [
     {
      "text": "품목을 늘린다",
@@ -10069,21 +10896,150 @@
     ],
     "solution": "적은 품목 + 자체 브랜드 + 순환 신상품",
     "mode": "break",
-    "conclusion": "자체 브랜드와 계속 바뀌는 상품으로 발견의 재미를 판다",
-    "conclusion_auto": true
+    "conclusion": "같은 게임에서 이기려 하지 말고 다른 게임을 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "단골",
+    "says": "갈 때마다 새로운 게 있다",
+    "reveals": "발견의 재미가 방문 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "늘 사던 브랜드가 없다",
+    "reveals": "좁은 선택지를 감수할 고객만 남는다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "적은 품목 대 고객 만족",
     "how": "품목을 줄이고 자체 브랜드·순환 신상품으로 발견의 재미를 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매출 확대",
+    "reframed": "다른 게임으로 차별",
+    "metric": "매장당 매출"
+   },
+   "issue_tree": {
+    "root": "대형마트와 다르게 팔려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "대용량"
+      ]
+     },
+     {
+      "issue": "상품 구성",
+      "chosen": true,
+      "sub": [
+       "적은 품목",
+       "자체 브랜드"
+      ]
+     },
+     {
+      "issue": "경험",
+      "chosen": false,
+      "sub": [
+       "직원",
+       "매장 분위기"
+      ]
+     }
+    ],
+    "why": "품목을 줄이면 같은 게임에서 빠진다"
+   },
+   "pareto": {
+    "vital_few": "자체 브랜드 상품",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "대용량",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "상품 구성",
+      "issue": "적은 품목",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "상품 구성",
+      "issue": "자체 브랜드",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "경험",
+      "issue": "직원",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "경험",
+      "issue": "매장 분위기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "자체 브랜드가 핵심이고 직원 경험은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 자체 브랜드인가: 차별된다",
+     "왜 사업에 좋은가: 높은 마진과 충성도가 생긴다"
+    ],
+    "intent": "높은 마진 이익",
+    "intent_metric": "매장당 이익",
+    "mode": "raise",
+    "criterion": "매장당 이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "매장당 매출",
+    "leading": [
+     "자체 브랜드 비중",
+     "신상품 재구매율"
+    ],
+    "guardrail": "결품률",
+    "vanity": "품목 수",
+    "intent_metric": "매장당 이익",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "판매 데이터와 고객 반응",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "약점(작은 매장)을 강점(큐레이션)으로 다시 정의했다."
   },
   {
@@ -10122,10 +11078,41 @@
     "symptom": "폐기와 품절이 동시에 생긴다",
     "problem": "본사가 정한 일률적 발주로는 매장별 수요 변화를 못 따라간다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 재고가 남고 모자라나: 수요를 못 맞춘다",
+     "왜 못 맞추나: 본사가 일률적으로 발주한다",
+     "왜 본사인가: 발주는 전문가 일이라는 통념"
+    ],
+    "root_cause": "매장 수요를 모르는 발주"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "폐기 비용",
+    "social": "지역별 수요 차이",
+    "technological": "POS 데이터",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "POS 데이터",
+    "opportunity": "하루 여러 번 소량 배송",
+    "so": "점포 가설 발주",
+    "weakness": "매장 직원 역량 편차",
+    "wo": "발주 교육",
+    "threat": "대형마트",
+    "st": "근접성과 신선도로 방어"
+   },
+   "three_c": {
+    "customer": "필요한 걸 바로 사려는 동네 손님",
+    "competitor": "대형마트",
+    "company": "POS 데이터",
+    "gap": "매장별로 딱 맞는 진열"
+   },
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -10199,21 +11186,150 @@
     ],
     "solution": "POS 데이터 기반 점포 가설 발주 + 다회 소량 배송",
     "mode": "break",
-    "conclusion": "직원이 데이터로 가설을 세우고 단품으로 주문하면 결품·폐기가 준다",
-    "conclusion_auto": true
+    "conclusion": "발주를 손님을 매일 보는 사람에게 맡겨라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "손님",
+    "says": "원하는 게 늘 있다",
+    "reveals": "결품 없음이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "매장 직원",
+    "says": "발주 가설 세우기가 부담이다",
+    "reveals": "교육과 도구가 필요하다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "결품 방지 대 폐기 감소",
     "how": "점포 가설 발주와 다회 소량 배송으로 둘 다 줄였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "재고 관리",
+    "reframed": "결품과 폐기를 함께 줄이기",
+    "metric": "결품률·폐기율"
+   },
+   "issue_tree": {
+    "root": "결품과 폐기를 줄이려면",
+    "branches": [
+     {
+      "issue": "본사 예측",
+      "chosen": false,
+      "sub": [
+       "통계",
+       "계절"
+      ]
+     },
+     {
+      "issue": "점포 발주",
+      "chosen": true,
+      "sub": [
+       "POS 데이터",
+       "직원 가설"
+      ]
+     },
+     {
+      "issue": "배송",
+      "chosen": false,
+      "sub": [
+       "소량 다회",
+       "냉장"
+      ]
+     }
+    ],
+    "why": "매장 직원이 손님을 안다"
+   },
+   "pareto": {
+    "vital_few": "점포 가설 발주",
+    "effect": "결품·폐기 개선의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "본사 예측",
+      "issue": "통계",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "본사 예측",
+      "issue": "계절",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "점포 발주",
+      "issue": "POS 데이터",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "점포 발주",
+      "issue": "직원 가설",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "배송",
+      "issue": "소량 다회",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "배송",
+      "issue": "냉장",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "점포 발주가 핵심이고 소량 배송은 큰 베팅"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 결품·폐기인가: 손실이 준다",
+     "왜 손실인가: 작은 매장은 폐기 하나가 이익을 깎는다"
+    ],
+    "intent": "매장 이익",
+    "intent_metric": "매장 영업이익",
+    "mode": "raise",
+    "criterion": "매장 영업이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "결품률·폐기율",
+    "leading": [
+     "결품률",
+     "폐기율"
+    ],
+    "guardrail": "매장 직원 부담",
+    "vanity": "진열 품목 수",
+    "intent_metric": "매장 영업이익",
+    "select_method": {
+     "methods": [
+      "quant",
+      "observation"
+     ],
+     "how": "POS 데이터와 매장 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "데이터가 생기자 '가설 → 검증' 루프를 매장 직원에게 맡길 수 있게 됐다."
   },
   {
@@ -10252,10 +11368,41 @@
     "symptom": "시즌 말 대량 할인과 재고",
     "problem": "예측에 의존하는 긴 생산 주기가 문제다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 재고가 남나: 유행을 못 맞힌다",
+     "왜 못 맞히나: 오래전에 예측해 만든다",
+     "왜 오래전인가: 먼 곳 대량 생산이 싸다는 통념"
+    ],
+    "root_cause": "예측에 의존하는 긴 생산 주기"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "생산 단가",
+    "social": "빠른 유행 변화",
+    "technological": "근거리 생산·물류",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "근거리 생산 네트워크",
+    "opportunity": "빠른 유행 변화",
+    "so": "소량 다품종 반응 생산",
+    "weakness": "높은 생산 단가",
+    "wo": "재고 손실 감소로 상쇄",
+    "threat": "초저가 패스트패션",
+    "st": "디자인 속도로 차별"
+   },
+   "three_c": {
+    "customer": "최신 유행을 원하는 고객",
+    "competitor": "예측 생산 의류",
+    "company": "근거리 생산",
+    "gap": "유행을 바로 따라가는 옷"
+   },
    "hyps": [
     {
      "text": "트렌드 예측 팀을 강화한다",
@@ -10314,21 +11461,149 @@
     ],
     "solution": "근거리 소량 생산 + 짧은 주기",
     "mode": "break",
-    "conclusion": "가까이서 적게 만들고 반응 보고 더 만들면 예측이 필요 없다",
-    "conclusion_auto": true
+    "conclusion": "예측하지 말고 반응하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "매장에 갈 때마다 새 옷이 있다",
+    "reveals": "빠른 회전이 방문을 만든다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "환경 단체",
+    "says": "옷을 너무 많이 만들고 버린다",
+    "reveals": "패스트패션의 환경 비용",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 생산 단가 대 빠른 반응",
     "how": "근거리 소량 생산으로 재고 손실을 줄여 단가 차이를 메웠다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "재고 줄이기",
+    "reframed": "예측 대신 반응 생산",
+    "metric": "정가 판매율"
+   },
+   "issue_tree": {
+    "root": "재고를 줄이려면",
+    "branches": [
+     {
+      "issue": "예측 개선",
+      "chosen": false,
+      "sub": [
+       "데이터",
+       "트렌드"
+      ]
+     },
+     {
+      "issue": "생산 주기",
+      "chosen": true,
+      "sub": [
+       "근거리 생산",
+       "소량 추가"
+      ]
+     },
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "시즌 세일",
+       "아울렛"
+      ]
+     }
+    ],
+    "why": "짧은 주기는 예측을 필요 없게 한다"
+   },
+   "pareto": {
+    "vital_few": "근거리 소량 생산",
+    "effect": "정가 판매율 개선의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "예측 개선",
+      "issue": "데이터",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "예측 개선",
+      "issue": "트렌드",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "생산 주기",
+      "issue": "근거리 생산",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "생산 주기",
+      "issue": "소량 추가",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "할인",
+      "issue": "시즌 세일",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "아울렛",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "근거리 생산과 소량 추가가 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 반응 생산인가: 할인이 준다",
+     "왜 할인인가: 정가 판매가 이익이다"
+    ],
+    "intent": "정가 판매 이익",
+    "intent_metric": "매출 총이익률",
+    "mode": "raise",
+    "criterion": "매출 총이익률이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "정가 판매율",
+    "leading": [
+     "정가 판매율",
+     "기획-매장 소요 일수"
+    ],
+    "guardrail": "생산 단가",
+    "vanity": "신상품 수",
+    "intent_metric": "매출 총이익률",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "매장 판매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'더 잘 맞히기'에서 '틀려도 빨리 고치기'로 문제를 바꿨다."
   },
   {
@@ -10367,10 +11642,43 @@
     "symptom": "신상품 실패율이 높다",
     "problem": "수요를 확인하기 전에 대량 생산하는 순서가 문제다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 어떤 옷이 팔릴지 모르나: 먼저 만든다",
+     "왜 먼저인가: 최소 생산 수량이 크다",
+     "왜 크나: 공장이 소량을 안 받는다는 통념"
+    ],
+    "root_cause": "수요 확인 전 대량 생산"
+   },
+   "pest": {
+    "political": "노동·환경·관세 규제",
+    "economic": "초저가 수요",
+    "social": "짧은 유행 주기",
+    "technological": "데이터·소량 생산 네트워크",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "초소량 생산 네트워크",
+    "opportunity": "초저가 수요",
+    "so": "테스트 후 추가 생산",
+    "weakness": "노동·환경 논란",
+    "wo": "공급망 투명성",
+    "threat": "관세·규제 강화",
+    "st": "현지 창고·규정 대응"
+   },
+   "three_c": {
+    "customer": "싼 유행 옷을 원하는 젊은 층",
+    "competitor": "패스트패션 브랜드",
+    "company": "초소량 생산",
+    "gap": "무한한 저가 신상품"
+   },
    "hyps": [
     {
      "text": "디자이너를 늘린다",
@@ -10429,21 +11737,150 @@
     ],
     "solution": "초소량 테스트 → 데이터 → 추가 생산",
     "mode": "break",
-    "conclusion": "팔리는 것만 더 만들면 재고 위험이 없다",
-    "conclusion_auto": true
+    "conclusion": "만들고 팔지 말고 올려 보고 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "젊은 고객",
+    "says": "싸고 종류가 끝없다",
+    "reveals": "가격과 다양성이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "규제 기관·환경 단체",
+    "says": "노동과 환경 문제가 심각하다",
+    "reveals": "저가의 사회적 비용",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "다양한 신상품 대 재고 위험",
     "how": "초소량 테스트 생산으로 품목은 늘리고 재고는 줄였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "신상품 확대",
+    "reframed": "수요 확인 후 생산",
+    "metric": "재고 소진율"
+   },
+   "issue_tree": {
+    "root": "재고 위험 없이 신상품을 늘리려면",
+    "branches": [
+     {
+      "issue": "디자인",
+      "chosen": false,
+      "sub": [
+       "트렌드 분석",
+       "인력"
+      ]
+     },
+     {
+      "issue": "생산 순서",
+      "chosen": true,
+      "sub": [
+       "초소량 테스트",
+       "추가 생산"
+      ]
+     },
+     {
+      "issue": "판매",
+      "chosen": false,
+      "sub": [
+       "앱",
+       "SNS"
+      ]
+     }
+    ],
+    "why": "순서를 바꾸면 재고 위험이 사라진다"
+   },
+   "pareto": {
+    "vital_few": "초소량 테스트 생산",
+    "effect": "재고 위험 감소의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "디자인",
+      "issue": "트렌드 분석",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "디자인",
+      "issue": "인력",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "생산 순서",
+      "issue": "초소량 테스트",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "생산 순서",
+      "issue": "추가 생산",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "판매",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "판매",
+      "issue": "SNS",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "초소량 테스트가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 테스트 생산인가: 신상품을 무한히 낸다",
+     "왜 성장인가: 젊은 층 점유율을 빠르게 키운다"
+    ],
+    "intent": "글로벌 점유율 성장",
+    "intent_metric": "매출 성장률",
+    "mode": "raise",
+    "criterion": "매출 성장률이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재고 소진율",
+    "leading": [
+     "테스트 상품 재생산율",
+     "재고 소진율"
+    ],
+    "guardrail": "규제·노동 이슈",
+    "vanity": "신상품 수",
+    "intent_metric": "매출 성장률",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "상품별 반응 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "시장 테스트를 생산 공정 안에 넣었다. (노동·환경 논란도 함께 따져야 하는 사례)"
   },
   {
@@ -10486,10 +11923,41 @@
     "symptom": "쇼핑 이탈",
     "problem": "고객은 선택지가 많을수록 결정을 못 한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 옷 고르기가 피곤한가: 선택지가 너무 많다",
+     "왜 많나: 무한한 선택지가 장점이라 여겼다",
+     "왜 문제인가: 많을수록 결정을 못 한다"
+    ],
+    "root_cause": "선택 과부하"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "의류 반품 비용",
+    "social": "바쁜 직장인",
+    "technological": "취향 데이터·추천",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "취향 데이터와 스타일리스트",
+    "opportunity": "개인화 수요",
+    "so": "몇 벌만 골라 보내는 박스",
+    "weakness": "반품 비용",
+    "wo": "데이터로 적중률 높이기",
+    "threat": "대형 쇼핑몰 추천",
+    "st": "사람 스타일리스트로 차별"
+   },
+   "three_c": {
+    "customer": "고르기 싫은 바쁜 사람",
+    "competitor": "무한 선택지 쇼핑몰",
+    "company": "데이터+스타일리스트",
+    "gap": "대신 골라 주는 옷"
+   },
    "hyps": [
     {
      "text": "검색·필터를 더 좋게",
@@ -10548,21 +12016,150 @@
     ],
     "solution": "취향 설문 + 스타일리스트 큐레이션 박스",
     "mode": "break",
-    "conclusion": "취향 데이터와 사람이 몇 벌만 골라 보내면 된다",
-    "conclusion_auto": true
+    "conclusion": "선택지를 늘리지 말고 대신 골라 줘라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "고민 없이 나한테 맞는 옷이 온다",
+    "reveals": "결정 대행이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "마음에 안 드는 옷만 왔다",
+    "reveals": "적중률이 낮으면 해지한다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "선택지 대 고르는 피로",
     "how": "데이터와 스타일리스트가 몇 벌만 골라 선택의 질은 높이고 피로는 줄였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "의류 판매",
+    "reframed": "고르는 고통 대행",
+    "metric": "박스당 구매 수"
+   },
+   "issue_tree": {
+    "root": "옷 고르기를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "필터",
+      "chosen": false,
+      "sub": [
+       "검색",
+       "카테고리"
+      ]
+     },
+     {
+      "issue": "대신 고르기",
+      "chosen": true,
+      "sub": [
+       "취향 데이터",
+       "스타일리스트"
+      ]
+     },
+     {
+      "issue": "반품",
+      "chosen": false,
+      "sub": [
+       "무료 반품",
+       "피드백"
+      ]
+     }
+    ],
+    "why": "고객은 대신 골라 주길 원한다"
+   },
+   "pareto": {
+    "vital_few": "취향 데이터 적중",
+    "effect": "구매 전환의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "필터",
+      "issue": "검색",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "필터",
+      "issue": "카테고리",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "대신 고르기",
+      "issue": "취향 데이터",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "대신 고르기",
+      "issue": "스타일리스트",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "반품",
+      "issue": "무료 반품",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "반품",
+      "issue": "피드백",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "데이터와 스타일리스트가 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 대신 고르나: 다시 받는다",
+     "왜 재구독인가: 획득 비용을 반복 박스로 회수한다"
+    ],
+    "intent": "반복 박스 매출",
+    "intent_metric": "고객당 박스 수",
+    "mode": "raise",
+    "criterion": "고객당 박스 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "박스당 구매 수",
+    "leading": [
+     "박스당 구매 수",
+     "피드백 입력률"
+    ],
+    "guardrail": "반품 비용",
+    "vanity": "가입자 수",
+    "intent_metric": "고객당 박스 수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "survey"
+     ],
+     "how": "취향 설문과 구매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객이 산 건 옷이 아니라 '고르지 않아도 되는 것'이었다."
   },
   {
@@ -10605,10 +12202,39 @@
     "symptom": "사료 구매가 번거롭다",
     "problem": "반려인은 사료 떨어지는 시점을 놓치고 무거운 짐을 옮겨야 한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 사료 살 때마다 힘든가: 무겁고 떨어질 때를 놓친다",
+     "왜 놓치나: 정기 공급이 없다",
+     "왜 온라인도 불만인가: 효율만 보는 응대"
+    ],
+    "root_cause": "정기 공급과 감정 응대가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "펫 시장 성장",
+    "social": "반려동물 가족화",
+    "technological": "정기 배송",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "감정을 챙기는 고객 서비스",
+    "opportunity": "반려동물 가족화",
+    "so": "정기배송과 감정 응대",
+    "weakness": "낮은 마진",
+    "wo": "정기배송으로 효율 확보",
+    "threat": "아마존 경쟁",
+    "st": "서비스 충성도로 방어"
+   },
+   "three_c": {
+    "customer": "반려동물을 가족으로 여기는 반려인",
+    "competitor": "효율 중심 대형 몰",
+    "company": "고객 서비스",
+    "gap": "감정까지 챙기는 펫 쇼핑"
+   },
    "hyps": [
     {
      "text": "온라인 최저가",
@@ -10667,21 +12293,150 @@
     ],
     "solution": "정기배송 + 생일·애도 카드 고객 응대",
     "mode": "break",
-    "conclusion": "감정을 챙기는 응대가 충성도가 된다",
-    "conclusion_auto": true
+    "conclusion": "효율만 보지 말고 반려인의 감정을 챙겨라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "반려인",
+    "says": "우리 아이 생일에 카드를 받았다",
+    "reveals": "감정 응대가 충성도다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "서비스 비용이 크다",
+    "reveals": "감정 응대의 비용 대비 효과 증명",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "온라인 효율 대 따뜻한 응대",
     "how": "정기배송으로 효율을 확보하고 남는 여력을 감정 응대에 썼다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "사료 판매",
+    "reframed": "정기 공급과 감정 응대",
+    "metric": "정기배송 유지율"
+   },
+   "issue_tree": {
+    "root": "반려인을 단골로 만들려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "최저가",
+       "쿠폰"
+      ]
+     },
+     {
+      "issue": "관계",
+      "chosen": true,
+      "sub": [
+       "정기배송",
+       "감정 응대"
+      ]
+     },
+     {
+      "issue": "상품",
+      "chosen": false,
+      "sub": [
+       "구색",
+       "처방식"
+      ]
+     }
+    ],
+    "why": "반려동물은 가족이다"
+   },
+   "pareto": {
+    "vital_few": "정기배송 고객",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "최저가",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "쿠폰",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "관계",
+      "issue": "정기배송",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "관계",
+      "issue": "감정 응대",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "구색",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "상품",
+      "issue": "처방식",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "정기배송과 감정 응대가 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 감정 응대인가: 떠나지 않는다",
+     "왜 유지인가: 반복 구매가 매출 대부분이다"
+    ],
+    "intent": "반복 구매 매출",
+    "intent_metric": "정기배송 매출 비중",
+    "mode": "raise",
+    "criterion": "정기배송 매출 비중이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "정기배송 유지율",
+    "leading": [
+     "정기배송 가입률",
+     "고객 추천률"
+    ],
+    "guardrail": "서비스 비용",
+    "vanity": "광고 노출",
+    "intent_metric": "정기배송 매출 비중",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "고객 응대 기록과 정기배송 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "반복 구매 상품은 '다음 구매'를 자동화하는 것이 본질이다."
   },
   {
@@ -10720,10 +12475,43 @@
     "symptom": "온라인 장보기가 비싸거나 없다",
     "problem": "식료품 배송이 자체 창고와 물류를 전제로 설계되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 식료품 배송이 비싼가: 창고가 필요하다",
+     "왜 필요한가: 전용 물류를 전제했다",
+     "왜 그 전제인가: 기존 마트를 쓸 생각을 못 했다"
+    ],
+    "root_cause": "창고 전제의 진입 비용"
+   },
+   "pest": {
+    "political": "긱 노동 규제",
+    "economic": "창고 투자 비용",
+    "social": "장보기 시간 부족",
+    "technological": "쇼퍼 앱",
+    "key": [
+     "T",
+     "P"
+    ],
+    "focus": [
+     "T",
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "쇼퍼 앱",
+    "opportunity": "기존 마트 진열대",
+    "so": "개인 쇼퍼 장보기 대행",
+    "weakness": "마트 의존",
+    "wo": "광고·데이터로 마트에 가치 제공",
+    "threat": "마트의 자체 배송",
+    "st": "여러 마트 묶음으로 방어"
+   },
+   "three_c": {
+    "customer": "장 볼 시간 없는 가구",
+    "competitor": "창고형 식료품 배송",
+    "company": "쇼퍼 네트워크",
+    "gap": "창고 없는 장보기 대행"
+   },
    "hyps": [
     {
      "text": "자체 창고·트럭으로 식료품 배송",
@@ -10782,21 +12570,149 @@
     ],
     "solution": "기존 마트 + 개인 쇼퍼",
     "mode": "break",
-    "conclusion": "사람이 대신 장을 보면 창고 없이 배송된다",
-    "conclusion_auto": true
+    "conclusion": "창고를 짓지 말고 마트 진열대를 창고로 써라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "늘 가던 마트 물건이 그대로 온다",
+    "reveals": "익숙한 마트가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "쇼퍼",
+    "says": "수입이 불안정하다",
+    "reveals": "긱 노동의 보상 문제",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 식료품 배송 대 창고 투자",
     "how": "기존 마트 진열대를 창고로 써 투자 없이 배송했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "배송 확장",
+    "reframed": "창고 없이 배송",
+    "metric": "주문 수"
+   },
+   "issue_tree": {
+    "root": "식료품을 싸게 배송하려면",
+    "branches": [
+     {
+      "issue": "창고",
+      "chosen": false,
+      "sub": [
+       "자동화",
+       "입지"
+      ]
+     },
+     {
+      "issue": "기존 마트 활용",
+      "chosen": true,
+      "sub": [
+       "진열대",
+       "개인 쇼퍼"
+      ]
+     },
+     {
+      "issue": "배송",
+      "chosen": false,
+      "sub": [
+       "시간대",
+       "묶음"
+      ]
+     }
+    ],
+    "why": "마트 진열대가 이미 창고다"
+   },
+   "pareto": {
+    "vital_few": "개인 쇼퍼",
+    "effect": "운영의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "창고",
+      "issue": "자동화",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "창고",
+      "issue": "입지",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "기존 마트 활용",
+      "issue": "진열대",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "기존 마트 활용",
+      "issue": "개인 쇼퍼",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "배송",
+      "issue": "시간대",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "배송",
+      "issue": "묶음",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "기존 마트와 쇼퍼가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 창고 없이인가: 빠르게 확장한다",
+     "왜 빠르게인가: 지역을 먼저 잡아야 한다"
+    ],
+    "intent": "지역 확장 성장",
+    "intent_metric": "서비스 지역 수·주문 수",
+    "mode": "raise",
+    "criterion": "주문 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "주문 수",
+    "leading": [
+     "쇼퍼당 주문 수",
+     "정시 배송률"
+    ],
+    "guardrail": "쇼퍼 이탈률",
+    "vanity": "다운로드 수",
+    "intent_metric": "서비스 지역 수·주문 수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "주문 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "실패한 선례가 있어도 '왜 실패했나'를 보면 다른 구조가 보인다."
   },
   {
@@ -10839,10 +12755,43 @@
     "symptom": "거래가 성사되지 않는다",
     "problem": "서로 모르는 사람 사이에 신뢰를 보증할 장치가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 낯선 판매자를 못 믿나: 돈만 받고 안 보낼까 걱정",
+     "왜 걱정인가: 보증 장치가 없다",
+     "왜 없나: 결제는 은행 일이라 여겼다"
+    ],
+    "root_cause": "거래 신뢰 장치가 없다"
+   },
+   "pest": {
+    "political": "전자결제 규제",
+    "economic": "소상공인 온라인 진출",
+    "social": "온라인 불신",
+    "technological": "에스크로 결제",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "무료 입점 정책",
+    "opportunity": "소상공인 온라인 진출",
+    "so": "에스크로 결제(알리페이)",
+    "weakness": "위조품",
+    "wo": "판매자 평가·검증",
+    "threat": "경쟁 플랫폼",
+    "st": "결제·생태계로 잠금"
+   },
+   "three_c": {
+    "customer": "낯선 판매자가 불안한 구매자",
+    "competitor": "신뢰 장치 없는 장터",
+    "company": "결제 시스템",
+    "gap": "돈을 맡아 주는 장터"
+   },
    "hyps": [
     {
      "text": "판매 수수료를 낮춘다",
@@ -10901,21 +12850,149 @@
     ],
     "solution": "에스크로 결제(알리페이) + 무료 입점",
     "mode": "break",
-    "conclusion": "플랫폼이 맡았다 주면 거래가 열린다",
-    "conclusion_auto": true
+    "conclusion": "신뢰는 돈을 누가 맡느냐로 풀린다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "물건을 받아야 돈이 넘어가 안심이다",
+    "reveals": "에스크로가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "브랜드",
+    "says": "위조품이 많다",
+    "reveals": "판매자 검증이 약하다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "판매자 수 대 거래 신뢰",
     "how": "무료 입점으로 판매자를 늘리고 에스크로로 신뢰를 보장했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "거래 확대",
+    "reframed": "낯선 사이 신뢰",
+    "metric": "거래 성사율"
+   },
+   "issue_tree": {
+    "root": "낯선 사이 거래를 열려면",
+    "branches": [
+     {
+      "issue": "판매자 검증",
+      "chosen": false,
+      "sub": [
+       "인증",
+       "평가"
+      ]
+     },
+     {
+      "issue": "결제 보호",
+      "chosen": true,
+      "sub": [
+       "에스크로",
+       "환불"
+      ]
+     },
+     {
+      "issue": "판매자 수",
+      "chosen": false,
+      "sub": [
+       "무료 입점",
+       "도구"
+      ]
+     }
+    ],
+    "why": "돈을 맡으면 거래가 열린다"
+   },
+   "pareto": {
+    "vital_few": "에스크로 결제",
+    "effect": "거래 신뢰의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "판매자 검증",
+      "issue": "인증",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "판매자 검증",
+      "issue": "평가",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "결제 보호",
+      "issue": "에스크로",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "결제 보호",
+      "issue": "환불",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "판매자 수",
+      "issue": "무료 입점",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "판매자 수",
+      "issue": "도구",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "에스크로가 핵심이고 무료 입점은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 신뢰인가: 거래가 열린다",
+     "왜 거래인가: 생태계(결제·광고)가 커진다"
+    ],
+    "intent": "생태계 성장",
+    "intent_metric": "총 거래액",
+    "mode": "raise",
+    "criterion": "총 거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "거래 성사율",
+    "leading": [
+     "에스크로 이용률",
+     "분쟁 해결률"
+    ],
+    "guardrail": "위조품 신고",
+    "vanity": "입점 판매자 수",
+    "intent_metric": "총 거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "결제 수단 자체가 신뢰 장치가 될 수 있다."
   },
   {
@@ -10961,10 +13038,41 @@
     "symptom": "지방 소비자 구매 저조",
     "problem": "쇼핑이 혼자 검색하는 행동으로만 설계되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 저소득 지역은 온라인을 안 쓰나: 쓸 이유가 없다",
+     "왜 없나: 쇼핑이 혼자 검색이다",
+     "왜 혼자인가: 쇼핑을 사교로 보지 않았다"
+    ],
+    "root_cause": "관계가 쓰이지 않는 쇼핑"
+   },
+   "pest": {
+    "political": "상품 품질 규제",
+    "economic": "초저가 수요",
+    "social": "메신저 공유 문화",
+    "technological": "위챗 연동",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "메신저 공유 설계",
+    "opportunity": "저소득 지역 수요",
+    "so": "공동구매",
+    "weakness": "품질 의심",
+    "wo": "농산물 직거래로 품질 관리",
+    "threat": "위조품 규제",
+    "st": "공급자 검증"
+   },
+   "three_c": {
+    "customer": "싸게 사고 싶은 지방 소비자",
+    "competitor": "검색 중심 쇼핑몰",
+    "company": "공유 설계",
+    "gap": "친구와 함께 사면 싸지는 쇼핑"
+   },
    "hyps": [
     {
      "text": "쿠폰 지급",
@@ -11023,21 +13131,150 @@
     ],
     "solution": "메신저 공유 공동구매",
     "mode": "break",
-    "conclusion": "메신저 공유가 곧 유입 채널이 된다",
-    "conclusion_auto": true
+    "conclusion": "쇼핑을 혼자 하는 일에서 함께하는 놀이로 바꿔라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "친구랑 같이 사면 훨씬 싸다",
+    "reveals": "함께가 할인이 된다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "소비자",
+    "says": "품질이 떨어진다",
+    "reveals": "초저가의 품질 의심",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "초저가 대 유입 비용",
     "how": "공동구매 공유로 고객이 고객을 데려와 마케팅비 없이 싸게 팔았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "지방 이용자 확보",
+    "reframed": "공유로 유입",
+    "metric": "신규 구매자 수"
+   },
+   "issue_tree": {
+    "root": "저소득 지역을 끌어들이려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "지역 광고",
+       "TV"
+      ]
+     },
+     {
+      "issue": "공유",
+      "chosen": true,
+      "sub": [
+       "공동구매",
+       "메신저"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "보조금",
+       "농산물 직거래"
+      ]
+     }
+    ],
+    "why": "공유가 유입 채널이 된다"
+   },
+   "pareto": {
+    "vital_few": "메신저 공동구매",
+    "effect": "신규 유입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "지역 광고",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "TV",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "공유",
+      "issue": "공동구매",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "공유",
+      "issue": "메신저",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "보조금",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "농산물 직거래",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "공동구매 공유가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 공유인가: 싸게 유입된다",
+     "왜 유입인가: 낮은 획득 비용으로 점유율을 키운다"
+    ],
+    "intent": "저비용 성장",
+    "intent_metric": "활성 구매자 수",
+    "mode": "raise",
+    "criterion": "활성 구매자 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "신규 구매자 수",
+    "leading": [
+     "공유 링크 수",
+     "공동구매 성사율"
+    ],
+    "guardrail": "품질 불만",
+    "vanity": "앱 설치 수",
+    "intent_metric": "활성 구매자 수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "공유 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "같은 상품도 '사는 방식'을 바꾸면 새 고객층이 열린다."
   },
   {
@@ -11083,10 +13320,39 @@
     "symptom": "온라인 구매 저조",
     "problem": "신뢰는 플랫폼이 아니라 아는 사람에게 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 소도시 소비자가 온라인을 안 믿나: 모르는 플랫폼이다",
+     "왜 신뢰가 없나: 신뢰는 아는 사람에게 있다",
+     "왜 못 썼나: 중간 사람을 비효율로 봤다"
+    ],
+    "root_cause": "신뢰가 아는 사람에게 있다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "부업 수요",
+    "social": "지인 추천 문화",
+    "technological": "메신저 공유",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "리셀러 네트워크",
+    "opportunity": "주부 부업 수요",
+    "so": "지인 메신저 리셀",
+    "weakness": "품질 편차",
+    "wo": "공급자 평가",
+    "threat": "대형 이커머스 진출",
+    "st": "지인 신뢰로 방어"
+   },
+   "three_c": {
+    "customer": "아는 사람 추천을 믿는 소도시 소비자",
+    "competitor": "직거래 이커머스",
+    "company": "리셀러 네트워크",
+    "gap": "아는 사람이 파는 온라인"
+   },
    "hyps": [
     {
      "text": "광고를 늘린다",
@@ -11160,21 +13426,150 @@
     ],
     "solution": "메신저 리셀러 모델",
     "mode": "break",
-    "conclusion": "그 사람을 판매자로 만들면 된다",
-    "conclusion_auto": true
+    "conclusion": "신뢰가 있는 사람을 판매 채널로 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "아는 언니가 추천해서 샀다",
+    "reveals": "지인 신뢰가 구매 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "리셀러",
+    "says": "수입이 들쭉날쭉하다",
+    "reveals": "리셀러 동기 유지가 과제다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "판매망 확장 대 신뢰",
     "how": "아는 사람을 리셀러로 삼아 판매망을 늘리면서 신뢰를 유지했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "소도시 판매",
+    "reframed": "지인 신뢰로 판매",
+    "metric": "리셀러당 판매"
+   },
+   "issue_tree": {
+    "root": "소도시에서 팔려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "지역 광고",
+       "할인"
+      ]
+     },
+     {
+      "issue": "사람 채널",
+      "chosen": true,
+      "sub": [
+       "리셀러",
+       "메신저"
+      ]
+     },
+     {
+      "issue": "상품",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "지역 맞춤"
+      ]
+     }
+    ],
+    "why": "신뢰는 아는 사람에게 있다"
+   },
+   "pareto": {
+    "vital_few": "활발한 리셀러",
+    "effect": "판매의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "지역 광고",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "사람 채널",
+      "issue": "리셀러",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "사람 채널",
+      "issue": "메신저",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "저가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "상품",
+      "issue": "지역 맞춤",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "리셀러 메신저 판매가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 리셀러인가: 신뢰로 판다",
+     "왜 성장인가: 미개척 소도시 시장을 연다"
+    ],
+    "intent": "소도시 시장 성장",
+    "intent_metric": "주문 수",
+    "mode": "raise",
+    "criterion": "주문 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "리셀러당 판매",
+    "leading": [
+     "활성 리셀러 수",
+     "리셀러당 주문"
+    ],
+    "guardrail": "반품률",
+    "vanity": "가입 리셀러 수",
+    "intent_metric": "주문 수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "interview"
+     ],
+     "how": "리셀러 판매 데이터와 인터뷰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "신뢰가 있는 곳(사람)을 채널로 삼았다."
   },
   {
@@ -11220,10 +13615,39 @@
     "symptom": "작은 브랜드 판매 부진",
     "problem": "패션 정보(콘텐츠)와 구매(커머스)가 분리되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 브랜드를 알릴 곳이 없나: 정보와 구매가 따로다",
+     "왜 따로인가: 커뮤니티는 돈이 안 된다는 통념",
+     "왜 문제인가: 신뢰가 매출로 안 이어진다"
+    ],
+    "root_cause": "콘텐츠와 커머스의 분리"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "브랜드 마케팅 비용",
+    "social": "스트리트 패션 팬덤",
+    "technological": "온라인 커머스",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "패션 커뮤니티·매거진",
+    "opportunity": "신진 브랜드 증가",
+    "so": "콘텐츠 위 커머스",
+    "weakness": "커뮤니티 정체성 희석",
+    "wo": "큐레이션 기준 유지",
+    "threat": "대형 플랫폼",
+    "st": "콘텐츠 신뢰로 방어"
+   },
+   "three_c": {
+    "customer": "스트리트 패션 정보를 찾는 젊은 층",
+    "competitor": "상품만 파는 쇼핑몰",
+    "company": "커뮤니티 신뢰",
+    "gap": "정보를 얻은 곳에서 바로 사는 패션"
+   },
    "hyps": [
     {
      "text": "오픈마켓에 입점",
@@ -11297,21 +13721,149 @@
     ],
     "solution": "패션 커뮤니티·매거진 + 커머스",
     "mode": "break",
-    "conclusion": "콘텐츠 위에 커머스를 얹는다",
-    "conclusion_auto": true
+    "conclusion": "신뢰를 쌓은 그 자리에서 바로 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "보고 바로 산다",
+    "reveals": "정보와 구매의 연결이 편의다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "오랜 회원",
+    "says": "상업적으로 변했다",
+    "reveals": "커뮤니티 정체성을 지켜야 한다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "콘텐츠 신뢰 대 상업성",
     "how": "커뮤니티로 쌓은 신뢰 위에서 바로 사게 해 둘을 이었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "브랜드 판매",
+    "reframed": "콘텐츠 신뢰를 매출로",
+    "metric": "콘텐츠→구매 전환"
+   },
+   "issue_tree": {
+    "root": "신진 브랜드를 팔려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "배너",
+       "할인"
+      ]
+     },
+     {
+      "issue": "콘텐츠 연결",
+      "chosen": true,
+      "sub": [
+       "매거진",
+       "코디"
+      ]
+     },
+     {
+      "issue": "입점",
+      "chosen": false,
+      "sub": [
+       "브랜드 수",
+       "독점"
+      ]
+     }
+    ],
+    "why": "정보를 얻은 곳에서 사고 싶어 한다"
+   },
+   "pareto": {
+    "vital_few": "콘텐츠를 본 고객",
+    "effect": "구매의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "배너",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "콘텐츠 연결",
+      "issue": "매거진",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "콘텐츠 연결",
+      "issue": "코디",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "입점",
+      "issue": "브랜드 수",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "입점",
+      "issue": "독점",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "콘텐츠 연결이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 콘텐츠 커머스인가: 신뢰가 매출이 된다",
+     "왜 매출인가: 수수료와 자체 브랜드 매출이 커진다"
+    ],
+    "intent": "거래액",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "콘텐츠→구매 전환",
+    "leading": [
+     "콘텐츠→구매 전환율",
+     "재구매율"
+    ],
+    "guardrail": "커뮤니티 활동 감소",
+    "vanity": "콘텐츠 조회수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "콘텐츠·구매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객이 이미 모여 있는 곳에서 팔면 광고비가 필요 없다."
   },
   {
@@ -11354,10 +13906,39 @@
     "symptom": "인테리어 구매 결정이 느리다",
     "problem": "상품 사진만으로는 '내 집에서의 모습'을 상상할 수 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 인테리어 제품을 망설이나: 어울릴지 모른다",
+     "왜 모르나: 상품 사진뿐이다",
+     "왜 일반인 사진을 안 쓰나: 품질이 낮다는 통념"
+    ],
+    "root_cause": "내 집에서의 모습을 상상할 수 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "인테리어 시장",
+    "social": "집 꾸미기 열풍",
+    "technological": "사진 태그",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "집들이 콘텐츠",
+    "opportunity": "집 꾸미기 열풍",
+    "so": "사진 상품 태그 구매",
+    "weakness": "콘텐츠 품질 편차",
+    "wo": "큐레이션",
+    "threat": "대형 이커머스",
+    "st": "콘텐츠 커뮤니티로 방어"
+   },
+   "three_c": {
+    "customer": "내 집에 어울릴지 궁금한 사람",
+    "competitor": "상품 사진 쇼핑몰",
+    "company": "집들이 콘텐츠",
+    "gap": "남의 집에서 보고 사는 인테리어"
+   },
    "hyps": [
     {
      "text": "상품 사진을 고화질로",
@@ -11416,21 +13997,149 @@
     ],
     "solution": "집들이 사진 상품 태그 → 구매",
     "mode": "break",
-    "conclusion": "사진에서 바로 사게 하면 된다",
-    "conclusion_auto": true
+    "conclusion": "상품 사진 대신 실제 집 사진에서 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "비슷한 집에서 보고 샀다",
+    "reveals": "실제 모습이 확신을 준다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "광고 게시물이 늘었다",
+    "reveals": "진정성 유지가 과제다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "콘텐츠 진정성 대 판매",
     "how": "일반인 집들이 사진에 상품 태그를 붙여 진정성을 판매로 이었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "인테리어 판매",
+    "reframed": "실제 집 모습으로 구매 확신",
+    "metric": "콘텐츠→구매 전환"
+   },
+   "issue_tree": {
+    "root": "인테리어 구매를 돕으려면",
+    "branches": [
+     {
+      "issue": "상품 정보",
+      "chosen": false,
+      "sub": [
+       "사진",
+       "치수"
+      ]
+     },
+     {
+      "issue": "실제 사례",
+      "chosen": true,
+      "sub": [
+       "집들이",
+       "상품 태그"
+      ]
+     },
+     {
+      "issue": "체험",
+      "chosen": false,
+      "sub": [
+       "쇼룸",
+       "반품"
+      ]
+     }
+    ],
+    "why": "실제 모습이 상상을 만든다"
+   },
+   "pareto": {
+    "vital_few": "상품 태그된 집들이",
+    "effect": "구매의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "상품 정보",
+      "issue": "사진",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "상품 정보",
+      "issue": "치수",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "실제 사례",
+      "issue": "집들이",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "실제 사례",
+      "issue": "상품 태그",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "체험",
+      "issue": "쇼룸",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "체험",
+      "issue": "반품",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "집들이 상품 태그가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 집들이인가: 산다",
+     "왜 매출인가: 커머스 수수료가 수익원이다"
+    ],
+    "intent": "커머스 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "콘텐츠→구매 전환",
+    "leading": [
+     "태그 클릭률",
+     "콘텐츠→구매 전환율"
+    ],
+    "guardrail": "광고성 게시물 비율",
+    "vanity": "게시물 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "콘텐츠·구매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객이 원하는 건 상품 정보가 아니라 '비슷한 집의 실제 모습'이었다."
   },
   {
@@ -11473,10 +14182,41 @@
     "symptom": "리셀 거래 사기",
     "problem": "구매자가 진품 여부를 확인할 방법이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 리셀 운동화가 불안한가: 가품일 수 있다",
+     "왜 확인 못 하나: 개인 간 거래다",
+     "왜 플랫폼이 안 했나: 실물을 다루는 비용이 크다는 통념"
+    ],
+    "root_cause": "진품 확인 장치가 없다"
+   },
+   "pest": {
+    "political": "위조품 규제",
+    "economic": "리셀 시장 성장",
+    "social": "한정판 수집 문화",
+    "technological": "검수 시스템",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "검수센터",
+    "opportunity": "리셀 시장 성장",
+    "so": "검수 + 시세 공개",
+    "weakness": "검수 오류 위험",
+    "wo": "검수 기준 공개·보상",
+    "threat": "해외 리셀 플랫폼",
+    "st": "국내 빠른 검수로 차별"
+   },
+   "three_c": {
+    "customer": "가품이 걱정인 리셀 구매자",
+    "competitor": "개인 간 중고 거래",
+    "company": "검수센터",
+    "gap": "검수된 리셀"
+   },
    "hyps": [
     {
      "text": "에스크로 결제",
@@ -11535,21 +14275,150 @@
     ],
     "solution": "검수센터 + 시세 공개",
     "mode": "break",
-    "conclusion": "플랫폼이 검수하면 신뢰가 상품이 된다",
-    "conclusion_auto": true
+    "conclusion": "불안을 플랫폼이 떠안아 신뢰를 상품으로 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "검수 통과라 믿고 산다",
+    "reveals": "검수가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "구매자",
+    "says": "검수에서 놓친 가품이 왔다",
+    "reveals": "검수 정확도가 생명이다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "개인 간 거래 편의 대 진품 신뢰",
     "how": "검수센터를 끼워 개인 거래의 편의와 신뢰를 함께 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "리셀 거래",
+    "reframed": "진품 신뢰",
+    "metric": "거래액"
+   },
+   "issue_tree": {
+    "root": "리셀 거래를 믿게 하려면",
+    "branches": [
+     {
+      "issue": "판매자 평판",
+      "chosen": false,
+      "sub": [
+       "평가",
+       "인증"
+      ]
+     },
+     {
+      "issue": "검수",
+      "chosen": true,
+      "sub": [
+       "검수센터",
+       "시세 공개"
+      ]
+     },
+     {
+      "issue": "결제",
+      "chosen": false,
+      "sub": [
+       "에스크로",
+       "환불"
+      ]
+     }
+    ],
+    "why": "실물을 확인해야 고가 거래가 열린다"
+   },
+   "pareto": {
+    "vital_few": "검수",
+    "effect": "거래 신뢰의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "판매자 평판",
+      "issue": "평가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "판매자 평판",
+      "issue": "인증",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "검수",
+      "issue": "검수센터",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "검수",
+      "issue": "시세 공개",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "에스크로",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "결제",
+      "issue": "환불",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "검수센터와 시세 공개가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 검수인가: 고가 거래가 열린다",
+     "왜 매출인가: 거래 수수료가 수익원이다"
+    ],
+    "intent": "거래 수수료 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "거래액",
+    "leading": [
+     "검수 통과율",
+     "가품 분쟁률"
+    ],
+    "guardrail": "검수 소요 시간",
+    "vanity": "앱 설치 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "가품 분쟁과 거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고가 상품에서는 검수 비용이 곧 상품 가치다."
   },
   {
@@ -11595,10 +14464,41 @@
     "symptom": "쇼핑몰 탐색 피로",
     "problem": "상품이 몰별로 흩어져 비교가 어렵다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 쇼핑몰을 돌아다니나: 상품이 흩어져 있다",
+     "왜 흩어져 있나: 소호몰마다 따로다",
+     "왜 안 모았나: 각자 브랜드라 모을 수 없다는 통념"
+    ],
+    "root_cause": "비교할 한곳이 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "소호몰 증가",
+    "social": "모바일 쇼핑",
+    "technological": "모아보기 피드",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "모아보기 기술",
+    "opportunity": "모바일 쇼핑",
+    "so": "소호몰 통합 피드",
+    "weakness": "소호몰 품질 편차",
+    "wo": "통합 결제·배송",
+    "threat": "대형 플랫폼",
+    "st": "취향 피드로 방어"
+   },
+   "three_c": {
+    "customer": "여러 몰을 비교하고 싶은 여성",
+    "competitor": "개별 소호몰",
+    "company": "모아보기",
+    "gap": "한곳에서 보는 소호몰"
+   },
    "hyps": [
     {
      "text": "개별 몰 앱 출시",
@@ -11672,21 +14572,149 @@
     ],
     "solution": "소호몰 모아보기 앱",
     "mode": "break",
-    "conclusion": "모으기만 해도 쇼핑 시작점이 된다",
-    "conclusion_auto": true
+    "conclusion": "흩어진 것을 모으기만 해도 시작점이 된다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "여기서 다 본다",
+    "reveals": "모으는 편의가 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "몰마다 배송·교환이 달라 불편하다",
+    "reveals": "통합 경험이 필요하다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "소호몰 개성 대 비교 편의",
     "how": "각 몰 브랜드를 살린 채 한 피드로 모았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "이용자 확보",
+    "reframed": "쇼핑의 시작점 되기",
+    "metric": "주간 활성 이용자"
+   },
+   "issue_tree": {
+    "root": "쇼핑 시작점이 되려면",
+    "branches": [
+     {
+      "issue": "자체 상품",
+      "chosen": false,
+      "sub": [
+       "브랜드",
+       "사입"
+      ]
+     },
+     {
+      "issue": "모아보기",
+      "chosen": true,
+      "sub": [
+       "피드",
+       "비교"
+      ]
+     },
+     {
+      "issue": "결제",
+      "chosen": false,
+      "sub": [
+       "통합 결제",
+       "통합 배송"
+      ]
+     }
+    ],
+    "why": "고객은 비교하고 싶다"
+   },
+   "pareto": {
+    "vital_few": "모아보기 피드",
+    "effect": "유입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "자체 상품",
+      "issue": "브랜드",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "자체 상품",
+      "issue": "사입",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "모아보기",
+      "issue": "피드",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "모아보기",
+      "issue": "비교",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "통합 결제",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "통합 배송",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "모아보기가 핵심이고 통합 결제는 큰 베팅"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 시작점인가: 많이 들른다",
+     "왜 매출인가: 광고와 결제 수수료가 생긴다"
+    ],
+    "intent": "광고·수수료 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "주간 활성 이용자",
+    "leading": [
+     "주간 활성 이용자",
+     "통합 결제 비율"
+    ],
+    "guardrail": "반품 불만",
+    "vanity": "입점 몰 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "공급자가 잘게 쪼개져 있을수록 모아 주는 쪽에 가치가 생긴다."
   },
   {
@@ -11729,10 +14757,39 @@
     "symptom": "신생 브랜드가 끼어들 틈이 없다",
     "problem": "모두가 같은 축(기능·스타 마케팅)으로 경쟁하고 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 운동화가 다 비슷한가: 같은 축으로 경쟁한다",
+     "왜 같은가: 기능·스타 마케팅만 본다",
+     "왜 소재는 안 보나: 합성 소재여야 한다는 통념"
+    ],
+    "root_cause": "경쟁 축이 하나다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "운동화 가격",
+    "social": "친환경·단순함 선호",
+    "technological": "울 소재 가공",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "자연 소재 기술",
+    "opportunity": "친환경 선호",
+    "so": "울 소재 일상 운동화",
+    "weakness": "내구성 약함",
+    "wo": "소재 개선",
+    "threat": "대형 브랜드의 친환경 라인",
+    "st": "단순함 브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "편하고 친환경적인 신발을 원하는 사람",
+    "competitor": "기능 경쟁 운동화",
+    "company": "울 소재",
+    "gap": "편하고 단순한 친환경 운동화"
+   },
    "hyps": [
     {
      "text": "기능성으로 경쟁",
@@ -11806,21 +14863,150 @@
     ],
     "solution": "울 소재 단순한 일상 운동화",
     "mode": "break",
-    "conclusion": "자연 소재와 단순함을 내세운다",
-    "conclusion_auto": true
+    "conclusion": "같은 축에서 싸우지 말고 다른 축을 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "신기 편하고 단순하다",
+    "reveals": "편안함이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "금방 닳는다",
+    "reveals": "내구성이 약점이다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "편안함 대 친환경·단순함",
     "how": "울 소재로 편하면서 친환경인 신발을 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "운동화 판매",
+    "reframed": "다른 경쟁 축",
+    "metric": "재구매율"
+   },
+   "issue_tree": {
+    "root": "운동화를 차별화하려면",
+    "branches": [
+     {
+      "issue": "기능",
+      "chosen": false,
+      "sub": [
+       "쿠션",
+       "기술"
+      ]
+     },
+     {
+      "issue": "소재·단순함",
+      "chosen": true,
+      "sub": [
+       "울",
+       "디자인"
+      ]
+     },
+     {
+      "issue": "마케팅",
+      "chosen": false,
+      "sub": [
+       "스타",
+       "광고"
+      ]
+     }
+    ],
+    "why": "소재 축은 비어 있었다"
+   },
+   "pareto": {
+    "vital_few": "울 소재 편안함",
+    "effect": "구매 이유의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기능",
+      "issue": "쿠션",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "기능",
+      "issue": "기술",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "소재·단순함",
+      "issue": "울",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "소재·단순함",
+      "issue": "디자인",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "마케팅",
+      "issue": "스타",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "마케팅",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "소재와 단순함이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 다른 축인가: 차별된다",
+     "왜 매출인가: 직판 마진으로 판다"
+    ],
+    "intent": "직판 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재구매율",
+    "leading": [
+     "재구매율",
+     "내구성 불만률"
+    ],
+    "guardrail": "반품률",
+    "vanity": "SNS 언급",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "고객 반응",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "기존 강자와 같은 축이면 뻔함으로 탈락한다. 다른 축을 찾는다."
   },
   {
@@ -11866,10 +15052,43 @@
     "symptom": "캐리어 구매 불만",
     "problem": "중간 가격대의 좋은 캐리어가 유통 마진 때문에 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 좋은 캐리어가 비싼가: 유통 마진이 붙는다",
+     "왜 붙나: 백화점에서 판다",
+     "왜 백화점인가: 만져 보고 산다는 통념"
+    ],
+    "root_cause": "유통 마진"
+   },
+   "pest": {
+    "political": "배터리 항공 규정",
+    "economic": "여행 수요",
+    "social": "온라인 직판 수용",
+    "technological": "내장 충전 배터리",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "직판 브랜드",
+    "opportunity": "여행 수요 증가",
+    "so": "직판 + 충전 캐리어",
+    "weakness": "배터리 규정 위험",
+    "wo": "분리형 배터리",
+    "threat": "저가 모방",
+    "st": "브랜드 디자인으로 방어"
+   },
+   "three_c": {
+    "customer": "적당한 가격의 좋은 캐리어를 원하는 여행자",
+    "competitor": "비싼 백화점 브랜드",
+    "company": "직판",
+    "gap": "직판 가격의 기능 캐리어"
+   },
    "hyps": [
     {
      "text": "백화점 입점",
@@ -11928,21 +15147,150 @@
     ],
     "solution": "직판 + 충전 배터리 캐리어",
     "mode": "break",
-    "conclusion": "여행 중 불편까지 풀면 차별이 된다",
-    "conclusion_auto": true
+    "conclusion": "유통을 빼고 여행 중 불편까지 풀어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여행자",
+    "says": "공항에서 휴대폰을 충전했다",
+    "reveals": "실제 불편 해결이 차별이다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "항공 규정",
+    "says": "배터리 일체형은 문제가 된다",
+    "reveals": "규제 확인이 필요하다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "품질 대 가격",
     "how": "직판으로 유통 마진을 빼 같은 품질을 싸게 팔았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "캐리어 판매",
+    "reframed": "직판 가격과 기능 차별",
+    "metric": "매출"
+   },
+   "issue_tree": {
+    "root": "좋은 캐리어를 싸게 팔려면",
+    "branches": [
+     {
+      "issue": "소재",
+      "chosen": false,
+      "sub": [
+       "폴리카보네이트",
+       "바퀴"
+      ]
+     },
+     {
+      "issue": "유통",
+      "chosen": true,
+      "sub": [
+       "직판",
+       "온라인"
+      ]
+     },
+     {
+      "issue": "기능",
+      "chosen": false,
+      "sub": [
+       "충전",
+       "수납"
+      ]
+     }
+    ],
+    "why": "유통 마진을 빼면 같은 품질을 싸게 판다"
+   },
+   "pareto": {
+    "vital_few": "직판 가격",
+    "effect": "구매 이유의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "소재",
+      "issue": "폴리카보네이트",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "소재",
+      "issue": "바퀴",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "유통",
+      "issue": "직판",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유통",
+      "issue": "온라인",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "기능",
+      "issue": "충전",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "기능",
+      "issue": "수납",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "직판이 핵심이고 충전 기능은 차별 포인트"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 직판인가: 싸게 판다",
+     "왜 매출인가: 마진을 유지하며 많이 판다"
+    ],
+    "intent": "직판 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "매출",
+    "leading": [
+     "직판 전환율",
+     "추천률"
+    ],
+    "guardrail": "배터리 규정 이슈",
+    "vanity": "광고 노출",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "survey",
+      "experiment"
+     ],
+     "how": "여행자 조사",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "제품이 쓰이는 '여행 전체'를 보면 새 기능이 보인다."
   },
   {
@@ -11985,10 +15333,41 @@
     "symptom": "베이스 메이크업이 번거롭다",
     "problem": "액체 제품을 위생적이고 간편하게 바를 도구가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 바르기가 번거롭나: 손에 묻고 고르게 안 발린다",
+     "왜 그런가: 병·튜브에 담는다",
+     "왜 안 바꿨나: 용기는 바꿀 수 없다는 통념"
+    ],
+    "root_cause": "용기가 바르기를 불편하게 한다"
+   },
+   "pest": {
+    "political": "화장품 표시 규제",
+    "economic": "화장품 시장",
+    "social": "간편 메이크업",
+    "technological": "스펀지 함침 기술",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "용기·스펀지 기술",
+    "opportunity": "간편 메이크업 수요",
+    "so": "쿠션 팩트",
+    "weakness": "특허 모방",
+    "wo": "기술 라이선스",
+    "threat": "해외 브랜드 모방",
+    "st": "원조 기술로 방어"
+   },
+   "three_c": {
+    "customer": "간편하게 바르고 싶은 여성",
+    "competitor": "병·튜브 화장품",
+    "company": "스펀지 기술",
+    "gap": "한 번에 바르고 수정하는 쿠션"
+   },
    "hyps": [
     {
      "text": "더 가벼운 제형",
@@ -12062,21 +15441,150 @@
     ],
     "solution": "스펀지 용기 + 퍼프 쿠션",
     "mode": "break",
-    "conclusion": "스펀지에 머금게 하면 바르기와 수정이 한 번에 된다",
-    "conclusion_auto": true
+    "conclusion": "내용물이 아니라 용기를 바꿔라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "들고 다니며 수정이 쉽다",
+    "reveals": "간편함이 핵심 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사용자",
+    "says": "퍼프 위생이 걱정된다",
+    "reveals": "위생 관리가 과제다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "위생·간편함 대 커버력",
     "how": "스펀지 용기와 퍼프로 간편하면서도 고르게 바르게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "화장품 판매",
+    "reframed": "바르기 편의",
+    "metric": "재구매율"
+   },
+   "issue_tree": {
+    "root": "바르기를 편하게 하려면",
+    "branches": [
+     {
+      "issue": "제형",
+      "chosen": false,
+      "sub": [
+       "묽기",
+       "지속력"
+      ]
+     },
+     {
+      "issue": "용기",
+      "chosen": true,
+      "sub": [
+       "스펀지",
+       "퍼프"
+      ]
+     },
+     {
+      "issue": "휴대",
+      "chosen": false,
+      "sub": [
+       "크기",
+       "디자인"
+      ]
+     }
+    ],
+    "why": "불편은 용기에서 온다"
+   },
+   "pareto": {
+    "vital_few": "쿠션 용기",
+    "effect": "구매 이유의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "제형",
+      "issue": "묽기",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "제형",
+      "issue": "지속력",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "용기",
+      "issue": "스펀지",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "용기",
+      "issue": "퍼프",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "휴대",
+      "issue": "크기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "휴대",
+      "issue": "디자인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "용기 혁신이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 용기 혁신인가: 새 카테고리를 만든다",
+     "왜 매출인가: 리필과 라이선스 매출이 생긴다"
+    ],
+    "intent": "쿠션 카테고리 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재구매율",
+    "leading": [
+     "리필 구매율",
+     "재구매율"
+    ],
+    "guardrail": "위생 불만",
+    "vanity": "광고 노출",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "experiment"
+     ],
+     "how": "사용 행동 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "내용물이 아니라 '담는 방식'을 바꾼 혁신이다."
   },
   {
@@ -13938,10 +17446,41 @@
     "symptom": "소도시에는 할인점이 없다",
     "problem": "소도시는 시장이 작다는 가정 때문에 아무도 안 들어갔다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 소도시에 할인점이 없나: 아무도 안 들어갔다",
+     "왜 안 갔나: 시장이 작다고 봤다",
+     "왜 틀렸나: 경쟁이 없으면 작아도 독점이다"
+    ],
+    "root_cause": "소도시는 작다는 가정"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "물류비",
+    "social": "소도시 쇼핑 불편",
+    "technological": "물류센터·POS",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "물류센터 운영",
+    "opportunity": "경쟁 없는 소도시",
+    "so": "소도시 선점 밀집 출점",
+    "weakness": "낮은 인지도",
+    "wo": "저가로 인지",
+    "threat": "대형 경쟁사 진출",
+    "st": "물류 비용 우위"
+   },
+   "three_c": {
+    "customer": "쇼핑할 곳이 없는 소도시 주민",
+    "competitor": "대도시 할인점",
+    "company": "물류센터",
+    "gap": "소도시의 할인점"
+   },
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -14000,21 +17539,150 @@
     ],
     "solution": "소도시 선점 + 물류센터 밀집 출점",
     "mode": "break",
-    "conclusion": "물류센터를 중심으로 촘촘히 내면 비용도 낮다",
-    "conclusion_auto": true
+    "conclusion": "남들이 작다고 본 시장을 먼저 독점하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "소도시 주민",
+    "says": "가까이서 싸게 산다",
+    "reveals": "접근성이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "지역 상인",
+    "says": "동네 가게가 망한다",
+    "reveals": "지역 경제 비판",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "작은 시장 대 매출",
     "how": "소도시를 선점해 독점하고 물류 밀집으로 비용을 낮췄다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매장 확대",
+    "reframed": "소도시 선점",
+    "metric": "매장당 매출"
+   },
+   "issue_tree": {
+    "root": "소도시에서 이기려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "할인"
+      ]
+     },
+     {
+      "issue": "입지",
+      "chosen": true,
+      "sub": [
+       "소도시 선점",
+       "밀집 출점"
+      ]
+     },
+     {
+      "issue": "물류",
+      "chosen": false,
+      "sub": [
+       "물류센터",
+       "배송"
+      ]
+     }
+    ],
+    "why": "경쟁이 없으면 작은 시장도 크다"
+   },
+   "pareto": {
+    "vital_few": "소도시 선점",
+    "effect": "성장의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "저가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "입지",
+      "issue": "소도시 선점",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "입지",
+      "issue": "밀집 출점",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "물류",
+      "issue": "물류센터",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "물류",
+      "issue": "배송",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "소도시 선점과 밀집 출점이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 선점인가: 경쟁이 없다",
+     "왜 성장인가: 독점 지역이 쌓여 규모가 된다"
+    ],
+    "intent": "매장 수 성장",
+    "intent_metric": "매장 수·매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "매장당 매출",
+    "leading": [
+     "소도시 매장 수",
+     "매장당 매출"
+    ],
+    "guardrail": "지역 반발",
+    "vanity": "광고 노출",
+    "intent_metric": "매장 수·매출",
+    "select_method": {
+     "methods": [
+      "quant",
+      "observation"
+     ],
+     "how": "지역 상권 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'작은 시장'이 경쟁 없는 시장이면 오히려 큰 기회다."
   },
   {
@@ -14057,10 +17725,39 @@
     "symptom": "매장 방문 빈도가 낮다",
     "problem": "가구 매장은 '필요할 때만 가는 곳'이다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 가구 매장에 자주 안 오나: 필요할 때만 간다",
+     "왜 그런가: 가구만 판다",
+     "왜 가구만인가: 가구점은 가구만 판다는 통념"
+    ],
+    "root_cause": "머물 이유가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "교외 대형 부지",
+    "social": "가족 주말 나들이",
+    "technological": "해당 적음",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "대형 매장과 브랜드",
+    "opportunity": "가족 나들이 수요",
+    "so": "식당·놀이 공간",
+    "weakness": "교외 입지",
+    "wo": "온라인과 연결",
+    "threat": "온라인 가구",
+    "st": "경험으로 방어"
+   },
+   "three_c": {
+    "customer": "주말을 보낼 곳을 찾는 가족",
+    "competitor": "가구만 파는 매장",
+    "company": "대형 매장",
+    "gap": "반나절을 보내는 가구 매장"
+   },
    "hyps": [
     {
      "text": "할인 행사",
@@ -14134,21 +17831,149 @@
     ],
     "solution": "매장 식당 + 놀이 공간 + 한 방향 동선",
     "mode": "break",
-    "conclusion": "식당·놀이 공간으로 반나절을 보내게 한다",
-    "conclusion_auto": true
+    "conclusion": "가구가 아니라 반나절을 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "가족",
+    "says": "아이랑 놀고 밥 먹고 쇼핑까지 한다",
+    "reveals": "머무는 경험이 구매로 이어진다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "동선이 길어 지친다",
+    "reveals": "강제 동선의 피로",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "매장 체류 대 판매 효율",
     "how": "식당·놀이 공간과 한 방향 동선으로 머무는 시간을 구매로 바꿨다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매장 매출",
+    "reframed": "머무는 시간 늘리기",
+    "metric": "체류 시간·객단가"
+   },
+   "issue_tree": {
+    "root": "매장에 오래 머물게 하려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "행사"
+      ]
+     },
+     {
+      "issue": "체류 공간",
+      "chosen": true,
+      "sub": [
+       "식당",
+       "놀이 공간"
+      ]
+     },
+     {
+      "issue": "동선",
+      "chosen": false,
+      "sub": [
+       "한 방향",
+       "쇼룸"
+      ]
+     }
+    ],
+    "why": "머무르면 더 산다"
+   },
+   "pareto": {
+    "vital_few": "매장 식당",
+    "effect": "체류 증가의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "행사",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "체류 공간",
+      "issue": "식당",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "체류 공간",
+      "issue": "놀이 공간",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "동선",
+      "issue": "한 방향",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "동선",
+      "issue": "쇼룸",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "식당과 한 방향 동선이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 체류인가: 더 산다",
+     "왜 매출인가: 객단가가 오른다"
+    ],
+    "intent": "객단가 매출",
+    "intent_metric": "객단가",
+    "mode": "raise",
+    "criterion": "객단가가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "체류 시간·객단가",
+    "leading": [
+     "체류 시간",
+     "식당 이용률"
+    ],
+    "guardrail": "동선 피로 불만",
+    "vanity": "방문객 수",
+    "intent_metric": "객단가",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "매장 행동 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "구매 빈도가 낮은 상품은 '방문 이유'를 따로 만들어야 한다."
   },
   {
@@ -38346,10 +42171,39 @@
     "symptom": "브랜드 쇠퇴",
     "problem": "못생김을 약점으로만 대한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 안 팔리나: 못생겼다",
+     "왜 못생김이 문제인가: 신발은 예뻐야 한다는 통념",
+     "왜 놓쳤나: 못생김을 즐기는 사람을 못 봤다"
+    ],
+    "root_cause": "못생김을 약점으로만 봤다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "저가 원가",
+    "social": "개성 표현·키치 문화",
+    "technological": "폼 소재",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "편한 폼 소재",
+    "opportunity": "개성 표현 문화",
+    "so": "지비츠 장식과 협업",
+    "weakness": "유행 의존",
+    "wo": "꾸미기로 반복 구매",
+    "threat": "모방품",
+    "st": "브랜드 협업으로 방어"
+   },
+   "three_c": {
+    "customer": "개성을 드러내고 싶은 젊은 층",
+    "competitor": "예쁜 신발",
+    "company": "편한 소재",
+    "gap": "꾸미는 못생긴 신발"
+   },
    "hyps": [
     {
      "text": "평범한 디자인으로 바꾼다",
@@ -38423,21 +42277,150 @@
     ],
     "solution": "지비츠 장식 + 협업 개성 표현",
     "mode": "break",
-    "conclusion": "장식과 협업으로 개성 도구로 만든다",
-    "conclusion_auto": true
+    "conclusion": "약점을 숨기지 말고 즐길 거리로 바꿔라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "젊은 고객",
+    "says": "내 맘대로 꾸민다",
+    "reveals": "개성 표현이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "패션 비평가",
+    "says": "여전히 못생겼다",
+    "reveals": "호불호를 감수한다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "편안함 대 스타일",
     "how": "장식으로 못생김을 개성 표현으로 바꿔 둘 다 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "신발 판매",
+    "reframed": "개성 표현 도구",
+    "metric": "장식 구매율"
+   },
+   "issue_tree": {
+    "root": "못생긴 신발을 팔려면",
+    "branches": [
+     {
+      "issue": "디자인 개선",
+      "chosen": false,
+      "sub": [
+       "형태",
+       "색"
+      ]
+     },
+     {
+      "issue": "개성 표현",
+      "chosen": true,
+      "sub": [
+       "지비츠",
+       "협업"
+      ]
+     },
+     {
+      "issue": "편안함",
+      "chosen": false,
+      "sub": [
+       "소재",
+       "가격"
+      ]
+     }
+    ],
+    "why": "즐기는 사람은 꾸미고 싶어 한다"
+   },
+   "pareto": {
+    "vital_few": "지비츠 장식",
+    "effect": "반복 매출의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "디자인 개선",
+      "issue": "형태",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "디자인 개선",
+      "issue": "색",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "개성 표현",
+      "issue": "지비츠",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "개성 표현",
+      "issue": "협업",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "편안함",
+      "issue": "소재",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "편안함",
+      "issue": "가격",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "장식과 협업이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 개성 표현인가: 다시 산다",
+     "왜 매출인가: 장식이 반복 매출이 된다"
+    ],
+    "intent": "반복 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "장식 구매율",
+    "leading": [
+     "장식 구매율",
+     "협업 매출"
+    ],
+    "guardrail": "유행 의존도",
+    "vanity": "SNS 언급",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "고객 반응",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "불닭처럼 단점을 정체성으로 바꿨다."
   },
   {
@@ -38480,10 +42463,39 @@
     "symptom": "여성 요가복 부재",
     "problem": "여성의 운동과 일상 사이 옷이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 요가복이 없었나: 운동과 일상 사이 옷이 없다",
+     "왜 없나: 의류는 광고로 판다는 통념",
+     "왜 문제인가: 요가하는 사람은 강사를 믿는다"
+    ],
+    "root_cause": "커뮤니티를 놓친 판매 방식"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "프리미엄 의류",
+    "social": "요가·웰니스 문화",
+    "technological": "기능성 원단",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "기능성 원단",
+    "opportunity": "웰니스 문화",
+    "so": "강사 앰배서더·매장 수업",
+    "weakness": "높은 가격",
+    "wo": "커뮤니티로 정당화",
+    "threat": "스포츠 대형 브랜드",
+    "st": "커뮤니티 충성도"
+   },
+   "three_c": {
+    "customer": "운동과 일상을 오가는 여성",
+    "competitor": "광고 중심 스포츠 브랜드",
+    "company": "원단과 커뮤니티",
+    "gap": "동네 강사가 입는 애슬레저"
+   },
    "hyps": [
     {
      "text": "기존 스포츠 브랜드 여성 라인",
@@ -38557,21 +42569,150 @@
     ],
     "solution": "커뮤니티 기반 애슬레저",
     "mode": "break",
-    "conclusion": "강사를 앰배서더로, 매장을 수업 공간으로 쓴다",
-    "conclusion_auto": true
+    "conclusion": "광고 대신 동네에서 믿는 사람을 통해 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "요가 선생님이 입어서 샀다",
+    "reveals": "신뢰하는 사람의 추천",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "너무 비싸다",
+    "reveals": "가격 저항",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "운동 기능 대 일상 스타일",
     "how": "애슬레저로 운동과 일상을 한 옷에 담았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "의류 판매",
+    "reframed": "커뮤니티 기반 확산",
+    "metric": "매장당 매출"
+   },
+   "issue_tree": {
+    "root": "요가복을 팔려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "TV",
+       "스타"
+      ]
+     },
+     {
+      "issue": "커뮤니티",
+      "chosen": true,
+      "sub": [
+       "강사 앰배서더",
+       "매장 수업"
+      ]
+     },
+     {
+      "issue": "제품",
+      "chosen": false,
+      "sub": [
+       "원단",
+       "핏"
+      ]
+     }
+    ],
+    "why": "요가하는 사람은 강사를 믿는다"
+   },
+   "pareto": {
+    "vital_few": "강사 앰배서더",
+    "effect": "신규 고객의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "TV",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "스타",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "커뮤니티",
+      "issue": "강사 앰배서더",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "커뮤니티",
+      "issue": "매장 수업",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "제품",
+      "issue": "원단",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "제품",
+      "issue": "핏",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "강사와 매장 수업이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 커뮤니티인가: 충성 고객이 생긴다",
+     "왜 매출인가: 정가 판매 비중이 높다"
+    ],
+    "intent": "정가 판매 매출",
+    "intent_metric": "매출 총이익률",
+    "mode": "raise",
+    "criterion": "매출 총이익률이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "매장당 매출",
+    "leading": [
+     "매장 수업 참여자 구매율",
+     "재구매율"
+    ],
+    "guardrail": "할인 비중",
+    "vanity": "광고 노출",
+    "intent_metric": "매출 총이익률",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "요가 강사·고객 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "영향력 있는 소수(강사)를 통한 확산."
   },
   {
@@ -46127,10 +50268,43 @@
     "symptom": "결제 이탈",
     "problem": "반복 구매자에게도 매번 같은 입력을 요구한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 결제에서 떠나나: 단계가 많다",
+     "왜 많나: 매번 같은 정보를 넣는다",
+     "왜 그런가: 확인이 많아야 안전하다는 통념"
+    ],
+    "root_cause": "반복 구매자에게도 같은 입력을 요구한다"
+   },
+   "pest": {
+    "political": "특허·결제 규제",
+    "economic": "해당 적음",
+    "social": "즉시 구매 욕구",
+    "technological": "결제 정보 저장",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "저장된 고객 정보",
+    "opportunity": "즉시 구매 욕구",
+    "so": "원클릭 주문",
+    "weakness": "실수 주문",
+    "wo": "취소 기능",
+    "threat": "경쟁사 간편결제",
+    "st": "특허로 선점"
+   },
+   "three_c": {
+    "customer": "반복 구매하는 고객",
+    "competitor": "매번 입력하는 쇼핑몰",
+    "company": "저장된 정보",
+    "gap": "버튼 한 번 주문"
+   },
    "hyps": [
     {
      "text": "결제 화면 디자인 개선",
@@ -46206,21 +50380,149 @@
     ],
     "solution": "원클릭 주문",
     "mode": "break",
-    "conclusion": "버튼 한 번으로 끝낸다",
-    "conclusion_auto": true
+    "conclusion": "아는 고객에게는 확인을 없애라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "버튼 하나로 끝난다",
+    "reveals": "속도가 편의다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "실수로 주문했다",
+    "reveals": "취소 경로가 필요하다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "결제 안전 대 속도",
     "how": "저장된 정보로 아는 고객만 한 번에 결제하게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "결제 이탈 줄이기",
+    "reframed": "반복 구매자 입력 없애기",
+    "metric": "결제 완료율"
+   },
+   "issue_tree": {
+    "root": "결제 이탈을 줄이려면",
+    "branches": [
+     {
+      "issue": "보안",
+      "chosen": false,
+      "sub": [
+       "인증",
+       "확인"
+      ]
+     },
+     {
+      "issue": "입력 생략",
+      "chosen": true,
+      "sub": [
+       "정보 저장",
+       "원클릭"
+      ]
+     },
+     {
+      "issue": "혜택",
+      "chosen": false,
+      "sub": [
+       "쿠폰",
+       "적립"
+      ]
+     }
+    ],
+    "why": "아는 고객에겐 확인이 필요 없다"
+   },
+   "pareto": {
+    "vital_few": "반복 구매자",
+    "effect": "원클릭 효과의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보안",
+      "issue": "인증",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "보안",
+      "issue": "확인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "입력 생략",
+      "issue": "정보 저장",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "입력 생략",
+      "issue": "원클릭",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "혜택",
+      "issue": "쿠폰",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "혜택",
+      "issue": "적립",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "원클릭이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 원클릭인가: 결제가 는다",
+     "왜 매출인가: 충동 구매까지 매출이 된다"
+    ],
+    "intent": "구매 빈도 매출",
+    "intent_metric": "고객당 주문 수",
+    "mode": "raise",
+    "criterion": "고객당 주문 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "결제 완료율",
+    "leading": [
+     "원클릭 사용률",
+     "결제 완료율"
+    ],
+    "guardrail": "실수 주문 취소율",
+    "vanity": "장바구니 수",
+    "intent_metric": "고객당 주문 수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "결제 퍼널 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "장바구니 이탈 연습 사례와 같은 문제를 '단계 제거'로 풀었다."
   },
   {
@@ -47397,10 +51699,41 @@
     "symptom": "사업 몰락",
     "problem": "연체료와 매장 중심 수익 구조가 변화를 막았다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 변하지 못했나: 연체료가 수익이다",
+     "왜 못 버렸나: 매장 중심 수익 구조다",
+     "왜 위험했나: 고객 불만을 해결한 경쟁자가 나왔다"
+    ],
+    "root_cause": "수익원이 고객 불만이었다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "연체료 수익",
+    "social": "연체료 반감",
+    "technological": "스트리밍·우편 대여",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "매장 네트워크",
+    "opportunity": "온라인 대여 기회",
+    "so": "매장과 온라인 결합 가능",
+    "weakness": "연체료 의존",
+    "wo": "연체료 폐지",
+    "threat": "넷플릭스",
+    "st": "(실패) 늦게 대응"
+   },
+   "three_c": {
+    "customer": "연체료가 싫은 대여 고객",
+    "competitor": "연체료 없는 넷플릭스",
+    "company": "매장 네트워크",
+    "gap": "(실패) 연체료 없는 대여를 놓침"
+   },
    "hyps": [
     {
      "text": "매장 확대",
@@ -47459,21 +51792,149 @@
     ],
     "solution": "연체료·매장 모델을 못 버리고 파산",
     "mode": "break",
-    "conclusion": "알고도 늦으면 끝난다",
-    "conclusion_auto": true
+    "conclusion": "고객을 벌주는 수익은 경쟁자에게 고객을 넘긴다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "옛 고객",
+    "says": "주말에 매장 가는 게 즐거웠다",
+    "reveals": "매장 경험의 가치",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "연체료가 화났다",
+    "reveals": "수익원이 불만원이었다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "연체료 수익 대 고객 만족",
     "how": "둘을 잇지 못해 고객을 잃었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "대여 1위 유지",
+    "reframed": "고객 불만을 없애는 전환",
+    "metric": "고객 유지율"
+   },
+   "issue_tree": {
+    "root": "대여 사업을 지키려면",
+    "branches": [
+     {
+      "issue": "매장",
+      "chosen": false,
+      "sub": [
+       "입지",
+       "재고"
+      ]
+     },
+     {
+      "issue": "수익 구조",
+      "chosen": true,
+      "sub": [
+       "연체료 폐지",
+       "구독"
+      ]
+     },
+     {
+      "issue": "온라인",
+      "chosen": false,
+      "sub": [
+       "우편",
+       "스트리밍"
+      ]
+     }
+    ],
+    "why": "연체료가 가장 큰 불만이었다"
+   },
+   "pareto": {
+    "vital_few": "연체료",
+    "effect": "고객 이탈 원인의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "매장",
+      "issue": "입지",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "매장",
+      "issue": "재고",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "수익 구조",
+      "issue": "연체료 폐지",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "수익 구조",
+      "issue": "구독",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "온라인",
+      "issue": "우편",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "온라인",
+      "issue": "스트리밍",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "연체료 폐지와 온라인 전환이 필요했다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 전환이 필요했나: 고객이 떠난다",
+     "왜 떠났나: 더 편한 대안이 생겼다"
+    ],
+    "intent": "고객 유지로 사업 존속",
+    "intent_metric": "회원 수",
+    "mode": "hold",
+    "criterion": "연체료를 없애도 회원 수와 매출이 크게 줄지 않으면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "고객 유지율",
+    "leading": [
+     "연체료 매출 비중",
+     "회원 이탈률"
+    ],
+    "guardrail": "매장 매출",
+    "vanity": "매장 수",
+    "intent_metric": "회원 수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 데이터를 알고도 늦게 대응",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "넷플릭스 사례의 반대편. 같은 Why not yet을 기존 강자는 못 풀었다."
   },
   {
@@ -47891,10 +52352,43 @@
     "symptom": "3개월 해지",
     "problem": "매달 '새로움'이 줄어 기대가 꺾인다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 3개월째 해지가 많나: 기대가 꺾인다",
+     "왜 꺾이나: 새로움이 줄어든다",
+     "왜 줄어드나: 회사가 일방적으로 골라 준다"
+    ],
+    "root_cause": "고객이 참여하지 않는 큐레이션"
+   },
+   "pest": {
+    "political": "정기결제 해지 규제",
+    "economic": "구독 피로",
+    "social": "취향 다양화",
+    "technological": "투표·선택 기능",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "큐레이션 역량",
+    "opportunity": "취향 데이터",
+    "so": "고객 투표·선택",
+    "weakness": "새로움 고갈",
+    "wo": "쉬어 가기 옵션",
+    "threat": "구독 피로·해지 규제",
+    "st": "쉬운 일시정지로 신뢰"
+   },
+   "three_c": {
+    "customer": "매달 설레고 싶은 구독자",
+    "competitor": "일방 큐레이션 구독",
+    "company": "큐레이션",
+    "gap": "내가 참여하는 구독"
+   },
    "hyps": [
     {
      "text": "해지 시 할인 제안",
@@ -47953,21 +52447,150 @@
     ],
     "solution": "고객 참여 구성 + 쉬어 가기 옵션",
     "mode": "break",
-    "conclusion": "투표·선택과 쉬어 가기를 준다",
-    "conclusion_auto": true
+    "conclusion": "대신 골라 주되 고객이 참여하게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구독자",
+    "says": "내가 고른 게 와서 기대된다",
+    "reveals": "참여가 기대를 유지한다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "해지자",
+    "says": "매달 비슷하다",
+    "reveals": "새로움 고갈이 해지 원인이다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "큐레이션 대 고객 취향",
     "how": "고객 투표로 큐레이션에 취향을 섞었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "해지 줄이기",
+    "reframed": "새로움과 기대 유지",
+    "metric": "3개월 유지율"
+   },
+   "issue_tree": {
+    "root": "3개월 해지를 줄이려면",
+    "branches": [
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "장기 할인",
+       "쿠폰"
+      ]
+     },
+     {
+      "issue": "참여",
+      "chosen": true,
+      "sub": [
+       "투표",
+       "선택"
+      ]
+     },
+     {
+      "issue": "유연성",
+      "chosen": false,
+      "sub": [
+       "쉬어 가기",
+       "주기 변경"
+      ]
+     }
+    ],
+    "why": "고객이 고르면 기대가 유지된다"
+   },
+   "pareto": {
+    "vital_few": "3개월째 기대 하락",
+    "effect": "해지의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인",
+      "issue": "장기 할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "쿠폰",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "참여",
+      "issue": "투표",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "참여",
+      "issue": "선택",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유연성",
+      "issue": "쉬어 가기",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유연성",
+      "issue": "주기 변경",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "참여가 핵심이고 쉬어 가기는 빠른 승리"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 해지를 막나: 오래 남는다",
+     "왜 유지인가: 획득 비용을 회수한다"
+    ],
+    "intent": "구독 유지 매출",
+    "intent_metric": "3개월 유지율",
+    "mode": "raise",
+    "criterion": "3개월 유지율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "3개월 유지율",
+    "leading": [
+     "투표 참여율",
+     "쉬어 가기 이용률"
+    ],
+    "guardrail": "해지 절차 민원",
+    "vanity": "신규 가입 수",
+    "intent_metric": "3개월 유지율",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "해지 시점 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "해지 대신 '잠시 멈춤'을 만들면 이탈이 줄어든다."
   },
   {
@@ -48386,10 +53009,41 @@
     "symptom": "저녁 시간 품절과 매출 손실",
     "problem": "고객이 미리 확보할 방법이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 반찬가게 온라인 주문이 없나: 와서 산다",
+     "왜 와야 하나: 미리 확보할 방법이 없다",
+     "왜 없나: 반찬가게는 보고 사는 곳이라는 통념"
+    ],
+    "root_cause": "수요를 미리 잡지 못한다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "폐기 비용",
+    "social": "맞벌이 저녁 고민",
+    "technological": "메신저 예약",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "동네 단골과 신선 반찬",
+    "opportunity": "메신저 예약 습관",
+    "so": "점심 예약·퇴근 픽업",
+    "weakness": "폐기 손실",
+    "wo": "예약 수량만 생산",
+    "threat": "배달 반찬 플랫폼",
+    "st": "동네 단골 관계로 방어"
+   },
+   "three_c": {
+    "customer": "저녁 반찬이 고민인 직장인",
+    "competitor": "배달 반찬·마트",
+    "company": "동네 신선 반찬",
+    "gap": "미리 예약하는 동네 반찬"
+   },
    "hyps": [
     {
      "text": "생산량을 늘린다",
@@ -48450,21 +53104,149 @@
     ],
     "solution": "메신저 사전 예약 + 퇴근길 픽업",
     "mode": "break",
-    "conclusion": "그때 예약받고 퇴근길에 준다",
-    "conclusion_auto": true
+    "conclusion": "오기를 기다리지 말고 점심에 예약받아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "직장인",
+    "says": "퇴근길에 받아 가니 편하다",
+    "reveals": "예약이 편의다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사장",
+    "says": "예약 관리가 번거롭다",
+    "reveals": "쉬운 예약 도구가 필요하다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "신선 반찬 대 폐기",
     "how": "사전 예약으로 만든 만큼 팔았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매출 늘리기",
+    "reframed": "수요를 미리 잡기",
+    "metric": "예약 매출"
+   },
+   "issue_tree": {
+    "root": "반찬 수요를 미리 잡으려면",
+    "branches": [
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "마감 할인",
+       "묶음"
+      ]
+     },
+     {
+      "issue": "사전 예약",
+      "chosen": true,
+      "sub": [
+       "메신저 예약",
+       "퇴근 픽업"
+      ]
+     },
+     {
+      "issue": "배달",
+      "chosen": false,
+      "sub": [
+       "플랫폼",
+       "직배송"
+      ]
+     }
+    ],
+    "why": "직장인은 점심에 저녁을 생각한다"
+   },
+   "pareto": {
+    "vital_few": "사전 예약 고객",
+    "effect": "매출 안정의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인",
+      "issue": "마감 할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "묶음",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "사전 예약",
+      "issue": "메신저 예약",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "사전 예약",
+      "issue": "퇴근 픽업",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "배달",
+      "issue": "플랫폼",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "배달",
+      "issue": "직배송",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "메신저 예약이 빠르고 효과가 크다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 예약인가: 만든 만큼 판다",
+     "왜 이익인가: 폐기가 줄어 이익이 오른다"
+    ],
+    "intent": "폐기 감소 이익",
+    "intent_metric": "가게 이익",
+    "mode": "raise",
+    "criterion": "가게 이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "예약 매출",
+    "leading": [
+     "예약 주문 비율",
+     "폐기율"
+    ],
+    "guardrail": "사장 업무 부담",
+    "vanity": "메신저 친구 수",
+    "intent_metric": "가게 이익",
+    "select_method": {
+     "methods": [
+      "experiment"
+     ],
+     "how": "예약 시범 운영",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "수요 예측 문제를 '선주문'으로 바꾸면 폐기와 품절이 함께 준다."
   },
   {
@@ -50082,10 +54864,41 @@
     "symptom": "또래 패션 정보 부족",
     "problem": "일반인 코디를 공유하는 공간이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 10대가 패션 정보를 못 찾나: 따라 할 사례가 없다",
+     "왜 없나: 콘텐츠를 전문가만 만든다",
+     "왜 그런가: 전문가가 만든다는 통념"
+    ],
+    "root_cause": "또래 코디를 공유할 곳이 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "10대 구매력 제한",
+    "social": "또래 문화",
+    "technological": "사진 공유 앱",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "또래 코디 커뮤니티",
+    "opportunity": "10대 패션 관심",
+    "so": "커뮤니티 위 커머스",
+    "weakness": "구매력 약함",
+    "wo": "저가 상품 큐레이션",
+    "threat": "대형 패션 플랫폼",
+    "st": "또래 커뮤니티로 방어"
+   },
+   "three_c": {
+    "customer": "또래 패션을 따라 하고 싶은 10대",
+    "competitor": "전문가 패션 매체",
+    "company": "또래 커뮤니티",
+    "gap": "또래 코디와 바로 구매"
+   },
    "hyps": [
     {
      "text": "패션 잡지 콘텐츠",
@@ -50159,21 +54972,149 @@
     ],
     "solution": "또래 코디 커뮤니티 + 커머스",
     "mode": "break",
-    "conclusion": "공유 커뮤니티 위에 구매를 붙인다",
-    "conclusion_auto": true
+    "conclusion": "전문가가 아니라 또래가 만든 콘텐츠로 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "10대",
+    "says": "친구 같은 사람 코디라 따라 하기 쉽다",
+    "reveals": "또래가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "광고가 늘었다",
+    "reveals": "커뮤니티 진정성 유지",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "진정성 대 상업성",
     "how": "또래 코디 위에 구매를 붙였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "커머스 매출",
+    "reframed": "또래 콘텐츠로 구매 연결",
+    "metric": "콘텐츠→구매 전환"
+   },
+   "issue_tree": {
+    "root": "10대에게 팔려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "모델",
+       "할인"
+      ]
+     },
+     {
+      "issue": "또래 콘텐츠",
+      "chosen": true,
+      "sub": [
+       "코디 공유",
+       "상품 태그"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "쿠폰"
+      ]
+     }
+    ],
+    "why": "또래 코디가 따라 하기 쉽다"
+   },
+   "pareto": {
+    "vital_few": "또래 코디 게시물",
+    "effect": "구매 유입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "모델",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "또래 콘텐츠",
+      "issue": "코디 공유",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "또래 콘텐츠",
+      "issue": "상품 태그",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "저가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "쿠폰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "또래 코디와 태그가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 또래 콘텐츠인가: 산다",
+     "왜 매출인가: 커뮤니티를 수익화한다"
+    ],
+    "intent": "커머스 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "콘텐츠→구매 전환",
+    "leading": [
+     "코디 게시물 수",
+     "태그 구매 전환율"
+    ],
+    "guardrail": "광고성 게시물 비율",
+    "vanity": "앱 설치 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "콘텐츠·구매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "무신사·오늘의집과 같은 '커뮤니티 → 커머스' 패턴."
   },
   {
@@ -51803,10 +56744,39 @@
     "symptom": "이후 성장 정체와 가게 이탈",
     "problem": "할인 고객이 단골이 되지 않아 가게에 손해였다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 성장 뒤 무너졌나: 가게가 떠났다",
+     "왜 떠났나: 할인 손님이 단골이 안 됐다",
+     "왜 안 됐나: 할인만 보고 오는 손님이다"
+    ],
+    "root_cause": "공급자 손해 구조"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "경기 침체 할인 수요",
+    "social": "할인 사냥 문화",
+    "technological": "이메일 딜",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "대규모 이메일 고객",
+    "opportunity": "가게의 온라인 홍보 수요",
+    "so": "지역 할인 딜",
+    "weakness": "공급자 손해",
+    "wo": "단골 전환 장치",
+    "threat": "모방 업체",
+    "st": "(실패) 차별 부족"
+   },
+   "three_c": {
+    "customer": "할인을 찾는 소비자",
+    "competitor": "모방 딜 사이트",
+    "company": "이메일 고객",
+    "gap": "(실패) 가게에 이익이 되는 홍보"
+   },
    "hyps": [
     {
      "text": "지역 가게를 위한 신규 고객 유치",
@@ -51865,21 +56835,149 @@
     ],
     "solution": "빠른 성장 뒤 가게 이탈로 쇠퇴",
     "mode": "break",
-    "conclusion": "공급자가 손해 보면 떠난다",
-    "conclusion_auto": true
+    "conclusion": "공급자가 손해 보는 성장은 오래가지 않는다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "소비자",
+    "says": "반값에 맛집을 가 봤다",
+    "reveals": "할인이 시도 계기다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "가게 사장",
+    "says": "손님은 왔는데 손해만 봤다",
+    "reveals": "공급자 이익이 지속 조건이다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "대폭 할인 대 가게 이익",
     "how": "둘을 잇지 못해 가게가 떠났다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "딜 판매",
+    "reframed": "가게에도 이익이 되는 홍보",
+    "metric": "가게 재참여율"
+   },
+   "issue_tree": {
+    "root": "할인 딜을 지속하려면",
+    "branches": [
+     {
+      "issue": "할인 폭",
+      "chosen": false,
+      "sub": [
+       "반값",
+       "소폭"
+      ]
+     },
+     {
+      "issue": "가게 이익",
+      "chosen": true,
+      "sub": [
+       "단골 전환",
+       "비수기 활용"
+      ]
+     },
+     {
+      "issue": "고객",
+      "chosen": false,
+      "sub": [
+       "이메일",
+       "앱"
+      ]
+     }
+    ],
+    "why": "가게가 손해 보면 떠난다"
+   },
+   "pareto": {
+    "vital_few": "가게 재참여",
+    "effect": "공급 유지의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인 폭",
+      "issue": "반값",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "할인 폭",
+      "issue": "소폭",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가게 이익",
+      "issue": "단골 전환",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "가게 이익",
+      "issue": "비수기 활용",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "고객",
+      "issue": "이메일",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "고객",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "가게 이익 설계가 핵심이었다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 가게 이익인가: 다시 참여한다",
+     "왜 재참여인가: 딜 공급이 매출이다"
+    ],
+    "intent": "지속 가능한 딜 매출",
+    "intent_metric": "가게 재참여율",
+    "mode": "hold",
+    "criterion": "할인 폭을 줄여도 딜 매출이 크게 줄지 않으면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "가게 재참여율",
+    "leading": [
+     "할인 손님 재방문율",
+     "가게 재참여율"
+    ],
+    "guardrail": "딜 매출",
+    "vanity": "이메일 구독자 수",
+    "intent_metric": "가게 재참여율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 성장 지표만 봄",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "공급자(가게)에게 손해인 구조는 오래가지 않는다."
   },
   {
@@ -52257,10 +57355,39 @@
     "symptom": "파산",
     "problem": "상품 단가에 비해 배송비가 너무 컸다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 망했나: 팔수록 손해였다",
+     "왜 손해인가: 단가 대비 배송비가 컸다",
+     "왜 못 풀었나: 반복 주문으로 묶지 않았다"
+    ],
+    "root_cause": "단위 경제 무시"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "닷컴 버블",
+    "social": "온라인 쇼핑 초기",
+    "technological": "온라인 주문",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "브랜드 인지도",
+    "opportunity": "온라인 펫 수요",
+    "so": "(실패) 대규모 광고",
+    "weakness": "배송비 구조",
+    "wo": "정기배송 필요",
+    "threat": "오프라인 펫숍",
+    "st": "(실패) 가격 경쟁만 함"
+   },
+   "three_c": {
+    "customer": "무거운 사료가 귀찮은 반려인",
+    "competitor": "오프라인 펫숍",
+    "company": "인지도",
+    "gap": "(실패) 정기배송으로 묶은 펫 쇼핑"
+   },
    "hyps": [
     {
      "text": "대규모 광고",
@@ -52319,21 +57446,149 @@
     ],
     "solution": "단위 경제 무시로 파산",
     "mode": "break",
-    "conclusion": "반복 주문으로 묶어야 했다",
-    "conclusion_auto": true
+    "conclusion": "팔수록 손해면 성장할수록 빨리 망한다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "집까지 와서 편했다",
+    "reveals": "배송 편의 수요는 있었다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "주문마다 손해다",
+    "reveals": "단위 경제가 먼저다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 가격 대 배송비",
     "how": "둘을 맞추지 못해 망했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매출 성장",
+    "reframed": "주문당 이익 확보",
+    "metric": "주문당 공헌이익"
+   },
+   "issue_tree": {
+    "root": "펫 용품을 온라인으로 팔려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "TV",
+       "인형 마스코트"
+      ]
+     },
+     {
+      "issue": "단위 경제",
+      "chosen": true,
+      "sub": [
+       "정기배송",
+       "묶음 주문"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "무료 배송"
+      ]
+     }
+    ],
+    "why": "단가 대비 배송비가 문제였다"
+   },
+   "pareto": {
+    "vital_few": "무거운 저가 상품 배송비",
+    "effect": "손실의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "TV",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "인형 마스코트",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "단위 경제",
+      "issue": "정기배송",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "단위 경제",
+      "issue": "묶음 주문",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "무료 배송",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "정기배송과 묶음이 필요했다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 단위 경제인가: 손실이 준다",
+     "왜 먼저인가: 돈이 떨어지기 전에 이익 구조가 필요하다"
+    ],
+    "intent": "생존 가능한 이익 구조",
+    "intent_metric": "주문당 공헌이익",
+    "mode": "raise",
+    "criterion": "주문당 공헌이익이 흑자가 되면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "주문당 공헌이익",
+    "leading": [
+     "주문당 배송비",
+     "정기 주문 비율"
+    ],
+    "guardrail": "매출 성장",
+    "vanity": "광고 노출",
+    "intent_metric": "주문당 공헌이익",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 단위 경제 검증 없이 확장",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "츄이(정기배송·물류 효율)는 같은 시장을 다른 구조로 풀었다."
   },
   {
@@ -52621,10 +57876,39 @@
     "symptom": "급성장 후 붕괴",
     "problem": "고객 획득 비용과 재고 확장이 매출보다 빨랐다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 확장이 실패했나: 비용이 매출보다 빨리 늘었다",
+     "왜 늘었나: 고객 획득과 재고에 과투자했다",
+     "왜 과투자했나: 초기 반응만 믿었다"
+    ],
+    "root_cause": "단위 경제 없는 확장"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "투자 과열",
+    "social": "디자인 상품 관심",
+    "technological": "플래시 세일",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "디자인 큐레이션",
+    "opportunity": "디자인 상품 관심",
+    "so": "(실패) 빠른 확장",
+    "weakness": "높은 획득 비용",
+    "wo": "단위 경제 검증",
+    "threat": "경쟁 큐레이션 몰",
+    "st": "(실패) 차별 약화"
+   },
+   "three_c": {
+    "customer": "디자인 상품을 좋아하는 고객",
+    "competitor": "대형 쇼핑몰",
+    "company": "큐레이션",
+    "gap": "(실패) 이익 나는 디자인 큐레이션"
+   },
    "hyps": [
     {
      "text": "디자인 상품 큐레이션",
@@ -52683,21 +57967,149 @@
     ],
     "solution": "피벗 뒤 확장 실패",
     "mode": "break",
-    "conclusion": "단위 경제 없이 확장하면 무너진다",
-    "conclusion_auto": true
+    "conclusion": "반응이 좋아도 단위 경제가 먼저다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "초기 고객",
+    "says": "매일 새 디자인을 보는 재미가 있었다",
+    "reveals": "발견의 재미",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "비용이 매출보다 빨리 늘었다",
+    "reveals": "확장 전 검증 필요",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 성장 대 단위 경제",
     "how": "둘을 맞추지 못했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "빠른 성장",
+    "reframed": "이익 나는 성장",
+    "metric": "주문당 공헌이익"
+   },
+   "issue_tree": {
+    "root": "디자인 커머스를 키우려면",
+    "branches": [
+     {
+      "issue": "고객 획득",
+      "chosen": false,
+      "sub": [
+       "광고",
+       "해외"
+      ]
+     },
+     {
+      "issue": "단위 경제",
+      "chosen": true,
+      "sub": [
+       "획득 비용",
+       "재고"
+      ]
+     },
+     {
+      "issue": "상품",
+      "chosen": false,
+      "sub": [
+       "큐레이션",
+       "자체 브랜드"
+      ]
+     }
+    ],
+    "why": "비용이 매출보다 빨랐다"
+   },
+   "pareto": {
+    "vital_few": "고객 획득 비용",
+    "effect": "손실의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "고객 획득",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "고객 획득",
+      "issue": "해외",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "단위 경제",
+      "issue": "획득 비용",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "단위 경제",
+      "issue": "재고",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "큐레이션",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "상품",
+      "issue": "자체 브랜드",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "획득 비용과 재고 관리가 핵심이었다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 단위 경제인가: 손실이 준다",
+     "왜 중요한가: 투자금이 끝나기 전에 흑자 구조가 필요하다"
+    ],
+    "intent": "흑자 구조",
+    "intent_metric": "공헌이익률",
+    "mode": "raise",
+    "criterion": "공헌이익률이 흑자가 되면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "주문당 공헌이익",
+    "leading": [
+     "고객 획득 비용",
+     "재구매율"
+    ],
+    "guardrail": "매출 성장",
+    "vanity": "방문자 수",
+    "intent_metric": "공헌이익률",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 성장 지표 중심",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "하나의 성공 가설이 모든 확장 가설을 정당화하지 않는다."
   },
   {
@@ -52740,10 +58152,39 @@
     "symptom": "고가 드레스 구매 부담",
     "problem": "옷을 '소유'해야 입을 수 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 드레스가 부담인가: 한 번 입는데 비싸다",
+     "왜 사야 하나: 옷은 소유해야 입는다는 통념",
+     "왜 안 빌리나: 세탁·배송 대행이 없었다"
+    ],
+    "root_cause": "한 번 입을 옷을 소유해야 한다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "고가 의류",
+    "social": "공유 경제·SNS 사진 문화",
+    "technological": "대여 물류·세탁",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "대여 물류·세탁",
+    "opportunity": "공유 경제",
+    "so": "드레스 대여 → 의류 구독",
+    "weakness": "물류 비용",
+    "wo": "구독으로 이용률 높이기",
+    "threat": "패스트패션",
+    "st": "고급 브랜드로 차별"
+   },
+   "three_c": {
+    "customer": "행사용 고급 옷이 필요한 여성",
+    "competitor": "비싼 구매·패스트패션",
+    "company": "대여 물류",
+    "gap": "빌려 입는 고급 옷"
+   },
    "hyps": [
     {
      "text": "할인 판매",
@@ -52819,21 +58260,150 @@
     ],
     "solution": "드레스 대여 → 의류 구독",
     "mode": "break",
-    "conclusion": "세탁·배송을 대신 맡는다",
-    "conclusion_auto": true
+    "conclusion": "한 번 입을 옷은 소유하지 말고 빌리게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "비싼 드레스를 싸게 입었다",
+    "reveals": "접근성이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "원하는 사이즈가 없었다",
+    "reveals": "재고 관리가 과제다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "고급 옷 대 낮은 비용",
     "how": "빌려 입게 해 싸게 고급을 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "드레스 판매",
+    "reframed": "고급 옷을 빌려 입게",
+    "metric": "구독자 수"
+   },
+   "issue_tree": {
+    "root": "고급 옷을 싸게 입게 하려면",
+    "branches": [
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "아울렛",
+       "중고"
+      ]
+     },
+     {
+      "issue": "대여",
+      "chosen": true,
+      "sub": [
+       "드레스 대여",
+       "구독"
+      ]
+     },
+     {
+      "issue": "물류",
+      "chosen": false,
+      "sub": [
+       "세탁",
+       "배송"
+      ]
+     }
+    ],
+    "why": "한 번 입을 옷은 빌리면 된다"
+   },
+   "pareto": {
+    "vital_few": "구독 회원",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인",
+      "issue": "아울렛",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "중고",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "대여",
+      "issue": "드레스 대여",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "대여",
+      "issue": "구독",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "물류",
+      "issue": "세탁",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "물류",
+      "issue": "배송",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "대여와 구독이 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 구독인가: 반복 이용한다",
+     "왜 반복인가: 물류 고정비를 회수한다"
+    ],
+    "intent": "구독 반복 매출",
+    "intent_metric": "구독 유지율",
+    "mode": "raise",
+    "criterion": "구독 유지율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "구독자 수",
+    "leading": [
+     "대여 회전율",
+     "구독 유지율"
+    ],
+    "guardrail": "세탁·물류 비용",
+    "vanity": "가입자 수",
+    "intent_metric": "구독 유지율",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "대여 시범과 이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "사용 빈도가 낮은 고가품은 대여 모델 후보다. (세탁·물류 비용 관리가 관건)"
   },
   {
@@ -52872,10 +58442,39 @@
     "symptom": "중고 의류 공급 부족",
     "problem": "판매자가 들이는 수고가 옷값보다 크다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 안 입는 옷을 안 파나: 귀찮다",
+     "왜 귀찮나: 사진·가격·배송을 직접 한다",
+     "왜 직접인가: 중고는 판매자가 판다는 통념"
+    ],
+    "root_cause": "판매 수고가 옷값보다 크다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "중고 시장 성장",
+    "social": "지속 가능 소비",
+    "technological": "대량 검수·촬영",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "대량 검수 시스템",
+    "opportunity": "지속 가능 소비",
+    "so": "위탁 판매 대행",
+    "weakness": "판매자 수익 낮음",
+    "wo": "보상 투명화",
+    "threat": "다른 리셀 플랫폼",
+    "st": "처리 규모로 방어"
+   },
+   "three_c": {
+    "customer": "귀찮아서 안 파는 사람",
+    "competitor": "직접 파는 중고 장터",
+    "company": "대량 처리",
+    "gap": "봉투만 보내는 중고 판매"
+   },
    "hyps": [
     {
      "text": "중고 거래 앱",
@@ -52949,21 +58548,149 @@
     ],
     "solution": "위탁 판매 대행",
     "mode": "break",
-    "conclusion": "봉투만 보내면 대신 판다",
-    "conclusion_auto": true
+    "conclusion": "판매자의 수고를 플랫폼이 대신하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "판매자",
+    "says": "봉투에 담아 보내기만 했다",
+    "reveals": "수고 제거가 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "판매자",
+    "says": "받은 돈이 너무 적다",
+    "reveals": "보상 수준이 과제다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "판매 편의 대 판매자 수익",
     "how": "위탁 대행으로 수고를 없애고 수수료를 뗐다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "중고 공급 늘리기",
+    "reframed": "판매 수고 없애기",
+    "metric": "위탁 봉투 수"
+   },
+   "issue_tree": {
+    "root": "중고 공급을 늘리려면",
+    "branches": [
+     {
+      "issue": "보상",
+      "chosen": false,
+      "sub": [
+       "수수료",
+       "적립"
+      ]
+     },
+     {
+      "issue": "판매 대행",
+      "chosen": true,
+      "sub": [
+       "봉투 위탁",
+       "검수·촬영"
+      ]
+     },
+     {
+      "issue": "수요",
+      "chosen": false,
+      "sub": [
+       "구매자 유입",
+       "가격"
+      ]
+     }
+    ],
+    "why": "수고가 옷값보다 크면 안 판다"
+   },
+   "pareto": {
+    "vital_few": "봉투 위탁",
+    "effect": "공급의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보상",
+      "issue": "수수료",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보상",
+      "issue": "적립",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "판매 대행",
+      "issue": "봉투 위탁",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "판매 대행",
+      "issue": "검수·촬영",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "수요",
+      "issue": "구매자 유입",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "수요",
+      "issue": "가격",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "위탁 대행이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 공급인가: 상품이 는다",
+     "왜 성장인가: 상품이 많아야 구매자가 온다"
+    ],
+    "intent": "공급 기반 거래 성장",
+    "intent_metric": "판매 거래액",
+    "mode": "raise",
+    "criterion": "판매 거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "위탁 봉투 수",
+    "leading": [
+     "위탁 봉투 수",
+     "판매율"
+    ],
+    "guardrail": "판매자 보상 불만",
+    "vanity": "앱 설치 수",
+    "intent_metric": "판매 거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "위탁·판매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "중고 명품 연습 사례의 해법(방문 수거)과 같은 구조."
   },
   {
@@ -53900,10 +59627,43 @@
     "symptom": "온라인 거래 불신",
     "problem": "결제와 배송 인프라가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 남미에서 온라인을 안 믿나: 결제·배송이 불안하다",
+     "왜 불안한가: 인프라가 없다",
+     "왜 직접 안 했나: 마켓은 결제·배송을 외부에 맡긴다는 통념"
+    ],
+    "root_cause": "결제·배송 인프라가 없다"
+   },
+   "pest": {
+    "political": "금융 규제·환율",
+    "economic": "금융 소외 인구",
+    "social": "온라인 불신",
+    "technological": "자체 결제·물류",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "장터 트래픽",
+    "opportunity": "금융 소외 인구",
+    "so": "결제(메르카도파고)·물류 수직 통합",
+    "weakness": "투자 부담",
+    "wo": "핀테크로 수익 다각화",
+    "threat": "아마존 진출",
+    "st": "현지 인프라로 방어"
+   },
+   "three_c": {
+    "customer": "온라인을 믿지 못하는 남미 소비자",
+    "competitor": "인프라 없는 장터",
+    "company": "트래픽",
+    "gap": "결제·배송까지 책임지는 장터"
+   },
    "hyps": [
     {
      "text": "해외 마켓플레이스 모델 그대로",
@@ -53977,21 +59737,149 @@
     ],
     "solution": "장터 + 메르카도파고 + 물류 수직 통합",
     "mode": "break",
-    "conclusion": "직접 결제와 물류를 만든다",
-    "conclusion_auto": true
+    "conclusion": "맡길 곳이 없으면 직접 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "결제와 배송을 믿을 수 있다",
+    "reveals": "인프라가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "투자가 너무 크다",
+    "reveals": "수직 통합의 비용",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "장터 확장 대 인프라 부족",
     "how": "결제·물류를 직접 만들어 확장했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "장터 확장",
+    "reframed": "결제·배송 인프라 구축",
+    "metric": "거래액"
+   },
+   "issue_tree": {
+    "root": "남미 온라인 거래를 열려면",
+    "branches": [
+     {
+      "issue": "판매자",
+      "chosen": false,
+      "sub": [
+       "입점",
+       "평가"
+      ]
+     },
+     {
+      "issue": "인프라",
+      "chosen": true,
+      "sub": [
+       "결제",
+       "물류"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": false,
+      "sub": [
+       "보증",
+       "환불"
+      ]
+     }
+    ],
+    "why": "인프라가 없으면 거래가 안 된다"
+   },
+   "pareto": {
+    "vital_few": "자체 결제",
+    "effect": "거래 신뢰의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "판매자",
+      "issue": "입점",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "판매자",
+      "issue": "평가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "인프라",
+      "issue": "결제",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "인프라",
+      "issue": "물류",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "보증",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "환불",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "결제와 물류가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 수직 통합인가: 거래가 열린다",
+     "왜 성장인가: 결제·물류가 또 다른 사업이 된다"
+    ],
+    "intent": "생태계 성장",
+    "intent_metric": "거래액·핀테크 매출",
+    "mode": "raise",
+    "criterion": "거래액과 핀테크 매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "거래액",
+    "leading": [
+     "자체 결제 이용률",
+     "자체 배송 비율"
+    ],
+    "guardrail": "사기 거래율",
+    "vanity": "판매자 수",
+    "intent_metric": "거래액·핀테크 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "인프라가 없는 시장에서는 인프라 자체가 경쟁력이다."
   },
   {
@@ -54168,10 +60056,39 @@
     "symptom": "속옷 선 불만",
     "problem": "얇고 편한 보정 속옷이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 속옷 선이 보이나: 보정 속옷이 두껍다",
+     "왜 두껍나: 남성 중심 시각으로 설계했다",
+     "왜 몰랐나: 착용자 불편을 직접 겪지 않았다"
+    ],
+    "root_cause": "착용자 관점의 설계 부재"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "의류 시장",
+    "social": "여성 소비자 목소리",
+    "technological": "얇은 신축 소재",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "착용자 이해",
+    "opportunity": "여성 소비자 목소리",
+    "so": "얇은 보정 속옷",
+    "weakness": "신생 브랜드",
+    "wo": "직접 시연·입소문",
+    "threat": "대형 속옷 브랜드",
+    "st": "원조 브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "선이 보이는 게 싫은 여성",
+    "competitor": "두꺼운 보정 속옷",
+    "company": "착용자 관점",
+    "gap": "얇고 편한 보정"
+   },
    "hyps": [
     {
      "text": "두꺼운 보정 속옷 개선",
@@ -54247,21 +60164,150 @@
     ],
     "solution": "얇은 보정 속옷",
     "mode": "break",
-    "conclusion": "스타킹 발을 잘라 낸 발상으로 만든다",
-    "conclusion_auto": true
+    "conclusion": "착용자가 직접 겪는 불편에서 출발하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여성 고객",
+    "says": "옷 밖으로 선이 안 보인다",
+    "reveals": "실제 불편 해결이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "오래 입으면 답답하다",
+    "reveals": "편안함과 보정의 균형",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "보정 효과 대 편안함",
     "how": "얇은 소재로 보정하면서 편하게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "속옷 판매",
+    "reframed": "얇고 편한 보정",
+    "metric": "재구매율"
+   },
+   "issue_tree": {
+    "root": "선이 안 보이게 하려면",
+    "branches": [
+     {
+      "issue": "디자인",
+      "chosen": false,
+      "sub": [
+       "색",
+       "모양"
+      ]
+     },
+     {
+      "issue": "소재",
+      "chosen": true,
+      "sub": [
+       "얇은 신축",
+       "발 부분 제거"
+      ]
+     },
+     {
+      "issue": "판매",
+      "chosen": false,
+      "sub": [
+       "백화점",
+       "입소문"
+      ]
+     }
+    ],
+    "why": "착용자는 얇고 편한 보정을 원한다"
+   },
+   "pareto": {
+    "vital_few": "얇은 소재",
+    "effect": "구매 이유의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "디자인",
+      "issue": "색",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "디자인",
+      "issue": "모양",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "소재",
+      "issue": "얇은 신축",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "소재",
+      "issue": "발 부분 제거",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "판매",
+      "issue": "백화점",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "판매",
+      "issue": "입소문",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "소재 혁신이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 얇은 소재인가: 산다",
+     "왜 매출인가: 새 카테고리 매출이 생긴다"
+    ],
+    "intent": "카테고리 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재구매율",
+    "leading": [
+     "재구매율",
+     "입소문 추천률"
+    ],
+    "guardrail": "착용 불편 반품",
+    "vanity": "광고 노출",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "experiment"
+     ],
+     "how": "창업자 본인 경험과 시제품",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "실제 사용자 본인의 '꼼수'가 제품 아이디어가 된다."
   },
   {
@@ -54304,10 +60350,42 @@
     "symptom": "고객 의견 단절",
     "problem": "제품 개발이 고객 대화와 분리되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 고객 이야기를 안 듣나: 브랜드가 위에서 메시지를 낸다",
+     "왜 그런가: 브랜드는 위에서 내린다는 통념",
+     "왜 아쉬운가: 블로그 독자가 원하는 제품을 이미 말한다"
+    ],
+    "root_cause": "제품 개발과 고객 대화의 분리"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "뷰티 시장",
+    "social": "독자 커뮤니티",
+    "technological": "블로그·SNS",
+    "key": [
+     "S",
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "블로그 독자 커뮤니티",
+    "opportunity": "SNS 확산",
+    "so": "독자 의견으로 제품 개발",
+    "weakness": "오프라인 접점 부족",
+    "wo": "팝업 매장",
+    "threat": "대형 뷰티 브랜드",
+    "st": "커뮤니티 충성도"
+   },
+   "three_c": {
+    "customer": "자기 의견이 반영되길 원하는 독자",
+    "competitor": "위에서 내리는 뷰티 브랜드",
+    "company": "독자 커뮤니티",
+    "gap": "독자가 함께 만드는 뷰티"
+   },
    "hyps": [
     {
      "text": "유명인 광고",
@@ -54381,21 +60459,150 @@
     ],
     "solution": "커뮤니티 주도 뷰티 브랜드",
     "mode": "break",
-    "conclusion": "그 의견으로 만들고 독자를 홍보대사로 쓴다",
-    "conclusion_auto": true
+    "conclusion": "고객이 이미 말하는 것을 제품으로 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "내가 원한 제품이 나왔다",
+    "reveals": "참여가 충성도다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "유행이 지났다",
+    "reveals": "커뮤니티 열기 유지",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "브랜드 통제 대 고객 참여",
     "how": "독자 의견으로 만들고 브랜드 톤을 지켰다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "화장품 판매",
+    "reframed": "고객 대화로 제품 개발",
+    "metric": "재구매율"
+   },
+   "issue_tree": {
+    "root": "고객이 원하는 화장품을 만들려면",
+    "branches": [
+     {
+      "issue": "연구",
+      "chosen": false,
+      "sub": [
+       "성분",
+       "실험실"
+      ]
+     },
+     {
+      "issue": "고객 대화",
+      "chosen": true,
+      "sub": [
+       "블로그 의견",
+       "홍보대사"
+      ]
+     },
+     {
+      "issue": "채널",
+      "chosen": false,
+      "sub": [
+       "매장",
+       "SNS"
+      ]
+     }
+    ],
+    "why": "독자가 원하는 제품을 이미 말한다"
+   },
+   "pareto": {
+    "vital_few": "독자 의견 기반 제품",
+    "effect": "히트 상품의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "연구",
+      "issue": "성분",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "연구",
+      "issue": "실험실",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "고객 대화",
+      "issue": "블로그 의견",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "고객 대화",
+      "issue": "홍보대사",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "채널",
+      "issue": "매장",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "채널",
+      "issue": "SNS",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "독자 의견과 홍보대사가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 고객 대화인가: 팔리는 제품이 나온다",
+     "왜 매출인가: 직판 매출이 커진다"
+    ],
+    "intent": "직판 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재구매율",
+    "leading": [
+     "의견 반영 제품 매출 비중",
+     "홍보대사 추천 수"
+    ],
+    "guardrail": "커뮤니티 활동 감소",
+    "vanity": "SNS 팔로워",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "voc",
+      "interview"
+     ],
+     "how": "블로그 댓글과 독자 의견",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "콘텐츠(블로그)로 먼저 모은 고객이 제품 개발의 원천이 된다."
   },
   {
@@ -58280,10 +64487,41 @@
     "symptom": "해지율을 낮추려고 해지 절차를 복잡하게 만들었다",
     "problem": "단기 리텐션 지표를 위해 고객 동의와 해지 권리를 해치는 설계를 했다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 제재를 받았나: 해지를 어렵게 했다",
+     "왜 어렵게 했나: 단기 리텐션을 지키려 했다",
+     "왜 문제인가: 동의와 해지 권리를 해쳤다"
+    ],
+    "root_cause": "리텐션 지표를 위한 해지 방해"
+   },
+   "pest": {
+    "political": "FTC 다크패턴 규제",
+    "economic": "구독 매출",
+    "social": "소비자 권리 의식",
+    "technological": "해지 화면 설계",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "프라임 혜택",
+    "opportunity": "구독 경제",
+    "so": "혜택으로 자연 유지",
+    "weakness": "해지 방해 설계",
+    "wo": "해지 절차 단순화",
+    "threat": "FTC 제재",
+    "st": "투명성 개선"
+   },
+   "three_c": {
+    "customer": "쉽게 나가고 싶은 회원",
+    "competitor": "쉬운 해지 구독",
+    "company": "강한 혜택",
+    "gap": "쉽게 나갈 수 있어도 남는 멤버십"
+   },
    "hyps": [
     {
      "text": "해지 화면에 혜택을 한 번 더 안내",
@@ -58342,21 +64580,150 @@
     ],
     "solution": "2025년 FTC 합의, 거액 납부 + 해지 절차 단순화",
     "mode": "other",
-    "conclusion": "지속 가능한 리텐션은 쉽게 나갈 수 있어도 남는 것이다",
-    "conclusion_auto": true
+    "conclusion": "붙잡지 말고 남고 싶게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "회원",
+    "says": "혜택이 좋아서 계속 쓴다",
+    "reveals": "혜택이 진짜 리텐션이다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "해지하려던 회원",
+    "says": "해지 단계가 너무 많다",
+    "reveals": "방해가 신뢰를 깎는다",
+    "source": "https://www.retailbrew.com/stories/2025/03/13/how-amazon-prime-backed-the-retail-industry-into-a-corner",
+    "inferred": false
+   },
    "trade_on": {
     "tradeoff": "리텐션 대 해지 권리",
     "how": "(실패) 해지를 막아 리텐션을 지키려다 규제에 걸렸다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "리텐션 유지",
+    "reframed": "혜택으로 남게 하기",
+    "metric": "자발적 유지율"
+   },
+   "issue_tree": {
+    "root": "회원을 지키려면",
+    "branches": [
+     {
+      "issue": "해지 방해",
+      "chosen": false,
+      "sub": [
+       "단계 추가",
+       "경고"
+      ]
+     },
+     {
+      "issue": "혜택",
+      "chosen": true,
+      "sub": [
+       "배송",
+       "영상"
+      ]
+     },
+     {
+      "issue": "투명성",
+      "chosen": false,
+      "sub": [
+       "쉬운 해지",
+       "고지"
+      ]
+     }
+    ],
+    "why": "방해는 규제 위반이다"
+   },
+   "pareto": {
+    "vital_few": "해지 방해 단계",
+    "effect": "규제 위험의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "해지 방해",
+      "issue": "단계 추가",
+      "speed": 5,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "해지 방해",
+      "issue": "경고",
+      "speed": 5,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "혜택",
+      "issue": "배송",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "혜택",
+      "issue": "영상",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "투명성",
+      "issue": "쉬운 해지",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "투명성",
+      "issue": "고지",
+      "speed": 5,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "혜택과 쉬운 해지가 핵심이다"
+   },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 쉬운 해지인가: 제재를 피한다",
+     "왜 위험인가: 거액 합의와 신뢰 하락"
+    ],
+    "intent": "규제 위험 피하며 구독 유지",
+    "intent_metric": "제재 비용·자발적 유지율",
+    "mode": "hold",
+    "criterion": "해지를 쉽게 해도 회원 수가 크게 줄지 않으면 성공"
+   },
+   "key_metrics": {
+    "north_star": "자발적 유지율",
+    "leading": [
+     "해지 완료 소요 단계",
+     "자발적 유지율"
+    ],
+    "guardrail": "회원 수",
+    "vanity": "해지 방지 화면 클릭률",
+    "intent_metric": "제재 비용·자발적 유지율",
+    "select_method": {
+     "methods": [
+      "voc",
+      "scoring"
+     ],
+     "how": "소비자 민원과 규제 조사",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "재구매·연간 상품을 설계할 때 해지·취소를 가입만큼 쉽게 만든다. 국내도 2025년부터 같은 유형을 직접 규제한다."
   },
   {
@@ -58538,10 +64905,41 @@
     "symptom": "구독 해지·유료 전환 과정의 불만이 이어졌다",
     "problem": "'업계 관행'이던 화면 설계가 법 위반이 되었다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 제재를 받았나: 해지를 어렵게 했다",
+     "왜 어렵게 했나: 매출이 준다고 봤다",
+     "왜 문제가 됐나: 법이 관행을 위반으로 바꿨다"
+    ],
+    "root_cause": "해지 방해 관행"
+   },
+   "pest": {
+    "political": "개정 전자상거래법(2025)",
+    "economic": "구독 매출",
+    "social": "소비자 권리 의식",
+    "technological": "해지 화면 설계",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "구독 콘텐츠",
+    "opportunity": "법 시행으로 투명성이 차별점",
+    "so": "쉬운 해지로 신뢰",
+    "weakness": "해지 방해 관행",
+    "wo": "해지 절차 단순화",
+    "threat": "제재·민원",
+    "st": "선제적 개선"
+   },
+   "three_c": {
+    "customer": "쉽게 해지하고 싶은 구독자",
+    "competitor": "해지를 막는 구독 서비스",
+    "company": "콘텐츠",
+    "gap": "쉽게 나가도 남는 구독"
+   },
    "hyps": [
     {
      "text": "관행대로 유지한다",
@@ -58600,21 +64998,150 @@
     ],
     "solution": "2025년 10월 구독 4개사 첫 제재",
     "mode": "break",
-    "conclusion": "해지·변경을 가입만큼 쉽게 해야 한다",
-    "conclusion_auto": true
+    "conclusion": "해지를 가입만큼 쉽게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구독자",
+    "says": "해지가 쉬워서 오히려 믿는다",
+    "reveals": "투명성이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "구독자",
+    "says": "해지 메뉴를 찾기 어렵다",
+    "reveals": "방해가 민원이 된다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "구독 유지 대 쉬운 해지",
     "how": "(실패) 해지를 어렵게 하다 제재를 받았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "구독 유지",
+    "reframed": "법을 지키며 유지",
+    "metric": "자발적 유지율"
+   },
+   "issue_tree": {
+    "root": "구독을 지키려면",
+    "branches": [
+     {
+      "issue": "해지 방해",
+      "chosen": false,
+      "sub": [
+       "단계",
+       "숨김"
+      ]
+     },
+     {
+      "issue": "콘텐츠 가치",
+      "chosen": true,
+      "sub": [
+       "독점작",
+       "개인화"
+      ]
+     },
+     {
+      "issue": "투명성",
+      "chosen": false,
+      "sub": [
+       "쉬운 해지",
+       "고지"
+      ]
+     }
+    ],
+    "why": "법이 해지 방해를 금지했다"
+   },
+   "pareto": {
+    "vital_few": "해지 방해 장치",
+    "effect": "제재 위험의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "해지 방해",
+      "issue": "단계",
+      "speed": 5,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "해지 방해",
+      "issue": "숨김",
+      "speed": 5,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "콘텐츠 가치",
+      "issue": "독점작",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "콘텐츠 가치",
+      "issue": "개인화",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "투명성",
+      "issue": "쉬운 해지",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "투명성",
+      "issue": "고지",
+      "speed": 5,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "쉬운 해지가 빠르고 위험을 없앤다"
+   },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 쉬운 해지인가: 제재를 피한다",
+     "왜 위험인가: 과징금과 평판 손실"
+    ],
+    "intent": "규제 위험 회피",
+    "intent_metric": "제재 건수",
+    "mode": "hold",
+    "criterion": "해지를 쉽게 해도 구독 매출이 크게 줄지 않으면 성공"
+   },
+   "key_metrics": {
+    "north_star": "자발적 유지율",
+    "leading": [
+     "해지 소요 단계",
+     "해지 관련 민원"
+    ],
+    "guardrail": "구독 매출",
+    "vanity": "가입자 수",
+    "intent_metric": "제재 건수",
+    "select_method": {
+     "methods": [
+      "voc",
+      "scoring"
+     ],
+     "how": "민원과 규제",
+     "source": "https://www.lawtimes.co.kr/news/articleView.html?idxno=228371",
+     "inferred": false
+    }
+   },
+   "analysis_full": true,
    "lesson": "연간 이용권·자동 예약·묶음 상품을 만들 때 6개 유형을 체크리스트로 본다."
   },
   {
