@@ -101,6 +101,10 @@
 - `db/meta/swot-st.txt`: `id | 위협 | ST 전략`
 - SO: 강점으로 기회를 잡는다. WO: 그 기회로 옮겨 가려고 약점을 메운다. ST: 강점으로 위협을 막는다.
 
+### 3C (`three_c`, `db/meta/three-c.txt`, deep 필수)
+
+형식: `id | 고객: ... ; 경쟁: ... ; 자사: ... || 빈자리`. 빈자리는 고객이 원하는데 경쟁은 못 채우고 자사는 채울 수 있는 곳이다.
+
 ### So what 결론 (`so_what.conclusion`, `db/meta/sowhat-conclusion.txt`)
 
 결론이다. 5 Why와 관습 파괴 과정을 거쳐 내린 한 문장. deep 사례는 직접 쓴다(필수). 나머지는 관습 파괴 과정의 마지막 단계를 자동으로 쓰고 `conclusion_auto: true`로 표시한다.

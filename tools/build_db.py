@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
 
 
 def fail(msg):
@@ -513,6 +513,19 @@ def main():
             fail(f'swot-st.txt:{n} 형식(SO·WO가 먼저 필요): {line[:60]}')
         byid[p[0]]['swot']['threat'] = p[1]
         byid[p[0]]['swot']['st'] = p[2]
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/three-c.txt')):
+        head, _, gap = line.partition(' || ')
+        cid, _, body = head.partition(' | ')
+        cid = cid.strip()
+        f = {}
+        for part in body.split(' ; '):
+            k, _, v = part.partition(': ')
+            f[k.strip()] = v.strip()
+        if cid not in byid or set(f) != {'고객', '경쟁', '자사'} or not all(f.values()) or not gap.strip():
+            fail(f'three-c.txt:{n} 형식(고객·경쟁·자사와 빈자리 필수): {line[:60]}')
+        if byid[cid].get('three_c'):
+            fail(f'three-c.txt:{n} {cid} 중복')
+        byid[cid]['three_c'] = {'customer': f['고객'], 'competitor': f['경쟁'], 'company': f['자사'], 'gap': gap.strip()}
     for c in cases:
         pe = c.get('pest')
         if pe:
@@ -580,7 +593,7 @@ def main():
         c.setdefault('trade_on', None)
         c.setdefault('anti_opinion', None)
         c.setdefault('pro_opinion', None)
-        for k in ('five_why', 'pest', 'swot', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
+        for k in ('five_why', 'pest', 'swot', 'three_c', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
             c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)
