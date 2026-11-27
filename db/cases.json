@@ -5291,10 +5291,43 @@
     "symptom": "송금 앱 이탈이 많다",
     "problem": "소액 송금에도 고액 거래 수준의 인증 절차를 요구한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 송금이 번거롭나: 단계가 많다",
+     "왜 많나: 인증서·보안카드를 요구한다",
+     "왜 요구하나: 소액도 고액 수준 인증을 한다"
+    ],
+    "root_cause": "금액과 무관한 일률 인증"
+   },
+   "pest": {
+    "political": "전자금융 규제 완화(공인인증서 폐지)",
+    "economic": "소액 송금 수요",
+    "social": "모바일 세대",
+    "technological": "간편 인증",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "간편 인증",
+    "opportunity": "규제 완화",
+    "so": "몇 단계 송금",
+    "weakness": "수익원 부족",
+    "wo": "금융 슈퍼앱 확장",
+    "threat": "은행 앱 개선",
+    "st": "쉬움으로 방어"
+   },
+   "three_c": {
+    "customer": "친구에게 소액 보내는 사람",
+    "competitor": "은행 앱",
+    "company": "간편 인증",
+    "gap": "몇 초 송금"
+   },
    "hyps": [
     {
      "text": "은행 앱 화면을 더 깔끔하게 바꾼다",
@@ -5370,21 +5403,150 @@
     ],
     "solution": "몇 단계로 줄인 간편송금",
     "mode": "break",
-    "conclusion": "책임을 감수하고 단계를 줄이면 편의가 차별점이 된다",
-    "conclusion_auto": true
+    "conclusion": "위험에 맞게 절차를 줄여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "송금이 10초면 끝난다",
+    "reveals": "쉬움이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "보안 전문가",
+    "says": "쉬운 만큼 사기 위험이 있다",
+    "reveals": "보안 균형",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "송금 편의 대 보안",
     "how": "소액부터 단계를 줄이고 사고 책임을 감수하는 구조로 편의와 보안을 함께 설계했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "송금 수",
+    "reframed": "소액 송금 단계 축소",
+    "metric": "송금 완료 소요 시간"
+   },
+   "issue_tree": {
+    "root": "송금을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "보안",
+      "chosen": false,
+      "sub": [
+       "인증서",
+       "보안카드"
+      ]
+     },
+     {
+      "issue": "절차 축소",
+      "chosen": true,
+      "sub": [
+       "간편 인증",
+       "금액별 인증"
+      ]
+     },
+     {
+      "issue": "연결",
+      "chosen": false,
+      "sub": [
+       "계좌 연동",
+       "연락처"
+      ]
+     }
+    ],
+    "why": "소액에 고액 절차는 과하다"
+   },
+   "pareto": {
+    "vital_few": "소액 송금",
+    "effect": "거래의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보안",
+      "issue": "인증서",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보안",
+      "issue": "보안카드",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "절차 축소",
+      "issue": "간편 인증",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "절차 축소",
+      "issue": "금액별 인증",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "연결",
+      "issue": "계좌 연동",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "연결",
+      "issue": "연락처",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "간편 인증이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 송금인가: 이용자가 모인다",
+     "왜 성장인가: 금융 슈퍼앱의 입구"
+    ],
+    "intent": "금융 플랫폼 성장",
+    "intent_metric": "월간 활성 이용자",
+    "mode": "raise",
+    "criterion": "월간 활성 이용자가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "송금 완료 소요 시간",
+    "leading": [
+     "송금 완료 시간",
+     "재이용률"
+    ],
+    "guardrail": "사기 피해",
+    "vanity": "앱 설치 수",
+    "intent_metric": "월간 활성 이용자",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "퍼널 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "같은 아이디어도 시점에 따라 불가능에서 타이밍으로 바뀐다. Why not yet 답은 날짜와 함께 다시 확인한다."
   },
   {
@@ -28140,10 +28302,41 @@
     "symptom": "결제 연동 지연",
     "problem": "결제가 금융 담당자 기준으로 설계되어 개발자에게 너무 어렵다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 결제 붙이기가 어렵나: 몇 주가 걸린다",
+     "왜 걸리나: 은행 계약·심사·연동",
+     "왜 그런가: 결제가 금융 담당자 기준이다"
+    ],
+    "root_cause": "결제가 개발자에게 너무 어렵다"
+   },
+   "pest": {
+    "political": "결제 규제·KYC",
+    "economic": "온라인 사업 증가",
+    "social": "개발자 주도 구매",
+    "technological": "결제 API",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "개발자 경험",
+    "opportunity": "온라인 사업 증가",
+    "so": "코드 몇 줄 결제",
+    "weakness": "높은 수수료 인식",
+    "wo": "부가 금융 서비스",
+    "threat": "경쟁 결제사",
+    "st": "개발자 생태계로 잠금"
+   },
+   "three_c": {
+    "customer": "결제를 붙이려는 개발자",
+    "competitor": "은행 결제 대행",
+    "company": "API",
+    "gap": "몇 분 만에 붙는 결제"
+   },
    "hyps": [
     {
      "text": "수수료 인하",
@@ -28204,21 +28397,150 @@
     ],
     "solution": "개발자 중심 결제 API",
     "mode": "break",
-    "conclusion": "몇 줄 코드와 좋은 문서면 도입이 빨라진다",
-    "conclusion_auto": true
+    "conclusion": "결제를 실제로 붙이는 사람 기준으로 설계하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "개발자",
+    "says": "하루 만에 결제를 붙였다",
+    "reveals": "개발자 경험",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "판매자",
+    "says": "계정이 갑자기 정지됐다",
+    "reveals": "리스크 심사 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "개발 편의 대 결제 규제 준수",
     "how": "몇 줄 코드 뒤에서 규제 준수를 플랫폼이 떠안았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "결제 판매",
+    "reframed": "개발자 중심 결제",
+    "metric": "첫 결제까지 시간"
+   },
+   "issue_tree": {
+    "root": "결제 연동을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "계약",
+      "chosen": false,
+      "sub": [
+       "은행",
+       "심사"
+      ]
+     },
+     {
+      "issue": "개발자 API",
+      "chosen": true,
+      "sub": [
+       "문서",
+       "즉시 계정"
+      ]
+     },
+     {
+      "issue": "부가 기능",
+      "chosen": false,
+      "sub": [
+       "구독",
+       "사기 탐지"
+      ]
+     }
+    ],
+    "why": "개발자가 결정한다"
+   },
+   "pareto": {
+    "vital_few": "대형 성장 고객",
+    "effect": "결제액의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "계약",
+      "issue": "은행",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "계약",
+      "issue": "심사",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "개발자 API",
+      "issue": "문서",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "개발자 API",
+      "issue": "즉시 계정",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "부가 기능",
+      "issue": "구독",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "부가 기능",
+      "issue": "사기 탐지",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "개발자 API가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 개발자인가: 빠르게 붙는다",
+     "왜 매출인가: 결제액에 비례한 수수료"
+    ],
+    "intent": "결제 수수료 매출",
+    "intent_metric": "총 결제액",
+    "mode": "raise",
+    "criterion": "총 결제액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "첫 결제까지 시간",
+    "leading": [
+     "첫 결제까지 시간",
+     "결제 승인율"
+    ],
+    "guardrail": "사기율",
+    "vanity": "가입 계정 수",
+    "intent_metric": "총 결제액",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "개발자 행동 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "누가 실제로 결정하는가(고객)를 다시 정의하면 같은 시장에서 다른 제품이 나온다."
   },
   {
@@ -36546,10 +36868,41 @@
     "symptom": "결제 지연",
     "problem": "개인이 카드 결제를 받을 방법이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 경매 대금이 오래 걸리나: 수표를 우편으로 받는다",
+     "왜 수표인가: 개인은 카드 결제를 못 받는다",
+     "왜 못 받나: 가맹점 계약이 기업용이다"
+    ],
+    "root_cause": "개인 판매자의 결제 수단 부재"
+   },
+   "pest": {
+    "political": "금융 규제",
+    "economic": "개인 간 거래",
+    "social": "온라인 경매 확산",
+    "technological": "이메일 기반 결제",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "이메일 결제",
+    "opportunity": "경매 확산",
+    "so": "개인 간 결제",
+    "weakness": "사기 위험",
+    "wo": "사기 탐지",
+    "threat": "은행·경쟁 결제",
+    "st": "구매자 보호로 신뢰"
+   },
+   "three_c": {
+    "customer": "카드 결제를 받고 싶은 개인 판매자",
+    "competitor": "수표·우편",
+    "company": "이메일 결제",
+    "gap": "이메일로 받는 돈"
+   },
    "hyps": [
     {
      "text": "판매자마다 카드 가맹점 가입",
@@ -36610,21 +36963,149 @@
     ],
     "solution": "이메일 기반 개인 간 결제",
     "mode": "break",
-    "conclusion": "그들의 필요(카드 결제 받기)에 맞춘다",
-    "conclusion_auto": true
+    "conclusion": "개인을 가맹점으로 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "판매자",
+    "says": "바로 돈을 받았다",
+    "reveals": "속도",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "판매자",
+    "says": "계정 동결이 무섭다",
+    "reveals": "리스크 정책 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "결제 편의 대 사기 위험",
     "how": "이메일 결제로 편하게 하고 사기 탐지를 플랫폼이 맡았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "결제 수",
+    "reframed": "개인 간 결제",
+    "metric": "활성 계정 수"
+   },
+   "issue_tree": {
+    "root": "개인이 결제를 받게 하려면",
+    "branches": [
+     {
+      "issue": "은행",
+      "chosen": false,
+      "sub": [
+       "가맹 계약",
+       "송금"
+      ]
+     },
+     {
+      "issue": "이메일 결제",
+      "chosen": true,
+      "sub": [
+       "계정",
+       "카드 연결"
+      ]
+     },
+     {
+      "issue": "보호",
+      "chosen": false,
+      "sub": [
+       "구매자 보호",
+       "사기 탐지"
+      ]
+     }
+    ],
+    "why": "개인도 받을 수 있어야 한다"
+   },
+   "pareto": {
+    "vital_few": "경매 거래",
+    "effect": "초기 결제의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "은행",
+      "issue": "가맹 계약",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "은행",
+      "issue": "송금",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "이메일 결제",
+      "issue": "계정",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "이메일 결제",
+      "issue": "카드 연결",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "보호",
+      "issue": "구매자 보호",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "보호",
+      "issue": "사기 탐지",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "이메일 결제가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 개인 결제인가: 거래가 는다",
+     "왜 매출인가: 거래 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "총 결제액",
+    "mode": "raise",
+    "criterion": "총 결제액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "활성 계정 수",
+    "leading": [
+     "활성 계정 수",
+     "사기 손실률"
+    ],
+    "guardrail": "계정 동결 민원",
+    "vanity": "가입 수",
+    "intent_metric": "총 결제액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "사용자가 실제로 쓰는 곳을 보고 계획을 바꿨다."
   },
   {
@@ -37017,10 +37498,39 @@
     "symptom": "소액 정산 불편",
     "problem": "송금이 '금융 거래'로만 설계되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 밥값 나누기가 귀찮나: 정리가 번거롭다",
+     "왜 그런가: 송금이 금융 거래로 설계됐다",
+     "왜 문제인가: 친구 사이 일상 행위다"
+    ],
+    "root_cause": "송금을 사회적 행위로 보지 않았다"
+   },
+   "pest": {
+    "political": "개인정보 공개 논란",
+    "economic": "무료 송금",
+    "social": "친구 간 정산 문화",
+    "technological": "소셜 피드",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "소셜 피드",
+    "opportunity": "정산 문화",
+    "so": "일상 소셜 송금",
+    "weakness": "수익화 어려움",
+    "wo": "카드·상점 결제",
+    "threat": "경쟁 송금 앱",
+    "st": "친구 네트워크로 잠금"
+   },
+   "three_c": {
+    "customer": "친구와 밥값 나누는 젊은 층",
+    "competitor": "은행 송금",
+    "company": "소셜 피드",
+    "gap": "이모지와 함께 보내는 돈"
+   },
    "hyps": [
     {
      "text": "은행 송금 단순화",
@@ -37094,21 +37604,149 @@
     ],
     "solution": "소셜 피드 송금",
     "mode": "break",
-    "conclusion": "피드에 보여 주면 재미와 확산이 생긴다",
-    "conclusion_auto": true
+    "conclusion": "송금을 금융이 아니라 친구 사이 놀이로 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "대학생",
+    "says": "친구 피드 보는 재미가 있다",
+    "reveals": "소셜 재미",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "송금 내역이 공개돼 불편하다",
+    "reveals": "프라이버시",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "사생활 대 사회적 재미",
     "how": "금액은 숨기고 메모만 피드에 보여 재미를 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "송금 수",
+    "reframed": "일상 정산의 소셜화",
+    "metric": "주간 송금 사용자"
+   },
+   "issue_tree": {
+    "root": "정산을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "계산",
+      "chosen": false,
+      "sub": [
+       "분할 계산기",
+       "알림"
+      ]
+     },
+     {
+      "issue": "소셜화",
+      "chosen": true,
+      "sub": [
+       "피드",
+       "이모지"
+      ]
+     },
+     {
+      "issue": "연결",
+      "chosen": false,
+      "sub": [
+       "친구 찾기",
+       "연락처"
+      ]
+     }
+    ],
+    "why": "친구끼리 돈은 사회적이다"
+   },
+   "pareto": {
+    "vital_few": "친구 네트워크",
+    "effect": "신규 가입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "계산",
+      "issue": "분할 계산기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "계산",
+      "issue": "알림",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "소셜화",
+      "issue": "피드",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "소셜화",
+      "issue": "이모지",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "연결",
+      "issue": "친구 찾기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "연결",
+      "issue": "연락처",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "소셜화가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 소셜인가: 친구가 가입한다",
+     "왜 성장인가: 네트워크로 퍼진다"
+    ],
+    "intent": "네트워크 성장",
+    "intent_metric": "활성 이용자",
+    "mode": "raise",
+    "criterion": "활성 이용자가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "주간 송금 사용자",
+    "leading": [
+     "주간 송금 사용자",
+     "친구 초대율"
+    ],
+    "guardrail": "프라이버시 민원",
+    "vanity": "다운로드 수",
+    "intent_metric": "활성 이용자",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "대학가 이용 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "기능 같은 송금도 맥락(친구 사이 놀이)을 바꾸면 확산 방식이 달라진다."
   },
   {
@@ -37154,10 +37792,41 @@
     "symptom": "젊은 층 주식 투자 저조",
     "problem": "수수료 구조가 소액 투자자를 배제한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 소액 투자를 못 하나: 수수료가 부담이다",
+     "왜 부담인가: 건당 고정 수수료",
+     "왜 그런가: 수수료가 증권사 수익이라는 통념"
+    ],
+    "root_cause": "수수료가 소액 투자자를 배제한다"
+   },
+   "pest": {
+    "political": "증권 규제·주문 흐름 판매 논란",
+    "economic": "저금리",
+    "social": "젊은 투자자",
+    "technological": "모바일 증권",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "모바일 경험",
+    "opportunity": "젊은 투자자",
+    "so": "무료 거래",
+    "weakness": "주문 흐름 판매 의존",
+    "wo": "수익원 다각화",
+    "threat": "규제 강화",
+    "st": "브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "소액으로 주식을 사려는 젊은 층",
+    "competitor": "수수료 증권사",
+    "company": "모바일 경험",
+    "gap": "수수료 없는 주식"
+   },
    "hyps": [
     {
      "text": "수수료 소폭 인하",
@@ -37218,21 +37887,149 @@
     ],
     "solution": "무료 거래 모바일 증권",
     "mode": "break",
-    "conclusion": "0원이 곧 유입 엔진이 된다",
-    "conclusion_auto": true
+    "conclusion": "수수료를 없애 새 투자자를 시장에 들여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "젊은 투자자",
+    "says": "처음으로 주식을 샀다",
+    "reveals": "접근성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "규제 기관",
+    "says": "게임처럼 거래를 부추긴다",
+    "reveals": "투자자 보호 논란",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "무료 거래 대 수익",
     "how": "다른 수익원으로 수수료 0원을 유지했다(주문 흐름 판매 논란 동반)"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "계좌 수",
+    "reframed": "소액 투자 접근",
+    "metric": "신규 계좌 수"
+   },
+   "issue_tree": {
+    "root": "소액 투자를 열려면",
+    "branches": [
+     {
+      "issue": "교육",
+      "chosen": false,
+      "sub": [
+       "강의",
+       "콘텐츠"
+      ]
+     },
+     {
+      "issue": "수수료 제거",
+      "chosen": true,
+      "sub": [
+       "무료 거래",
+       "소수점 주식"
+      ]
+     },
+     {
+      "issue": "경험",
+      "chosen": false,
+      "sub": [
+       "모바일",
+       "쉬운 화면"
+      ]
+     }
+    ],
+    "why": "수수료가 장벽이다"
+   },
+   "pareto": {
+    "vital_few": "무료 거래",
+    "effect": "신규 가입 이유의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "교육",
+      "issue": "강의",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "교육",
+      "issue": "콘텐츠",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "수수료 제거",
+      "issue": "무료 거래",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "수수료 제거",
+      "issue": "소수점 주식",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "경험",
+      "issue": "모바일",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "경험",
+      "issue": "쉬운 화면",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "무료 거래가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 무료인가: 계좌가 는다",
+     "왜 성장인가: 자산이 쌓인다"
+    ],
+    "intent": "고객 자산 성장",
+    "intent_metric": "예탁 자산",
+    "mode": "raise",
+    "criterion": "예탁 자산이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "신규 계좌 수",
+    "leading": [
+     "신규 계좌 수",
+     "장기 보유 비율"
+    ],
+    "guardrail": "투자자 보호 민원",
+    "vanity": "앱 설치 수",
+    "intent_metric": "예탁 자산",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "수익 모델을 바꾼 대가로 새로운 이해충돌이 생길 수 있다는 점까지 봐야 한다."
   },
   {
@@ -37278,10 +38075,39 @@
     "symptom": "은행 수수료 불만",
     "problem": "은행 수익이 고객의 실수(잔고 부족)에서 나온다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 저소득층이 수수료를 많이 내나: 초과 인출 수수료",
+     "왜 붙나: 은행 수익이 실수에서 나온다",
+     "왜 바꾸지 않나: 수수료가 큰 수익원이다"
+    ],
+    "root_cause": "고객 실수가 수익원이다"
+   },
+   "pest": {
+    "political": "은행 규제",
+    "economic": "저소득층 금융",
+    "social": "은행 불신",
+    "technological": "모바일 계좌",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "무수수료 모델",
+    "opportunity": "은행 불신",
+    "so": "무수수료 계좌 + 급여 조기 지급",
+    "weakness": "수익원 제한",
+    "wo": "카드 결제 수수료",
+    "threat": "대형 은행 수수료 인하",
+    "st": "고객 편 브랜드"
+   },
+   "three_c": {
+    "customer": "수수료에 지친 저소득층",
+    "competitor": "전통 은행",
+    "company": "무수수료 모델",
+    "gap": "고객 편인 은행"
+   },
    "hyps": [
     {
      "text": "수수료 일부 인하",
@@ -37355,21 +38181,150 @@
     ],
     "solution": "무수수료 계좌 + 급여 조기 지급",
     "mode": "break",
-    "conclusion": "급여 조기 입금 같은 혜택을 준다",
-    "conclusion_auto": true
+    "conclusion": "고객 실수에서 버는 수익은 경쟁자의 기회다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "월급을 이틀 먼저 받았다",
+    "reveals": "실질 혜택",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "계좌가 갑자기 막혔다",
+    "reveals": "운영 리스크",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "무수수료 대 은행 수익",
     "how": "가맹점 수수료로 벌어 고객 수수료를 없앴다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "계좌 수",
+    "reframed": "고객 실수에서 벌지 않는 은행",
+    "metric": "주 거래 계좌 비율"
+   },
+   "issue_tree": {
+    "root": "은행 수수료 문제를 풀려면",
+    "branches": [
+     {
+      "issue": "교육",
+      "chosen": false,
+      "sub": [
+       "잔고 관리",
+       "알림"
+      ]
+     },
+     {
+      "issue": "수익 구조",
+      "chosen": true,
+      "sub": [
+       "무수수료",
+       "카드 결제 수익"
+      ]
+     },
+     {
+      "issue": "혜택",
+      "chosen": false,
+      "sub": [
+       "급여 조기 지급",
+       "소액 대출"
+      ]
+     }
+    ],
+    "why": "수익이 실수에서 나오면 고객이 떠난다"
+   },
+   "pareto": {
+    "vital_few": "급여 이체 고객",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "교육",
+      "issue": "잔고 관리",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "교육",
+      "issue": "알림",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "수익 구조",
+      "issue": "무수수료",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "수익 구조",
+      "issue": "카드 결제 수익",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "혜택",
+      "issue": "급여 조기 지급",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "혜택",
+      "issue": "소액 대출",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "수익 구조가 핵심이고 조기 지급은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 무수수료인가: 주 거래 계좌가 된다",
+     "왜 매출인가: 카드 결제 수수료"
+    ],
+    "intent": "결제 수수료 매출",
+    "intent_metric": "주 거래 계좌 수",
+    "mode": "raise",
+    "criterion": "주 거래 계좌 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "주 거래 계좌 비율",
+    "leading": [
+     "급여 이체 비율",
+     "카드 사용액"
+    ],
+    "guardrail": "계좌 동결 민원",
+    "vanity": "가입 수",
+    "intent_metric": "주 거래 계좌 수",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "고객 인터뷰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객의 고통에서 돈을 버는 구조는 경쟁자에게 기회다."
   },
   {
@@ -37412,10 +38367,41 @@
     "symptom": "금융 서비스 불만",
     "problem": "지점 중심 은행 구조가 비용과 불편을 만든다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 카드 발급이 어렵나: 절차가 길다",
+     "왜 길고 비싼가: 소수 은행이 독점한다",
+     "왜 그런가: 지점 중심 구조다"
+    ],
+    "root_cause": "지점 구조가 비용과 불편을 만든다"
+   },
+   "pest": {
+    "political": "금융 규제 완화",
+    "economic": "고금리·고수수료",
+    "social": "은행 불만",
+    "technological": "모바일 카드 발급",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "디지털 운영",
+    "opportunity": "은행 불만",
+    "so": "지점 없는 카드",
+    "weakness": "신용 위험",
+    "wo": "데이터 심사",
+    "threat": "기존 은행 디지털화",
+    "st": "고객 경험으로 방어"
+   },
+   "three_c": {
+    "customer": "은행에 지친 브라질인",
+    "competitor": "독점 은행",
+    "company": "디지털 운영",
+    "gap": "앱으로 받는 무수수료 카드"
+   },
    "hyps": [
     {
      "text": "지점 확대",
@@ -37474,21 +38460,150 @@
     ],
     "solution": "지점 없는 디지털 카드 + 친절한 응대",
     "mode": "break",
-    "conclusion": "지점 비용을 빼고 그 돈을 응대에 쓴다",
-    "conclusion_auto": true
+    "conclusion": "지점을 없애 비용과 불편을 함께 없애라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "앱으로 카드를 받고 수수료가 없다",
+    "reveals": "편의",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "신용 위험이 크다",
+    "reveals": "연체 관리",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 비용 대 좋은 응대",
     "how": "지점 비용을 빼 그 돈을 응대에 썼다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "카드 발급",
+    "reframed": "지점 없는 금융",
+    "metric": "고객 수"
+   },
+   "issue_tree": {
+    "root": "카드 발급을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "지점",
+      "chosen": false,
+      "sub": [
+       "확대",
+       "효율"
+      ]
+     },
+     {
+      "issue": "디지털 발급",
+      "chosen": true,
+      "sub": [
+       "앱 신청",
+       "데이터 심사"
+      ]
+     },
+     {
+      "issue": "비용",
+      "chosen": false,
+      "sub": [
+       "무수수료",
+       "투명 금리"
+      ]
+     }
+    ],
+    "why": "지점이 비용과 불편의 원인이다"
+   },
+   "pareto": {
+    "vital_few": "무수수료 카드",
+    "effect": "가입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "지점",
+      "issue": "확대",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "지점",
+      "issue": "효율",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "디지털 발급",
+      "issue": "앱 신청",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "디지털 발급",
+      "issue": "데이터 심사",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "비용",
+      "issue": "무수수료",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "비용",
+      "issue": "투명 금리",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "디지털 발급이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 디지털인가: 고객이 몰린다",
+     "왜 성장인가: 교차 판매로 확장"
+    ],
+    "intent": "금융 고객 성장",
+    "intent_metric": "고객 수",
+    "mode": "raise",
+    "criterion": "고객 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "고객 수",
+    "leading": [
+     "발급 소요 시간",
+     "추천 가입 비율"
+    ],
+    "guardrail": "연체율",
+    "vanity": "신청 수",
+    "intent_metric": "고객 수",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "고객 불만 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "독과점 시장의 불만은 디지털 신규 진입자에게 기회다."
   },
   {
@@ -38236,10 +39351,41 @@
     "symptom": "결제 단계 이탈",
     "problem": "돈을 먼저 내야 하는 위험을 고객이 진다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 카드 정보를 꺼리나: 받기 전 돈을 낸다",
+     "왜 불안한가: 위험을 고객이 진다",
+     "왜 그런가: 선결제가 기본이라는 통념"
+    ],
+    "root_cause": "선결제 위험을 고객이 진다"
+   },
+   "pest": {
+    "political": "BNPL 규제",
+    "economic": "소비 신용",
+    "social": "온라인 쇼핑",
+    "technological": "즉시 신용 심사",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "즉시 심사",
+    "opportunity": "온라인 쇼핑",
+    "so": "후불 결제",
+    "weakness": "연체 위험",
+    "wo": "쇼핑 앱 확장",
+    "threat": "BNPL 규제",
+    "st": "가맹점 네트워크로 방어"
+   },
+   "three_c": {
+    "customer": "받고 나서 내고 싶은 쇼핑객",
+    "competitor": "카드 선결제",
+    "company": "즉시 심사",
+    "gap": "받고 나서 내는 결제"
+   },
    "hyps": [
     {
      "text": "카드 보안 강조",
@@ -38315,21 +39461,150 @@
     ],
     "solution": "후불 결제(BNPL)",
     "mode": "break",
-    "conclusion": "받고 나서 내게 한다",
-    "conclusion_auto": true
+    "conclusion": "위험을 누가 지는지 바꾸면 결제가 쉬워진다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "쇼핑객",
+    "says": "입어 보고 결제했다",
+    "reveals": "위험 제거",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "소비자 단체",
+    "says": "과소비와 빚을 부추긴다",
+    "reveals": "소비자 보호",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "고객 편의(후불) 대 연체 위험",
     "how": "결제사가 심사·위험을 떠안고 가맹점 수수료로 벌었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "결제 수",
+    "reframed": "고객 위험 제거",
+    "metric": "가맹점 전환율"
+   },
+   "issue_tree": {
+    "root": "결제 불안을 없애려면",
+    "branches": [
+     {
+      "issue": "보안",
+      "chosen": false,
+      "sub": [
+       "카드 보안",
+       "인증"
+      ]
+     },
+     {
+      "issue": "위험 이전",
+      "chosen": true,
+      "sub": [
+       "후불",
+       "분할"
+      ]
+     },
+     {
+      "issue": "경험",
+      "chosen": false,
+      "sub": [
+       "원클릭",
+       "앱"
+      ]
+     }
+    ],
+    "why": "위험을 고객이 지면 망설인다"
+   },
+   "pareto": {
+    "vital_few": "후불 결제",
+    "effect": "전환 개선의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보안",
+      "issue": "카드 보안",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보안",
+      "issue": "인증",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "위험 이전",
+      "issue": "후불",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "위험 이전",
+      "issue": "분할",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "경험",
+      "issue": "원클릭",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "경험",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "후불이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 후불인가: 가맹점 매출이 는다",
+     "왜 매출인가: 가맹점 수수료"
+    ],
+    "intent": "가맹점 수수료 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "가맹점 전환율",
+    "leading": [
+     "가맹점 전환율",
+     "연체율"
+    ],
+    "guardrail": "과소비 민원",
+    "vanity": "앱 설치 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "quant"
+     ],
+     "how": "가맹점 실험",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "자포스(무료 반품)와 같은 구조. 고객의 위험을 대신 진다. (과소비·연체 논란도 함께 봐야 함)"
   },
   {
@@ -38372,10 +39647,43 @@
     "symptom": "보험 불신",
     "problem": "보험사가 지급하지 않은 돈이 이익이 되는 구조라 이해가 충돌한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 보험금을 의심하나: 지급을 미룬다",
+     "왜 미루나: 안 준 돈이 이익이다",
+     "왜 그런 구조인가: 보험사와 고객 이해가 충돌한다"
+    ],
+    "root_cause": "이해충돌 구조"
+   },
+   "pest": {
+    "political": "보험 규제",
+    "economic": "보험료",
+    "social": "보험사 불신",
+    "technological": "AI 청구 처리",
+    "key": [
+     "T",
+     "P"
+    ],
+    "focus": [
+     "T",
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "AI 청구",
+    "opportunity": "보험 불신",
+    "so": "정액 수수료 + 남은 돈 기부 + 빠른 청구",
+    "weakness": "손해율",
+    "wo": "데이터로 위험 관리",
+    "threat": "대형 보험사 디지털화",
+    "st": "투명성으로 신뢰"
+   },
+   "three_c": {
+    "customer": "보험사를 못 믿는 젊은 층",
+    "competitor": "전통 보험사",
+    "company": "AI 청구",
+    "gap": "빨리 주는 보험"
+   },
    "hyps": [
     {
      "text": "광고로 이미지 개선",
@@ -38434,21 +39742,149 @@
     ],
     "solution": "고정 수수료 + 잔여 보험료 기부 + 앱 청구",
     "mode": "break",
-    "conclusion": "남은 돈을 기부하면 사기 동기도 준다",
-    "conclusion_auto": true
+    "conclusion": "이해충돌을 구조로 줄여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "몇 분 만에 보험금을 받았다",
+    "reveals": "속도 신뢰",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "손해율이 높다",
+    "reveals": "수익성",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 보험료 대 보험사 이익",
     "how": "고정 수수료 구조로 이해충돌을 줄여 운영비를 낮췄다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "보험 판매",
+    "reframed": "이해충돌 줄이기",
+    "metric": "청구 처리 시간"
+   },
+   "issue_tree": {
+    "root": "보험 불신을 줄이려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "신뢰 광고",
+       "후기"
+      ]
+     },
+     {
+      "issue": "구조",
+      "chosen": true,
+      "sub": [
+       "정액 수수료",
+       "기부"
+      ]
+     },
+     {
+      "issue": "청구",
+      "chosen": false,
+      "sub": [
+       "AI 즉시 처리",
+       "앱"
+      ]
+     }
+    ],
+    "why": "구조가 의심을 만든다"
+   },
+   "pareto": {
+    "vital_few": "즉시 청구",
+    "effect": "신뢰 개선의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "신뢰 광고",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "후기",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "구조",
+      "issue": "정액 수수료",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "구조",
+      "issue": "기부",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "청구",
+      "issue": "AI 즉시 처리",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "청구",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "구조와 즉시 청구가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 신뢰인가: 젊은 고객이 온다",
+     "왜 성장인가: 생애 보험으로 확장"
+    ],
+    "intent": "고객 성장",
+    "intent_metric": "보험료 수입",
+    "mode": "raise",
+    "criterion": "보험료 수입이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "청구 처리 시간",
+    "leading": [
+     "청구 처리 시간",
+     "갱신율"
+    ],
+    "guardrail": "손해율",
+    "vanity": "가입 수",
+    "intent_metric": "보험료 수입",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "청구 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "신뢰 문제는 홍보가 아니라 돈의 흐름을 바꿔야 풀린다."
   },
   {
@@ -38494,10 +39930,43 @@
     "symptom": "모바일 뱅킹 불편",
     "problem": "은행 앱이 지점 업무를 화면에 옮긴 수준이다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 은행 앱이 불편한가: 보안 프로그램과 인증서",
+     "왜 그런가: 지점 업무를 화면에 옮겼다",
+     "왜 그런가: 은행 앱은 지점의 대체라는 통념"
+    ],
+    "root_cause": "지점 업무 이식"
+   },
+   "pest": {
+    "political": "인터넷전문은행 인가",
+    "economic": "수수료",
+    "social": "카카오톡 보급",
+    "technological": "비대면 실명 확인",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "카카오 계정",
+    "opportunity": "인터넷은행 인가",
+    "so": "지점 없는 쉬운 은행",
+    "weakness": "대출 상품 제한",
+    "wo": "생활 금융 확장",
+    "threat": "은행 앱 개선",
+    "st": "쉬움으로 방어"
+   },
+   "three_c": {
+    "customer": "은행 앱이 불편한 젊은 층",
+    "competitor": "시중 은행 앱",
+    "company": "카카오 계정",
+    "gap": "7분 계좌 개설"
+   },
    "hyps": [
     {
      "text": "기존 앱 개선",
@@ -38556,21 +40025,150 @@
     ],
     "solution": "쉬운 모바일 은행 + 모임통장",
     "mode": "break",
-    "conclusion": "생활형 기능을 넣는다",
-    "conclusion_auto": true
+    "conclusion": "화면을 지점이 아니라 사용자 기준으로 다시 설계하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "7분 만에 계좌를 열었다",
+    "reveals": "쉬움",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "대출 한도가 낮다",
+    "reveals": "상품 한계",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "금융 신뢰 대 쉬운 화면",
     "how": "은행 인가로 신뢰를 갖추고 메신저처럼 쉬운 화면을 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "계좌 수",
+    "reframed": "사용자 기준 은행",
+    "metric": "계좌 개설 소요 시간"
+   },
+   "issue_tree": {
+    "root": "은행 앱을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "보안",
+      "chosen": false,
+      "sub": [
+       "프로그램",
+       "인증서"
+      ]
+     },
+     {
+      "issue": "재설계",
+      "chosen": true,
+      "sub": [
+       "비대면 개설",
+       "쉬운 화면"
+      ]
+     },
+     {
+      "issue": "상품",
+      "chosen": false,
+      "sub": [
+       "모임통장",
+       "대출"
+      ]
+     }
+    ],
+    "why": "지점 업무 이식이 불편의 원인이다"
+   },
+   "pareto": {
+    "vital_few": "비대면 개설",
+    "effect": "초기 가입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보안",
+      "issue": "프로그램",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보안",
+      "issue": "인증서",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "재설계",
+      "issue": "비대면 개설",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "재설계",
+      "issue": "쉬운 화면",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "모임통장",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품",
+      "issue": "대출",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "재설계가 핵심이고 모임통장은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 쉬움인가: 고객이 몰린다",
+     "왜 성장인가: 대출·플랫폼 수익"
+    ],
+    "intent": "고객 기반 성장",
+    "intent_metric": "고객 수",
+    "mode": "raise",
+    "criterion": "고객 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "계좌 개설 소요 시간",
+    "leading": [
+     "계좌 개설 시간",
+     "월간 활성 이용자"
+    ],
+    "guardrail": "보안 사고",
+    "vanity": "다운로드 수",
+    "intent_metric": "고객 수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "observation"
+     ],
+     "how": "이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "규제가 열린 순간(타이밍) 사용성(맹점)으로 차별화했다."
   },
   {
@@ -38616,10 +40214,41 @@
     "symptom": "자산 관리 포기",
     "problem": "금융 정보가 회사마다 따로 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 전체 자산을 모르나: 정보가 흩어져 있다",
+     "왜 흩어지나: 회사마다 따로다",
+     "왜 모으지 못하나: 연결 제도가 없었다"
+    ],
+    "root_cause": "금융 정보 분산"
+   },
+   "pest": {
+    "political": "마이데이터 제도",
+    "economic": "금융 상품 추천 수수료",
+    "social": "재테크 관심",
+    "technological": "데이터 연동",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "통합 조회",
+    "opportunity": "마이데이터",
+    "so": "맞춤 추천",
+    "weakness": "수익 모델 약함",
+    "wo": "건강 데이터 확장",
+    "threat": "금융사 자체 마이데이터",
+    "st": "중립성으로 차별"
+   },
+   "three_c": {
+    "customer": "자산을 한눈에 보고 싶은 사람",
+    "competitor": "각 금융사 앱",
+    "company": "통합 조회",
+    "gap": "한 화면 자산 관리"
+   },
    "hyps": [
     {
      "text": "은행별 앱 사용",
@@ -38678,21 +40307,149 @@
     ],
     "solution": "통합 자산 조회 + 맞춤 추천",
     "mode": "break",
-    "conclusion": "진단에 맞춘 추천으로 번다",
-    "conclusion_auto": true
+    "conclusion": "흩어진 정보를 모으면 판단이 생긴다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "내 돈 흐름을 처음 봤다",
+    "reveals": "가시성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "추천이 광고 같다",
+    "reveals": "중립성 의심",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "고객 편 추천 대 수익",
     "how": "진단에 맞춘 추천 수수료로 고객 편에 서며 벌었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "이용자 확보",
+    "reframed": "자산 가시성",
+    "metric": "연결 계좌 수"
+   },
+   "issue_tree": {
+    "root": "자산을 한눈에 보게 하려면",
+    "branches": [
+     {
+      "issue": "수기 입력",
+      "chosen": false,
+      "sub": [
+       "가계부",
+       "엑셀"
+      ]
+     },
+     {
+      "issue": "자동 연동",
+      "chosen": true,
+      "sub": [
+       "마이데이터",
+       "카드"
+      ]
+     },
+     {
+      "issue": "추천",
+      "chosen": false,
+      "sub": [
+       "상품 비교",
+       "절약 팁"
+      ]
+     }
+    ],
+    "why": "자동으로 모아야 쓴다"
+   },
+   "pareto": {
+    "vital_few": "카드·계좌 연동",
+    "effect": "활성 사용의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "수기 입력",
+      "issue": "가계부",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "수기 입력",
+      "issue": "엑셀",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "자동 연동",
+      "issue": "마이데이터",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "자동 연동",
+      "issue": "카드",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "추천",
+      "issue": "상품 비교",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "추천",
+      "issue": "절약 팁",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "자동 연동이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 가시성인가: 추천을 믿는다",
+     "왜 매출인가: 추천 수수료"
+    ],
+    "intent": "추천 수수료 매출",
+    "intent_metric": "추천 전환율",
+    "mode": "raise",
+    "criterion": "추천 전환율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "연결 계좌 수",
+    "leading": [
+     "연결 계좌 수",
+     "월간 활성 이용자"
+    ],
+    "guardrail": "추천 불신",
+    "vanity": "가입 수",
+    "intent_metric": "추천 전환율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "같은 아이디어도 제도 이전(스크래핑)과 이후(마이데이터)의 실행 조건이 다르다."
   },
   {
@@ -38738,10 +40495,41 @@
     "symptom": "신용점수에 대한 무지",
     "problem": "소비자가 자기 신용 상태를 모른 채 대출·카드를 고른다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 신용 상태를 모르나: 조회가 유료다",
+     "왜 유료인가: 신용 정보는 판다는 통념",
+     "왜 문제인가: 모른 채 대출을 고른다"
+    ],
+    "root_cause": "자기 신용 정보 접근 장벽"
+   },
+   "pest": {
+    "political": "신용 정보 규제",
+    "economic": "대출·카드 추천 수수료",
+    "social": "금융 문해력",
+    "technological": "신용 데이터 연동",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "무료 신용점수",
+    "opportunity": "금융 문해력 관심",
+    "so": "맞춤 추천 수수료",
+    "weakness": "광고 의존",
+    "wo": "세금 신고 확장",
+    "threat": "경쟁 무료 조회",
+    "st": "데이터로 정밀 추천"
+   },
+   "three_c": {
+    "customer": "자기 신용을 모르는 소비자",
+    "competitor": "유료 조회",
+    "company": "무료 점수",
+    "gap": "공짜 신용점수와 맞춤 추천"
+   },
    "hyps": [
     {
      "text": "조회료 인하",
@@ -38815,21 +40603,149 @@
     ],
     "solution": "무료 신용점수 + 추천 수수료",
     "mode": "break",
-    "conclusion": "맞춤 추천 수수료로 번다",
-    "conclusion_auto": true
+    "conclusion": "정보를 무료로 주고 추천에서 벌어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "공짜로 점수를 매주 본다",
+    "reveals": "접근성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "추천 카드 광고가 많다",
+    "reveals": "광고 피로",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "무료 제공 대 수익",
     "how": "무료 신용점수로 모으고 맞춤 추천 수수료로 벌었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "이용자 확보",
+    "reframed": "신용 정보 무료화",
+    "metric": "추천 승인률"
+   },
+   "issue_tree": {
+    "root": "신용 정보를 쉽게 보게 하려면",
+    "branches": [
+     {
+      "issue": "유료",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "구독"
+      ]
+     },
+     {
+      "issue": "무료 제공",
+      "chosen": true,
+      "sub": [
+       "무료 점수",
+       "변화 알림"
+      ]
+     },
+     {
+      "issue": "추천",
+      "chosen": false,
+      "sub": [
+       "승인 확률",
+       "맞춤 카드"
+      ]
+     }
+    ],
+    "why": "무료여야 매주 본다"
+   },
+   "pareto": {
+    "vital_few": "카드·대출 추천",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "유료",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "유료",
+      "issue": "구독",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "무료 제공",
+      "issue": "무료 점수",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "무료 제공",
+      "issue": "변화 알림",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "추천",
+      "issue": "승인 확률",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "추천",
+      "issue": "맞춤 카드",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "무료 점수가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 무료인가: 자주 온다",
+     "왜 매출인가: 추천 수수료"
+    ],
+    "intent": "추천 수수료 매출",
+    "intent_metric": "추천 승인 건수",
+    "mode": "raise",
+    "criterion": "추천 승인 건수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "추천 승인률",
+    "leading": [
+     "주간 조회율",
+     "추천 승인률"
+    ],
+    "guardrail": "광고 피로",
+    "vanity": "가입 수",
+    "intent_metric": "추천 승인 건수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "추천 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "무료 정보가 신뢰를 만들고, 신뢰가 추천 수익이 된다."
   },
   {
@@ -38875,10 +40791,43 @@
     "symptom": "상거래 마비",
     "problem": "현금 없이 결제할 수단이 작은 가게에 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 소액 결제가 막혔나: 현금이 부족하다",
+     "왜 부족한가: 고액권이 갑자기 중단됐다",
+     "왜 대안이 없나: 작은 가게에 결제 수단이 없다"
+    ],
+    "root_cause": "현금 외 결제 수단 부재"
+   },
+   "pest": {
+    "political": "화폐 개혁(2016)",
+    "economic": "현금 경제",
+    "social": "스마트폰 보급",
+    "technological": "QR 결제",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "QR 결제",
+    "opportunity": "화폐 개혁",
+    "so": "가게 QR 확산",
+    "weakness": "규제 리스크",
+    "wo": "금융 서비스 확장",
+    "threat": "UPI 경쟁",
+    "st": "가맹점 수로 방어"
+   },
+   "three_c": {
+    "customer": "현금이 없는 가게와 손님",
+    "competitor": "현금",
+    "company": "QR 결제",
+    "gap": "종이 QR 하나로 되는 결제"
+   },
    "hyps": [
     {
      "text": "카드 단말기 보급",
@@ -38954,21 +40903,149 @@
     ],
     "solution": "QR 스티커 모바일 결제",
     "mode": "break",
-    "conclusion": "QR 스티커 하나면 된다",
-    "conclusion_auto": true
+    "conclusion": "위기의 순간에 가장 단순한 수단을 깔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "노점상",
+    "says": "종이 QR로 결제를 받는다",
+    "reveals": "단순함",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "규제 기관",
+    "says": "규정 위반이 있었다",
+    "reveals": "규제 리스크",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "결제 편의 대 가맹점 비용",
     "how": "QR 스티커로 단말기 비용 없이 결제받게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "결제 수",
+    "reframed": "현금 없는 결제 확산",
+    "metric": "가맹점 수"
+   },
+   "issue_tree": {
+    "root": "현금 없이 결제하려면",
+    "branches": [
+     {
+      "issue": "카드",
+      "chosen": false,
+      "sub": [
+       "단말기",
+       "카드 발급"
+      ]
+     },
+     {
+      "issue": "QR",
+      "chosen": true,
+      "sub": [
+       "종이 QR",
+       "전자지갑"
+      ]
+     },
+     {
+      "issue": "보상",
+      "chosen": false,
+      "sub": [
+       "캐시백",
+       "무료"
+      ]
+     }
+    ],
+    "why": "단말기 없이 되어야 한다"
+   },
+   "pareto": {
+    "vital_few": "작은 가게 QR",
+    "effect": "확산의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "카드",
+      "issue": "단말기",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "카드",
+      "issue": "카드 발급",
+      "speed": 2,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "QR",
+      "issue": "종이 QR",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "QR",
+      "issue": "전자지갑",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "보상",
+      "issue": "캐시백",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보상",
+      "issue": "무료",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "QR이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 QR인가: 가맹점이 는다",
+     "왜 성장인가: 금융 서비스 기반"
+    ],
+    "intent": "결제 플랫폼 성장",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "가맹점 수",
+    "leading": [
+     "가맹점 수",
+     "월간 결제 사용자"
+    ],
+    "guardrail": "규제 위반",
+    "vanity": "다운로드 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "외부 충격은 오랫동안 '아직 안 된' 아이디어를 한 번에 '이제 된다'로 바꾼다."
   },
   {
@@ -39011,10 +41088,41 @@
     "symptom": "대출 비교 포기",
     "problem": "여러 금융사 조건을 한 번에 볼 수 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 금리 비교가 어렵나: 은행마다 따로 조회한다",
+     "왜 꺼리나: 신용점수가 떨어질까 걱정",
+     "왜 한 번에 못 보나: 연결 제도가 없었다"
+    ],
+    "root_cause": "한 번에 볼 수 없다"
+   },
+   "pest": {
+    "political": "대출 비교 플랫폼 규제",
+    "economic": "금리 상승",
+    "social": "대출 비교 수요",
+    "technological": "금융사 API 연동",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "금융사 연동",
+    "opportunity": "대출 비교 수요",
+    "so": "한 번 조회 비교",
+    "weakness": "수수료 규제",
+    "wo": "대환 대출 확장",
+    "threat": "대형 플랫폼",
+    "st": "중립성으로 방어"
+   },
+   "three_c": {
+    "customer": "금리가 궁금한 대출자",
+    "competitor": "은행별 조회",
+    "company": "금융사 연동",
+    "gap": "한 번 조회로 보는 금리"
+   },
    "hyps": [
     {
      "text": "은행 상담",
@@ -39090,21 +41198,149 @@
     ],
     "solution": "한 번 조회 다수 금융사 대출 비교",
     "mode": "break",
-    "conclusion": "안 떨어진다고 알리고 한 번에 비교하게 한다",
-    "conclusion_auto": true
+    "conclusion": "한 번 조회로 여러 조건을 보여 줘라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "대출자",
+    "says": "금리를 한 번에 비교했다",
+    "reveals": "편의",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "대출자",
+    "says": "실제 금리가 조회와 달랐다",
+    "reveals": "정확도",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "여러 조건 비교 대 신용 불안",
     "how": "점수 하락 없는 한 번 조회로 둘 다 풀었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "대출 중개",
+    "reframed": "한 번 조회 비교",
+    "metric": "조회→대출 전환율"
+   },
+   "issue_tree": {
+    "root": "금리 비교를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "상담",
+      "chosen": false,
+      "sub": [
+       "대출 상담사",
+       "은행 방문"
+      ]
+     },
+     {
+      "issue": "통합 조회",
+      "chosen": true,
+      "sub": [
+       "금융사 연동",
+       "신용 영향 없음"
+      ]
+     },
+     {
+      "issue": "대환",
+      "chosen": false,
+      "sub": [
+       "갈아타기",
+       "알림"
+      ]
+     }
+    ],
+    "why": "신용 걱정 없이 한 번에 봐야 한다"
+   },
+   "pareto": {
+    "vital_few": "신용대출 비교",
+    "effect": "중개의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "상담",
+      "issue": "대출 상담사",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "상담",
+      "issue": "은행 방문",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "통합 조회",
+      "issue": "금융사 연동",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "통합 조회",
+      "issue": "신용 영향 없음",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "대환",
+      "issue": "갈아타기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "대환",
+      "issue": "알림",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "통합 조회가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 비교인가: 대출이 성사된다",
+     "왜 매출인가: 중개 수수료"
+    ],
+    "intent": "중개 수수료 매출",
+    "intent_metric": "중개 대출액",
+    "mode": "raise",
+    "criterion": "중개 대출액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "조회→대출 전환율",
+    "leading": [
+     "조회→대출 전환율",
+     "연동 금융사 수"
+    ],
+    "guardrail": "금리 불일치 민원",
+    "vanity": "조회 수",
+    "intent_metric": "중개 대출액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "조회 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "금융 비교 서비스의 'Why not yet'은 대부분 규제다. 규제가 언제 바뀌는지가 핵심."
   },
   {
@@ -39147,10 +41383,41 @@
     "symptom": "소액 보험금 미청구",
     "problem": "청구 절차가 금액에 비해 너무 번거롭다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 청구를 포기하나: 서류가 번거롭다",
+     "왜 번거롭나: 서류를 떼서 보낸다",
+     "왜 그런가: 병원과 보험사가 연결되지 않았다"
+    ],
+    "root_cause": "금액에 비해 큰 청구 절차"
+   },
+   "pest": {
+    "political": "실손 청구 전산화법",
+    "economic": "소액 보험금",
+    "social": "청구 포기 습관",
+    "technological": "병원-보험 연동",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "병원 연동",
+    "opportunity": "전산화 법",
+    "so": "결제 시점 청구 알림",
+    "weakness": "병원 참여율",
+    "wo": "제도 연동 확대",
+    "threat": "보험사 자체 앱",
+    "st": "편의로 방어"
+   },
+   "three_c": {
+    "customer": "소액 청구를 포기하는 환자",
+    "competitor": "서류 청구",
+    "company": "병원 연동",
+    "gap": "결제하면 끝나는 청구"
+   },
    "hyps": [
     {
      "text": "청구 앱 화면 개선",
@@ -39224,21 +41491,149 @@
     ],
     "solution": "결제 시점 청구 알림 + 제도 연동",
     "mode": "break",
-    "conclusion": "그때 알림을 띄우고 제도와 연동한다",
-    "conclusion_auto": true
+    "conclusion": "청구를 결제 순간에 붙여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "환자",
+    "says": "결제 직후 알림으로 바로 청구했다",
+    "reveals": "시점 맞춤",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "병원",
+    "says": "연동 부담이 크다",
+    "reveals": "공급자 참여",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "청구 편의 대 보험사 비용",
     "how": "결제 시점 알림과 제도 연동으로 소액 청구를 쉽게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "청구 수",
+    "reframed": "절차 제거",
+    "metric": "청구율"
+   },
+   "issue_tree": {
+    "root": "소액 청구를 늘리려면",
+    "branches": [
+     {
+      "issue": "홍보",
+      "chosen": false,
+      "sub": [
+       "청구 안내",
+       "캠페인"
+      ]
+     },
+     {
+      "issue": "절차 제거",
+      "chosen": true,
+      "sub": [
+       "병원 연동",
+       "결제 시점 알림"
+      ]
+     },
+     {
+      "issue": "서류",
+      "chosen": false,
+      "sub": [
+       "사진 청구",
+       "자동 인식"
+      ]
+     }
+    ],
+    "why": "금액보다 절차가 크다"
+   },
+   "pareto": {
+    "vital_few": "소액 외래 진료",
+    "effect": "미청구의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "홍보",
+      "issue": "청구 안내",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "홍보",
+      "issue": "캠페인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "절차 제거",
+      "issue": "병원 연동",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "절차 제거",
+      "issue": "결제 시점 알림",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "서류",
+      "issue": "사진 청구",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "서류",
+      "issue": "자동 인식",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "제도 연동이 핵심이고 결제 알림은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "trust",
+    "whys": [
+     "왜 청구인가: 보험을 믿는다",
+     "왜 신뢰인가: 받을 돈을 받게 한다"
+    ],
+    "intent": "고객 신뢰",
+    "intent_metric": "청구율",
+    "mode": "raise",
+    "criterion": "청구율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "청구율",
+    "leading": [
+     "청구율",
+     "결제→청구 소요 시간"
+    ],
+    "guardrail": "병원 참여율",
+    "vanity": "앱 설치 수",
+    "intent_metric": "청구율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "청구 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "제도로 '불가능'이 풀리면, 남은 건 고객이 행동하는 시점을 잡는 일이다."
   },
   {
@@ -39284,10 +41679,41 @@
     "symptom": "저축률 낮음",
     "problem": "저축이 '쓰고 남은 돈'으로 설계되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 저축을 못 하나: 남는 돈이 없다",
+     "왜 없나: 쓰고 남은 돈을 저축한다",
+     "왜 그런가: 저축은 남는 돈이라는 통념"
+    ],
+    "root_cause": "저축 순서가 소비 뒤에 있다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "사회초년생 소득",
+    "social": "소비 문화",
+    "technological": "자동 이체·잔돈 저축",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "자동 이체",
+    "opportunity": "저축 관심",
+    "so": "선저축 자동화 + 잔돈 저축",
+    "weakness": "낮은 금리 매력",
+    "wo": "목표 시각화",
+    "threat": "소비 앱",
+    "st": "습관 설계로 방어"
+   },
+   "three_c": {
+    "customer": "저축이 안 되는 사회초년생",
+    "competitor": "일반 적금",
+    "company": "자동화",
+    "gap": "월급날 먼저 떼는 저축"
+   },
    "hyps": [
     {
      "text": "금리 높은 적금",
@@ -39346,21 +41772,149 @@
     ],
     "solution": "선저축 자동화 + 잔돈 저축",
     "mode": "break",
-    "conclusion": "월급날 자동으로 먼저 뗀다",
-    "conclusion_auto": true
+    "conclusion": "저축을 소비 앞에 두어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사회초년생",
+    "says": "모르는 사이에 돈이 모였다",
+    "reveals": "자동화",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "쓸 돈이 모자라 해지했다",
+    "reveals": "과한 목표",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "저축 대 쓰는 즐거움",
     "how": "먼저 떼어 두고 남은 돈은 마음껏 쓰게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "저축 상품 가입",
+    "reframed": "선저축 습관",
+    "metric": "6개월 유지율"
+   },
+   "issue_tree": {
+    "root": "저축을 늘리려면",
+    "branches": [
+     {
+      "issue": "금리",
+      "chosen": false,
+      "sub": [
+       "고금리",
+       "우대"
+      ]
+     },
+     {
+      "issue": "순서 바꾸기",
+      "chosen": true,
+      "sub": [
+       "월급날 자동 이체",
+       "잔돈 저축"
+      ]
+     },
+     {
+      "issue": "목표",
+      "chosen": false,
+      "sub": [
+       "시각화",
+       "보상"
+      ]
+     }
+    ],
+    "why": "남는 돈은 남지 않는다"
+   },
+   "pareto": {
+    "vital_few": "월급날 자동 이체",
+    "effect": "저축액의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "금리",
+      "issue": "고금리",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "금리",
+      "issue": "우대",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "순서 바꾸기",
+      "issue": "월급날 자동 이체",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "순서 바꾸기",
+      "issue": "잔돈 저축",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "목표",
+      "issue": "시각화",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "목표",
+      "issue": "보상",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "선저축 자동화가 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 습관인가: 오래 유지한다",
+     "왜 유지인가: 예금 잔액이 쌓인다"
+    ],
+    "intent": "예금 잔액",
+    "intent_metric": "예금 잔액",
+    "mode": "raise",
+    "criterion": "6개월 유지율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "6개월 유지율",
+    "leading": [
+     "6개월 유지율",
+     "자동 이체 설정률"
+    ],
+    "guardrail": "중도 해지율",
+    "vanity": "가입 수",
+    "intent_metric": "예금 잔액",
+    "select_method": {
+     "methods": [
+      "experiment"
+     ],
+     "how": "행동경제 실험",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "행동을 바꾸려면 의지가 아니라 기본값(default)을 바꾼다."
   },
   {
@@ -39399,10 +41953,39 @@
     "symptom": "현금 흐름 압박",
     "problem": "매출과 입금 사이의 시간 차가 문제다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 현금이 부족한가: 카드 매출이 늦게 들어온다",
+     "왜 늦나: 정산 주기가 길다",
+     "왜 그런가: 카드사 정산이 며칠 걸린다"
+    ],
+    "root_cause": "매출과 입금의 시간 차"
+   },
+   "pest": {
+    "political": "여신 규제",
+    "economic": "소상공인 현금 흐름",
+    "social": "자영업 비중",
+    "technological": "매출 데이터 분석",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "매출 데이터",
+    "opportunity": "자영업 현금 수요",
+    "so": "빠른 정산",
+    "weakness": "대손 위험",
+    "wo": "데이터 심사",
+    "threat": "카드사 빠른 정산",
+    "st": "데이터로 방어"
+   },
+   "three_c": {
+    "customer": "식자재 대금이 급한 식당",
+    "competitor": "카드사 정산·대부업",
+    "company": "매출 데이터",
+    "gap": "다음 날 들어오는 매출"
+   },
    "hyps": [
     {
      "text": "은행 대출",
@@ -39476,21 +42059,150 @@
     ],
     "solution": "매출 데이터 기반 선정산",
     "mode": "break",
-    "conclusion": "그걸 근거로 다음 날 지급한다",
-    "conclusion_auto": true
+    "conclusion": "매출 데이터를 담보로 시간 차를 메워라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사장",
+    "says": "다음 날 돈이 들어와 숨통이 트였다",
+    "reveals": "현금 흐름",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사장",
+    "says": "수수료가 붙는다",
+    "reveals": "비용 부담",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 정산 대 대출 위험",
     "how": "카드 매출 데이터를 근거로 위험을 낮춰 빠르게 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "정산 서비스",
+    "reframed": "시간 차 해소",
+    "metric": "정산 소요 일수"
+   },
+   "issue_tree": {
+    "root": "현금 부족을 풀려면",
+    "branches": [
+     {
+      "issue": "대출",
+      "chosen": false,
+      "sub": [
+       "은행",
+       "대부"
+      ]
+     },
+     {
+      "issue": "빠른 정산",
+      "chosen": true,
+      "sub": [
+       "매출 데이터",
+       "선지급"
+      ]
+     },
+     {
+      "issue": "관리",
+      "chosen": false,
+      "sub": [
+       "지출 계획",
+       "알림"
+      ]
+     }
+    ],
+    "why": "시간 차가 문제다"
+   },
+   "pareto": {
+    "vital_few": "식자재 결제일",
+    "effect": "현금 부족의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "대출",
+      "issue": "은행",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "대출",
+      "issue": "대부",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "빠른 정산",
+      "issue": "매출 데이터",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "빠른 정산",
+      "issue": "선지급",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "관리",
+      "issue": "지출 계획",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "관리",
+      "issue": "알림",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "빠른 정산이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 정산인가: 가게가 쓴다",
+     "왜 매출인가: 정산 수수료"
+    ],
+    "intent": "정산 수수료 매출",
+    "intent_metric": "정산액",
+    "mode": "raise",
+    "criterion": "정산액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "정산 소요 일수",
+    "leading": [
+     "정산 소요 일수",
+     "재이용률"
+    ],
+    "guardrail": "대손율",
+    "vanity": "가입 가게 수",
+    "intent_metric": "정산액",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "사장 인터뷰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "대체 데이터가 기존 신용평가의 사각지대를 메운다."
   },
   {
@@ -39529,10 +42241,39 @@
     "symptom": "빈곤의 악순환",
     "problem": "담보가 없으면 은행이 돈을 빌려주지 않는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 가난한 사람은 대출을 못 받나: 담보가 없다",
+     "왜 담보가 필요한가: 상환을 보장할 장치가 없다",
+     "왜 없나: 은행은 개인 담보만 본다"
+    ],
+    "root_cause": "담보 외 상환 장치 부재"
+   },
+   "pest": {
+    "political": "금융 규제",
+    "economic": "빈곤·고리대",
+    "social": "마을 공동체",
+    "technological": "해당 적음",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "마을 공동체",
+    "opportunity": "고리대 대체 수요",
+    "so": "그룹 연대 대출",
+    "weakness": "과잉 대출",
+    "wo": "저축·교육 연계",
+    "threat": "영리 소액금융",
+    "st": "공동체 신뢰"
+   },
+   "three_c": {
+    "customer": "담보 없는 농촌 여성",
+    "competitor": "고리대금업자",
+    "company": "공동체 구조",
+    "gap": "그룹이 서로 보증하는 대출"
+   },
    "hyps": [
     {
      "text": "정부 보조금",
@@ -39606,21 +42347,149 @@
     ],
     "solution": "5명 그룹 연대 소액 대출",
     "mode": "break",
-    "conclusion": "그룹이 함께 책임지게 한다",
-    "conclusion_auto": true
+    "conclusion": "담보를 공동체 신뢰로 바꿔라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "차입 여성",
+    "says": "작은 돈으로 장사를 시작했다",
+    "reveals": "기회",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "연구자",
+    "says": "빈곤 탈출 효과가 기대보다 작다",
+    "reveals": "효과 논쟁",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "담보 없는 대출 대 상환율",
     "how": "그룹 연대 책임으로 담보 없이 상환율을 지켰다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "대출 확대",
+    "reframed": "담보 없는 신뢰",
+    "metric": "상환율"
+   },
+   "issue_tree": {
+    "root": "담보 없이 빌려주려면",
+    "branches": [
+     {
+      "issue": "정부 보증",
+      "chosen": false,
+      "sub": [
+       "보증 기금",
+       "보조금"
+      ]
+     },
+     {
+      "issue": "연대 구조",
+      "chosen": true,
+      "sub": [
+       "그룹 대출",
+       "정기 모임"
+      ]
+     },
+     {
+      "issue": "교육",
+      "chosen": false,
+      "sub": [
+       "금융 교육",
+       "저축"
+      ]
+     }
+    ],
+    "why": "공동체가 보증이다"
+   },
+   "pareto": {
+    "vital_few": "그룹 연대",
+    "effect": "상환의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "정부 보증",
+      "issue": "보증 기금",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "정부 보증",
+      "issue": "보조금",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "연대 구조",
+      "issue": "그룹 대출",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "연대 구조",
+      "issue": "정기 모임",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "교육",
+      "issue": "금융 교육",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "교육",
+      "issue": "저축",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "그룹 연대가 핵심이다"
+   },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "왜 연대 대출인가: 빈곤층이 빌린다",
+     "왜 사업인가: 상환으로 지속된다"
+    ],
+    "intent": "금융 포용",
+    "intent_metric": "차입자 수·상환율",
+    "mode": "hold",
+    "criterion": "이익이 크지 않아도 상환율이 유지되면 성공"
+   },
+   "key_metrics": {
+    "north_star": "상환율",
+    "leading": [
+     "상환율",
+     "그룹 모임 출석"
+    ],
+    "guardrail": "과잉 대출",
+    "vanity": "대출액",
+    "intent_metric": "차입자 수·상환율",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "마을 현장 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'갚지 않을 것'이라는 통념을 실제 상환율로 뒤집었다. (이후 과잉 대출 문제도 논쟁됨)"
   },
   {
@@ -39663,10 +42532,41 @@
     "symptom": "일반인 진입 장벽",
     "problem": "암호화폐가 기술자 중심으로만 설계되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 암호화폐를 못 사나: 너무 어렵다",
+     "왜 어렵나: 개인 키와 해킹 위험",
+     "왜 그런가: 기술자 중심 설계"
+    ],
+    "root_cause": "일반인용 접근 장치 부재"
+   },
+   "pest": {
+    "political": "암호화폐 규제(SEC)",
+    "economic": "가격 변동",
+    "social": "투자 관심",
+    "technological": "커스터디·지갑",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "규제 친화",
+    "opportunity": "투자 관심",
+    "so": "쉬운 구매",
+    "weakness": "거래 수수료 의존",
+    "wo": "커스터디·기관 사업",
+    "threat": "규제 소송",
+    "st": "규제 준수로 신뢰"
+   },
+   "three_c": {
+    "customer": "암호화폐가 궁금한 일반인",
+    "competitor": "기술자용 거래소",
+    "company": "규제 친화",
+    "gap": "은행처럼 쉬운 암호화폐 구매"
+   },
    "hyps": [
     {
      "text": "기술 설명 강화",
@@ -39740,21 +42640,149 @@
     ],
     "solution": "쉬운 구매 + 규제 친화 거래소",
     "mode": "break",
-    "conclusion": "은행 연결과 규제 준수를 내세운다",
-    "conclusion_auto": true
+    "conclusion": "기술자용을 일반인용으로 바꾸려면 쉬움과 규제 신뢰가 함께 필요하다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "일반 투자자",
+    "says": "카드로 쉽게 샀다",
+    "reveals": "쉬움",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "규제 기관",
+    "says": "증권 규정 위반 소지",
+    "reveals": "규제 위험",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "쉬운 구매 대 규제 준수",
     "how": "규제를 지키면서 은행 연결로 쉽게 사게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "거래 수",
+    "reframed": "일반인 접근",
+    "metric": "월간 거래 사용자"
+   },
+   "issue_tree": {
+    "root": "암호화폐 구매를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "교육",
+      "chosen": false,
+      "sub": [
+       "가이드",
+       "콘텐츠"
+      ]
+     },
+     {
+      "issue": "쉬운 구매",
+      "chosen": true,
+      "sub": [
+       "카드 연결",
+       "보관 대행"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": false,
+      "sub": [
+       "규제 준수",
+       "보험"
+      ]
+     }
+    ],
+    "why": "어렵고 무서우면 안 산다"
+   },
+   "pareto": {
+    "vital_few": "상승장 신규 가입",
+    "effect": "거래의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "교육",
+      "issue": "가이드",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "교육",
+      "issue": "콘텐츠",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "쉬운 구매",
+      "issue": "카드 연결",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "쉬운 구매",
+      "issue": "보관 대행",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "규제 준수",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "보험",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "쉬운 구매가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 쉬움인가: 거래가 는다",
+     "왜 매출인가: 거래 수수료"
+    ],
+    "intent": "거래 수수료 매출",
+    "intent_metric": "거래 매출",
+    "mode": "raise",
+    "criterion": "거래 매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "월간 거래 사용자",
+    "leading": [
+     "월간 거래 사용자",
+     "첫 구매 전환율"
+    ],
+    "guardrail": "보안 사고",
+    "vanity": "가입 수",
+    "intent_metric": "거래 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "업계 문화(탈규제)를 거슬러 일반인의 신뢰를 택했다."
   },
   {
@@ -48859,10 +51887,39 @@
     "symptom": "판매 부진",
     "problem": "고객은 장비 가격과 실제 사용량의 가치를 비교할 수 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 복사기가 안 팔리나: 너무 비싸다",
+     "왜 비싸게 느끼나: 장비 가격으로만 본다",
+     "왜 그런가: 사용 가치를 비교할 수 없다"
+    ],
+    "root_cause": "가격과 사용 가치의 단절"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "높은 장비 가격",
+    "social": "사무 문서 증가",
+    "technological": "건식 복사 기술",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "복사 기술",
+    "opportunity": "문서 증가",
+    "so": "리스 + 사용량 과금",
+    "weakness": "장비 원가",
+    "wo": "사용량으로 회수",
+    "threat": "경쟁 복사기",
+    "st": "서비스망으로 방어"
+   },
+   "three_c": {
+    "customer": "복사가 필요한 기업",
+    "competitor": "습식 복사·먹지",
+    "company": "건식 기술",
+    "gap": "쓰는 만큼 내는 복사"
+   },
    "hyps": [
     {
      "text": "가격 인하",
@@ -48937,21 +51994,149 @@
     ],
     "solution": "리스 + 복사 장수 과금",
     "mode": "break",
-    "conclusion": "빌려주고 장수로 받는다",
-    "conclusion_auto": true
+    "conclusion": "장비가 아니라 사용을 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "기업",
+    "says": "초기 비용 없이 썼다",
+    "reveals": "진입 장벽 제거",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "재무",
+    "says": "쓰다 보니 비용이 커졌다",
+    "reveals": "사용량 비용",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "비싼 장비 대 도입 장벽",
     "how": "리스와 사용량 과금으로 장벽 없이 비싼 기계를 깔았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "복사기 판매",
+    "reframed": "사용 가치로 가격",
+    "metric": "장당 매출"
+   },
+   "issue_tree": {
+    "root": "비싼 복사기를 팔려면",
+    "branches": [
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "가격 인하",
+       "보조금"
+      ]
+     },
+     {
+      "issue": "과금 방식",
+      "chosen": true,
+      "sub": [
+       "리스",
+       "사용량 과금"
+      ]
+     },
+     {
+      "issue": "영업",
+      "chosen": false,
+      "sub": [
+       "데모",
+       "시험 사용"
+      ]
+     }
+    ],
+    "why": "사용 가치로 보이면 산다"
+   },
+   "pareto": {
+    "vital_few": "고사용 고객",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인",
+      "issue": "가격 인하",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "보조금",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "과금 방식",
+      "issue": "리스",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "과금 방식",
+      "issue": "사용량 과금",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "영업",
+      "issue": "데모",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "영업",
+      "issue": "시험 사용",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "과금 방식이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 사용량인가: 많이 쓸수록 번다",
+     "왜 매출인가: 반복 매출"
+    ],
+    "intent": "사용량 반복 매출",
+    "intent_metric": "장당 매출",
+    "mode": "raise",
+    "criterion": "장당 매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "장당 매출",
+    "leading": [
+     "월 복사량",
+     "리스 계약 수"
+    ],
+    "guardrail": "장비 고장률",
+    "vanity": "데모 수",
+    "intent_metric": "장당 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "사용량 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "가치가 '사용'에서 나오면 가격도 사용에 붙인다."
   },
   {
@@ -49348,10 +52533,39 @@
     "symptom": "공구 관리 비용",
     "problem": "고객은 공구가 아니라 '일이 멈추지 않는 것'을 원한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 공구 관리가 어렵나: 분실·고장이 잦다",
+     "왜 문제인가: 현장이 멈춘다",
+     "왜 그런가: 고객은 공구를 사서 관리한다"
+    ],
+    "root_cause": "고객은 공구가 아니라 멈추지 않는 일을 원한다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "현장 지연 비용",
+    "social": "건설 인력 부족",
+    "technological": "공구 추적",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "고품질 공구",
+    "opportunity": "현장 지연 비용",
+    "so": "공구 관리 서비스 계약",
+    "weakness": "자산 부담",
+    "wo": "데이터로 효율",
+    "threat": "저가 공구",
+    "st": "서비스로 잠금"
+   },
+   "three_c": {
+    "customer": "공구 관리가 힘든 건설사",
+    "competitor": "공구 판매",
+    "company": "품질·서비스",
+    "gap": "항상 작동하는 공구"
+   },
    "hyps": [
     {
      "text": "공구 가격 인하",
@@ -49425,21 +52639,150 @@
     ],
     "solution": "공구 관리 서비스 계약",
     "mode": "break",
-    "conclusion": "관리까지 월 요금으로 맡는다",
-    "conclusion_auto": true
+    "conclusion": "제품이 아니라 고객이 원하는 결과를 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "건설사",
+    "says": "공구 걱정 없이 일한다",
+    "reveals": "결과 보장",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "재무",
+    "says": "계약이 비싸다",
+    "reveals": "비용 부담",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "공구 판매 대 고객의 무중단",
     "how": "관리 계약으로 고객은 멈추지 않고 회사는 안정 수익을 얻었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "공구 판매",
+    "reframed": "현장 중단 방지",
+    "metric": "공구 가동률"
+   },
+   "issue_tree": {
+    "root": "현장 중단을 막으려면",
+    "branches": [
+     {
+      "issue": "관리",
+      "chosen": false,
+      "sub": [
+       "담당자",
+       "재고"
+      ]
+     },
+     {
+      "issue": "서비스 계약",
+      "chosen": true,
+      "sub": [
+       "교체 보장",
+       "관리 대행"
+      ]
+     },
+     {
+      "issue": "품질",
+      "chosen": false,
+      "sub": [
+       "내구성",
+       "수리"
+      ]
+     }
+    ],
+    "why": "결과를 보장해야 한다"
+   },
+   "pareto": {
+    "vital_few": "공구 고장·분실",
+    "effect": "현장 중단의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "관리",
+      "issue": "담당자",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "관리",
+      "issue": "재고",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "서비스 계약",
+      "issue": "교체 보장",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "서비스 계약",
+      "issue": "관리 대행",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "품질",
+      "issue": "내구성",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "품질",
+      "issue": "수리",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "서비스 계약이 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 계약인가: 오래 남는다",
+     "왜 유지인가: 반복 매출과 잠금"
+    ],
+    "intent": "장기 계약 매출",
+    "intent_metric": "계약 갱신율",
+    "mode": "raise",
+    "criterion": "계약 갱신율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "공구 가동률",
+    "leading": [
+     "공구 가동률",
+     "교체 소요 시간"
+    ],
+    "guardrail": "서비스 비용",
+    "vanity": "공구 수",
+    "intent_metric": "계약 갱신율",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "현장 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "제품을 서비스로 바꾸면 고객의 진짜 목표(가동률)를 팔 수 있다."
   },
   {
@@ -49482,10 +52825,39 @@
     "symptom": "타이어 비용 변동",
     "problem": "타이어를 오래 쓰게 할수록 제조사 판매가 줄어드는 이해충돌"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 비용 예측이 어렵나: 타이어 관리가 불규칙하다",
+     "왜 제조사가 안 돕나: 오래 쓰면 판매가 준다",
+     "왜 그런가: 판매 수익 구조"
+    ],
+    "root_cause": "판매와 고객 이익의 충돌"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "운송 비용",
+    "social": "운송사 효율 경쟁",
+    "technological": "타이어 센서",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "타이어 기술",
+    "opportunity": "운송 효율 경쟁",
+    "so": "주행거리 과금",
+    "weakness": "관리 부담",
+    "wo": "센서 데이터",
+    "threat": "저가 타이어",
+    "st": "서비스로 잠금"
+   },
+   "three_c": {
+    "customer": "비용을 줄이려는 운송사",
+    "competitor": "타이어 판매",
+    "company": "기술",
+    "gap": "달린 만큼 내는 타이어"
+   },
    "hyps": [
     {
      "text": "타이어 할인",
@@ -49559,21 +52931,149 @@
     ],
     "solution": "주행 거리 과금 타이어 서비스",
     "mode": "break",
-    "conclusion": "관리까지 맡아 이해를 맞춘다",
-    "conclusion_auto": true
+    "conclusion": "고객과 이해가 같아지는 과금 방식을 택하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "운송사",
+    "says": "비용이 예측된다",
+    "reveals": "예측 가능성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "제조사",
+    "says": "관리 비용이 크다",
+    "reveals": "운영 부담",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "타이어 판매량 대 오래 쓰기",
     "how": "거리 과금으로 오래 쓸수록 이익이 되게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "타이어 판매",
+    "reframed": "이해 일치",
+    "metric": "킬로미터당 매출"
+   },
+   "issue_tree": {
+    "root": "이해충돌을 없애려면",
+    "branches": [
+     {
+      "issue": "할인",
+      "chosen": false,
+      "sub": [
+       "대량 구매",
+       "장기 계약"
+      ]
+     },
+     {
+      "issue": "과금",
+      "chosen": true,
+      "sub": [
+       "주행거리 과금",
+       "관리 포함"
+      ]
+     },
+     {
+      "issue": "기술",
+      "chosen": false,
+      "sub": [
+       "내구성",
+       "센서"
+      ]
+     }
+    ],
+    "why": "오래 쓸수록 제조사가 벌어야 한다"
+   },
+   "pareto": {
+    "vital_few": "대형 운송사",
+    "effect": "계약의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "할인",
+      "issue": "대량 구매",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "할인",
+      "issue": "장기 계약",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "과금",
+      "issue": "주행거리 과금",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "과금",
+      "issue": "관리 포함",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "기술",
+      "issue": "내구성",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "기술",
+      "issue": "센서",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "주행거리 과금이 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 과금 변경인가: 장기 계약",
+     "왜 유지인가: 고객 이익이 우리 이익"
+    ],
+    "intent": "장기 계약 매출",
+    "intent_metric": "계약 유지율",
+    "mode": "raise",
+    "criterion": "계약 유지율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "킬로미터당 매출",
+    "leading": [
+     "킬로미터당 비용",
+     "타이어 수명"
+    ],
+    "guardrail": "관리 비용",
+    "vanity": "판매 개수",
+    "intent_metric": "계약 유지율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "주행 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "롤스로이스·힐티와 같은 '제품의 서비스화' 패턴."
   },
   {
@@ -49619,10 +53119,41 @@
     "symptom": "모바일 웹 사용 불편",
     "problem": "입력 장치가 화면을 차지하고 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 웹 보기가 불편한가: 화면이 작다",
+     "왜 작나: 키보드가 차지한다",
+     "왜 키보드인가: 스마트폰은 키보드가 있어야 한다는 통념"
+    ],
+    "root_cause": "입력 장치가 화면을 차지한다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "통신사 보조금",
+    "social": "모바일 인터넷",
+    "technological": "멀티터치",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "멀티터치·소프트웨어",
+    "opportunity": "모바일 인터넷",
+    "so": "전면 터치스크린",
+    "weakness": "초기 높은 가격",
+    "wo": "앱스토어 생태계",
+    "threat": "안드로이드",
+    "st": "생태계로 잠금"
+   },
+   "three_c": {
+    "customer": "휴대폰으로 웹을 보고 싶은 사람",
+    "competitor": "키보드 스마트폰",
+    "company": "멀티터치",
+    "gap": "화면 전체가 입력인 폰"
+   },
    "hyps": [
     {
      "text": "더 좋은 키보드",
@@ -49681,21 +53212,150 @@
     ],
     "solution": "전면 터치스크린 + 소프트웨어 키보드",
     "mode": "break",
-    "conclusion": "전면을 화면으로 쓴다",
-    "conclusion_auto": true
+    "conclusion": "입력 장치를 소프트웨어로 바꿔 화면을 되찾아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "웹이 컴퓨터처럼 보인다",
+    "reveals": "화면 경험",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "비즈니스 사용자",
+    "says": "터치 키보드로 타자가 어렵다",
+    "reveals": "입력 불편",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "큰 화면 대 입력 편의",
     "how": "소프트웨어 키보드로 필요할 때만 입력을 띄웠다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "폰 판매",
+    "reframed": "화면 전체 활용",
+    "metric": "모바일 웹 사용 시간"
+   },
+   "issue_tree": {
+    "root": "웹 보기를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "화면 크기",
+      "chosen": false,
+      "sub": [
+       "큰 폰",
+       "접는 폰"
+      ]
+     },
+     {
+      "issue": "입력 방식",
+      "chosen": true,
+      "sub": [
+       "멀티터치",
+       "소프트웨어 키보드"
+      ]
+     },
+     {
+      "issue": "브라우저",
+      "chosen": false,
+      "sub": [
+       "모바일 웹",
+       "확대"
+      ]
+     }
+    ],
+    "why": "키보드가 화면을 막는다"
+   },
+   "pareto": {
+    "vital_few": "터치스크린",
+    "effect": "차별의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "화면 크기",
+      "issue": "큰 폰",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "화면 크기",
+      "issue": "접는 폰",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "입력 방식",
+      "issue": "멀티터치",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "입력 방식",
+      "issue": "소프트웨어 키보드",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "브라우저",
+      "issue": "모바일 웹",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "브라우저",
+      "issue": "확대",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "멀티터치가 큰 베팅이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 터치인가: 새 카테고리",
+     "왜 매출인가: 고가 기기와 앱 수익"
+    ],
+    "intent": "기기·서비스 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "모바일 웹 사용 시간",
+    "leading": [
+     "모바일 웹 사용 시간",
+     "앱 다운로드"
+    ],
+    "guardrail": "반품률",
+    "vanity": "출시 관심",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "observation",
+      "experiment"
+     ],
+     "how": "사용성 시제품",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "화면이 곧 인터페이스가 되자 앱 생태계가 가능해졌다."
   },
   {
@@ -49738,10 +53398,43 @@
     "symptom": "디지털 음악 불편",
     "problem": "기기와 음악 구매가 분리되어 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 디지털 음악이 어렵나: 음악 넣기가 어렵다",
+     "왜 어렵나: 기기와 구매가 분리됐다",
+     "왜 불법이 넘치나: 쉬운 합법 구매가 없다"
+    ],
+    "root_cause": "기기와 음악 구매 분리"
+   },
+   "pest": {
+    "political": "저작권·불법 다운로드",
+    "economic": "곡당 가격",
+    "social": "디지털 음악 수요",
+    "technological": "하드디스크 플레이어·동기화",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "기기·소프트웨어 통합",
+    "opportunity": "음반사 협력",
+    "so": "기기 + 스토어 통합",
+    "weakness": "폐쇄성",
+    "wo": "스트리밍 전환",
+    "threat": "스트리밍",
+    "st": "생태계로 잠금"
+   },
+   "three_c": {
+    "customer": "음악을 쉽게 듣고 싶은 사람",
+    "competitor": "MP3 플레이어·불법 다운로드",
+    "company": "통합 설계",
+    "gap": "사고 듣기가 한 번에 되는 음악"
+   },
    "hyps": [
     {
      "text": "더 큰 용량 MP3",
@@ -49817,21 +53510,149 @@
     ],
     "solution": "기기·소프트웨어·스토어 통합",
     "mode": "break",
-    "conclusion": "기기·프로그램·스토어를 하나로 잇는다",
-    "conclusion_auto": true
+    "conclusion": "기기·소프트웨어·구매를 하나로 묶어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "곡을 사서 바로 넣었다",
+    "reveals": "통합 편의",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사용자",
+    "says": "다른 기기에서 못 듣는다",
+    "reveals": "폐쇄성",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "음악 편의 대 저작권 보호",
     "how": "곡당 구매 스토어로 쉽게 사면서 권리를 지켰다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "기기 판매",
+    "reframed": "기기-음악 통합",
+    "metric": "기기당 구매 곡 수"
+   },
+   "issue_tree": {
+    "root": "디지털 음악을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "기기",
+      "chosen": false,
+      "sub": [
+       "용량",
+       "디자인"
+      ]
+     },
+     {
+      "issue": "통합",
+      "chosen": true,
+      "sub": [
+       "동기화",
+       "스토어"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "곡당 가격",
+       "앨범"
+      ]
+     }
+    ],
+    "why": "분리가 불편의 원인이다"
+   },
+   "pareto": {
+    "vital_few": "기기 판매",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기기",
+      "issue": "용량",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "기기",
+      "issue": "디자인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "통합",
+      "issue": "동기화",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "통합",
+      "issue": "스토어",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "곡당 가격",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "앨범",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "통합이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 통합인가: 기기를 산다",
+     "왜 매출인가: 기기 마진"
+    ],
+    "intent": "기기 매출",
+    "intent_metric": "기기 판매량",
+    "mode": "raise",
+    "criterion": "기기 판매량이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "기기당 구매 곡 수",
+    "leading": [
+     "기기당 구매 곡 수",
+     "동기화 사용률"
+    ],
+    "guardrail": "불법 다운로드",
+    "vanity": "스토어 방문",
+    "intent_metric": "기기 판매량",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "판매 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "경험 전체를 묶으면 개별 기능 경쟁을 벗어난다."
   },
   {
@@ -49874,10 +53695,41 @@
     "symptom": "냉난방 에너지 낭비",
     "problem": "사람이 일정을 프로그래밍해야 한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 에너지를 낭비하나: 조절기를 설정 안 한다",
+     "왜 안 하나: 복잡하다",
+     "왜 복잡한가: 사람이 일정을 프로그래밍한다"
+    ],
+    "root_cause": "사람이 설정해야 한다"
+   },
+   "pest": {
+    "political": "에너지 효율 정책",
+    "economic": "에너지 비용",
+    "social": "친환경 관심",
+    "technological": "학습 알고리즘·와이파이",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "학습 알고리즘",
+    "opportunity": "에너지 비용",
+    "so": "학습형 조절기",
+    "weakness": "고가",
+    "wo": "전력사 할인 제휴",
+    "threat": "경쟁 스마트홈",
+    "st": "디자인으로 차별"
+   },
+   "three_c": {
+    "customer": "설정을 안 하는 가정",
+    "competitor": "프로그래밍형 조절기",
+    "company": "학습 알고리즘",
+    "gap": "알아서 배우는 조절기"
+   },
    "hyps": [
     {
      "text": "더 많은 설정 버튼",
@@ -49936,21 +53788,150 @@
     ],
     "solution": "디자인 + 학습형 스마트 온도 조절기",
     "mode": "break",
-    "conclusion": "디자인과 학습을 넣는다",
-    "conclusion_auto": true
+    "conclusion": "사람이 설정하지 말고 기기가 배우게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "신경 안 써도 난방비가 줄었다",
+    "reveals": "자동화",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사용자",
+    "says": "가끔 원치 않는 온도로 바뀐다",
+    "reveals": "제어 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "에너지 절약 대 사용 편의",
     "how": "학습으로 알아서 맞춰 절약과 편의를 함께 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "조절기 판매",
+    "reframed": "설정 없는 절약",
+    "metric": "에너지 절감률"
+   },
+   "issue_tree": {
+    "root": "에너지 낭비를 줄이려면",
+    "branches": [
+     {
+      "issue": "교육",
+      "chosen": false,
+      "sub": [
+       "절약 캠페인",
+       "안내"
+      ]
+     },
+     {
+      "issue": "자동 학습",
+      "chosen": true,
+      "sub": [
+       "사용 패턴",
+       "외출 감지"
+      ]
+     },
+     {
+      "issue": "디자인",
+      "chosen": false,
+      "sub": [
+       "쉬운 조작",
+       "앱"
+      ]
+     }
+    ],
+    "why": "설정이 장벽이다"
+   },
+   "pareto": {
+    "vital_few": "자동 일정",
+    "effect": "절감의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "교육",
+      "issue": "절약 캠페인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "교육",
+      "issue": "안내",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "자동 학습",
+      "issue": "사용 패턴",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "자동 학습",
+      "issue": "외출 감지",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "디자인",
+      "issue": "쉬운 조작",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "디자인",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "자동 학습이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 학습인가: 효과가 보인다",
+     "왜 매출인가: 기기와 제휴 매출"
+    ],
+    "intent": "기기 매출",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "에너지 절감률",
+    "leading": [
+     "에너지 절감률",
+     "수동 조작 빈도"
+    ],
+    "guardrail": "반품률",
+    "vanity": "웹 방문",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "가정 사용 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "아무도 신경 안 쓰는 제품이 디자인과 자동화로 '갖고 싶은 제품'이 될 수 있다."
   },
   {
@@ -49996,10 +53977,43 @@
     "symptom": "방문자 확인 불가",
     "problem": "현관이 집주인과 연결되어 있지 않다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 택배가 사라지나: 누가 왔는지 모른다",
+     "왜 모르나: 현관이 집주인과 연결 안 됐다",
+     "왜 그런가: 초인종은 집에 있어야 쓴다"
+    ],
+    "root_cause": "현관과 집주인의 단절"
+   },
+   "pest": {
+    "political": "사생활·경찰 협력 규제",
+    "economic": "택배 증가",
+    "social": "안전 불안",
+    "technological": "와이파이 카메라",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "비디오 초인종",
+    "opportunity": "택배 증가",
+    "so": "폰 연결 초인종",
+    "weakness": "사생활 논란",
+    "wo": "투명 정책",
+    "threat": "규제·여론",
+    "st": "사생활 보호 기능"
+   },
+   "three_c": {
+    "customer": "집을 비우는 사람",
+    "competitor": "일반 초인종",
+    "company": "비디오 연결",
+    "gap": "어디서나 보는 현관"
+   },
    "hyps": [
     {
      "text": "기존 보안 카메라",
@@ -50073,21 +54087,150 @@
     ],
     "solution": "스마트폰 비디오 초인종(사생활·경찰 협력 논란 동반)",
     "mode": "shift",
-    "conclusion": "다만 사생활 문제가 함께 따라온다",
-    "conclusion_auto": true
+    "conclusion": "현관을 폰에 연결하되 사생활 경계를 지켜라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "회사에서 택배 기사와 대화했다",
+    "reveals": "연결성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "시민 단체",
+    "says": "동네 감시망이 된다",
+    "reveals": "사생활 침해",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "현관 보안 대 편의",
     "how": "휴대폰 연결로 어디서든 응대했다(사생활 논란은 남음)"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "기기 판매",
+    "reframed": "현관 연결",
+    "metric": "활성 기기 수"
+   },
+   "issue_tree": {
+    "root": "현관을 안전하게 하려면",
+    "branches": [
+     {
+      "issue": "경비",
+      "chosen": false,
+      "sub": [
+       "경비원",
+       "보안 업체"
+      ]
+     },
+     {
+      "issue": "연결",
+      "chosen": true,
+      "sub": [
+       "비디오",
+       "폰 알림"
+      ]
+     },
+     {
+      "issue": "정책",
+      "chosen": false,
+      "sub": [
+       "사생활",
+       "경찰 협력"
+      ]
+     }
+    ],
+    "why": "집주인이 봐야 안전하다"
+   },
+   "pareto": {
+    "vital_few": "택배 확인",
+    "effect": "사용의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "경비",
+      "issue": "경비원",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "경비",
+      "issue": "보안 업체",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "연결",
+      "issue": "비디오",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "연결",
+      "issue": "폰 알림",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "정책",
+      "issue": "사생활",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "정책",
+      "issue": "경찰 협력",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "폰 연결이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 연결인가: 구독한다",
+     "왜 매출인가: 녹화 저장 구독"
+    ],
+    "intent": "구독 매출",
+    "intent_metric": "구독자 수",
+    "mode": "raise",
+    "criterion": "구독자 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "활성 기기 수",
+    "leading": [
+     "활성 기기 수",
+     "구독 전환율"
+    ],
+    "guardrail": "사생활 민원",
+    "vanity": "판매 수",
+    "intent_metric": "구독자 수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "사용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "작은 일상 불편(초인종)에서 보안 플랫폼이 시작됐다."
   },
   {
@@ -50130,10 +54273,41 @@
     "symptom": "가정용 로봇 부재",
     "problem": "완벽한 지능을 목표로 해 비싸다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 청소 로봇이 비싼가: 완벽한 지능을 목표로 한다",
+     "왜 그런가: 로봇은 똑똑해야 한다는 통념",
+     "왜 아쉬운가: 바닥 청소엔 단순함으로 충분하다"
+    ],
+    "root_cause": "과한 목표가 가격을 높인다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "가전 가격",
+    "social": "맞벌이 가사 부담",
+    "technological": "단순 센서",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "로봇 기술",
+    "opportunity": "가사 부담",
+    "so": "단순하지만 쓸 만한 로봇",
+    "weakness": "성능 한계",
+    "wo": "매핑 기술 개선",
+    "threat": "저가 중국산",
+    "st": "브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "청소가 귀찮은 가정",
+    "competitor": "일반 청소기",
+    "company": "로봇 기술",
+    "gap": "충분히 쓸 만한 로봇 청소"
+   },
    "hyps": [
     {
      "text": "고성능 지능형 로봇",
@@ -50209,21 +54383,149 @@
     ],
     "solution": "단순 규칙 저가 청소 로봇",
     "mode": "break",
-    "conclusion": "단순 규칙으로 값을 낮춘다",
-    "conclusion_auto": true
+    "conclusion": "완벽보다 충분히 쓸 만하게 만들어 가격을 낮춰라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "외출하고 오면 바닥이 깨끗하다",
+    "reveals": "자동화",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사용자",
+    "says": "구석을 못 닦는다",
+    "reveals": "성능 한계",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "청소 성능 대 가격",
     "how": "단순 규칙으로 충분한 성능을 싸게 냈다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "로봇 판매",
+    "reframed": "충분한 성능 저가",
+    "metric": "판매량"
+   },
+   "issue_tree": {
+    "root": "청소 로봇을 싸게 하려면",
+    "branches": [
+     {
+      "issue": "원가",
+      "chosen": false,
+      "sub": [
+       "부품",
+       "생산"
+      ]
+     },
+     {
+      "issue": "목표 조정",
+      "chosen": true,
+      "sub": [
+       "단순 센서",
+       "무작위 주행"
+      ]
+     },
+     {
+      "issue": "유통",
+      "chosen": false,
+      "sub": [
+       "대형 마트",
+       "온라인"
+      ]
+     }
+    ],
+    "why": "완벽함이 비용이다"
+   },
+   "pareto": {
+    "vital_few": "바닥 먼지 청소",
+    "effect": "사용 가치의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "원가",
+      "issue": "부품",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "원가",
+      "issue": "생산",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "목표 조정",
+      "issue": "단순 센서",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "목표 조정",
+      "issue": "무작위 주행",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유통",
+      "issue": "대형 마트",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "유통",
+      "issue": "온라인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "목표 조정이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 저가인가: 대중이 산다",
+     "왜 매출인가: 판매량"
+    ],
+    "intent": "판매 매출",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "판매량",
+    "leading": [
+     "판매량",
+     "주간 사용 횟수"
+    ],
+    "guardrail": "반품률",
+    "vanity": "광고 노출",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "가정 사용 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'충분히 좋은' 수준을 정하는 것이 가격을 정한다."
   },
   {
@@ -50269,10 +54571,39 @@
     "symptom": "가성비 스마트폰 부재",
     "problem": "유통·마케팅 비용이 가격을 높인다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 좋은 폰이 비싼가: 해외 브랜드다",
+     "왜 비싼가: 유통·마케팅 비용",
+     "왜 그런가: 폰은 매장과 광고로 판다는 통념"
+    ],
+    "root_cause": "유통·마케팅 비용"
+   },
+   "pest": {
+    "political": "해외 진출 규제",
+    "economic": "저가 수요",
+    "social": "팬 커뮤니티",
+    "technological": "온라인 직판",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "팬 커뮤니티",
+    "opportunity": "온라인 쇼핑",
+    "so": "직판 + 팬 참여 개발",
+    "weakness": "낮은 마진",
+    "wo": "생태계 기기·서비스",
+    "threat": "경쟁 저가폰",
+    "st": "팬 충성도"
+   },
+   "three_c": {
+    "customer": "좋은 폰을 싸게 원하는 젊은 층",
+    "competitor": "해외 고가 브랜드",
+    "company": "팬 커뮤니티",
+    "gap": "팬과 만드는 저가 고성능 폰"
+   },
    "hyps": [
     {
      "text": "대리점 유통",
@@ -50346,21 +54677,149 @@
     ],
     "solution": "온라인 직판 + 팬 참여 개발",
     "mode": "break",
-    "conclusion": "팬 의견을 받아 계속 고친다",
-    "conclusion_auto": true
+    "conclusion": "유통과 광고를 빼고 팬을 마케팅으로 써라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "팬",
+    "says": "내 의견이 업데이트에 반영됐다",
+    "reveals": "참여",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사용자",
+    "says": "광고가 시스템에 들어 있다",
+    "reveals": "수익화 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "좋은 사양 대 낮은 가격",
     "how": "온라인 직판·한정 판매로 비용을 빼 둘 다 잡았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "폰 판매",
+    "reframed": "저가 고성능",
+    "metric": "판매량"
+   },
+   "issue_tree": {
+    "root": "좋은 폰을 싸게 팔려면",
+    "branches": [
+     {
+      "issue": "원가",
+      "chosen": false,
+      "sub": [
+       "부품",
+       "생산"
+      ]
+     },
+     {
+      "issue": "유통·마케팅",
+      "chosen": true,
+      "sub": [
+       "온라인 직판",
+       "팬 입소문"
+      ]
+     },
+     {
+      "issue": "개발",
+      "chosen": false,
+      "sub": [
+       "팬 피드백",
+       "주간 업데이트"
+      ]
+     }
+    ],
+    "why": "유통과 광고가 비용이다"
+   },
+   "pareto": {
+    "vital_few": "팬 입소문",
+    "effect": "판매의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "원가",
+      "issue": "부품",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "원가",
+      "issue": "생산",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "유통·마케팅",
+      "issue": "온라인 직판",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유통·마케팅",
+      "issue": "팬 입소문",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "개발",
+      "issue": "팬 피드백",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "개발",
+      "issue": "주간 업데이트",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "직판·팬 마케팅이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 저가인가: 사용자가 는다",
+     "왜 성장인가: 생태계 서비스 수익"
+    ],
+    "intent": "사용자 기반 성장",
+    "intent_metric": "월간 활성 사용자",
+    "mode": "raise",
+    "criterion": "월간 활성 사용자가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "판매량",
+    "leading": [
+     "판매량",
+     "팬 피드백 반영 수"
+    ],
+    "guardrail": "광고 불만",
+    "vanity": "커뮤니티 가입 수",
+    "intent_metric": "월간 활성 사용자",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "팬 포럼 피드백",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "팬 커뮤니티가 마케팅과 개발을 동시에 했다."
   },
   {
@@ -50403,10 +54862,39 @@
     "symptom": "충전기 구매 불안",
     "problem": "저가 시장에 신뢰할 브랜드가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 충전기를 못 믿나: 품질이 들쭉날쭉하다",
+     "왜 그런가: 저가 시장에 브랜드가 없다",
+     "왜 없나: 저가는 품질이 낮다는 통념"
+    ],
+    "root_cause": "저가 시장에 신뢰 브랜드 부재"
+   },
+   "pest": {
+    "political": "전기 안전 인증",
+    "economic": "저가 수요",
+    "social": "리뷰 의존 쇼핑",
+    "technological": "충전 기술",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "리뷰 분석",
+    "opportunity": "리뷰 의존 쇼핑",
+    "so": "리뷰 기반 개선 신뢰 브랜드",
+    "weakness": "플랫폼 의존",
+    "wo": "자체 채널",
+    "threat": "저가 경쟁",
+    "st": "품질로 방어"
+   },
+   "three_c": {
+    "customer": "믿을 만한 저가 충전기를 찾는 사람",
+    "competitor": "무명 저가·비싼 정품",
+    "company": "리뷰 분석",
+    "gap": "저가인데 믿을 만한 충전기"
+   },
    "hyps": [
     {
      "text": "더 싼 충전기",
@@ -50480,21 +54968,149 @@
     ],
     "solution": "리뷰 분석 개선 + 확실한 보증",
     "mode": "break",
-    "conclusion": "불만을 고치고 보증하면 믿을 저가 브랜드가 된다",
-    "conclusion_auto": true
+    "conclusion": "리뷰를 개발에 반영해 저가 시장의 신뢰가 되어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "리뷰가 좋아 샀고 오래 쓴다",
+    "reveals": "신뢰",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "구매자",
+    "says": "가끔 불량이 있다",
+    "reveals": "품질 편차",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "저가 대 신뢰",
     "how": "리뷰 기반 개선과 보증으로 싸면서 믿게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "충전기 판매",
+    "reframed": "저가 신뢰",
+    "metric": "별점·재구매율"
+   },
+   "issue_tree": {
+    "root": "저가 시장에서 신뢰를 얻으려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "최저가",
+       "묶음"
+      ]
+     },
+     {
+      "issue": "품질 개선",
+      "chosen": true,
+      "sub": [
+       "리뷰 분석",
+       "개선 반영"
+      ]
+     },
+     {
+      "issue": "보증",
+      "chosen": false,
+      "sub": [
+       "긴 보증",
+       "교환"
+      ]
+     }
+    ],
+    "why": "리뷰가 개선 방향이다"
+   },
+   "pareto": {
+    "vital_few": "부정 리뷰 주제",
+    "effect": "개선 효과의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "최저가",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "묶음",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "품질 개선",
+      "issue": "리뷰 분석",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "품질 개선",
+      "issue": "개선 반영",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "보증",
+      "issue": "긴 보증",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보증",
+      "issue": "교환",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "리뷰 기반 개선이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 신뢰인가: 다시 산다",
+     "왜 매출인가: 카테고리 확장"
+    ],
+    "intent": "브랜드 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "별점·재구매율",
+    "leading": [
+     "별점",
+     "재구매율"
+    ],
+    "guardrail": "불량률",
+    "vanity": "상품 수",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "리뷰 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "경쟁사 리뷰가 가장 값싼 시장조사다."
   },
   {
@@ -50537,10 +55153,42 @@
     "symptom": "액션 촬영 불가",
     "problem": "카메라는 '찍는 사람'이 따로 있다고 가정한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 액션 장면을 못 찍나: 카메라가 크고 방수가 안 된다",
+     "왜 그런가: 찍는 사람이 따로 있다는 가정",
+     "왜 문제인가: 액션은 본인이 찍어야 한다"
+    ],
+    "root_cause": "촬영자 분리 가정"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "카메라 가격",
+    "social": "SNS 영상 공유",
+    "technological": "소형 방수 카메라",
+    "key": [
+     "S",
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "소형 방수 기술",
+    "opportunity": "SNS 영상",
+    "so": "착용형 카메라",
+    "weakness": "단일 제품 의존",
+    "wo": "구독·편집 앱",
+    "threat": "스마트폰 카메라",
+    "st": "거친 환경 성능"
+   },
+   "three_c": {
+    "customer": "자기 액션을 찍고 싶은 사람",
+    "competitor": "일반 카메라",
+    "company": "착용형 설계",
+    "gap": "몸에 다는 카메라"
+   },
    "hyps": [
     {
      "text": "고화질 카메라",
@@ -50599,21 +55247,149 @@
     ],
     "solution": "착용형 액션 카메라",
     "mode": "break",
-    "conclusion": "몸에 다는 작고 튼튼한 카메라를 만든다",
-    "conclusion_auto": true
+    "conclusion": "찍는 사람과 찍히는 사람을 같게 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "서퍼",
+    "says": "내 파도 타는 모습을 찍었다",
+    "reveals": "새 경험",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "사용자",
+    "says": "폰 카메라로도 충분하다",
+    "reveals": "대체재",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "작은 크기 대 튼튼함·화질",
     "how": "착용형 설계로 작고 튼튼하게 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "카메라 판매",
+    "reframed": "본인 촬영",
+    "metric": "판매량"
+   },
+   "issue_tree": {
+    "root": "액션을 찍게 하려면",
+    "branches": [
+     {
+      "issue": "화질",
+      "chosen": false,
+      "sub": [
+       "해상도",
+       "센서"
+      ]
+     },
+     {
+      "issue": "착용형",
+      "chosen": true,
+      "sub": [
+       "마운트",
+       "방수"
+      ]
+     },
+     {
+      "issue": "공유",
+      "chosen": false,
+      "sub": [
+       "앱",
+       "편집"
+      ]
+     }
+    ],
+    "why": "본인이 찍어야 한다"
+   },
+   "pareto": {
+    "vital_few": "착용 마운트",
+    "effect": "사용 가치의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "화질",
+      "issue": "해상도",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "화질",
+      "issue": "센서",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "착용형",
+      "issue": "마운트",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "착용형",
+      "issue": "방수",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "공유",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "공유",
+      "issue": "편집",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "착용형 설계가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 착용형인가: 새 수요",
+     "왜 매출인가: 기기와 구독"
+    ],
+    "intent": "기기·구독 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "판매량",
+    "leading": [
+     "판매량",
+     "앱 업로드 수"
+    ],
+    "guardrail": "반품률",
+    "vanity": "SNS 영상 수",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "창업자 본인 경험과 현장 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "창업자 자신의 취미 속 불편이 새 카테고리가 됐다."
   },
   {
@@ -52705,10 +57481,41 @@
     "symptom": "휴대용 음악 부재",
     "problem": "오디오는 녹음·재생 모두 해야 한다는 가정"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 음악을 집에서만 듣나: 플레이어가 크다",
+     "왜 크나: 녹음·스피커가 달렸다",
+     "왜 그런가: 오디오는 녹음과 재생을 다 해야 한다는 가정"
+    ],
+    "root_cause": "기능 과잉 가정"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "휴대 기기 가격",
+    "social": "이동 중 음악",
+    "technological": "소형 재생 장치·헤드폰",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "소형화 기술",
+    "opportunity": "이동 중 음악",
+    "so": "재생 전용 휴대용",
+    "weakness": "녹음 없음",
+    "wo": "액세서리",
+    "threat": "경쟁 휴대 기기",
+    "st": "브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "걸으며 음악을 듣고 싶은 사람",
+    "competitor": "카세트 플레이어",
+    "company": "소형화",
+    "gap": "주머니 속 음악"
+   },
    "hyps": [
     {
      "text": "더 좋은 오디오",
@@ -52782,21 +57589,149 @@
     ],
     "solution": "재생 전용 휴대용 카세트",
     "mode": "break",
-    "conclusion": "재생과 헤드폰만 남긴다",
-    "conclusion_auto": true
+    "conclusion": "기능을 빼서 새 쓰임을 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "사용자",
+    "says": "걸으면서 음악을 들었다",
+    "reveals": "새 경험",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "엔지니어",
+    "says": "녹음 기능이 없으면 안 팔린다",
+    "reveals": "내부 반대",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "휴대성 대 기능",
     "how": "녹음을 빼 휴대성을 얻고 헤드폰으로 음질을 지켰다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "오디오 판매",
+    "reframed": "이동 중 음악",
+    "metric": "판매량"
+   },
+   "issue_tree": {
+    "root": "음악을 들고 다니게 하려면",
+    "branches": [
+     {
+      "issue": "성능",
+      "chosen": false,
+      "sub": [
+       "음질",
+       "스피커"
+      ]
+     },
+     {
+      "issue": "기능 빼기",
+      "chosen": true,
+      "sub": [
+       "재생 전용",
+       "헤드폰"
+      ]
+     },
+     {
+      "issue": "디자인",
+      "chosen": false,
+      "sub": [
+       "크기",
+       "무게"
+      ]
+     }
+    ],
+    "why": "녹음이 크기를 키운다"
+   },
+   "pareto": {
+    "vital_few": "재생 전용",
+    "effect": "소형화의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "성능",
+      "issue": "음질",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "성능",
+      "issue": "스피커",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "기능 빼기",
+      "issue": "재생 전용",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "기능 빼기",
+      "issue": "헤드폰",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "디자인",
+      "issue": "크기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "디자인",
+      "issue": "무게",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "기능 빼기가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 휴대용인가: 새 시장",
+     "왜 매출인가: 대량 판매"
+    ],
+    "intent": "판매 매출",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "판매량",
+    "leading": [
+     "판매량",
+     "외부 사용 시간"
+    ],
+    "guardrail": "고장률",
+    "vanity": "광고 노출",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "생활 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "기능을 빼서 새 사용 장면(걷기)을 만들었다."
   },
   {
@@ -52835,10 +57770,41 @@
     "symptom": "디지털 전환 실패",
     "problem": "현재 수익원(필름)이 미래 사업을 막았다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 디지털을 키우지 않았나: 필름이 잘된다",
+     "왜 망설였나: 필름 매출을 잠식한다",
+     "왜 문제였나: 경쟁자가 먼저 잠식한다"
+    ],
+    "root_cause": "현재 수익원이 미래를 막았다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "필름 수익",
+    "social": "디지털 사진 확산",
+    "technological": "디지털 카메라",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "디지털 발명·브랜드",
+    "opportunity": "디지털 사진",
+    "so": "(실패) 디지털 선도 가능",
+    "weakness": "필름 의존",
+    "wo": "자기 잠식 감수",
+    "threat": "디지털 경쟁사",
+    "st": "(실패) 늦은 전환"
+   },
+   "three_c": {
+    "customer": "사진을 쉽게 찍고 싶은 사람",
+    "competitor": "디지털 카메라 회사",
+    "company": "브랜드·발명",
+    "gap": "(실패) 먼저 만든 디지털 사진"
+   },
    "hyps": [
     {
      "text": "필름 품질 개선",
@@ -52897,21 +57863,149 @@
     ],
     "solution": "디지털 기술을 갖고도 전환이 늦어 몰락",
     "mode": "break",
-    "conclusion": "알고도 미루면 늦는다",
-    "conclusion_auto": true
+    "conclusion": "내가 나를 잠식하지 않으면 경쟁자가 잠식한다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "옛 고객",
+    "says": "코닥 순간이라는 말이 있었다",
+    "reveals": "브랜드 가치",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "분석가",
+    "says": "발명하고도 놓쳤다",
+    "reveals": "자기 잠식 회피",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "필름 수익 대 디지털 전환",
     "how": "둘을 잇지 못해 전환에 실패했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "필름 매출 지키기",
+    "reframed": "미래 사업 전환",
+    "metric": "디지털 매출 비중"
+   },
+   "issue_tree": {
+    "root": "사진 사업을 지키려면",
+    "branches": [
+     {
+      "issue": "필름 방어",
+      "chosen": false,
+      "sub": [
+       "가격",
+       "품질"
+      ]
+     },
+     {
+      "issue": "디지털 전환",
+      "chosen": true,
+      "sub": [
+       "카메라",
+       "온라인 공유"
+      ]
+     },
+     {
+      "issue": "서비스",
+      "chosen": false,
+      "sub": [
+       "인화",
+       "저장"
+      ]
+     }
+    ],
+    "why": "필름은 사라질 운명이었다"
+   },
+   "pareto": {
+    "vital_few": "필름 매출",
+    "effect": "수익의 대부분(위험)",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "필름 방어",
+      "issue": "가격",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "필름 방어",
+      "issue": "품질",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "디지털 전환",
+      "issue": "카메라",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "디지털 전환",
+      "issue": "온라인 공유",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "서비스",
+      "issue": "인화",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "서비스",
+      "issue": "저장",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "디지털 전환이 필요했다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 전환인가: 미래 매출",
+     "왜 성장인가: 사업 존속"
+    ],
+    "intent": "사업 존속",
+    "intent_metric": "디지털 매출 비중",
+    "mode": "hold",
+    "criterion": "필름 매출이 줄어도 전체 매출이 유지되면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "디지털 매출 비중",
+    "leading": [
+     "디지털 매출 비중",
+     "신규 고객"
+    ],
+    "guardrail": "필름 매출",
+    "vanity": "브랜드 인지도",
+    "intent_metric": "디지털 매출 비중",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 내부 데이터를 알고도 무시",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "Why not yet의 답이 '우리 자신이 손해라서'라면 경쟁자가 그 일을 한다."
   },
   {
@@ -52954,10 +58048,42 @@
     "symptom": "시장 점유율 급락",
     "problem": "고객의 중심이 기업 IT에서 일반 소비자로 옮겨 갔다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 밀렸나: 터치폰을 장난감으로 봤다",
+     "왜 그랬나: 고객을 기업 IT로 봤다",
+     "왜 틀렸나: 고객 중심이 소비자로 이동했다"
+    ],
+    "root_cause": "고객 변화를 놓쳤다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "기업 IT 예산",
+    "social": "개인 기기 업무 사용",
+    "technological": "터치·앱 생태계",
+    "key": [
+     "S",
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "보안·이메일",
+    "opportunity": "개인 기기 확산",
+    "so": "(실패) 소비자 시장 대응 가능",
+    "weakness": "키보드 고집",
+    "wo": "앱 생태계",
+    "threat": "아이폰·안드로이드",
+    "st": "(실패) 늦은 대응"
+   },
+   "three_c": {
+    "customer": "개인 폰을 업무에도 쓰는 직장인",
+    "competitor": "아이폰",
+    "company": "보안",
+    "gap": "(실패) 소비자용 안전한 스마트폰"
+   },
    "hyps": [
     {
      "text": "키보드·보안 강화",
@@ -53016,21 +58142,149 @@
     ],
     "solution": "소비자 전환을 놓쳐 점유율 급락",
     "mode": "break",
-    "conclusion": "앱 생태계가 없으면 선택받지 못한다",
-    "conclusion_auto": true
+    "conclusion": "구매자가 바뀌면 제품 기준도 바뀐다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "옛 사용자",
+    "says": "키보드가 최고였다",
+    "reveals": "입력 경험",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "분석가",
+    "says": "소비자를 무시했다",
+    "reveals": "고객 변화 놓침",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "보안·키보드 대 소비자 앱",
     "how": "둘을 함께 잡지 못하고 소비자를 잃었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "시장 1위 유지",
+    "reframed": "새 구매자 대응",
+    "metric": "소비자 점유율"
+   },
+   "issue_tree": {
+    "root": "스마트폰 1위를 지키려면",
+    "branches": [
+     {
+      "issue": "기업 시장",
+      "chosen": false,
+      "sub": [
+       "보안",
+       "관리"
+      ]
+     },
+     {
+      "issue": "소비자 대응",
+      "chosen": true,
+      "sub": [
+       "터치",
+       "앱"
+      ]
+     },
+     {
+      "issue": "키보드",
+      "chosen": false,
+      "sub": [
+       "개선",
+       "유지"
+      ]
+     }
+    ],
+    "why": "구매 결정권이 개인에게 넘어갔다"
+   },
+   "pareto": {
+    "vital_few": "소비자 구매",
+    "effect": "시장 성장의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기업 시장",
+      "issue": "보안",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "기업 시장",
+      "issue": "관리",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "소비자 대응",
+      "issue": "터치",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "소비자 대응",
+      "issue": "앱",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "키보드",
+      "issue": "개선",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "키보드",
+      "issue": "유지",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "소비자 대응이 필요했다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 대응인가: 점유율",
+     "왜 성장인가: 사업 존속"
+    ],
+    "intent": "사업 존속",
+    "intent_metric": "시장 점유율",
+    "mode": "hold",
+    "criterion": "기업 시장을 유지하며 소비자 점유율이 떨어지지 않으면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "소비자 점유율",
+    "leading": [
+     "소비자 점유율",
+     "앱 수"
+    ],
+    "guardrail": "기업 계약",
+    "vanity": "기기 판매량",
+    "intent_metric": "시장 점유율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 기업 고객 의견만 들음",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "내 고객이 누구인지가 바뀌는 순간을 Why not yet으로 다시 점검해야 한다."
   },
   {
@@ -53073,10 +58327,39 @@
     "symptom": "서비스 종료",
     "problem": "고가 기계가 해결하는 문제가 실제로 없었다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 실패했나: 손으로 짜도 된다",
+     "왜 그런가: 기계가 푸는 문제가 없다",
+     "왜 몰랐나: 문제 검증 없이 기술로 만들었다"
+    ],
+    "root_cause": "실제 문제 부재"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "고가 기기",
+    "social": "건강 주스 유행",
+    "technological": "압착 기술",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "압착 기술",
+    "opportunity": "건강 유행",
+    "so": "(실패) 착즙 팩 구독",
+    "weakness": "고가",
+    "wo": "문제 검증",
+    "threat": "보도로 신뢰 붕괴",
+    "st": "(실패) 가치 증명 실패"
+   },
+   "three_c": {
+    "customer": "건강 주스를 원하는 사람",
+    "competitor": "손으로 짜기·병 주스",
+    "company": "기술",
+    "gap": "(실패) 기계가 필요 없는 문제"
+   },
    "hyps": [
     {
      "text": "고가 기계 + 전용 팩 구독",
@@ -53136,21 +58419,149 @@
     ],
     "solution": "고가 착즙기, 문제 검증 실패로 중단",
     "mode": "break",
-    "conclusion": "문제 검증 없이 기술부터 만들면 망한다",
-    "conclusion_auto": true
+    "conclusion": "기술보다 먼저 문제가 있는지 확인하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "초기 구매자",
+    "says": "디자인이 멋지다",
+    "reveals": "외관",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "기자",
+    "says": "손으로 짜도 똑같다",
+    "reveals": "가치 없음",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "신선함 대 가격",
     "how": "비싼 기계로 풀려 했지만 문제가 없어 실패했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "기기 판매",
+    "reframed": "실제 문제 해결",
+    "metric": "기계가 손보다 나은 정도"
+   },
+   "issue_tree": {
+    "root": "주스 사업을 하려면",
+    "branches": [
+     {
+      "issue": "기술",
+      "chosen": false,
+      "sub": [
+       "압착",
+       "센서"
+      ]
+     },
+     {
+      "issue": "문제 검증",
+      "chosen": true,
+      "sub": [
+       "손 대비 차이",
+       "고객 인터뷰"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "구독"
+      ]
+     }
+    ],
+    "why": "문제가 없으면 기계도 필요 없다"
+   },
+   "pareto": {
+    "vital_few": "손으로 짜기 대체",
+    "effect": "가치 붕괴의 전부",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기술",
+      "issue": "압착",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "기술",
+      "issue": "센서",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "문제 검증",
+      "issue": "손 대비 차이",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "문제 검증",
+      "issue": "고객 인터뷰",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "저가",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "구독",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "문제 검증이 가장 빨랐다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 검증인가: 헛돈을 막는다",
+     "왜 매출인가: 가치가 있어야 팔린다"
+    ],
+    "intent": "지속 가능 매출",
+    "intent_metric": "구독 유지율",
+    "mode": "raise",
+    "criterion": "구독 유지율이 오르면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "기계가 손보다 나은 정도",
+    "leading": [
+     "손 대비 착즙 차이",
+     "구독 유지율"
+    ],
+    "guardrail": "기기 원가",
+    "vanity": "언론 노출",
+    "intent_metric": "구독 유지율",
+    "select_method": {
+     "methods": [
+      "experiment"
+     ],
+     "how": "(실패) 검증 실험 없이 출시",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'왜 아무도 안 했나'의 답이 '필요 없어서'일 수 있다."
   },
   {
@@ -53189,10 +58600,41 @@
     "symptom": "판매 부진",
     "problem": "비싸고 인도·차도 어디에도 맞지 않았다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 대중화 못 했나: 쓸 곳이 없다",
+     "왜 없나: 인도·차도 어디에도 안 맞는다",
+     "왜 그런가: 기술만 보고 맥락을 안 봤다"
+    ],
+    "root_cause": "사용 맥락 부재"
+   },
+   "pest": {
+    "political": "도로·인도 규제",
+    "economic": "고가",
+    "social": "도시 이동",
+    "technological": "자체 균형 기술",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "균형 기술",
+    "opportunity": "관광·경비 수요",
+    "so": "틈새 업무용",
+    "weakness": "고가·규제",
+    "wo": "업무용 시장",
+    "threat": "킥보드",
+    "st": "(실패) 대중 시장 실패"
+   },
+   "three_c": {
+    "customer": "짧게 이동하는 도시인",
+    "competitor": "도보·자전거",
+    "company": "균형 기술",
+    "gap": "(실패) 쓸 곳이 있는 이동 기구"
+   },
    "hyps": [
     {
      "text": "보행로에서 대중 이동 수단으로",
@@ -53251,21 +58693,149 @@
     ],
     "solution": "혁신 기술이었지만 사용 맥락 부재로 니치에 머묾",
     "mode": "break",
-    "conclusion": "사용 맥락이 있는 니치(경찰·관광)에만 남는다",
-    "conclusion_auto": true
+    "conclusion": "기술이 혁신적이어도 쓸 곳이 없으면 팔리지 않는다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "경비원",
+    "says": "넓은 곳 순찰이 편하다",
+    "reveals": "틈새 가치",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "시민",
+    "says": "인도에서 위험하다",
+    "reveals": "맥락 충돌",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "혁신 이동 대 다닐 자리",
     "how": "기술은 있었지만 도로·인도와 양립시키지 못했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "대중 판매",
+    "reframed": "사용 맥락 확보",
+    "metric": "일상 사용자 수"
+   },
+   "issue_tree": {
+    "root": "개인 이동 기구를 퍼뜨리려면",
+    "branches": [
+     {
+      "issue": "기술",
+      "chosen": false,
+      "sub": [
+       "균형",
+       "배터리"
+      ]
+     },
+     {
+      "issue": "맥락",
+      "chosen": true,
+      "sub": [
+       "허용 도로",
+       "틈새 업무"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "대여"
+      ]
+     }
+    ],
+    "why": "쓸 곳이 없다"
+   },
+   "pareto": {
+    "vital_few": "업무용 틈새",
+    "effect": "판매의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기술",
+      "issue": "균형",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "기술",
+      "issue": "배터리",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "맥락",
+      "issue": "허용 도로",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "맥락",
+      "issue": "틈새 업무",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "저가",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "대여",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "맥락 확보가 핵심이었다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 맥락인가: 쓰는 사람이 생긴다",
+     "왜 매출인가: 판매량"
+    ],
+    "intent": "판매 매출",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "일상 사용자 수",
+    "leading": [
+     "일상 사용자 수",
+     "허용 지역 수"
+    ],
+    "guardrail": "사고",
+    "vanity": "언론 노출",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "(실패) 실제 사용 맥락 관찰 부족",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "기술의 Why not yet(이제 가능)만 보고 사회·규제의 Why not yet을 무시하면 실패한다."
   },
   {
@@ -53308,10 +58878,39 @@
     "symptom": "소비자 판매 중단",
     "problem": "주변 사람들이 촬영당하는 불안을 느꼈다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 소비자 시장에서 실패했나: 주변 사람이 불편해했다",
+     "왜 불편한가: 촬영당하는 불안",
+     "왜 놓쳤나: 착용자만 고객으로 봤다"
+    ],
+    "root_cause": "주변인의 불안"
+   },
+   "pest": {
+    "political": "사생활 규제",
+    "economic": "고가",
+    "social": "촬영 불안",
+    "technological": "웨어러블 디스플레이",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "웨어러블 기술",
+    "opportunity": "산업 현장 수요",
+    "so": "산업용 전환",
+    "weakness": "사생활 논란",
+    "wo": "현장 업무 지원",
+    "threat": "사회적 거부",
+    "st": "산업 특화"
+   },
+   "three_c": {
+    "customer": "손을 못 쓰는 현장 작업자",
+    "competitor": "태블릿·매뉴얼",
+    "company": "웨어러블",
+    "gap": "손 없이 보는 작업 정보"
+   },
    "hyps": [
     {
      "text": "일상 착용 소비자 제품",
@@ -53370,21 +58969,149 @@
     ],
     "solution": "소비자 대신 공장·물류 현장용으로 전환",
     "mode": "break",
-    "conclusion": "불안이 없는 산업 현장으로 간다",
-    "conclusion_auto": true
+    "conclusion": "사용자가 아니라 주변인까지 고객 경험에 넣어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "현장 작업자",
+    "says": "손으로 일하며 지시를 본다",
+    "reveals": "현장 가치",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "일반인",
+    "says": "몰래 찍힐까 불안하다",
+    "reveals": "사회적 거부",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "손 자유로운 정보 대 주변 사생활",
     "how": "소비자에선 실패, 사생활 우려가 적은 산업 현장에서 양립시켰다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "소비자 판매",
+    "reframed": "받아들여지는 착용",
+    "metric": "사회적 수용도"
+   },
+   "issue_tree": {
+    "root": "스마트 안경을 퍼뜨리려면",
+    "branches": [
+     {
+      "issue": "기술",
+      "chosen": false,
+      "sub": [
+       "배터리",
+       "화면"
+      ]
+     },
+     {
+      "issue": "수용성",
+      "chosen": true,
+      "sub": [
+       "촬영 표시",
+       "산업 현장"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "대여"
+      ]
+     }
+    ],
+    "why": "주변인이 거부했다"
+   },
+   "pareto": {
+    "vital_few": "사생활 불안",
+    "effect": "거부의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기술",
+      "issue": "배터리",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "기술",
+      "issue": "화면",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "수용성",
+      "issue": "촬영 표시",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "수용성",
+      "issue": "산업 현장",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "저가",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "대여",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "수용성과 산업 전환이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 수용인가: 쓸 수 있다",
+     "왜 성장인가: 새 플랫폼"
+    ],
+    "intent": "플랫폼 성장",
+    "intent_metric": "활성 사용자",
+    "mode": "raise",
+    "criterion": "산업 현장 사용자가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "사회적 수용도",
+    "leading": [
+     "현장 작업 시간 단축",
+     "사회적 수용도"
+    ],
+    "guardrail": "사생활 민원",
+    "vanity": "언론 노출",
+    "intent_metric": "활성 사용자",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "착용 현장 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "같은 기술도 '누가 어디서 쓰느냐'에 따라 불가능과 기회가 갈린다."
   },
   {
@@ -57901,10 +63628,39 @@
     "symptom": "재고 과다와 불량",
     "problem": "앞 공정이 만들 수 있는 만큼 만들어 뒤로 밀어낸다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 재고가 쌓이나: 앞 공정이 밀어낸다",
+     "왜 그런가: 만들 수 있는 만큼 만든다",
+     "왜 문제인가: 돈이 묶이고 불량이 늦게 보인다"
+    ],
+    "root_cause": "밀어내기 생산"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "자금 부족",
+    "social": "현장 참여 문화",
+    "technological": "간판 방식",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "현장 개선 문화",
+    "opportunity": "자금 효율",
+    "so": "적시 생산 + 정지 권한",
+    "weakness": "공급 차질 취약",
+    "wo": "공급망 협력",
+    "threat": "공급망 위기",
+    "st": "현장 문화로 방어"
+   },
+   "three_c": {
+    "customer": "품질 좋은 차를 원하는 고객",
+    "competitor": "대량 밀어내기 생산",
+    "company": "현장 문화",
+    "gap": "필요한 만큼만 만드는 공장"
+   },
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -57963,21 +63719,149 @@
     ],
     "solution": "적시 생산(JIT) + 칸반 + 정지 권한",
     "mode": "break",
-    "conclusion": "뒤 공정이 당기고 문제는 멈춰서 고친다",
-    "conclusion_auto": true
+    "conclusion": "뒤 공정이 필요한 만큼 당겨 가게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "현장 직원",
+    "says": "문제가 있으면 라인을 세울 수 있다",
+    "reveals": "권한",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "공급사",
+    "says": "재고 부담이 우리에게 넘어온다",
+    "reveals": "공급망 부담",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 재고 대 생산 안정",
     "how": "당기기 방식과 현장 정지로 재고 없이 안정적으로 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "생산량",
+    "reframed": "재고·불량 줄이기",
+    "metric": "재고 회전일"
+   },
+   "issue_tree": {
+    "root": "재고를 줄이려면",
+    "branches": [
+     {
+      "issue": "예측",
+      "chosen": false,
+      "sub": [
+       "수요 예측",
+       "계획"
+      ]
+     },
+     {
+      "issue": "당기기 생산",
+      "chosen": true,
+      "sub": [
+       "간판",
+       "정지 권한"
+      ]
+     },
+     {
+      "issue": "공급망",
+      "chosen": false,
+      "sub": [
+       "협력사",
+       "소량 배송"
+      ]
+     }
+    ],
+    "why": "밀어내기가 재고를 만든다"
+   },
+   "pareto": {
+    "vital_few": "공정 간 재고",
+    "effect": "묶인 돈의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "예측",
+      "issue": "수요 예측",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "예측",
+      "issue": "계획",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "당기기 생산",
+      "issue": "간판",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "당기기 생산",
+      "issue": "정지 권한",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "공급망",
+      "issue": "협력사",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "공급망",
+      "issue": "소량 배송",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "당기기 생산과 정지 권한이 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 재고인가: 돈이 풀린다",
+     "왜 이익인가: 불량·재고 비용 감소"
+    ],
+    "intent": "원가 절감",
+    "intent_metric": "영업이익률",
+    "mode": "raise",
+    "criterion": "영업이익률이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재고 회전일",
+    "leading": [
+     "재고 회전일",
+     "불량률"
+    ],
+    "guardrail": "라인 정지 시간",
+    "vanity": "생산량",
+    "intent_metric": "영업이익률",
+    "select_method": {
+     "methods": [
+      "observation"
+     ],
+     "how": "현장 관찰(겐바)",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "마트 진열대의 '필요한 만큼 가져가는' 방식을 공장에 적용했다."
   },
   {
@@ -58362,10 +64246,39 @@
     "symptom": "높은 이직률",
     "problem": "이직에 따른 채용·훈련 비용이 임금 절약보다 크다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 노동자가 금방 그만두나: 일이 단조롭다",
+     "왜 문제인가: 매번 새로 뽑고 훈련한다",
+     "왜 비용이 큰가: 이직 비용이 임금 절약보다 크다"
+    ],
+    "root_cause": "이직 비용 과소평가"
+   },
+   "pest": {
+    "political": "노동 규제",
+    "economic": "이직 비용",
+    "social": "노동자 생활",
+    "technological": "조립 라인",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "대량 생산",
+    "opportunity": "이직 비용 절감",
+    "so": "고임금 + 고객화",
+    "weakness": "인건비 증가",
+    "wo": "생산성 향상",
+    "threat": "경쟁 공장",
+    "st": "숙련 유지"
+   },
+   "three_c": {
+    "customer": "남을 이유가 필요한 노동자",
+    "competitor": "저임금 공장",
+    "company": "대량 생산",
+    "gap": "남고 싶은 공장"
+   },
    "hyps": [
     {
      "text": "채용을 더 많이 한다",
@@ -58439,21 +64352,149 @@
     ],
     "solution": "일급 5달러",
     "mode": "break",
-    "conclusion": "임금을 올려 붙잡고 고객으로도 만든다",
-    "conclusion_auto": true
+    "conclusion": "이직 비용을 계산하면 고임금이 더 싸다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "노동자",
+    "says": "임금이 두 배가 됐다",
+    "reveals": "보상",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "경쟁 기업",
+    "says": "임금 시장을 흔든다",
+    "reveals": "업계 반발",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "높은 임금 대 이익",
     "how": "이직 비용 감소와 생산성으로 임금 인상을 메웠다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "인건비 절감",
+    "reframed": "이직 비용 줄이기",
+    "metric": "이직률"
+   },
+   "issue_tree": {
+    "root": "이직을 줄이려면",
+    "branches": [
+     {
+      "issue": "감독",
+      "chosen": false,
+      "sub": [
+       "규율",
+       "관리자"
+      ]
+     },
+     {
+      "issue": "보상",
+      "chosen": true,
+      "sub": [
+       "고임금",
+       "근무 시간"
+      ]
+     },
+     {
+      "issue": "업무",
+      "chosen": false,
+      "sub": [
+       "순환",
+       "교육"
+      ]
+     }
+    ],
+    "why": "이직 비용이 임금보다 크다"
+   },
+   "pareto": {
+    "vital_few": "이직 비용",
+    "effect": "노동 비용의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "감독",
+      "issue": "규율",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "감독",
+      "issue": "관리자",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보상",
+      "issue": "고임금",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "보상",
+      "issue": "근무 시간",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "업무",
+      "issue": "순환",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "업무",
+      "issue": "교육",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "고임금이 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 고임금인가: 이직이 준다",
+     "왜 이익인가: 채용·훈련 비용 절감"
+    ],
+    "intent": "노동 비용 절감",
+    "intent_metric": "생산 원가",
+    "mode": "raise",
+    "criterion": "생산 원가가 줄면 성공"
+   },
+   "key_metrics": {
+    "north_star": "이직률",
+    "leading": [
+     "이직률",
+     "신규 훈련 비용"
+    ],
+    "guardrail": "인건비",
+    "vanity": "지원자 수",
+    "intent_metric": "생산 원가",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "인사 비용 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "비용 항목(임금)을 투자로 다시 보면 계산이 바뀐다."
   },
   {
@@ -58955,10 +64996,39 @@
     "symptom": "적자와 혼란",
     "problem": "선택과 집중이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 망해 갔나: 적자가 쌓인다",
+     "왜 쌓이나: 수십 개 모델",
+     "왜 문제인가: 고객도 직원도 차이를 모른다"
+    ],
+    "root_cause": "선택과 집중 부재"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "적자",
+    "social": "개인 컴퓨터 보급",
+    "technological": "해당 적음",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "브랜드·디자인",
+    "opportunity": "인터넷 보급",
+    "so": "2×2 제품 집중",
+    "weakness": "선택지 축소",
+    "wo": "히트 제품 집중",
+    "threat": "윈도 PC",
+    "st": "디자인 차별"
+   },
+   "three_c": {
+    "customer": "고르기 쉬운 컴퓨터를 원하는 사람",
+    "competitor": "윈도 PC",
+    "company": "브랜드",
+    "gap": "네 가지 중 고르는 컴퓨터"
+   },
    "hyps": [
     {
      "text": "모델을 더 출시",
@@ -59032,21 +65102,149 @@
     ],
     "solution": "2×2 제품 매트릭스",
     "mode": "break",
-    "conclusion": "네 칸만 남긴다",
-    "conclusion_auto": true
+    "conclusion": "많이 만들지 말고 네 칸에 집중하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "뭘 사야 할지 바로 알았다",
+    "reveals": "명확성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "직원",
+    "says": "내 프로젝트가 없어졌다",
+    "reveals": "내부 저항",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "제품 수 대 시장 범위",
     "how": "네 칸으로 줄여도 핵심 고객을 모두 덮었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매출 회복",
+    "reframed": "집중으로 흑자",
+    "metric": "영업이익"
+   },
+   "issue_tree": {
+    "root": "회사를 살리려면",
+    "branches": [
+     {
+      "issue": "비용 절감",
+      "chosen": false,
+      "sub": [
+       "감원",
+       "매각"
+      ]
+     },
+     {
+      "issue": "제품 집중",
+      "chosen": true,
+      "sub": [
+       "2×2 매트릭스",
+       "단종"
+      ]
+     },
+     {
+      "issue": "마케팅",
+      "chosen": false,
+      "sub": [
+       "브랜드",
+       "광고"
+      ]
+     }
+    ],
+    "why": "너무 많아 아무것도 못 한다"
+   },
+   "pareto": {
+    "vital_few": "상위 4개 제품",
+    "effect": "집중의 대상",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "비용 절감",
+      "issue": "감원",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "비용 절감",
+      "issue": "매각",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "제품 집중",
+      "issue": "2×2 매트릭스",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "제품 집중",
+      "issue": "단종",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "마케팅",
+      "issue": "브랜드",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "마케팅",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "제품 집중이 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 집중인가: 비용이 준다",
+     "왜 이익인가: 흑자 전환"
+    ],
+    "intent": "흑자 전환",
+    "intent_metric": "영업이익",
+    "mode": "raise",
+    "criterion": "영업이익이 흑자가 되면 성공"
+   },
+   "key_metrics": {
+    "north_star": "영업이익",
+    "leading": [
+     "제품 수",
+     "제품당 매출"
+    ],
+    "guardrail": "재고",
+    "vanity": "광고 노출",
+    "intent_metric": "영업이익",
+    "select_method": {
+     "methods": [
+      "scoring"
+     ],
+     "how": "제품 포트폴리오 평가",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "빼는 것도 전략이다."
   },
   {
@@ -61578,10 +67776,43 @@
     "symptom": "친환경차 수요 부진",
     "problem": "친환경 가치가 일부 소비자에게만 의미 있었다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 친환경차가 안 팔리나: 비싸고 약하다",
+     "왜 의미가 없나: 일부만 친환경을 중시한다",
+     "왜 놓쳤나: 친환경을 드러낼 상징이 없다"
+    ],
+    "root_cause": "친환경 가치의 표현 부재"
+   },
+   "pest": {
+    "political": "배출 규제",
+    "economic": "유가",
+    "social": "친환경 정체성",
+    "technological": "하이브리드",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "하이브리드 기술",
+    "opportunity": "배출 규제",
+    "so": "상징적 디자인",
+    "weakness": "초기 원가",
+    "wo": "규모로 원가 절감",
+    "threat": "전기차",
+    "st": "하이브리드 원조"
+   },
+   "three_c": {
+    "customer": "친환경을 드러내고 싶은 사람",
+    "competitor": "일반 연비차",
+    "company": "하이브리드",
+    "gap": "한눈에 보이는 친환경차"
+   },
    "hyps": [
     {
      "text": "기존 차 연비 소폭 개선",
@@ -61640,21 +67871,149 @@
     ],
     "solution": "하이브리드 + 상징적 디자인",
     "mode": "break",
-    "conclusion": "한눈에 알아보는 디자인으로 만든다",
-    "conclusion_auto": true
+    "conclusion": "가치를 쓰는 데서 그치지 말고 보이게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "운전자",
+    "says": "프리우스를 타는 게 내 가치다",
+    "reveals": "정체성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "운전자",
+    "says": "디자인이 이상하다",
+    "reveals": "호불호",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "친환경 대 자기 표현",
     "how": "상징적 디자인으로 친환경을 드러내게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "친환경차 판매",
+    "reframed": "친환경의 상징화",
+    "metric": "판매량"
+   },
+   "issue_tree": {
+    "root": "친환경차를 팔려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "보조금",
+       "할인"
+      ]
+     },
+     {
+      "issue": "상징",
+      "chosen": true,
+      "sub": [
+       "독특한 디자인",
+       "하이브리드 전용"
+      ]
+     },
+     {
+      "issue": "성능",
+      "chosen": false,
+      "sub": [
+       "연비",
+       "힘"
+      ]
+     }
+    ],
+    "why": "보여야 산다"
+   },
+   "pareto": {
+    "vital_few": "독특한 디자인",
+    "effect": "상징 효과의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "보조금",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "상징",
+      "issue": "독특한 디자인",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "상징",
+      "issue": "하이브리드 전용",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "성능",
+      "issue": "연비",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "성능",
+      "issue": "힘",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "상징 디자인이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 상징인가: 정체성을 산다",
+     "왜 매출인가: 판매량과 규제 대응"
+    ],
+    "intent": "판매 매출",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "판매량",
+    "leading": [
+     "판매량",
+     "재구매율"
+    ],
+    "guardrail": "원가",
+    "vanity": "광고 노출",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "소비자 반응",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객은 연비뿐 아니라 '친환경적인 나'를 보여 주는 것도 샀다."
   },
   {
@@ -61697,10 +68056,41 @@
     "symptom": "전기차 수요 부재",
     "problem": "처음부터 대중차를 만들면 규모가 안 돼 원가를 낮출 수 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 전기차가 안 되나: 느리고 못생겼다",
+     "왜 대량 못 만드나: 규모가 없어 원가가 높다",
+     "왜 그런가: 처음부터 대중차를 노린다"
+    ],
+    "root_cause": "시작 순서가 잘못됐다"
+   },
+   "pest": {
+    "political": "친환경차 보조금",
+    "economic": "배터리 원가",
+    "social": "친환경 고소득층",
+    "technological": "리튬 배터리",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "배터리 기술",
+    "opportunity": "보조금",
+    "so": "고가 → 중가 → 대중차",
+    "weakness": "초기 생산 역량",
+    "wo": "규모로 원가 절감",
+    "threat": "기존 완성차",
+    "st": "브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "멋진 전기차를 원하는 부유층",
+    "competitor": "골프 카트형 전기차",
+    "company": "배터리 기술",
+    "gap": "빠르고 멋진 전기차"
+   },
    "hyps": [
     {
      "text": "처음부터 저가 대중 전기차",
@@ -61761,21 +68151,149 @@
     ],
     "solution": "고가 → 중가 → 대중차 순서",
     "mode": "break",
-    "conclusion": "비싼 차로 돈을 벌어 다음 차 원가를 낮춘다",
-    "conclusion_auto": true
+    "conclusion": "고가로 시작해 번 돈과 규모로 대중차로 내려가라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "얼리 어답터",
+    "says": "전기차가 이렇게 빠를 줄 몰랐다",
+    "reveals": "인식 전환",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "비평가",
+    "says": "부자들 장난감이다",
+    "reveals": "대중성 의문",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "친환경 대 고성능",
     "how": "전기차로 빠르고 멋진 차를 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "전기차 대중화",
+    "reframed": "순서 설계",
+    "metric": "다음 단계 원가"
+   },
+   "issue_tree": {
+    "root": "전기차를 대중화하려면",
+    "branches": [
+     {
+      "issue": "대중차 먼저",
+      "chosen": false,
+      "sub": [
+       "저가",
+       "소형"
+      ]
+     },
+     {
+      "issue": "순서",
+      "chosen": true,
+      "sub": [
+       "고가 먼저",
+       "단계적 대중화"
+      ]
+     },
+     {
+      "issue": "인식",
+      "chosen": false,
+      "sub": [
+       "성능",
+       "디자인"
+      ]
+     }
+    ],
+    "why": "규모 없이 원가를 못 낮춘다"
+   },
+   "pareto": {
+    "vital_few": "고가 초기 모델",
+    "effect": "브랜드 인식의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "대중차 먼저",
+      "issue": "저가",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "대중차 먼저",
+      "issue": "소형",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "순서",
+      "issue": "고가 먼저",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "순서",
+      "issue": "단계적 대중화",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "인식",
+      "issue": "성능",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "인식",
+      "issue": "디자인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "순서 설계가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 순서인가: 원가가 내려간다",
+     "왜 성장인가: 대중 시장"
+    ],
+    "intent": "대중 시장 성장",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "다음 단계 원가",
+    "leading": [
+     "배터리 원가",
+     "다음 모델 예약"
+    ],
+    "guardrail": "생산 지연",
+    "vanity": "언론 노출",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "원가 곡선 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "진입 순서를 바꾸면 '불가능'이 단계적으로 가능해진다."
   },
   {
@@ -61952,10 +68470,39 @@
     "symptom": "판매 부진",
     "problem": "고객은 차를 지위의 상징으로도 산다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 실패했나: 가장 싼 차라 안 샀다",
+     "왜 그런가: 차는 지위의 상징이다",
+     "왜 놓쳤나: 가격만 문제로 봤다"
+    ],
+    "root_cause": "정체성 무시"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "저소득 가정",
+    "social": "차 = 지위",
+    "technological": "저가 설계",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "저가 설계",
+    "opportunity": "오토바이 가족",
+    "so": "(실패) 초저가 차",
+    "weakness": "싼 차 낙인",
+    "wo": "정체성 마케팅",
+    "threat": "중고차",
+    "st": "(실패) 낙인 극복 실패"
+   },
+   "three_c": {
+    "customer": "오토바이에 가족을 태우는 가정",
+    "competitor": "오토바이·중고차",
+    "company": "저가 설계",
+    "gap": "(실패) 자랑할 수 있는 첫 차"
+   },
    "hyps": [
     {
      "text": "극단적 원가 절감",
@@ -62015,21 +68562,149 @@
     ],
     "solution": "극단적 원가 절감, 정체성 문제로 실패",
     "mode": "break",
-    "conclusion": "가장 싼 차라는 낙인이 구매를 막았다",
-    "conclusion_auto": true
+    "conclusion": "가격을 풀어도 정체성을 해치면 팔리지 않는다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "가정",
+    "says": "처음으로 가족이 차를 탔다",
+    "reveals": "접근성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "소비자",
+    "says": "가장 싼 차라 부끄럽다",
+    "reveals": "정체성 손상",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "초저가 대 지위 상징",
     "how": "가격은 잡았지만 정체성과 양립시키지 못했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "차 판매",
+    "reframed": "자랑할 첫 차",
+    "metric": "판매량"
+   },
+   "issue_tree": {
+    "root": "첫 차를 팔려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "초저가",
+       "할부"
+      ]
+     },
+     {
+      "issue": "정체성",
+      "chosen": true,
+      "sub": [
+       "브랜드 이미지",
+       "디자인"
+      ]
+     },
+     {
+      "issue": "안전",
+      "chosen": false,
+      "sub": [
+       "품질",
+       "안전 기능"
+      ]
+     }
+    ],
+    "why": "싼 차는 지위를 해친다"
+   },
+   "pareto": {
+    "vital_few": "싼 차 낙인",
+    "effect": "거부의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "초저가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "할부",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "정체성",
+      "issue": "브랜드 이미지",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "정체성",
+      "issue": "디자인",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "안전",
+      "issue": "품질",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "안전",
+      "issue": "안전 기능",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "정체성 관리가 핵심이었다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 정체성인가: 산다",
+     "왜 매출인가: 판매량"
+    ],
+    "intent": "판매 매출",
+    "intent_metric": "판매량",
+    "mode": "raise",
+    "criterion": "판매량이 오르면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "판매량",
+    "leading": [
+     "판매량",
+     "구매 의향"
+    ],
+    "guardrail": "원가",
+    "vanity": "언론 노출",
+    "intent_metric": "판매량",
+    "select_method": {
+     "methods": [
+      "interview"
+     ],
+     "how": "(실패) 가격만 조사함",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객이 사는 이유(지위)를 WHAT에 넣지 않으면 기술적 성공도 실패한다."
   },
   {
@@ -62346,10 +69021,41 @@
     "symptom": "점유율 급락",
     "problem": "경쟁의 축이 하드웨어에서 소프트웨어·생태계로 옮겨 갔다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 밀렸나: 터치·앱 대응이 늦었다",
+     "왜 늦었나: 하드웨어 경쟁력에 자신했다",
+     "왜 틀렸나: 경쟁 축이 소프트웨어로 옮겨 갔다"
+    ],
+    "root_cause": "경쟁 축 변화를 놓쳤다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "시장 점유율",
+    "social": "앱 사용",
+    "technological": "터치·앱 생태계",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "하드웨어·유통",
+    "opportunity": "스마트폰 확산",
+    "so": "(실패) 생태계 전환 가능",
+    "weakness": "소프트웨어 약함",
+    "wo": "생태계 제휴",
+    "threat": "아이폰·안드로이드",
+    "st": "(실패) 늦은 대응"
+   },
+   "three_c": {
+    "customer": "앱을 쓰고 싶은 사용자",
+    "competitor": "아이폰·안드로이드",
+    "company": "하드웨어",
+    "gap": "(실패) 앱이 풍부한 폰"
+   },
    "hyps": [
     {
      "text": "하드웨어 라인업 확대",
@@ -62408,21 +69114,149 @@
     ],
     "solution": "생태계 전환을 놓쳐 휴대폰 사업 몰락",
     "mode": "break",
-    "conclusion": "개발자 생태계가 없으면 진다",
-    "conclusion_auto": true
+    "conclusion": "이기던 축이 바뀌면 강점이 약점이 된다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "옛 사용자",
+    "says": "튼튼하고 배터리가 오래갔다",
+    "reveals": "하드웨어 품질",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "분석가",
+    "says": "소프트웨어를 놓쳤다",
+    "reveals": "축 변화 놓침",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "하드웨어 강점 대 소프트웨어 생태계",
     "how": "둘을 잇지 못해 졌다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "1위 유지",
+    "reframed": "새 경쟁 축 대응",
+    "metric": "스마트폰 점유율"
+   },
+   "issue_tree": {
+    "root": "1위를 지키려면",
+    "branches": [
+     {
+      "issue": "하드웨어",
+      "chosen": false,
+      "sub": [
+       "품질",
+       "가격"
+      ]
+     },
+     {
+      "issue": "생태계",
+      "chosen": true,
+      "sub": [
+       "앱스토어",
+       "개발자"
+      ]
+     },
+     {
+      "issue": "유통",
+      "chosen": false,
+      "sub": [
+       "통신사",
+       "신흥국"
+      ]
+     }
+    ],
+    "why": "경쟁 축이 바뀌었다"
+   },
+   "pareto": {
+    "vital_few": "앱 생태계",
+    "effect": "경쟁력 차이의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "하드웨어",
+      "issue": "품질",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "하드웨어",
+      "issue": "가격",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "생태계",
+      "issue": "앱스토어",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "생태계",
+      "issue": "개발자",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "유통",
+      "issue": "통신사",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "유통",
+      "issue": "신흥국",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "생태계 전환이 필요했다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 전환인가: 점유율",
+     "왜 성장인가: 사업 존속"
+    ],
+    "intent": "사업 존속",
+    "intent_metric": "스마트폰 점유율",
+    "mode": "hold",
+    "criterion": "하드웨어 매출을 지키며 점유율이 떨어지지 않으면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "스마트폰 점유율",
+    "leading": [
+     "스마트폰 점유율",
+     "앱 수"
+    ],
+    "guardrail": "피처폰 매출",
+    "vanity": "판매량",
+    "intent_metric": "스마트폰 점유율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "(실패) 판매량 지표에 안주",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "1위 기업의 Why not yet 답은 대개 '지금 방식으로도 잘되니까'다."
   },
   {
@@ -71400,10 +78234,41 @@
     "symptom": "해외 결제 비용",
     "problem": "은행 환율 마진이 불투명하다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 해외 결제가 비싼가: 숨은 수수료가 있다",
+     "왜 숨나: 은행 환율 마진이 불투명하다",
+     "왜 그런가: 환전은 은행 수익원이다"
+    ],
+    "root_cause": "불투명한 환율 마진"
+   },
+   "pest": {
+    "political": "금융 라이선스",
+    "economic": "환전 수수료",
+    "social": "해외여행·원격 근무",
+    "technological": "다통화 계좌",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "다통화 계좌",
+    "opportunity": "해외여행 증가",
+    "so": "투명 환율",
+    "weakness": "고객 지원 불만",
+    "wo": "금융 슈퍼앱 확장",
+    "threat": "은행 수수료 인하",
+    "st": "투명성으로 방어"
+   },
+   "three_c": {
+    "customer": "해외에서 카드를 쓰는 사람",
+    "competitor": "전통 은행",
+    "company": "다통화 계좌",
+    "gap": "숨은 수수료 없는 해외 결제"
+   },
    "hyps": [
     {
      "text": "환전소 비교",
@@ -71477,21 +78342,149 @@
     ],
     "solution": "다통화 앱 계좌 + 투명 환율",
     "mode": "shift",
-    "conclusion": "실시간 환율로 투명하게 바꿔 준다",
-    "conclusion_auto": true
+    "conclusion": "숨은 마진을 투명하게 하면 고객이 옮겨 온다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여행자",
+    "says": "환전 수수료가 거의 없었다",
+    "reveals": "투명성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "계좌가 갑자기 정지됐다",
+    "reveals": "고객 지원",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "환전 편의 대 낮은 비용",
     "how": "실시간 환율 앱 계좌로 둘 다 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "계좌 수",
+    "reframed": "투명 환율",
+    "metric": "해외 결제액"
+   },
+   "issue_tree": {
+    "root": "해외 결제를 싸게 하려면",
+    "branches": [
+     {
+      "issue": "은행 협상",
+      "chosen": false,
+      "sub": [
+       "제휴",
+       "할인"
+      ]
+     },
+     {
+      "issue": "투명 환율",
+      "chosen": true,
+      "sub": [
+       "실시간 환율",
+       "다통화"
+      ]
+     },
+     {
+      "issue": "편의",
+      "chosen": false,
+      "sub": [
+       "앱",
+       "즉시 카드"
+      ]
+     }
+    ],
+    "why": "숨은 마진이 비용이다"
+   },
+   "pareto": {
+    "vital_few": "해외 카드 결제",
+    "effect": "가입 이유의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "은행 협상",
+      "issue": "제휴",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "은행 협상",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "투명 환율",
+      "issue": "실시간 환율",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "투명 환율",
+      "issue": "다통화",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "편의",
+      "issue": "앱",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "편의",
+      "issue": "즉시 카드",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "투명 환율이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 투명성인가: 가입이 는다",
+     "왜 성장인가: 주거래 은행으로 확장"
+    ],
+    "intent": "고객 기반 성장",
+    "intent_metric": "고객 수",
+    "mode": "raise",
+    "criterion": "고객 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "해외 결제액",
+    "leading": [
+     "해외 결제액",
+     "월간 활성 이용자"
+    ],
+    "guardrail": "계좌 정지 민원",
+    "vanity": "가입 수",
+    "intent_metric": "고객 수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "결제 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "와이즈와 같은 문제를 '여행자 지갑' 형태로 풀었다."
   },
   {
