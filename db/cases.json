@@ -159,6 +159,7 @@
     "why": "같은 환자에게 대기 경험 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대기실을 넓히고 꾸민다",
@@ -551,6 +552,7 @@
     "why": "같은 입주자 체감 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "엘리베이터를 교체한다",
@@ -903,6 +905,7 @@
     "why": "같은 승객 동선 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "수하물 인력을 늘려 대기 시간을 줄인다",
@@ -1266,6 +1269,7 @@
     "why": "같은 방문객 대기 경험",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "놀이기구를 더 짓는다",
@@ -1624,6 +1628,7 @@
     "why": "같은 학생에게 우산 비치",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "엄마가 덜 바쁘면 된다",
@@ -1987,6 +1992,7 @@
     "why": "같은 소아 환자 검사 경험",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "장비를 더 빠르고 조용하게",
@@ -2346,6 +2352,7 @@
     "why": "보온 기능을 병원 밖 가정으로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "병원용 인큐베이터를 싸게 만든다",
@@ -2722,6 +2729,7 @@
     "why": "같은 여행객에게 개인 숙소라는 새 상품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "호텔을 더 짓는다",
@@ -3094,6 +3102,7 @@
     "why": "같은 대여자에게 정액 우편 대여",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대여료 인하",
@@ -3460,6 +3469,7 @@
     "why": "같은 청소기 시장에 봉투 없는 제품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "모터 출력 경쟁",
@@ -3815,6 +3825,31 @@
     "why": "같은 제품을 청소 마무리 용도로 재포지셔닝",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "세제",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "기저귀",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "페브리즈",
+      "cell": "question"
+     }
+    ],
+    "target": "페브리즈",
+    "before": "question",
+    "after": "star",
+    "why": "안 팔리던 신제품을 청소 습관의 보상으로 바꿔 성장시켰다",
+    "q_to_star": true,
+    "funders": [
+     "세제",
+     "기저귀"
+    ]
+   },
    "hyps": [
     {
      "text": "냄새 제거 효과를 더 크게 광고",
@@ -4169,6 +4204,7 @@
     "why": "같은 셰이크를 출근길 고객에게 더 팔기",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "고객 설문으로 맛을 개선",
@@ -4534,6 +4570,7 @@
     "why": "비행을 차·버스 이용자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "운항 편수를 줄인다",
@@ -4845,6 +4882,7 @@
     "why": "같은 가구 시장에 셀프 조립 제품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "무료 배송을 해 준다",
@@ -5144,6 +5182,28 @@
     "cell": "diversify",
     "why": "비게이머에게 모션 게임기",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "휴대용 게임기 DS",
+      "cell": "star"
+     },
+     {
+      "name": "거치형 게임큐브",
+      "cell": "dog"
+     },
+     {
+      "name": "Wii",
+      "cell": "question"
+     }
+    ],
+    "target": "Wii",
+    "before": "question",
+    "after": "star",
+    "why": "성능 경쟁에서 밀린 거치형을 비게이머 시장으로 되살렸다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -5491,6 +5551,7 @@
     "why": "같은 청취자에게 스트리밍",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "불법 다운로드 단속·소송",
@@ -5823,6 +5884,7 @@
     "why": "같은 송금 고객에게 간편 송금",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "은행 앱 화면을 더 깔끔하게 바꾼다",
@@ -6139,6 +6201,7 @@
     "why": "같은 배달 고객에게 앱 주문",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "동네 배달 책자를 만든다",
@@ -6436,6 +6499,7 @@
     "why": "같은 중고 거래자에게 동네 직거래",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "안전결제(에스크로)를 도입한다",
@@ -6749,6 +6813,7 @@
     "why": "같은 장보기 고객에게 새벽 배송",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "마트 영업시간을 늘린다",
@@ -7046,6 +7111,7 @@
     "why": "같은 쇼핑객에게 직매입 로켓배송",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "판매자에게 배송 기준을 강하게 요구한다",
@@ -7345,6 +7411,7 @@
     "why": "같은 좌석을 오후 재택근무자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "가격이 비싸다 → 오후 할인",
@@ -7702,6 +7769,7 @@
     "why": "기존 결제자 재구매",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "리포트 품질 개선",
@@ -8050,6 +8118,7 @@
     "why": "기존 회원 재등록",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "재등록 할인을 준다",
@@ -8364,6 +8433,7 @@
     "why": "신규 가입자 첫 주 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "푸시 알림을 늘린다",
@@ -8674,6 +8744,7 @@
     "why": "같은 팀 회의 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회의 시간을 30분으로 제한한다",
@@ -8987,6 +9058,7 @@
     "why": "같은 독자에게 독서 모임 경험",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "온라인만큼 할인한다",
@@ -9286,6 +9358,7 @@
     "why": "같은 직장인 점심 대기 해소",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "좌석을 늘린다",
@@ -9601,6 +9674,7 @@
     "why": "기존 방문자 결제 완료",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "이탈 고객에게 할인 쿠폰을 다시 보낸다",
@@ -9901,6 +9975,7 @@
     "why": "기존 수강생 완강",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "강의를 더 짧게 쪼갠다",
@@ -10249,6 +10324,28 @@
     "why": "기존 고객 구매 빈도",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "온라인 커머스",
+      "cell": "star"
+     },
+     {
+      "name": "마켓플레이스",
+      "cell": "question"
+     },
+     {
+      "name": "프라임 멤버십",
+      "cell": "question"
+     }
+    ],
+    "target": "프라임 멤버십",
+    "before": "question",
+    "after": "star",
+    "why": "커머스의 배송 역량을 멤버십으로 묶어 반복 구매를 만드는 핵심 사업이 됐다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "일정 금액 이상 무료배송",
@@ -10574,6 +10671,24 @@
     "cell": "product_dev",
     "why": "같은 고객에게 외부 판매자 구색",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "직매입 커머스",
+      "cell": "star"
+     },
+     {
+      "name": "마켓플레이스",
+      "cell": "question"
+     }
+    ],
+    "target": "마켓플레이스",
+    "before": "question",
+    "after": "star",
+    "why": "직매입의 트래픽을 제3자 판매자에게 열어 구색을 빠르게 키웠다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -10921,6 +11036,7 @@
     "why": "신발 구매자에게 무료 반품 온라인 판매",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "할인 쿠폰",
@@ -11277,6 +11393,7 @@
     "why": "안경 구매자에게 홈 트라이온 직판",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "매장 할인 행사",
@@ -11652,6 +11769,7 @@
     "why": "면도 고객에게 구독 배송",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "날이 더 많은 고급 면도기",
@@ -12020,6 +12138,7 @@
     "why": "회원 반복 구매",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 큰 할인 행사",
@@ -12348,6 +12467,7 @@
     "why": "장보는 고객에게 자체 브랜드",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "품목을 늘린다",
@@ -12657,6 +12777,7 @@
     "why": "동네 손님 결품 줄이기",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -12966,6 +13087,7 @@
     "why": "같은 고객에게 반응 생산 신상품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "트렌드 예측 팀을 강화한다",
@@ -13261,6 +13383,7 @@
     "why": "같은 젊은 층에게 초소량 신상품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "디자이너를 늘린다",
@@ -13559,6 +13682,7 @@
     "why": "의류 고객에게 대신 고르는 박스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "검색·필터를 더 좋게",
@@ -13855,6 +13979,7 @@
     "why": "반려인에게 정기배송·감정 응대",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "온라인 최저가",
@@ -14151,6 +14276,7 @@
     "why": "장보기 고객에게 대행 서비스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "자체 창고·트럭으로 식료품 배송",
@@ -14451,6 +14577,7 @@
     "why": "같은 구매자에게 에스크로 장터",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "판매 수수료를 낮춘다",
@@ -14751,6 +14878,7 @@
     "why": "온라인 쇼핑을 지방 저소득층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "쿠폰 지급",
@@ -15050,6 +15178,7 @@
     "why": "온라인 쇼핑을 소도시에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "광고를 늘린다",
@@ -15364,6 +15493,7 @@
     "why": "커뮤니티 회원에게 커머스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "오픈마켓에 입점",
@@ -15674,6 +15804,7 @@
     "why": "콘텐츠 이용자에게 커머스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "상품 사진을 고화질로",
@@ -15972,6 +16103,7 @@
     "why": "리셀 구매자에게 검수 거래",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "에스크로 결제",
@@ -16274,6 +16406,7 @@
     "why": "같은 쇼핑객에게 모아보기",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "개별 몰 앱 출시",
@@ -16584,6 +16717,7 @@
     "why": "운동화 시장에 울 소재",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기능성으로 경쟁",
@@ -16902,6 +17036,7 @@
     "why": "캐리어 시장에 직판 기능 제품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "백화점 입점",
@@ -17200,6 +17335,26 @@
     "cell": "product_dev",
     "why": "같은 고객에게 쿠션 용기",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "기초 화장품",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "쿠션 팩트",
+      "cell": "question"
+     }
+    ],
+    "target": "쿠션 팩트",
+    "before": "question",
+    "after": "star",
+    "why": "새 카테고리를 만들어 성장 사업이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "기초 화장품"
+    ]
    },
    "hyps": [
     {
@@ -17515,6 +17670,24 @@
     "why": "라면 시장에 극한 매운맛",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "국내 일반 라면",
+      "cell": "dog"
+     },
+     {
+      "name": "불닭볶음면",
+      "cell": "question"
+     }
+    ],
+    "target": "불닭볶음면",
+    "before": "question",
+    "after": "star",
+    "why": "해외 매운맛 수요로 회사 매출의 중심이 됐다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "덜 맵게 바꾼다",
@@ -17813,6 +17986,26 @@
     "why": "만두를 해외 현지인에게",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "국내 가공식품",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "비비고 해외",
+      "cell": "question"
+     }
+    ],
+    "target": "비비고 해외",
+    "before": "question",
+    "after": "star",
+    "why": "국내 현금으로 해외 만두를 키워 1위가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "국내 가공식품"
+    ]
+   },
    "hyps": [
     {
      "text": "한인 마트 중심 판매",
@@ -18109,6 +18302,7 @@
     "why": "커피 고객에게 저가 대용량",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "프리미엄 원두로 경쟁",
@@ -18418,6 +18612,7 @@
     "why": "커피 고객에게 앱 픽업",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 큰 매장",
@@ -18713,6 +18908,7 @@
     "why": "같은 음료를 방문 배달로",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "마트 광고",
@@ -19025,6 +19221,26 @@
     "why": "같은 제품을 농촌 소포장으로",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "도시 생활용품",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "농촌 판매망",
+      "cell": "question"
+     }
+    ],
+    "target": "농촌 판매망",
+    "before": "question",
+    "after": "star",
+    "why": "도시 현금으로 농촌 시장을 키워 성장 동력이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "도시 생활용품"
+    ]
+   },
    "hyps": [
     {
      "text": "대용량 할인",
@@ -19330,6 +19546,26 @@
     "why": "데이터를 저소득 다수에게",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "석유화학·정유",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "지오 통신",
+      "cell": "question"
+     }
+    ],
+    "target": "지오 통신",
+    "before": "question",
+    "after": "star",
+    "why": "정유 현금으로 통신에 투자해 1위가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "석유화학·정유"
+    ]
+   },
    "hyps": [
     {
      "text": "소폭 요금 인하",
@@ -19630,6 +19866,7 @@
     "why": "할인점을 소도시로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -19927,6 +20164,7 @@
     "why": "같은 방문객 체류 시간",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "할인 행사",
@@ -20283,6 +20521,24 @@
     "why": "기존 고객 회비로 묶기",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "로켓배송",
+      "cell": "star"
+     },
+     {
+      "name": "와우 멤버십",
+      "cell": "question"
+     }
+    ],
+    "target": "와우 멤버십",
+    "before": "question",
+    "after": "cash_cow",
+    "why": "1위 배송을 반복 구매 현금원으로 묶었다",
+    "q_to_star": false,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "적립금",
@@ -20616,6 +20872,7 @@
     "why": "택시 승객에게 앱 호출",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "택시 면허를 늘린다",
@@ -20930,6 +21187,7 @@
     "why": "택시 승객에게 승합차 호출",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "배차를 자동으로 하고 승차 거부를 없앤다",
@@ -21244,6 +21502,7 @@
     "why": "차량 호출을 동남아로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "해외 차량 호출 앱 그대로 도입",
@@ -21556,6 +21815,28 @@
     "why": "같은 이용자에게 배달·결제",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "오토바이 호출",
+      "cell": "star"
+     },
+     {
+      "name": "배달",
+      "cell": "question"
+     },
+     {
+      "name": "결제",
+      "cell": "question"
+     }
+    ],
+    "target": "배달",
+    "before": "question",
+    "after": "star",
+    "why": "기사망을 공유해 배달이 핵심 사업이 됐다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "기사 대기 장소를 늘린다",
@@ -21857,6 +22138,7 @@
     "why": "배달을 교외로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -22165,6 +22447,7 @@
     "why": "식당에게 예약 관리 도구",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "손님 광고를 많이 한다",
@@ -22473,6 +22756,7 @@
     "why": "수공예 구매자에게 전용 장터",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대형 오픈마켓 입점",
@@ -22787,6 +23071,7 @@
     "why": "같은 거래자 신뢰 높이기",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회사가 모든 거래를 보증",
@@ -23097,6 +23382,7 @@
     "why": "외주 고객에게 정가 패키지",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "견적 요청 게시판",
@@ -23409,6 +23695,7 @@
     "why": "외주 고객에게 에스크로 패키지",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "지인 소개로만 맡긴다",
@@ -23721,6 +24008,7 @@
     "why": "반려인에게 개인 시터",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "반려견 호텔 가격 인하",
@@ -24030,6 +24318,7 @@
     "why": "렌터카 고객에게 개인 차",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -24341,6 +24630,7 @@
     "why": "장거리 이동자에게 카풀",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "저가 버스",
@@ -24650,6 +24940,7 @@
     "why": "렌터카 고객에게 무인 분 단위",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -24959,6 +25250,7 @@
     "why": "도시 이동자에게 공유 킥보드",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "마을버스 증편",
@@ -25257,6 +25549,7 @@
     "why": "기존 예약자 전환 높이기",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "선결제 할인",
@@ -25570,6 +25863,7 @@
     "why": "모텔을 일반 여행객에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "모텔 광고",
@@ -25884,6 +26178,7 @@
     "why": "집주인에게 무료 시세",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "중개인 목록 사이트",
@@ -26191,6 +26486,7 @@
     "why": "매도자에게 즉시 매입",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회사가 알고리즘 가격으로 집을 바로 사 주고 나중에 되판다",
@@ -26506,6 +26802,7 @@
     "why": "원룸 구하는 사람에게 앱 비교",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "생활 정보지 광고",
@@ -26801,6 +27098,7 @@
     "why": "스타트업에게 좌석 단위 사무실",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "저렴한 소형 사무실",
@@ -27109,6 +27407,7 @@
     "why": "기업에게 유연 공간",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "커뮤니티·브랜드 경험으로 프리미엄 가격",
@@ -27420,6 +27719,7 @@
     "why": "수입 업체에게 디지털 포워딩",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "포워더 직원 늘리기",
@@ -27746,6 +28046,7 @@
     "why": "화주에게 컨테이너 운송",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 빠른 배",
@@ -28088,6 +28389,7 @@
     "why": "기업에게 익일 보장 배송",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "여객기 화물칸 계약 확대",
@@ -28396,6 +28698,7 @@
     "why": "같은 배송 효율",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "연비 좋은 트럭",
@@ -28708,6 +29011,7 @@
     "why": "배송을 외딴 병원으로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "모든 병원에 혈액 은행 설치",
@@ -29002,6 +29306,7 @@
     "why": "같은 가게 대상 과금 변경",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "높은 주문 수수료",
@@ -29312,6 +29617,7 @@
     "why": "가게에게 배달 대행",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "가게마다 기사 고용",
@@ -29624,6 +29930,26 @@
     "cell": "product_dev",
     "why": "카카오 이용자에게 택시 호출",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "카카오톡",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "카카오T",
+      "cell": "question"
+     }
+    ],
+    "target": "카카오T",
+    "before": "question",
+    "after": "star",
+    "why": "메신저 가입자로 택시 호출 1위가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "카카오톡"
+    ]
    },
    "hyps": [
     {
@@ -29938,6 +30264,7 @@
     "why": "주민에게 무료 게시판",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "신문 광고 할인",
@@ -30246,6 +30573,7 @@
     "why": "통근자에게 소속 카풀",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "도로 확장",
@@ -30543,6 +30871,7 @@
     "why": "영업 조직에게 웹 CRM",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "라이선스 가격 인하",
@@ -30869,6 +31198,24 @@
     "cell": "diversify",
     "why": "게임사가 기업 협업 도구로",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "게임 글리치",
+      "cell": "dog"
+     },
+     {
+      "name": "사내 채팅",
+      "cell": "question"
+     }
+    ],
+    "target": "사내 채팅",
+    "before": "question",
+    "after": "star",
+    "why": "게임을 철수하고 내부 도구를 제품으로 키웠다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -31219,6 +31566,24 @@
     "why": "스노보드 가게가 쇼핑몰 빌더로",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "스노보드 쇼핑몰",
+      "cell": "dog"
+     },
+     {
+      "name": "쇼핑몰 플랫폼",
+      "cell": "question"
+     }
+    ],
+    "target": "쇼핑몰 플랫폼",
+    "before": "question",
+    "after": "star",
+    "why": "가게 대신 가게를 만든 도구를 팔았다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "스노보드 판매에 집중",
@@ -31534,6 +31899,7 @@
     "why": "개발자에게 결제 API",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "수수료 인하",
@@ -31834,6 +32200,7 @@
     "why": "개발자에게 통신 API",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "통신사와 직접 계약",
@@ -32145,6 +32512,30 @@
     "cell": "diversify",
     "why": "커머스 회사가 클라우드로",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "온라인 커머스",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "마켓플레이스",
+      "cell": "star"
+     },
+     {
+      "name": "AWS",
+      "cell": "question"
+     }
+    ],
+    "target": "AWS",
+    "before": "question",
+    "after": "star",
+    "why": "커머스에서 쌓은 인프라 역량을 밖으로 팔아 클라우드 1위가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "온라인 커머스"
+    ]
    },
    "hyps": [
     {
@@ -32504,6 +32895,7 @@
     "why": "기기 여러 대 쓰는 사람에게 동기화",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "유료 검색 광고",
@@ -32849,6 +33241,7 @@
     "why": "회의 시장에 쉬운 화상회의",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -33150,6 +33543,7 @@
     "why": "개발팀에게 셀프 구매 도구",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "영업팀 확대",
@@ -33469,6 +33863,7 @@
     "why": "중소기업에게 인바운드 도구",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "광고비 증액",
@@ -33827,6 +34222,7 @@
     "why": "이메일 마케팅을 작은 사업자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대기업 영업",
@@ -34158,6 +34554,7 @@
     "why": "디자인을 비디자이너에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "전문 툴 기능 경쟁",
@@ -34456,6 +34853,7 @@
     "why": "디자인 팀에게 브라우저 협업",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "파일 공유 기능 추가",
@@ -34755,6 +35153,7 @@
     "why": "팀에게 블록형 올인원",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 좋은 문서 도구",
@@ -35066,6 +35465,7 @@
     "why": "임원에게 유료 고속 이메일",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "무료 앱으로 경쟁",
@@ -35381,6 +35781,7 @@
     "why": "개발·운영팀에게 통합 관측",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "운영팀 전용 모니터링 강화",
@@ -35675,6 +36076,7 @@
     "why": "데이터팀에게 분리형 웨어하우스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 큰 장비 구매",
@@ -35990,6 +36392,7 @@
     "why": "급여 서비스를 작은 회사로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "세무 대행",
@@ -36303,6 +36706,7 @@
     "why": "HR SaaS를 한국 스타트업으로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "해외 HR 툴 도입",
@@ -36602,6 +37006,7 @@
     "why": "직장인에게 정확한 명함 관리",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 좋은 OCR",
@@ -36915,6 +37320,7 @@
     "why": "쇼핑몰에게 상담 채팅",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "전화 상담 확대",
@@ -37228,6 +37634,7 @@
     "why": "에이전시에게 단순 협업 도구",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -37542,6 +37949,7 @@
     "why": "앱 연동을 비개발자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "앱마다 연동 기능 개발 요청",
@@ -37854,6 +38262,7 @@
     "why": "스타트업에게 제품 안 메신저",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "설문 이메일",
@@ -38169,6 +38578,7 @@
     "why": "원격 팀에게 비동기 영상",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회의 시간 단축",
@@ -38481,6 +38891,7 @@
     "why": "영업에게 예약 링크",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "공유 캘린더",
@@ -38790,6 +39201,7 @@
     "why": "기업에게 전자서명",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "팩스·택배",
@@ -39102,6 +39514,7 @@
     "why": "DB를 비개발자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "엑셀 공유 기능",
@@ -39416,6 +39829,7 @@
     "why": "개발자에게 소셜 코딩",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "버전 관리 도구 개선",
@@ -39728,6 +40142,7 @@
     "why": "홈페이지 제작을 작은 가게에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "외주 단가 낮추기",
@@ -40044,6 +40459,7 @@
     "why": "체험 계정 전환",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "첫 달 할인",
@@ -40362,6 +40778,7 @@
     "why": "ERP를 중소 제조사로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대기업 ERP 도입",
@@ -40661,6 +41078,7 @@
     "why": "카드 결제를 개인 판매자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "판매자마다 카드 가맹점 가입",
@@ -41000,6 +41418,7 @@
     "why": "카드 결제를 작은 가게에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "단말기 할부",
@@ -41328,6 +41747,7 @@
     "why": "젊은 층에게 소셜 송금",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "은행 송금 단순화",
@@ -41644,6 +42064,7 @@
     "why": "주식 거래를 소액 젊은 층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "수수료 소폭 인하",
@@ -41944,6 +42365,7 @@
     "why": "저소득층에게 무수수료 계좌",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "수수료 일부 인하",
@@ -42257,6 +42679,7 @@
     "why": "은행 고객에게 디지털 카드",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "지점 확대",
@@ -42601,6 +43024,26 @@
     "cell": "diversify",
     "why": "통신사가 계좌 없는 사람에게 송금",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "음성 통신",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "엠페사",
+      "cell": "question"
+     }
+    ],
+    "target": "엠페사",
+    "before": "question",
+    "after": "star",
+    "why": "통신 가입자 기반 송금이 국가 결제망이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "음성 통신"
+    ]
    },
    "hyps": [
     {
@@ -42969,6 +43412,7 @@
     "why": "해외 송금자에게 투명 송금",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "은행 수수료 비교",
@@ -43299,6 +43743,7 @@
     "why": "쇼핑객에게 후불 결제",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "카드 보안 강조",
@@ -43617,6 +44062,7 @@
     "why": "젊은 층에게 AI 보험",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "광고로 이미지 개선",
@@ -43919,6 +44365,7 @@
     "why": "은행 고객에게 비대면 은행",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기존 앱 개선",
@@ -44221,6 +44668,7 @@
     "why": "금융 고객에게 통합 조회",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "은행별 앱 사용",
@@ -44522,6 +44970,7 @@
     "why": "소비자에게 무료 신용점수",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "조회료 인하",
@@ -44840,6 +45289,7 @@
     "why": "디지털 결제를 소규모 가게로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "카드 단말기 보급",
@@ -45154,6 +45604,7 @@
     "why": "대출자에게 비교 조회",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "은행 상담",
@@ -45469,6 +45920,7 @@
     "why": "기존 가입자 청구율",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "청구 앱 화면 개선",
@@ -45785,6 +46237,7 @@
     "why": "사회초년생에게 선저축 상품",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "금리 높은 적금",
@@ -46077,6 +46530,7 @@
     "why": "식당에게 빠른 정산",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "은행 대출",
@@ -46385,6 +46839,7 @@
     "why": "대출을 담보 없는 빈곤층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "정부 보조금",
@@ -46697,6 +47152,7 @@
     "why": "암호화폐를 일반인에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기술 설명 강화",
@@ -47043,6 +47499,26 @@
     "cell": "product_dev",
     "why": "기존 구독자에게 스트리밍",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "DVD 우편 대여",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "스트리밍",
+      "cell": "question"
+     }
+    ],
+    "target": "스트리밍",
+    "before": "question",
+    "after": "star",
+    "why": "DVD 현금으로 스트리밍을 키웠고, DVD는 결국 철수했다",
+    "q_to_star": true,
+    "funders": [
+     "DVD 우편 대여"
+    ]
    },
    "hyps": [
     {
@@ -47410,6 +47886,24 @@
     "why": "기존 구독자에게 오리지널",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "라이선스 스트리밍",
+      "cell": "star"
+     },
+     {
+      "name": "오리지널 제작",
+      "cell": "question"
+     }
+    ],
+    "target": "오리지널 제작",
+    "before": "question",
+    "after": "star",
+    "why": "스트리밍 데이터를 근거로 오리지널에 투자해 핵심 사업이 됐다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "모든 콘텐츠를 자체 제작",
@@ -47725,6 +48219,7 @@
     "why": "일반인에게 영상 공유",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "영상 파일 압축 프로그램",
@@ -48060,6 +48555,24 @@
     "why": "사진 공유자에게 필터 앱",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "버븐 체크인",
+      "cell": "dog"
+     },
+     {
+      "name": "사진 공유",
+      "cell": "question"
+     }
+    ],
+    "target": "사진 공유",
+    "before": "question",
+    "after": "star",
+    "why": "기능을 사진 하나로 줄여 급성장했다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "체크인 기능 강화",
@@ -48376,6 +48889,24 @@
     "cell": "diversify",
     "why": "팟캐스트 회사가 실시간 SNS로",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "팟캐스트 오디오",
+      "cell": "dog"
+     },
+     {
+      "name": "트위터",
+      "cell": "question"
+     }
+    ],
+    "target": "트위터",
+    "before": "question",
+    "after": "star",
+    "why": "애플에 밀린 팟캐스트를 접고 사이드 프로젝트를 키웠다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -48717,6 +49248,7 @@
     "why": "짧은 영상 시청자에게 추천 피드",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "친구 초대 보상",
@@ -49092,6 +49624,7 @@
     "why": "독자에게 기다리면 무료",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회차 가격 인하",
@@ -49487,6 +50020,26 @@
     "why": "독자에게 세로 스크롤 무료 연재",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "검색 광고",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "웹툰",
+      "cell": "question"
+     }
+    ],
+    "target": "웹툰",
+    "before": "question",
+    "after": "star",
+    "why": "검색 현금으로 키운 웹툰이 글로벌 성장 사업이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "검색 광고"
+    ]
+   },
    "hyps": [
     {
      "text": "모든 회차 유료화",
@@ -49847,6 +50400,7 @@
     "why": "기존 생방송을 게임에 집중",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "일반 생방송 기능 강화",
@@ -50158,6 +50712,24 @@
     "cell": "diversify",
     "why": "게임사가 커뮤니티 플랫폼으로",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "게임 페이츠 포에버",
+      "cell": "dog"
+     },
+     {
+      "name": "디스코드",
+      "cell": "question"
+     }
+    ],
+    "target": "디스코드",
+    "before": "question",
+    "after": "star",
+    "why": "게임을 접고 게이머 커뮤니티로 1위가 됐다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -50475,6 +51047,7 @@
     "why": "휴대폰 이용자에게 무료 메신저",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "문자 요금제",
@@ -50770,6 +51343,24 @@
     "cell": "product_dev",
     "why": "이용자에게 스티커 메신저",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "네이버재팬 검색",
+      "cell": "dog"
+     },
+     {
+      "name": "라인",
+      "cell": "question"
+     }
+    ],
+    "target": "라인",
+    "before": "question",
+    "after": "star",
+    "why": "일본 검색을 접고 메신저로 1위가 됐다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -51069,6 +51660,7 @@
     "why": "해외 가족에게 무료 메신저",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "국제 문자 할인",
@@ -51380,6 +51972,7 @@
     "why": "젊은 층에게 사라지는 메시지",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "비공개 설정 강화",
@@ -51691,6 +52284,7 @@
     "why": "대학생에게 실명 SNS",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기능 많은 소셜 사이트",
@@ -52003,6 +52597,24 @@
     "cell": "product_dev",
     "why": "포켓몬 팬에게 위치 게임",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "인그레스",
+      "cell": "dog"
+     },
+     {
+      "name": "포켓몬 고",
+      "cell": "question"
+     }
+    ],
+    "target": "포켓몬 고",
+    "before": "question",
+    "after": "star",
+    "why": "인그레스의 위치 데이터를 강력한 IP와 합쳤다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -52343,6 +52955,26 @@
     "cell": "product_dev",
     "why": "게이머에게 무료 게임",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "언리얼 엔진",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "포트나이트",
+      "cell": "question"
+     }
+    ],
+    "target": "포트나이트",
+    "before": "question",
+    "after": "star",
+    "why": "무료+시즌 패스로 회사 최대 사업이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "언리얼 엔진"
+    ]
    },
    "hyps": [
     {
@@ -52739,6 +53371,7 @@
     "why": "학습자에게 게임화 학습",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "콘텐츠 품질 향상",
@@ -53084,6 +53717,7 @@
     "why": "홈트 고객에게 구독 수업",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 좋은 기구",
@@ -53415,6 +54049,7 @@
     "why": "독자에게 작가 직접 구독",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "블로그 광고 수익",
@@ -53793,6 +54428,7 @@
     "why": "팬에게 정기 후원",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "일회성 기부 버튼",
@@ -54173,6 +54809,7 @@
     "why": "기존 독자 유료화",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "전면 유료화",
@@ -54552,6 +55189,7 @@
     "why": "독자에게 독서 구독",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "전자책 할인",
@@ -54895,6 +55533,7 @@
     "why": "웹툰을 해외로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "한국 작품 번역만 제공",
@@ -55207,6 +55846,7 @@
     "why": "신규 회원 활동 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "글쓰기 이벤트 경품",
@@ -55505,6 +56145,7 @@
     "why": "SNS 이용자에게 음성 방",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "실시간 음성 대화방",
@@ -55803,6 +56444,7 @@
     "why": "모바일 시청자에게 짧은 드라마",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "고품질 짧은 영상",
@@ -56100,6 +56742,7 @@
     "why": "직장인에게 제3의 공간",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 싼 커피",
@@ -56416,6 +57059,7 @@
     "why": "기존 고객 대기 해소",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -56716,6 +57360,7 @@
     "why": "기존 고객에게 개선 레시피",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "할인과 광고",
@@ -57008,6 +57653,7 @@
     "why": "가족에게 빠른 표준 햄버거",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -57320,6 +57966,7 @@
     "why": "외식 고객에게 빠른 건강식",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "패스트푸드 메뉴에 샐러드 추가",
@@ -57634,6 +58281,7 @@
     "why": "대체육을 고기 먹는 사람에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "채식 시장 마케팅 강화",
@@ -57930,6 +58578,7 @@
     "why": "귀리 우유를 카페로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "마트 할인 행사",
@@ -58245,6 +58894,7 @@
     "why": "에너지 음료를 서양 젊은 층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "맛을 서양 입맛에 맞춘다",
@@ -58558,6 +59208,26 @@
     "why": "커피 애호가에게 캡슐 시스템",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "인스턴트 커피",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "네스프레소",
+      "cell": "question"
+     }
+    ],
+    "target": "네스프레소",
+    "before": "question",
+    "after": "star",
+    "why": "캡슐 커피라는 고성장 시장의 선두가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "인스턴트 커피"
+    ]
+   },
    "hyps": [
     {
      "text": "더 좋은 머신",
@@ -58854,6 +59524,7 @@
     "why": "면도 고객에게 교체 날 모델",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "면도기 할인",
@@ -59164,6 +59835,24 @@
     "cell": "product_dev",
     "why": "기업에게 사용량 과금 복사",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "사진 인화지",
+      "cell": "dog"
+     },
+     {
+      "name": "914 복사기",
+      "cell": "question"
+     }
+    ],
+    "target": "914 복사기",
+    "before": "question",
+    "after": "star",
+    "why": "리스·사용량 과금으로 복사기 시장을 열었다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -59522,6 +60211,7 @@
     "why": "항공사에게 가동 시간 계약",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "엔진 고장을 아예 없앤다",
@@ -59851,6 +60541,7 @@
     "why": "건설사에게 공구 관리 서비스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "공구 가격 인하",
@@ -60163,6 +60854,7 @@
     "why": "운송사에게 주행거리 과금",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "타이어 할인",
@@ -60479,6 +61171,30 @@
     "why": "컴퓨터 회사가 휴대폰으로",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "맥",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "아이팟",
+      "cell": "star"
+     },
+     {
+      "name": "아이폰",
+      "cell": "question"
+     }
+    ],
+    "target": "아이폰",
+    "before": "question",
+    "after": "star",
+    "why": "아이팟의 기기·유통 역량을 합쳐 스마트폰 선두가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "맥"
+    ]
+   },
    "hyps": [
     {
      "text": "더 좋은 키보드",
@@ -60778,6 +61494,26 @@
     "cell": "diversify",
     "why": "컴퓨터 회사가 음악 기기·스토어로",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "맥",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "아이팟·아이튠즈",
+      "cell": "question"
+     }
+    ],
+    "target": "아이팟·아이튠즈",
+    "before": "question",
+    "after": "star",
+    "why": "디지털 음악 성장기에 기기와 유통을 묶어 1위가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "맥"
+    ]
    },
    "hyps": [
     {
@@ -61094,6 +61830,7 @@
     "why": "가정에게 학습형 조절기",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 많은 설정 버튼",
@@ -61398,6 +62135,7 @@
     "why": "집주인에게 비디오 초인종",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기존 보안 카메라",
@@ -61711,6 +62449,7 @@
     "why": "군사 로봇 회사가 가정용으로",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "고성능 지능형 로봇",
@@ -62026,6 +62765,7 @@
     "why": "젊은 층에게 저가 고성능 폰",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대리점 유통",
@@ -62337,6 +63077,7 @@
     "why": "충전기 구매자에게 신뢰 브랜드",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 싼 충전기",
@@ -62651,6 +63392,7 @@
     "why": "카메라를 액션 스포츠인에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "고화질 카메라",
@@ -62949,6 +63691,7 @@
     "why": "바쁜 가족에게 다기능 압력솥",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 좋은 압력솥",
@@ -63260,6 +64003,7 @@
     "why": "보트 신발을 개성 소비 젊은 층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "평범한 디자인으로 바꾼다",
@@ -63572,6 +64316,7 @@
     "why": "요가하는 여성에게 애슬레저",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기존 스포츠 브랜드 여성 라인",
@@ -63884,6 +64629,7 @@
     "why": "젊은 층에게 반항적 생수",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 싼 생수",
@@ -64196,6 +64942,7 @@
     "why": "아웃도어 사용자에게 프리미엄 아이스박스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 싼 제품",
@@ -64509,6 +65256,26 @@
     "cell": "penetration",
     "why": "같은 제품을 메시지로 재포지셔닝",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "세제·식품",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "도브",
+      "cell": "cash_cow"
+     }
+    ],
+    "target": "도브",
+    "before": "cash_cow",
+    "after": "star",
+    "why": "성숙한 비누 브랜드를 메시지로 다시 성장시켰다",
+    "q_to_star": false,
+    "funders": [
+     "세제·식품"
+    ]
    },
    "hyps": [
     {
@@ -64824,6 +65591,30 @@
     "why": "가정에게 일회용 걸레",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "세제",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "페브리즈",
+      "cell": "star"
+     },
+     {
+      "name": "스위퍼",
+      "cell": "question"
+     }
+    ],
+    "target": "스위퍼",
+    "before": "question",
+    "after": "star",
+    "why": "일회용 패드 밀대가 새 청소 카테고리 선두가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "세제"
+    ]
+   },
    "hyps": [
     {
      "text": "더 좋은 세제",
@@ -65137,6 +65928,31 @@
     "why": "음악 재생을 이동 중으로",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "TV·가전",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "오디오",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "워크맨",
+      "cell": "question"
+     }
+    ],
+    "target": "워크맨",
+    "before": "question",
+    "after": "star",
+    "why": "휴대용 음악이라는 새 시장을 열어 1위가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "TV·가전",
+     "오디오"
+    ]
+   },
    "hyps": [
     {
      "text": "더 좋은 오디오",
@@ -65446,6 +66262,26 @@
     "why": "기존 고객에게 디지털 카메라(실패: 하지 않음)",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "필름",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "디지털카메라",
+      "cell": "question"
+     }
+    ],
+    "target": "디지털카메라",
+    "before": "question",
+    "after": "exit",
+    "why": "필름 현금을 지키려 디지털 육성을 미뤄 필름과 함께 무너졌다",
+    "q_to_star": false,
+    "funders": [
+     "필름"
+    ]
+   },
    "hyps": [
     {
      "text": "필름 품질 개선",
@@ -65744,6 +66580,7 @@
     "why": "스마트폰을 소비자로(실패: 하지 않음)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "키보드·보안 강화",
@@ -66039,6 +66876,7 @@
     "why": "건강 주스 고객에게 압착기",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "고가 기계 + 전용 팩 구독",
@@ -66333,6 +67171,7 @@
     "why": "도시 이동자에게 균형 기구",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "보행로에서 대중 이동 수단으로",
@@ -66628,6 +67467,30 @@
     "cell": "market_dev",
     "why": "착용형 화면을 산업 현장으로",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "검색 광고",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "안드로이드",
+      "cell": "star"
+     },
+     {
+      "name": "글래스",
+      "cell": "question"
+     }
+    ],
+    "target": "글래스",
+    "before": "question",
+    "after": "exit",
+    "why": "소비자 시장에서 접고 산업용으로만 남겼다",
+    "q_to_star": false,
+    "funders": [
+     "검색 광고"
+    ]
    },
    "hyps": [
     {
@@ -66955,6 +67818,7 @@
     "why": "백내장 수술을 빈곤층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "정부 보조",
@@ -67280,6 +68144,7 @@
     "why": "심장 수술을 저소득층에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "장비 할부",
@@ -67594,6 +68459,7 @@
     "why": "무보험자에게 약값 쿠폰",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "제약사 할인 요청",
@@ -67905,6 +68771,7 @@
     "why": "만성질환자에게 시간별 포장",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "복약 알림 앱",
@@ -68220,6 +69087,7 @@
     "why": "남성에게 원격 처방",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "병원 광고",
@@ -68520,6 +69388,7 @@
     "why": "직장인에게 비대면 진료",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "비대면 진료 상시 허용",
@@ -68833,6 +69702,7 @@
     "why": "시술 고객에게 가격·후기 앱",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "병원 광고",
@@ -69143,6 +70013,7 @@
     "why": "부모에게 원격 상담",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "야간 진료 병원 확대",
@@ -69457,6 +70328,7 @@
     "why": "환자에게 간편 검사(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "극소량 혈액으로 다종 검사",
@@ -69755,6 +70627,7 @@
     "why": "학생에게 개인 속도 영상",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "보충 수업",
@@ -70051,6 +70924,7 @@
     "why": "명문대 강의를 일반 학습자에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "원격 대학",
@@ -70354,6 +71228,7 @@
     "why": "학생에게 사진 검색 풀이",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "질문 게시판",
@@ -70669,6 +71544,7 @@
     "why": "수험생에게 AI 진단",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "문제집 추가",
@@ -70980,6 +71856,7 @@
     "why": "직장인에게 강의 + 키트",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "영상 강의만 판매",
@@ -71294,6 +72171,7 @@
     "why": "유명 강의를 지방 학생에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "지방 분원 개설",
@@ -71593,6 +72471,7 @@
     "why": "전환 희망자에게 소득공유 교육",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "취업해야 학비를 내는 구조",
@@ -71890,6 +72769,7 @@
     "why": "직장인에게 실무 강의",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대학 평생교육원",
@@ -72188,6 +73068,7 @@
     "why": "기업에게 수동적 구직자 채용",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "구인 광고",
@@ -72502,6 +73383,7 @@
     "why": "구직자에게 재직자 리뷰",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회사 홍보 강화",
@@ -72815,6 +73697,7 @@
     "why": "스타트업에게 보상형 추천",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "채용 광고 확대",
@@ -73131,6 +74014,7 @@
     "why": "구직자에게 통합 검색",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "또 하나의 채용 사이트",
@@ -73444,6 +74328,7 @@
     "why": "태양광을 농촌 가정으로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -73742,6 +74627,7 @@
     "why": "착한 소비자에게 1+1 신발",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "자선 단체 기부",
@@ -74053,6 +74939,7 @@
     "why": "기존 채용 과정의 정착률",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "입사 축하금",
@@ -74366,6 +75253,7 @@
     "why": "기존 환자 노쇼 줄이기",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "부도 시 벌금",
@@ -74677,6 +75565,7 @@
     "why": "기존 학원생 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "장기 등록 할인",
@@ -74976,6 +75865,7 @@
     "why": "기존 환자 복약 지속",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "복약 알림",
@@ -75267,6 +76157,7 @@
     "why": "같은 시장 원가·품질",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -75586,6 +76477,7 @@
     "why": "같은 현장 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "퓨즈를 더 강한 것으로",
@@ -75925,6 +76817,7 @@
     "why": "같은 생산 효율",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "채용을 더 많이 한다",
@@ -76270,6 +77163,28 @@
     "why": "핵심 브릭으로 기존 팬 집중",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "핵심 브릭",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "테마파크",
+      "cell": "dog"
+     },
+     {
+      "name": "의류·비디오게임",
+      "cell": "dog"
+     }
+    ],
+    "target": "핵심 브릭",
+    "before": "cash_cow",
+    "after": "star",
+    "why": "비핵심을 정리하고 브릭에 집중한 뒤 다시 성장했다",
+    "q_to_star": false,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "신사업을 더 늘린다",
@@ -76583,6 +77498,30 @@
     "why": "출판사가 영화 제작으로",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "만화 출판",
+      "cell": "dog"
+     },
+     {
+      "name": "캐릭터 라이선스",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "직접 영화 제작",
+      "cell": "question"
+     }
+    ],
+    "target": "직접 영화 제작",
+    "before": "question",
+    "after": "star",
+    "why": "라이선스 대신 직접 제작해 영화 시리즈가 핵심 사업이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "캐릭터 라이선스"
+    ]
+   },
    "hyps": [
     {
      "text": "판권료 인상",
@@ -76888,6 +77827,32 @@
     "cell": "penetration",
     "why": "기존 시장에 제품 집중",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "맥",
+      "cell": "dog"
+     },
+     {
+      "name": "뉴턴",
+      "cell": "dog"
+     },
+     {
+      "name": "프린터·주변기기",
+      "cell": "dog"
+     },
+     {
+      "name": "데스크톱·노트북 4종",
+      "cell": "question"
+     }
+    ],
+    "target": "데스크톱·노트북 4종",
+    "before": "question",
+    "after": "star",
+    "why": "대부분을 철수하고 2×2 네 제품에 집중해 살아났다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -77197,6 +78162,7 @@
     "why": "같은 시장 원가 구조",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "서비스 고급화",
@@ -77510,6 +78476,7 @@
     "why": "같은 승객 부가 판매",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "항공권 가격 유지",
@@ -77859,6 +78826,26 @@
     "why": "기존 전문가를 구독으로",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "크리에이티브 스위트 패키지",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "크리에이티브 클라우드",
+      "cell": "question"
+     }
+    ],
+    "target": "크리에이티브 클라우드",
+    "before": "question",
+    "after": "cash_cow",
+    "why": "패키지를 구독으로 바꿔 반복 매출 현금원이 됐다",
+    "q_to_star": false,
+    "funders": [
+     "크리에이티브 스위트 패키지"
+    ]
+   },
    "hyps": [
     {
      "text": "패키지 가격 인하",
@@ -78192,6 +79179,24 @@
     "why": "기존 광고주·사용자 품질",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "검색",
+      "cell": "star"
+     },
+     {
+      "name": "검색 광고",
+      "cell": "question"
+     }
+    ],
+    "target": "검색 광고",
+    "before": "question",
+    "after": "cash_cow",
+    "why": "품질 반영 광고가 회사 전체를 먹여 살리는 현금원이 됐다",
+    "q_to_star": false,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "높은 입찰가 순서",
@@ -78506,6 +79511,24 @@
     "cell": "penetration",
     "why": "기존 고객 결제 완료",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "온라인 커머스",
+      "cell": "star"
+     },
+     {
+      "name": "원클릭 주문",
+      "cell": "question"
+     }
+    ],
+    "target": "원클릭 주문",
+    "before": "question",
+    "after": "star",
+    "why": "커머스 전환을 올리는 기능이 특허로 지켜지는 강점이 됐다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -78827,6 +79850,7 @@
     "why": "기존 투숙객 경험",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -79121,6 +80145,7 @@
     "why": "출장객에게 모듈 객실",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "객실 할인",
@@ -79428,6 +80453,7 @@
     "why": "내부 조직 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "규칙을 더 정교하게",
@@ -79736,6 +80762,7 @@
     "why": "내부 조직 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "조율 회의 강화",
@@ -80043,6 +81070,7 @@
     "why": "내부 제작 품질",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "상급자 승인 단계 추가",
@@ -80358,6 +81386,26 @@
     "why": "같은 차 시장에 하이브리드",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "내연기관 세단",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "하이브리드",
+      "cell": "question"
+     }
+    ],
+    "target": "하이브리드",
+    "before": "question",
+    "after": "star",
+    "why": "하이브리드 시장을 열고 선두가 됐다",
+    "q_to_star": true,
+    "funders": [
+     "내연기관 세단"
+    ]
+   },
    "hyps": [
     {
      "text": "기존 차 연비 소폭 개선",
@@ -80656,6 +81704,7 @@
     "why": "차 시장에 고성능 전기차",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "처음부터 저가 대중 전기차",
@@ -80954,6 +82003,30 @@
     "cell": "product_dev",
     "why": "게이머에게 하이브리드 게임기",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "3DS",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "Wii U",
+      "cell": "dog"
+     },
+     {
+      "name": "스위치",
+      "cell": "question"
+     }
+    ],
+    "target": "스위치",
+    "before": "question",
+    "after": "star",
+    "why": "실패한 Wii U를 정리하고 휴대·거치를 합쳤다",
+    "q_to_star": true,
+    "funders": [
+     "3DS"
+    ]
    },
    "hyps": [
     {
@@ -81265,6 +82338,7 @@
     "why": "차를 오토바이 가족에게(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "극단적 원가 절감",
@@ -81558,6 +82632,26 @@
     "cell": "product_dev",
     "why": "기존 고객에게 연체료 없는 대여(실패: 늦음)",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "매장 대여",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "온라인 대여",
+      "cell": "question"
+     }
+    ],
+    "target": "온라인 대여",
+    "before": "question",
+    "after": "exit",
+    "why": "매장 연체료 수익을 지키느라 온라인을 키우지 못했다",
+    "q_to_star": false,
+    "funders": [
+     "매장 대여"
+    ]
    },
    "hyps": [
     {
@@ -81855,6 +82949,31 @@
     "cell": "product_dev",
     "why": "기존 고객에게 스마트폰(실패: 늦음)",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "피처폰",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "스마트폰(심비안)",
+      "cell": "question"
+     },
+     {
+      "name": "네트워크 장비",
+      "cell": "cash_cow"
+     }
+    ],
+    "target": "스마트폰(심비안)",
+    "before": "question",
+    "after": "dog",
+    "why": "피처폰 1위를 지키는 사이 스마트폰에서 점유를 잃었다",
+    "q_to_star": false,
+    "funders": [
+     "피처폰",
+     "네트워크 장비"
+    ]
    },
    "hyps": [
     {
@@ -82156,6 +83275,26 @@
     "why": "기존 이용자에게 검색(실패: 외주)",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "포털",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "검색",
+      "cell": "question"
+     }
+    ],
+    "target": "검색",
+    "before": "question",
+    "after": "dog",
+    "why": "포털의 부가 기능으로 두어 검색 전문 기업에 시장을 내줬다",
+    "q_to_star": false,
+    "funders": [
+     "포털"
+    ]
+   },
    "hyps": [
     {
      "text": "포털 콘텐츠 확대",
@@ -82453,6 +83592,7 @@
     "why": "기존 투숙객 직접 예약",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "직접 예약 할인",
@@ -82768,6 +83908,7 @@
     "why": "기존 구독자 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "해지 시 할인 제안",
@@ -83064,6 +84205,7 @@
     "why": "기존 고객 가격 인상",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "일괄 가격 인상",
@@ -83364,6 +84506,7 @@
     "why": "기존 대기업 시장 진입 속도",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "영업 인력 증원",
@@ -83680,6 +84823,7 @@
     "why": "기존 장터 매물 확보",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "판매 수수료 인하",
@@ -83978,6 +85122,7 @@
     "why": "동네 손님에게 예약 픽업",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "생산량을 늘린다",
@@ -84278,6 +85423,7 @@
     "why": "기존 배달 손님 평점",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "리뷰 이벤트로 좋은 리뷰 유도",
@@ -84576,6 +85722,24 @@
     "cell": "product_dev",
     "why": "검색 이용자에게 Q&A",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "검색",
+      "cell": "question"
+     },
+     {
+      "name": "지식인",
+      "cell": "question"
+     }
+    ],
+    "target": "지식인",
+    "before": "question",
+    "after": "star",
+    "why": "사용자 답변으로 한국어 콘텐츠를 채워 검색 1위로 올라섰다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -84887,6 +86051,24 @@
     "cell": "product_dev",
     "why": "가정에게 렌털 + 관리",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "정수기 판매",
+      "cell": "dog"
+     },
+     {
+      "name": "렌털·방문 관리",
+      "cell": "question"
+     }
+    ],
+    "target": "렌털·방문 관리",
+    "before": "question",
+    "after": "cash_cow",
+    "why": "렌털이 반복 매출 현금원이 됐다",
+    "q_to_star": false,
+    "funders": []
    },
    "hyps": [
     {
@@ -85205,6 +86387,26 @@
     "why": "팬에게 공식 플랫폼",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "음반·공연",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "위버스",
+      "cell": "question"
+     }
+    ],
+    "target": "위버스",
+    "before": "question",
+    "after": "star",
+    "why": "아티스트 팬덤을 플랫폼으로 묶었다",
+    "q_to_star": true,
+    "funders": [
+     "음반·공연"
+    ]
+   },
    "hyps": [
     {
      "text": "SNS 계정 운영 강화",
@@ -85519,6 +86721,7 @@
     "why": "게이머에게 정식 배틀로얄",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "국내형 RPG 개발",
@@ -85856,6 +87059,24 @@
     "why": "메신저 이용자에게 유료 이모티콘",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "카카오톡",
+      "cell": "star"
+     },
+     {
+      "name": "이모티콘",
+      "cell": "question"
+     }
+    ],
+    "target": "이모티콘",
+    "before": "question",
+    "after": "cash_cow",
+    "why": "무료 메신저의 첫 수익원이 됐다",
+    "q_to_star": false,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "메신저 유료화",
@@ -86187,6 +87408,7 @@
     "why": "이메일을 일반인에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "기업용 메일 서버 판매",
@@ -86502,6 +87724,7 @@
     "why": "기존 이용자에게 모바일(실패: 늦음)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "PC 기능 고도화",
@@ -86804,6 +88027,7 @@
     "why": "10대 커뮤니티에 커머스",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "패션 잡지 콘텐츠",
@@ -87111,6 +88335,7 @@
     "why": "생활 서비스 고객에게 견적 매칭",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "전문가 목록 사이트",
@@ -87422,6 +88647,7 @@
     "why": "자유여행자에게 현지 투어 마켓",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "여행사 패키지",
@@ -87738,6 +88964,7 @@
     "why": "영화 고르는 사람에게 예측 별점",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "전문가 리뷰",
@@ -88048,6 +89275,7 @@
     "why": "수집가에게 취미 장터",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "일반 중고 앱 기능 추가",
@@ -88398,6 +89626,26 @@
     "why": "사무직에게 붙였다 떼는 메모",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "테이프·연마재",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "포스트잇",
+      "cell": "question"
+     }
+    ],
+    "target": "포스트잇",
+    "before": "question",
+    "after": "star",
+    "why": "실패한 접착제가 새 문구 카테고리를 만들었다",
+    "q_to_star": true,
+    "funders": [
+     "테이프·연마재"
+    ]
+   },
    "hyps": [
     {
      "text": "접착력을 높이는 연구 계속",
@@ -88729,6 +89977,26 @@
     "why": "같은 약을 새 적응증 환자에게",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "심혈관 의약품",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "협심증 후보 물질",
+      "cell": "dog"
+     }
+    ],
+    "target": "협심증 후보 물질",
+    "before": "dog",
+    "after": "star",
+    "why": "실패한 후보를 다른 적응증으로 바꿔 대형 제품이 됐다",
+    "q_to_star": false,
+    "funders": [
+     "심혈관 의약품"
+    ]
+   },
    "hyps": [
     {
      "text": "협심증 연구 계속",
@@ -89043,6 +90311,7 @@
     "why": "벽지 세정제를 아이 놀이로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "세정제 가격 인하",
@@ -89356,6 +90625,7 @@
     "why": "벽지 소재를 포장재로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "벽지 디자인 개선",
@@ -89651,6 +90921,7 @@
     "why": "할인 고객에게 지역 딜(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "지역 가게를 위한 신규 고객 유치",
@@ -89977,6 +91248,7 @@
     "why": "장보기 고객에게 대형 자동화 배송(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "인터넷 식료품 주문",
@@ -90300,6 +91572,7 @@
     "why": "반려인에게 온라인 판매(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대규모 광고",
@@ -90591,6 +91864,7 @@
     "why": "창작자에게 6초 영상(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "짧은 영상 형식",
@@ -90889,6 +92163,7 @@
     "why": "학생에게 익명 게시판(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "익명으로 솔직하게",
@@ -91195,6 +92470,7 @@
     "why": "디자인 고객에게 플래시 세일(실패)",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "디자인 상품 큐레이션",
@@ -91491,6 +92767,7 @@
     "why": "여성에게 드레스 대여",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "할인 판매",
@@ -91801,6 +93078,7 @@
     "why": "안 입는 옷 가진 사람에게 위탁 판매",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "중고 거래 앱",
@@ -92112,6 +93390,7 @@
     "why": "맞벌이에게 밀키트",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "레시피 앱",
@@ -92464,6 +93743,7 @@
     "why": "명상을 잠 못 드는 사람에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "명상 앱 할인",
@@ -92778,6 +94058,7 @@
     "why": "아이디어 모으는 사람에게 보드",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "북마크 기능",
@@ -93089,6 +94370,7 @@
     "why": "관심사 토론자에게 서브레딧",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대형 포럼 사이트",
@@ -93404,6 +94686,7 @@
     "why": "기존 장터 이용자 신뢰(결제·물류)",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "해외 마켓플레이스 모델 그대로",
@@ -93716,6 +94999,7 @@
     "why": "해외 카드 사용자에게 다통화 계좌",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "환전소 비교",
@@ -94027,6 +95311,7 @@
     "why": "여성에게 얇은 보정 속옷",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "두꺼운 보정 속옷 개선",
@@ -94344,6 +95629,7 @@
     "why": "뷰티 블로그가 화장품 브랜드로",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "유명인 광고",
@@ -94657,6 +95943,7 @@
     "why": "신규 사용자 첫 달 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "푸시 알림 강화",
@@ -94953,6 +96240,7 @@
     "why": "무료 사용자 유료 전환",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "유료 할인",
@@ -95257,6 +96545,7 @@
     "why": "기존 장터 수요자 확보",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "학부모 대상 광고",
@@ -95552,6 +96841,7 @@
     "why": "기존 구독자 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "오리지널 작품 더 많이",
@@ -95848,6 +97138,7 @@
     "why": "꽃 고객에게 일상 구독",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "평일 할인",
@@ -96144,6 +97435,7 @@
     "why": "기존 가게 해지 방어",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "장기 약정 할인",
@@ -96458,6 +97750,7 @@
     "why": "배달 고객에게 다회용기",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "친환경 일회용기",
@@ -96781,6 +98074,7 @@
     "why": "사주 고객에게 웹툰형 사주",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "텍스트 풀이 가격을 낮춘다",
@@ -97145,6 +98439,7 @@
     "why": "사주를 가벼운 MZ에게 990원",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "첫 구매 할인 쿠폰",
@@ -97586,6 +98881,7 @@
     "why": "사주 고객에게 니치 주제",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "총운 리포트를 더 싸게 판다",
@@ -97959,6 +99255,7 @@
     "why": "무료 이용자를 공유로 유료 전환",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "모든 운세를 유료로",
@@ -98267,6 +99564,7 @@
     "why": "고민자에게 비대면 사람 상담",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "AI 풀이를 더 많이 생성한다",
@@ -98575,6 +99873,7 @@
     "why": "매일 이용자를 상담으로",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "상담료 할인",
@@ -98873,6 +100172,7 @@
     "why": "유료 고객 방어(정확도)",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "가격을 무료 AI 수준으로 내린다",
@@ -99180,6 +100480,7 @@
     "why": "기존 방문자 결제 완료",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "결제 단계 할인 쿠폰",
@@ -99486,6 +100787,7 @@
     "why": "기존 방문자 가입률",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "직원들이 가장 좋아한 영상을 건다",
@@ -99790,6 +101092,7 @@
     "why": "기존 방문자 전환",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "문장을 더 길고 자세하게",
@@ -100098,6 +101401,7 @@
     "why": "기존 회원 유지 방식 변경",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "해지 화면에 혜택을 한 번 더 안내",
@@ -100406,6 +101710,7 @@
     "why": "기존 방문자 전환 방식 변경",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "'지금 예약 시 할인' 문구",
@@ -100714,6 +102019,7 @@
     "why": "기존 구독자 유지 방식 변경",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "관행대로 유지한다",
@@ -101061,6 +102367,24 @@
     "cell": "product_dev",
     "why": "재회 고객에게 자미두수",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "일반 사주",
+      "cell": "dog"
+     },
+     {
+      "name": "재회 자미두수",
+      "cell": "question"
+     }
+    ],
+    "target": "재회 자미두수",
+    "before": "question",
+    "after": "star",
+    "why": "재회 하나에 깊게 들어가 대표 상품이 됐다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -101433,6 +102757,7 @@
     "why": "질문자에게 질문 단위 상담",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "상담을 30분 단위로 싸게 판다",
@@ -101802,6 +103127,26 @@
     "cell": "product_dev",
     "why": "기존 고객사에 해결당 과금 AI",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "고객 메신저",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "AI 상담원 핀",
+      "cell": "question"
+     }
+    ],
+    "target": "AI 상담원 핀",
+    "before": "question",
+    "after": "star",
+    "why": "해결 건당 과금 AI가 성장 동력이 됐다",
+    "q_to_star": true,
+    "funders": [
+     "고객 메신저"
+    ]
    },
    "hyps": [
     {
@@ -102175,6 +103520,7 @@
     "why": "기존 이용자에게 질문권",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "프리미엄 월 구독으로 상세 운세를 판다",
@@ -102551,6 +103897,7 @@
     "why": "신규 상담 고객 첫 전환",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "상담료를 낮춘다",
@@ -102917,6 +104264,7 @@
     "why": "기존 학습자 습관 유지",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "Max 가격을 낮춘다",
@@ -103269,6 +104617,7 @@
     "why": "검색 이용자에게 인용 답변",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "더 큰 모델로 정확도를 올린다",
@@ -103622,6 +104971,24 @@
     "cell": "product_dev",
     "why": "학생에게 AI 학습 도움(실패: 늦음)",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "교재 대여",
+      "cell": "dog"
+     },
+     {
+      "name": "숙제 답 구독",
+      "cell": "cash_cow"
+     }
+    ],
+    "target": "숙제 답 구독",
+    "before": "cash_cow",
+    "after": "dog",
+    "why": "생성형 AI가 대체하며 현금원이 무너졌다",
+    "q_to_star": false,
+    "funders": []
    },
    "hyps": [
     {
@@ -103984,6 +105351,7 @@
     "why": "기존 승객 안내 방식",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "챗봇 화면에 '정확하지 않을 수 있음' 문구를 단다",
@@ -104322,6 +105690,7 @@
     "why": "기존 상담 이용자 안내 방식",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "답변 규칙을 조금 손본다",
@@ -104680,6 +106049,30 @@
     "why": "검색 이용자에게 1:1 상담",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "검색 광고",
+      "cell": "cash_cow"
+     },
+     {
+      "name": "지식인",
+      "cell": "dog"
+     },
+     {
+      "name": "엑스퍼트",
+      "cell": "question"
+     }
+    ],
+    "target": "엑스퍼트",
+    "before": "question",
+    "after": "star",
+    "why": "정체된 지식인 트래픽을 1:1 유료 상담으로 연결했다",
+    "q_to_star": true,
+    "funders": [
+     "검색 광고"
+    ]
+   },
    "hyps": [
     {
      "text": "운세 콘텐츠를 더 많이 노출한다",
@@ -105032,6 +106425,7 @@
     "why": "운세 이용자에게 대화형 운세",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "하트 가격을 올린다",
@@ -105400,6 +106794,7 @@
     "why": "이용자에게 AI 친구",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "약관에 학습 활용 문구를 넣는다",
@@ -105753,6 +107148,24 @@
     "cell": "product_dev",
     "why": "청소년에게 안전한 캐릭터챗",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "이루다",
+      "cell": "dog"
+     },
+     {
+      "name": "제타",
+      "cell": "question"
+     }
+    ],
+    "target": "제타",
+    "before": "question",
+    "after": "star",
+    "why": "이루다 사태 뒤 다시 만든 캐릭터챗이 1위권이 됐다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -106117,6 +107530,7 @@
     "why": "BL 팬에게 특화 캐릭터챗",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "일반 로맨스로 선발주자와 경쟁한다",
@@ -106482,6 +107896,7 @@
     "why": "캐릭터챗 이용자에게 장면형 답",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "재화 가격을 깎는다",
@@ -106857,6 +108272,7 @@
     "why": "이용자에게 무료 무제한 캐릭터챗",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "대화 횟수를 제한하고 유료로 푼다",
@@ -107232,6 +108648,7 @@
     "why": "서브컬처 팬에게 종량형 캐릭터챗",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "범용 AI 구독을 판다",
@@ -107597,6 +109014,24 @@
     "cell": "market_dev",
     "why": "같은 엔진을 일본·북미로",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "크랙 한국",
+      "cell": "star"
+     },
+     {
+      "name": "크랙 해외",
+      "cell": "question"
+     }
+    ],
+    "target": "크랙 해외",
+    "before": "question",
+    "after": "question",
+    "why": "해외 성장은 빠르지만 점유는 아직 작다",
+    "q_to_star": false,
+    "funders": []
    },
    "hyps": [
     {
@@ -107968,6 +109403,24 @@
     "why": "웹툰 팬에게 공식 캐릭터챗",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "웹툰",
+      "cell": "star"
+     },
+     {
+      "name": "캐릭터챗",
+      "cell": "question"
+     }
+    ],
+    "target": "캐릭터챗",
+    "before": "question",
+    "after": "question",
+    "why": "원작 IP로 유입은 만들었지만 시장 점유는 아직 작다",
+    "q_to_star": false,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "이용자 제작 캐릭터를 무제한 허용한다",
@@ -108323,6 +109776,7 @@
     "why": "기존 이용자 이벤트 방식 변경",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "재화 할인 이벤트를 자주 한다",
@@ -108684,6 +110138,7 @@
     "why": "각자 기존 이용자에 맞춘 수익 모델",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "이용 시간을 늘리는 데 집중한다",
@@ -109066,6 +110521,7 @@
     "why": "기존 이용자 유료 전환",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "무료 대화 횟수를 줄이고 횟수를 판다",
@@ -109436,6 +110892,24 @@
     "cell": "penetration",
     "why": "돈 내는 기존 팬 집중",
     "focus": false
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "뤼튼 AI 어시스턴트",
+      "cell": "question"
+     },
+     {
+      "name": "크랙",
+      "cell": "question"
+     }
+    ],
+    "target": "크랙",
+    "before": "question",
+    "after": "star",
+    "why": "앱을 분리해 캐릭터챗 매출에 집중했다",
+    "q_to_star": true,
+    "funders": []
    },
    "hyps": [
     {
@@ -109809,6 +111283,7 @@
     "why": "기존 플랫폼 공급 확대",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "회사가 오리지널 콘텐츠를 더 만든다",
@@ -110190,6 +111665,7 @@
     "why": "기존 이용자에게 기억 기능",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "맥락 창을 늘린다",
@@ -110561,6 +112037,7 @@
     "why": "기존 청소년 이용 방식 변경",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "약관에 연령 제한을 적는다",
@@ -110947,6 +112424,7 @@
     "why": "같은 엔진을 북미 애니 팬에게",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "Character.AI와 같은 '동반자 채팅'으로 경쟁한다",
@@ -111337,6 +112815,24 @@
     "why": "기존 사업 원가 구조",
     "focus": false
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "뤼튼 AI 어시스턴트",
+      "cell": "dog"
+     },
+     {
+      "name": "크랙",
+      "cell": "star"
+     }
+    ],
+    "target": "크랙",
+    "before": "star",
+    "after": "star",
+    "why": "매출은 크게 늘었지만 손실도 커져 계속 투자가 필요하다",
+    "q_to_star": false,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "가격을 올린다",
@@ -111713,6 +113209,7 @@
     "why": "같은 제품을 나라별 가격으로",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "큰 묶음일수록 크게 할인한다",
@@ -112110,6 +113607,7 @@
     "why": "같은 고객층 검색 유입",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "검색 광고 입찰가를 올린다",
@@ -112488,6 +113986,7 @@
     "why": "앱 사주가 오프라인 체험·굿즈로",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "온라인 광고를 늘린다",
@@ -112863,6 +114362,7 @@
     "why": "기존 고객 정확도 신뢰",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "해석 문장을 더 길고 그럴듯하게 만든다",
@@ -113227,6 +114727,7 @@
     "why": "기존 고객에게 캐릭터 해석자",
     "focus": true
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "실존 역술가를 모델로 섭외한다",
@@ -113598,6 +115099,24 @@
     "cell": "product_dev",
     "why": "성인 고객에게 금기 주제 사주",
     "focus": true
+   },
+   "bcg": {
+    "units": [
+     {
+      "name": "재회 자미두수",
+      "cell": "star"
+     },
+     {
+      "name": "29금 궁합",
+      "cell": "question"
+     }
+    ],
+    "target": "29금 궁합",
+    "before": "question",
+    "after": "question",
+    "why": "니치 수요는 있지만 확장성 검증 중",
+    "q_to_star": false,
+    "funders": []
    },
    "hyps": [
     {
@@ -113975,6 +115494,32 @@
     "why": "다양한 고민 수요에 새 주제",
     "focus": true
    },
+   "bcg": {
+    "units": [
+     {
+      "name": "일반 사주",
+      "cell": "dog"
+     },
+     {
+      "name": "재회 자미두수",
+      "cell": "question"
+     },
+     {
+      "name": "29금 궁합",
+      "cell": "question"
+     },
+     {
+      "name": "오프라인 팝업",
+      "cell": "question"
+     }
+    ],
+    "target": "재회 자미두수",
+    "before": "question",
+    "after": "star",
+    "why": "수요가 몰린 니치로 피벗해 월 매출을 키웠다",
+    "q_to_star": true,
+    "funders": []
+   },
    "hyps": [
     {
      "text": "대규모 투자를 받아 광고를 늘린다",
@@ -114348,6 +115893,7 @@
     "why": "기존 이용자 화면 설계",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "한 가지 화면 톤으로 모든 사용자를 받는다",
@@ -114707,6 +116253,7 @@
     "why": "기존 결제 화면 개선",
     "focus": false
    },
+   "bcg": null,
    "hyps": [
     {
      "text": "가짜 카운트다운·한정 할인으로 결제를 서두르게 한다",

@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'ansoff', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'analysis_full', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'ansoff', 'bcg', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'analysis_full', 'lesson']
 
 
 def fail(msg):
@@ -610,6 +610,30 @@ def main():
         if byid[p[0]].get('ansoff'):
             fail(f'ansoff.txt:{n} {p[0]} 중복')
         byid[p[0]]['ansoff'] = {'cell': ANS[p[1]], 'why': p[2], 'focus': ANS[p[1]] in ('product_dev', 'market_dev')}
+    # BCG: 제품·사업이 여러 개인 회사만. 나머지는 None(단일 제품)
+    BCG = {'스타': 'star', '캐시카우': 'cash_cow', '물음표': 'question', '개': 'dog', '철수': 'exit'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/bcg.txt')):
+        p = [x.strip() for x in line.split('|')]
+        mv = [x.strip() for x in p[3].split('→')] if len(p) == 5 else []
+        if len(p) != 5 or p[0] not in byid or len(mv) != 2 or mv[0] not in BCG or mv[0] == '철수' or mv[1] not in BCG or not p[4]:
+            fail(f'bcg.txt:{n} 형식(id | 사업=칸, ... | 대상 사업 | 전 → 후 | 이유): {line[:60]}')
+        units = []
+        for u in p[1].split(','):
+            if '=' not in u or u.split('=')[1].strip() not in BCG or u.split('=')[1].strip() == '철수':
+                fail(f'bcg.txt:{n} 사업=칸 형식: {u}')
+            units.append({'name': u.split('=')[0].strip(), 'cell': BCG[u.split('=')[1].strip()]})
+        if len(units) < 2:
+            fail(f'bcg.txt:{n} {p[0]} 사업이 2개 이상일 때만 쓴다')
+        tu = [u for u in units if u['name'] == p[2]]
+        if not tu or tu[0]['cell'] != BCG[mv[0]]:
+            fail(f'bcg.txt:{n} 대상 사업이 포트폴리오에 없거나 전 칸이 다름: {p[2]}')
+        if byid[p[0]].get('bcg'):
+            fail(f'bcg.txt:{n} {p[0]} 중복')
+        byid[p[0]]['bcg'] = {'units': units, 'target': p[2], 'before': BCG[mv[0]], 'after': BCG[mv[1]], 'why': p[4],
+                             'q_to_star': BCG[mv[0]] == 'question' and BCG[mv[1]] == 'star',
+                             'funders': [u['name'] for u in units if u['cell'] == 'cash_cow' and u['name'] != p[2]]}
+    for c in cases:
+        c.setdefault('bcg', None)
     for c in cases:
         if not c.get('ansoff'):
             fail(f"{c['id']}: 앤소프 없음 (db/meta/ansoff.txt)")

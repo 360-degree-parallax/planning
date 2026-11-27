@@ -278,6 +278,10 @@ deep이 아닌 사례에 분석 칸 15개를 한 덩어리로 쓴다. `@ id`로 
 `db/meta/three-c-overlap.txt`, 전 사례 필수. 형식: `id | A ; B ; C ; D ; E ; F ; G ; H || 진입 | 이유`.
 A 고객만, B 고객∩경쟁, C 고객∩자사, D 셋 다, E 경쟁∩자사, F 경쟁만, G 자사만, H 밖. 진입은 A·B·C·D·H 중 쉼표로 여럿. 목적은 우리 상황에 맞는 시장 찾기.
 
+## bcg (BCG 매트릭스, 제품이 여러 개인 회사만)
+
+`db/meta/bcg.txt`, 선택. 형식: `id | 사업=칸, 사업=칸, ... | 대상 사업 | 전 → 후 | 이유`. 칸: 스타(star)·캐시카우(cash_cow)·물음표(question)·개(dog), 후에만 철수(exit). 포트폴리오는 해결 당시 상태, 사업 2개 이상이어야 하고 대상 사업의 칸이 '전'과 같아야 한다. JSON: `units[{name, cell}]`, `target`, `before`, `after`, `why`, `q_to_star`(물음표→스타, 빌드 때 계산), `funders`(대상 외 캐시카우 이름들). 단일 제품 사례는 `null`.
+
 ## ansoff (앤소프 매트릭스)
 
 `db/meta/ansoff.txt`, 전 사례 필수. 형식: `id | 침투·신제품·개척·다각화 | 이유`. JSON 값: penetration(시장침투), product_dev(신제품개발), market_dev(시장개척), diversify(다각화). 기준은 해결 전 그 회사(스타트업이면 업계)의 기존 제품·고객. `focus`: 신제품개발·시장개척이면 true(집중 전략), 빌드 때 계산. 다각화는 어렵지만 최종 목표로 본다.

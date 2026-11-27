@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>기획 공부 — 사례 DB</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="db">
+<header class="gnb">
+  <a class="wordmark" href="index.html" data-go="theory">기획 공부<span>본질 파악 방법론 · 사례 DB</span></a>
+  <div class="right">
+    <a class="btn" href="index.html" data-go="theory">이론 공부</a>
+    <button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
+  </div>
+</header>
+<nav class="topnav" aria-label="보기">
+  <a href="index.html" data-go="theory"><b>1</b>이론 공부</a>
+  <a href="db.html" data-go="db" aria-current="page"><b>2</b>사례 DB</a>
+</nav>
+<div class="wrap" style="max-width:1600px">
+  <h1>사례 DB</h1>
+  <p class="desc" id="dbdesc">사례를 불러오는 중…</p>
+  <div class="dbtabs" id="dbtabs"></div>
+  <div class="dbfilter" id="dbfilter">
+    <input type="search" id="q" placeholder="제목·문제·해결·So what 검색" aria-label="검색">
+    <select id="fkind" aria-label="종류"><option value="">종류 전체</option><option value="real">실제</option><option value="failure">실패</option><option value="practice">연습</option></select>
+    <select id="fdepth" aria-label="깊이"><option value="">깊이 전체</option><option value="deep">핵심(전 단계)</option><option value="tagged">일반</option></select>
+    <select id="fentry" aria-label="3C 진입 칸"><option value="">3C 진입 전체</option><option value="A">진입 A 고객만</option><option value="B">진입 B 고객∩경쟁</option><option value="C">진입 C 고객∩자사</option><option value="D">진입 D 셋 다</option><option value="H">진입 H 밖</option></select>
+    <select id="fansoff" aria-label="앤소프"><option value="">앤소프 전체</option><option value="focus">집중 전략(신제품·개척)</option><option value="penetration">시장침투</option><option value="product_dev">신제품개발</option><option value="market_dev">시장개척</option><option value="diversify">다각화</option></select>
+    <select id="fbcg" aria-label="BCG"><option value="">BCG 전체</option><option value="has">제품 여러 개(BCG 있음)</option><option value="q2s">유망주 → 스타</option><option value="exit">철수·실패</option></select>
+    <select id="fwny" aria-label="생존 판정"><option value="">생존 판정 전체</option><option value="blindspot">통념의 맹점</option><option value="timing">타이밍</option></select>
+    <select id="fmode" aria-label="의도 방향"><option value="">의도 방향 전체</option><option value="raise">올리기</option><option value="hold">지키기</option></select>
+    <button class="btn sm" id="freset">초기화</button>
+  </div>
+  <div class="dbgrid">
+    <div><p class="status" id="cnt" style="margin:0 0 8px"></p><div class="dblist" id="list"></div></div>
+    <aside class="dbside idle" id="side" aria-live="polite"><p class="empty">사례를 누르면 방법론 순서대로 자세히 보여요</p></aside>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="shared.js"></script>
+<script src="db-page.js"></script>
+</body>
+</html>

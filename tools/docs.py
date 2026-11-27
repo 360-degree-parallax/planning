@@ -138,6 +138,10 @@ for g, items in groups.items():
         if c.get('ansoff'):
             AN = {'penetration': '시장침투(기존 제품·기존 시장)', 'product_dev': '신제품개발(신제품·기존 시장)', 'market_dev': '시장개척(기존 제품·신시장)', 'diversify': '다각화(신제품·신시장, 최종 목표)'}
             L.append(f"- **앤소프**: {AN[c['ansoff']['cell']]}{' **[집중 전략]**' if c['ansoff']['focus'] else ''} — {c['ansoff']['why']}")
+            if c.get('bcg'):
+                B = {'star': '스타', 'cash_cow': '캐시카우', 'question': '물음표', 'dog': '개', 'exit': '철수'}
+                b = c['bcg']
+                L.append(f"- **BCG**: {', '.join(u['name'] + '=' + B[u['cell']] for u in b['units'])} → {b['target']} {B[b['before']]} → {B[b['after']]}{' **[유망주→스타]**' if b['q_to_star'] else ''} — {b['why']}")
         L.append(f"- **가설 {sw['hyp']}**: {h['text']}")
         L.append(f"- **의심 (Why not yet)**: {sw['why_not_yet']}")
         for k, st in enumerate(sw['steps'], 1):
