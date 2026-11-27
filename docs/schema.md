@@ -280,4 +280,4 @@ A 고객만, B 고객∩경쟁, C 고객∩자사, D 셋 다, E 경쟁∩자사,
 
 ## ansoff (앤소프 매트릭스)
 
-`db/meta/ansoff.txt`, 전 사례 필수. 형식: `id | 침투·신제품·개척·다각화 | 이유`. JSON 값: penetration(시장침투), product_dev(신제품개발), market_dev(시장개척), diversify(다각화). 기준은 해결 전 그 회사(스타트업이면 업계)의 기존 제품·고객. `focus`: 신제품개발·시장개척이면 true(집중 전략), 빌드 때 계산.
+`db/meta/ansoff.txt`, 전 사례 필수. 형식: `id | 침투·신제품·개척·다각화 | 이유`. JSON 값: penetration(시장침투), product_dev(신제품개발), market_dev(시장개척), diversify(다각화). 기준은 해결 전 그 회사(스타트업이면 업계)의 기존 제품·고객. `focus`: 신제품개발·시장개척이면 true(집중 전략), 빌드 때 계산. 다각화는 어렵지만 최종 목표로 본다.
