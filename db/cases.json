@@ -4637,11 +4637,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "고객",
-    "says": "조립이 너무 힘들다",
+    "who": "소비자 조사",
+    "says": "10명 중 8명이 가구 조립 중 파트너와 다퉜다",
     "reveals": "조립 부담이 이탈 원인이다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.yorkshirepost.co.uk/read-this/new-study-reveals-ikeas-most-stressful-items-to-assemble-from-ranges-including-brimnes-hemnes-and-pax-4041615",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "낮은 가격 대 좋은 디자인",
@@ -6418,18 +6418,18 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "고객",
-    "says": "아침에 문 앞에 와 있다",
-    "reveals": "시점 맞춤이 프리미엄이다",
-    "source": null,
-    "inferred": true
+    "who": "컬리",
+    "says": "가입 고객 재구매율이 61.2%로 업계 평균을 크게 넘는다",
+    "reveals": "시점 맞춤이 재주문을 만든다",
+    "source": "https://biz.newdaily.co.kr/site/data/html/2020/04/08/2020040800067.amp.html",
+    "inferred": false
    },
    "anti_opinion": {
-    "who": "투자자",
-    "says": "적자가 계속된다",
+    "who": "언론",
+    "says": "운영할수록 적자, 누적 적자 2조원 규모",
     "reveals": "물류 투자 회수가 과제다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.newsis.com/view/NISX20230530_0002321233",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "신선도 대 배송 비용",
@@ -6703,11 +6703,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "택배 노동자",
-    "says": "노동 강도가 너무 높다",
+    "who": "택배노조",
+    "says": "쿠팡 택배노동자가 하루 평균 11.1시간에 388건을 배송한다",
     "reveals": "속도의 비용이 노동에 쌓인다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.khan.co.kr/article/202510211715001/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "빠른 배송 약속 대 자산 부담",
@@ -9147,10 +9147,10 @@
     "why": "놀람이 이탈의 원인이다"
    },
    "pareto": {
-    "vital_few": "결제 직전 배송비 노출",
-    "effect": "장바구니 이탈의 대부분",
-    "source": null,
-    "inferred": true,
+    "vital_few": "추가 비용(배송비·세금·수수료)",
+    "effect": "장바구니 이탈 사유 1위(구경만 제외 시 40%)",
+    "source": "https://baymard.com/blog/cart-abandonment-rate",
+    "inferred": false,
     "matrix": [
      {
       "branch": "할인",
@@ -10016,11 +10016,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "판매자",
-    "says": "수수료가 높고 아마존이 경쟁한다",
+    "who": "Marketplace Pulse",
+    "says": "수수료·물류·광고로 판매자 매출의 50% 이상을 가져간다",
     "reveals": "플랫폼과 판매자의 이해충돌",
-    "source": null,
-    "inferred": true
+    "source": "https://www.marketplacepulse.com/articles/amazon-takes-a-50-cut-of-sellers-revenue",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "구색 확대 대 재고 투자",
@@ -12273,11 +12273,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "환경 단체",
-    "says": "옷을 너무 많이 만들고 버린다",
+    "who": "패스트패션 저술가(엘리자베스 클라인)",
+    "says": "주 500개 신상품을 내는 모델은 지속가능성과 본질적으로 맞지 않는다",
     "reveals": "패스트패션의 환경 비용",
-    "source": null,
-    "inferred": true
+    "source": "https://www.npr.org/2019/07/27/745418569/can-fast-fashion-and-sustainability-be-stitched-together",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "낮은 생산 단가 대 빠른 반응",
@@ -12549,11 +12549,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "규제 기관·환경 단체",
-    "says": "노동과 환경 문제가 심각하다",
+    "who": "미국 의회",
+    "says": "신장 강제노동 면화를 쓰고 수입 규제를 피한다는 보고서",
     "reveals": "저가의 사회적 비용",
-    "source": null,
-    "inferred": true
+    "source": "https://www.npr.org/2023/06/30/1184974003/shein-influencers-china-factory-trip-backlash",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "다양한 신상품 대 재고 위험",
@@ -12829,10 +12829,10 @@
    },
    "anti_opinion": {
     "who": "고객",
-    "says": "마음에 안 드는 옷만 왔다",
+    "says": "스타일 메모를 여러 번 무시한 옷이 와서 해지했다",
     "reveals": "적중률이 낮으면 해지한다",
-    "source": null,
-    "inferred": true
+    "source": "https://uk.trustpilot.com/review/stitchfix.co.uk?page=4",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "선택지 대 고르는 피로",
@@ -13098,11 +13098,11 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "반려인",
-    "says": "우리 아이 생일에 카드를 받았다",
+    "who": "고객",
+    "says": "그린 적도 없는 고양이 초상화가 선물로 와서 집에 걸었다",
     "reveals": "감정 응대가 충성도다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.spokesman.com/stories/2021/jan/01/chewy-sends-pet-paintings-to-keep-customers-from-s/",
+    "inferred": false
    },
    "anti_opinion": {
     "who": "투자자",
@@ -13383,10 +13383,10 @@
    },
    "anti_opinion": {
     "who": "쇼퍼",
-    "says": "수입이 불안정하다",
+    "says": "2017년 이후 수입이 70% 줄었다며 전국 파업에 나섰다",
     "reveals": "긱 노동의 보상 문제",
-    "source": null,
-    "inferred": true
+    "source": "https://www.vice.com/en/article/instacart-shoppers-will-stage-nationwide-strike/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "빠른 식료품 배송 대 창고 투자",
@@ -13943,11 +13943,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "소비자",
-    "says": "품질이 떨어진다",
+    "who": "중국 시장감독총국·소비자",
+    "says": "상장 직후 가품 판매 조사, 1천만 개 넘는 상품을 내렸다",
     "reveals": "초저가의 품질 의심",
-    "source": null,
-    "inferred": true
+    "source": "https://www.caixinglobal.com/2018-08-02/pinduoduo-tumbles-below-ipo-price-amid-fake-goods-probe-101310762.html",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "초저가 대 유입 비용",
@@ -15080,18 +15080,18 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "구매자",
-    "says": "검수 통과라 믿고 산다",
+    "who": "브랜드 본사",
+    "says": "크림의 가품 판정이 맞다고 확인했다(무신사 에센셜 논란)",
     "reveals": "검수가 신뢰다",
-    "source": null,
-    "inferred": true
+    "source": "https://wowtale.net/2022/04/01/37173/",
+    "inferred": false
    },
    "anti_opinion": {
     "who": "구매자",
-    "says": "검수에서 놓친 가품이 왔다",
+    "says": "수백만원 운동화를 샀는데 가품이 왔다",
     "reveals": "검수 정확도가 생명이다",
-    "source": null,
-    "inferred": true
+    "source": "https://news.tf.co.kr/read/economy/2225517.htm",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "개인 간 거래 편의 대 진품 신뢰",
@@ -15669,17 +15669,17 @@
    },
    "pro_opinion": {
     "who": "고객",
-    "says": "신기 편하고 단순하다",
+    "says": "구름 위를 걷는 듯 편해 여러 켤레를 샀다",
     "reveals": "편안함이 이유다",
-    "source": null,
-    "inferred": true
+    "source": "https://uk.trustpilot.com/review/allbirds.com?page=4",
+    "inferred": false
    },
    "anti_opinion": {
-    "who": "고객",
-    "says": "금방 닳는다",
+    "who": "스타트업 대표",
+    "says": "울 러너를 4~6주마다 새로 산다, 안감이 빨리 닳는다",
     "reveals": "내구성이 약점이다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.yahoo.com/tech/allbirdss-wool-runners-have-a-wear-and-tear-problem-185839595.html",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "편안함 대 친환경·단순함",
@@ -15952,18 +15952,18 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "여행자",
-    "says": "공항에서 휴대폰을 충전했다",
-    "reveals": "실제 불편 해결이 차별이다",
-    "source": null,
-    "inferred": true
+    "who": "창업자(스테프 코리)",
+    "says": "배터리 금지 후 규정에 맞는 선택지로 보여 매출이 늘었다",
+    "reveals": "분리형 배터리가 차별이 됐다",
+    "source": "https://www.afar.com/magazine/with-an-airline-ban-at-hand-whats-next-for-smart-luggage",
+    "inferred": false
    },
    "anti_opinion": {
-    "who": "항공 규정",
-    "says": "배터리 일체형은 문제가 된다",
-    "reveals": "규제 확인이 필요하다",
-    "source": null,
-    "inferred": true
+    "who": "고객",
+    "says": "항공사 직원이 규정을 몰라 배터리 든 기내 가방을 막았다(수백 건 문의)",
+    "reveals": "규제는 현장 혼선까지 관리해야 한다",
+    "source": "https://tech.co/news/smart-bags-airplanes-anymore-2018-06",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "품질 대 가격",
@@ -18512,11 +18512,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "지역 상인",
-    "says": "동네 가게가 망한다",
+    "who": "경제학자(케네스 스톤)",
+    "says": "같은 품목 경쟁 가게와 인근 소도시 소매 매출이 줄었다",
     "reveals": "지역 경제 비판",
-    "source": null,
-    "inferred": true
+    "source": "https://www.thegazette.com/?p=120954",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "작은 시장 대 매출",
@@ -59473,11 +59473,11 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "젊은 고객",
-    "says": "내 맘대로 꾸민다",
-    "reveals": "개성 표현이 이유다",
-    "source": null,
-    "inferred": true
+    "who": "크록스",
+    "says": "꾸미는 고객의 생애 가치가 그렇지 않은 고객의 두 배다",
+    "reveals": "개성 표현이 반복 매출이다",
+    "source": "https://www.viralnation.com/blog/decoded-crocs",
+    "inferred": false
    },
    "anti_opinion": {
     "who": "패션 비평가",
@@ -59527,9 +59527,9 @@
    },
    "pareto": {
     "vital_few": "지비츠 장식",
-    "effect": "반복 매출의 상당 부분",
-    "source": null,
-    "inferred": true,
+    "effect": "2024년 매출 약 8%(2억 7천만 달러 이상)",
+    "source": "https://www.modernretail.co/marketing/shoe-tattoos-and-ballet-ribbons-why-crocs-is-embracing-more-elevated-accessories/",
+    "inferred": false,
     "matrix": [
      {
       "branch": "디자인 개선",
@@ -59772,11 +59772,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "고객",
-    "says": "너무 비싸다",
-    "reveals": "가격 저항",
-    "source": null,
-    "inferred": true
+    "who": "고객·언론",
+    "says": "비치는 바지 리콜(여성 바지 17%) 뒤 창업자가 일부 여성의 몸이 안 맞는다고 해 반발",
+    "reveals": "커뮤니티 신뢰는 품질과 말 한마디로 깨진다",
+    "source": "https://www.npr.org/sections/thetwo-way/2013/11/07/243706174/lululemon-founder-our-pants-wont-work-for-some-women",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "운동 기능 대 일상 스타일",
@@ -76607,11 +76607,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "고객",
-    "says": "연체료가 화났다",
+    "who": "고객(넷플릭스 창업자 헤이스팅스)",
+    "says": "40달러 연체료가 싫어 넷플릭스를 만들었다고 말했다",
     "reveals": "수익원이 불만원이었다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.businessinsider.in/slideshows/miscellaneous/the-rise-and-fall-of-blockbuster/slidelist/73310925.cms",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "연체료 수익 대 고객 만족",
@@ -76654,9 +76654,9 @@
    },
    "pareto": {
     "vital_few": "연체료",
-    "effect": "고객 이탈 원인의 대부분",
-    "source": null,
-    "inferred": true,
+    "effect": "2000년 매출의 16%(8억 달러)",
+    "source": "https://www.mentalfloss.com/article/75171/15-fast-forward-facts-about-blockbuster-video",
+    "inferred": false,
     "matrix": [
      {
       "branch": "매장",
@@ -84189,10 +84189,10 @@
    },
    "anti_opinion": {
     "who": "가게 사장",
-    "says": "손님은 왔는데 손해만 봤다",
+    "says": "딜을 돌린 가게 26.6%가 손해, 17.9%가 본전이었다",
     "reveals": "공급자 이익이 지속 조건이다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.eurekalert.org/news-releases/575826",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "대폭 할인 대 가게 이익",
@@ -84234,10 +84234,10 @@
     "why": "가게가 손해 보면 떠난다"
    },
    "pareto": {
-    "vital_few": "가게 재참여",
-    "effect": "공급 유지의 대부분",
-    "source": null,
-    "inferred": true,
+    "vital_few": "손해·본전 가게(44.5%)",
+    "effect": "재참여 거부의 대부분",
+    "source": "https://www.eurekalert.org/news-releases/575826",
+    "inferred": false,
     "matrix": [
      {
       "branch": "할인 폭",
@@ -84799,11 +84799,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "투자자",
-    "says": "주문마다 손해다",
+    "who": "Slate",
+    "says": "760만 달러어치를 팔려고 1250만 달러어치를 샀고 배송비와 할인으로 손실",
     "reveals": "단위 경제가 먼저다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.slate.com/id/1005448",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "낮은 가격 대 배송비",
@@ -84845,10 +84845,10 @@
     "why": "단가 대비 배송비가 문제였다"
    },
    "pareto": {
-    "vital_few": "무거운 저가 상품 배송비",
+    "vital_few": "원가 이하 판매 + 무거운 상품 배송비",
     "effect": "손실의 대부분",
-    "source": null,
-    "inferred": true,
+    "source": "https://www.slate.com/id/1005448",
+    "inferred": false,
     "matrix": [
      {
       "branch": "광고",
@@ -85637,11 +85637,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "투자자",
-    "says": "비용이 매출보다 빨리 늘었다",
+    "who": "창업자(제이슨 골드버그)",
+    "says": "3억 3600만 달러 중 2억 달러를 태웠고 지속 모델이 없었다",
     "reveals": "확장 전 검증 필요",
-    "source": null,
-    "inferred": true
+    "source": "https://thehustle.co/how-one-of-the-worlds-fastest-growing-startups-burned-through-300m",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "빠른 성장 대 단위 경제",
@@ -85683,10 +85683,10 @@
     "why": "비용이 매출보다 빨랐다"
    },
    "pareto": {
-    "vital_few": "고객 획득 비용",
-    "effect": "손실의 대부분",
-    "source": null,
-    "inferred": true,
+    "vital_few": "마케팅·해외 확장 비용",
+    "effect": "손실의 대부분(2012년 마케팅 4천만 달러)",
+    "source": "https://fortune.com/2015/01/22/fab-billion-dollar-valuation/",
+    "inferred": false,
     "matrix": [
      {
       "branch": "고객 획득",
@@ -85931,10 +85931,10 @@
    },
    "anti_opinion": {
     "who": "고객",
-    "says": "원하는 사이즈가 없었다",
-    "reveals": "재고 관리가 과제다",
-    "source": null,
-    "inferred": true
+    "says": "행사용 드레스가 끝내 오지 않았다(2019 물류 장애, 신규 가입 중단)",
+    "reveals": "재고·물류가 약속을 지켜야 한다",
+    "source": "https://www.businessoffashion.com/articles/technology/rent-the-runway-marv-cunningham-supply-chain",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "고급 옷 대 낮은 비용",
@@ -86219,10 +86219,10 @@
    },
    "anti_opinion": {
     "who": "판매자",
-    "says": "받은 돈이 너무 적다",
-    "reveals": "보상 수준이 과제다",
-    "source": null,
-    "inferred": true
+    "says": "8개월 만에 봉투를 처리하고 전부 1달러 수준을 줬다",
+    "reveals": "보상 수준과 처리 속도가 과제다",
+    "source": "https://www.modernretail.co/operations/thredups-long-processing-times-are-alienating-some-sellers/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "판매 편의 대 판매자 수익",
@@ -88595,11 +88595,11 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "고객",
-    "says": "내가 원한 제품이 나왔다",
+    "who": "글로시에",
+    "says": "블로그 댓글 약 400개를 모아 40번 넘게 시제품을 만들어 클렌저를 냈다",
     "reveals": "참여가 충성도다",
-    "source": null,
-    "inferred": true
+    "source": "https://digiday.com/brands/glossier-instagram-born-beauty-brand-launches-new-products/",
+    "inferred": false
    },
    "anti_opinion": {
     "who": "고객",
