@@ -98,3 +98,6 @@ tight-trust 2 | 8 7 7 | -30% | input_complete_rate | 명식 확인 단계가 이
 tight-ip 2 | 6 5 6 | +10% | answer_satisfaction | AI 해석가 표시 (ai-disclosure)
 tight-adult 4 | 5 5 8 | +10% | refund_rate | 성인 주제는 만들지 않음
 tight-growth 3 | 8 6 6 | +20% | refund_rate | 소재별 표본 수 확보 후 판정
+// 디자인·UX
+ux-explore-diagnose 2 | 7 6 7 | +10% | refund_rate | 진단형도 주의 항목 1개 + 해결 방향
+kr-dark-pattern 2 | 6 7 9 | +5% | refund_rate | 전환이 떨어져도 환불률·민원 감소로 판단

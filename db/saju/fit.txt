@@ -95,3 +95,5 @@ tight-trust | same | 명식이 틀리면 해석 전체를 믿지 않는다 | 계
 tight-ip | same | 해석자에게 얼굴과 말투를 주면 재방문 이유가 생긴다 | 1p 주인공 캐릭터가 있다=y ; AI 표시를 할 수 있다=y | 무당 캐릭터 대 길잡이 캐릭터 | transfer
 tight-adult | similar | 금기 주제는 광고 반응이 크지만 위험도 크다 | 성인 확인 절차가 있다=n | 성인 주제는 버리고 수위 낮은 니치만 옮김 | adapt
 tight-growth | same | 주제 × 소재 실험 속도가 레드오션 광고 효율을 가른다 | 소재를 대량으로 만들 수 있다=? ; 실험 기록 체계가 있다=y | 업종 같음 | transfer
+ux-explore-diagnose | same | 고민의 온도에 맞는 화면 문법이 결제를 가른다 | 유입 주제를 랜딩까지 넘길 수 있다=y ; 2p 템플릿을 두 개 만들 수 있다=y | 업종 같음 | transfer
+kr-dark-pattern | same | 결제 화면의 금지선과 투명성 | 국내 전자상거래 사업자다=y | 업종 같음 | transfer

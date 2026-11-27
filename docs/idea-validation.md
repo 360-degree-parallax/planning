@@ -1,4 +1,4 @@
-# 우리 아이디어 검증표 (deep 88개)
+# 우리 아이디어 검증표 (deep 90개)
 
 사례 → **적합성(Fit)**: 원 사례가 통한 이유가 우리에게도 있나 → **Why not yet**: 경쟁 사주 서비스는 왜 안 했나 → 실험.
 
@@ -17,6 +17,7 @@
 | `perplexity-cite` | 그대로 | 맹점 | 차별 | 0 | – |
 | `saju` | 그대로 | 타이밍 | 차별 | 2 | – |
 | `tight-trust` | 그대로 | 맹점 | 차별 | 0 | digital-withdrawal, dark-cancel-obstruction |
+| `ux-explore-diagnose` | 그대로 | 맹점 | 차별 | 0 | dark-nagging |
 | `webvan` | 그대로 | 맹점 | 차별 | 0 | digital-withdrawal |
 | `wrtn-pnl` | 그대로 | 맹점 | 차별 | 0 | – |
 | `amazon-prime` | 바꿔서 | 맹점 | 차별 | 2 | – |
@@ -84,6 +85,7 @@
 | `chat-gacha-risk` | 그대로 | 타이밍 | 위험 | 1 | probability-event |
 | `crack-teen` | 그대로 | 타이밍 | 위험 | 0 | minor-ai-usage, minor-cancel |
 | `iruda` | 그대로 | 불가능 | 위험 | 0 | birth-data-privacy |
+| `kr-dark-pattern` | 그대로 | 맹점 | 위험 | 0 | dark-sequential-price, dark-preselect, false-discount-scarcity, dark-cancel-obstruction |
 | `adobe-cc` | 바꿔서 | 맹점 | 위험 | 1 | dark-hidden-renewal, dark-cancel-obstruction |
 | `costco` | 바꿔서 | 맹점 | 위험 | 2 | dark-hidden-renewal, dark-cancel-obstruction |
 | `mpesa` | 바꿔서 | 뻔함 | 위험 | 2 | minor-cancel |
@@ -1576,4 +1578,39 @@ AI 사주 업계는 고객이 명식을 모른다고 보고 결과 첫 화면에
 주제 × 소재 대량 실험은 퍼포먼스 마케팅의 기본기다
 
 - 근거 경쟁사: tight-saju
+
+## `ux-explore-diagnose` 같은 불안, 다른 화면: 포스텔러의 '탐색·공감'과 점신의 '진단·확신'
+
+**우리 아이디어**: 2p를 탐색형·진단형 두 템플릿으로 만들고, 광고 소재의 고민 주제로 어느 쪽을 보여 줄지 정한다. 진단형도 주의 항목은 1개, 해결 방향을 같이 둔다
+
+**적합성 — 그대로** (문제 구조: 같음)
+
+- 통한 이유: 고민의 온도에 맞는 화면 문법이 결제를 가른다
+- 조건: 유입 주제를 랜딩까지 넘길 수 있다 → **있음**
+- 조건: 2p 템플릿을 두 개 만들 수 있다 → **있음**
+- 결정적 차이: 업종 같음
+
+**Why not yet — 맹점·차별** (장벽: belief)
+
+운세 앱은 브랜드 톤을 하나로 고정해 고민의 온도별로 2p 화면을 나누지 않는다
+
+- 근거 경쟁사: forceteller, jeomsin
+- 확인할 규정: dark-nagging
+
+## `kr-dark-pattern` 다크패턴 13개 유형 법제화: 결제 화면 디자인의 금지선
+
+**우리 아이디어**: 결제 화면 상단에 '총액 · 포함 내용 · 환불 조건' 요약 박스를 둔다. 질문권은 기본 선택 없이 별도 선택으로 둔다
+
+**적합성 — 그대로** (문제 구조: 같음)
+
+- 통한 이유: 결제 화면의 금지선과 투명성
+- 조건: 국내 전자상거래 사업자다 → **있음**
+- 결정적 차이: 업종 같음
+
+**Why not yet — 맹점·위험** (장벽: belief)
+
+업계는 투명한 결제 정보가 전환을 깎는다고 보지만, 법 시행 이후 총액·환불 조건 선노출이 신뢰 차별점이 된다
+
+- 근거 경쟁사: jeomsin, tight-saju
+- 확인할 규정: dark-sequential-price, dark-preselect, false-discount-scarcity, dark-cancel-obstruction
 

@@ -40672,6 +40672,320 @@
    ],
    "solution": "수요 따라 피벗 + 니치 주제 포트폴리오 + 생성형 소재 대량 실험 + 퍼포먼스 마케팅, 무투자 성장",
    "lesson": "직접 경쟁자의 성장 엔진은 '주제 × 소재' 실험 속도다. 우리 방법론의 실험 운영(ICE·표본 수·SRM)을 소재 실험에 그대로 쓴다."
+  },
+  {
+   "id": "ux-explore-diagnose",
+   "kind": "real",
+   "domain": "운세·사주",
+   "domain_group": "운세·사주",
+   "title": "같은 불안, 다른 화면: 포스텔러의 '탐색·공감'과 점신의 '진단·확신'",
+   "source": "브런치 UI 분석(uibowl), 앱스토어",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://brunch.co.kr/@uibowl/403",
+    "https://apps.apple.com/KR/app/id960571015"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "freemium",
+    "stage": "mature",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "pay_attempt_rate",
+    "note": "감정 상태와 맞지 않는 화면"
+   },
+   "outcomes": [],
+   "outcome_note": "두 앱의 화면별 전환 수치는 공개되지 않음 (UI 분석 글 기반)",
+   "saju": {
+    "stage": "hook_marketing",
+    "idea": "2p를 탐색형·진단형 두 템플릿으로 만들고, 광고 소재의 고민 주제로 어느 쪽을 보여 줄지 정한다. 진단형도 주의 항목은 1개, 해결 방향을 같이 둔다",
+    "also": [
+     "checkout"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "diff",
+     "why_not_yet": "운세 앱은 브랜드 톤을 하나로 고정해 고민의 온도별로 2p 화면을 나누지 않는다",
+     "barrier": "belief",
+     "competitors": [
+      "forceteller",
+      "jeomsin"
+     ],
+     "compliance": [
+      "dark-nagging"
+     ]
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "고민의 온도에 맞는 화면 문법이 결제를 가른다",
+     "support_factors": [
+      {
+       "condition": "유입 주제를 랜딩까지 넘길 수 있다",
+       "present": "yes"
+      },
+      {
+       "condition": "2p 템플릿을 두 개 만들 수 있다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "업종 같음",
+     "verdict": "transfer"
+    },
+    "segments": {
+     "user_type": [
+      "new"
+     ],
+     "topic": [
+      "love"
+     ],
+     "channel": [
+      "meta_ads",
+      "tiktok_ads"
+     ]
+    },
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "UI 분석 글은 두 운세 앱의 화면 설계를 비교했다. 포스텔러는 카드 피드로 사용자가 골라 읽게 하고 캐릭터 말풍선으로 친구처럼 말을 건다. 유료 전환은 보상형 광고 포인트와 프리미엄 카드다. 점신은 첫 화면부터 점수·오각형 그래프·게이지로 상태를 진단하고, 주의할 항목을 드러낸 뒤 실제 상담가 프로필·목소리 미리듣기·후기로 1:1 유료 상담에 연결한다. 글은 들어온 경로와 불안의 정도에 맞춰 화면 유형을 짝지으라고 제안한다.",
+    "symptom": "같은 사주 결과를 보여 줘도 어떤 사용자는 가볍게 떠나고 어떤 사용자는 결제한다",
+    "problem": "사용자의 감정 상태(가벼운 호기심 대 절박한 불안)에 따라 맞는 화면 문법이 다른데, 대부분 서비스는 한 가지 화면만 쓴다"
+   },
+   "hyps": [
+    {
+     "text": "한 가지 화면 톤으로 모든 사용자를 받는다",
+     "perspective": "competitor",
+     "why_not_yet": "만들기 쉬워 흔하다",
+     "verdict": "obvious",
+     "reason": "뻔함",
+     "barrier": {
+      "type": "competition",
+      "holder": "운세 앱 업계",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "유입 고민 주제(재회·이별 같은 절박형 대 매력·성향 같은 탐색형)에 따라 2p 화면 문법을 바꾼다",
+     "perspective": "customer",
+     "why_not_yet": "브랜드 톤은 하나여야 한다는 통념",
+     "verdict": "blindspot",
+     "reason": "일관성의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "브랜드 디자인 관행",
+      "changed": "",
+      "year": null,
+      "evidence": "https://brunch.co.kr/@uibowl/403",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "재회·이별 광고 유입자에게 2p를 '진단형(지금 관계 상태 요약 + 주의할 시기 1개)'으로, 대조군은 '탐색형(성향 카드)'으로 보여 주고 2p→결제 도달률 비교",
+      "metric": "pay_attempt_rate",
+      "ice": {
+       "impact": 7,
+       "confidence": 6,
+       "ease": 7,
+       "score": 6.7
+      },
+      "target": {
+       "text": "+10%",
+       "value": 10.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "진단형도 주의 항목 1개 + 해결 방향"
+     }
+    },
+    {
+     "text": "결핍·주의 항목을 크게 노출해 불안을 키운다",
+     "perspective": "timing",
+     "why_not_yet": "단기 전환은 오를 수 있지만 다크패턴·환불·브랜드 신뢰 문제로 돌아온다",
+     "verdict": "impossible",
+     "reason": "규제",
+     "barrier": {
+      "type": "regulation",
+      "holder": "전자상거래법 다크패턴 규정",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "같은 앱 안에서 유입 경로별로 화면을 분기한다",
+     "perspective": "channel",
+     "why_not_yet": "광고 UTM·딥링크로 유입 맥락을 랜딩 화면까지 넘기기 쉬워졌다",
+     "verdict": "timing",
+     "reason": "기술 변화",
+     "barrier": {
+      "type": "tech_change",
+      "holder": "단일 랜딩 페이지",
+      "changed": "유입 파라미터 기반 개인화 랜딩",
+      "year": 2024,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "탐색형(카드 피드·캐릭터 말풍선)과 진단형(점수·그래프·전문가 연결)의 두 가지 화면 문법",
+   "lesson": "화면 톤은 브랜드 하나로 고정하지 말고 고민의 온도에 맞춘다. 다만 진단형도 '주의할 점'은 1개만, 해결 방향과 함께 보여 준다. 불안을 키우는 쪽으로 쓰지 않는다."
+  },
+  {
+   "id": "kr-dark-pattern",
+   "kind": "real",
+   "domain": "운세·사주",
+   "domain_group": "운세·사주",
+   "title": "다크패턴 13개 유형 법제화: 결제 화면 디자인의 금지선",
+   "source": "공정위 가이드라인(법률신문 해설), 금융위 보도자료",
+   "source_status": "verified",
+   "source_note": null,
+   "verified": true,
+   "refs": [
+    "https://www.lawtimes.co.kr/news/articleView.html?idxno=228371",
+    "https://www.fsc.go.kr/po010103/85942?curPage=8"
+   ],
+   "depth": "deep",
+   "business": {
+    "model": "pay_per_unit",
+    "stage": "mature",
+    "market": "b2c",
+    "region": "kr"
+   },
+   "problem_metric": {
+    "id": "refund_rate",
+    "note": "다크패턴성 결제 장치"
+   },
+   "outcomes": [],
+   "outcome_note": "법 시행 전후 업계 전환율 변화는 공개되지 않음",
+   "saju": {
+    "stage": "checkout",
+    "idea": "결제 화면 상단에 '총액 · 포함 내용 · 환불 조건' 요약 박스를 둔다. 질문권은 기본 선택 없이 별도 선택으로 둔다",
+    "also": [
+     "trust"
+    ],
+    "wny": {
+     "verdict": "blindspot",
+     "role": "risk",
+     "why_not_yet": "업계는 투명한 결제 정보가 전환을 깎는다고 보지만, 법 시행 이후 총액·환불 조건 선노출이 신뢰 차별점이 된다",
+     "barrier": "belief",
+     "competitors": [
+      "jeomsin",
+      "tight-saju"
+     ],
+     "compliance": [
+      "dark-sequential-price",
+      "dark-preselect",
+      "false-discount-scarcity",
+      "dark-cancel-obstruction"
+     ]
+    },
+    "fit": {
+     "problem_match": "same",
+     "mechanism": "결제 화면의 금지선과 투명성",
+     "support_factors": [
+      {
+       "condition": "국내 전자상거래 사업자다",
+       "present": "yes"
+      }
+     ],
+     "key_difference": "업종 같음",
+     "verdict": "transfer"
+    },
+    "segments": {},
+    "segments_inferred": false
+   },
+   "what": {
+    "situation": "2025년 2월 14일 시행된 개정 전자상거래법은 숨은 갱신, 순차공개 가격책정 등 다크패턴 13개 유형을 법으로 금지했다. 공정위는 기존 자율관리 가이드라인과 6개 유형 문답서를 합쳐 4개 범주·13개 세부 유형의 '다크패턴 방지를 위한 온라인 인터페이스 운영 가이드라인'을 배포했다. 정기결제 증액·유료 전환 동의는 명시적이어야 하고, 첫 화면 가격 배너에도 총액 표시 원칙이 적용된다.",
+    "symptom": "결제 화면 전환율을 올리는 흔한 장치(카운트다운, 미리 체크된 옵션, 나중에 붙는 금액)가 이제 법 위반이 될 수 있다",
+    "problem": "운세 결제 화면은 '지금 아니면 못 본다'식 긴급성 장치를 많이 썼는데, 이 중 상당수가 금지 유형과 겹친다"
+   },
+   "hyps": [
+    {
+     "text": "가짜 카운트다운·한정 할인으로 결제를 서두르게 한다",
+     "perspective": "price",
+     "why_not_yet": "업계에 흔하지만 거짓 할인·낮은 재고 알림 유형에 걸린다",
+     "verdict": "impossible",
+     "reason": "규제",
+     "barrier": {
+      "type": "regulation",
+      "holder": "전자상거래법 제21조의2",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    },
+    {
+     "text": "결제 화면에 '총액·포함 내용·환불 조건'을 한 화면에 먼저 보여 준다",
+     "perspective": "customer",
+     "why_not_yet": "정보를 많이 보여 주면 망설여 전환이 떨어진다는 통념",
+     "verdict": "blindspot",
+     "reason": "투명성의 맹점",
+     "barrier": {
+      "type": "belief",
+      "holder": "퍼포먼스 마케팅 관행",
+      "changed": "",
+      "year": null,
+      "evidence": "https://www.lawtimes.co.kr/news/articleView.html?idxno=228371",
+      "inferred": false
+     },
+     "test": {
+      "experiment": "결제 화면 상단에 '총 39,000원 · 전체 결과 N장 · 7일 내 미열람 시 환불' 요약 박스를 둔 군과 없는 군의 결제 시도율·환불률 비교",
+      "metric": "pay_attempt_rate",
+      "ice": {
+       "impact": 6,
+       "confidence": 7,
+       "ease": 9,
+       "score": 7.3
+      },
+      "target": {
+       "text": "+5%",
+       "value": 5.0,
+       "unit": "relative"
+      },
+      "guardrail": "refund_rate",
+      "note": "전환이 떨어져도 환불률·민원 감소로 판단"
+     }
+    },
+    {
+     "text": "법제화 이후 투명한 결제 UX가 신뢰 차별점이 된다",
+     "perspective": "constraint",
+     "why_not_yet": "2025년 법 시행으로 경쟁사도 긴급성 장치를 줄여야 한다",
+     "verdict": "timing",
+     "reason": "규제 변화",
+     "barrier": {
+      "type": "regulation_change",
+      "holder": "긴급성 기반 결제 UX",
+      "changed": "개정 전자상거래법 시행",
+      "year": 2025,
+      "evidence": "https://www.fsc.go.kr/po010103/85942?curPage=8",
+      "inferred": false
+     }
+    },
+    {
+     "text": "질문권 묶음을 기본 선택(미리 체크)으로 둔다",
+     "perspective": "channel",
+     "why_not_yet": "사전 선택은 금지 유형이다",
+     "verdict": "impossible",
+     "reason": "규제",
+     "barrier": {
+      "type": "regulation",
+      "holder": "전자상거래법 다크패턴 규정",
+      "changed": "",
+      "year": null,
+      "evidence": "",
+      "inferred": false
+     }
+    }
+   ],
+   "solution": "4개 범주·13개 유형 금지, 명시적 동의·총액 표시 원칙",
+   "lesson": "결제 화면 디자인은 '전환을 올리는 장치'보다 '금지선'을 먼저 정한다. 카운트다운, 미리 체크, 나중에 붙는 금액, 해지 숨기기는 쓰지 않는다. 대신 총액과 환불 조건을 먼저 보여 주는 것이 신뢰 차별점이 된다."
   }
  ],
  "kinds": {

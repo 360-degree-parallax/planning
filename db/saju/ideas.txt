@@ -93,3 +93,5 @@ tight-trust | B | diff | AI 사주 업계는 고객이 명식을 모른다고 �
 tight-ip | O | table | 해석자 캐릭터 IP는 타이트사주가 이미 한다. 우리는 1p 주인공과 같은 세계관의 길잡이로 잇는 것이 다르다 | competition | tight-saju, cheongwoldang | ai-disclosure
 tight-adult | I | skip | 성인 주제는 연령 확인·청소년 보호 규제와 브랜드 위험 때문에 하지 않는다 | regulation | tight-saju | minor-ai-usage, minor-cancel
 tight-growth | O | table | 주제 × 소재 대량 실험은 퍼포먼스 마케팅의 기본기다 | competition | tight-saju | -
+ux-explore-diagnose | B | diff | 운세 앱은 브랜드 톤을 하나로 고정해 고민의 온도별로 2p 화면을 나누지 않는다 | belief | forceteller, jeomsin | dark-nagging
+kr-dark-pattern | B | risk | 업계는 투명한 결제 정보가 전환을 깎는다고 보지만, 법 시행 이후 총액·환불 조건 선노출이 신뢰 차별점이 된다 | belief | jeomsin, tight-saju | dark-sequential-price, dark-preselect, false-discount-scarcity, dark-cancel-obstruction

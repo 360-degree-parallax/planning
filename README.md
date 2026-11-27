@@ -11,13 +11,13 @@
 기준 서비스: **AI 사주 웹사이트 · 커머스형 · 최종 지표 = 결제**. 웹툰형 스토리 후킹(1p) → 마케팅 후킹(2p) → 결제 → 한 번 구매로 전체 결과 공개. 모든 사례가 결제 지표 트리와 사주 퍼널 단계에 연결되어 있습니다.
 
 ## 규모 (스키마 v4)
-- 사례 **354개** (실제 284 · 실패 32 · 연습 38), 가설 **1302개**
-- **deep 88개**: Why not yet 장벽 구조(유형·주체·바뀐 계기·연도·근거), 검증 실험과 지표, 사주 적용 아이디어 직접 작성. 근거 URL이 확인된 결과 지표 85건 (74개 사례), 나머지 14개는 수치가 없는 이유를 기록
+- 사례 **356개** (실제 286 · 실패 32 · 연습 38), 가설 **1310개**
+- **deep 90개**: Why not yet 장벽 구조(유형·주체·바뀐 계기·연도·근거), 검증 실험과 지표, 사주 적용 아이디어 직접 작성. 근거 URL이 확인된 결과 지표 85건 (74개 사례), 나머지 16개는 수치가 없는 이유를 기록
 - **tagged 266개**: 비즈니스 모델·단계·시장·지역·문제 지표·사주 퍼널 단계와 사주 적용 아이디어 초안은 사람이 작성, 장벽 유형과 적용 세그먼트는 규칙 추정(`inferred: true`, 결제 단계 생존 가설 84개는 사람 검토)
-- 출처 링크 확인 92개, 논란 표시 3개
-- 운세·사주 업계 사례 14개, 경쟁사 지도 11곳, 규정 16개
+- 출처 링크 확인 94개, 논란 표시 3개
+- 운세·사주 업계 사례 16개, 경쟁사 지도 11곳, 규정 16개
 - AI 채팅·Q&A 업계 사례 29개(그중 캐릭터 채팅·서브컬처 16개): 질문권(질문 1회 → 답변 1회) 관점. 퍼널 `db/funnels/saju-qa.json`, 지표 13개(`group: qa`)
-- 우리 아이디어 88개: 적합성 검증 + Why not yet (기본기 35 · 차별 38 · 위험 10 · 보류 5)
+- 우리 아이디어 90개: 적합성 검증 + Why not yet (기본기 35 · 차별 39 · 위험 11 · 보류 5)
 
 실제·실패 사례는 학습용으로 단순화한 재구성입니다. 가설과 Why not yet 판정은 해석이며, 해당 기업이 실제로 그렇게 판단했다는 기록이 아닙니다. 출처 링크가 없는 사례는 인용 전 확인이 필요합니다.
 
@@ -35,6 +35,7 @@
 | [docs/crack-deep-dive.md](docs/crack-deep-dive.md) | 크랙·캬라푸·OOC 단계별 딥다이브 (타임라인·수익·원가·위험·질문권 적용 우선순위) |
 | [docs/saju-rivals-deep.md](docs/saju-rivals-deep.md) | 사주아이·타이트사주 딥다이브와 우리 서비스 비교 |
 | [docs/tightsaju-deep-dive.md](docs/tightsaju-deep-dive.md) | 타이트사주 단계별 딥다이브(유입·팝업·신뢰·IP·니치·성장) |
+| [docs/design-ux-brand.md](docs/design-ux-brand.md) | 디자인 기획: 브랜드 포지셔닝·톤·비주얼, 화면별 UX, 결제 금지선, 디자인 실험 |
 | [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |
 | [docs/compliance.md](docs/compliance.md) | 실험 전 확인할 규정 체크리스트 |
 | [docs/tracking-plan.md](docs/tracking-plan.md) | 단계별 이벤트 정의 (도달 수 집계 기준) |
@@ -48,7 +49,7 @@ python3 tools/build_db.py && node tools/check_db.mjs && python3 -m unittest disc
 우리 수치 진단: `db/service/baseline.json`에 단계별 도달 수를 넣고 `python3 tools/diagnose.py` → `docs/diagnosis.md` (예시는 `--example`)
 원본: `db/base.json`(처음 30개) · `db/src/*.txt`(분야별 사례, `95·96-deep`은 핵심 50개, `97-commerce-remap`은 커머스 구조에 맞춘 사주 적용·실험 덮어쓰기, `98-outcomes`는 결과 지표 보강) · `db/meta/ice.txt`(실험 우선순위·채택 기준·가드레일) · `db/meta/also.txt`(보조 퍼널 단계) · `db/meta/segments.txt`(적용 세그먼트) · `db/meta/no-outcome.txt`(결과 수치가 없는 이유) · `db/meta/tags.txt`(분류 태그). 작성 형식은 `tools/build_db.py` 맨 위 설명을 보세요.
 
-## 핵심 사례 (deep 88개)
+## 핵심 사례 (deep 90개)
 
 
 | id | 제목 | 구분 | 사주 퍼널 | 문제 지표 |
@@ -141,6 +142,8 @@ python3 tools/build_db.py && node tools/check_db.mjs && python3 -m unittest disc
 | `tight-ip` | 'MZ무당 범산도령'과 'MZ무녀 피안': 해석자를 캐릭터로 | 실제 ✓ | 질문권 Q&A (질문 1회 → 답변 1회) | 다음 질문률 (답변 후 24시간 내 또 묻기) |
 | `tight-adult` | 29금 사주·속궁합: 니치의 끝과 그 위험 | 실제 ✓ | 마케팅 후킹 (2p) | 마케팅 후킹 통과율 (2p → 다음 단계) |
 | `tight-growth` | 투자 없이 월 1억에서 월 10억으로: 성장 경로 | 실제 ✓ | 유입 | 광고 수익률(ROAS) |
+| `ux-explore-diagnose` | 같은 불안, 다른 화면: 포스텔러의 '탐색·공감'과 점신의 '진단·확신' | 실제 ✓ | 마케팅 후킹 (2p) | 결제 시도율 (결제 페이지 → 결제 버튼·인증 시작) |
+| `kr-dark-pattern` | 다크패턴 13개 유형 법제화: 결제 화면 디자인의 금지선 | 실제 ✓ | 결제 페이지 | 환불·분쟁률 |
 
 ## 분류 사례 (tagged)
 

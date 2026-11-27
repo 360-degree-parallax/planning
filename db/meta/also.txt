@@ -84,3 +84,5 @@ tight-trust | consume, input
 tight-ip | hook_story
 tight-adult | trust
 tight-growth | economics
+ux-explore-diagnose | checkout
+kr-dark-pattern | trust

@@ -87,3 +87,5 @@ tight-trust | user_type:buyer
 tight-ip | user_type:buyer
 tight-adult | user_type:new; gender:f; age_band:20s,30s; topic:love
 tight-growth | user_type:new; channel:meta_ads,tiktok_ads
+ux-explore-diagnose | user_type:new; topic:love; channel:meta_ads,tiktok_ads
+kr-dark-pattern | all
