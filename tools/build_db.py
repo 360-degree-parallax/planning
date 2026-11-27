@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'lesson']
 
 
 def fail(msg):
@@ -345,6 +345,21 @@ def main():
             c['saju']['segments'] = infer_segments(c)
             c['saju']['segments_inferred'] = True
         c.setdefault('outcome_note', None)
+    swf = os.path.join(ROOT, 'db/meta/sowhat.txt')
+    for n, line in meta_lines(swf):
+        head, _, rest = line.partition(' | ')
+        chain, _, sol = rest.partition(' || ')
+        cid, _, hn = head.strip().partition(' ')
+        steps = [x.strip() for x in chain.split(' > ') if x.strip()]
+        if cid not in byid or not hn.isdigit() or not sol.strip() or len(steps) < 2:
+            fail(f'sowhat.txt:{n} 형식: {line[:60]}')
+        hi = int(hn)
+        if hi < 1 or hi > len(byid[cid]['hyps']):
+            fail(f'sowhat.txt:{n} {cid} 가설 번호 {hi} 없음')
+        if byid[cid].get('so_what'):
+            fail(f'sowhat.txt:{n} {cid} 중복')
+        byid[cid]['so_what'] = {'hyp': hi, 'why_not_yet': byid[cid]['hyps'][hi - 1]['why_not_yet'],
+                                'steps': steps, 'solution': sol.strip()}
     groups = {}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/domains.txt')):
         g, _, toks = line.partition(' | ')
@@ -365,6 +380,7 @@ def main():
         for h in c['hyps']:
             if 'barrier' not in h:
                 h['barrier'] = infer_barrier(h)
+        c.setdefault('so_what', None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)
     base['v'] = 4

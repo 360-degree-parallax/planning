@@ -1,8 +1,16 @@
 # planning
 
-기획 공부·아이데이션을 위한 **사례 DB**입니다. 지금은 DB만 있고 툴 화면은 보류 중입니다.
+기획 공부를 위한 **사례 DB**입니다.
 
-방법론: **WHAT**(무슨 문제를 풀 것인가) → **가설**(최대한 많이) → **Why not yet**(왜 지금까지 아무도 안 했나?) → 해결
+## 목표: 본질 파악
+
+이 저장소의 모든 작업은 **본질 파악**을 위해 합니다. 사례를 모으는 이유는 "무엇이 통했나"를 외우기 위해서가 아니라, 겉으로 보이는 현상 아래에서 **진짜 문제가 무엇이었고 왜 그것이 풀렸는지**를 보기 위해서입니다.
+
+- **사례 중심**: 이 저장소에는 사례만 모읍니다. 제품 기획은 여기서 하지 않고, 기획자가 따로 합니다.
+- **본질을 보는 순서**: 현상 → **WHAT**(진짜 문제) → **가설**(최대한 많이) → **Why not yet**(왜 아무도 안 했나) → **So what**(그래서? 를 반복) → 해결(그 사례가 실제로 한 것)
+- **Why not yet**은 장벽을 찾고, **So what**은 그 장벽이 무엇을 뜻하는지 "그래서?"를 2~3번 거듭 물어 해결로 가는 논리를 드러냅니다. 해결책이 '왜' 그 모양이 되었는지가 곧 본질입니다. 전체 체인: [docs/so-what.md](docs/so-what.md)
+
+방법론: **WHAT**(무슨 문제를 풀 것인가) → **가설**(최대한 많이) → **Why not yet**(왜 지금까지 아무도 안 했나?) → **So what**(그래서? 반복) → 해결
 - 뻔함·불가능 → 탈락 (뻔하거나 불가능한 아이디어 제거)
 - 통념의 맹점·타이밍 → 생존 (주목하지 않던 아이디어가 빛나는 아이디어였음을 발견)
 
@@ -33,9 +41,10 @@
 | `db/benchmarks.json` | 출처 있는 외부 참고 기준값 |
 | [docs/idea-validation.md](docs/idea-validation.md) | 우리 아이디어의 적합성(Fit) 검증 + Why not yet |
 | [docs/crack-deep-dive.md](docs/crack-deep-dive.md) | 크랙·캬라푸·OOC 단계별 딥다이브 (타임라인·수익·원가·위험·질문권 적용 우선순위) |
-| [docs/saju-rivals-deep.md](docs/saju-rivals-deep.md) | 사주아이·타이트사주 딥다이브와 우리 서비스 비교 |
-| [docs/tightsaju-deep-dive.md](docs/tightsaju-deep-dive.md) | 타이트사주 단계별 딥다이브(유입·팝업·신뢰·IP·니치·성장) |
-| [docs/design-ux-brand.md](docs/design-ux-brand.md) | 디자인 기획: 브랜드 포지셔닝·톤·비주얼, 화면별 UX, 결제 금지선, 디자인 실험 |
+| [docs/saju-rivals-deep.md](docs/saju-rivals-deep.md) | 사주아이·타이트사주 비교와 두 사례의 본질 |
+| [docs/tightsaju-deep-dive.md](docs/tightsaju-deep-dive.md) | 타이트사주 단계별 사례와 본질(유입·팝업·신뢰·IP·니치·성장) |
+| [docs/design-ux-cases.md](docs/design-ux-cases.md) | 디자인·UX·브랜드 사례 모음(운세 서비스 화면 문법, 캐릭터, 결제 화면 규제) |
+| [docs/so-what.md](docs/so-what.md) | 사례 356개의 Why not yet → So what 체인 → 해결 |
 | [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |
 | [docs/compliance.md](docs/compliance.md) | 실험 전 확인할 규정 체크리스트 |
 | [docs/tracking-plan.md](docs/tracking-plan.md) | 단계별 이벤트 정의 (도달 수 집계 기준) |

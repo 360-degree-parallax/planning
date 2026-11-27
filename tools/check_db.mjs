@@ -54,6 +54,8 @@ for (const c of d.cases) {
     if (h.test?.guardrail && !T.metrics[h.test.guardrail]) errs.push(`${hat} test.guardrail=${h.test.guardrail}`);
     if (c.depth === 'deep' && h.test && !h.test.ice) errs.push(`${hat} deep 실험에 ICE·목표·가드레일 없음 (db/meta/ice.txt)`);
   });
+  if (!c.so_what) errs.push(`${at} so what 체인 없음 (db/meta/sowhat.txt)`);
+  else if (c.so_what.steps.length < 2) errs.push(`${at} so what 단계가 2개 미만`);
   if (c.depth === 'deep') {
     if (!c.saju?.idea) errs.push(`${at} deep인데 사주 적용 아이디어 없음`);
     if (c.hyps.some(h => h.barrier?.inferred)) errs.push(`${at} deep인데 장벽을 직접 쓰지 않은 가설이 있음`);

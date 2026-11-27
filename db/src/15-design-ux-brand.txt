@@ -1,4 +1,4 @@
-// 디자인·UX·브랜드 사례 (2026-11-27 출처 확인). 기획 문서: docs/design-ux-brand.md
+// 디자인·UX·브랜드 사례 (2026-11-27 출처 확인). 사례 모음 문서: docs/design-ux-cases.md
 
 # ux-explore-diagnose | 같은 불안, 다른 화면: 포스텔러의 '탐색·공감'과 점신의 '진단·확신' | 운세·사주 | real | 브런치 UI 분석(uibowl), 앱스토어
 D: deep

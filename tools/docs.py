@@ -68,3 +68,26 @@ for c in deep:
         L.append(f"- 확인할 규정: {', '.join(w['compliance'])}")
     L.append('')
 write('docs/idea-validation.md', L)
+
+
+# So what 체인
+cs = J('db/cases.json')['cases']
+L = ['# So what 체인', '', '목표는 **본질 파악**이다. 각 사례에서 핵심 가설의 Why not yet(왜 아무도 안 했나)에서 출발해 "그래서?"를 거듭 물어, 그 사례가 실제로 한 해결까지 잇는다.',
+     '해결책은 사례가 실제로 한 것이며, 체인은 그 해결이 왜 그 모양이 되었는지를 보여 주는 해석이다. 원본: `db/meta/sowhat.txt`', '']
+groups = {}
+for c in cs:
+    groups.setdefault(c.get('domain_group') or '기타', []).append(c)
+for g, items in groups.items():
+    L += [f'## {g} ({len(items)})', '']
+    for c in items:
+        sw = c['so_what']
+        h = c['hyps'][sw['hyp'] - 1]
+        L.append(f"### `{c['id']}` {c['title']}")
+        L.append(f"- **문제**: {c['what']['problem']}")
+        L.append(f"- **가설 {sw['hyp']}**: {h['text']}")
+        L.append(f"- **Why not yet**: {sw['why_not_yet']}")
+        for i, st in enumerate(sw['steps'], 1):
+            L.append(f"- **So what {i}**: {st}")
+        L.append(f"- **해결**: {sw['solution']}")
+        L.append('')
+write('docs/so-what.md', L)
