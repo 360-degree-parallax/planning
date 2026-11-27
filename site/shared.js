@@ -26,27 +26,28 @@ const L = {
 
 /* 방법론 순서. id는 이론 페이지 앵커와 같다 */
 const STEPS = [
-  {id:'five_why', g:'① 문제 정의', n:'1', t:'5 Why'},
-  {id:'what', g:'① 문제 정의', n:'2', t:'현상 → WHAT'},
-  {id:'pest', g:'② 판 읽기', n:'1', t:'PEST'},
-  {id:'swot', g:'② 판 읽기', n:'2', t:'SWOT'},
-  {id:'three_c', g:'② 판 읽기', n:'3', t:'3C 겹침'},
-  {id:'ansoff', g:'② 판 읽기', n:'4', t:'앤소프'},
-  {id:'bcg', g:'② 판 읽기', n:'5', t:'BCG 매트릭스'},
-  {id:'hyps', g:'③ 본질 찾기', n:'1', t:'제한없는 가설'},
-  {id:'wny', g:'③ 본질 찾기', n:'2', t:'의심 = Why not yet'},
-  {id:'so_what', g:'③ 본질 찾기', n:'3', t:'관습 파괴 → So what'},
-  {id:'pro', g:'③ 본질 찾기', n:'4', t:'긍정 오피니언'},
-  {id:'anti', g:'③ 본질 찾기', n:'5', t:'안티오피니언'},
-  {id:'trade_on', g:'③ 본질 찾기', n:'6', t:'트레이드온'},
-  {id:'goal', g:'④ 실행 정리', n:'1', t:'목표 재분석'},
-  {id:'issue_tree', g:'④ 실행 정리', n:'2', t:'이슈트리'},
-  {id:'pareto', g:'④ 실행 정리', n:'3', t:'파레토'},
-  {id:'deep_why', g:'④ 실행 정리', n:'4', t:'대체 왜'},
-  {id:'key_metrics', g:'④ 실행 정리', n:'5', t:'중요 지표'},
-  {id:'solution', g:'맺음', n:'', t:'해결·교훈'}
+  {id:'five_why', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'5 Why'},
+  {id:'what', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'현상 → WHAT'},
+  {id:'hyps', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'제한없는 가설'},
+  {id:'wny', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'의심 = Why not yet'},
+  {id:'so_what', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'관습 파괴 → So what'},
+  {id:'pro', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'긍정 오피니언'},
+  {id:'anti', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'안티오피니언'},
+  {id:'trade_on', g:'WHAT · 1. 문제를 발견한다', k:'WHAT 1', t:'트레이드온'},
+  {id:'goal', g:'WHAT · 2. 문제를 구조화한다', k:'WHAT 2', t:'목표 재분석'},
+  {id:'issue_tree', g:'WHAT · 2. 문제를 구조화한다', k:'WHAT 2', t:'이슈트리'},
+  {id:'pareto', g:'WHAT · 3. 우선순위를 정한다', k:'WHAT 3', t:'파레토'},
+  {id:'deep_why', g:'WHAT · 3. 우선순위를 정한다', k:'WHAT 3', t:'대체 왜'},
+  {id:'key_metrics', g:'WHAT · 3. 우선순위를 정한다', k:'WHAT 3', t:'중요 지표'},
+  {id:'pest', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'PEST'},
+  {id:'swot', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'SWOT'},
+  {id:'three_c', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'3C 겹침'},
+  {id:'ansoff', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'앤소프'},
+  {id:'bcg', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'BCG 매트릭스'},
+  {id:'solution', g:'HOW · 6. 솔루션을 제안한다', k:'HOW 6', t:'해결·교훈', theory:'integrate'}
 ];
 
+const KEY = g => { const m = /^(\w+) · (\d)/.exec(g || ''); return m ? m[1] + ' ' + m[2] : (g || ''); };
 const tag = (t, cls = '') => `<span class="tag ${cls}">${esc(t)}</span>`;
 const srcLine = o => o && (isUrl(o.source) ? `<div class="src">출처: ${link(o.source)}</div>` : `<div class="src">${tag('추정', 'warn')} 사례 내용에서 도출한 해석</div>`);
 
@@ -142,6 +143,14 @@ const R = {
   journey(c){ const w = c.what || {}, f = c.five_why || {};
     return `<div class="ex" style="margin-bottom:10px"><p>${esc(w.situation)}</p></div>
     <table class="t" style="margin:0"><tr><th>단계</th><th>이 사례에서</th></tr><tr><td>겉으로 보이는 불편</td><td>${esc(w.symptom)}</td></tr>${(f.whys || []).length ? `<tr><td>속마음(왜?)</td><td>${f.whys.map(esc).join('<br>')}</td></tr>` : ''}<tr><td>감정이 가장 낮은 순간</td><td><b>${esc(w.problem)}</b></td></tr><tr><td>우리가 끼어드는 순간</td><td>${esc(c.solution)}</td></tr>${c.pro_opinion ? `<tr><td>쓰고 난 뒤</td><td>“${esc(c.pro_opinion.says)}” <span class="muted">— ${esc(c.pro_opinion.who)}</span></td></tr>` : ''}</table>`; },
+  integrate(c){ const p = c.pest || {}, f = p.focus || [], dw = c.deep_why || {}, km = c.key_metrics || {};
+    const sel = ((c.pareto || {}).matrix || []).filter(x => x.selected).map(x => x.issue);
+    return `<table class="t" style="margin:0"><tr class="hi"><td>결론</td><td><b>${esc((c.so_what && c.so_what.conclusion) || c.solution)}</b></td></tr>
+    <tr><td>문제</td><td>${esc(c.what.problem)}</td></tr>${sel.length ? `<tr><td>우선순위</td><td>${sel.map(esc).join(', ')}</td></tr>` : ''}
+    <tr><td>왜 지금</td><td>${f.length ? f.map(k => `${L.pest[k][1]}: ${esc(p[L.pest[k][0]])}`).join(' / ') : 'P·T 영향 적음'}</td></tr>
+    <tr><td>어디서</td><td>3C 진입 ${esc((c.three_c.entry || []).join('·'))} — ${esc(c.three_c.entry_why)}</td></tr>
+    <tr><td>무엇을 잴까</td><td>${esc(km.north_star || '')}${dw.intent_metric ? ` · 의도 ${esc(dw.intent_metric)}(${esc(L.mode[dw.mode] || '')})` : ''}</td></tr>
+    <tr><td>해결</td><td>${esc(c.solution)}</td></tr>${c.lesson ? `<tr><td>교훈</td><td>${esc(c.lesson)}</td></tr>` : ''}</table>`; },
   solution(c){ const o = (c.outcomes || []).filter(x => x.after);
     return `<p style="margin:0;font-size:15px"><b>${esc(c.solution)}</b></p>${o.map(x => `<p class="muted" style="margin:8px 0 0">결과: ${esc(x.before)} → <b>${esc(x.after)}</b>${x.context ? ' (' + esc(x.context) + ')' : ''}${isUrl(x.evidence) ? ' · ' + link(x.evidence) : ''}</p>`).join('')}
     ${c.lesson ? `<div class="note" style="margin-bottom:0">교훈: ${esc(c.lesson)}</div>` : ''}
@@ -174,5 +183,5 @@ const href = (view, id) => BUNDLE ? `#${view}:${id ? encodeURIComponent(id) : ''
 const hashFor = view => { const h = decodeURIComponent(location.hash.slice(1)); if (!BUNDLE) return h; return h.startsWith(view + ':') ? h.slice(view.length + 1) : null; };
 const setHash = (view, id) => history.replaceState(null, '', BUNDLE ? `#${view}:${encodeURIComponent(id || '')}` : (id ? '#' + encodeURIComponent(id) : location.pathname + location.search));
 
-window.P = {$, esc, link, tag, L, STEPS, R, load, theme, PAGES, isUrl, href, hashFor, setHash, BUNDLE};
+window.P = {KEY, $, esc, link, tag, L, STEPS, R, load, theme, PAGES, isUrl, href, hashFor, setHash, BUNDLE};
 })();
