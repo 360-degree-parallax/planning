@@ -44,23 +44,24 @@ def bundle(out):
     js = lambda n: rd(n).replace('</script', '<\\/script')
     html = f'''<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>기획 공부 — 1~3장·사례 DB</title>
+<title>기획 공부 — 1~3장·리포트·사례 DB</title>
 <style>{rd('app.css')}</style></head>
 <body>
 <header class="gnb"><a class="wordmark" href="#theory:">기획 공부<span>본질 파악 방법론 · 사례 DB</span></a>
 <div class="right"><button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button></div></header>
-<nav class="topnav" aria-label="장"><a href="#theory:" data-v="theory"><b>1</b>1장 기획의 여섯 단계</a><a href="#ch2:" data-v="ch2"><b>2</b>2장 인사이트 도출</a><a href="#ch3:" data-v="ch3"><b>3</b>3장 기획자의 몸값</a><a href="#db:" data-v="db"><b>DB</b>사례 DB</a></nav>
+<nav class="topnav" aria-label="장"><a href="#theory:" data-v="theory"><b>1</b>1장 기획의 여섯 단계</a><a href="#ch2:" data-v="ch2"><b>2</b>2장 인사이트 도출</a><a href="#ch3:" data-v="ch3"><b>3</b>3장 기획자의 몸값</a><a href="#reports:" data-v="reports"><b>R</b>리포트 DB</a><a href="#db:" data-v="db"><b>DB</b>사례 DB</a></nav>
 <section id="v-theory" data-v="theory">{body('index.html')}</section>
 <section id="v-ch2" data-v="ch2" hidden>{body('ch2.html')}</section>
 <section id="v-ch3" data-v="ch3" hidden>{body('ch3.html')}</section>
+<section id="v-reports" data-v="reports" hidden>{body('reports.html')}</section>
 <section id="v-db" data-v="db" hidden>{body('db.html')}</section>
 <div class="toast" id="toast" role="status"></div>
 <script>window.__BUNDLE=true;window.__CASES={data};
-(function(){{function v(){{var h=location.hash.slice(1),k=(h.split(':')[0]);if(['theory','ch2','ch3','db'].indexOf(k)<0){{k='theory';history.replaceState(null,'','#theory:')}}
+(function(){{function v(){{var h=location.hash.slice(1),k=(h.split(':')[0]);if(['theory','ch2','ch3','reports','db'].indexOf(k)<0){{k='theory';history.replaceState(null,'','#theory:')}}
 document.querySelectorAll('section[data-v]').forEach(function(s){{s.hidden=s.dataset.v!==k}});
 document.querySelectorAll('.topnav a').forEach(function(a){{if(a.dataset.v===k)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')}});if(window.TheoryPage)setTimeout(window.TheoryPage.route,0)}}
 v();addEventListener('hashchange',v)}})();</script>
-<script>{js('shared.js')}</script><script>{js('theory.js')}</script><script>{js('ch2.js')}</script><script>{js('ch3.js')}</script><script>{js('viz.js')}</script><script>{js('theory-page.js')}</script><script>{js('db-page.js')}</script>
+<script>{js('shared.js')}</script><script>{js('theory.js')}</script><script>{js('ch2.js')}</script><script>{js('ch3.js')}</script><script>{js('viz.js')}</script><script>{js('theory-page.js')}</script><script>{js('reports.js')}</script><script>{js('reports-page.js')}</script><script>{js('db-page.js')}</script>
 </body></html>'''
     open(out, 'w', encoding='utf-8').write(html)
     print(f'{out} ({len(html.encode()) // 1024} KB)')

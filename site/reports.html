@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>기획 공부 — 리포트 DB</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="reports">
+<header class="gnb">
+  <a class="wordmark" href="index.html">기획 공부<span>본질 파악 방법론 · 사례 DB</span></a>
+  <div class="right">
+    <button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
+  </div>
+</header>
+<nav class="topnav" aria-label="장">
+  <a href="index.html"><b>1</b>1장 기획의 여섯 단계</a>
+  <a href="ch2.html"><b>2</b>2장 인사이트 도출</a>
+  <a href="ch3.html"><b>3</b>3장 기획자의 몸값</a>
+  <a href="reports.html" aria-current="page"><b>R</b>리포트 DB</a>
+  <a href="db.html"><b>DB</b>사례 DB</a>
+</nav>
+<div class="wrap rp" data-view="reports">
+  <h1>리포트 DB</h1>
+  <p class="desc" id="rpdesc"></p>
+  <div class="rp-note" id="rpnote"></div>
+  <div class="rp-bar">
+    <div class="seg" id="rpcat" role="tablist"></div>
+    <input type="search" id="rpq" placeholder="제목·요지·태그 검색" aria-label="리포트 검색">
+    <select id="rppub" aria-label="기관"></select>
+  </div>
+  <details class="rp-pubs" id="rppubwrap"><summary>기관 소개 · 고르는 법</summary><div class="rp-pubgrid" id="rppubs"></div></details>
+  <p class="rp-count" id="rpcount"></p>
+  <div class="rp-list" id="rplist"></div>
+</div>
+<script src="shared.js"></script>
+<script src="reports.js"></script>
+<script src="reports-page.js"></script>
+</body>
+</html>
