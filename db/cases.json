@@ -25537,11 +25537,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "투자자",
-    "says": "장기 부채가 단기 수익을 넘었다",
+    "who": "스탠퍼드 강사(로버트 시겔)",
+    "says": "장기 부채가 크고 고객은 장기 약정이 없어 위험이 크다(임대 의무 470억 달러)",
     "reveals": "구조 위험",
-    "source": null,
-    "inferred": true
+    "source": "https://www.businessinsider.in/two-big-numbers-4-billion-and-47-billion-sum-up-weworks-business-model-and-the-risky-reason-it-could-collapse-in-a-recession/articleshow/70779003.cms",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "프리미엄 경험 대 재무 안정",
@@ -25584,9 +25584,9 @@
    },
    "pareto": {
     "vital_few": "장기 임대 부채",
-    "effect": "손실의 대부분",
-    "source": null,
-    "inferred": true,
+    "effect": "고객 약정 40억 달러 대비 임대 의무 470억 달러",
+    "source": "https://www.businessinsider.in/two-big-numbers-4-billion-and-47-billion-sum-up-weworks-business-model-and-the-risky-reason-it-could-collapse-in-a-recession/articleshow/70779003.cms",
+    "inferred": false,
     "matrix": [
      {
       "branch": "확장",
@@ -39165,11 +39165,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "규제 기관",
-    "says": "게임처럼 거래를 부추긴다",
-    "reveals": "투자자 보호 논란",
-    "source": null,
-    "inferred": true
+    "who": "이용자·의원",
+    "says": "게임스톱 매수를 막자 헤지펀드는 거래하는데 개인만 막았다며 분노·소송",
+    "reveals": "투자자 보호·신뢰 논란",
+    "source": "https://www.investmentnews.com/robinhood-adds-market-manipulation-and-gamification-to-a-quiver-of-woes-202128",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "무료 거래 대 수익",
@@ -65266,11 +65266,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "내부 고발자",
-    "says": "결과가 조작됐다",
+    "who": "WSJ 기자(존 캐리루)",
+    "says": "검사 대부분을 자사 에디슨이 아닌 기존 장비로 돌렸고 품질검사 실패가 잦았다",
     "reveals": "검증 부재",
-    "source": null,
-    "inferred": true
+    "source": "https://whyy.org/segments/tough-times-for-silicon-valleys-diagnostic-wunderkind-and-her-multi-billion-dollar-company-theranos",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "채혈 편의 대 검사 정확도",
@@ -67266,11 +67266,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "수강생",
-    "says": "취업률 숫자가 부풀려졌다",
+    "who": "수강생 소송",
+    "says": "86% 취업률을 광고했지만 내부 수치는 약 50%였다",
     "reveals": "신뢰",
-    "source": null,
-    "inferred": true
+    "source": "https://highereddive.com/news/for-profit-coding-school-bloomtech-sued-over-alleged-misrepresented-job-pla/622253",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "학비 부담 없음 대 학교 수익",
@@ -85071,11 +85071,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "창작자",
-    "says": "돈을 못 벌어 떠났다",
+    "who": "상위 창작자 18명",
+    "says": "1인당 120만 달러를 요구했으나 거절되자 유튜브·인스타그램으로 떠났다",
     "reveals": "보상",
-    "source": null,
-    "inferred": true
+    "source": "https://www.engadget.com/2016/10/31/vine-stars-deal-save-app/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "짧은 영상 대 창작자 수익",
