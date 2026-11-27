@@ -94,11 +94,12 @@
 
 분석 단계의 외부 환경. 형식: `id | P: ... ; E: ... ; S: ... ; T: ... || 핵심 요인(P,E,S,T 중 쉼표)`. **P(정치·법)와 T(기술) 위주로 본다.** E·S는 참고로만 적는다. `pest.focus`는 핵심 요인 중 P·T만 자동으로 뽑은 것이다. 핵심 요인은 Why not yet의 타이밍 장벽과 함께 읽는다.
 
-### SWOT SO·WO (`swot`, `db/meta/swot-so-wo.txt`, deep 필수)
+### SWOT SO·WO·ST (`swot`, deep 필수)
 
-SWOT 4분면은 쓰지 않는다. 기회의 영역으로 옮기는 두 칸만 고정한다. 형식: `id | 강점 | 기회 | SO 전략 | 약점 | WO 전략`
-- SO: 강점으로 기회를 잡는다.
-- WO: 그 기회로 옮겨 가려고 약점을 메운다.
+4분면 중 WT(약점이면서 기회도 없는 칸)는 쓰지 않는다.
+- `db/meta/swot-so-wo.txt`: `id | 강점 | 기회 | SO 전략 | 약점 | WO 전략`
+- `db/meta/swot-st.txt`: `id | 위협 | ST 전략`
+- SO: 강점으로 기회를 잡는다. WO: 그 기회로 옮겨 가려고 약점을 메운다. ST: 강점으로 위협을 막는다.
 
 ### So what 결론 (`so_what.conclusion`, `db/meta/sowhat-conclusion.txt`)
 

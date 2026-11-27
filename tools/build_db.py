@@ -507,6 +507,12 @@ def main():
         if byid[p[0]].get('swot'):
             fail(f'swot-so-wo.txt:{n} {p[0]} 중복')
         byid[p[0]]['swot'] = {'strength': p[1], 'opportunity': p[2], 'so': p[3], 'weakness': p[4], 'wo': p[5]}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/swot-st.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 3 or p[0] not in byid or not all(p[1:]) or not byid[p[0]].get('swot'):
+            fail(f'swot-st.txt:{n} 형식(SO·WO가 먼저 필요): {line[:60]}')
+        byid[p[0]]['swot']['threat'] = p[1]
+        byid[p[0]]['swot']['st'] = p[2]
     for c in cases:
         pe = c.get('pest')
         if pe:

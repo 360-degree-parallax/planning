@@ -60,6 +60,7 @@ for (const c of d.cases) {
   if (c.depth === 'deep' && c.key_metrics && !c.key_metrics.select_method) errs.push(`${at} deep인데 선별 방법 없음 (db/meta/select-method.txt)`);
   if (c.depth === 'deep' && c.deep_why && !c.deep_why.mode) errs.push(`${at} deep인데 의도 방향 없음 (db/meta/intent-mode.txt)`);
   if (c.depth === 'deep' && c.so_what?.conclusion_auto) errs.push(`${at} deep인데 So what 결론 없음 (db/meta/sowhat-conclusion.txt)`);
+  if (c.depth === 'deep' && c.swot && !c.swot.st) errs.push(`${at} deep인데 SWOT ST 없음 (db/meta/swot-st.txt)`);
   if (c.depth === 'deep' && !c.pro_opinion) errs.push(`${at} deep인데 긍정 오피니언 없음 (db/meta/pro.txt)`);
   if (c.depth === 'deep' && !c.anti_opinion) errs.push(`${at} deep인데 안티오피니언 없음 (db/meta/anti.txt)`);
   if (!c.so_what) errs.push(`${at} so what 체인 없음 (db/meta/sowhat.txt)`);

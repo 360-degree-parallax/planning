@@ -78,7 +78,7 @@ L = ['# 본질 파악·구조화 체인', '',
      '| 단계 | 이 DB에서 | 무엇을 묻나 |', '|---|---|---|',
      '| 분석 A. 5 Why (과정) | 5 Why | 증상에서 "왜?"를 3~5번 파고들어 근본 원인까지 간다 |',
      '| 분석 B. PEST | PEST | 정치·법(P)과 기술(T) 위주로 본다. 경제·사회는 참고만 |',
-     '| 분석 C. SWOT(SO·WO) | SWOT | 전부 쓰지 않고, 강점으로 잡을 기회(SO)와 기회로 옮겨 가려고 메울 약점(WO)만 |',
+     '| 분석 C. SWOT(SO·WO·ST) | SWOT | 강점으로 잡을 기회(SO), 기회로 옮겨 가려고 메울 약점(WO), 강점으로 막을 위협(ST). 약점이면서 기회도 없는 WT는 뺀다 |',
      '| 1. 제한없는 가설설정 | 가설 목록 | 가능한 해법을 제한 없이 모두 적는다 |',
      '| 2. 의심 | Why not yet | 클라이언트·업계의 가설을 의심한다: 왜 아무도 안 했나 |',
      '| 3. 관습과 파괴 (과정) | 관습 파괴 체인 | 그 관습을 깨면 무엇이 열리나: "그래서?"를 반복한다 (타이밍형은 "조건 변화") |',
@@ -121,8 +121,10 @@ for g, items in groups.items():
             L.append(f"  - 참고(비중 낮음): 경제 {pe['economic']} / 사회 {pe['social']}")
         if c.get('swot'):
             sw2 = c['swot']
-            L.append(f"- **SWOT (기회로 옮기는 두 칸만)**: SO = 강점 '{sw2['strength']}'로 기회 '{sw2['opportunity']}'를 잡는다 → {sw2['so']}")
+            L.append(f"- **SWOT (SO·WO·ST, WT 제외)**: SO = 강점 '{sw2['strength']}'로 기회 '{sw2['opportunity']}'를 잡는다 → {sw2['so']}")
             L.append(f"  - WO = 기회로 옮겨 가려고 약점 '{sw2['weakness']}'을 메운다 → {sw2['wo']}")
+            if sw2.get('st'):
+                L.append(f"  - ST = 강점 '{sw2['strength']}'로 위협 '{sw2['threat']}'을 막는다 → {sw2['st']}")
         L.append(f"- **가설 {sw['hyp']}**: {h['text']}")
         L.append(f"- **의심 (Why not yet)**: {sw['why_not_yet']}")
         for k, st in enumerate(sw['steps'], 1):
