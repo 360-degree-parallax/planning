@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'analysis_full', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'three_c', 'ansoff', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'analysis_full', 'lesson']
 
 
 def fail(msg):
@@ -602,7 +602,17 @@ def main():
             tc['overlap'] = dict(zip(OV, cells))
             tc['entry'] = entry
             tc['entry_why'] = t[1]
+    ANS = {'침투': 'penetration', '신제품': 'product_dev', '개척': 'market_dev', '다각화': 'diversify'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/ansoff.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 3 or p[0] not in byid or p[1] not in ANS or not p[2]:
+            fail(f'ansoff.txt:{n} 형식(id | 침투·신제품·개척·다각화 | 이유): {line[:60]}')
+        if byid[p[0]].get('ansoff'):
+            fail(f'ansoff.txt:{n} {p[0]} 중복')
+        byid[p[0]]['ansoff'] = {'cell': ANS[p[1]], 'why': p[2]}
     for c in cases:
+        if not c.get('ansoff'):
+            fail(f"{c['id']}: 앤소프 없음 (db/meta/ansoff.txt)")
         if c.get('three_c') and not c['three_c'].get('overlap'):
             fail(f"{c['id']}: 3C 겹침(A~H) 없음 (db/meta/three-c-overlap.txt)")
         pe = c.get('pest')

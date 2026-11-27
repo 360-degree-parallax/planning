@@ -277,3 +277,7 @@ deep이 아닌 사례에 분석 칸 15개를 한 덩어리로 쓴다. `@ id`로 
 
 `db/meta/three-c-overlap.txt`, 전 사례 필수. 형식: `id | A ; B ; C ; D ; E ; F ; G ; H || 진입 | 이유`.
 A 고객만, B 고객∩경쟁, C 고객∩자사, D 셋 다, E 경쟁∩자사, F 경쟁만, G 자사만, H 밖. 진입은 A·B·C·D·H 중 쉼표로 여럿. 목적은 우리 상황에 맞는 시장 찾기.
+
+## ansoff (앤소프 매트릭스)
+
+`db/meta/ansoff.txt`, 전 사례 필수. 형식: `id | 침투·신제품·개척·다각화 | 이유`. JSON 값: penetration(시장침투), product_dev(신제품개발), market_dev(시장개척), diversify(다각화). 기준은 해결 전 그 회사(스타트업이면 업계)의 기존 제품·고객.

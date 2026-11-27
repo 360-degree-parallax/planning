@@ -135,6 +135,9 @@ for g, items in groups.items():
                 OVN = {'A': '고객만', 'B': '고객∩경쟁', 'C': '고객∩자사', 'D': '셋 다', 'E': '경쟁∩자사', 'F': '경쟁만', 'G': '자사만', 'H': '밖'}
                 L.append("  - 3C 겹침: " + ' / '.join(f"{k} {OVN[k]} {ov[k]}" for k in 'ABCDEFGH'))
                 L.append(f"  - 우리 상황에 맞는 시장(진입): **{', '.join(tc['entry'])}** — {tc['entry_why']}")
+        if c.get('ansoff'):
+            AN = {'penetration': '시장침투(기존 제품·기존 시장)', 'product_dev': '신제품개발(신제품·기존 시장)', 'market_dev': '시장개척(기존 제품·신시장)', 'diversify': '다각화(신제품·신시장)'}
+            L.append(f"- **앤소프**: {AN[c['ansoff']['cell']]} — {c['ansoff']['why']}")
         L.append(f"- **가설 {sw['hyp']}**: {h['text']}")
         L.append(f"- **의심 (Why not yet)**: {sw['why_not_yet']}")
         for k, st in enumerate(sw['steps'], 1):

@@ -154,6 +154,10 @@
     ],
     "entry_why": "아무도 안 주는 대기 정보를 진료 흐름 지식으로 채운다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 환자에게 대기 경험 개선"
+   },
    "hyps": [
     {
      "text": "대기실을 넓히고 꾸민다",
@@ -541,6 +545,10 @@
     ],
     "entry_why": "속도는 못 이겨도 체감 대기는 바꿀 수 있다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 입주자 체감 개선"
+   },
    "hyps": [
     {
      "text": "엘리베이터를 교체한다",
@@ -887,6 +895,10 @@
      "C"
     ],
     "entry_why": "속도 대신 서 있는 시간을 걷는 시간으로 바꾼다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 승객 동선 개선"
    },
    "hyps": [
     {
@@ -1246,6 +1258,10 @@
     ],
     "entry_why": "대기 자체를 이야기 경험으로 바꾼다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 방문객 대기 경험"
+   },
    "hyps": [
     {
      "text": "놀이기구를 더 짓는다",
@@ -1598,6 +1614,10 @@
      "C"
     ],
     "entry_why": "관리 권한으로 아무도 안 챙기던 상비 우산을 만든다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 학생에게 우산 비치"
    },
    "hyps": [
     {
@@ -1957,6 +1977,10 @@
     ],
     "entry_why": "장비 경쟁 대신 아이 경험을 바꾼다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 소아 환자 검사 경험"
+   },
    "hyps": [
     {
      "text": "장비를 더 빠르고 조용하게",
@@ -2310,6 +2334,10 @@
      "C"
     ],
     "entry_why": "병원 밖 보온이라는 아무도 안 채운 니즈"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "보온 기능을 병원 밖 가정으로"
    },
    "hyps": [
     {
@@ -2682,6 +2710,10 @@
     ],
     "entry_why": "게시판의 불신을 결제·리뷰로 풀어 현지 숙소를 연다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 여행객에게 개인 숙소라는 새 상품"
+   },
    "hyps": [
     {
      "text": "호텔을 더 짓는다",
@@ -3049,6 +3081,10 @@
     ],
     "entry_why": "연체료 없는 대여로 차별, 이후 스트리밍으로 이동"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 대여자에게 정액 우편 대여"
+   },
    "hyps": [
     {
      "text": "대여료 인하",
@@ -3410,6 +3446,10 @@
     ],
     "entry_why": "봉투 수익에 묶인 경쟁사가 못 하는 흡입력 유지"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 청소기 시장에 봉투 없는 제품"
+   },
    "hyps": [
     {
      "text": "모터 출력 경쟁",
@@ -3760,6 +3800,10 @@
     ],
     "entry_why": "냄새 제거가 아니라 청소 끝 보상이라는 빈 니즈"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 제품을 청소 마무리 용도로 재포지셔닝"
+   },
    "hyps": [
     {
      "text": "냄새 제거 효과를 더 크게 광고",
@@ -4108,6 +4152,10 @@
      "C"
     ],
     "entry_why": "해야 할 일(지루한 출근길)에 맞는 셰이크"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 셰이크를 출근길 고객에게 더 팔기"
    },
    "hyps": [
     {
@@ -4469,6 +4517,10 @@
     ],
     "entry_why": "차·버스 이용자라는 비고객을 데려온다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "비행을 차·버스 이용자에게"
+   },
    "hyps": [
     {
      "text": "운항 편수를 줄인다",
@@ -4775,6 +4827,10 @@
     ],
     "entry_why": "조립을 고객과 나눠 가격을 낮춘다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 가구 시장에 셀프 조립 제품"
+   },
    "hyps": [
     {
      "text": "무료 배송을 해 준다",
@@ -5069,6 +5125,10 @@
      "C"
     ],
     "entry_why": "비게이머라는 아무도 안 본 고객"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "비게이머에게 모션 게임기"
    },
    "hyps": [
     {
@@ -5411,6 +5471,10 @@
     ],
     "entry_why": "불법보다 편한 합법 경험"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 청취자에게 스트리밍"
+   },
    "hyps": [
     {
      "text": "불법 다운로드 단속·소송",
@@ -5738,6 +5802,10 @@
     ],
     "entry_why": "간편 인증으로 은행이 못 하는 속도"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 송금 고객에게 간편 송금"
+   },
    "hyps": [
     {
      "text": "은행 앱 화면을 더 깔끔하게 바꾼다",
@@ -6049,6 +6117,10 @@
     ],
     "entry_why": "흩어진 전단을 한곳에 모은다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 배달 고객에게 앱 주문"
+   },
    "hyps": [
     {
      "text": "동네 배달 책자를 만든다",
@@ -6340,6 +6412,10 @@
      "C"
     ],
     "entry_why": "전국 매물은 못 이겨도 동네 신뢰는 이긴다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 중고 거래자에게 동네 직거래"
    },
    "hyps": [
     {
@@ -6649,6 +6725,10 @@
     ],
     "entry_why": "필요한 시점(새벽)에 맞춘 배송"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 장보기 고객에게 새벽 배송"
+   },
    "hyps": [
     {
      "text": "마트 영업시간을 늘린다",
@@ -6940,6 +7020,10 @@
      "C"
     ],
     "entry_why": "물류를 직접 가져 약속을 지킨다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 쇼핑객에게 직매입 로켓배송"
    },
    "hyps": [
     {
@@ -7234,6 +7318,10 @@
      "C"
     ],
     "entry_why": "빈 오후 좌석을 머물 곳이 필요한 사람에게 판다"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "같은 좌석을 오후 재택근무자에게"
    },
    "hyps": [
     {
@@ -7587,6 +7675,10 @@
     ],
     "entry_why": "리포트 후 결정 시점이라는 빈 순간을 기록으로 채운다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 결제자 재구매"
+   },
    "hyps": [
     {
      "text": "리포트 품질 개선",
@@ -7930,6 +8022,10 @@
     ],
     "entry_why": "등록 뒤 아무도 안 챙기는 첫 2주"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 회원 재등록"
+   },
    "hyps": [
     {
      "text": "재등록 할인을 준다",
@@ -8239,6 +8335,10 @@
     ],
     "entry_why": "가치 먼저 경험시키는 순서"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "신규 가입자 첫 주 유지"
+   },
    "hyps": [
     {
      "text": "푸시 알림을 늘린다",
@@ -8543,6 +8643,10 @@
      "C"
     ],
     "entry_why": "결정할 질문이 없는 회의라는 빈틈"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 팀 회의 개선"
    },
    "hyps": [
     {
@@ -8852,6 +8956,10 @@
     ],
     "entry_why": "가격 대신 함께 읽는 경험"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 독자에게 독서 모임 경험"
+   },
    "hyps": [
     {
      "text": "온라인만큼 할인한다",
@@ -9145,6 +9253,10 @@
      "C"
     ],
     "entry_why": "짧은 점심시간에 맞춘 대기 없는 점심"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 직장인 점심 대기 해소"
    },
    "hyps": [
     {
@@ -9456,6 +9568,10 @@
     ],
     "entry_why": "숨긴 비용을 처음부터 보인다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 방문자 결제 완료"
+   },
    "hyps": [
     {
      "text": "이탈 고객에게 할인 쿠폰을 다시 보낸다",
@@ -9750,6 +9866,10 @@
      "C"
     ],
     "entry_why": "혼자 막히는 순간을 채운다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 수강생 완강"
    },
    "hyps": [
     {
@@ -10094,6 +10214,10 @@
     ],
     "entry_why": "연회비로 배송비 고민을 없앤다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객 구매 빈도"
+   },
    "hyps": [
     {
      "text": "일정 금액 이상 무료배송",
@@ -10414,6 +10538,10 @@
      "C"
     ],
     "entry_why": "재고 없이 무한 구색"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 고객에게 외부 판매자 구색"
    },
    "hyps": [
     {
@@ -10755,6 +10883,10 @@
      "C"
     ],
     "entry_why": "반품 위험을 대신 진다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "신발 구매자에게 무료 반품 온라인 판매"
    },
    "hyps": [
     {
@@ -11106,6 +11238,10 @@
      "C"
     ],
     "entry_why": "집에서 써 보는 저가 안경"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "안경 구매자에게 홈 트라이온 직판"
    },
    "hyps": [
     {
@@ -11477,6 +11613,10 @@
     ],
     "entry_why": "충분히 좋은 날을 귀찮지 않게"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "면도 고객에게 구독 배송"
+   },
    "hyps": [
     {
      "text": "날이 더 많은 고급 면도기",
@@ -11840,6 +11980,10 @@
     ],
     "entry_why": "회비로 가격 신뢰를 산다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "회원 반복 구매"
+   },
    "hyps": [
     {
      "text": "더 큰 할인 행사",
@@ -12163,6 +12307,10 @@
     ],
     "entry_why": "다른 게임(발견)으로 비교를 피한다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "장보는 고객에게 자체 브랜드"
+   },
    "hyps": [
     {
      "text": "품목을 늘린다",
@@ -12466,6 +12614,10 @@
      "C"
     ],
     "entry_why": "매장 수요를 아는 발주"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "동네 손님 결품 줄이기"
    },
    "hyps": [
     {
@@ -12771,6 +12923,10 @@
     ],
     "entry_why": "예측 대신 반응"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 고객에게 반응 생산 신상품"
+   },
    "hyps": [
     {
      "text": "트렌드 예측 팀을 강화한다",
@@ -13060,6 +13216,10 @@
      "C"
     ],
     "entry_why": "올려 보고 만든다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 젊은 층에게 초소량 신상품"
    },
    "hyps": [
     {
@@ -13354,6 +13514,10 @@
     ],
     "entry_why": "선택 과부하를 대행"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "의류 고객에게 대신 고르는 박스"
+   },
    "hyps": [
     {
      "text": "검색·필터를 더 좋게",
@@ -13645,6 +13809,10 @@
     ],
     "entry_why": "효율 대신 감정"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "반려인에게 정기배송·감정 응대"
+   },
    "hyps": [
     {
      "text": "온라인 최저가",
@@ -13935,6 +14103,10 @@
      "C"
     ],
     "entry_why": "창고 없이 마트를 창고로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "장보기 고객에게 대행 서비스"
    },
    "hyps": [
     {
@@ -14231,6 +14403,10 @@
     ],
     "entry_why": "돈을 맡는 신뢰 장치"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 구매자에게 에스크로 장터"
+   },
    "hyps": [
     {
      "text": "판매 수수료를 낮춘다",
@@ -14526,6 +14702,10 @@
     ],
     "entry_why": "쇼핑을 함께하는 놀이로"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "온라인 쇼핑을 지방 저소득층에게"
+   },
    "hyps": [
     {
      "text": "쿠폰 지급",
@@ -14819,6 +14999,10 @@
      "C"
     ],
     "entry_why": "신뢰가 있는 사람을 채널로"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "온라인 쇼핑을 소도시에게"
    },
    "hyps": [
     {
@@ -15129,6 +15313,10 @@
     ],
     "entry_why": "신뢰 쌓은 자리에서 판다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "커뮤니티 회원에게 커머스"
+   },
    "hyps": [
     {
      "text": "오픈마켓에 입점",
@@ -15434,6 +15622,10 @@
     ],
     "entry_why": "실제 집 사진으로 판다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "콘텐츠 이용자에게 커머스"
+   },
    "hyps": [
     {
      "text": "상품 사진을 고화질로",
@@ -15726,6 +15918,10 @@
      "C"
     ],
     "entry_why": "진품 불안을 플랫폼이 진다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "리셀 구매자에게 검수 거래"
    },
    "hyps": [
     {
@@ -16023,6 +16219,10 @@
      "C"
     ],
     "entry_why": "흩어진 몰을 모은다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 쇼핑객에게 모아보기"
    },
    "hyps": [
     {
@@ -16328,6 +16528,10 @@
      "C"
     ],
     "entry_why": "소재라는 다른 축"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "운동화 시장에 울 소재"
    },
    "hyps": [
     {
@@ -16642,6 +16846,10 @@
     ],
     "entry_why": "유통 마진을 빼고 여행 불편을 푼다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "캐리어 시장에 직판 기능 제품"
+   },
    "hyps": [
     {
      "text": "백화점 입점",
@@ -16935,6 +17143,10 @@
      "C"
     ],
     "entry_why": "내용물이 아니라 용기를 바꾼다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 고객에게 쿠션 용기"
    },
    "hyps": [
     {
@@ -17245,6 +17457,10 @@
     ],
     "entry_why": "먹는 것이 아니라 도전을 판다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "라면 시장에 극한 매운맛"
+   },
    "hyps": [
     {
      "text": "덜 맵게 바꾼다",
@@ -17538,6 +17754,10 @@
     ],
     "entry_why": "현지 입맛에 맞춘 한식"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "만두를 해외 현지인에게"
+   },
    "hyps": [
     {
      "text": "한인 마트 중심 판매",
@@ -17828,6 +18048,10 @@
      "C"
     ],
     "entry_why": "크고 싼 커피"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "커피 고객에게 저가 대용량"
    },
    "hyps": [
     {
@@ -18133,6 +18357,10 @@
     ],
     "entry_why": "매장 대신 앱"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "커피 고객에게 앱 픽업"
+   },
    "hyps": [
     {
      "text": "더 큰 매장",
@@ -18422,6 +18650,10 @@
      "C"
     ],
     "entry_why": "사람이 습관을 배달한다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 음료를 방문 배달로"
    },
    "hyps": [
     {
@@ -18730,6 +18962,10 @@
     ],
     "entry_why": "하루 현금 흐름에 맞춘 분량"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "같은 제품을 농촌 소포장으로"
+   },
    "hyps": [
     {
      "text": "대용량 할인",
@@ -19030,6 +19266,10 @@
     ],
     "entry_why": "강자가 지키는 수익원을 버린다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "데이터를 저소득 다수에게"
+   },
    "hyps": [
     {
      "text": "소폭 요금 인하",
@@ -19325,6 +19565,10 @@
     ],
     "entry_why": "남들이 작다고 본 소도시를 선점"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "할인점을 소도시로"
+   },
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -19616,6 +19860,10 @@
      "C"
     ],
     "entry_why": "가구가 아니라 반나절을 판다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 방문객 체류 시간"
    },
    "hyps": [
     {
@@ -19968,6 +20216,10 @@
     ],
     "entry_why": "자체 물류를 회비로 묶는다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객 회비로 묶기"
+   },
    "hyps": [
     {
      "text": "적립금",
@@ -20296,6 +20548,10 @@
     ],
     "entry_why": "위치를 연결하고 공급을 푼다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "택시 승객에게 앱 호출"
+   },
    "hyps": [
     {
      "text": "택시 면허를 늘린다",
@@ -20604,6 +20860,10 @@
      "C"
     ],
     "entry_why": "승차 거부라는 빈틈(규제가 막음)"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "택시 승객에게 승합차 호출"
    },
    "hyps": [
     {
@@ -20914,6 +21174,10 @@
     ],
     "entry_why": "글로벌 모델을 현지 결제에 맞춘다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "차량 호출을 동남아로"
+   },
    "hyps": [
     {
      "text": "해외 차량 호출 앱 그대로 도입",
@@ -21221,6 +21485,10 @@
     ],
     "entry_why": "놀고 있는 기사망 위에 서비스를 쌓는다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 이용자에게 배달·결제"
+   },
    "hyps": [
     {
      "text": "기사 대기 장소를 늘린다",
@@ -21516,6 +21784,10 @@
      "C"
     ],
     "entry_why": "경쟁자가 무시한 교외"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "배달을 교외로"
    },
    "hyps": [
     {
@@ -21820,6 +22092,10 @@
     ],
     "entry_why": "한쪽(식당)에 혼자서도 쓸모 있는 도구"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "식당에게 예약 관리 도구"
+   },
    "hyps": [
     {
      "text": "손님 광고를 많이 한다",
@@ -22122,6 +22398,10 @@
      "C"
     ],
     "entry_why": "공산품 사이에 묻힌 작가에게 전용 공간"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "수공예 구매자에게 전용 장터"
    },
    "hyps": [
     {
@@ -22432,6 +22712,10 @@
     ],
     "entry_why": "평판을 이용자가 만든다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 거래자 신뢰 높이기"
+   },
    "hyps": [
     {
      "text": "회사가 모든 거래를 보증",
@@ -22736,6 +23020,10 @@
      "C"
     ],
     "entry_why": "서비스를 상품처럼 판다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "외주 고객에게 정가 패키지"
    },
    "hyps": [
     {
@@ -23044,6 +23332,10 @@
     ],
     "entry_why": "기준과 대금을 보장"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "외주 고객에게 에스크로 패키지"
+   },
    "hyps": [
     {
      "text": "지인 소개로만 맡긴다",
@@ -23351,6 +23643,10 @@
     ],
     "entry_why": "시설 대신 사람과 집"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "반려인에게 개인 시터"
+   },
    "hyps": [
     {
      "text": "반려견 호텔 가격 인하",
@@ -23654,6 +23950,10 @@
      "C"
     ],
     "entry_why": "놀고 있는 차를 보험으로 시장화"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "렌터카 고객에게 개인 차"
    },
    "hyps": [
     {
@@ -23961,6 +24261,10 @@
     ],
     "entry_why": "달리는 빈자리를 신뢰로 연결"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "장거리 이동자에게 카풀"
+   },
    "hyps": [
     {
      "text": "저가 버스",
@@ -24264,6 +24568,10 @@
      "C"
     ],
     "entry_why": "지점을 동네로, 하루를 분 단위로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "렌터카 고객에게 무인 분 단위"
    },
    "hyps": [
     {
@@ -24569,6 +24877,10 @@
     ],
     "entry_why": "걷기엔 멀고 택시엔 가까운 빈칸"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "도시 이동자에게 공유 킥보드"
+   },
    "hyps": [
     {
      "text": "마을버스 증편",
@@ -24861,6 +25173,10 @@
      "C"
     ],
     "entry_why": "결정의 위험을 없앤다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 예약자 전환 높이기"
    },
    "hyps": [
     {
@@ -25169,6 +25485,10 @@
      "C"
     ],
     "entry_why": "숨겨진 정보를 공개해 카테고리를 바꾼다"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "모텔을 일반 여행객에게"
    },
    "hyps": [
     {
@@ -25479,6 +25799,10 @@
     ],
     "entry_why": "막혀 있던 집값 정보를 연다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "집주인에게 무료 시세"
+   },
    "hyps": [
     {
      "text": "중개인 목록 사이트",
@@ -25780,6 +26104,10 @@
      "C"
     ],
     "entry_why": "속도라는 빈 니즈(재고 위험 관리 필요)"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "매도자에게 즉시 매입"
    },
    "hyps": [
     {
@@ -26091,6 +26419,10 @@
     ],
     "entry_why": "흩어진 매물을 모으고 진짜만 보인다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "원룸 구하는 사람에게 앱 비교"
+   },
    "hyps": [
     {
      "text": "생활 정보지 광고",
@@ -26380,6 +26712,10 @@
      "C"
     ],
     "entry_why": "계약 단위를 변동성에 맞춘다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "스타트업에게 좌석 단위 사무실"
    },
    "hyps": [
     {
@@ -26683,6 +27019,10 @@
      "C"
     ],
     "entry_why": "(실패) 진입은 맞았지만 기간 불일치 구조가 무너졌다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기업에게 유연 공간"
    },
    "hyps": [
     {
@@ -26989,6 +27329,10 @@
      "C"
     ],
     "entry_why": "흩어진 정보를 한 화면에"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "수입 업체에게 디지털 포워딩"
    },
    "hyps": [
     {
@@ -27310,6 +27654,10 @@
      "C"
     ],
     "entry_why": "배가 아니라 시스템을 바꾼다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "화주에게 컨테이너 운송"
    },
    "hyps": [
     {
@@ -27648,6 +27996,10 @@
     ],
     "entry_why": "보장이라는 빈 니즈"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기업에게 익일 보장 배송"
+   },
    "hyps": [
     {
      "text": "여객기 화물칸 계약 확대",
@@ -27950,6 +28302,10 @@
      "C"
     ],
     "entry_why": "대기와 위험이 적은 경로"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 배송 효율"
    },
    "hyps": [
     {
@@ -28258,6 +28614,10 @@
     ],
     "entry_why": "쌓아 둘 수 없으니 빠르게 보낸다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "배송을 외딴 병원으로"
+   },
    "hyps": [
     {
      "text": "모든 병원에 혈액 은행 설치",
@@ -28546,6 +28906,10 @@
      "C"
     ],
     "entry_why": "공급자가 감당 가능한 비용 형태"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 가게 대상 과금 변경"
    },
    "hyps": [
     {
@@ -28851,6 +29215,10 @@
      "C"
     ],
     "entry_why": "지역 단위로 수요를 모은다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "가게에게 배달 대행"
    },
    "hyps": [
     {
@@ -29160,6 +29528,10 @@
     ],
     "entry_why": "무료로 양면을 모은다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "카카오 이용자에게 택시 호출"
+   },
    "hyps": [
     {
      "text": "기사 수수료 부과",
@@ -29468,6 +29840,10 @@
     ],
     "entry_why": "비싼 지면을 무료 게시판으로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "주민에게 무료 게시판"
+   },
    "hyps": [
     {
      "text": "신문 광고 할인",
@@ -29771,6 +30147,10 @@
     ],
     "entry_why": "같은 소속끼리 연결"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "통근자에게 소속 카풀"
+   },
    "hyps": [
     {
      "text": "도로 확장",
@@ -30062,6 +30442,10 @@
      "C"
     ],
     "entry_why": "도입 방식을 바꾼다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "영업 조직에게 웹 CRM"
    },
    "hyps": [
     {
@@ -30384,6 +30768,10 @@
      "C"
     ],
     "entry_why": "이메일에 지친 팀의 빈자리"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "게임사가 기업 협업 도구로"
    },
    "hyps": [
     {
@@ -30729,6 +31117,10 @@
     ],
     "entry_why": "개발자 없는 판매자에게 독립 가게"
    },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "스노보드 가게가 쇼핑몰 빌더로"
+   },
    "hyps": [
     {
      "text": "스노보드 판매에 집중",
@@ -31039,6 +31431,10 @@
     ],
     "entry_why": "결제를 붙이는 사람 기준"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "개발자에게 결제 API"
+   },
    "hyps": [
     {
      "text": "수수료 인하",
@@ -31333,6 +31729,10 @@
      "C"
     ],
     "entry_why": "인프라를 호출 단위로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "개발자에게 통신 API"
    },
    "hyps": [
     {
@@ -31640,6 +32040,10 @@
      "C"
     ],
     "entry_why": "내부 반복 문제를 판다"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "커머스 회사가 클라우드로"
    },
    "hyps": [
     {
@@ -31994,6 +32398,10 @@
     ],
     "entry_why": "그냥 되는 동기화"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기기 여러 대 쓰는 사람에게 동기화"
+   },
    "hyps": [
     {
      "text": "유료 검색 광고",
@@ -32334,6 +32742,10 @@
     ],
     "entry_why": "기본에 실패한 강자를 기본으로 이긴다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "회의 시장에 쉬운 화상회의"
+   },
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -32629,6 +33041,10 @@
      "C"
     ],
     "entry_why": "구매자가 직접 써 보고 산다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "개발팀에게 셀프 구매 도구"
    },
    "hyps": [
     {
@@ -32943,6 +33359,10 @@
      "C"
     ],
     "entry_why": "바뀐 고객 행동에 맞춘다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "중소기업에게 인바운드 도구"
    },
    "hyps": [
     {
@@ -33297,6 +33717,10 @@
     ],
     "entry_why": "작은 사업자라는 비고객"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "이메일 마케팅을 작은 사업자에게"
+   },
    "hyps": [
     {
      "text": "대기업 영업",
@@ -33623,6 +34047,10 @@
     ],
     "entry_why": "시장을 전문가에서 모두로"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "디자인을 비디자이너에게"
+   },
    "hyps": [
     {
      "text": "전문 툴 기능 경쟁",
@@ -33915,6 +34343,10 @@
      "C"
     ],
     "entry_why": "사용자를 팀 전체로 넓힌다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "디자인 팀에게 브라우저 협업"
    },
    "hyps": [
     {
@@ -34209,6 +34641,10 @@
      "C"
     ],
     "entry_why": "쪼개진 업무 정보를 하나로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "팀에게 블록형 올인원"
    },
    "hyps": [
     {
@@ -34515,6 +34951,10 @@
      "C"
     ],
     "entry_why": "시간 비싼 사람에게 비싸게"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "임원에게 유료 고속 이메일"
    },
    "hyps": [
     {
@@ -34826,6 +35266,10 @@
     ],
     "entry_why": "조직 간 마찰을 같은 데이터로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "개발·운영팀에게 통합 관측"
+   },
    "hyps": [
     {
      "text": "운영팀 전용 모니터링 강화",
@@ -35114,6 +35558,10 @@
      "C"
     ],
     "entry_why": "원가 구조를 바꾼다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "데이터팀에게 분리형 웨어하우스"
    },
    "hyps": [
     {
@@ -35425,6 +35873,10 @@
     ],
     "entry_why": "작은 회사용 급여 공백"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "급여 서비스를 작은 회사로"
+   },
    "hyps": [
     {
      "text": "세무 대행",
@@ -35733,6 +36185,10 @@
     ],
     "entry_why": "글로벌이 못 채우는 현지 규칙"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "HR SaaS를 한국 스타트업으로"
+   },
    "hyps": [
     {
      "text": "해외 HR 툴 도입",
@@ -36026,6 +36482,10 @@
      "C"
     ],
     "entry_why": "자동화 전에는 사람으로 품질"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "직장인에게 정확한 명함 관리"
    },
    "hyps": [
     {
@@ -36335,6 +36795,10 @@
     ],
     "entry_why": "상담을 전환 채널로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "쇼핑몰에게 상담 채팅"
+   },
    "hyps": [
     {
      "text": "전화 상담 확대",
@@ -36642,6 +37106,10 @@
      "C"
     ],
     "entry_why": "더할 때 빼는 차별"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "에이전시에게 단순 협업 도구"
    },
    "hyps": [
     {
@@ -36952,6 +37420,10 @@
     ],
     "entry_why": "비개발자에게 막힌 연결"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "앱 연동을 비개발자에게"
+   },
    "hyps": [
     {
      "text": "앱마다 연동 기능 개발 요청",
@@ -37258,6 +37730,10 @@
      "C"
     ],
     "entry_why": "고객이 있는 곳에서 대화"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "스타트업에게 제품 안 메신저"
    },
    "hyps": [
     {
@@ -37569,6 +38045,10 @@
     ],
     "entry_why": "동시성 전제를 뺀다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "원격 팀에게 비동기 영상"
+   },
    "hyps": [
     {
      "text": "회의 시간 단축",
@@ -37876,6 +38356,10 @@
     ],
     "entry_why": "빈 시간을 보여 준다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "영업에게 예약 링크"
+   },
    "hyps": [
     {
      "text": "공유 캘린더",
@@ -38179,6 +38663,10 @@
      "C"
     ],
     "entry_why": "제도 변화 순간에 오래된 불편 제거"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기업에게 전자서명"
    },
    "hyps": [
     {
@@ -38486,6 +38974,10 @@
      "C"
     ],
     "entry_why": "익숙한 모양에 강력한 구조"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "DB를 비개발자에게"
    },
    "hyps": [
     {
@@ -38796,6 +39288,10 @@
     ],
     "entry_why": "코드 협업에 사람 협업을 얹는다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "개발자에게 소셜 코딩"
+   },
    "hyps": [
     {
      "text": "버전 관리 도구 개선",
@@ -39102,6 +39598,10 @@
      "C"
     ],
     "entry_why": "맞춤보다 충분히 예쁜 기본값"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "홈페이지 제작을 작은 가게에게"
    },
    "hyps": [
     {
@@ -39413,6 +39913,10 @@
      "C"
     ],
     "entry_why": "활성화 단위를 팀으로"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "체험 계정 전환"
    },
    "hyps": [
     {
@@ -39727,6 +40231,10 @@
     ],
     "entry_why": "입력하는 사람을 설계"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "ERP를 중소 제조사로"
+   },
    "hyps": [
     {
      "text": "대기업 ERP 도입",
@@ -40020,6 +40528,10 @@
      "C"
     ],
     "entry_why": "개인을 가맹점으로"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "카드 결제를 개인 판매자에게"
    },
    "hyps": [
     {
@@ -40355,6 +40867,10 @@
     ],
     "entry_why": "카드를 못 받던 작은 가게"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "카드 결제를 작은 가게에게"
+   },
    "hyps": [
     {
      "text": "단말기 할부",
@@ -40678,6 +41194,10 @@
     ],
     "entry_why": "송금을 친구 사이 놀이로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "젊은 층에게 소셜 송금"
+   },
    "hyps": [
     {
      "text": "은행 송금 단순화",
@@ -40989,6 +41509,10 @@
     ],
     "entry_why": "수수료로 배제된 소액 투자자"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "주식 거래를 소액 젊은 층에게"
+   },
    "hyps": [
     {
      "text": "수수료 소폭 인하",
@@ -41283,6 +41807,10 @@
      "C"
     ],
     "entry_why": "고객 실수로 버는 강자의 반대편"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "저소득층에게 무수수료 계좌"
    },
    "hyps": [
     {
@@ -41591,6 +42119,10 @@
      "C"
     ],
     "entry_why": "지점을 없애 비용과 불편 제거"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "은행 고객에게 디지털 카드"
    },
    "hyps": [
     {
@@ -41931,6 +42463,10 @@
      "C"
     ],
     "entry_why": "계좌 없는 사람에게 휴대폰 송금"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "통신사가 계좌 없는 사람에게 송금"
    },
    "hyps": [
     {
@@ -42294,6 +42830,10 @@
     ],
     "entry_why": "숨은 마진을 투명하게"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "해외 송금자에게 투명 송금"
+   },
    "hyps": [
     {
      "text": "은행 수수료 비교",
@@ -42619,6 +43159,10 @@
     ],
     "entry_why": "위험을 고객에게서 옮긴다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "쇼핑객에게 후불 결제"
+   },
    "hyps": [
     {
      "text": "카드 보안 강조",
@@ -42932,6 +43476,10 @@
     ],
     "entry_why": "이해충돌을 구조로 줄인다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "젊은 층에게 AI 보험"
+   },
    "hyps": [
     {
      "text": "광고로 이미지 개선",
@@ -43228,6 +43776,10 @@
      "C"
     ],
     "entry_why": "사용자 기준 재설계"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "은행 고객에게 비대면 은행"
    },
    "hyps": [
     {
@@ -43526,6 +44078,10 @@
     ],
     "entry_why": "흩어진 정보를 모아 판단을 만든다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "금융 고객에게 통합 조회"
+   },
    "hyps": [
     {
      "text": "은행별 앱 사용",
@@ -43821,6 +44377,10 @@
      "C"
     ],
     "entry_why": "정보를 무료로 주고 추천에서 번다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "소비자에게 무료 신용점수"
    },
    "hyps": [
     {
@@ -44135,6 +44695,10 @@
     ],
     "entry_why": "위기 순간에 가장 단순한 수단"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "디지털 결제를 소규모 가게로"
+   },
    "hyps": [
     {
      "text": "카드 단말기 보급",
@@ -44443,6 +45007,10 @@
      "C"
     ],
     "entry_why": "신용 걱정 없이 한 번에"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "대출자에게 비교 조회"
    },
    "hyps": [
     {
@@ -44753,6 +45321,10 @@
      "C"
     ],
     "entry_why": "청구를 결제 순간에 붙인다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 가입자 청구율"
    },
    "hyps": [
     {
@@ -45065,6 +45637,10 @@
     ],
     "entry_why": "저축을 소비 앞에"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "사회초년생에게 선저축 상품"
+   },
    "hyps": [
     {
      "text": "금리 높은 적금",
@@ -45351,6 +45927,10 @@
      "C"
     ],
     "entry_why": "매출 데이터로 시간 차를 메운다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "식당에게 빠른 정산"
    },
    "hyps": [
     {
@@ -45654,6 +46234,10 @@
      "C"
     ],
     "entry_why": "담보를 공동체 신뢰로"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "대출을 담보 없는 빈곤층에게"
    },
    "hyps": [
     {
@@ -45961,6 +46545,10 @@
      "C"
     ],
     "entry_why": "쉬움과 규제 신뢰"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "암호화폐를 일반인에게"
    },
    "hyps": [
     {
@@ -46303,6 +46891,10 @@
      "H"
     ],
     "entry_why": "스스로 잠식하며 즉시 시청으로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 구독자에게 스트리밍"
    },
    "hyps": [
     {
@@ -46665,6 +47257,10 @@
     ],
     "entry_why": "몰아 보기라는 빈 니즈"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 구독자에게 오리지널"
+   },
    "hyps": [
     {
      "text": "모든 콘텐츠를 자체 제작",
@@ -46974,6 +47570,10 @@
      "C"
     ],
     "entry_why": "올리기와 퍼가기를 쉽게"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "일반인에게 영상 공유"
    },
    "hyps": [
     {
@@ -47305,6 +47905,10 @@
     ],
     "entry_why": "기능을 빼고 핵심 하나"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "사진 공유자에게 필터 앱"
+   },
    "hyps": [
     {
      "text": "체크인 기능 강화",
@@ -47616,6 +48220,10 @@
      "C"
     ],
     "entry_why": "강점에서 새 제품을 찾는다"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "팟캐스트 회사가 실시간 SNS로"
    },
    "hyps": [
     {
@@ -47951,6 +48559,10 @@
      "C"
     ],
     "entry_why": "첫날부터 재미있는 피드"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "짧은 영상 시청자에게 추천 피드"
    },
    "hyps": [
     {
@@ -48321,6 +48933,10 @@
      "C"
     ],
     "entry_why": "무료와 유료 사이 빈칸"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "독자에게 기다리면 무료"
    },
    "hyps": [
     {
@@ -48712,6 +49328,10 @@
     ],
     "entry_why": "휴대폰에 맞는 형식"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "독자에게 세로 스크롤 무료 연재"
+   },
    "hyps": [
     {
      "text": "모든 회차 유료화",
@@ -49067,6 +49687,10 @@
     ],
     "entry_why": "빨리 크는 한 조각에 집중"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 생방송을 게임에 집중"
+   },
    "hyps": [
     {
      "text": "일반 생방송 기능 강화",
@@ -49373,6 +49997,10 @@
      "C"
     ],
     "entry_why": "실패한 본 제품의 부산물에서 찾는다"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "게임사가 커뮤니티 플랫폼으로"
    },
    "hyps": [
     {
@@ -49685,6 +50313,10 @@
     ],
     "entry_why": "요금에 묶인 기능을 무료로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "휴대폰 이용자에게 무료 메신저"
+   },
    "hyps": [
     {
      "text": "문자 요금제",
@@ -49975,6 +50607,10 @@
      "C"
     ],
     "entry_why": "위기에 드러난 필요를 일상으로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "이용자에게 스티커 메신저"
    },
    "hyps": [
     {
@@ -50268,6 +50904,10 @@
      "C"
     ],
     "entry_why": "국경을 없앤다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "해외 가족에게 무료 메신저"
    },
    "hyps": [
     {
@@ -50575,6 +51215,10 @@
     ],
     "entry_why": "기록의 부담을 없앤다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "젊은 층에게 사라지는 메시지"
+   },
    "hyps": [
     {
      "text": "비공개 설정 강화",
@@ -50880,6 +51524,10 @@
      "C"
     ],
     "entry_why": "실명과 학교 밀도"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "대학생에게 실명 SNS"
    },
    "hyps": [
     {
@@ -51188,6 +51836,10 @@
      "C"
     ],
     "entry_why": "검증된 기술에 강한 동기"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "포켓몬 팬에게 위치 게임"
    },
    "hyps": [
     {
@@ -51523,6 +52175,10 @@
      "C"
     ],
     "entry_why": "가격 장벽을 없애 친구를 모은다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "게이머에게 무료 게임"
    },
    "hyps": [
     {
@@ -51914,6 +52570,10 @@
     ],
     "entry_why": "꾸준함이라는 빈 니즈"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "학습자에게 게임화 학습"
+   },
    "hyps": [
     {
      "text": "콘텐츠 품질 향상",
@@ -52254,6 +52914,10 @@
     ],
     "entry_why": "기구가 아니라 함께하는 에너지"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "홈트 고객에게 구독 수업"
+   },
    "hyps": [
     {
      "text": "더 좋은 기구",
@@ -52579,6 +53243,10 @@
      "C"
     ],
     "entry_why": "독자가 작가를 직접 돕는다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "독자에게 작가 직접 구독"
    },
    "hyps": [
     {
@@ -52952,6 +53620,10 @@
      "C"
     ],
     "entry_why": "꾸준한 수입이라는 빈 니즈"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "팬에게 정기 후원"
    },
    "hyps": [
     {
@@ -53328,6 +54000,10 @@
     ],
     "entry_why": "많이 읽는 사람만 내게 한다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 독자 유료화"
+   },
    "hyps": [
     {
      "text": "전면 유료화",
@@ -53702,6 +54378,10 @@
     ],
     "entry_why": "시도 비용을 없앤다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "독자에게 독서 구독"
+   },
    "hyps": [
     {
      "text": "전자책 할인",
@@ -54040,6 +54720,10 @@
     ],
     "entry_why": "현지 창작 생태계"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "웹툰을 해외로"
+   },
    "hyps": [
     {
      "text": "한국 작품 번역만 제공",
@@ -54347,6 +55031,10 @@
     ],
     "entry_why": "무시당하는 첫 글을 없앤다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "신규 회원 활동 유지"
+   },
    "hyps": [
     {
      "text": "글쓰기 이벤트 경품",
@@ -54639,6 +55327,10 @@
      "A"
     ],
     "entry_why": "(실패) 지속 이유라는 빈칸을 못 채웠다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "SNS 이용자에게 음성 방"
    },
    "hyps": [
     {
@@ -54933,6 +55625,10 @@
     ],
     "entry_why": "(실패) 무료와의 차이를 못 만들었다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "모바일 시청자에게 짧은 드라마"
+   },
    "hyps": [
     {
      "text": "고품질 짧은 영상",
@@ -55224,6 +55920,10 @@
      "C"
     ],
     "entry_why": "커피가 아니라 공간을 판다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "직장인에게 제3의 공간"
    },
    "hyps": [
     {
@@ -55536,6 +56236,10 @@
     ],
     "entry_why": "회원 기반으로 대기를 없앤다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객 대기 해소"
+   },
    "hyps": [
     {
      "text": "직원 증원",
@@ -55831,6 +56535,10 @@
     ],
     "entry_why": "약점을 인정하고 고친다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객에게 개선 레시피"
+   },
    "hyps": [
     {
      "text": "할인과 광고",
@@ -56117,6 +56825,10 @@
      "C"
     ],
     "entry_why": "메뉴를 줄여 속도를 만든다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "가족에게 빠른 표준 햄버거"
    },
    "hyps": [
     {
@@ -56424,6 +57136,10 @@
      "C"
     ],
     "entry_why": "빠름과 건강 사이 빈칸"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "외식 고객에게 빠른 건강식"
    },
    "hyps": [
     {
@@ -56734,6 +57450,10 @@
     ],
     "entry_why": "채식인이 아니라 고기 먹는 사람"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "대체육을 고기 먹는 사람에게"
+   },
    "hyps": [
     {
      "text": "채식 시장 마케팅 강화",
@@ -57024,6 +57744,10 @@
      "C"
     ],
     "entry_why": "카페를 통한 진입"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "귀리 우유를 카페로"
    },
    "hyps": [
     {
@@ -57335,6 +58059,10 @@
     ],
     "entry_why": "기능과 이미지라는 빈 카테고리"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "에너지 음료를 서양 젊은 층에게"
+   },
    "hyps": [
     {
      "text": "맛을 서양 입맛에 맞춘다",
@@ -57643,6 +58371,10 @@
     ],
     "entry_why": "누구나 같은 맛을 내는 시스템"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "커피 애호가에게 캡슐 시스템"
+   },
    "hyps": [
     {
      "text": "더 좋은 머신",
@@ -57933,6 +58665,10 @@
      "C"
     ],
     "entry_why": "본체는 싸게 날은 계속"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "면도 고객에게 교체 날 모델"
    },
    "hyps": [
     {
@@ -58239,6 +58975,10 @@
      "C"
     ],
     "entry_why": "장비가 아니라 사용을 판다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기업에게 사용량 과금 복사"
    },
    "hyps": [
     {
@@ -58592,6 +59332,10 @@
     ],
     "entry_why": "고객과 이해를 맞춘 과금"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "항공사에게 가동 시간 계약"
+   },
    "hyps": [
     {
      "text": "엔진 고장을 아예 없앤다",
@@ -58916,6 +59660,10 @@
     ],
     "entry_why": "결과를 판다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "건설사에게 공구 관리 서비스"
+   },
    "hyps": [
     {
      "text": "공구 가격 인하",
@@ -59222,6 +59970,10 @@
      "C"
     ],
     "entry_why": "이해가 같아지는 과금"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "운송사에게 주행거리 과금"
    },
    "hyps": [
     {
@@ -59534,6 +60286,10 @@
     ],
     "entry_why": "입력을 소프트웨어로, 앱 생태계로"
    },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "컴퓨터 회사가 휴대폰으로"
+   },
    "hyps": [
     {
      "text": "더 좋은 키보드",
@@ -59828,6 +60584,10 @@
      "C"
     ],
     "entry_why": "기기·소프트웨어·구매를 하나로"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "컴퓨터 회사가 음악 기기·스토어로"
    },
    "hyps": [
     {
@@ -60139,6 +60899,10 @@
     ],
     "entry_why": "사람 대신 기기가 배운다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "가정에게 학습형 조절기"
+   },
    "hyps": [
     {
      "text": "더 많은 설정 버튼",
@@ -60437,6 +61201,10 @@
      "C"
     ],
     "entry_why": "현관을 폰에 연결"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "집주인에게 비디오 초인종"
    },
    "hyps": [
     {
@@ -60745,6 +61513,10 @@
      "C"
     ],
     "entry_why": "완벽보다 충분히"
+   },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "군사 로봇 회사가 가정용으로"
    },
    "hyps": [
     {
@@ -61056,6 +61828,10 @@
     ],
     "entry_why": "유통·광고를 빼고 팬을 마케팅으로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "젊은 층에게 저가 고성능 폰"
+   },
    "hyps": [
     {
      "text": "대리점 유통",
@@ -61361,6 +62137,10 @@
      "C"
     ],
     "entry_why": "저가 시장의 신뢰 공백"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "충전기 구매자에게 신뢰 브랜드"
    },
    "hyps": [
     {
@@ -61671,6 +62451,10 @@
     ],
     "entry_why": "찍는 사람과 찍히는 사람을 같게"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "카메라를 액션 스포츠인에게"
+   },
    "hyps": [
     {
      "text": "고화질 카메라",
@@ -61963,6 +62747,10 @@
      "C"
     ],
     "entry_why": "안전과 시간 절약의 빈칸"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "바쁜 가족에게 다기능 압력솥"
    },
    "hyps": [
     {
@@ -62269,6 +63057,10 @@
      "C"
     ],
     "entry_why": "약점을 즐길 거리로"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "보트 신발을 개성 소비 젊은 층에게"
    },
    "hyps": [
     {
@@ -62577,6 +63369,10 @@
     ],
     "entry_why": "광고 대신 동네의 믿는 사람"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "요가하는 여성에게 애슬레저"
+   },
    "hyps": [
     {
      "text": "기존 스포츠 브랜드 여성 라인",
@@ -62884,6 +63680,10 @@
     ],
     "entry_why": "기능 같은 상품에서 정체성으로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "젊은 층에게 반항적 생수"
+   },
    "hyps": [
     {
      "text": "더 싼 생수",
@@ -63190,6 +63990,10 @@
      "C"
     ],
     "entry_why": "진지한 사용자에게 내구성"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "아웃도어 사용자에게 프리미엄 아이스박스"
    },
    "hyps": [
     {
@@ -63500,6 +64304,10 @@
     ],
     "entry_why": "광고에 지친 마음이라는 빈칸"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 제품을 메시지로 재포지셔닝"
+   },
    "hyps": [
     {
      "text": "유명 모델 기용",
@@ -63809,6 +64617,10 @@
     ],
     "entry_why": "걸레 빨기를 없앤다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "가정에게 일회용 걸레"
+   },
    "hyps": [
     {
      "text": "더 좋은 세제",
@@ -64117,6 +64929,10 @@
     ],
     "entry_why": "기능을 빼 새 쓰임을 만든다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "음악 재생을 이동 중으로"
+   },
    "hyps": [
     {
      "text": "더 좋은 오디오",
@@ -64421,6 +65237,10 @@
     ],
     "entry_why": "(실패) 진입할 칸이 있었지만 자기 잠식을 피했다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 고객에게 디지털 카메라(실패: 하지 않음)"
+   },
    "hyps": [
     {
      "text": "필름 품질 개선",
@@ -64714,6 +65534,10 @@
     ],
     "entry_why": "(실패) 소비자라는 새 칸을 놓쳤다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "스마트폰을 소비자로(실패: 하지 않음)"
+   },
    "hyps": [
     {
      "text": "키보드·보안 강화",
@@ -65004,6 +65828,10 @@
     ],
     "entry_why": "(실패) 실제로는 고객이 없는 G(자사만)에 서 있었다, 손보다 나은 A가 있는지 검증부터 했어야 한다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "건강 주스 고객에게 압착기"
+   },
    "hyps": [
     {
      "text": "고가 기계 + 전용 팩 구독",
@@ -65292,6 +66120,10 @@
      "H"
     ],
     "entry_why": "(실패) 맥락 없는 기술, 업무용 틈새가 남았다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "도시 이동자에게 균형 기구"
    },
    "hyps": [
     {
@@ -65583,6 +66415,10 @@
      "C"
     ],
     "entry_why": "소비자 대신 현장 작업자 칸"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "착용형 화면을 산업 현장으로"
    },
    "hyps": [
     {
@@ -65905,6 +66741,10 @@
     ],
     "entry_why": "가난한 환자라는 비고객"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "백내장 수술을 빈곤층에게"
+   },
    "hyps": [
     {
      "text": "정부 보조",
@@ -66225,6 +67065,10 @@
     ],
     "entry_why": "건수로 원가를 낮춘다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "심장 수술을 저소득층에게"
+   },
    "hyps": [
     {
      "text": "장비 할부",
@@ -66534,6 +67378,10 @@
     ],
     "entry_why": "숨겨진 가격을 공개"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "무보험자에게 약값 쿠폰"
+   },
    "hyps": [
     {
      "text": "제약사 할인 요청",
@@ -66839,6 +67687,10 @@
      "C"
     ],
     "entry_why": "먹는 시간 기준 포장"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "만성질환자에게 시간별 포장"
    },
    "hyps": [
     {
@@ -67150,6 +68002,10 @@
     ],
     "entry_why": "수치심 접점을 없앤다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "남성에게 원격 처방"
+   },
    "hyps": [
     {
      "text": "병원 광고",
@@ -67444,6 +68300,10 @@
      "C"
     ],
     "entry_why": "제도가 열리는 순간 대면 장벽 제거"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "직장인에게 비대면 진료"
    },
    "hyps": [
     {
@@ -67753,6 +68613,10 @@
     ],
     "entry_why": "정보 비대칭을 공개로 깬다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "시술 고객에게 가격·후기 앱"
+   },
    "hyps": [
     {
      "text": "병원 광고",
@@ -68057,6 +68921,10 @@
      "C"
     ],
     "entry_why": "경증을 원격으로 나눈다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "부모에게 원격 상담"
    },
    "hyps": [
     {
@@ -68367,6 +69235,10 @@
     ],
     "entry_why": "(실패) 진짜 니즈(A)는 있었지만 C를 만들 기술이 없었다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "환자에게 간편 검사(실패)"
+   },
    "hyps": [
     {
      "text": "극소량 혈액으로 다종 검사",
@@ -68660,6 +69532,10 @@
     ],
     "entry_why": "속도를 학생이 정한다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "학생에게 개인 속도 영상"
+   },
    "hyps": [
     {
      "text": "보충 수업",
@@ -68950,6 +69826,10 @@
      "C"
     ],
     "entry_why": "강의를 열고 인증으로 번다"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "명문대 강의를 일반 학습자에게"
    },
    "hyps": [
     {
@@ -69248,6 +70128,10 @@
      "C"
     ],
     "entry_why": "밤에 막힌 순간"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "학생에게 사진 검색 풀이"
    },
    "hyps": [
     {
@@ -69559,6 +70443,10 @@
     ],
     "entry_why": "약점을 먼저 찾는다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "수험생에게 AI 진단"
+   },
    "hyps": [
     {
      "text": "문제집 추가",
@@ -69864,6 +70752,10 @@
      "C"
     ],
     "entry_why": "시작 장벽을 한 상자에"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "직장인에게 강의 + 키트"
    },
    "hyps": [
     {
@@ -70174,6 +71066,10 @@
     ],
     "entry_why": "교실에 묶인 강의를 푼다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "유명 강의를 지방 학생에게"
+   },
    "hyps": [
     {
      "text": "지방 분원 개설",
@@ -70468,6 +71364,10 @@
     ],
     "entry_why": "(실패) 칸은 맞았지만 성과 검증이 없었다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "전환 희망자에게 소득공유 교육"
+   },
    "hyps": [
     {
      "text": "취업해야 학비를 내는 구조",
@@ -70759,6 +71659,10 @@
      "C"
     ],
     "entry_why": "교수 대신 현업자"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "직장인에게 실무 강의"
    },
    "hyps": [
     {
@@ -71052,6 +71956,10 @@
      "C"
     ],
     "entry_why": "숨은 공급을 드러낸다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기업에게 수동적 구직자 채용"
    },
    "hyps": [
     {
@@ -71362,6 +72270,10 @@
     ],
     "entry_why": "주면 받는 구조로 민감 정보"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "구직자에게 재직자 리뷰"
+   },
    "hyps": [
     {
      "text": "회사 홍보 강화",
@@ -71669,6 +72581,10 @@
      "C"
     ],
     "entry_why": "효과적 행동에 보상을 붙인다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "스타트업에게 보상형 추천"
    },
    "hyps": [
     {
@@ -71981,6 +72897,10 @@
     ],
     "entry_why": "흩어진 공급을 모은다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "구직자에게 통합 검색"
+   },
    "hyps": [
     {
      "text": "또 하나의 채용 사이트",
@@ -72289,6 +73209,10 @@
     ],
     "entry_why": "구매 단위를 현금 흐름에 맞춘다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "태양광을 농촌 가정으로"
+   },
    "hyps": [
     {
      "text": "가격 인하",
@@ -72581,6 +73505,10 @@
      "C"
     ],
     "entry_why": "기부를 판매에 묶는다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "착한 소비자에게 1+1 신발"
    },
    "hyps": [
     {
@@ -72887,6 +73815,10 @@
      "C"
     ],
     "entry_why": "기대 차이를 미리 관리"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 채용 과정의 정착률"
    },
    "hyps": [
     {
@@ -73196,6 +74128,10 @@
     ],
     "entry_why": "바꾸기가 안 오기보다 쉽게"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 환자 노쇼 줄이기"
+   },
    "hyps": [
     {
      "text": "부도 시 벌금",
@@ -73502,6 +74438,10 @@
     ],
     "entry_why": "결과 전에 진척을 보인다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 학원생 유지"
+   },
    "hyps": [
     {
      "text": "장기 등록 할인",
@@ -73796,6 +74736,10 @@
     ],
     "entry_why": "보이지 않는 효과를 수치로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 환자 복약 지속"
+   },
    "hyps": [
     {
      "text": "복약 알림",
@@ -74081,6 +75025,10 @@
      "C"
     ],
     "entry_why": "뒤 공정이 당겨 간다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 시장 원가·품질"
    },
    "hyps": [
     {
@@ -74395,6 +75343,10 @@
      "C"
     ],
     "entry_why": "증상 대신 원인"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 현장 개선"
    },
    "hyps": [
     {
@@ -74729,6 +75681,10 @@
      "C"
     ],
     "entry_why": "이직 비용을 계산하면 고임금이 싸다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 생산 효율"
    },
    "hyps": [
     {
@@ -75070,6 +76026,10 @@
     ],
     "entry_why": "핵심으로 돌아간다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "핵심 브릭으로 기존 팬 집중"
+   },
    "hyps": [
     {
      "text": "신사업을 더 늘린다",
@@ -75378,6 +76338,10 @@
     ],
     "entry_why": "가치의 대부분을 직접 가져온다"
    },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "출판사가 영화 제작으로"
+   },
    "hyps": [
     {
      "text": "판권료 인상",
@@ -75678,6 +76642,10 @@
      "C"
     ],
     "entry_why": "네 칸에 집중"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 시장에 제품 집중"
    },
    "hyps": [
     {
@@ -75981,6 +76949,10 @@
      "C"
     ],
     "entry_why": "복잡함을 뺀다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 시장 원가 구조"
    },
    "hyps": [
     {
@@ -76289,6 +77261,10 @@
      "C"
     ],
     "entry_why": "수익원을 쪼갠다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 승객 부가 판매"
    },
    "hyps": [
     {
@@ -76634,6 +77610,10 @@
     ],
     "entry_why": "소유를 구독으로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 전문가를 구독으로"
+   },
    "hyps": [
     {
      "text": "패키지 가격 인하",
@@ -76962,6 +77942,10 @@
     ],
     "entry_why": "세 이해관계를 같은 방향으로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 광고주·사용자 품질"
+   },
    "hyps": [
     {
      "text": "높은 입찰가 순서",
@@ -77271,6 +78255,10 @@
      "C"
     ],
     "entry_why": "아는 고객에게 확인을 없앤다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객 결제 완료"
    },
    "hyps": [
     {
@@ -77587,6 +78575,10 @@
     ],
     "entry_why": "모두를 같은 줄에 세우지 않는다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 투숙객 경험"
+   },
    "hyps": [
     {
      "text": "직원 증원",
@@ -77875,6 +78867,10 @@
      "C"
     ],
     "entry_why": "안 쓰는 것을 빼고 쓰는 것에 투자"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "출장객에게 모듈 객실"
    },
    "hyps": [
     {
@@ -78177,6 +79173,10 @@
      "C"
     ],
     "entry_why": "규칙 대신 인재 밀도"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "내부 조직 개선"
    },
    "hyps": [
     {
@@ -78481,6 +79481,10 @@
     ],
     "entry_why": "팀을 작게 쪼갠다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "내부 조직 개선"
+   },
    "hyps": [
     {
      "text": "조율 회의 강화",
@@ -78782,6 +79786,10 @@
      "C"
     ],
     "entry_why": "권한을 빼면 솔직함이 생긴다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "내부 제작 품질"
    },
    "hyps": [
     {
@@ -79093,6 +80101,10 @@
     ],
     "entry_why": "가치를 보이게 한다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "같은 차 시장에 하이브리드"
+   },
    "hyps": [
     {
      "text": "기존 차 연비 소폭 개선",
@@ -79385,6 +80397,10 @@
      "C"
     ],
     "entry_why": "고가로 시작해 내려간다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "차 시장에 고성능 전기차"
    },
    "hyps": [
     {
@@ -79679,6 +80695,10 @@
      "C"
     ],
     "entry_why": "둘을 하나로 합친다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "게이머에게 하이브리드 게임기"
    },
    "hyps": [
     {
@@ -79985,6 +81005,10 @@
     ],
     "entry_why": "(실패) 진입할 칸은 '자랑할 첫 차'였는데 '가장 싼 차'로 섰다"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "차를 오토바이 가족에게(실패)"
+   },
    "hyps": [
     {
      "text": "극단적 원가 절감",
@@ -80273,6 +81297,10 @@
      "B"
     ],
     "entry_why": "(실패) 경쟁사에 뺏긴 B 칸을 되찾지 못했다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 고객에게 연체료 없는 대여(실패: 늦음)"
    },
    "hyps": [
     {
@@ -80565,6 +81593,10 @@
      "B"
     ],
     "entry_why": "(실패) 경쟁사만 채우는 B(앱 생태계)를 메우지 못했다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 고객에게 스마트폰(실패: 늦음)"
    },
    "hyps": [
     {
@@ -80861,6 +81893,10 @@
     ],
     "entry_why": "(실패) 검색이라는 B 칸을 외주로 넘겼다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 이용자에게 검색(실패: 외주)"
+   },
    "hyps": [
     {
      "text": "포털 콘텐츠 확대",
@@ -81152,6 +82188,10 @@
      "C"
     ],
     "entry_why": "가격이 아니라 경험으로"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 투숙객 직접 예약"
    },
    "hyps": [
     {
@@ -81463,6 +82503,10 @@
     ],
     "entry_why": "고객이 참여하게 한다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 구독자 유지"
+   },
    "hyps": [
     {
      "text": "해지 시 할인 제안",
@@ -81753,6 +82797,10 @@
      "C"
     ],
     "entry_why": "가격과 가치를 연결"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객 가격 인상"
    },
    "hyps": [
     {
@@ -82048,6 +83096,10 @@
      "C"
     ],
     "entry_why": "결재가 필요 없는 크기로"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 대기업 시장 진입 속도"
    },
    "hyps": [
     {
@@ -82360,6 +83412,10 @@
     ],
     "entry_why": "판매자 수고를 대신"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 장터 매물 확보"
+   },
    "hyps": [
     {
      "text": "판매 수수료 인하",
@@ -82652,6 +83708,10 @@
      "C"
     ],
     "entry_why": "점심에 예약받는다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "동네 손님에게 예약 픽업"
    },
    "hyps": [
     {
@@ -82948,6 +84008,10 @@
     ],
     "entry_why": "기대를 관리해 평점을 지킨다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 배달 손님 평점"
+   },
    "hyps": [
     {
      "text": "리뷰 이벤트로 좋은 리뷰 유도",
@@ -83241,6 +84305,10 @@
      "C"
     ],
     "entry_why": "찾을 콘텐츠를 사용자가 만든다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "검색 이용자에게 Q&A"
    },
    "hyps": [
     {
@@ -83547,6 +84615,10 @@
      "C"
     ],
     "entry_why": "목돈을 월 납부로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "가정에게 렌털 + 관리"
    },
    "hyps": [
     {
@@ -83860,6 +84932,10 @@
     ],
     "entry_why": "관계와 데이터를 직접 소유"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "팬에게 공식 플랫폼"
+   },
    "hyps": [
     {
      "text": "SNS 계정 운영 강화",
@@ -84168,6 +85244,10 @@
      "C"
     ],
     "entry_why": "검증된 수요를 정식 제품으로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "게이머에게 정식 배틀로얄"
    },
    "hyps": [
     {
@@ -84501,6 +85581,10 @@
     ],
     "entry_why": "감정 표현을 상품으로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "메신저 이용자에게 유료 이모티콘"
+   },
    "hyps": [
     {
      "text": "메신저 유료화",
@@ -84827,6 +85911,10 @@
     ],
     "entry_why": "일반인이라는 비고객"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "이메일을 일반인에게"
+   },
    "hyps": [
     {
      "text": "기업용 메일 서버 판매",
@@ -85137,6 +86225,10 @@
     ],
     "entry_why": "(실패) 경쟁사만 채운 모바일 칸을 놓쳤다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 이용자에게 모바일(실패: 늦음)"
+   },
    "hyps": [
     {
      "text": "PC 기능 고도화",
@@ -85433,6 +86525,10 @@
      "C"
     ],
     "entry_why": "또래가 만든 콘텐츠로 판다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "10대 커뮤니티에 커머스"
    },
    "hyps": [
     {
@@ -85735,6 +86831,10 @@
      "C"
     ],
     "entry_why": "전문가가 찾아오게"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "생활 서비스 고객에게 견적 매칭"
    },
    "hyps": [
     {
@@ -86041,6 +87141,10 @@
      "C"
     ],
     "entry_why": "리뷰와 모국어로 신뢰"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "자유여행자에게 현지 투어 마켓"
    },
    "hyps": [
     {
@@ -86353,6 +87457,10 @@
     ],
     "entry_why": "평균 대신 나에게 맞는 예측"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "영화 고르는 사람에게 예측 별점"
+   },
    "hyps": [
     {
      "text": "전문가 리뷰",
@@ -86657,6 +87765,10 @@
      "C"
     ],
     "entry_why": "전문 거래에 커뮤니티 지식"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "수집가에게 취미 장터"
    },
    "hyps": [
     {
@@ -87003,6 +88115,10 @@
     ],
     "entry_why": "실패작에서 아무도 안 채운 니즈"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "사무직에게 붙였다 떼는 메모"
+   },
    "hyps": [
     {
      "text": "접착력을 높이는 연구 계속",
@@ -87329,6 +88445,10 @@
     ],
     "entry_why": "부작용에서 새 가치"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "같은 약을 새 적응증 환자에게"
+   },
    "hyps": [
     {
      "text": "협심증 연구 계속",
@@ -87638,6 +88758,10 @@
     ],
     "entry_why": "사라진 시장 대신 새 쓰임"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "벽지 세정제를 아이 놀이로"
+   },
    "hyps": [
     {
      "text": "세정제 가격 인하",
@@ -87946,6 +89070,10 @@
     ],
     "entry_why": "실패한 용도 대신 새 쓰임"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "벽지 소재를 포장재로"
+   },
    "hyps": [
     {
      "text": "벽지 디자인 개선",
@@ -88235,6 +89363,10 @@
      "A"
     ],
     "entry_why": "(실패) 가게 이익이라는 A 칸을 못 채웠다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "할인 고객에게 지역 딜(실패)"
    },
    "hyps": [
     {
@@ -88557,6 +89689,10 @@
     ],
     "entry_why": "(실패) 칸은 맞았지만 수요보다 큰 설비"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "장보기 고객에게 대형 자동화 배송(실패)"
+   },
    "hyps": [
     {
      "text": "인터넷 식료품 주문",
@@ -88875,6 +90011,10 @@
     ],
     "entry_why": "(실패) 정기배송으로 묶는 A 칸을 놓쳤다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "반려인에게 온라인 판매(실패)"
+   },
    "hyps": [
     {
      "text": "대규모 광고",
@@ -89160,6 +90300,10 @@
      "B"
     ],
     "entry_why": "(실패) 경쟁사가 채운 창작자 보상을 못 채웠다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "창작자에게 6초 영상(실패)"
    },
    "hyps": [
     {
@@ -89453,6 +90597,10 @@
      "A"
     ],
     "entry_why": "(실패) 안전이라는 A 칸을 못 채웠다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "학생에게 익명 게시판(실패)"
    },
    "hyps": [
     {
@@ -89755,6 +90903,10 @@
     ],
     "entry_why": "(실패) 칸은 있었지만 단위 경제 없이 확장"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "디자인 고객에게 플래시 세일(실패)"
+   },
    "hyps": [
     {
      "text": "디자인 상품 큐레이션",
@@ -90045,6 +91197,10 @@
      "C"
     ],
     "entry_why": "한 번 입을 옷은 빌린다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "여성에게 드레스 대여"
    },
    "hyps": [
     {
@@ -90351,6 +91507,10 @@
     ],
     "entry_why": "판매 수고를 대신"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "안 입는 옷 가진 사람에게 위탁 판매"
+   },
    "hyps": [
     {
      "text": "중고 거래 앱",
@@ -90656,6 +91816,10 @@
      "C"
     ],
     "entry_why": "메뉴 고민과 장보기를 한 상자로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "맞벌이에게 밀키트"
    },
    "hyps": [
     {
@@ -91004,6 +92168,10 @@
     ],
     "entry_why": "명상이 아니라 잠이라는 빈 니즈"
    },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "명상을 잠 못 드는 사람에게"
+   },
    "hyps": [
     {
      "text": "명상 앱 할인",
@@ -91313,6 +92481,10 @@
     ],
     "entry_why": "저장 도구를 발견의 장으로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "아이디어 모으는 사람에게 보드"
+   },
    "hyps": [
     {
      "text": "북마크 기능",
@@ -91618,6 +92790,10 @@
      "C"
     ],
     "entry_why": "공간 만들기를 사용자에게"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "관심사 토론자에게 서브레딧"
    },
    "hyps": [
     {
@@ -91929,6 +93105,10 @@
     ],
     "entry_why": "맡길 곳이 없으면 직접 만든다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 장터 이용자 신뢰(결제·물류)"
+   },
    "hyps": [
     {
      "text": "해외 마켓플레이스 모델 그대로",
@@ -92236,6 +93416,10 @@
     ],
     "entry_why": "숨은 마진을 투명하게"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "해외 카드 사용자에게 다통화 계좌"
+   },
    "hyps": [
     {
      "text": "환전소 비교",
@@ -92541,6 +93725,10 @@
      "C"
     ],
     "entry_why": "착용자 불편에서 출발"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "여성에게 얇은 보정 속옷"
    },
    "hyps": [
     {
@@ -92854,6 +94042,10 @@
     ],
     "entry_why": "고객이 이미 말하는 것을 만든다"
    },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "뷰티 블로그가 화장품 브랜드로"
+   },
    "hyps": [
     {
      "text": "유명인 광고",
@@ -93162,6 +94354,10 @@
     ],
     "entry_why": "가치 먼저, 연동은 나중"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "신규 사용자 첫 달 유지"
+   },
    "hyps": [
     {
      "text": "푸시 알림 강화",
@@ -93452,6 +94648,10 @@
      "C"
     ],
     "entry_why": "유료 경계를 성장 순간에"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "무료 사용자 유료 전환"
    },
    "hyps": [
     {
@@ -93752,6 +94952,10 @@
     ],
     "entry_why": "수요자 신뢰 먼저, 한 지역에"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 장터 수요자 확보"
+   },
    "hyps": [
     {
      "text": "학부모 대상 광고",
@@ -94041,6 +95245,10 @@
      "C"
     ],
     "entry_why": "구독 이유를 일정으로 분산"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 구독자 유지"
    },
    "hyps": [
     {
@@ -94333,6 +95541,10 @@
     ],
     "entry_why": "기념일 대신 일상"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "꽃 고객에게 일상 구독"
+   },
    "hyps": [
     {
      "text": "평일 할인",
@@ -94623,6 +95835,10 @@
      "C"
     ],
     "entry_why": "고객 사업의 성공이 리텐션"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 가게 해지 방어"
    },
    "hyps": [
     {
@@ -94932,6 +96148,10 @@
      "C"
     ],
     "entry_why": "기존 기사망으로 회수"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "배달 고객에게 다회용기"
    },
    "hyps": [
     {
@@ -95250,6 +96470,10 @@
      "C"
     ],
     "entry_why": "읽게 하지 말고 보게"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "사주 고객에게 웹툰형 사주"
    },
    "hyps": [
     {
@@ -95609,6 +96833,10 @@
      "C"
     ],
     "entry_why": "가벼운 가격의 빈칸"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "사주를 가벼운 MZ에게 990원"
    },
    "hyps": [
     {
@@ -96046,6 +97274,10 @@
     ],
     "entry_why": "모두 대신 나만의 주제"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "사주 고객에게 니치 주제"
+   },
    "hyps": [
     {
      "text": "총운 리포트를 더 싸게 판다",
@@ -96414,6 +97646,10 @@
     ],
     "entry_why": "혼자 보는 운세를 함께로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "무료 이용자를 공유로 유료 전환"
+   },
    "hyps": [
     {
      "text": "모든 운세를 유료로",
@@ -96716,6 +97952,10 @@
      "C"
     ],
     "entry_why": "AI 시대에 사람이라는 빈칸"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "고민자에게 비대면 사람 상담"
    },
    "hyps": [
     {
@@ -97020,6 +98260,10 @@
     ],
     "entry_why": "매일의 습관을 상담으로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "매일 이용자를 상담으로"
+   },
    "hyps": [
     {
      "text": "상담료 할인",
@@ -97312,6 +98556,10 @@
      "C"
     ],
     "entry_why": "문장이 아니라 정확도"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "유료 고객 방어(정확도)"
    },
    "hyps": [
     {
@@ -97615,6 +98863,10 @@
     ],
     "entry_why": "필요 없는 입력란을 뺀다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 방문자 결제 완료"
+   },
    "hyps": [
     {
      "text": "결제 단계 할인 쿠폰",
@@ -97916,6 +99168,10 @@
     ],
     "entry_why": "감 대신 실험"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 방문자 가입률"
+   },
    "hyps": [
     {
      "text": "직원들이 가장 좋아한 영상을 건다",
@@ -98214,6 +99470,10 @@
      "C"
     ],
     "entry_why": "이해되게 쓴다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 방문자 전환"
    },
    "hyps": [
     {
@@ -98518,6 +99778,10 @@
     ],
     "entry_why": "붙잡지 말고 남고 싶게"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 회원 유지 방식 변경"
+   },
    "hyps": [
     {
      "text": "해지 화면에 혜택을 한 번 더 안내",
@@ -98821,6 +100085,10 @@
     ],
     "entry_why": "전환율만 보는 실험을 멈춘다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 방문자 전환 방식 변경"
+   },
    "hyps": [
     {
      "text": "'지금 예약 시 할인' 문구",
@@ -99123,6 +100391,10 @@
      "C"
     ],
     "entry_why": "해지를 가입만큼 쉽게"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 구독자 유지 방식 변경"
    },
    "hyps": [
     {
@@ -99466,6 +100738,10 @@
      "C"
     ],
     "entry_why": "같은 고민을 다른 체계로 다시 확인"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "재회 고객에게 자미두수"
    },
    "hyps": [
     {
@@ -99833,6 +101109,10 @@
     ],
     "entry_why": "질문 하나에 값을 매긴다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "질문자에게 질문 단위 상담"
+   },
    "hyps": [
     {
      "text": "상담을 30분 단위로 싸게 판다",
@@ -100197,6 +101477,10 @@
      "C"
     ],
     "entry_why": "답변이 아니라 해결"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 고객사에 해결당 과금 AI"
    },
    "hyps": [
     {
@@ -100564,6 +101848,10 @@
      "C"
     ],
     "entry_why": "읽고 생긴 궁금증을 판다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 이용자에게 질문권"
    },
    "hyps": [
     {
@@ -100936,6 +102224,10 @@
     ],
     "entry_why": "맞는 상담사 찾는 비용을 없앤다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "신규 상담 고객 첫 전환"
+   },
    "hyps": [
     {
      "text": "상담료를 낮춘다",
@@ -101297,6 +102589,10 @@
     ],
     "entry_why": "습관을 지키려 유료를 무료로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 학습자 습관 유지"
+   },
    "hyps": [
     {
      "text": "Max 가격을 낮춘다",
@@ -101643,6 +102939,10 @@
      "C"
     ],
     "entry_why": "확인 가능한 답"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "검색 이용자에게 인용 답변"
    },
    "hyps": [
     {
@@ -101992,6 +103292,10 @@
      "B"
     ],
     "entry_why": "(실패) 무료 AI가 채운 칸을 되찾지 못했다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "학생에게 AI 학습 도움(실패: 늦음)"
    },
    "hyps": [
     {
@@ -102349,6 +103653,10 @@
     ],
     "entry_why": "챗봇 답도 회사 책임으로 설계"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 승객 안내 방식"
+   },
    "hyps": [
     {
      "text": "챗봇 화면에 '정확하지 않을 수 있음' 문구를 단다",
@@ -102681,6 +103989,10 @@
      "C"
     ],
     "entry_why": "위기 신호는 사람에게"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 상담 이용자 안내 방식"
    },
    "hyps": [
     {
@@ -103035,6 +104347,10 @@
     ],
     "entry_why": "검색 트래픽을 상담으로"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "검색 이용자에게 1:1 상담"
+   },
    "hyps": [
     {
      "text": "운세 콘텐츠를 더 많이 노출한다",
@@ -103381,6 +104697,10 @@
      "C"
     ],
     "entry_why": "(실패) 칸은 맞았지만 원가 구조가 없었다"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "운세 이용자에게 대화형 운세"
    },
    "hyps": [
     {
@@ -103745,6 +105065,10 @@
     ],
     "entry_why": "동의와 안전을 먼저"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "이용자에게 AI 친구"
+   },
    "hyps": [
     {
      "text": "약관에 학습 활용 문구를 넣는다",
@@ -104093,6 +105417,10 @@
      "C"
     ],
     "entry_why": "안전이라는 차별"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "청소년에게 안전한 캐릭터챗"
    },
    "hyps": [
     {
@@ -104451,6 +105779,10 @@
      "C"
     ],
     "entry_why": "범용이 못 채우는 장르 규칙"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "BL 팬에게 특화 캐릭터챗"
    },
    "hyps": [
     {
@@ -104811,6 +106143,10 @@
      "C"
     ],
     "entry_why": "가성비를 글자 수로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "캐릭터챗 이용자에게 장면형 답"
    },
    "hyps": [
     {
@@ -105182,6 +106518,10 @@
     ],
     "entry_why": "무료 무제한으로 몰입"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "이용자에게 무료 무제한 캐릭터챗"
+   },
    "hyps": [
     {
      "text": "대화 횟수를 제한하고 유료로 푼다",
@@ -105552,6 +106892,10 @@
     ],
     "entry_why": "대화량만큼 내는 팬덤 소비"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "서브컬처 팬에게 종량형 캐릭터챗"
+   },
    "hyps": [
     {
      "text": "범용 AI 구독을 판다",
@@ -105912,6 +107256,10 @@
      "C"
     ],
     "entry_why": "국내 검증 엔진을 현지 브랜드로"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "같은 엔진을 일본·북미로"
    },
    "hyps": [
     {
@@ -106278,6 +107626,10 @@
     ],
     "entry_why": "공식성이라는 차별"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "웹툰 팬에게 공식 캐릭터챗"
+   },
    "hyps": [
     {
      "text": "이용자 제작 캐릭터를 무제한 허용한다",
@@ -106627,6 +107979,10 @@
      "C"
     ],
     "entry_why": "확률형을 확정형으로 옮긴다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 이용자 이벤트 방식 변경"
    },
    "hyps": [
     {
@@ -106983,6 +108339,10 @@
      "C"
     ],
     "entry_why": "모델에 맞는 고객을 고른다"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "각자 기존 이용자에 맞춘 수익 모델"
    },
    "hyps": [
     {
@@ -107361,6 +108721,10 @@
     ],
     "entry_why": "품질 차이를 판다"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 이용자 유료 전환"
+   },
    "hyps": [
     {
      "text": "무료 대화 횟수를 줄이고 횟수를 판다",
@@ -107726,6 +109090,10 @@
      "C"
     ],
     "entry_why": "돈 내는 팬에 집중"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "돈 내는 기존 팬 집중"
    },
    "hyps": [
     {
@@ -108093,6 +109461,10 @@
      "C"
     ],
     "entry_why": "창작자에게 현금"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 플랫폼 공급 확대"
    },
    "hyps": [
     {
@@ -108470,6 +109842,10 @@
     ],
     "entry_why": "기억을 판다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 이용자에게 기억 기능"
+   },
    "hyps": [
     {
      "text": "맥락 창을 늘린다",
@@ -108835,6 +110211,10 @@
      "C"
     ],
     "entry_why": "차단과 방치 사이 빈칸"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 청소년 이용 방식 변경"
    },
    "hyps": [
     {
@@ -109216,6 +110596,10 @@
      "C"
     ],
     "entry_why": "포지션을 바꿔 빈칸에"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "같은 엔진을 북미 애니 팬에게"
    },
    "hyps": [
     {
@@ -109602,6 +110986,10 @@
     ],
     "entry_why": "원가 구조를 설계"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 사업 원가 구조"
+   },
    "hyps": [
     {
      "text": "가격을 올린다",
@@ -109972,6 +111360,10 @@
      "C"
     ],
     "entry_why": "원가를 가격에 투명하게"
+   },
+   "ansoff": {
+    "cell": "market_dev",
+    "why": "같은 제품을 나라별 가격으로"
    },
    "hyps": [
     {
@@ -110365,6 +111757,10 @@
     ],
     "entry_why": "검색 언어를 매력·연애로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "같은 고객층 검색 유입"
+   },
    "hyps": [
     {
      "text": "검색 광고 입찰가를 올린다",
@@ -110738,6 +112134,10 @@
     ],
     "entry_why": "온라인에 없는 경험"
    },
+   "ansoff": {
+    "cell": "diversify",
+    "why": "앱 사주가 오프라인 체험·굿즈로"
+   },
    "hyps": [
     {
      "text": "온라인 광고를 늘린다",
@@ -111108,6 +112508,10 @@
     ],
     "entry_why": "정확도 열세(B)를 메워 차별로"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 고객 정확도 신뢰"
+   },
    "hyps": [
     {
      "text": "해석 문장을 더 길고 그럴듯하게 만든다",
@@ -111466,6 +112870,10 @@
      "C"
     ],
     "entry_why": "해석자를 캐릭터로"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "기존 고객에게 캐릭터 해석자"
    },
    "hyps": [
     {
@@ -111833,6 +113241,10 @@
      "C"
     ],
     "entry_why": "묻기 민망한 고민(위험 관리 필요)"
+   },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "성인 고객에게 금기 주제 사주"
    },
    "hyps": [
     {
@@ -112205,6 +113617,10 @@
     ],
     "entry_why": "실험 속도로 수요를 찾는다"
    },
+   "ansoff": {
+    "cell": "product_dev",
+    "why": "다양한 고민 수요에 새 주제"
+   },
    "hyps": [
     {
      "text": "대규모 투자를 받아 광고를 늘린다",
@@ -112573,6 +113989,10 @@
     ],
     "entry_why": "같은 불안, 다른 화면"
    },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 이용자 화면 설계"
+   },
    "hyps": [
     {
      "text": "한 가지 화면 톤으로 모든 사용자를 받는다",
@@ -112926,6 +114346,10 @@
      "C"
     ],
     "entry_why": "정직한 결제 화면"
+   },
+   "ansoff": {
+    "cell": "penetration",
+    "why": "기존 결제 화면 개선"
    },
    "hyps": [
     {
