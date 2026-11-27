@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'key_metrics', 'lesson']
 
 
 def fail(msg):
@@ -417,6 +417,53 @@ def main():
             fail(f'pareto.txt:{n} {p[0]} 중복')
         byid[p[0]]['pareto'] = {'vital_few': p[1], 'effect': p[2],
                                 'source': None if src == '추정' else src, 'inferred': src == '추정'}
+    def quad(sp, im):
+        if im >= 4:
+            return 'quick_win' if sp >= 4 else 'big_bet'
+        return 'chore' if sp >= 4 else 'drop'
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/speed-impact.txt')):
+        head, _, why = line.partition(' || ')
+        cid, _, body = head.partition(' | ')
+        cid = cid.strip()
+        c = byid.get(cid)
+        if not c or not c.get('issue_tree') or not c.get('pareto') or not why.strip():
+            fail(f'speed-impact.txt:{n} 사례·이슈트리·파레토 요약이 먼저 필요: {cid}')
+        groups_ = body.strip().split(' ; ')
+        tree = c['issue_tree']['branches']
+        if len(groups_) != len(tree):
+            fail(f'speed-impact.txt:{n} {cid} 가지 수가 이슈트리와 다름')
+        items = []
+        for b, g in zip(tree, groups_):
+            cells = g.split()
+            if len(cells) != len(b['sub']):
+                fail(f'speed-impact.txt:{n} {cid} [{b["issue"]}] 하위 이슈 수가 다름')
+            for sub, cell in zip(b['sub'], cells):
+                sel = cell.startswith('*')
+                sp, _, im = cell.lstrip('*').partition('/')
+                if not (sp.isdigit() and im.isdigit() and 1 <= int(sp) <= 5 and 1 <= int(im) <= 5):
+                    fail(f'speed-impact.txt:{n} {cid} 점수 형식: {cell}')
+                sp, im = int(sp), int(im)
+                if sel and im < 4:
+                    fail(f'speed-impact.txt:{n} {cid} 임팩트 4 미만은 선별할 수 없음: {sub}')
+                items.append({'branch': b['issue'], 'issue': sub, 'speed': sp, 'impact': im,
+                              'quadrant': quad(sp, im), 'selected': sel})
+        if not any(i['selected'] for i in items):
+            fail(f'speed-impact.txt:{n} {cid} 선별한 항목 없음')
+        c['pareto']['matrix'] = items
+        c['pareto']['why'] = why.strip()
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/key-metrics.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 4 or p[0] not in byid or not all(p[1:]):
+            fail(f'key-metrics.txt:{n} 형식: {line[:60]}')
+        c = byid[p[0]]
+        if not c.get('goal'):
+            fail(f'key-metrics.txt:{n} {p[0]} 목표 재분석(goal.txt)이 먼저 필요')
+        lead = [x.strip() for x in p[1].split(', ') if x.strip()]
+        if not 1 <= len(lead) <= 3:
+            fail(f'key-metrics.txt:{n} {p[0]} 선행 지표는 1~3개')
+        if c.get('key_metrics'):
+            fail(f'key-metrics.txt:{n} {p[0]} 중복')
+        c['key_metrics'] = {'north_star': c['goal']['metric'], 'leading': lead, 'guardrail': p[2], 'vanity': p[3]}
     groups = {}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/domains.txt')):
         g, _, toks = line.partition(' | ')
@@ -441,7 +488,7 @@ def main():
         c.setdefault('trade_on', None)
         c.setdefault('anti_opinion', None)
         c.setdefault('pro_opinion', None)
-        for k in ('goal', 'issue_tree', 'pareto'):
+        for k in ('goal', 'issue_tree', 'pareto', 'key_metrics'):
             c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)

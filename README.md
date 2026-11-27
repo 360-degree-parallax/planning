@@ -19,9 +19,10 @@
 | 6. 트레이드온 | 둘 중 하나라던 것을 둘 다 잡은 방법 | 모든 사례 |
 | 7. 목표 재분석 | 표면 목표 → 재정의한 목표 → 지표 | deep 사례 |
 | 8. 이슈트리 | 재정의한 목표를 MECE로 쪼개고 공략한 가지 표시 | deep 사례 |
-| 9. 파레토 | 결과의 대부분을 만드는 핵심 소수 | deep 사례 |
+| 9. 파레토 | 하위 이슈를 속도×임팩트로 매겨 중요한 소수만 선별 | deep 사례 |
+| 10. 중요 지표 선별 | 북극성 1 · 선행 1~3 · 가드레일 1 · 허영 지표(제외) | deep 사례 |
 
-1~6은 **문제를 깨닫고 본질을 찾는** 단계, 7~9는 **찾은 문제를 구조화하는** 단계입니다.
+1~6은 **문제를 깨닫고 본질을 찾는** 단계, 7~10은 **찾은 문제를 구조화하고 중요한 것만 남기는** 단계입니다.
 
 - 해결은 그 사례가 실제로 한 것이고, 각 단계는 해결이 '왜' 그 모양이 되었는지를 드러내는 해석입니다. 오피니언 중 출처 URL이 없는 것은 '추정'으로 표시합니다. 전체: [docs/so-what.md](docs/so-what.md)
 
@@ -59,7 +60,7 @@
 | [docs/saju-rivals-deep.md](docs/saju-rivals-deep.md) | 사주아이·타이트사주 비교와 두 사례의 본질 |
 | [docs/tightsaju-deep-dive.md](docs/tightsaju-deep-dive.md) | 타이트사주 단계별 사례와 본질(유입·팝업·신뢰·IP·니치·성장) |
 | [docs/design-ux-cases.md](docs/design-ux-cases.md) | 디자인·UX·브랜드 사례 모음(운세 서비스 화면 문법, 캐릭터, 결제 화면 규제) |
-| [docs/so-what.md](docs/so-what.md) | 본질 파악·구조화 체인: 의심 → 관습 파괴 → 긍정·안티 오피니언 → 트레이드온 → 목표 재분석 → 이슈트리 → 파레토 → 해결 |
+| [docs/so-what.md](docs/so-what.md) | 본질 파악·구조화 체인: 의심 → 관습 파괴 → 긍정·안티 오피니언 → 트레이드온 → 목표 재분석 → 이슈트리 → 파레토 → 중요 지표 → 해결 |
 | [docs/competitors.md](docs/competitors.md) | 국내 운세·사주 경쟁사 기능 지도 |
 | [docs/compliance.md](docs/compliance.md) | 실험 전 확인할 규정 체크리스트 |
 | [docs/tracking-plan.md](docs/tracking-plan.md) | 단계별 이벤트 정의 (도달 수 집계 기준) |
