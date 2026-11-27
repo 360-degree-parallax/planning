@@ -18693,10 +18693,43 @@
     "symptom": "택시 잡기가 어렵다",
     "problem": "차와 승객이 서로의 위치를 모르고, 공급(차량 수)이 면허로 묶여 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 택시를 못 잡나: 차가 어디 있는지 모른다",
+     "왜 모르나: 차와 승객이 연결되지 않는다",
+     "왜 공급이 부족한가: 면허로 차량 수가 묶여 있다"
+    ],
+    "root_cause": "위치 정보 단절과 묶인 공급"
+   },
+   "pest": {
+    "political": "택시 면허·운송 규제",
+    "economic": "유휴 차량",
+    "social": "스마트폰 보급",
+    "technological": "GPS 매칭·동적 가격",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "위치 매칭 기술",
+    "opportunity": "스마트폰 보급",
+    "so": "개인 차량 호출 + 수요 연동 가격",
+    "weakness": "규제 충돌",
+    "wo": "지역별 규제 대응",
+    "threat": "택시 업계 반발",
+    "st": "안전 기능으로 신뢰"
+   },
+   "three_c": {
+    "customer": "택시를 못 잡는 도시인",
+    "competitor": "면허 택시",
+    "company": "매칭 기술",
+    "gap": "몇 분 안에 오는 차"
+   },
    "hyps": [
     {
      "text": "택시 면허를 늘린다",
@@ -18770,21 +18803,150 @@
     ],
     "solution": "스마트폰 위치 매칭 + 수요 연동 가격",
     "mode": "break",
-    "conclusion": "수요 연동 가격으로 공급을 끌어낸다",
-    "conclusion_auto": true
+    "conclusion": "위치를 연결하고 공급을 풀어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "승객",
+    "says": "차가 어디 오는지 보여서 안심이다",
+    "reveals": "가시성이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "택시 기사",
+    "says": "생계를 위협한다",
+    "reveals": "규제 공정성 논란",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "공정한 요금 대 공급 확보",
     "how": "수요 연동 가격으로 피크 공급을 끌어냈다(공정성 논란은 남음)"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "호출 수",
+    "reframed": "몇 분 안에 차 연결",
+    "metric": "평균 도착 시간"
+   },
+   "issue_tree": {
+    "root": "택시 잡기를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "택시 개선",
+      "chosen": false,
+      "sub": [
+       "콜택시",
+       "증차"
+      ]
+     },
+     {
+      "issue": "매칭",
+      "chosen": true,
+      "sub": [
+       "위치 공유",
+       "개인 차량"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "수요 연동",
+       "정액"
+      ]
+     }
+    ],
+    "why": "위치와 공급이 함께 풀려야 한다"
+   },
+   "pareto": {
+    "vital_few": "피크 시간 수요",
+    "effect": "미충족 수요의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "택시 개선",
+      "issue": "콜택시",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "택시 개선",
+      "issue": "증차",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "매칭",
+      "issue": "위치 공유",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "매칭",
+      "issue": "개인 차량",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "수요 연동",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "정액",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "위치 매칭과 개인 공급이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 매칭인가: 이용이 는다",
+     "왜 성장인가: 기사와 승객이 서로를 부른다"
+    ],
+    "intent": "네트워크 성장",
+    "intent_metric": "총 예약액",
+    "mode": "raise",
+    "criterion": "총 예약액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "평균 도착 시간",
+    "leading": [
+     "평균 도착 시간",
+     "호출 성사율"
+    ],
+    "guardrail": "안전 사고",
+    "vanity": "앱 설치 수",
+    "intent_metric": "총 예약액",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "매칭 데이터와 가격 실험",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "타이밍(스마트폰)과 맹점(일반인 기사·변동 요금)이 겹쳤다. 다만 규제 문제는 나라마다 다르게 나타났다."
   },
   {
@@ -18827,10 +18989,41 @@
     "symptom": "택시 서비스 불만",
     "problem": "승차 거부 없는 깨끗한 이동 경험에 대한 수요가 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 택시 불만이 많나: 승차 거부와 불친절",
+     "왜 그런가: 기사가 손님을 고른다",
+     "왜 대안이 없나: 운송 사업이 면허로 막혀 있다"
+    ],
+    "root_cause": "규제가 대안을 막는다"
+   },
+   "pest": {
+    "political": "여객운수사업법 개정(타다 금지법)",
+    "economic": "택시 요금",
+    "social": "서비스 품질 요구",
+    "technological": "자동 배차",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "자동 배차와 서비스 품질",
+    "opportunity": "승차 거부 불만",
+    "so": "승합차 렌트 + 기사",
+    "weakness": "규제 의존 구조",
+    "wo": "택시 업계와 협력",
+    "threat": "법 개정",
+    "st": "(실패) 규제 리스크 해소 못 함"
+   },
+   "three_c": {
+    "customer": "승차 거부가 싫은 승객",
+    "competitor": "일반 택시",
+    "company": "자동 배차",
+    "gap": "거부 없는 깨끗한 이동"
+   },
    "hyps": [
     {
      "text": "배차를 자동으로 하고 승차 거부를 없앤다",
@@ -18904,21 +19097,150 @@
     ],
     "solution": "자동 배차로 경험은 검증했으나 규제로 중단",
     "mode": "break",
-    "conclusion": "그러나 경험이 맞아도 규제를 먼저 풀어야 한다",
-    "conclusion_auto": true
+    "conclusion": "수요가 검증돼도 규제 위험을 풀지 못하면 사업이 멈춘다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "승객",
+    "says": "거부 없이 조용히 간다",
+    "reveals": "서비스 경험이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "택시 업계",
+    "says": "불법 영업이다",
+    "reveals": "규제 갈등이 사업을 멈춘다",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "서비스 품질 대 기존 규제",
     "how": "자동 배차로 품질은 증명했지만 규제와 양립시키지 못했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "이용자 확보",
+    "reframed": "규제 안에서 지속 가능한 이동",
+    "metric": "지속 운행 가능성"
+   },
+   "issue_tree": {
+    "root": "거부 없는 이동을 지속하려면",
+    "branches": [
+     {
+      "issue": "서비스",
+      "chosen": false,
+      "sub": [
+       "자동 배차",
+       "친절"
+      ]
+     },
+     {
+      "issue": "규제 해결",
+      "chosen": true,
+      "sub": [
+       "입법 대응",
+       "택시 협력"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "요금",
+       "할인"
+      ]
+     }
+    ],
+    "why": "규제가 사업 존속을 결정한다"
+   },
+   "pareto": {
+    "vital_few": "규제 리스크",
+    "effect": "사업 중단 원인의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "서비스",
+      "issue": "자동 배차",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "서비스",
+      "issue": "친절",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "규제 해결",
+      "issue": "입법 대응",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "규제 해결",
+      "issue": "택시 협력",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "요금",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "규제 해결이 핵심이었지만 느렸다"
+   },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 규제인가: 사업이 멈춘다",
+     "왜 위험인가: 법 하나로 서비스가 사라진다"
+    ],
+    "intent": "사업 존속",
+    "intent_metric": "운행 지속 여부",
+    "mode": "hold",
+    "criterion": "규제 대응 비용이 늘어도 서비스가 유지되면 성공(실패 사례)"
+   },
+   "key_metrics": {
+    "north_star": "지속 운행 가능성",
+    "leading": [
+     "승차 거부 0건 유지",
+     "재이용률"
+    ],
+    "guardrail": "규제 위반 위험",
+    "vanity": "앱 설치 수",
+    "intent_metric": "운행 지속 여부",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "이용 데이터와 고객 반응",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객 가치가 맞아도 '불가능(규제)' 판정을 가볍게 보면 사업 전체가 무너진다."
   },
   {
@@ -18961,10 +19283,42 @@
     "symptom": "택시 불신",
     "problem": "요금과 기사 신원이 투명하지 않다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 택시를 못 믿나: 바가지와 안전 문제",
+     "왜 그런가: 요금과 기사가 투명하지 않다",
+     "왜 카드로 못 푸나: 카드 보급률이 낮다"
+    ],
+    "root_cause": "요금·신원 불투명과 현지 결제 습관"
+   },
+   "pest": {
+    "political": "운송 규제",
+    "economic": "낮은 카드 보급",
+    "social": "안전 불안",
+    "technological": "현금 결제 지원 앱",
+    "key": [
+     "S",
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "현지 이해",
+    "opportunity": "안전 수요",
+    "so": "정액 요금 + 기사 신원 + 현금 결제",
+    "weakness": "자본 경쟁",
+    "wo": "결제·배달 슈퍼앱",
+    "threat": "우버 진출",
+    "st": "현지화로 방어"
+   },
+   "three_c": {
+    "customer": "택시가 불안한 동남아 승객",
+    "competitor": "일반 택시·글로벌 호출",
+    "company": "현지 이해",
+    "gap": "현금으로도 되는 안전한 호출"
+   },
    "hyps": [
     {
      "text": "해외 차량 호출 앱 그대로 도입",
@@ -19038,21 +19392,150 @@
     ],
     "solution": "현금 결제 허용 + 기사 신원·요금 사전 공개",
     "mode": "break",
-    "conclusion": "현금을 받고 신원·요금을 미리 보여 준다",
-    "conclusion_auto": true
+    "conclusion": "글로벌 모델을 현지 결제 습관에 맞춰라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "승객",
+    "says": "요금이 미리 정해져 안심이다",
+    "reveals": "투명성이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "기사",
+    "says": "수수료가 높다",
+    "reveals": "공급자 보상",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "앱 편의 대 현금 사회",
     "how": "현금 결제를 허용하면서 앱으로 안전·투명성을 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "호출 확대",
+    "reframed": "안전하고 투명한 이동",
+    "metric": "재이용률"
+   },
+   "issue_tree": {
+    "root": "택시 불신을 없애려면",
+    "branches": [
+     {
+      "issue": "단속",
+      "chosen": false,
+      "sub": [
+       "신고",
+       "처벌"
+      ]
+     },
+     {
+      "issue": "투명성",
+      "chosen": true,
+      "sub": [
+       "정액 요금",
+       "기사 신원"
+      ]
+     },
+     {
+      "issue": "결제",
+      "chosen": false,
+      "sub": [
+       "현금",
+       "전자지갑"
+      ]
+     }
+    ],
+    "why": "투명하면 믿는다"
+   },
+   "pareto": {
+    "vital_few": "정액 요금",
+    "effect": "신뢰 개선의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "단속",
+      "issue": "신고",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "단속",
+      "issue": "처벌",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "투명성",
+      "issue": "정액 요금",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "투명성",
+      "issue": "기사 신원",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "현금",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "전자지갑",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "투명성이 핵심이고 현금 결제는 빠른 승리"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 신뢰인가: 다시 탄다",
+     "왜 성장인가: 슈퍼앱의 기반이 된다"
+    ],
+    "intent": "슈퍼앱 성장",
+    "intent_metric": "월간 거래 이용자",
+    "mode": "raise",
+    "criterion": "월간 거래 이용자가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재이용률",
+    "leading": [
+     "재이용률",
+     "안전 신고율"
+    ],
+    "guardrail": "기사 이탈",
+    "vanity": "다운로드 수",
+    "intent_metric": "월간 거래 이용자",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "현지 인터뷰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "같은 모델도 현지의 '당연한 조건'을 바꾸지 않으면 안 된다."
   },
   {
@@ -19095,10 +19578,39 @@
     "symptom": "기사 수입이 낮다",
     "problem": "기사와 승객이 만나는 방법이 '길에서 기다리기'뿐이다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 기사가 하루 대부분을 기다리나: 손님을 길에서 기다린다",
+     "왜 그런가: 만나는 방법이 그것뿐이다",
+     "왜 한 서비스만 하나: 기사는 승객만 태운다는 통념"
+    ],
+    "root_cause": "기사망이 놀고 있다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "비공식 노동",
+    "social": "오토바이 이동 문화",
+    "technological": "호출 앱",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "오토바이 기사망",
+    "opportunity": "교통 체증",
+    "so": "한 기사망 위 여러 서비스",
+    "weakness": "수익성",
+    "wo": "결제로 수익 다각화",
+    "threat": "그랩 경쟁",
+    "st": "생태계로 잠금"
+   },
+   "three_c": {
+    "customer": "막히는 도시의 이용자",
+    "competitor": "길가 오젝",
+    "company": "기사망",
+    "gap": "기사 한 명이 다 해 주는 슈퍼앱"
+   },
    "hyps": [
     {
      "text": "기사 대기 장소를 늘린다",
@@ -19157,21 +19669,150 @@
     ],
     "solution": "오토바이 기사망 위 배달·택배·결제 슈퍼앱",
     "mode": "break",
-    "conclusion": "서비스를 얹을수록 기사 수입과 고객 빈도가 오른다",
-    "conclusion_auto": true
+    "conclusion": "놀고 있는 네트워크 위에 서비스를 쌓아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "기사",
+    "says": "기다리는 시간이 줄고 수입이 늘었다",
+    "reveals": "가동률이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "적자가 오래 간다",
+    "reveals": "수익성 과제",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "기사 수입 대 고객 가격",
     "how": "한 기사망에 여러 서비스를 얹어 기사 가동률을 높여 둘 다 잡았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "호출 확대",
+    "reframed": "기사 가동률 높이기",
+    "metric": "기사당 하루 주문 수"
+   },
+   "issue_tree": {
+    "root": "기사 대기를 줄이려면",
+    "branches": [
+     {
+      "issue": "승객 늘리기",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "광고"
+      ]
+     },
+     {
+      "issue": "서비스 확장",
+      "chosen": true,
+      "sub": [
+       "배달",
+       "심부름"
+      ]
+     },
+     {
+      "issue": "결제",
+      "chosen": false,
+      "sub": [
+       "전자지갑",
+       "포인트"
+      ]
+     }
+    ],
+    "why": "같은 기사망에 일을 더 얹는다"
+   },
+   "pareto": {
+    "vital_few": "음식 배달",
+    "effect": "추가 주문의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "승객 늘리기",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "승객 늘리기",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "서비스 확장",
+      "issue": "배달",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "서비스 확장",
+      "issue": "심부름",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "전자지갑",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "결제",
+      "issue": "포인트",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "서비스 확장이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 확장인가: 기사가 남는다",
+     "왜 성장인가: 한 앱에서 모든 거래"
+    ],
+    "intent": "슈퍼앱 성장",
+    "intent_metric": "총 거래액",
+    "mode": "raise",
+    "criterion": "총 거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "기사당 하루 주문 수",
+    "leading": [
+     "기사당 하루 주문 수",
+     "서비스 교차 이용률"
+    ],
+    "guardrail": "기사 수입 하락",
+    "vanity": "앱 설치 수",
+    "intent_metric": "총 거래액",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "기사 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "공급자의 빈 시간을 다른 서비스로 채우면 플랫폼이 넓어진다."
   },
   {
@@ -19214,10 +19855,43 @@
     "symptom": "교외 주민 배달 수요 미충족",
     "problem": "교외는 배달 효율이 낮다고 다들 피했다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 교외는 배달이 없나: 다들 피했다",
+     "왜 피하나: 배달 효율이 낮다고 봤다",
+     "왜 틀렸나: 경쟁이 없고 가족 단위 주문이 크다"
+    ],
+    "root_cause": "교외는 비효율이라는 가정"
+   },
+   "pest": {
+    "political": "긱 노동 규제",
+    "economic": "교외 가족 수요",
+    "social": "교외 거주",
+    "technological": "배차 최적화",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "배차 최적화",
+    "opportunity": "교외 수요",
+    "so": "교외 선점",
+    "weakness": "긴 배달 거리",
+    "wo": "큰 주문으로 상쇄",
+    "threat": "경쟁사 교외 진출",
+    "st": "선점 밀도로 방어"
+   },
+   "three_c": {
+    "customer": "배달이 없던 교외 가족",
+    "competitor": "도시 중심 배달 앱",
+    "company": "배차 최적화",
+    "gap": "교외 배달"
+   },
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -19291,21 +19965,149 @@
     ],
     "solution": "교외 가족 주문 시장 우선 공략",
     "mode": "break",
-    "conclusion": "먼저 들어가 선점한다",
-    "conclusion_auto": true
+    "conclusion": "경쟁자가 무시한 시장을 먼저 잡아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "교외 가족",
+    "says": "드디어 배달이 된다",
+    "reveals": "미충족 수요",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "배달원",
+    "says": "거리가 멀어 수입이 낮다",
+    "reveals": "공급자 보상",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "배달 거리 대 효율",
     "how": "큰 주문 금액과 쉬운 주차로 먼 교외에서도 효율을 냈다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "배달 확대",
+    "reframed": "교외 선점",
+    "metric": "교외 시장 점유율"
+   },
+   "issue_tree": {
+    "root": "배달 시장을 키우려면",
+    "branches": [
+     {
+      "issue": "도시 경쟁",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "광고"
+      ]
+     },
+     {
+      "issue": "교외 진출",
+      "chosen": true,
+      "sub": [
+       "선점",
+       "큰 주문"
+      ]
+     },
+     {
+      "issue": "효율",
+      "chosen": false,
+      "sub": [
+       "배차",
+       "묶음 배달"
+      ]
+     }
+    ],
+    "why": "교외에는 경쟁이 없었다"
+   },
+   "pareto": {
+    "vital_few": "교외 가족 주문",
+    "effect": "성장의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "도시 경쟁",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "도시 경쟁",
+      "issue": "광고",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "교외 진출",
+      "issue": "선점",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "교외 진출",
+      "issue": "큰 주문",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "효율",
+      "issue": "배차",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "효율",
+      "issue": "묶음 배달",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "교외 선점이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 교외인가: 경쟁이 없다",
+     "왜 성장인가: 1위 점유율"
+    ],
+    "intent": "시장 점유율",
+    "intent_metric": "미국 배달 점유율",
+    "mode": "raise",
+    "criterion": "배달 점유율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "교외 시장 점유율",
+    "leading": [
+     "교외 주문 수",
+     "주문당 금액"
+    ],
+    "guardrail": "배달원 수입",
+    "vanity": "다운로드 수",
+    "intent_metric": "미국 배달 점유율",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "지역 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'효율이 낮다'는 통념을 데이터로 다시 확인해 보면 기회가 숨어 있다."
   },
   {
@@ -19344,10 +20146,41 @@
     "symptom": "양쪽 모두 참여 저조",
     "problem": "닭이 먼저냐 달걀이 먼저냐 문제"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 예약 서비스가 안 크나: 식당이 없다",
+     "왜 없나: 손님이 없으니 안 온다",
+     "왜 못 푸나: 양쪽을 동시에 모으려 한다"
+    ],
+    "root_cause": "닭과 달걀 문제"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "식당 운영 비용",
+    "social": "외식 문화",
+    "technological": "예약 관리 소프트웨어",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "예약 관리 도구",
+    "opportunity": "외식 증가",
+    "so": "공급자 도구 먼저",
+    "weakness": "식당 수수료 불만",
+    "wo": "데이터로 가치 증명",
+    "threat": "구글·자체 예약",
+    "st": "식당 네트워크로 방어"
+   },
+   "three_c": {
+    "customer": "예약 관리가 번거로운 식당",
+    "competitor": "전화 예약",
+    "company": "관리 도구",
+    "gap": "식당이 먼저 쓰는 도구"
+   },
    "hyps": [
     {
      "text": "손님 광고를 많이 한다",
@@ -19421,21 +20254,150 @@
     ],
     "solution": "식당 예약 관리 소프트웨어 → 손님 예약 네트워크",
     "mode": "break",
-    "conclusion": "식당 도구로 공급을 모으고 손님을 연다",
-    "conclusion_auto": true
+    "conclusion": "한쪽에 혼자서도 쓸모 있는 도구를 줘 먼저 모아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "식당",
+    "says": "예약 관리가 편해졌다",
+    "reveals": "도구 가치",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "식당",
+    "says": "예약당 수수료가 부담이다",
+    "reveals": "수수료 저항",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "손님 모으기 대 식당 모으기",
     "how": "식당 도구로 공급을 먼저 모아 닭과 달걀 문제를 풀었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "예약 수",
+    "reframed": "공급자 먼저 모으기",
+    "metric": "등록 식당 수"
+   },
+   "issue_tree": {
+    "root": "닭과 달걀을 풀려면",
+    "branches": [
+     {
+      "issue": "손님 먼저",
+      "chosen": false,
+      "sub": [
+       "광고",
+       "할인"
+      ]
+     },
+     {
+      "issue": "식당 먼저",
+      "chosen": true,
+      "sub": [
+       "관리 도구",
+       "단독 가치"
+      ]
+     },
+     {
+      "issue": "지역 집중",
+      "chosen": false,
+      "sub": [
+       "한 도시",
+       "밀도"
+      ]
+     }
+    ],
+    "why": "도구가 공급을 모은다"
+   },
+   "pareto": {
+    "vital_few": "도구 쓰는 식당",
+    "effect": "공급의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "손님 먼저",
+      "issue": "광고",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "손님 먼저",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "식당 먼저",
+      "issue": "관리 도구",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "식당 먼저",
+      "issue": "단독 가치",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "지역 집중",
+      "issue": "한 도시",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "지역 집중",
+      "issue": "밀도",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "식당 도구가 핵심이고 지역 집중은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 식당 먼저인가: 손님이 온다",
+     "왜 매출인가: 예약 수수료와 구독"
+    ],
+    "intent": "수수료·구독 매출",
+    "intent_metric": "식당 구독 매출",
+    "mode": "raise",
+    "criterion": "식당 구독 매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "등록 식당 수",
+    "leading": [
+     "등록 식당 수",
+     "온라인 예약 비율"
+    ],
+    "guardrail": "식당 해지",
+    "vanity": "방문자 수",
+    "intent_metric": "식당 구독 매출",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "식당 운영 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "'도구로 시작해 네트워크로'는 양면 시장 초기 문제를 푸는 고전적 방법이다."
   },
   {
@@ -19474,10 +20436,39 @@
     "symptom": "수공예품 판매 부진",
     "problem": "작가와 수공예를 좋아하는 구매자가 만날 전용 공간이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 작가들이 팔 곳이 없나: 공산품 사이에 묻힌다",
+     "왜 묻히나: 대형 장터는 모든 걸 판다",
+     "왜 문제인가: 수공예 구매자와 만날 곳이 없다"
+    ],
+    "root_cause": "전용 공간 부재"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "수수료",
+    "social": "수공예·개성 소비",
+    "technological": "장터 플랫폼",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "수공예 정체성",
+    "opportunity": "개성 소비",
+    "so": "수공예 전문 장터",
+    "weakness": "대량 생산품 유입",
+    "wo": "수공예 기준 관리",
+    "threat": "아마존 수공예",
+    "st": "커뮤니티로 방어"
+   },
+   "three_c": {
+    "customer": "수공예를 좋아하는 구매자",
+    "competitor": "종합 경매 사이트",
+    "company": "작가 커뮤니티",
+    "gap": "수공예 전용 장터"
+   },
    "hyps": [
     {
      "text": "대형 오픈마켓 입점",
@@ -19551,21 +20542,150 @@
     ],
     "solution": "수공예·빈티지 전문 장터 + 작가 커뮤니티",
     "mode": "break",
-    "conclusion": "작가 커뮤니티로 신뢰와 소속감을 준다",
-    "conclusion_auto": true
+    "conclusion": "정체성이 있는 전용 공간이 신뢰를 만든다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "작가",
+    "says": "내 작품을 알아보는 사람이 있다",
+    "reveals": "정체성이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "작가",
+    "says": "수수료가 계속 오른다",
+    "reveals": "수수료 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "전문성 대 시장 크기",
     "how": "수공예로 좁혀 정체성을 얻고 그 안에서 깊이로 컸다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "거래액",
+    "reframed": "작가와 구매자 연결",
+    "metric": "활성 구매자 수"
+   },
+   "issue_tree": {
+    "root": "수공예 판매를 늘리려면",
+    "branches": [
+     {
+      "issue": "노출",
+      "chosen": false,
+      "sub": [
+       "광고",
+       "검색"
+      ]
+     },
+     {
+      "issue": "전용 공간",
+      "chosen": true,
+      "sub": [
+       "수공예 기준",
+       "작가 이야기"
+      ]
+     },
+     {
+      "issue": "비용",
+      "chosen": false,
+      "sub": [
+       "수수료",
+       "배송"
+      ]
+     }
+    ],
+    "why": "공산품 사이에선 묻힌다"
+   },
+   "pareto": {
+    "vital_few": "상위 작가",
+    "effect": "거래액의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "노출",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "노출",
+      "issue": "검색",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "전용 공간",
+      "issue": "수공예 기준",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "전용 공간",
+      "issue": "작가 이야기",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "비용",
+      "issue": "수수료",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "비용",
+      "issue": "배송",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "전용 정체성이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 전용 장터인가: 거래가 는다",
+     "왜 매출인가: 수수료와 광고"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "수수료 수익",
+    "mode": "raise",
+    "criterion": "수수료 수익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "활성 구매자 수",
+    "leading": [
+     "활성 구매자 수",
+     "재구매율"
+    ],
+    "guardrail": "대량 생산품 비율",
+    "vanity": "등록 상품 수",
+    "intent_metric": "수수료 수익",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "작가 커뮤니티 의견",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "큰 시장 안의 작은 정체성이 커뮤니티를 만든다."
   },
   {
@@ -19608,10 +20728,41 @@
     "symptom": "사기 걱정",
     "problem": "거래 상대의 평판을 알 방법이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 낯선 사람과 거래를 꺼리나: 사기가 두렵다",
+     "왜 두렵나: 상대 평판을 모른다",
+     "왜 모르나: 평판 기록 장치가 없다"
+    ],
+    "root_cause": "거래 평판이 보이지 않는다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "개인 간 거래",
+    "social": "인터넷 초기 불신",
+    "technological": "상호 평가 시스템",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "상호 평가",
+    "opportunity": "개인 거래 수요",
+    "so": "평판 점수",
+    "weakness": "평가 조작",
+    "wo": "검증 강화",
+    "threat": "경쟁 장터",
+    "st": "평판 누적으로 잠금"
+   },
+   "three_c": {
+    "customer": "낯선 사람이 불안한 거래자",
+    "competitor": "신문 광고 거래",
+    "company": "평가 시스템",
+    "gap": "평판이 보이는 거래"
+   },
    "hyps": [
     {
      "text": "회사가 모든 거래를 보증",
@@ -19685,21 +20836,149 @@
     ],
     "solution": "상호 거래 평가 누적 평판",
     "mode": "break",
-    "conclusion": "서로 평가하게 하면 신뢰가 분산된다",
-    "conclusion_auto": true
+    "conclusion": "신뢰를 이용자들이 나눠 만들게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "평점 높은 판매자라 믿고 샀다",
+    "reveals": "평판이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "판매자",
+    "says": "보복 평가를 받았다",
+    "reveals": "평가 공정성",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "개인 간 거래 대 신뢰",
     "how": "상호 평가 누적으로 기관 없이 신뢰를 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "거래 확대",
+    "reframed": "낯선 사이 신뢰",
+    "metric": "거래 성사율"
+   },
+   "issue_tree": {
+    "root": "낯선 거래를 믿게 하려면",
+    "branches": [
+     {
+      "issue": "회사 보증",
+      "chosen": false,
+      "sub": [
+       "보험",
+       "중재"
+      ]
+     },
+     {
+      "issue": "상호 평가",
+      "chosen": true,
+      "sub": [
+       "평판 점수",
+       "후기"
+      ]
+     },
+     {
+      "issue": "결제",
+      "chosen": false,
+      "sub": [
+       "안전 결제",
+       "환불"
+      ]
+     }
+    ],
+    "why": "평판이 보이면 거래한다"
+   },
+   "pareto": {
+    "vital_few": "고평판 판매자",
+    "effect": "거래의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "회사 보증",
+      "issue": "보험",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "회사 보증",
+      "issue": "중재",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "상호 평가",
+      "issue": "평판 점수",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상호 평가",
+      "issue": "후기",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "결제",
+      "issue": "안전 결제",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "결제",
+      "issue": "환불",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "상호 평가가 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 평판인가: 거래가 열린다",
+     "왜 성장인가: 거래가 거래를 부른다"
+    ],
+    "intent": "거래 성장",
+    "intent_metric": "총 거래액",
+    "mode": "raise",
+    "criterion": "총 거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "거래 성사율",
+    "leading": [
+     "평가 작성률",
+     "분쟁률"
+    ],
+    "guardrail": "평가 조작",
+    "vanity": "등록 상품 수",
+    "intent_metric": "총 거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "신뢰를 중앙이 아니라 참여자들이 만들게 할 수 있다."
   },
   {
@@ -19742,10 +21021,39 @@
     "symptom": "소규모 외주 거래가 적다",
     "problem": "견적과 협상 과정이 작은 일에 비해 너무 크다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 작은 일 외주가 어렵나: 견적·협상이 번거롭다",
+     "왜 번거롭나: 서비스는 맞춤 견적이라는 통념",
+     "왜 문제인가: 작은 일에 비해 과정이 크다"
+    ],
+    "root_cause": "과정이 일보다 크다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "저가 외주 수요",
+    "social": "긱 경제",
+    "technological": "마켓플레이스",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "글로벌 프리랜서",
+    "opportunity": "긱 경제",
+    "so": "서비스 상품화(긱)",
+    "weakness": "저가 품질",
+    "wo": "등급·검증",
+    "threat": "AI 대체",
+    "st": "상품화 경험으로 방어"
+   },
+   "three_c": {
+    "customer": "작은 일을 맡기고 싶은 사람",
+    "competitor": "견적형 외주",
+    "company": "프리랜서 풀",
+    "gap": "상품처럼 사는 서비스"
+   },
    "hyps": [
     {
      "text": "견적 요청 게시판",
@@ -19821,21 +21129,149 @@
     ],
     "solution": "정가 서비스 상품 진열",
     "mode": "break",
-    "conclusion": "정찰 상품처럼 진열하면 바로 산다",
-    "conclusion_auto": true
+    "conclusion": "서비스를 상품처럼 포장해 팔아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "견적 없이 바로 샀다",
+    "reveals": "상품화가 편의다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "구매자",
+    "says": "품질이 들쭉날쭉하다",
+    "reveals": "품질 관리",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "서비스 맞춤성 대 구매 편의",
     "how": "정찰 패키지로 팔되 옵션으로 맞춤을 남겼다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "외주 거래",
+    "reframed": "협상 없는 구매",
+    "metric": "첫 주문 소요 시간"
+   },
+   "issue_tree": {
+    "root": "작은 외주를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "매칭",
+      "chosen": false,
+      "sub": [
+       "추천",
+       "입찰"
+      ]
+     },
+     {
+      "issue": "상품화",
+      "chosen": true,
+      "sub": [
+       "정가 패키지",
+       "납기"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": false,
+      "sub": [
+       "리뷰",
+       "에스크로"
+      ]
+     }
+    ],
+    "why": "정가면 협상이 없다"
+   },
+   "pareto": {
+    "vital_few": "정가 패키지",
+    "effect": "주문의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "매칭",
+      "issue": "추천",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "매칭",
+      "issue": "입찰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "상품화",
+      "issue": "정가 패키지",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "상품화",
+      "issue": "납기",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "에스크로",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "상품화가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 상품화인가: 거래가 많다",
+     "왜 매출인가: 거래 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "활성 구매자당 지출",
+    "mode": "raise",
+    "criterion": "구매자당 지출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "첫 주문 소요 시간",
+    "leading": [
+     "첫 주문 소요 시간",
+     "재주문률"
+    ],
+    "guardrail": "분쟁률",
+    "vanity": "등록 긱 수",
+    "intent_metric": "활성 구매자당 지출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "주문 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "거래 비용이 큰 시장은 '표준화'가 해결책일 수 있다."
   },
   {
@@ -19878,10 +21314,39 @@
     "symptom": "프리랜서 거래 분쟁",
     "problem": "서로 모르는 사이에 결과물 기준과 대금이 보장되지 않는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 분쟁이 생기나: 결과물과 대금이 보장 안 된다",
+     "왜 그런가: 기준이 없다",
+     "왜 없나: 개인 간 계약이다"
+    ],
+    "root_cause": "결과물 기준과 대금 보장 부재"
+   },
+   "pest": {
+    "political": "전자상거래·하도급 규제",
+    "economic": "프리랜서 증가",
+    "social": "부업 문화",
+    "technological": "에스크로",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "패키지 상품",
+    "opportunity": "부업 증가",
+    "so": "패키지 + 에스크로",
+    "weakness": "품질 편차",
+    "wo": "전문가 인증",
+    "threat": "경쟁 외주 플랫폼",
+    "st": "국내 신뢰로 방어"
+   },
+   "three_c": {
+    "customer": "외주가 불안한 소규모 사업자",
+    "competitor": "지인·카페 외주",
+    "company": "패키지·에스크로",
+    "gap": "기준과 대금이 보장된 외주"
+   },
    "hyps": [
     {
      "text": "지인 소개로만 맡긴다",
@@ -19955,21 +21420,150 @@
     ],
     "solution": "패키지 상품화 + 에스크로",
     "mode": "break",
-    "conclusion": "패키지로 기준을 정하고 대금을 맡는다",
-    "conclusion_auto": true
+    "conclusion": "기준은 패키지로, 대금은 에스크로로 보장하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "구매자",
+    "says": "결과물 받고 돈이 나가 안심이다",
+    "reveals": "에스크로가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "전문가",
+    "says": "수수료가 높다",
+    "reveals": "수수료 부담",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "프리랜서 자율 대 결과 보장",
     "how": "패키지 기준과 에스크로로 자율을 두면서 결과를 보장했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "외주 거래",
+    "reframed": "분쟁 없는 거래",
+    "metric": "분쟁률"
+   },
+   "issue_tree": {
+    "root": "외주 분쟁을 줄이려면",
+    "branches": [
+     {
+      "issue": "계약서",
+      "chosen": false,
+      "sub": [
+       "표준 계약",
+       "법률 상담"
+      ]
+     },
+     {
+      "issue": "보장 장치",
+      "chosen": true,
+      "sub": [
+       "패키지 기준",
+       "에스크로"
+      ]
+     },
+     {
+      "issue": "평가",
+      "chosen": false,
+      "sub": [
+       "리뷰",
+       "인증"
+      ]
+     }
+    ],
+    "why": "기준과 대금이 보장되면 분쟁이 준다"
+   },
+   "pareto": {
+    "vital_few": "결과물 기준 불명확",
+    "effect": "분쟁의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "계약서",
+      "issue": "표준 계약",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "계약서",
+      "issue": "법률 상담",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보장 장치",
+      "issue": "패키지 기준",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "보장 장치",
+      "issue": "에스크로",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "평가",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "평가",
+      "issue": "인증",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "패키지와 에스크로가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 보장인가: 거래가 는다",
+     "왜 매출인가: 거래 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "분쟁률",
+    "leading": [
+     "분쟁률",
+     "재구매율"
+    ],
+    "guardrail": "환불률",
+    "vanity": "등록 서비스 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "분쟁 기록",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "해외의 검증된 구조도 현지 신뢰 문제를 푸는 방식으로 적용해야 한다."
   },
   {
@@ -20012,10 +21606,39 @@
     "symptom": "반려견 맡기기 불만",
     "problem": "반려견에게 집 같은 환경과 사람의 돌봄이 필요하다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 반려견 맡기기가 불안한가: 호텔은 좁은 케이지다",
+     "왜 그런가: 맡기는 곳이 시설뿐이다",
+     "왜 개인에게 못 맡기나: 낯선 사람을 믿을 장치가 없다"
+    ],
+    "root_cause": "집 같은 돌봄을 믿고 맡길 장치 부재"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "펫 호텔 가격",
+    "social": "반려견 가족화",
+    "technological": "리뷰·사진 업데이트",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "개인 펫시터망",
+    "opportunity": "반려견 가족화",
+    "so": "집 같은 돌봄 + 리뷰·보험",
+    "weakness": "사고 위험",
+    "wo": "보험·검증",
+    "threat": "경쟁 펫 플랫폼",
+    "st": "리뷰 누적으로 방어"
+   },
+   "three_c": {
+    "customer": "여행 중 반려견이 걱정인 보호자",
+    "competitor": "펫 호텔",
+    "company": "펫시터망",
+    "gap": "집에서 돌보는 시터"
+   },
    "hyps": [
     {
      "text": "반려견 호텔 가격 인하",
@@ -20089,21 +21712,150 @@
     ],
     "solution": "동네 펫시터 + 리뷰·보험",
     "mode": "break",
-    "conclusion": "리뷰·보험을 붙인 동네 시터를 연결한다",
-    "conclusion_auto": true
+    "conclusion": "시설이 아니라 사람과 집을 연결하되 신뢰 장치를 붙여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "보호자",
+    "says": "사진으로 잘 지내는 걸 봐서 안심이다",
+    "reveals": "가시성이 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "보호자",
+    "says": "시터가 약속을 어겼다",
+    "reveals": "시터 품질",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "집 같은 돌봄 대 안전",
     "how": "동네 시터에 리뷰·보험을 붙여 둘 다 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "돌봄 예약",
+    "reframed": "믿고 맡기는 돌봄",
+    "metric": "재예약률"
+   },
+   "issue_tree": {
+    "root": "믿고 맡기게 하려면",
+    "branches": [
+     {
+      "issue": "시설",
+      "chosen": false,
+      "sub": [
+       "고급 호텔",
+       "유치원"
+      ]
+     },
+     {
+      "issue": "신뢰 장치",
+      "chosen": true,
+      "sub": [
+       "리뷰",
+       "보험"
+      ]
+     },
+     {
+      "issue": "소통",
+      "chosen": false,
+      "sub": [
+       "사진 업데이트",
+       "메시지"
+      ]
+     }
+    ],
+    "why": "낯선 사람을 믿게 해야 한다"
+   },
+   "pareto": {
+    "vital_few": "고평점 시터",
+    "effect": "예약의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "시설",
+      "issue": "고급 호텔",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "시설",
+      "issue": "유치원",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "신뢰 장치",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰 장치",
+      "issue": "보험",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "소통",
+      "issue": "사진 업데이트",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "소통",
+      "issue": "메시지",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "신뢰 장치가 핵심이고 사진 업데이트는 빠른 승리"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 신뢰인가: 다시 맡긴다",
+     "왜 매출인가: 예약 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "예약 건수",
+    "mode": "raise",
+    "criterion": "예약 건수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "재예약률",
+    "leading": [
+     "재예약률",
+     "사진 업데이트율"
+    ],
+    "guardrail": "사고 건수",
+    "vanity": "시터 가입 수",
+    "intent_metric": "예약 건수",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "리뷰 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "에어비앤비와 같은 구조. '남의 집은 위험하다'는 통념이 반복된다."
   },
   {
@@ -20142,10 +21894,41 @@
     "symptom": "차량 유휴 시간",
     "problem": "놀고 있는 개인 차를 빌려줄 신뢰 장치가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 차가 놀고 있나: 주말에만 쓴다",
+     "왜 안 빌려주나: 낯선 사람에게 맡기기 불안하다",
+     "왜 불안한가: 보험과 신뢰 장치가 없다"
+    ],
+    "root_cause": "유휴 차량을 빌려줄 신뢰 장치 부재"
+   },
+   "pest": {
+    "political": "보험·렌터카 규제",
+    "economic": "차량 유지비",
+    "social": "공유 경제",
+    "technological": "앱 키·위치 확인",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "개인 차량 공급",
+    "opportunity": "공유 경제",
+    "so": "개인 간 대여 + 보험",
+    "weakness": "사고·분쟁",
+    "wo": "보험 상품",
+    "threat": "렌터카 업체 반발",
+    "st": "다양한 차종으로 차별"
+   },
+   "three_c": {
+    "customer": "원하는 차를 빌리고 싶은 여행자",
+    "competitor": "지점 렌터카",
+    "company": "개인 차량 공급",
+    "gap": "동네에서 빌리는 다양한 차"
+   },
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -20219,21 +22002,149 @@
     ],
     "solution": "개인 간 차량 대여 + 보험",
     "mode": "break",
-    "conclusion": "보험을 붙이면 개인 차가 공급이 된다",
-    "conclusion_auto": true
+    "conclusion": "놀고 있는 자산은 보험이 붙어야 시장이 된다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "차주",
+    "says": "주차만 하던 차로 돈을 번다",
+    "reveals": "유휴 자산 수익화",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "차주",
+    "says": "차가 망가져 돌아왔다",
+    "reveals": "사고 처리",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "개인 차 공급 대 위험",
     "how": "보험으로 위험을 옮겨 공급을 열었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "차량 대여",
+    "reframed": "유휴 차를 믿고 빌려주기",
+    "metric": "등록 차량 가동률"
+   },
+   "issue_tree": {
+    "root": "개인 차 대여를 열려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "수수료"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": true,
+      "sub": [
+       "보험",
+       "신원 확인"
+      ]
+     },
+     {
+      "issue": "편의",
+      "chosen": false,
+      "sub": [
+       "앱 키",
+       "배달"
+      ]
+     }
+    ],
+    "why": "보험이 있어야 빌려준다"
+   },
+   "pareto": {
+    "vital_few": "보험",
+    "effect": "차주 등록 결정의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "수수료",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "보험",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "신원 확인",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "편의",
+      "issue": "앱 키",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "편의",
+      "issue": "배달",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "보험과 신원 확인이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 보험인가: 차가 등록된다",
+     "왜 매출인가: 대여 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "총 예약액",
+    "mode": "raise",
+    "criterion": "총 예약액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "등록 차량 가동률",
+    "leading": [
+     "등록 차량 가동률",
+     "재대여율"
+    ],
+    "guardrail": "사고 분쟁률",
+    "vanity": "등록 차량 수",
+    "intent_metric": "총 예약액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "대여 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "놀고 있는 자산 + 신뢰 장치 = 공유 플랫폼의 기본 공식."
   },
   {
@@ -20276,10 +22187,39 @@
     "symptom": "장거리 이동 비용",
     "problem": "같은 방향으로 가는 운전자와 승객이 연결되지 않는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 장거리 이동이 비싼가: 기차표가 비싸다",
+     "왜 대안이 없나: 빈자리 차와 연결이 안 된다",
+     "왜 안 되나: 낯선 사람과 타기 불안하다"
+    ],
+    "root_cause": "같은 방향 운전자와 승객 단절"
+   },
+   "pest": {
+    "political": "영업용 운송 규제",
+    "economic": "기차 요금",
+    "social": "공유 문화",
+    "technological": "신뢰 프로필",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "신뢰 프로필",
+    "opportunity": "높은 기차 요금",
+    "so": "장거리 카풀",
+    "weakness": "수익화 어려움",
+    "wo": "버스 사업 확장",
+    "threat": "저가 버스·철도",
+    "st": "커뮤니티로 방어"
+   },
+   "three_c": {
+    "customer": "싸게 장거리 가고 싶은 사람",
+    "competitor": "기차·버스",
+    "company": "신뢰 프로필",
+    "gap": "빈자리를 나누는 이동"
+   },
    "hyps": [
     {
      "text": "저가 버스",
@@ -20353,21 +22293,150 @@
     ],
     "solution": "장거리 카풀 + 신뢰 프로필·평가",
     "mode": "break",
-    "conclusion": "비용 분담으로 운전자도 이득을 본다",
-    "conclusion_auto": true
+    "conclusion": "이미 달리는 빈자리를 신뢰로 연결하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "승객",
+    "says": "기차 반값에 왔다",
+    "reveals": "가격이 이유다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "승객",
+    "says": "운전자가 취소했다",
+    "reveals": "취소 신뢰",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "싼 이동 대 안전",
     "how": "비용 분담과 신뢰 프로필로 싸고 안전하게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "카풀 수",
+    "reframed": "빈자리 연결",
+    "metric": "좌석 채움률"
+   },
+   "issue_tree": {
+    "root": "빈자리를 채우려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "보조금"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": true,
+      "sub": [
+       "프로필",
+       "리뷰"
+      ]
+     },
+     {
+      "issue": "매칭",
+      "chosen": false,
+      "sub": [
+       "경로",
+       "시간"
+      ]
+     }
+    ],
+    "why": "낯선 사람을 믿어야 탄다"
+   },
+   "pareto": {
+    "vital_few": "신뢰 프로필",
+    "effect": "탑승 결정의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "보조금",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "프로필",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "매칭",
+      "issue": "경로",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "매칭",
+      "issue": "시간",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "신뢰 프로필이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 신뢰인가: 탑승이 는다",
+     "왜 매출인가: 예약 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "예약 건수",
+    "mode": "raise",
+    "criterion": "예약 건수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "좌석 채움률",
+    "leading": [
+     "좌석 채움률",
+     "취소율"
+    ],
+    "guardrail": "안전 신고",
+    "vanity": "회원 수",
+    "intent_metric": "예약 건수",
+    "select_method": {
+     "methods": [
+      "quant",
+      "survey"
+     ],
+     "how": "이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "빈자리라는 '버려지는 공급'이 핵심 자원이었다."
   },
   {
@@ -20406,10 +22475,41 @@
     "symptom": "가끔 필요한 차량 수요 미충족",
     "problem": "렌터카는 지점 방문과 하루 단위라 가끔·짧은 이용에 안 맞는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 차를 안 사나: 가끔만 필요하다",
+     "왜 렌터카를 안 쓰나: 지점 방문·하루 단위다",
+     "왜 그런가: 렌터카는 지점 중심이라는 통념"
+    ],
+    "root_cause": "가끔·짧은 이용에 맞는 차가 없다"
+   },
+   "pest": {
+    "political": "운전 자격·보험 규제",
+    "economic": "차량 유지비",
+    "social": "도시 1인 가구",
+    "technological": "스마트키·무인 대여",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "무인 대여 기술",
+    "opportunity": "도시 1인 가구",
+    "so": "동네 무인 카셰어링",
+    "weakness": "차량 관리 비용",
+    "wo": "이용 데이터로 배치 최적화",
+    "threat": "렌터카 대기업",
+    "st": "동네 밀도로 방어"
+   },
+   "three_c": {
+    "customer": "가끔 차가 필요한 도시인",
+    "competitor": "지점 렌터카",
+    "company": "무인 대여",
+    "gap": "동네에서 분 단위로 쓰는 차"
+   },
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -20483,21 +22583,149 @@
     ],
     "solution": "동네·대학가 무인 카셰어링",
     "mode": "break",
-    "conclusion": "주차장에 무인으로 두면 짧게 빌린다",
-    "conclusion_auto": true
+    "conclusion": "지점을 동네로, 하루를 분 단위로 쪼개라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "집 앞에서 바로 탄다",
+    "reveals": "접근성이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "차가 더럽다",
+    "reveals": "차량 관리",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "짧은 이용 편의 대 운영 비용",
     "how": "무인 대여로 짧게 빌려줘도 인건비가 들지 않게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "대여 수",
+    "reframed": "가끔·짧은 이용",
+    "metric": "차량 가동률"
+   },
+   "issue_tree": {
+    "root": "가끔 쓰는 차를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "구독"
+      ]
+     },
+     {
+      "issue": "접근성",
+      "chosen": true,
+      "sub": [
+       "동네 배치",
+       "무인 대여"
+      ]
+     },
+     {
+      "issue": "관리",
+      "chosen": false,
+      "sub": [
+       "세차",
+       "점검"
+      ]
+     }
+    ],
+    "why": "지점과 하루 단위가 장벽이다"
+   },
+   "pareto": {
+    "vital_few": "동네 배치",
+    "effect": "이용의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "구독",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "접근성",
+      "issue": "동네 배치",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "접근성",
+      "issue": "무인 대여",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "관리",
+      "issue": "세차",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "관리",
+      "issue": "점검",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "동네 무인 대여가 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 가동률인가: 차 한 대가 더 번다",
+     "왜 이익인가: 차량 고정비를 회수한다"
+    ],
+    "intent": "차량당 이익",
+    "intent_metric": "차량당 영업이익",
+    "mode": "raise",
+    "criterion": "차량당 영업이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "차량 가동률",
+    "leading": [
+     "차량 가동률",
+     "재이용률"
+    ],
+    "guardrail": "차량 청결 불만",
+    "vanity": "회원 수",
+    "intent_metric": "차량당 영업이익",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "이용 단위(시간)와 장소(동네)를 바꾸자 새 시장이 열렸다."
   },
   {
@@ -20536,10 +22764,41 @@
     "symptom": "마지막 구간 이동 불편",
     "problem": "짧은 거리를 위한 이동 수단이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 마지막 1~2km가 애매한가: 걷기엔 멀고 택시는 가깝다",
+     "왜 수단이 없나: 짧은 거리용이 없다",
+     "왜 문제가 생겼나: 주차·안전 규칙 없이 풀었다"
+    ],
+    "root_cause": "짧은 거리 수단과 규칙 부재"
+   },
+   "pest": {
+    "political": "킥보드 주차·헬멧 규제",
+    "economic": "기기 내구성 비용",
+    "social": "도시 단거리 이동",
+    "technological": "위치 잠금·GPS",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "공유 기기 운영",
+    "opportunity": "단거리 이동 수요",
+    "so": "공유 킥보드",
+    "weakness": "주차 난립·사고",
+    "wo": "지정 주차·안전 규칙",
+    "threat": "도시 규제 강화",
+    "st": "규칙 준수로 면허 확보"
+   },
+   "three_c": {
+    "customer": "역에서 목적지까지 애매한 사람",
+    "competitor": "도보·택시",
+    "company": "기기 운영",
+    "gap": "마지막 1~2km 수단"
+   },
    "hyps": [
     {
      "text": "마을버스 증편",
@@ -20598,21 +22857,150 @@
     ],
     "solution": "앱 잠금 공유 킥보드 + 주차·안전 규칙",
     "mode": "shift",
-    "conclusion": "다만 주차·안전 규칙이 함께 가야 오래간다",
-    "conclusion_auto": true
+    "conclusion": "이동 수단은 규칙과 함께 풀어야 도시가 받아 준다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "이용자",
+    "says": "역에서 회사까지 5분이다",
+    "reveals": "단거리 편의",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "보행자",
+    "says": "인도에 킥보드가 널려 있다",
+    "reveals": "공공 공간 갈등",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "이동 편의 대 도시 질서",
     "how": "공유 킥보드에 주차·안전 규칙을 붙여 양립을 시도했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "이용 수",
+    "reframed": "도시가 허용하는 단거리 이동",
+    "metric": "도시 면허 유지"
+   },
+   "issue_tree": {
+    "root": "단거리 이동을 지속하려면",
+    "branches": [
+     {
+      "issue": "기기",
+      "chosen": false,
+      "sub": [
+       "내구성",
+       "배터리"
+      ]
+     },
+     {
+      "issue": "규칙",
+      "chosen": true,
+      "sub": [
+       "지정 주차",
+       "안전"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "분 단위",
+       "구독"
+      ]
+     }
+    ],
+    "why": "도시가 허용해야 계속된다"
+   },
+   "pareto": {
+    "vital_few": "주차 난립",
+    "effect": "규제 강화 원인의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "기기",
+      "issue": "내구성",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "기기",
+      "issue": "배터리",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "규칙",
+      "issue": "지정 주차",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "규칙",
+      "issue": "안전",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "분 단위",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "구독",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "주차·안전 규칙이 핵심이다"
+   },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 규칙인가: 퇴출을 피한다",
+     "왜 위험인가: 도시 면허가 사업이다"
+    ],
+    "intent": "도시 면허 유지",
+    "intent_metric": "운영 도시 수",
+    "mode": "hold",
+    "criterion": "주차 규칙을 지켜도 이용 수가 크게 줄지 않으면 성공"
+   },
+   "key_metrics": {
+    "north_star": "도시 면허 유지",
+    "leading": [
+     "지정 주차율",
+     "사고율"
+    ],
+    "guardrail": "이용 수",
+    "vanity": "기기 수",
+    "intent_metric": "운영 도시 수",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "거리 관찰과 이용 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "타이밍은 맞았지만 '불가능(규제)' 쪽 신호를 함께 관리해야 했다."
   },
   {
@@ -20655,10 +23043,41 @@
     "symptom": "독립 호텔 온라인 예약 저조",
     "problem": "호텔은 선결제 시스템이 없고 고객은 선결제가 불안하다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 해외 호텔 예약이 어렵나: 작은 호텔은 시스템이 없다",
+     "왜 고객이 망설이나: 선결제가 불안하다",
+     "왜 그런가: 예약은 선결제라는 통념"
+    ],
+    "root_cause": "양쪽 모두 선결제가 장벽이다"
+   },
+   "pest": {
+    "political": "플랫폼 공정거래 규제",
+    "economic": "여행 수요",
+    "social": "자유여행 증가",
+    "technological": "예약 엔진",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "호텔 공급망",
+    "opportunity": "자유여행 증가",
+    "so": "무료 취소·현장 결제",
+    "weakness": "호텔 수수료 불만",
+    "wo": "데이터 도구 제공",
+    "threat": "호텔 직접 예약",
+    "st": "공급 규모로 방어"
+   },
+   "three_c": {
+    "customer": "해외 호텔이 불안한 여행자",
+    "competitor": "선결제 예약",
+    "company": "호텔 공급망",
+    "gap": "부담 없이 잡아 두는 예약"
+   },
    "hyps": [
     {
      "text": "선결제 할인",
@@ -20734,21 +23153,149 @@
     ],
     "solution": "무료 취소 + 현장 결제 예약",
     "mode": "break",
-    "conclusion": "결제를 현장으로 미루고 수수료를 호텔에서 받는다",
-    "conclusion_auto": true
+    "conclusion": "결정의 위험을 없애면 예약이 늘어난다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여행자",
+    "says": "무료 취소라 일단 잡아 뒀다",
+    "reveals": "위험 제거",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "호텔",
+    "says": "노쇼와 수수료가 부담이다",
+    "reveals": "공급자 비용",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "예약 편의 대 호텔 수수료 부담",
     "how": "현장 결제로 고객 불안을 없애고 성사 기준 수수료로 호텔 부담을 줄였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "예약 수",
+    "reframed": "예약 장벽 낮추기",
+    "metric": "예약 전환율"
+   },
+   "issue_tree": {
+    "root": "예약 장벽을 낮추려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "최저가"
+      ]
+     },
+     {
+      "issue": "위험 제거",
+      "chosen": true,
+      "sub": [
+       "무료 취소",
+       "현장 결제"
+      ]
+     },
+     {
+      "issue": "정보",
+      "chosen": false,
+      "sub": [
+       "리뷰",
+       "사진"
+      ]
+     }
+    ],
+    "why": "불안이 장벽이다"
+   },
+   "pareto": {
+    "vital_few": "무료 취소",
+    "effect": "전환 개선의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "최저가",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "위험 제거",
+      "issue": "무료 취소",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "위험 제거",
+      "issue": "현장 결제",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "정보",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "정보",
+      "issue": "사진",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "위험 제거가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 위험 제거인가: 예약이 는다",
+     "왜 매출인가: 예약 수수료"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "숙박 예약 수",
+    "mode": "raise",
+    "criterion": "숙박 예약 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "예약 전환율",
+    "leading": [
+     "예약 전환율",
+     "취소율"
+    ],
+    "guardrail": "호텔 노쇼 손실",
+    "vanity": "검색 수",
+    "intent_metric": "숙박 예약 수",
+    "select_method": {
+     "methods": [
+      "experiment"
+     ],
+     "how": "대규모 A/B 테스트",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객 불안을 없애는 방향으로 돈 흐름을 바꿨다."
   },
   {
@@ -20791,10 +23338,39 @@
     "symptom": "모텔 이용 이미지가 나쁘다",
     "problem": "시설과 가격 정보를 당당하게 비교할 곳이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 일반 여행객이 모텔을 꺼리나: 음지 이미지다",
+     "왜 그런가: 정보가 숨어 있다",
+     "왜 숨었나: 비교할 곳이 없다"
+    ],
+    "root_cause": "정보 비공개가 이미지를 만든다"
+   },
+   "pest": {
+    "political": "숙박업 규제",
+    "economic": "저가 숙박 수요",
+    "social": "커플·국내 여행",
+    "technological": "앱 예약·리뷰",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "숙소 정보·리뷰",
+    "opportunity": "국내 여행 증가",
+    "so": "정보 공개로 카테고리 재정의",
+    "weakness": "수수료 갈등",
+    "wo": "숙소 관리 SaaS",
+    "threat": "글로벌 OTA",
+    "st": "국내 숙소 밀도로 방어"
+   },
+   "three_c": {
+    "customer": "싸고 깨끗한 숙소를 원하는 여행객",
+    "competitor": "호텔·음지 모텔",
+    "company": "정보·리뷰",
+    "gap": "당당하게 비교하는 숙소"
+   },
    "hyps": [
     {
      "text": "모텔 광고",
@@ -20868,21 +23444,150 @@
     ],
     "solution": "모텔을 중소형 호텔로 정보 공개",
     "mode": "break",
-    "conclusion": "사진·후기·가격 공개로 카테고리를 다시 정의한다",
-    "conclusion_auto": true
+    "conclusion": "숨겨진 정보를 공개하면 카테고리가 바뀐다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "커플",
+    "says": "시설 사진 보고 골랐다",
+    "reveals": "정보 공개가 신뢰다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "숙박업주",
+    "says": "수수료와 광고비가 크다",
+    "reveals": "공급자 비용",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "숙박 수요 대 업종 이미지",
     "how": "정보 공개와 리뷰로 이미지를 바꿔 수요를 키웠다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "예약 수",
+    "reframed": "모텔 이미지 재정의",
+    "metric": "일반 여행객 비율"
+   },
+   "issue_tree": {
+    "root": "모텔을 당당하게 만들려면",
+    "branches": [
+     {
+      "issue": "리모델링",
+      "chosen": false,
+      "sub": [
+       "시설",
+       "브랜드"
+      ]
+     },
+     {
+      "issue": "정보 공개",
+      "chosen": true,
+      "sub": [
+       "사진",
+       "리뷰"
+      ]
+     },
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "쿠폰"
+      ]
+     }
+    ],
+    "why": "비교할 수 있으면 숨지 않는다"
+   },
+   "pareto": {
+    "vital_few": "사진·리뷰",
+    "effect": "예약 결정의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "리모델링",
+      "issue": "시설",
+      "speed": 2,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "리모델링",
+      "issue": "브랜드",
+      "speed": 2,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "정보 공개",
+      "issue": "사진",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "정보 공개",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "쿠폰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "정보 공개가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 재정의인가: 고객이 넓어진다",
+     "왜 매출인가: 예약 수수료와 광고"
+    ],
+    "intent": "예약·광고 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "일반 여행객 비율",
+    "leading": [
+     "일반 여행객 비율",
+     "리뷰 작성률"
+    ],
+    "guardrail": "업주 이탈",
+    "vanity": "앱 설치 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "예약·리뷰 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "이름과 정보 공개만으로 카테고리 인식이 바뀔 수 있다."
   },
   {
@@ -21573,10 +24278,43 @@
     "symptom": "화물 추적 불가와 지연",
     "problem": "여러 업체(선사·세관·트럭)의 정보가 흩어져 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 화물이 깜깜인가: 위치와 통관을 모른다",
+     "왜 모르나: 정보가 업체마다 흩어져 있다",
+     "왜 흩어지나: 이메일·팩스로 처리한다"
+    ],
+    "root_cause": "정보 분산"
+   },
+   "pest": {
+    "political": "통관·무역 규제",
+    "economic": "운임 변동",
+    "social": "이커머스 수입 증가",
+    "technological": "디지털 포워딩",
+    "key": [
+     "T",
+     "P"
+    ],
+    "focus": [
+     "T",
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "통합 화면",
+    "opportunity": "이커머스 수입",
+    "so": "디지털 포워딩",
+    "weakness": "실물 자산 없음",
+    "wo": "파트너 데이터 연결",
+    "threat": "전통 포워더 디지털화",
+    "st": "데이터 투명성으로 차별"
+   },
+   "three_c": {
+    "customer": "화물이 궁금한 수입 업체",
+    "competitor": "이메일 포워더",
+    "company": "통합 화면",
+    "gap": "한 화면에 보이는 화물"
+   },
    "hyps": [
     {
      "text": "포워더 직원 늘리기",
@@ -21635,21 +24373,150 @@
     ],
     "solution": "디지털 포워딩",
     "mode": "break",
-    "conclusion": "전 과정을 한 화면에 모으면 소프트웨어가 경쟁력이 된다",
-    "conclusion_auto": true
+    "conclusion": "흩어진 정보를 한 화면에 모아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "수입 업체",
+    "says": "컨테이너 위치를 바로 본다",
+    "reveals": "가시성이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "변동 많은 시기에 대응이 늦었다",
+    "reveals": "운영 역량",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "관계 영업 대 확장성",
     "how": "소프트웨어로 투명성을 주고 영업은 관계로 유지했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "포워딩 매출",
+    "reframed": "화물 가시성",
+    "metric": "화물 상태 조회 자동화율"
+   },
+   "issue_tree": {
+    "root": "화물을 투명하게 하려면",
+    "branches": [
+     {
+      "issue": "인력",
+      "chosen": false,
+      "sub": [
+       "담당자",
+       "전화"
+      ]
+     },
+     {
+      "issue": "통합 화면",
+      "chosen": true,
+      "sub": [
+       "추적",
+       "통관 상태"
+      ]
+     },
+     {
+      "issue": "자동화",
+      "chosen": false,
+      "sub": [
+       "서류",
+       "견적"
+      ]
+     }
+    ],
+    "why": "흩어진 정보가 깜깜이를 만든다"
+   },
+   "pareto": {
+    "vital_few": "위치·통관 문의",
+    "effect": "업무 시간의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "인력",
+      "issue": "담당자",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "인력",
+      "issue": "전화",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "통합 화면",
+      "issue": "추적",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "통합 화면",
+      "issue": "통관 상태",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "자동화",
+      "issue": "서류",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "자동화",
+      "issue": "견적",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "통합 화면이 핵심이다"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 가시성인가: 고객이 남는다",
+     "왜 유지인가: 반복 수입 물량"
+    ],
+    "intent": "반복 물량 매출",
+    "intent_metric": "고객 유지율",
+    "mode": "raise",
+    "criterion": "고객 유지율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "화물 상태 조회 자동화율",
+    "leading": [
+     "상태 조회 자동화율",
+     "통관 소요 시간"
+    ],
+    "guardrail": "지연 사고",
+    "vanity": "견적 요청 수",
+    "intent_metric": "고객 유지율",
+    "select_method": {
+     "methods": [
+      "interview",
+      "quant"
+     ],
+     "how": "수입 업체 인터뷰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "낡은 산업의 '당연한 불편'이 소프트웨어 기회다."
   },
   {
@@ -22041,10 +24908,41 @@
     "symptom": "긴급 배송 지연",
     "problem": "도시와 도시를 직접 잇는 방식으로는 다음 날 배송을 보장할 수 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 다음 날 배송이 안 되나: 여객기 화물칸에 기댄다",
+     "왜 불확실한가: 도시 간 직접 연결이다",
+     "왜 그런가: 직선 연결이 효율이라는 통념"
+    ],
+    "root_cause": "직접 연결 방식의 한계"
+   },
+   "pest": {
+    "political": "항공 규제 완화",
+    "economic": "긴급 배송 수요",
+    "social": "기업 속도 경쟁",
+    "technological": "허브-스포크",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "자체 항공기",
+    "opportunity": "규제 완화",
+    "so": "야간 허브-스포크",
+    "weakness": "막대한 투자",
+    "wo": "규모로 단가 절감",
+    "threat": "경쟁 택배",
+    "st": "보장으로 프리미엄"
+   },
+   "three_c": {
+    "customer": "급한 서류를 보내는 기업",
+    "competitor": "여객기 화물",
+    "company": "자체 항공기",
+    "gap": "다음 날 보장 배송"
+   },
    "hyps": [
     {
      "text": "여객기 화물칸 계약 확대",
@@ -22118,21 +25016,149 @@
     ],
     "solution": "야간 허브-스포크 + 자체 항공기",
     "mode": "break",
-    "conclusion": "한 곳에 모았다 흩으면 다음 날 보장이 된다",
-    "conclusion_auto": true
+    "conclusion": "모든 화물을 한 허브로 모아 보장을 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "기업",
+    "says": "다음 날 아침에 반드시 왔다",
+    "reveals": "보장이 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "투자자",
+    "says": "초기 투자가 너무 크다",
+    "reveals": "자본 부담",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "다음 날 보장 대 노선 비용",
     "how": "허브-스포크로 노선 수를 줄이면서 다음 날을 보장했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "배송 매출",
+    "reframed": "익일 배송 보장",
+    "metric": "정시 배송률"
+   },
+   "issue_tree": {
+    "root": "익일 배송을 보장하려면",
+    "branches": [
+     {
+      "issue": "여객기",
+      "chosen": false,
+      "sub": [
+       "화물칸",
+       "계약"
+      ]
+     },
+     {
+      "issue": "허브",
+      "chosen": true,
+      "sub": [
+       "야간 집결",
+       "자체 항공기"
+      ]
+     },
+     {
+      "issue": "지상",
+      "chosen": false,
+      "sub": [
+       "트럭",
+       "픽업"
+      ]
+     }
+    ],
+    "why": "한 곳에 모으면 연결이 단순해진다"
+   },
+   "pareto": {
+    "vital_few": "허브 구조",
+    "effect": "정시율의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "여객기",
+      "issue": "화물칸",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "여객기",
+      "issue": "계약",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "허브",
+      "issue": "야간 집결",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "허브",
+      "issue": "자체 항공기",
+      "speed": 2,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "지상",
+      "issue": "트럭",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "지상",
+      "issue": "픽업",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "허브와 자체 항공기가 큰 베팅이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 보장인가: 프리미엄을 낸다",
+     "왜 매출인가: 높은 단가"
+    ],
+    "intent": "프리미엄 배송 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "정시 배송률",
+    "leading": [
+     "정시 배송률",
+     "허브 처리량"
+    ],
+    "guardrail": "운항 비용",
+    "vanity": "접수 수",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "배송 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "직관에 반하는 '돌아가는 길'이 시스템 전체로는 가장 빠를 수 있다."
   },
   {
@@ -22171,10 +25197,41 @@
     "symptom": "연료비와 사고",
     "problem": "최단 거리 경로가 반드시 가장 효율적이지는 않다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 연료비와 사고가 많나: 좌회전 대기가 길다",
+     "왜 좌회전하나: 최단 거리 경로다",
+     "왜 그런가: 최단이 최선이라는 통념"
+    ],
+    "root_cause": "최단 거리와 효율의 혼동"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "연료비",
+    "social": "도심 교통",
+    "technological": "경로 최적화 소프트웨어",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "경로 최적화",
+    "opportunity": "연료비 상승",
+    "so": "좌회전 최소화",
+    "weakness": "일부 경로 길어짐",
+    "wo": "데이터로 검증",
+    "threat": "교통 변화",
+    "st": "대규모 차량으로 효과 누적"
+   },
+   "three_c": {
+    "customer": "정시 배송을 원하는 고객",
+    "competitor": "최단 경로 배송",
+    "company": "경로 데이터",
+    "gap": "대기 없는 경로"
+   },
    "hyps": [
     {
      "text": "연비 좋은 트럭",
@@ -22248,21 +25305,150 @@
     ],
     "solution": "좌회전 최소화 경로 설계",
     "mode": "break",
-    "conclusion": "회전을 피하는 경로가 시간·연료를 줄인다",
-    "conclusion_auto": true
+    "conclusion": "최단 거리가 아니라 대기와 위험이 적은 경로를 택하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "기사",
+    "says": "대기가 줄어 편하다",
+    "reveals": "운전 부담 감소",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "기사",
+    "says": "돌아가는 길이 길다",
+    "reveals": "체감 거리",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "최단 거리 대 시간·안전",
     "how": "거리는 조금 늘어도 좌회전을 줄여 시간·연료·사고를 함께 줄였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "경로 단축",
+    "reframed": "대기·위험 줄이기",
+    "metric": "차량당 연료 사용량"
+   },
+   "issue_tree": {
+    "root": "연료와 사고를 줄이려면",
+    "branches": [
+     {
+      "issue": "차량",
+      "chosen": false,
+      "sub": [
+       "친환경",
+       "정비"
+      ]
+     },
+     {
+      "issue": "경로",
+      "chosen": true,
+      "sub": [
+       "좌회전 최소화",
+       "최적화"
+      ]
+     },
+     {
+      "issue": "교육",
+      "chosen": false,
+      "sub": [
+       "안전 운전",
+       "습관"
+      ]
+     }
+    ],
+    "why": "대기와 위험은 회전에서 나온다"
+   },
+   "pareto": {
+    "vital_few": "좌회전 대기",
+    "effect": "공회전 손실의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "차량",
+      "issue": "친환경",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "차량",
+      "issue": "정비",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "경로",
+      "issue": "좌회전 최소화",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "경로",
+      "issue": "최적화",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "교육",
+      "issue": "안전 운전",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "교육",
+      "issue": "습관",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "좌회전 최소화가 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 경로인가: 연료가 준다",
+     "왜 이익인가: 대규모 차량에서 비용이 크게 준다"
+    ],
+    "intent": "운영비 절감",
+    "intent_metric": "차량당 운영비",
+    "mode": "raise",
+    "criterion": "차량당 운영비가 줄면 성공"
+   },
+   "key_metrics": {
+    "north_star": "차량당 연료 사용량",
+    "leading": [
+     "차량당 연료 사용량",
+     "사고율"
+    ],
+    "guardrail": "배송 시간",
+    "vanity": "총 주행 거리",
+    "intent_metric": "차량당 운영비",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "경로 시뮬레이션",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "측정 기준(거리)을 바꾸면(시간·위험) 답이 달라진다."
   },
   {
@@ -22301,10 +25487,43 @@
     "symptom": "수혈 지연",
     "problem": "필요할 때 빠르게 보낼 수단이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 혈액이 제때 없나: 길이 험해 늦다",
+     "왜 미리 못 두나: 보관 기간이 짧다",
+     "왜 대안이 없나: 빠른 수단이 없다"
+    ],
+    "root_cause": "필요할 때 보낼 수단이 없다"
+   },
+   "pest": {
+    "political": "드론 항공 규제",
+    "economic": "혈액 폐기 비용",
+    "social": "의료 접근성",
+    "technological": "고정익 드론·낙하 배송",
+    "key": [
+     "P",
+     "T"
+    ],
+    "focus": [
+     "P",
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "드론 배송 기술",
+    "opportunity": "정부 협력",
+    "so": "주문형 드론 배송",
+    "weakness": "기상 제약",
+    "wo": "의약품 확장",
+    "threat": "항공 규제",
+    "st": "정부 계약으로 방어"
+   },
+   "three_c": {
+    "customer": "혈액이 급한 외딴 병원",
+    "competitor": "도로 운송",
+    "company": "드론 기술",
+    "gap": "주문 30분 내 혈액"
+   },
    "hyps": [
     {
      "text": "모든 병원에 혈액 은행 설치",
@@ -22363,21 +25582,150 @@
     ],
     "solution": "고정익 드론 낙하산 투하 의료품 배송",
     "mode": "shift",
-    "conclusion": "착륙 없이 투하하면 빠르고 단순하다",
-    "conclusion_auto": true
+    "conclusion": "쌓아 둘 수 없으면 필요할 때 빠르게 보내라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "의사",
+    "says": "수혈이 늦지 않았다",
+    "reveals": "속도가 생명이다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "비평가",
+    "says": "비용 대비 효과 증명이 부족하다",
+    "reveals": "공공 예산 효율",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 배송 대 인프라 비용",
     "how": "착륙 없는 투하로 도로·착륙장 없이 빠르게 보냈다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "배송 확대",
+    "reframed": "필요 시점 혈액 공급",
+    "metric": "배송 소요 시간"
+   },
+   "issue_tree": {
+    "root": "혈액을 제때 공급하려면",
+    "branches": [
+     {
+      "issue": "보관",
+      "chosen": false,
+      "sub": [
+       "냉장",
+       "재고"
+      ]
+     },
+     {
+      "issue": "주문형 배송",
+      "chosen": true,
+      "sub": [
+       "드론",
+       "낙하"
+      ]
+     },
+     {
+      "issue": "도로",
+      "chosen": false,
+      "sub": [
+       "차량",
+       "오토바이"
+      ]
+     }
+    ],
+    "why": "쌓아 둘 수 없다"
+   },
+   "pareto": {
+    "vital_few": "긴급 주문",
+    "effect": "효과의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보관",
+      "issue": "냉장",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "보관",
+      "issue": "재고",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "주문형 배송",
+      "issue": "드론",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "주문형 배송",
+      "issue": "낙하",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "도로",
+      "issue": "차량",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "도로",
+      "issue": "오토바이",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "주문형 드론이 핵심이다"
+   },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "왜 드론인가: 생명을 구한다",
+     "왜 사업인가: 정부 계약으로 확장한다"
+    ],
+    "intent": "의료 접근성",
+    "intent_metric": "혈액 폐기율·배송 시간",
+    "mode": "raise",
+    "criterion": "배송 시간이 줄면 성공"
+   },
+   "key_metrics": {
+    "north_star": "배송 소요 시간",
+    "leading": [
+     "배송 소요 시간",
+     "혈액 폐기율"
+    ],
+    "guardrail": "비행 사고",
+    "vanity": "비행 횟수",
+    "intent_metric": "혈액 폐기율·배송 시간",
+    "select_method": {
+     "methods": [
+      "observation",
+      "quant"
+     ],
+     "how": "병원 현장 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "선진국보다 인프라가 부족한 곳에서 신기술이 먼저 쓸모를 찾았다."
   },
   {
@@ -22416,10 +25764,41 @@
     "symptom": "수익 모델 갈등",
     "problem": "가게가 낼 수 있는 비용 형태가 맞지 않는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 수익 모델이 반발을 사나: 중개 수수료가 부담이다",
+     "왜 부담인가: 가게가 낼 수 있는 형태가 아니다",
+     "왜 맞지 않나: 매출 비례가 작은 가게에 크다"
+    ],
+    "root_cause": "비용 형태가 가게에 맞지 않는다"
+   },
+   "pest": {
+    "political": "플랫폼 수수료 규제",
+    "economic": "자영업 마진",
+    "social": "소상공인 여론",
+    "technological": "광고 노출 시스템",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "배달 트래픽",
+    "opportunity": "소상공인 광고 수요",
+    "so": "정액 광고",
+    "weakness": "광고 경쟁 과열",
+    "wo": "노출 공정성",
+    "threat": "수수료 규제·여론",
+    "st": "상생 정책으로 신뢰"
+   },
+   "three_c": {
+    "customer": "마진이 작은 동네 가게",
+    "competitor": "수수료 중개 앱",
+    "company": "트래픽",
+    "gap": "가게가 감당 가능한 비용"
+   },
    "hyps": [
     {
      "text": "높은 주문 수수료",
@@ -22493,21 +25872,150 @@
     ],
     "solution": "월 정액 광고 중심 수익(이후 정책 변화와 논란 반복)",
     "mode": "break",
-    "conclusion": "정액 광고로 받으면 가게가 쉽게 들어온다",
-    "conclusion_auto": true
+    "conclusion": "수익 모델은 공급자가 감당할 수 있는 형태여야 한다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "가게",
+    "says": "정액이라 예측이 된다",
+    "reveals": "예측 가능성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "가게",
+    "says": "광고를 여러 개 사야 노출된다",
+    "reveals": "광고 경쟁 과열",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "가게 비용 예측성 대 플랫폼 수익",
     "how": "정액 광고로 가게는 예측 가능하고 플랫폼은 안정 수익을 얻었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "수익 모델",
+    "reframed": "반발 없는 수익",
+    "metric": "가게 이탈률"
+   },
+   "issue_tree": {
+    "root": "반발 없이 수익을 내려면",
+    "branches": [
+     {
+      "issue": "수수료",
+      "chosen": false,
+      "sub": [
+       "비율",
+       "상한"
+      ]
+     },
+     {
+      "issue": "비용 형태",
+      "chosen": true,
+      "sub": [
+       "정액 광고",
+       "선택형"
+      ]
+     },
+     {
+      "issue": "상생",
+      "chosen": false,
+      "sub": [
+       "지원금",
+       "교육"
+      ]
+     }
+    ],
+    "why": "형태가 맞아야 받아들인다"
+   },
+   "pareto": {
+    "vital_few": "수수료 형태",
+    "effect": "반발의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "수수료",
+      "issue": "비율",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "수수료",
+      "issue": "상한",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "비용 형태",
+      "issue": "정액 광고",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "비용 형태",
+      "issue": "선택형",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "상생",
+      "issue": "지원금",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "상생",
+      "issue": "교육",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "비용 형태 설계가 핵심이다"
+   },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 형태인가: 반발을 피한다",
+     "왜 위험인가: 규제와 여론"
+    ],
+    "intent": "규제 위험 회피",
+    "intent_metric": "가게 이탈률",
+    "mode": "hold",
+    "criterion": "비용 형태를 바꿔도 매출이 크게 줄지 않으면 성공"
+   },
+   "key_metrics": {
+    "north_star": "가게 이탈률",
+    "leading": [
+     "가게 이탈률",
+     "광고 구매 가게 비율"
+    ],
+    "guardrail": "광고 매출",
+    "vanity": "앱 주문 수",
+    "intent_metric": "가게 이탈률",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "업주 의견과 매출 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "같은 매출도 '어떤 형태로 받느냐'가 공급자 수용성을 좌우한다."
   },
   {
@@ -22546,10 +26054,41 @@
     "symptom": "배달 인력 부족",
     "problem": "가게 단위로는 배달 수요가 들쭉날쭉해 전담 기사가 비효율이다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 가게가 기사를 못 두나: 수요가 들쭉날쭉하다",
+     "왜 비효율인가: 가게 단위다",
+     "왜 그런가: 배달은 가게 일이라는 통념"
+    ],
+    "root_cause": "가게 단위로는 수요가 안 모인다"
+   },
+   "pest": {
+    "political": "배달 노동 규제",
+    "economic": "기사 인건비",
+    "social": "배달 주문 증가",
+    "technological": "배차 시스템",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "지역 배달망",
+    "opportunity": "배달 주문 증가",
+    "so": "지역 단위 배달 대행",
+    "weakness": "기사 처우 문제",
+    "wo": "보험·처우 개선",
+    "threat": "플랫폼 자체 배달",
+    "st": "지역 밀도로 방어"
+   },
+   "three_c": {
+    "customer": "배달 기사가 없는 동네 가게",
+    "competitor": "가게 직고용",
+    "company": "지역 배달망",
+    "gap": "지역이 함께 쓰는 배달 기사"
+   },
    "hyps": [
     {
      "text": "가게마다 기사 고용",
@@ -22623,21 +26162,149 @@
     ],
     "solution": "지역 단위 배달 대행 네트워크",
     "mode": "break",
-    "conclusion": "지역 단위 기사 풀이 묶어 처리한다",
-    "conclusion_auto": true
+    "conclusion": "가게가 아니라 지역 단위로 수요를 모아라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "가게",
+    "says": "기사 없이 배달이 된다",
+    "reveals": "공유 효율",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "기사",
+    "says": "처우가 열악하다",
+    "reveals": "노동 문제",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "배달 품질 대 가게 인건비",
     "how": "여러 가게를 묶어 기사 가동률을 높여 둘 다 잡았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "배달 대행",
+    "reframed": "지역 수요 묶기",
+    "metric": "기사당 배달 수"
+   },
+   "issue_tree": {
+    "root": "가게 배달을 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "직고용",
+      "chosen": false,
+      "sub": [
+       "기사 채용",
+       "지원"
+      ]
+     },
+     {
+      "issue": "지역 묶음",
+      "chosen": true,
+      "sub": [
+       "대행 네트워크",
+       "배차"
+      ]
+     },
+     {
+      "issue": "앱 배달",
+      "chosen": false,
+      "sub": [
+       "플랫폼",
+       "위탁"
+      ]
+     }
+    ],
+    "why": "지역으로 묶으면 수요가 고르다"
+   },
+   "pareto": {
+    "vital_few": "피크 시간 배달",
+    "effect": "수요의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "직고용",
+      "issue": "기사 채용",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "직고용",
+      "issue": "지원",
+      "speed": 3,
+      "impact": 2,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "지역 묶음",
+      "issue": "대행 네트워크",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "지역 묶음",
+      "issue": "배차",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "앱 배달",
+      "issue": "플랫폼",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "앱 배달",
+      "issue": "위탁",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "지역 배달망이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 지역 묶음인가: 배달이 는다",
+     "왜 매출인가: 건당 수수료"
+    ],
+    "intent": "대행 수수료 매출",
+    "intent_metric": "배달 건수",
+    "mode": "raise",
+    "criterion": "배달 건수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "기사당 배달 수",
+    "leading": [
+     "기사당 배달 수",
+     "배달 소요 시간"
+    ],
+    "guardrail": "사고율",
+    "vanity": "가맹 가게 수",
+    "intent_metric": "배달 건수",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "배차 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "들쭉날쭉한 수요는 모으면 평평해진다."
   },
   {
@@ -22680,10 +26347,42 @@
     "symptom": "기사 참여 저조",
     "problem": "기사에게 추가 비용 없이 손님을 늘려 줄 수단이 필요했다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 호출 앱 도입이 더뎠나: 기사가 꺼렸다",
+     "왜 꺼렸나: 수수료와 새 앱",
+     "왜 문제인가: 기사에게 추가 비용이 생긴다"
+    ],
+    "root_cause": "기사에게 비용 없는 이익이 필요했다"
+   },
+   "pest": {
+    "political": "택시 규제·독과점 심사",
+    "economic": "기사 수입",
+    "social": "카카오톡 보급",
+    "technological": "호출 앱",
+    "key": [
+     "P",
+     "S"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "카카오 계정",
+    "opportunity": "국민 메신저",
+    "so": "무료 호출로 양면 확보",
+    "weakness": "독점 논란",
+    "wo": "가맹·부가 서비스",
+    "threat": "공정위 제재",
+    "st": "공정성 개선"
+   },
+   "three_c": {
+    "customer": "택시를 부르고 싶은 승객과 손님이 필요한 기사",
+    "competitor": "콜택시",
+    "company": "카카오 계정",
+    "gap": "무료 호출"
+   },
    "hyps": [
     {
      "text": "기사 수수료 부과",
@@ -22757,21 +26456,149 @@
     ],
     "solution": "무료 호출로 양쪽을 모은 뒤 부가 서비스로 수익",
     "mode": "break",
-    "conclusion": "메신저 계정으로 승객도 바로 가입한다",
-    "conclusion_auto": true
+    "conclusion": "먼저 무료로 양쪽을 모으고 나중에 부가 서비스로 벌어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "기사",
+    "says": "손님이 늘었는데 돈이 안 든다",
+    "reveals": "무료가 도입 이유",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "기사",
+    "says": "가맹 택시에 콜을 몰아준다",
+    "reveals": "공정성 논란",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "무료 이용 대 수익",
     "how": "호출은 무료로 두고 부가 서비스로 벌었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "호출 확대",
+    "reframed": "무료로 양면 확보",
+    "metric": "활성 기사 수"
+   },
+   "issue_tree": {
+    "root": "기사와 승객을 모으려면",
+    "branches": [
+     {
+      "issue": "수수료",
+      "chosen": false,
+      "sub": [
+       "인하",
+       "보상"
+      ]
+     },
+     {
+      "issue": "무료 호출",
+      "chosen": true,
+      "sub": [
+       "기사 무료",
+       "카카오 계정"
+      ]
+     },
+     {
+      "issue": "부가 서비스",
+      "chosen": false,
+      "sub": [
+       "가맹",
+       "블루"
+      ]
+     }
+    ],
+    "why": "무료면 기사가 온다"
+   },
+   "pareto": {
+    "vital_few": "무료 호출",
+    "effect": "기사 가입의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "수수료",
+      "issue": "인하",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "수수료",
+      "issue": "보상",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "무료 호출",
+      "issue": "기사 무료",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "무료 호출",
+      "issue": "카카오 계정",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "부가 서비스",
+      "issue": "가맹",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     },
+     {
+      "branch": "부가 서비스",
+      "issue": "블루",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "무료 호출이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 무료인가: 독보적 점유율",
+     "왜 매출인가: 가맹·부가 서비스로 수익"
+    ],
+    "intent": "부가 서비스 매출",
+    "intent_metric": "가맹 매출",
+    "mode": "raise",
+    "criterion": "가맹 매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "활성 기사 수",
+    "leading": [
+     "활성 기사 수",
+     "호출 성사율"
+    ],
+    "guardrail": "공정성 민원",
+    "vanity": "앱 설치 수",
+    "intent_metric": "가맹 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "호출 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "수익화 시점을 미루는 것도 기획 선택지다. (이후 독과점 논란은 별도 과제)"
   },
   {
@@ -22814,10 +26641,41 @@
     "symptom": "생활 광고 비용",
     "problem": "지역 생활 정보를 무료로 나눌 공간이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 생활 정보를 못 찾나: 신문 광고가 비싸다",
+     "왜 비싼가: 지면이 제한된다",
+     "왜 대안이 없나: 무료로 나눌 공간이 없다"
+    ],
+    "root_cause": "지역 생활 정보의 무료 공간 부재"
+   },
+   "pest": {
+    "political": "불법 게시물 규제",
+    "economic": "신문 광고 비용",
+    "social": "지역 커뮤니티",
+    "technological": "웹 게시판",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "단순한 게시판",
+    "opportunity": "신문 광고 비싸다",
+    "so": "무료 지역 게시판",
+    "weakness": "사기 게시물",
+    "wo": "일부 유료화",
+    "threat": "카테고리 전문 앱",
+    "st": "단순함으로 방어"
+   },
+   "three_c": {
+    "customer": "동네 정보를 찾는 주민",
+    "competitor": "신문 생활 광고",
+    "company": "단순 게시판",
+    "gap": "무료 지역 게시판"
+   },
    "hyps": [
     {
      "text": "신문 광고 할인",
@@ -22891,21 +26749,149 @@
     ],
     "solution": "대부분 무료인 단순한 지역 게시판",
     "mode": "break",
-    "conclusion": "일부 항목만 받으면 운영비는 충분하다",
-    "conclusion_auto": true
+    "conclusion": "단순하고 무료인 게시판으로 비싼 지면을 대체하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "주민",
+    "says": "무료로 방을 구했다",
+    "reveals": "무료가 가치다",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "사기 글이 많다",
+    "reveals": "신뢰 부족",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "무료 게시 대 운영 수익",
     "how": "대부분 무료로 두고 일부 항목만 유료로 받았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "게시판 운영",
+    "reframed": "무료 생활 정보",
+    "metric": "월간 게시물 수"
+   },
+   "issue_tree": {
+    "root": "생활 정보를 나누려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "지면",
+       "유료"
+      ]
+     },
+     {
+      "issue": "무료 게시판",
+      "chosen": true,
+      "sub": [
+       "지역별",
+       "단순"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": false,
+      "sub": [
+       "검증",
+       "신고"
+      ]
+     }
+    ],
+    "why": "무료면 누구나 올린다"
+   },
+   "pareto": {
+    "vital_few": "구인·부동산 게시 유료화",
+    "effect": "매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "지면",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "유료",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "무료 게시판",
+      "issue": "지역별",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "무료 게시판",
+      "issue": "단순",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "검증",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "신고",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "무료 게시판이 핵심이다"
+   },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "왜 무료인가: 지역 공익",
+     "왜 사업인가: 일부 유료로 충분하다"
+    ],
+    "intent": "공익과 최소 수익",
+    "intent_metric": "게시물 수",
+    "mode": "hold",
+    "criterion": "최소 유료화로 비용만 감당하면 성공"
+   },
+   "key_metrics": {
+    "north_star": "월간 게시물 수",
+    "leading": [
+     "월간 게시물 수",
+     "사기 신고율"
+    ],
+    "guardrail": "운영 비용",
+    "vanity": "방문자 수",
+    "intent_metric": "게시물 수",
+    "select_method": {
+     "methods": [
+      "voc"
+     ],
+     "how": "이용자 의견",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "단순함과 무료가 기존 산업(신문 광고)을 무너뜨릴 수 있다."
   },
   {
@@ -22944,10 +26930,41 @@
     "symptom": "출퇴근 정체",
     "problem": "같은 경로를 가는 사람들이 서로 연결되지 않는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 출퇴근이 막히나: 혼자 타고 다닌다",
+     "왜 혼자인가: 같은 경로 사람과 연결이 안 된다",
+     "왜 안 되나: 낯선 사람과 타기 불안하다"
+    ],
+    "root_cause": "같은 경로 사람 간 신뢰와 연결 부재"
+   },
+   "pest": {
+    "political": "유상 카풀 규제",
+    "economic": "통근 비용",
+    "social": "신도시 통근",
+    "technological": "경로 매칭",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "회사·단지 소속",
+    "opportunity": "통근 비용",
+    "so": "회사·단지 기반 정기 카풀",
+    "weakness": "규제 시간 제한",
+    "wo": "회사 복지로 도입",
+    "threat": "택시 업계 반발",
+    "st": "소속 신뢰로 방어"
+   },
+   "three_c": {
+    "customer": "같은 경로로 통근하는 직장인",
+    "competitor": "혼자 운전·대중교통",
+    "company": "소속 기반 신뢰",
+    "gap": "아는 소속끼리 정기 카풀"
+   },
    "hyps": [
     {
      "text": "도로 확장",
@@ -23006,21 +27023,149 @@
     ],
     "solution": "같은 회사·단지 기반 정기 카풀",
     "mode": "break",
-    "conclusion": "그 경계 안에서만 매칭한다",
-    "conclusion_auto": true
+    "conclusion": "낯선 사람이 아니라 같은 소속끼리 연결하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "직장인",
+    "says": "같은 회사 사람이라 편하다",
+    "reveals": "소속 신뢰",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "시간이 안 맞으면 곤란하다",
+    "reveals": "일정 유연성",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낯선 사람 회피 대 매칭 수",
     "how": "같은 회사·단지로 경계를 정해 신뢰를 유지하며 매칭했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "카풀 매칭",
+    "reframed": "소속 기반 정기 카풀",
+    "metric": "정기 카풀 유지율"
+   },
+   "issue_tree": {
+    "root": "혼자 타는 통근을 줄이려면",
+    "branches": [
+     {
+      "issue": "대중교통",
+      "chosen": false,
+      "sub": [
+       "노선",
+       "셔틀"
+      ]
+     },
+     {
+      "issue": "소속 카풀",
+      "chosen": true,
+      "sub": [
+       "회사",
+       "단지"
+      ]
+     },
+     {
+      "issue": "혜택",
+      "chosen": false,
+      "sub": [
+       "주차",
+       "비용 분담"
+      ]
+     }
+    ],
+    "why": "소속이 신뢰를 준다"
+   },
+   "pareto": {
+    "vital_few": "같은 회사 매칭",
+    "effect": "정기 카풀의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "대중교통",
+      "issue": "노선",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "대중교통",
+      "issue": "셔틀",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "소속 카풀",
+      "issue": "회사",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "소속 카풀",
+      "issue": "단지",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "혜택",
+      "issue": "주차",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "혜택",
+      "issue": "비용 분담",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "소속 카풀이 핵심이고 주차 혜택은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "mission",
+    "whys": [
+     "왜 카풀인가: 정체가 준다",
+     "왜 사업인가: 회사 복지 계약"
+    ],
+    "intent": "교통 감소와 복지 매출",
+    "intent_metric": "정기 카풀 수",
+    "mode": "raise",
+    "criterion": "정기 카풀 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "정기 카풀 유지율",
+    "leading": [
+     "정기 카풀 유지율",
+     "좌석 채움률"
+    ],
+    "guardrail": "규제 위반",
+    "vanity": "가입자 수",
+    "intent_metric": "정기 카풀 수",
+    "select_method": {
+     "methods": [
+      "survey"
+     ],
+     "how": "통근 설문",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "신뢰 범위를 좁히면(같은 회사) 공유가 쉬워진다."
   },
   {
@@ -54940,10 +59085,41 @@
     "symptom": "항공업 저수익",
     "problem": "비행기가 지상에 오래 머무르고 기종·노선이 복잡하다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 항공사가 적자인가: 비용이 높다",
+     "왜 높나: 운항이 복잡하다",
+     "왜 복잡한가: 허브 중심·다기종"
+    ],
+    "root_cause": "복잡함이 비용을 만든다"
+   },
+   "pest": {
+    "political": "항공 규제 완화",
+    "economic": "유가",
+    "social": "저가 여행 수요",
+    "technological": "단일 기종 운영",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "단일 기종·직항",
+    "opportunity": "저가 여행 수요",
+    "so": "짧은 회항 시간",
+    "weakness": "장거리 약함",
+    "wo": "2차 공항 활용",
+    "threat": "대형 항공 저가 브랜드",
+    "st": "운영 문화로 방어"
+   },
+   "three_c": {
+    "customer": "싸게 날고 싶은 여행자",
+    "competitor": "허브 중심 대형 항공",
+    "company": "단순 운영",
+    "gap": "단순해서 싼 항공"
+   },
    "hyps": [
     {
      "text": "서비스 고급화",
@@ -55017,21 +59193,150 @@
     ],
     "solution": "단일 기종 + 직항 + 짧은 지상 시간",
     "mode": "break",
-    "conclusion": "그 가격을 맞추려 운영을 단순화한다",
-    "conclusion_auto": true
+    "conclusion": "복잡함을 빼면 비용이 빠진다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여행자",
+    "says": "싸고 정시에 간다",
+    "reveals": "가격과 정시성",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "여행자",
+    "says": "좌석 지정이 없어 불편하다",
+    "reveals": "단순함의 불편",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "낮은 운임 대 수익",
     "how": "단순 운영으로 원가를 낮춰 둘 다 잡았다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "흑자",
+    "reframed": "단순 운영으로 원가 절감",
+    "metric": "좌석 마일당 비용"
+   },
+   "issue_tree": {
+    "root": "항공 원가를 낮추려면",
+    "branches": [
+     {
+      "issue": "인건비",
+      "chosen": false,
+      "sub": [
+       "감축",
+       "협상"
+      ]
+     },
+     {
+      "issue": "운영 단순화",
+      "chosen": true,
+      "sub": [
+       "단일 기종",
+       "짧은 회항"
+      ]
+     },
+     {
+      "issue": "노선",
+      "chosen": false,
+      "sub": [
+       "직항",
+       "2차 공항"
+      ]
+     }
+    ],
+    "why": "복잡함이 비용이다"
+   },
+   "pareto": {
+    "vital_few": "지상 체류 시간",
+    "effect": "비용 절감의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "인건비",
+      "issue": "감축",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "인건비",
+      "issue": "협상",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "운영 단순화",
+      "issue": "단일 기종",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "운영 단순화",
+      "issue": "짧은 회항",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "노선",
+      "issue": "직항",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "노선",
+      "issue": "2차 공항",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "단일 기종과 짧은 회항이 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 단순화인가: 원가가 준다",
+     "왜 이익인가: 저가에도 흑자"
+    ],
+    "intent": "흑자 운항",
+    "intent_metric": "영업이익률",
+    "mode": "raise",
+    "criterion": "영업이익률이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "좌석 마일당 비용",
+    "leading": [
+     "회항 시간",
+     "좌석 마일당 비용"
+    ],
+    "guardrail": "정시율",
+    "vanity": "노선 수",
+    "intent_metric": "영업이익률",
+    "select_method": {
+     "methods": [
+      "quant",
+      "observation"
+     ],
+     "how": "운항 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "경쟁자를 다시 정의하면(자동차) 가격 기준이 바뀐다."
   },
   {
@@ -55074,10 +59379,41 @@
     "symptom": "저마진",
     "problem": "수익이 항공권 하나에 걸려 있다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 이익이 없나: 항공권이 너무 싸다",
+     "왜 남는 게 없나: 수익이 항공권 하나다",
+     "왜 그런가: 운임에 모든 게 포함된다는 통념"
+    ],
+    "root_cause": "수익이 한 곳에 걸려 있다"
+   },
+   "pest": {
+    "political": "소비자 가격 표시 규제",
+    "economic": "저가 수요",
+    "social": "가격 비교 습관",
+    "technological": "온라인 직판",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "초저가 운영",
+    "opportunity": "가격 비교 습관",
+    "so": "기본 운임 + 부가 판매",
+    "weakness": "숨은 요금 불만",
+    "wo": "투명한 부가 표시",
+    "threat": "규제 강화",
+    "st": "원가로 방어"
+   },
+   "three_c": {
+    "customer": "최저가를 찾는 여행자",
+    "competitor": "포함 운임 항공",
+    "company": "초저가 원가",
+    "gap": "필요한 것만 내는 항공"
+   },
    "hyps": [
     {
      "text": "항공권 가격 유지",
@@ -55151,21 +59487,150 @@
     ],
     "solution": "초저가 기본 운임 + 부가 서비스 분리",
     "mode": "break",
-    "conclusion": "기본은 싸게, 나머지는 따로 판다",
-    "conclusion_auto": true
+    "conclusion": "수익원을 쪼개면 기본 가격을 낮출 수 있다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여행자",
+    "says": "짐 없이 가니 정말 싸다",
+    "reveals": "선택형 가격",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "여행자",
+    "says": "추가 요금이 너무 많다",
+    "reveals": "숨은 요금 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "초저가 대 수익",
     "how": "부가 서비스로 벌어 기본 운임을 낮췄다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "흑자",
+    "reframed": "수익원 분리",
+    "metric": "승객당 부가 매출"
+   },
+   "issue_tree": {
+    "root": "저가로 이익을 내려면",
+    "branches": [
+     {
+      "issue": "원가",
+      "chosen": false,
+      "sub": [
+       "단순 운영",
+       "2차 공항"
+      ]
+     },
+     {
+      "issue": "수익 분리",
+      "chosen": true,
+      "sub": [
+       "수하물",
+       "좌석"
+      ]
+     },
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "기내 판매",
+       "제휴"
+      ]
+     }
+    ],
+    "why": "운임 하나로는 남지 않는다"
+   },
+   "pareto": {
+    "vital_few": "수하물·좌석 요금",
+    "effect": "부가 매출의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "원가",
+      "issue": "단순 운영",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "원가",
+      "issue": "2차 공항",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "수익 분리",
+      "issue": "수하물",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "수익 분리",
+      "issue": "좌석",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "광고",
+      "issue": "기내 판매",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "제휴",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "부가 판매가 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 분리인가: 부가 매출이 쌓인다",
+     "왜 이익인가: 부가 매출 마진이 높다"
+    ],
+    "intent": "부가 매출 이익",
+    "intent_metric": "영업이익",
+    "mode": "raise",
+    "criterion": "영업이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "승객당 부가 매출",
+    "leading": [
+     "승객당 부가 매출",
+     "탑승률"
+    ],
+    "guardrail": "요금 민원·규제",
+    "vanity": "검색 수",
+    "intent_metric": "영업이익",
+    "select_method": {
+     "methods": [
+      "quant",
+      "experiment"
+     ],
+     "how": "가격 실험",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "묶여 있던 상품을 풀면(언번들링) 가격 경쟁력이 생긴다."
   },
   {
@@ -56152,10 +60617,43 @@
     "symptom": "체크인 대기 불만",
     "problem": "모든 손님이 같은 시간에 같은 창구에서 같은 절차를 밟는다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 체크인 줄이 기나: 같은 시간에 몰린다",
+     "왜 몰리나: 모두 같은 창구 같은 절차다",
+     "왜 그런가: 체크인은 프런트에서라는 통념"
+    ],
+    "root_cause": "획일적 절차"
+   },
+   "pest": {
+    "political": "숙박 신원 확인 규제",
+    "economic": "인건비",
+    "social": "비대면 선호",
+    "technological": "모바일 체크인·디지털 키",
+    "key": [
+     "T",
+     "P"
+    ],
+    "focus": [
+     "T",
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "앱·디지털 키",
+    "opportunity": "비대면 선호",
+    "so": "모바일 체크인",
+    "weakness": "신원 확인 규정",
+    "wo": "사전 등록",
+    "threat": "경쟁 호텔 자동화",
+    "st": "대기 경험 설계로 차별"
+   },
+   "three_c": {
+    "customer": "피곤한 저녁 출장객",
+    "competitor": "프런트 체크인 호텔",
+    "company": "앱",
+    "gap": "줄 없는 체크인"
+   },
    "hyps": [
     {
      "text": "직원 증원",
@@ -56216,21 +60714,150 @@
     ],
     "solution": "모바일 체크인 + 웰컴 대기 경험",
     "mode": "break",
-    "conclusion": "미리 처리하고 남은 대기는 환영으로 채운다",
-    "conclusion_auto": true
+    "conclusion": "모두를 같은 줄에 세우지 마라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "출장객",
+    "says": "바로 방으로 갔다",
+    "reveals": "시간 절약",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "앱 설치가 귀찮다",
+    "reveals": "앱 피로",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 체크인 대 환대",
     "how": "모바일로 처리하고 남은 대기는 환영으로 채웠다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "대기 줄이기",
+    "reframed": "절차 분산",
+    "metric": "체크인 대기 시간"
+   },
+   "issue_tree": {
+    "root": "체크인 대기를 줄이려면",
+    "branches": [
+     {
+      "issue": "인력",
+      "chosen": false,
+      "sub": [
+       "직원 증원",
+       "교대"
+      ]
+     },
+     {
+      "issue": "절차 분산",
+      "chosen": true,
+      "sub": [
+       "모바일 체크인",
+       "디지털 키"
+      ]
+     },
+     {
+      "issue": "대기 경험",
+      "chosen": false,
+      "sub": [
+       "웰컴 드링크",
+       "좌석"
+      ]
+     }
+    ],
+    "why": "같은 절차가 줄을 만든다"
+   },
+   "pareto": {
+    "vital_few": "저녁 피크",
+    "effect": "대기의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "인력",
+      "issue": "직원 증원",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "인력",
+      "issue": "교대",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "절차 분산",
+      "issue": "모바일 체크인",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "절차 분산",
+      "issue": "디지털 키",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "대기 경험",
+      "issue": "웰컴 드링크",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "대기 경험",
+      "issue": "좌석",
+      "speed": 5,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "모바일 체크인이 핵심이고 대기 경험은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "retention",
+    "whys": [
+     "왜 대기인가: 첫인상이다",
+     "왜 유지인가: 출장객 재방문"
+    ],
+    "intent": "재방문 매출",
+    "intent_metric": "재방문율",
+    "mode": "hold",
+    "criterion": "인력을 늘리지 않고도 만족도가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "체크인 대기 시간",
+    "leading": [
+     "체크인 대기 시간",
+     "모바일 체크인율"
+    ],
+    "guardrail": "신원 확인 누락",
+    "vanity": "앱 설치 수",
+    "intent_metric": "재방문율",
+    "select_method": {
+     "methods": [
+      "observation",
+      "survey"
+     ],
+     "how": "로비 관찰과 투숙객 설문",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "대기 문제의 두 갈래: 없애기(타이밍) 또는 채우기(맹점)."
   },
   {
@@ -56269,10 +60896,39 @@
     "symptom": "출장 숙박비 부담",
     "problem": "출장객이 쓰지 않는 공간과 서비스에 돈을 낸다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 객실이 비싼가: 넓고 서비스가 많다",
+     "왜 그런가: 호텔은 넓어야 한다는 통념",
+     "왜 아쉬운가: 출장객은 잠만 잔다"
+    ],
+    "root_cause": "쓰지 않는 공간에 돈을 낸다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "도심 지가",
+    "social": "출장·디지털 노마드",
+    "technological": "자동 체크인·모듈 객실",
+    "key": [
+     "E"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "모듈 객실",
+    "opportunity": "출장 수요",
+    "so": "작은 객실 + 고급 침구 + 라운지",
+    "weakness": "좁은 객실",
+    "wo": "라운지로 보완",
+    "threat": "경쟁 부티크 호텔",
+    "st": "디자인 브랜드로 방어"
+   },
+   "three_c": {
+    "customer": "잠만 자는 출장객",
+    "competitor": "넓은 비즈니스호텔",
+    "company": "모듈 객실",
+    "gap": "작지만 고급인 잠자리"
+   },
    "hyps": [
     {
      "text": "객실 할인",
@@ -56346,21 +61002,150 @@
     ],
     "solution": "작은 객실 + 고급 침구 + 공용 라운지",
     "mode": "break",
-    "conclusion": "객실을 줄이고 침구·공용 공간에 쓴다",
-    "conclusion_auto": true
+    "conclusion": "고객이 쓰지 않는 것을 빼고 쓰는 것에 투자하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "출장객",
+    "says": "침대가 정말 좋다",
+    "reveals": "핵심 투자",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "방이 너무 좁다",
+    "reveals": "공간 한계",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "작은 객실 대 고급 경험",
     "how": "침대·샤워에 집중하고 공용 공간을 넓혀 둘 다 줬다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "객실 판매",
+    "reframed": "쓰는 것에만 투자",
+    "metric": "객실당 이익"
+   },
+   "issue_tree": {
+    "root": "객실 가격을 낮추려면",
+    "branches": [
+     {
+      "issue": "서비스 축소",
+      "chosen": false,
+      "sub": [
+       "룸서비스",
+       "직원"
+      ]
+     },
+     {
+      "issue": "공간 재배분",
+      "chosen": true,
+      "sub": [
+       "작은 객실",
+       "공용 라운지"
+      ]
+     },
+     {
+      "issue": "핵심 투자",
+      "chosen": false,
+      "sub": [
+       "침구",
+       "샤워"
+      ]
+     }
+    ],
+    "why": "출장객은 잠만 잔다"
+   },
+   "pareto": {
+    "vital_few": "침대·샤워",
+    "effect": "만족도의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "서비스 축소",
+      "issue": "룸서비스",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "서비스 축소",
+      "issue": "직원",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "공간 재배분",
+      "issue": "작은 객실",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "공간 재배분",
+      "issue": "공용 라운지",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "핵심 투자",
+      "issue": "침구",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": false
+     },
+     {
+      "branch": "핵심 투자",
+      "issue": "샤워",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "공간 재배분이 핵심이다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 작은 객실인가: 같은 땅에 더 많은 방",
+     "왜 이익인가: 객실당 원가가 준다"
+    ],
+    "intent": "객실 이익",
+    "intent_metric": "객실당 영업이익",
+    "mode": "raise",
+    "criterion": "객실당 영업이익이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "객실당 이익",
+    "leading": [
+     "객실 점유율",
+     "침구 만족도"
+    ],
+    "guardrail": "공간 불만",
+    "vanity": "예약 검색 수",
+    "intent_metric": "객실당 영업이익",
+    "select_method": {
+     "methods": [
+      "interview",
+      "observation"
+     ],
+     "how": "출장객 행동 관찰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "고객이 실제로 쓰는 것에만 투자한다."
   },
   {
@@ -57802,10 +62587,41 @@
     "symptom": "수수료 부담",
     "problem": "고객이 호텔 홈페이지에서 직접 예약할 이유가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 수수료에 시달리나: 예약 대부분이 플랫폼이다",
+     "왜 플랫폼인가: 직접 예약할 이유가 없다",
+     "왜 없나: 가격이 같다"
+    ],
+    "root_cause": "직접 예약의 차별 부재"
+   },
+   "pest": {
+    "political": "가격 동등 조항 규제",
+    "economic": "플랫폼 수수료",
+    "social": "비교 예약 습관",
+    "technological": "호텔 예약 엔진",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "호텔 경험",
+    "opportunity": "가격 동등 조항 완화",
+    "so": "경험 혜택 직접 예약",
+    "weakness": "예약 엔진 약함",
+    "wo": "회원 프로그램",
+    "threat": "플랫폼 지배",
+    "st": "단골 관계로 방어"
+   },
+   "three_c": {
+    "customer": "혜택을 원하는 투숙객",
+    "competitor": "예약 플랫폼",
+    "company": "호텔 경험",
+    "gap": "직접 예약만의 경험 혜택"
+   },
    "hyps": [
     {
      "text": "직접 예약 할인",
@@ -57879,21 +62695,149 @@
     ],
     "solution": "직접 예약 전용 경험 혜택",
     "mode": "break",
-    "conclusion": "직접 예약에만 업그레이드를 준다",
-    "conclusion_auto": true
+    "conclusion": "가격이 아니라 경험 혜택으로 직접 예약 이유를 만들어라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "투숙객",
+    "says": "직접 예약하니 업그레이드를 받았다",
+    "reveals": "경험 혜택",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "고객",
+    "says": "플랫폼 포인트를 못 받는다",
+    "reveals": "플랫폼 혜택 상실",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "직접 예약 유도 대 가격 계약",
     "how": "가격이 아닌 경험 혜택으로 계약을 어기지 않고 유도했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "직접 예약",
+    "reframed": "수수료 절감",
+    "metric": "직접 예약 비율"
+   },
+   "issue_tree": {
+    "root": "직접 예약을 늘리려면",
+    "branches": [
+     {
+      "issue": "가격",
+      "chosen": false,
+      "sub": [
+       "할인",
+       "최저가 보장"
+      ]
+     },
+     {
+      "issue": "경험 혜택",
+      "chosen": true,
+      "sub": [
+       "업그레이드",
+       "늦은 체크아웃"
+      ]
+     },
+     {
+      "issue": "채널",
+      "chosen": false,
+      "sub": [
+       "홈페이지",
+       "회원"
+      ]
+     }
+    ],
+    "why": "가격 할인은 플랫폼 계약과 충돌한다"
+   },
+   "pareto": {
+    "vital_few": "재방문 고객",
+    "effect": "직접 예약의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "가격",
+      "issue": "할인",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "가격",
+      "issue": "최저가 보장",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "경험 혜택",
+      "issue": "업그레이드",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "경험 혜택",
+      "issue": "늦은 체크아웃",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "채널",
+      "issue": "홈페이지",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     },
+     {
+      "branch": "채널",
+      "issue": "회원",
+      "speed": 3,
+      "impact": 3,
+      "quadrant": "drop",
+      "selected": false
+     }
+    ],
+    "why": "경험 혜택이 빠르고 효과가 크다"
+   },
+   "deep_why": {
+    "type": "profit",
+    "whys": [
+     "왜 직접 예약인가: 수수료가 준다",
+     "왜 이익인가: 객실당 순수익이 오른다"
+    ],
+    "intent": "수수료 절감 이익",
+    "intent_metric": "객실당 순수익",
+    "mode": "hold",
+    "criterion": "직접 예약으로 옮겨도 총 예약 수가 줄지 않으면 성공"
+   },
+   "key_metrics": {
+    "north_star": "직접 예약 비율",
+    "leading": [
+     "직접 예약 비율",
+     "회원 재방문율"
+    ],
+    "guardrail": "총 예약 수",
+    "vanity": "홈페이지 방문자",
+    "intent_metric": "객실당 순수익",
+    "select_method": {
+     "methods": [
+      "experiment"
+     ],
+     "how": "혜택 실험",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "가격 대신 경험으로 채널을 옮긴다."
   },
   {
@@ -58792,10 +63736,41 @@
     "symptom": "매물 부족",
     "problem": "판매자가 등록 과정(사진·가격 책정·검수)을 귀찮아한다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 구매자가 떠나나: 검색 결과가 비었다",
+     "왜 비었나: 매물이 적다",
+     "왜 적나: 등록 과정이 귀찮다"
+    ],
+    "root_cause": "판매자 등록 부담"
+   },
+   "pest": {
+    "political": "위조품 규제",
+    "economic": "중고 명품 시장",
+    "social": "리셀 문화",
+    "technological": "자동 가격 추정",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "검수 역량",
+    "opportunity": "리셀 문화",
+    "so": "방문 수거 + 자동 가격",
+    "weakness": "수거 비용",
+    "wo": "대량 위탁으로 단가 낮추기",
+    "threat": "경쟁 리셀 플랫폼",
+    "st": "검수 신뢰로 방어"
+   },
+   "three_c": {
+    "customer": "매물을 찾는 구매자와 귀찮은 판매자",
+    "competitor": "직접 등록 중고 앱",
+    "company": "검수 역량",
+    "gap": "수거해 가는 명품 판매"
+   },
    "hyps": [
     {
      "text": "판매 수수료 인하",
@@ -58854,21 +63829,149 @@
     ],
     "solution": "방문 수거 대행 + 자동 가격 추정",
     "mode": "break",
-    "conclusion": "수거·촬영·가격을 대신 한다",
-    "conclusion_auto": true
+    "conclusion": "공급이 부족하면 판매자의 수고를 대신하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "판매자",
+    "says": "집 앞에서 가져가니 편하다",
+    "reveals": "수고 제거",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "판매자",
+    "says": "자동 가격이 너무 낮다",
+    "reveals": "가격 신뢰",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "판매자 편의 대 플랫폼 비용",
     "how": "방문 수거 대행 비용을 수수료와 회전으로 메웠다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "구매 전환",
+    "reframed": "매물 확보",
+    "metric": "검색 결과 0건 비율"
+   },
+   "issue_tree": {
+    "root": "매물을 늘리려면",
+    "branches": [
+     {
+      "issue": "보상",
+      "chosen": false,
+      "sub": [
+       "수수료 인하",
+       "적립"
+      ]
+     },
+     {
+      "issue": "등록 대행",
+      "chosen": true,
+      "sub": [
+       "방문 수거",
+       "자동 가격"
+      ]
+     },
+     {
+      "issue": "유입",
+      "chosen": false,
+      "sub": [
+       "광고",
+       "제휴"
+      ]
+     }
+    ],
+    "why": "귀찮아서 안 판다"
+   },
+   "pareto": {
+    "vital_few": "등록 단계 이탈",
+    "effect": "매물 부족의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "보상",
+      "issue": "수수료 인하",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "보상",
+      "issue": "적립",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "등록 대행",
+      "issue": "방문 수거",
+      "speed": 3,
+      "impact": 5,
+      "quadrant": "big_bet",
+      "selected": true
+     },
+     {
+      "branch": "등록 대행",
+      "issue": "자동 가격",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "유입",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "유입",
+      "issue": "제휴",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "등록 대행이 핵심이다"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 매물인가: 구매자가 남는다",
+     "왜 성장인가: 매물이 많아야 거래가 돈다"
+    ],
+    "intent": "유동성 성장",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "검색 결과 0건 비율",
+    "leading": [
+     "검색 결과 0건 비율",
+     "등록 완료율"
+    ],
+    "guardrail": "수거 비용",
+    "vanity": "앱 설치 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "검색·등록 퍼널",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "공급이 부족하면 공급자의 '일'을 대신하는 것이 가장 빠르다."
   },
   {
@@ -61055,10 +66158,39 @@
     "symptom": "생활 서비스 탐색 어려움",
     "problem": "고객이 여러 전문가에게 견적을 받기 어렵다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 전문가를 못 찾나: 지인이나 전단뿐이다",
+     "왜 비교 못 하나: 여러 견적을 받기 어렵다",
+     "왜 그런가: 고객이 일일이 연락해야 한다"
+    ],
+    "root_cause": "견적 비교의 수고"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "생활 서비스 시장",
+    "social": "1인 가구",
+    "technological": "역경매 매칭",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "전문가 풀",
+    "opportunity": "생활 서비스 수요",
+    "so": "역경매 견적 매칭",
+    "weakness": "전문가 견적 비용 불만",
+    "wo": "성과 기반 과금",
+    "threat": "카테고리 전문 앱",
+    "st": "다양한 카테고리로 방어"
+   },
+   "three_c": {
+    "customer": "생활 서비스 전문가를 찾는 사람",
+    "competitor": "지인·전단",
+    "company": "전문가 풀",
+    "gap": "요청 한 번에 견적이 오는 매칭"
+   },
    "hyps": [
     {
      "text": "전문가 목록 사이트",
@@ -61132,21 +66264,149 @@
     ],
     "solution": "역경매형 견적 매칭",
     "mode": "break",
-    "conclusion": "견적을 보내는 쪽이 비용을 내게 한다",
-    "conclusion_auto": true
+    "conclusion": "고객이 찾지 말고 전문가가 찾아오게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "요청 한 번에 견적이 여러 개 왔다",
+    "reveals": "비교 편의",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "전문가",
+    "says": "견적 보내는 데도 돈이 든다",
+    "reveals": "견적 비용 불만",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "고객 무료 대 플랫폼 수익",
     "how": "견적 보내는 전문가가 비용을 내게 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매칭 수",
+    "reframed": "견적 비교 쉽게",
+    "metric": "요청당 견적 수"
+   },
+   "issue_tree": {
+    "root": "전문가 찾기를 쉽게 하려면",
+    "branches": [
+     {
+      "issue": "검색",
+      "chosen": false,
+      "sub": [
+       "디렉터리",
+       "리뷰"
+      ]
+     },
+     {
+      "issue": "역경매",
+      "chosen": true,
+      "sub": [
+       "요청서",
+       "견적"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": false,
+      "sub": [
+       "인증",
+       "후기"
+      ]
+     }
+    ],
+    "why": "고객이 일일이 찾기 어렵다"
+   },
+   "pareto": {
+    "vital_few": "상위 카테고리",
+    "effect": "요청의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "검색",
+      "issue": "디렉터리",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "검색",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "역경매",
+      "issue": "요청서",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "역경매",
+      "issue": "견적",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "인증",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "신뢰",
+      "issue": "후기",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "역경매가 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 역경매인가: 매칭이 는다",
+     "왜 매출인가: 전문가 견적 과금"
+    ],
+    "intent": "견적 과금 매출",
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "요청당 견적 수",
+    "leading": [
+     "요청당 견적 수",
+     "고용 전환율"
+    ],
+    "guardrail": "전문가 이탈",
+    "vanity": "요청 수",
+    "intent_metric": "매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "매칭 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "누가 언제 돈을 내는지 설계가 공급자 품질과 플랫폼 수익을 정한다."
   },
   {
@@ -61189,10 +66449,39 @@
     "symptom": "현지 투어 불신",
     "problem": "현지 가이드와 여행자를 잇는 신뢰 채널이 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 현지 투어를 못 믿나: 품질을 모른다",
+     "왜 모르나: 가이드와 여행자를 잇는 채널이 없다",
+     "왜 없나: 투어는 여행사 상품이라는 통념"
+    ],
+    "root_cause": "현지 가이드와의 신뢰 채널 부재"
+   },
+   "pest": {
+    "political": "여행업 규제",
+    "economic": "해외여행 증가",
+    "social": "자유여행",
+    "technological": "마켓플레이스",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "한국인 가이드망",
+    "opportunity": "자유여행 증가",
+    "so": "현지 가이드 투어 마켓",
+    "weakness": "해외 경기 의존",
+    "wo": "항공·숙박 확장",
+    "threat": "글로벌 투어 플랫폼",
+    "st": "한국어 가이드로 차별"
+   },
+   "three_c": {
+    "customer": "현지 투어가 불안한 자유여행자",
+    "competitor": "패키지 여행사",
+    "company": "한국인 가이드망",
+    "gap": "리뷰로 믿는 한국어 현지 투어"
+   },
    "hyps": [
     {
      "text": "여행사 패키지",
@@ -61266,21 +66555,150 @@
     ],
     "solution": "현지 가이드 투어 마켓플레이스",
     "mode": "break",
-    "conclusion": "후기로 신뢰를 붙인다",
-    "conclusion_auto": true
+    "conclusion": "낯선 현지를 리뷰와 모국어 가이드로 믿게 하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "여행자",
+    "says": "한국어 가이드라 편했다",
+    "reveals": "모국어 신뢰",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "여행자",
+    "says": "가이드 품질 편차가 크다",
+    "reveals": "품질 관리",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "현지 투어 다양성 대 신뢰",
     "how": "후기로 개인 가이드에 신뢰를 붙였다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "투어 판매",
+    "reframed": "현지 투어 신뢰",
+    "metric": "예약 전환율"
+   },
+   "issue_tree": {
+    "root": "현지 투어를 믿게 하려면",
+    "branches": [
+     {
+      "issue": "여행사",
+      "chosen": false,
+      "sub": [
+       "패키지",
+       "제휴"
+      ]
+     },
+     {
+      "issue": "신뢰 채널",
+      "chosen": true,
+      "sub": [
+       "리뷰",
+       "한국어 가이드"
+      ]
+     },
+     {
+      "issue": "편의",
+      "chosen": false,
+      "sub": [
+       "일정",
+       "결제"
+      ]
+     }
+    ],
+    "why": "리뷰와 모국어가 신뢰다"
+   },
+   "pareto": {
+    "vital_few": "고평점 투어",
+    "effect": "예약의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "여행사",
+      "issue": "패키지",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "여행사",
+      "issue": "제휴",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "신뢰 채널",
+      "issue": "리뷰",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰 채널",
+      "issue": "한국어 가이드",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "편의",
+      "issue": "일정",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "편의",
+      "issue": "결제",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "신뢰 채널이 핵심이다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 신뢰인가: 예약한다",
+     "왜 매출인가: 수수료와 교차 판매"
+    ],
+    "intent": "수수료 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "예약 전환율",
+    "leading": [
+     "예약 전환율",
+     "리뷰 작성률"
+    ],
+    "guardrail": "가이드 불만",
+    "vanity": "등록 투어 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "voc",
+      "quant"
+     ],
+     "how": "리뷰 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "언어·문화가 같은 공급자가 신뢰의 지름길이다."
   },
   {
@@ -61460,10 +66878,39 @@
     "symptom": "취미 거래 불만",
     "problem": "전문 취미 거래에는 커뮤니티 지식이 필요하다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 취미 거래가 어렵나: 전문 정보를 못 찾는다",
+     "왜 그런가: 일반 중고 앱이다",
+     "왜 문제인가: 취미 거래에는 커뮤니티 지식이 필요하다"
+    ],
+    "root_cause": "전문 커뮤니티 부재"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "리셀 시장",
+    "social": "덕질·수집 문화",
+    "technological": "커뮤니티 기능",
+    "key": [
+     "S"
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "취미 커뮤니티",
+    "opportunity": "수집 문화",
+    "so": "취미 특화 중고 + 커뮤니티",
+    "weakness": "사기 거래",
+    "wo": "안전 결제·검수",
+    "threat": "일반 중고 앱",
+    "st": "취미 정체성으로 방어"
+   },
+   "three_c": {
+    "customer": "취미 물품을 거래하는 수집가",
+    "competitor": "일반 중고 앱",
+    "company": "취미 커뮤니티",
+    "gap": "전문가끼리 거래하는 중고 장터"
+   },
    "hyps": [
     {
      "text": "일반 중고 앱 기능 추가",
@@ -61537,21 +66984,150 @@
     ],
     "solution": "취미 특화 중고 거래 + 커뮤니티",
     "mode": "break",
-    "conclusion": "카테고리별 커뮤니티와 시세를 붙인다",
-    "conclusion_auto": true
+    "conclusion": "전문 거래에는 커뮤니티 지식을 붙여라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "수집가",
+    "says": "아는 사람끼리라 거래가 빠르다",
+    "reveals": "커뮤니티 신뢰",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "이용자",
+    "says": "사기 거래가 있다",
+    "reveals": "안전 결제 필요",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "전문성 대 시장 크기",
     "how": "취미 특화로 깊이를 얻고 카테고리를 늘렸다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "거래 수",
+    "reframed": "취미 거래 활성화",
+    "metric": "카테고리 거래액"
+   },
+   "issue_tree": {
+    "root": "취미 거래를 늘리려면",
+    "branches": [
+     {
+      "issue": "노출",
+      "chosen": false,
+      "sub": [
+       "광고",
+       "추천"
+      ]
+     },
+     {
+      "issue": "커뮤니티",
+      "chosen": true,
+      "sub": [
+       "취미 게시판",
+       "정보"
+      ]
+     },
+     {
+      "issue": "신뢰",
+      "chosen": false,
+      "sub": [
+       "안전 결제",
+       "검수"
+      ]
+     }
+    ],
+    "why": "전문 지식이 있어야 거래한다"
+   },
+   "pareto": {
+    "vital_few": "상위 취미 카테고리",
+    "effect": "거래액의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "노출",
+      "issue": "광고",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "노출",
+      "issue": "추천",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "커뮤니티",
+      "issue": "취미 게시판",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "커뮤니티",
+      "issue": "정보",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "안전 결제",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰",
+      "issue": "검수",
+      "speed": 3,
+      "impact": 4,
+      "quadrant": "big_bet",
+      "selected": false
+     }
+    ],
+    "why": "커뮤니티가 핵심이고 안전 결제는 빠른 승리"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 커뮤니티인가: 거래가 는다",
+     "왜 매출인가: 안전 결제 수수료와 광고"
+    ],
+    "intent": "수수료·광고 매출",
+    "intent_metric": "거래액",
+    "mode": "raise",
+    "criterion": "거래액이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "카테고리 거래액",
+    "leading": [
+     "카테고리 거래액",
+     "안전 결제 이용률"
+    ],
+    "guardrail": "사기 신고",
+    "vanity": "등록 상품 수",
+    "intent_metric": "거래액",
+    "select_method": {
+     "methods": [
+      "quant",
+      "voc"
+     ],
+     "how": "거래 데이터",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "대형 플랫폼 옆에서도 '깊은 니치'는 살아남는다."
   },
   {
@@ -66789,10 +72365,42 @@
     "symptom": "수요 부족",
     "problem": "학부모는 낯선 대학생을 믿을 근거가 없다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 학부모 가입이 적나: 대학생을 못 믿는다",
+     "왜 못 믿나: 근거가 없다",
+     "왜 퍼져 있나: 전국을 한 번에 열었다"
+    ],
+    "root_cause": "신뢰 근거 부재와 낮은 지역 밀도"
+   },
+   "pest": {
+    "political": "학원법·개인 과외 신고",
+    "economic": "사교육비",
+    "social": "학부모 안전 우려",
+    "technological": "인증·후기",
+    "key": [
+     "P",
+     "S"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "대학생 공급",
+    "opportunity": "사교육 수요",
+    "so": "인증 + 지역 집중",
+    "weakness": "학부모 불신",
+    "wo": "재학 인증·시범 수업",
+    "threat": "대형 과외 업체",
+    "st": "지역 밀도로 방어"
+   },
+   "three_c": {
+    "customer": "믿을 선생님을 찾는 학부모",
+    "competitor": "지인 소개·학원",
+    "company": "대학생 공급",
+    "gap": "검증된 동네 대학생 과외"
+   },
    "hyps": [
     {
      "text": "학부모 대상 광고",
@@ -66851,21 +72459,149 @@
     ],
     "solution": "신뢰 장치 + 지역 밀도 집중",
     "mode": "break",
-    "conclusion": "첫 수업 무료와 인증·후기를 한 지역에 모은다",
-    "conclusion_auto": true
+    "conclusion": "수요자 신뢰를 먼저 만들고 한 지역에 집중하라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "학부모",
+    "says": "재학 인증과 시범 수업으로 안심했다",
+    "reveals": "신뢰 장치",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "학부모",
+    "says": "대학생이라 책임감이 걱정된다",
+    "reveals": "책임 신뢰",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "빠른 확장 대 신뢰",
     "how": "한 지역에 신뢰 장치를 모아 밀도부터 만들었다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "매칭 수",
+    "reframed": "학부모 신뢰 확보",
+    "metric": "학부모 가입 수"
+   },
+   "issue_tree": {
+    "root": "학부모를 모으려면",
+    "branches": [
+     {
+      "issue": "광고",
+      "chosen": false,
+      "sub": [
+       "지역 광고",
+       "할인"
+      ]
+     },
+     {
+      "issue": "신뢰 장치",
+      "chosen": true,
+      "sub": [
+       "재학 인증",
+       "시범 수업"
+      ]
+     },
+     {
+      "issue": "밀도",
+      "chosen": false,
+      "sub": [
+       "한 지역 집중",
+       "학교별"
+      ]
+     }
+    ],
+    "why": "신뢰가 없으면 오지 않는다"
+   },
+   "pareto": {
+    "vital_few": "신뢰 부족",
+    "effect": "학부모 이탈의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "광고",
+      "issue": "지역 광고",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "광고",
+      "issue": "할인",
+      "speed": 4,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "신뢰 장치",
+      "issue": "재학 인증",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "신뢰 장치",
+      "issue": "시범 수업",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "밀도",
+      "issue": "한 지역 집중",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "밀도",
+      "issue": "학교별",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "신뢰 장치가 핵심이고 지역 집중은 빠른 승리"
+   },
+   "deep_why": {
+    "type": "growth",
+    "whys": [
+     "왜 신뢰인가: 학부모가 온다",
+     "왜 성장인가: 수요가 공급을 붙잡는다"
+    ],
+    "intent": "양면 균형 성장",
+    "intent_metric": "매칭 수",
+    "mode": "raise",
+    "criterion": "매칭 수가 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "학부모 가입 수",
+    "leading": [
+     "학부모 가입 수",
+     "시범 수업 전환율"
+    ],
+    "guardrail": "선생님 이탈",
+    "vanity": "선생님 가입 수",
+    "intent_metric": "매칭 수",
+    "select_method": {
+     "methods": [
+      "interview"
+     ],
+     "how": "학부모 인터뷰",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "페이스북(한 학교부터)처럼 양면 시장은 작은 지역 밀도에서 시작한다."
   },
   {
@@ -70162,10 +75898,41 @@
     "symptom": "결제 직전 단계에서 이탈이 많다",
     "problem": "선택 입력란 '회사명'이 고객을 헷갈리게 해 은행 이름을 적었고, 그 결과 카드 주소 확인이 실패했다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 결제가 끝나지 않나: 카드 주소 확인 실패",
+     "왜 실패하나: 주소에 은행 이름을 적었다",
+     "왜 적었나: 회사명 입력란이 헷갈렸다"
+    ],
+    "root_cause": "불필요한 선택 입력란"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "결제 실패 손실",
+    "social": "빠른 결제 기대",
+    "technological": "결제 퍼널 분석",
+    "key": [
+     "T"
+    ],
+    "focus": [
+     "T"
+    ]
+   },
+   "swot": {
+    "strength": "퍼널 데이터",
+    "opportunity": "결제 최적화",
+    "so": "입력란 삭제",
+    "weakness": "불필요 필드 누적",
+    "wo": "정기 필드 점검",
+    "threat": "경쟁 여행 사이트",
+    "st": "데이터 문화로 방어"
+   },
+   "three_c": {
+    "customer": "빨리 결제하려는 여행자",
+    "competitor": "다른 예약 사이트",
+    "company": "퍼널 데이터",
+    "gap": "헷갈림 없는 결제"
+   },
    "hyps": [
     {
      "text": "결제 단계 할인 쿠폰",
@@ -70224,21 +75991,149 @@
     ],
     "solution": "회사명 입력란 삭제",
     "mode": "break",
-    "conclusion": "칸 하나를 지우는 게 해법이다",
-    "conclusion_auto": true
+    "conclusion": "필요 없는 입력란 하나가 매출을 막는다, 빼라",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "고객",
+    "says": "결제가 바로 끝났다",
+    "reveals": "단순함",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "영업팀",
+    "says": "기업 고객 정보를 못 모은다",
+    "reveals": "데이터 수집 손실",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "데이터 수집 대 결제 완료",
     "how": "불필요한 칸을 지워 결제를 살렸다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "결제 완료",
+    "reframed": "헷갈림 제거",
+    "metric": "결제 완료율"
+   },
+   "issue_tree": {
+    "root": "결제 실패를 줄이려면",
+    "branches": [
+     {
+      "issue": "결제 수단",
+      "chosen": false,
+      "sub": [
+       "간편결제",
+       "카드"
+      ]
+     },
+     {
+      "issue": "입력란",
+      "chosen": true,
+      "sub": [
+       "회사명 삭제",
+       "라벨 개선"
+      ]
+     },
+     {
+      "issue": "오류 안내",
+      "chosen": false,
+      "sub": [
+       "메시지",
+       "재시도"
+      ]
+     }
+    ],
+    "why": "헷갈린 입력란이 원인이다"
+   },
+   "pareto": {
+    "vital_few": "회사명 입력란",
+    "effect": "결제 실패의 상당 부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "결제 수단",
+      "issue": "간편결제",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "결제 수단",
+      "issue": "카드",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "입력란",
+      "issue": "회사명 삭제",
+      "speed": 5,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "입력란",
+      "issue": "라벨 개선",
+      "speed": 5,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "오류 안내",
+      "issue": "메시지",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "오류 안내",
+      "issue": "재시도",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "입력란 삭제가 가장 빠르고 효과가 크다"
+   },
+   "deep_why": {
+    "type": "revenue",
+    "whys": [
+     "왜 입력란인가: 결제가 완료된다",
+     "왜 매출인가: 놓친 예약이 매출이 된다"
+    ],
+    "intent": "회수 매출",
+    "intent_metric": "연간 추가 매출",
+    "mode": "raise",
+    "criterion": "결제 완료율이 오르면 성공"
+   },
+   "key_metrics": {
+    "north_star": "결제 완료율",
+    "leading": [
+     "결제 완료율",
+     "주소 확인 실패율"
+    ],
+    "guardrail": "기업 고객 정보 수집",
+    "vanity": "결제 버튼 클릭 수",
+    "intent_metric": "연간 추가 매출",
+    "select_method": {
+     "methods": [
+      "quant"
+     ],
+     "how": "결제 실패 데이터 분석",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "입력 폼의 항목 하나가 결제 성공률을 바꾼다. 생년월일 입력 화면의 선택 항목(태어난 장소 등)도 같은 눈으로 본다."
   },
   {
@@ -70994,10 +76889,41 @@
     "symptom": "품절 임박·인기 문구로 예약을 서두르게 했다",
     "problem": "사실과 다른 희소성·인기 표시로 결정을 서두르게 하는 것이 전환율 실험의 '승리안'이 되어 있었다"
    },
-   "five_why": null,
-   "pest": null,
-   "swot": null,
-   "three_c": null,
+   "five_why": {
+    "whys": [
+     "왜 규제를 받았나: 사실과 다른 희소성 표시",
+     "왜 그랬나: 전환율 실험의 승리안이었다",
+     "왜 승리했나: 결정을 서두르게 한다"
+    ],
+    "root_cause": "전환율만 보는 실험 문화"
+   },
+   "pest": {
+    "political": "영국 CMA 압박 판매 조사",
+    "economic": "예약 수수료",
+    "social": "소비자 권리",
+    "technological": "A/B 테스트",
+    "key": [
+     "P"
+    ],
+    "focus": [
+     "P"
+    ]
+   },
+   "swot": {
+    "strength": "실험 문화",
+    "opportunity": "투명성 규제",
+    "so": "사실 기반 표시",
+    "weakness": "압박 판매 관행",
+    "wo": "가드레일 지표 도입",
+    "threat": "규제 강화",
+    "st": "신뢰로 차별"
+   },
+   "three_c": {
+    "customer": "조급하게 결정한 여행자",
+    "competitor": "압박 판매 경쟁사",
+    "company": "실험 문화",
+    "gap": "사실만 보여 주는 예약"
+   },
    "hyps": [
     {
      "text": "'지금 예약 시 할인' 문구",
@@ -71056,21 +76982,150 @@
     ],
     "solution": "2019년 압박 판매·숨은 요금 시정 약속",
     "mode": "break",
-    "conclusion": "정확한 재고와 총액만 보여 준다",
-    "conclusion_auto": true
+    "conclusion": "전환율만 보는 실험은 신뢰를 깎는 승리안을 고른다",
+    "conclusion_auto": false
    },
-   "pro_opinion": null,
-   "anti_opinion": null,
+   "pro_opinion": {
+    "who": "마케터",
+    "says": "희소성 표시가 전환을 올렸다",
+    "reveals": "단기 효과",
+    "source": null,
+    "inferred": true
+   },
+   "anti_opinion": {
+    "who": "규제 기관",
+    "says": "소비자를 압박했다",
+    "reveals": "신뢰와 법 위반",
+    "source": null,
+    "inferred": true
+   },
    "trade_on": {
     "tradeoff": "전환율 대 정직한 표시",
     "how": "(실패) 압박 문구로 전환을 얻다 시정 약속을 했다"
    },
-   "goal": null,
-   "issue_tree": null,
-   "pareto": null,
-   "deep_why": null,
-   "key_metrics": null,
-   "analysis_full": false,
+   "goal": {
+    "surface": "전환율",
+    "reframed": "사실 기반 전환",
+    "metric": "규제 위반 0건"
+   },
+   "issue_tree": {
+    "root": "신뢰를 지키며 전환하려면",
+    "branches": [
+     {
+      "issue": "압박 표시",
+      "chosen": false,
+      "sub": [
+       "희소성",
+       "카운트다운"
+      ]
+     },
+     {
+      "issue": "사실 표시",
+      "chosen": true,
+      "sub": [
+       "정확한 재고",
+       "총액 표시"
+      ]
+     },
+     {
+      "issue": "실험 규칙",
+      "chosen": false,
+      "sub": [
+       "가드레일 지표",
+       "윤리 검토"
+      ]
+     }
+    ],
+    "why": "사실이 아니면 위반이다"
+   },
+   "pareto": {
+    "vital_few": "허위 희소성 표시",
+    "effect": "규제 위험의 대부분",
+    "source": null,
+    "inferred": true,
+    "matrix": [
+     {
+      "branch": "압박 표시",
+      "issue": "희소성",
+      "speed": 5,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "압박 표시",
+      "issue": "카운트다운",
+      "speed": 5,
+      "impact": 2,
+      "quadrant": "chore",
+      "selected": false
+     },
+     {
+      "branch": "사실 표시",
+      "issue": "정확한 재고",
+      "speed": 4,
+      "impact": 5,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "사실 표시",
+      "issue": "총액 표시",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "실험 규칙",
+      "issue": "가드레일 지표",
+      "speed": 4,
+      "impact": 4,
+      "quadrant": "quick_win",
+      "selected": true
+     },
+     {
+      "branch": "실험 규칙",
+      "issue": "윤리 검토",
+      "speed": 4,
+      "impact": 3,
+      "quadrant": "chore",
+      "selected": false
+     }
+    ],
+    "why": "사실 표시와 실험 규칙이 핵심이다"
+   },
+   "deep_why": {
+    "type": "risk",
+    "whys": [
+     "왜 사실 표시인가: 규제를 피한다",
+     "왜 위험인가: 법적 제재와 신뢰 하락"
+    ],
+    "intent": "규제 위험 회피",
+    "intent_metric": "제재 건수",
+    "mode": "hold",
+    "criterion": "압박 표시를 빼도 예약 전환율이 크게 줄지 않으면 성공"
+   },
+   "key_metrics": {
+    "north_star": "규제 위반 0건",
+    "leading": [
+     "표시 정확도",
+     "사후 취소율"
+    ],
+    "guardrail": "예약 전환율",
+    "vanity": "희소성 배지 노출 수",
+    "intent_metric": "제재 건수",
+    "select_method": {
+     "methods": [
+      "experiment",
+      "scoring"
+     ],
+     "how": "실험 가드레일",
+     "source": null,
+     "inferred": true
+    }
+   },
+   "analysis_full": true,
    "lesson": "카운트다운·'n명이 보는 중' 같은 압박 장치는 실험에서 이겨도 규제·신뢰 비용이 따른다. 실험 가드레일에 규정 확인을 넣는다."
   },
   {
