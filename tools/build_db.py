@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'swot', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
 
 
 def fail(msg):
@@ -500,6 +500,17 @@ def main():
         if byid[cid].get('pest'):
             fail(f'pest.txt:{n} {cid} 중복')
         byid[cid]['pest'] = {'political': f['P'], 'economic': f['E'], 'social': f['S'], 'technological': f['T'], 'key': keys}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/swot-so-wo.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 6 or p[0] not in byid or not all(p[1:]):
+            fail(f'swot-so-wo.txt:{n} 형식: {line[:60]}')
+        if byid[p[0]].get('swot'):
+            fail(f'swot-so-wo.txt:{n} {p[0]} 중복')
+        byid[p[0]]['swot'] = {'strength': p[1], 'opportunity': p[2], 'so': p[3], 'weakness': p[4], 'wo': p[5]}
+    for c in cases:
+        pe = c.get('pest')
+        if pe:
+            pe['focus'] = [k for k in pe['key'] if k in ('P', 'T')]
     IT = {'revenue', 'profit', 'retention', 'growth', 'risk', 'trust', 'mission'}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/deep-why.txt')):
         head, _, tail = line.partition(' || ')
@@ -563,7 +574,7 @@ def main():
         c.setdefault('trade_on', None)
         c.setdefault('anti_opinion', None)
         c.setdefault('pro_opinion', None)
-        for k in ('five_why', 'pest', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
+        for k in ('five_why', 'pest', 'swot', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
             c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)

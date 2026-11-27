@@ -119,7 +119,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "의료진 신뢰",
+    "opportunity": "대기 알림 도구 보급",
+    "so": "신뢰받는 의료진이 진료 단계와 남은 시간을 직접 안내",
+    "weakness": "대기 정보가 안 보임",
+    "wo": "알림·진행 표시를 붙여 불확실성을 없애기"
    },
    "hyps": [
     {
@@ -474,7 +484,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "건물 관리 권한",
+    "opportunity": "저비용 체감 개선",
+    "so": "관리 권한으로 대기 공간을 바로 바꿈",
+    "weakness": "설비 교체가 비쌈",
+    "wo": "교체 대신 거울로 체감을 바꿈"
    },
    "hyps": [
     {
@@ -789,7 +807,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "게이트 배정 권한",
+    "opportunity": "동선 설계로 체감 단축",
+    "so": "배정 권한으로 걷는 시간을 늘림",
+    "weakness": "처리 속도 개선 한계",
+    "wo": "속도 대신 대기 체감을 줄임"
    },
    "hyps": [
     {
@@ -1113,7 +1139,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "이야기·IP 역량",
+    "opportunity": "경험 소비 확대",
+    "so": "대기열을 이야기 무대로 연출",
+    "weakness": "수용량 한계",
+    "wo": "대기 예측 표시와 동선으로 체감을 낮춤"
    },
    "hyps": [
     {
@@ -1434,7 +1470,15 @@
     "key": [
      "S",
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "학교 공간과 관리 체계",
+    "opportunity": "싼 접이식 우산",
+    "so": "사물함에 우산을 상비",
+    "weakness": "보호자 출동에 의존",
+    "wo": "아이 스스로 쓰는 수단으로 대체"
    },
    "hyps": [
     {
@@ -1760,7 +1804,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "소아 진료 전문성",
+    "opportunity": "아동 친화 의료 요구",
+    "so": "검사를 모험 이야기로 바꿈",
+    "weakness": "장비가 무섭고 비쌈",
+    "wo": "장비 대신 공간 연출로 공포를 낮춤"
    },
    "hyps": [
     {
@@ -2080,7 +2132,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "저가 설계 역량",
+    "opportunity": "상변화 보온 소재",
+    "so": "전기 없는 보온 침낭 개발",
+    "weakness": "병원 밖 유통망 부재",
+    "wo": "현지 보건 인력·NGO와 보급"
    },
    "hyps": [
     {
@@ -2417,7 +2479,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "디자인·커뮤니티 감각",
+    "opportunity": "부수입 필요와 온라인 결제 보급",
+    "so": "빈 방을 보기 좋게 소개하고 결제를 보호",
+    "weakness": "낯선 사람 불신",
+    "wo": "리뷰·프로필·결제 보호로 신뢰 설계"
    },
    "hyps": [
     {
@@ -2750,7 +2822,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "온라인 주문·우편 물류",
+    "opportunity": "DVD의 가벼운 배송",
+    "so": "정액제 우편 대여",
+    "weakness": "콘텐츠 보유 한계",
+    "wo": "구독 데이터로 수요 큰 작품부터 확보"
    },
    "hyps": [
     {
@@ -3078,7 +3160,17 @@
     "technological": "사이클론 분리 기술",
     "key": [
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "엔지니어링·특허",
+    "opportunity": "성능 유지 기대",
+    "so": "봉투 없는 사이클론 청소기",
+    "weakness": "높은 가격·무명 브랜드",
+    "wo": "성능 시연으로 프리미엄 정당화"
    },
    "hyps": [
     {
@@ -3396,7 +3488,15 @@
     "technological": "향 기술",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "향 기술",
+    "opportunity": "청소 습관",
+    "so": "청소 끝 보상 향으로 재출시",
+    "weakness": "사용 계기 부족",
+    "wo": "기존 습관 끝에 붙여 계기를 만듦"
    },
    "hyps": [
     {
@@ -3714,7 +3814,15 @@
     "technological": "빠른 결제 동선",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "빠른 제조·판매 동선",
+    "opportunity": "아침 출근 수요",
+    "so": "걸쭉하고 빨리 사는 셰이크",
+    "weakness": "맛 경쟁 집착",
+    "wo": "고객이 고용한 일 중심으로 재설계"
    },
    "hyps": [
     {
@@ -4040,7 +4148,17 @@
     "key": [
      "P",
      "E"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "단순한 운영 문화",
+    "opportunity": "규제 완화",
+    "so": "단일 기종·짧은 회항",
+    "weakness": "노선·규모 열세",
+    "wo": "대형사가 무시한 직항 노선 선점"
    },
    "hyps": [
     {
@@ -4300,6 +4418,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "무료 배송을 해 준다",
@@ -4416,6 +4535,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 높은 그래픽 성능으로 경쟁한다",
@@ -4593,7 +4713,18 @@
     "key": [
      "T",
      "P"
+    ],
+    "focus": [
+     "T",
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "스트리밍 기술",
+    "opportunity": "모바일 데이터 보급",
+    "so": "즉시 재생 서비스",
+    "weakness": "음원 권리 부족",
+    "wo": "음반사와 지분·수익 공유로 권리 확보"
    },
    "hyps": [
     {
@@ -4872,6 +5003,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "은행 앱 화면을 더 깔끔하게 바꾼다",
@@ -5005,6 +5137,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "동네 배달 책자를 만든다",
@@ -5121,6 +5254,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "안전결제(에스크로)를 도입한다",
@@ -5252,6 +5386,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "마트 영업시간을 늘린다",
@@ -5368,6 +5503,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "판매자에게 배송 기준을 강하게 요구한다",
@@ -5484,6 +5620,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "가격이 비싸다 → 오후 할인",
@@ -5673,7 +5810,15 @@
     "technological": "상담 기록 관리",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "고단가 리포트 품질",
+    "opportunity": "결정 앞 불안 수요",
+    "so": "결정 시점에 맞춘 심화 리포트",
+    "weakness": "재구매 계기 없음",
+    "wo": "상담 기록과 리포트를 연결"
    },
    "hyps": [
     {
@@ -5969,6 +6114,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "재등록 할인을 준다",
@@ -6100,6 +6246,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "푸시 알림을 늘린다",
@@ -6227,6 +6374,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "회의 시간을 30분으로 제한한다",
@@ -6358,6 +6506,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "온라인만큼 할인한다",
@@ -6474,6 +6623,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "좌석을 늘린다",
@@ -6607,6 +6757,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "이탈 고객에게 할인 쿠폰을 다시 보낸다",
@@ -6724,6 +6875,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "강의를 더 짧게 쪼갠다",
@@ -6906,7 +7058,15 @@
     "technological": "물류 네트워크",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "물류 규모",
+    "opportunity": "즉시 구매 욕구",
+    "so": "연회비 무료 배송",
+    "weakness": "배송비 손실",
+    "wo": "회원 구매 빈도로 손실 상쇄"
    },
    "hyps": [
     {
@@ -7181,6 +7341,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "투자를 받아 재고를 더 산다",
@@ -7361,7 +7522,15 @@
     "key": [
      "S",
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "고객 서비스 문화",
+    "opportunity": "온라인 구매 확산",
+    "so": "무료 반품으로 안심 구매",
+    "weakness": "반품 비용",
+    "wo": "재구매 매출로 비용을 마케팅비화"
    },
    "hyps": [
     {
@@ -7678,7 +7847,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "자체 디자인",
+    "opportunity": "온라인 직판",
+    "so": "직판 저가 안경",
+    "weakness": "써 볼 수 없음",
+    "wo": "홈 트라이온으로 써 보기 제공"
    },
    "hyps": [
     {
@@ -8015,7 +8194,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "바이럴 마케팅",
+    "opportunity": "구독 소비 확산",
+    "so": "면도날 월 구독",
+    "weakness": "기술 브랜드 열세",
+    "wo": "충분히 좋은 품질과 편의로 차별"
    },
    "hyps": [
     {
@@ -8347,7 +8536,15 @@
     "technological": "물류 효율",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "구매력·물류 효율",
+    "opportunity": "가격 민감 소비",
+    "so": "낮은 마진 회원제",
+    "weakness": "품목 수 열세",
+    "wo": "적은 품목을 신뢰의 근거로 바꿈"
    },
    "hyps": [
     {
@@ -8626,6 +8823,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "품목을 늘린다",
@@ -8753,6 +8951,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -8880,6 +9079,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "트렌드 예측 팀을 강화한다",
@@ -8992,6 +9192,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "디자이너를 늘린다",
@@ -9108,6 +9309,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "검색·필터를 더 좋게",
@@ -9224,6 +9426,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "온라인 최저가",
@@ -9336,6 +9539,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "자체 창고·트럭으로 식료품 배송",
@@ -9452,6 +9656,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "판매 수수료를 낮춘다",
@@ -9571,6 +9776,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "쿠폰 지급",
@@ -9690,6 +9896,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "광고를 늘린다",
@@ -9824,6 +10031,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "오픈마켓에 입점",
@@ -9955,6 +10163,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "상품 사진을 고화질로",
@@ -10071,6 +10280,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "에스크로 결제",
@@ -10190,6 +10400,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "개별 몰 앱 출시",
@@ -10321,6 +10532,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기능성으로 경쟁",
@@ -10455,6 +10667,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "백화점 입점",
@@ -10571,6 +10784,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 가벼운 제형",
@@ -10702,6 +10916,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "덜 맵게 바꾼다",
@@ -10818,6 +11033,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "한인 마트 중심 판매",
@@ -10934,6 +11150,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "프리미엄 원두로 경쟁",
@@ -11062,6 +11279,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 큰 매장",
@@ -11178,6 +11396,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "마트 광고",
@@ -11309,6 +11528,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대용량 할인",
@@ -11430,6 +11650,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "소폭 요금 인하",
@@ -11548,6 +11769,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -11664,6 +11886,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "할인 행사",
@@ -11854,7 +12077,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "자체 물류",
+    "opportunity": "빠른 배송 기대",
+    "so": "회비로 무료·새벽 배송 묶음",
+    "weakness": "높은 물류 투자",
+    "wo": "회원 반복 구매로 회수"
    },
    "hyps": [
     {
@@ -12133,6 +12364,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "택시 면허를 늘린다",
@@ -12264,6 +12496,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "배차를 자동으로 하고 승차 거부를 없앤다",
@@ -12395,6 +12628,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "해외 차량 호출 앱 그대로 도입",
@@ -12526,6 +12760,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기사 대기 장소를 늘린다",
@@ -12642,6 +12877,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -12769,6 +13005,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "손님 광고를 많이 한다",
@@ -12896,6 +13133,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대형 오픈마켓 입점",
@@ -13027,6 +13265,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "회사가 모든 거래를 보증",
@@ -13158,6 +13397,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "견적 요청 게시판",
@@ -13291,6 +13531,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "지인 소개로만 맡긴다",
@@ -13422,6 +13663,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "반려견 호텔 가격 인하",
@@ -13549,6 +13791,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -13680,6 +13923,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "저가 버스",
@@ -13807,6 +14051,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -13934,6 +14179,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "마을버스 증편",
@@ -14050,6 +14296,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "선결제 할인",
@@ -14183,6 +14430,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "모텔 광고",
@@ -14314,6 +14562,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "중개인 목록 사이트",
@@ -14441,6 +14690,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "회사가 알고리즘 가격으로 집을 바로 사 주고 나중에 되판다",
@@ -14575,6 +14825,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "생활 정보지 광고",
@@ -14691,6 +14942,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "저렴한 소형 사무실",
@@ -14820,6 +15072,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "커뮤니티·브랜드 경험으로 프리미엄 가격",
@@ -14947,6 +15200,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "포워더 직원 늘리기",
@@ -15103,7 +15357,17 @@
     "key": [
      "T",
      "E"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "운송 시스템 시각",
+    "opportunity": "크레인·표준화 기술",
+    "so": "표준 컨테이너",
+    "weakness": "항만 노동 반발",
+    "wo": "시스템 전체 비용 이득으로 설득"
    },
    "hyps": [
     {
@@ -15393,6 +15657,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "여객기 화물칸 계약 확대",
@@ -15520,6 +15785,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "연비 좋은 트럭",
@@ -15647,6 +15913,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "모든 병원에 혈액 은행 설치",
@@ -15759,6 +16026,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "높은 주문 수수료",
@@ -15886,6 +16154,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "가게마다 기사 고용",
@@ -16017,6 +16286,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기사 수수료 부과",
@@ -16148,6 +16418,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "신문 광고 할인",
@@ -16275,6 +16546,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "도로 확장",
@@ -16391,6 +16663,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "라이선스 가격 인하",
@@ -16548,7 +16821,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "이미 쓰던 내부 도구",
+    "opportunity": "클라우드 협업 확산",
+    "so": "팀 채팅을 외부에 출시",
+    "weakness": "게임 회사라 영업 부재",
+    "wo": "팀 단위 입소문 확산"
    },
    "hyps": [
     {
@@ -16858,7 +17141,17 @@
     "key": [
      "T",
      "E"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "자체 쇼핑몰 경험",
+    "opportunity": "소상공인 온라인 진출",
+    "so": "쇼핑몰 도구를 플랫폼화",
+    "weakness": "맞춤 한계",
+    "wo": "앱 생태계로 확장"
    },
    "hyps": [
     {
@@ -17122,6 +17415,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "수수료 인하",
@@ -17240,6 +17534,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "통신사와 직접 계약",
@@ -17369,6 +17664,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "서버 팀 확대",
@@ -17558,7 +17854,17 @@
     "technological": "클라우드 동기화",
     "key": [
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "동기화 기술",
+    "opportunity": "저장 원가 하락",
+    "so": "보이지 않는 자동 동기화",
+    "weakness": "광고 예산 부족",
+    "wo": "저장 공간 추천 보상으로 확산"
    },
    "hyps": [
     {
@@ -17852,6 +18158,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -17971,6 +18278,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "영업팀 확대",
@@ -18107,6 +18415,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "광고비 증액",
@@ -18296,7 +18605,17 @@
     "key": [
      "E",
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "쉬운 사용성",
+    "opportunity": "작은 사업자 증가",
+    "so": "무료 시작 이메일 도구",
+    "weakness": "대기업 기능 열세",
+    "wo": "작게 시작해 함께 자라는 고객에 집중"
    },
    "hyps": [
     {
@@ -18575,6 +18894,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "전문 툴 기능 경쟁",
@@ -18691,6 +19011,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "파일 공유 기능 추가",
@@ -18807,6 +19128,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 문서 도구",
@@ -18938,6 +19260,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "무료 앱으로 경쟁",
@@ -19071,6 +19394,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "운영팀 전용 모니터링 강화",
@@ -19183,6 +19507,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 큰 장비 구매",
@@ -19314,6 +19639,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "세무 대행",
@@ -19445,6 +19771,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "해외 HR 툴 도입",
@@ -19561,6 +19888,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 OCR",
@@ -19692,6 +20020,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "전화 상담 확대",
@@ -19825,6 +20154,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -19956,6 +20286,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "앱마다 연동 기능 개발 요청",
@@ -20087,6 +20418,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "설문 이메일",
@@ -20218,6 +20550,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "회의 시간 단축",
@@ -20349,6 +20682,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "공유 캘린더",
@@ -20476,6 +20810,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "팩스·택배",
@@ -20607,6 +20942,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "엑셀 공유 기능",
@@ -20738,6 +21074,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "버전 관리 도구 개선",
@@ -20869,6 +21206,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "외주 단가 낮추기",
@@ -21005,6 +21343,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "첫 달 할인",
@@ -21141,6 +21480,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대기업 ERP 도입",
@@ -21257,6 +21597,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "판매자마다 카드 가맹점 가입",
@@ -21427,7 +21768,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "하드웨어·디자인",
+    "opportunity": "스마트폰 보급",
+    "so": "스마트폰 카드 리더",
+    "weakness": "결제 위험 관리",
+    "wo": "거래 데이터로 사후 위험 관리"
    },
    "hyps": [
     {
@@ -21706,6 +22057,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "은행 송금 단순화",
@@ -21840,6 +22192,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "수수료 소폭 인하",
@@ -21961,6 +22314,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "수수료 일부 인하",
@@ -22092,6 +22446,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "지점 확대",
@@ -22266,7 +22621,18 @@
      "P",
      "T",
      "S"
+    ],
+    "focus": [
+     "P",
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "통신 가입자 기반",
+    "opportunity": "휴대폰 보급·규제 공백",
+    "so": "문자 송금",
+    "weakness": "은행 업무 경험 부족",
+    "wo": "동네 대리점 네트워크로 현금 교환"
    },
    "hyps": [
     {
@@ -22595,7 +22961,17 @@
     "key": [
      "E",
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "핀테크 운영",
+    "opportunity": "해외 이주 증가",
+    "so": "국가별 계좌 풀 송금",
+    "weakness": "은행 대비 신뢰 부족",
+    "wo": "수수료 완전 공개로 신뢰 확보"
    },
    "hyps": [
     {
@@ -22874,6 +23250,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "카드 보안 강조",
@@ -23007,6 +23384,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "광고로 이미지 개선",
@@ -23126,6 +23504,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기존 앱 개선",
@@ -23245,6 +23624,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "은행별 앱 사용",
@@ -23364,6 +23744,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "조회료 인하",
@@ -23498,6 +23879,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "카드 단말기 보급",
@@ -23631,6 +24013,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "은행 상담",
@@ -23764,6 +24147,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "청구 앱 화면 개선",
@@ -23898,6 +24282,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "금리 높은 적금",
@@ -24010,6 +24395,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "은행 대출",
@@ -24137,6 +24523,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "정부 보조금",
@@ -24268,6 +24655,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기술 설명 강화",
@@ -24446,7 +24834,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "구독 고객 기반",
+    "opportunity": "초고속 인터넷",
+    "so": "스트리밍 전환",
+    "weakness": "DVD 매출 잠식",
+    "wo": "스스로 잠식하며 전환"
    },
    "hyps": [
     {
@@ -24773,7 +25171,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "시청 데이터",
+    "opportunity": "라이선스 비용 상승",
+    "so": "데이터 기반 오리지널",
+    "weakness": "제작 경험 부족",
+    "wo": "검증된 감독·배우 기용"
    },
    "hyps": [
     {
@@ -25036,6 +25444,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "영상 파일 압축 프로그램",
@@ -25202,7 +25611,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "빠른 개발",
+    "opportunity": "스마트폰 카메라",
+    "so": "사진·필터 앱",
+    "weakness": "기능 과잉",
+    "wo": "사진 공유만 남기고 다 뺌"
    },
    "hyps": [
     {
@@ -25466,6 +25885,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "팟캐스트 사업 강화",
@@ -25638,7 +26058,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "추천 알고리즘",
+    "opportunity": "짧은 영상 소비",
+    "so": "관심사 피드",
+    "weakness": "친구 네트워크 부재",
+    "wo": "친구 없이 즐기는 피드로 약점 무력화"
    },
    "hyps": [
     {
@@ -25974,7 +26404,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "메신저 기반 유입",
+    "opportunity": "모바일 결제",
+    "so": "기다리면 무료",
+    "weakness": "무료 기대",
+    "wo": "시간 가격으로 첫 결제 유도"
    },
    "hyps": [
     {
@@ -26330,7 +26770,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "포털 트래픽",
+    "opportunity": "스마트폰 보급",
+    "so": "세로 스크롤 무료 연재",
+    "weakness": "수익화 약함",
+    "wo": "미리보기 유료·IP 사업"
    },
    "hyps": [
     {
@@ -26641,6 +27091,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "일반 생방송 기능 강화",
@@ -26772,6 +27223,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "새 게임 개발",
@@ -26906,6 +27358,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "문자 요금제",
@@ -27022,6 +27475,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "전화망 증설",
@@ -27138,6 +27592,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "국제 문자 할인",
@@ -27269,6 +27724,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "비공개 설정 강화",
@@ -27400,6 +27856,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기능 많은 소셜 사이트",
@@ -27531,6 +27988,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "게임 메커니즘 개선",
@@ -27704,7 +28162,15 @@
     "key": [
      "S",
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "게임 엔진 기술",
+    "opportunity": "부분 유료화",
+    "so": "무료 배틀로얄",
+    "weakness": "후발 주자",
+    "wo": "무료와 크로스플랫폼으로 친구 전원 유입"
    },
    "hyps": [
     {
@@ -28060,7 +28526,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "실험 문화",
+    "opportunity": "모바일 알림",
+    "so": "게임화 학습",
+    "weakness": "학습 효과 의문",
+    "wo": "연속 기록과 실제 학습을 함께 설계"
    },
    "hyps": [
     {
@@ -28356,6 +28832,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 기구",
@@ -28520,7 +28997,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "작가 친화 도구",
+    "opportunity": "광고 시장 약화",
+    "so": "유료 뉴스레터",
+    "weakness": "플랫폼 인지도",
+    "wo": "인기 작가 영입"
    },
    "hyps": [
     {
@@ -28861,7 +29346,15 @@
     "key": [
      "S",
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "창작자 네트워크",
+    "opportunity": "팬 후원 문화",
+    "so": "정기 후원",
+    "weakness": "수수료 의존",
+    "wo": "창작자 도구 확대"
    },
    "hyps": [
     {
@@ -29205,7 +29698,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "저널리즘 신뢰",
+    "opportunity": "디지털 구독 수용",
+    "so": "미터제 유료화",
+    "weakness": "무료 통념",
+    "wo": "무료 열람을 남겨 신규 유입 유지"
    },
    "hyps": [
     {
@@ -29545,7 +30046,17 @@
     "key": [
      "P",
      "S"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "콘텐츠 제휴",
+    "opportunity": "구독 수용",
+    "so": "독서 구독",
+    "weakness": "도서정가제·출판사 정산",
+    "wo": "오디오·요약으로 이용 가치 확대"
    },
    "hyps": [
     {
@@ -29839,6 +30350,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "한국 작품 번역만 제공",
@@ -29970,6 +30482,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "글쓰기 이벤트 경품",
@@ -30089,6 +30602,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "실시간 음성 대화방",
@@ -30208,6 +30722,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "고품질 짧은 영상",
@@ -30325,6 +30840,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 싼 커피",
@@ -30459,6 +30975,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -30577,6 +31094,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "할인과 광고",
@@ -30689,6 +31207,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -30820,6 +31339,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "패스트푸드 메뉴에 샐러드 추가",
@@ -30951,6 +31471,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "채식 시장 마케팅 강화",
@@ -31067,6 +31588,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "마트 할인 행사",
@@ -31198,6 +31720,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "맛을 서양 입맛에 맞춘다",
@@ -31329,6 +31852,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 머신",
@@ -31445,6 +31969,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "면도기 할인",
@@ -31576,6 +32101,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -31764,7 +32290,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "엔진 기술",
+    "opportunity": "원격 모니터링",
+    "so": "시간당 과금 서비스",
+    "weakness": "정비 원가 부담",
+    "wo": "예방 정비로 비용 통제"
    },
    "hyps": [
     {
@@ -32043,6 +32579,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "공구 가격 인하",
@@ -32174,6 +32711,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "타이어 할인",
@@ -32308,6 +32846,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 키보드",
@@ -32424,6 +32963,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 큰 용량 MP3",
@@ -32557,6 +33097,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 많은 설정 버튼",
@@ -32676,6 +33217,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기존 보안 카메라",
@@ -32807,6 +33349,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "고성능 지능형 로봇",
@@ -32943,6 +33486,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대리점 유통",
@@ -33074,6 +33618,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 싼 충전기",
@@ -33205,6 +33750,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "고화질 카메라",
@@ -33321,6 +33867,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 압력솥",
@@ -33452,6 +33999,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "평범한 디자인으로 바꾼다",
@@ -33583,6 +34131,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기존 스포츠 브랜드 여성 라인",
@@ -33714,6 +34263,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 싼 생수",
@@ -33845,6 +34395,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 싼 제품",
@@ -33978,6 +34529,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "유명 모델 기용",
@@ -34109,6 +34661,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 세제",
@@ -34240,6 +34793,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 좋은 오디오",
@@ -34367,6 +34921,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "필름 품질 개선",
@@ -34483,6 +35038,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "키보드·보안 강화",
@@ -34599,6 +35155,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "고가 기계 + 전용 팩 구독",
@@ -34712,6 +35269,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "보행로에서 대중 이동 수단으로",
@@ -34828,6 +35386,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "일상 착용 소비자 제품",
@@ -34987,7 +35546,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "숙련 의료진",
+    "opportunity": "저가 인공수정체",
+    "so": "표준화 대량 수술",
+    "weakness": "원가 부담",
+    "wo": "유료 환자로 무료 수술 보조"
    },
    "hyps": [
     {
@@ -35262,6 +35829,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "장비 할부",
@@ -35393,6 +35961,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "제약사 할인 요청",
@@ -35524,6 +36093,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "복약 알림 앱",
@@ -35655,6 +36225,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "병원 광고",
@@ -35773,6 +36344,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "비대면 진료 상시 허용",
@@ -35904,6 +36476,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "병원 광고",
@@ -36031,6 +36604,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "야간 진료 병원 확대",
@@ -36162,6 +36736,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "극소량 혈액으로 다종 검사",
@@ -36278,6 +36853,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "보충 수업",
@@ -36394,6 +36970,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "원격 대학",
@@ -36515,6 +37092,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "질문 게시판",
@@ -36649,6 +37227,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "문제집 추가",
@@ -36780,6 +37359,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "영상 강의만 판매",
@@ -36911,6 +37491,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "지방 분원 개설",
@@ -37029,6 +37610,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "취업해야 학비를 내는 구조",
@@ -37146,6 +37728,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대학 평생교육원",
@@ -37264,6 +37847,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "구인 광고",
@@ -37395,6 +37979,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "회사 홍보 강화",
@@ -37529,6 +38114,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "채용 광고 확대",
@@ -37663,6 +38249,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "또 하나의 채용 사이트",
@@ -37794,6 +38381,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -37912,6 +38500,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "자선 단체 기부",
@@ -38043,6 +38632,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "입사 축하금",
@@ -38174,6 +38764,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "부도 시 벌금",
@@ -38305,6 +38896,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "장기 등록 할인",
@@ -38421,6 +39013,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "복약 알림",
@@ -38533,6 +39126,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -38685,7 +39279,15 @@
     "technological": "간단한 장치",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "현장 개선 문화",
+    "opportunity": "간단한 장치",
+    "so": "근본 원인 조치",
+    "weakness": "원인 분석 시간",
+    "wo": "표준 질문 절차로 빠르게"
    },
    "hyps": [
     {
@@ -38974,6 +39576,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "채용을 더 많이 한다",
@@ -39153,7 +39756,15 @@
     "technological": "디지털 놀이의 부상",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "브랜드·브릭 시스템",
+    "opportunity": "팬 참여 문화",
+    "so": "브릭 중심 제품",
+    "weakness": "복잡성 비용",
+    "wo": "부품 수 축소"
    },
    "hyps": [
     {
@@ -39417,6 +40028,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "판권료 인상",
@@ -39544,6 +40156,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "모델을 더 출시",
@@ -39671,6 +40284,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "서비스 고급화",
@@ -39802,6 +40416,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "항공권 가격 유지",
@@ -39982,7 +40597,17 @@
     "key": [
      "T",
      "E"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "전문가 표준 도구",
+    "opportunity": "클라우드 배포",
+    "so": "구독 전환",
+    "weakness": "소유 상실 반발",
+    "wo": "항상 최신 가치 제공"
    },
    "hyps": [
     {
@@ -40264,6 +40889,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "높은 입찰가 순서",
@@ -40395,6 +41021,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "결제 화면 디자인 개선",
@@ -40531,6 +41158,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -40645,6 +41273,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "객실 할인",
@@ -40772,6 +41401,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "규칙을 더 정교하게",
@@ -40899,6 +41529,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "조율 회의 강화",
@@ -41026,6 +41657,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "상급자 승인 단계 추가",
@@ -41157,6 +41789,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기존 차 연비 소폭 개선",
@@ -41273,6 +41906,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "처음부터 저가 대중 전기차",
@@ -41391,6 +42025,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "더 강력한 거치형",
@@ -41522,6 +42157,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "극단적 원가 절감",
@@ -41635,6 +42271,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "매장 확대",
@@ -41751,6 +42388,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "하드웨어 라인업 확대",
@@ -41870,6 +42508,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "포털 콘텐츠 확대",
@@ -41986,6 +42625,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "직접 예약 할인",
@@ -42117,6 +42757,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "해지 시 할인 제안",
@@ -42233,6 +42874,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "일괄 가격 인상",
@@ -42351,6 +42993,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "영업 인력 증원",
@@ -42484,6 +43127,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "판매 수수료 인하",
@@ -42600,6 +43244,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "생산량을 늘린다",
@@ -42718,6 +43363,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "리뷰 이벤트로 좋은 리뷰 유도",
@@ -42837,6 +43483,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "검색 알고리즘 개선",
@@ -42968,6 +43615,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -43104,6 +43752,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "SNS 계정 운영 강화",
@@ -43235,6 +43884,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "국내형 RPG 개발",
@@ -43405,7 +44055,15 @@
     "technological": "모바일 메신저",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "메신저 점유율",
+    "opportunity": "이미지 감정 표현 문화",
+    "so": "유료 이모티콘",
+    "weakness": "자체 제작 한계",
+    "wo": "외부 작가 시장 개방"
    },
    "hyps": [
     {
@@ -43684,6 +44342,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "기업용 메일 서버 판매",
@@ -43818,6 +44477,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "PC 기능 고도화",
@@ -43938,6 +44598,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "패션 잡지 콘텐츠",
@@ -44065,6 +44726,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "전문가 목록 사이트",
@@ -44196,6 +44858,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "여행사 패키지",
@@ -44330,6 +44993,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "전문가 리뷰",
@@ -44461,6 +45125,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "일반 중고 앱 기능 추가",
@@ -44643,7 +45308,15 @@
     "technological": "약한 접착제",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "접착 기술",
+    "opportunity": "사무실 메모 수요",
+    "so": "붙였다 떼는 메모지",
+    "weakness": "접착력 약함",
+    "wo": "약점을 쓸모로 재정의"
    },
    "hyps": [
     {
@@ -44922,6 +45595,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "협심증 연구 계속",
@@ -45053,6 +45727,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "세정제 가격 인하",
@@ -45184,6 +45859,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "벽지 디자인 개선",
@@ -45300,6 +45976,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "지역 가게를 위한 신규 고객 유치",
@@ -45460,7 +46137,15 @@
     "technological": "물류 자동화 비용",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "자금·자동화 기술",
+    "opportunity": "온라인 장보기 초기",
+    "so": "(실패) 대형 자동 창고",
+    "weakness": "수요 검증 부족",
+    "wo": "기존 마트 활용 같은 가벼운 모델 필요"
    },
    "hyps": [
     {
@@ -45734,6 +46419,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대규모 광고",
@@ -45846,6 +46532,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "짧은 영상 형식",
@@ -45962,6 +46649,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "익명으로 솔직하게",
@@ -46089,6 +46777,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "디자인 상품 큐레이션",
@@ -46205,6 +46894,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "할인 판매",
@@ -46334,6 +47024,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "중고 거래 앱",
@@ -46465,6 +47156,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "레시피 앱",
@@ -46649,7 +47341,15 @@
     "technological": "모바일 오디오",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "오디오 콘텐츠",
+    "opportunity": "불안·수면 문제 증가",
+    "so": "수면 스토리",
+    "weakness": "명상 정체성 집착",
+    "wo": "실제 방문 이유로 확장"
    },
    "hyps": [
     {
@@ -46913,6 +47613,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "북마크 기능",
@@ -47044,6 +47745,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "대형 포럼 사이트",
@@ -47175,6 +47877,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "해외 마켓플레이스 모델 그대로",
@@ -47306,6 +48009,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "환전소 비교",
@@ -47437,6 +48141,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "두꺼운 보정 속옷 개선",
@@ -47570,6 +48275,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "유명인 광고",
@@ -47701,6 +48407,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "푸시 알림 강화",
@@ -47817,6 +48524,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "유료 할인",
@@ -47937,6 +48645,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "학부모 대상 광고",
@@ -48053,6 +48762,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "오리지널 작품 더 많이",
@@ -48169,6 +48879,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "평일 할인",
@@ -48285,6 +48996,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "장기 약정 할인",
@@ -48416,6 +49128,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "친환경 일회용기",
@@ -48557,6 +49270,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "텍스트 풀이 가격을 낮춘다",
@@ -48751,7 +49465,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "저원가 AI 리포트",
+    "opportunity": "MZ 사주 놀이 문화",
+    "so": "990원 고양이 사주",
+    "weakness": "카피캣",
+    "wo": "니치 신상품·브랜드 개편"
    },
    "hyps": [
     {
@@ -49153,7 +49877,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "빠른 실험·연출",
+    "opportunity": "생성형 AI·숏폼",
+    "so": "니치 주제 웹툰·숏폼",
+    "weakness": "초기 계산 오류",
+    "wo": "전문가·천문 데이터로 보정"
    },
    "hyps": [
     {
@@ -49475,6 +50209,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "모든 운세를 유료로",
@@ -49600,6 +50335,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "AI 풀이를 더 많이 생성한다",
@@ -49726,6 +50462,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "상담료 할인",
@@ -49843,6 +50580,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "가격을 무료 AI 수준으로 내린다",
@@ -49968,6 +50706,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "결제 단계 할인 쿠폰",
@@ -50093,6 +50832,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "직원들이 가장 좋아한 영상을 건다",
@@ -50218,6 +50958,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "문장을 더 길고 자세하게",
@@ -50344,6 +51085,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "해지 화면에 혜택을 한 번 더 안내",
@@ -50470,6 +51212,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "'지금 예약 시 할인' 문구",
@@ -50596,6 +51339,7 @@
    },
    "five_why": null,
    "pest": null,
+   "swot": null,
    "hyps": [
     {
      "text": "관행대로 유지한다",
@@ -50776,7 +51520,15 @@
     "technological": "생성형 AI로 해석 체계 확장",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "재회 고객 기반",
+    "opportunity": "이별 후 확신 욕구",
+    "so": "자미두수 재회 상품",
+    "weakness": "같은 주제 중복 우려",
+    "wo": "해석 체계를 바꿔 확인 상품화"
    },
    "hyps": [
     {
@@ -51109,7 +51861,17 @@
     "key": [
      "P",
      "S"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "전문가 네트워크",
+    "opportunity": "즉시 답 수요",
+    "so": "질문 단위 결제",
+    "weakness": "구독 전환 불신",
+    "wo": "결제 조건 투명화"
    },
    "hyps": [
     {
@@ -51441,7 +52203,17 @@
     "key": [
      "T",
      "E"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "상담 플랫폼·해결 데이터",
+    "opportunity": "생성형 AI",
+    "so": "해결당 과금 AI",
+    "weakness": "비용 예측 어려움",
+    "wo": "연간 해결 묶음·체험 제공"
    },
    "hyps": [
     {
@@ -51774,7 +52546,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "차트 데이터·브랜드",
+    "opportunity": "생성형 AI",
+    "so": "질문권 상품",
+    "weakness": "답 근거 의문",
+    "wo": "차트 근거를 답에 연결"
    },
    "hyps": [
     {
@@ -52114,7 +52896,15 @@
     "technological": "온라인 통화",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "상담사 풀",
+    "opportunity": "온라인 상담 수요",
+    "so": "첫 3분 무료",
+    "weakness": "분당 과금 불신",
+    "wo": "만족 보장"
    },
    "hyps": [
     {
@@ -52442,7 +53232,17 @@
     "key": [
      "T",
      "E"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "학습 데이터",
+    "opportunity": "AI 원가 하락",
+    "so": "설명 무료 개방",
+    "weakness": "AI 오답 위험",
+    "wo": "오답 신고로 품질 개선"
    },
    "hyps": [
     {
@@ -52754,7 +53554,18 @@
     "key": [
      "T",
      "P"
+    ],
+    "focus": [
+     "T",
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "검색·인용 기술",
+    "opportunity": "AI 답 불신",
+    "so": "출처형 답변",
+    "weakness": "저작권 분쟁",
+    "wo": "언론사 수익 공유"
    },
    "hyps": [
     {
@@ -53070,7 +53881,17 @@
     "technological": "생성형 AI 무료화",
     "key": [
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "문제·풀이 데이터",
+    "opportunity": "AI 학습 도우미 수요",
+    "so": "(실패) 풀이·시험 대비 전환이 늦음",
+    "weakness": "답 판매 의존",
+    "wo": "이해 중심 상품으로 빠른 전환 필요"
    },
    "hyps": [
     {
@@ -53392,7 +54213,18 @@
     "key": [
      "P",
      "T"
+    ],
+    "focus": [
+     "P",
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "고객 접점",
+    "opportunity": "챗봇 자동화",
+    "so": "일반 질문 자동화",
+    "weakness": "정책 오답 위험",
+    "wo": "정책 질문은 고정 답·사람 이관"
    },
    "hyps": [
     {
@@ -53691,7 +54523,17 @@
     "key": [
      "P",
      "S"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "상담 콘텐츠",
+    "opportunity": "챗봇 접근성",
+    "so": "일반 정보 안내",
+    "weakness": "위기 대응 부재",
+    "wo": "위기 신호는 사람에게 연결"
    },
    "hyps": [
     {
@@ -54011,7 +54853,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "검색 트래픽",
+    "opportunity": "대면 부담 회피",
+    "so": "검색 연결 1:1 상담",
+    "weakness": "상담 품질 편차",
+    "wo": "전문가 검증·후기"
    },
    "hyps": [
     {
@@ -54327,7 +55179,15 @@
     "technological": "챗봇",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "캐릭터 대화 경험",
+    "opportunity": "대화형 운세 수요",
+    "so": "캐릭터 챗봇 운세",
+    "weakness": "원가 구조",
+    "wo": "(실패) 재화 가격과 모델 원가를 맞추지 못함"
    },
    "hyps": [
     {
@@ -54657,7 +55517,17 @@
     "technological": "대화형 AI",
     "key": [
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "자연스러운 대화 기술",
+    "opportunity": "대화형 AI 수요",
+    "so": "친구형 챗봇",
+    "weakness": "데이터 동의 부족",
+    "wo": "동의·가명 처리 후 재출시"
    },
    "hyps": [
     {
@@ -54973,7 +55843,17 @@
     "key": [
      "P",
      "S"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "청소년 이용 기반",
+    "opportunity": "대화형 AI 확산",
+    "so": "무료 캐릭터챗",
+    "weakness": "보호 장치 부족",
+    "wo": "시간·결제 한도"
    },
    "hyps": [
     {
@@ -55297,7 +56177,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "BL 이해도",
+    "opportunity": "BL 팬덤 지출",
+    "so": "BL 특화 캐릭터챗",
+    "weakness": "시장이 좁음",
+    "wo": "여성향 전반·해외로 확장"
    },
    "hyps": [
     {
@@ -55624,7 +56514,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "웹소설식 장면 생성",
+    "opportunity": "읽기 문화",
+    "so": "긴 장면 챗",
+    "weakness": "원가 부담",
+    "wo": "글자 수 대비 가성비로 가격 설계"
    },
    "hyps": [
     {
@@ -55961,7 +56861,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "무료 무제한 운영",
+    "opportunity": "캐릭터챗 몰입",
+    "so": "상위 모델 유료",
+    "weakness": "무료 원가",
+    "wo": "프로챗·크리에이터 정산으로 회수"
    },
    "hyps": [
     {
@@ -56298,7 +57208,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "서브컬처 IP·창작자",
+    "opportunity": "팬덤 이야기 소비",
+    "so": "종량형 캐릭터챗",
+    "weakness": "가격 불만·품질",
+    "wo": "품질 체감 개선과 가격 투명화"
    },
    "hyps": [
     {
@@ -56628,7 +57548,15 @@
     "key": [
      "S",
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "국내 검증 엔진",
+    "opportunity": "해외 팬덤",
+    "so": "현지 브랜드 출시",
+    "weakness": "현지 감성 부족",
+    "wo": "현지화 번역팀"
    },
    "hyps": [
     {
@@ -56960,7 +57888,17 @@
     "key": [
      "S",
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "웹툰 IP",
+    "opportunity": "팬덤 대화 수요",
+    "so": "공식 캐릭터챗",
+    "weakness": "원작자 우려",
+    "wo": "원작자 승인·안전 테스트"
    },
    "hyps": [
     {
@@ -57277,7 +58215,17 @@
     "technological": "확률형 장치",
     "key": [
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "이벤트 기획",
+    "opportunity": "결제 확대",
+    "so": "(위험) 확률형 이벤트",
+    "weakness": "규제 위험",
+    "wo": "확률 장치 대신 확정형 보상"
    },
    "hyps": [
     {
@@ -57602,7 +58550,15 @@
     "technological": "대화형 AI",
     "key": [
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "각자 이용자 기반",
+    "opportunity": "캐릭터챗 성장",
+    "so": "수익 모델별 성장",
+    "weakness": "광고형 매출 한계",
+    "wo": "이용자당 매출 장치 도입"
    },
    "hyps": [
     {
@@ -57946,7 +58902,17 @@
     "key": [
      "T",
      "E"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "다중 모델",
+    "opportunity": "품질 차이 체감",
+    "so": "상위 모델 유료",
+    "weakness": "무료 원가",
+    "wo": "무료는 유지하고 품질 차이로 전환"
    },
    "hyps": [
     {
@@ -58281,7 +59247,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "팬 결제 기반",
+    "opportunity": "팬 전용 공간 수요",
+    "so": "팬 전용 앱",
+    "weakness": "MAU 감소",
+    "wo": "결제 중심 지표로 전환"
    },
    "hyps": [
     {
@@ -58617,7 +59591,15 @@
     "key": [
      "E",
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "창작자 생태계",
+    "opportunity": "창작자 생계 수요",
+    "so": "현금화·독점 정산",
+    "weakness": "재화 유출 우려",
+    "wo": "독점작 우대로 공급 묶기"
    },
    "hyps": [
     {
@@ -58959,7 +59941,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "다층 기억 기술",
+    "opportunity": "관계 애착",
+    "so": "기억 강화 유료",
+    "weakness": "기본 기억 불만",
+    "wo": "기본 기억 품질 먼저 확보"
    },
    "hyps": [
     {
@@ -59291,7 +60283,17 @@
     "key": [
      "P",
      "S"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "인증 체계",
+    "opportunity": "청소년 보호 요구",
+    "so": "상한·보호자 동의",
+    "weakness": "우회 위험",
+    "wo": "인증 다각화"
    },
    "hyps": [
     {
@@ -59640,7 +60642,15 @@
     "technological": "대화형 AI",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "검증된 엔진",
+    "opportunity": "애니·웹소설 팬덤",
+    "so": "플레이 가능한 애니",
+    "weakness": "낯선 범주",
+    "wo": "익숙한 말로 범주 설명"
    },
    "hyps": [
     {
@@ -59992,7 +61002,17 @@
     "key": [
      "E",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "매출 성장",
+    "opportunity": "다중 모델 원가 하락",
+    "so": "모델 조합 원가 절감",
+    "weakness": "적자",
+    "wo": "원가율 관리"
    },
    "hyps": [
     {
@@ -60330,7 +61350,17 @@
     "key": [
      "E",
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "가격 실험 역량",
+    "opportunity": "채널별 결제",
+    "so": "채널별 가격표",
+    "weakness": "가격 불신",
+    "wo": "차감 기준 투명화"
    },
    "hyps": [
     {
@@ -60690,7 +61720,15 @@
     "key": [
      "S",
      "E"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "콘텐츠 생산 속도",
+    "opportunity": "유형 콘텐츠 소비",
+    "so": "매력·연애 SEO",
+    "weakness": "브랜드 깊이 부족",
+    "wo": "상품은 깊게 설계"
    },
    "hyps": [
     {
@@ -61031,7 +62069,15 @@
     "technological": "NFC 굿즈",
     "key": [
      "S"
-    ]
+    ],
+    "focus": []
+   },
+   "swot": {
+    "strength": "캐릭터·굿즈",
+    "opportunity": "MZ 무속 유행",
+    "so": "AI 신당 팝업",
+    "weakness": "오프라인 고정비",
+    "wo": "단기 팝업으로 비용 제한"
    },
    "hyps": [
     {
@@ -61367,7 +62413,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "전문가 협업",
+    "opportunity": "범용 AI 오류로 정확도가 차별점",
+    "so": "계산 정확도 앞세우기",
+    "weakness": "초기 오류 평판",
+    "wo": "명식 공개·수정 경로"
    },
    "hyps": [
     {
@@ -61693,7 +62749,17 @@
     "key": [
      "S",
      "T"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "캐릭터 IP",
+    "opportunity": "캐릭터 소비",
+    "so": "해석자 캐릭터",
+    "weakness": "AI 표시 위험",
+    "wo": "AI 해석가 명시"
    },
    "hyps": [
     {
@@ -62026,7 +63092,17 @@
     "key": [
      "P",
      "S"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "니치 기획력",
+    "opportunity": "금기 주제 개방",
+    "so": "29금 상품",
+    "weakness": "연령·규제 위험",
+    "wo": "성인 인증"
    },
    "hyps": [
     {
@@ -62364,7 +63440,17 @@
     "key": [
      "T",
      "S"
+    ],
+    "focus": [
+     "T"
     ]
+   },
+   "swot": {
+    "strength": "실험 속도",
+    "opportunity": "생성형 소재 제작",
+    "so": "소재 대량 A/B",
+    "weakness": "품질 편차",
+    "wo": "상위 소재만 남기기"
    },
    "hyps": [
     {
@@ -62698,7 +63784,17 @@
     "key": [
      "S",
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "화면 설계 역량",
+    "opportunity": "개인화 랜딩",
+    "so": "감정별 화면",
+    "weakness": "다크패턴 위험",
+    "wo": "주의 항목 1개 + 해결 방향"
    },
    "hyps": [
     {
@@ -63019,7 +64115,17 @@
     "technological": "결제 화면 설계",
     "key": [
      "P"
+    ],
+    "focus": [
+     "P"
     ]
+   },
+   "swot": {
+    "strength": "투명한 결제 설계",
+    "opportunity": "법 시행으로 신뢰가 차별점",
+    "so": "총액·환불 선노출",
+    "weakness": "단기 전환 하락",
+    "wo": "환불·민원 감소로 상쇄"
    },
    "hyps": [
     {
