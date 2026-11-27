@@ -131,6 +131,17 @@ const R = {
   key_metrics(c){ const k = c.key_metrics; if (!k) return ''; const sm = k.select_method || {};
     return `<table class="t" style="margin:0"><tr><th>역할</th><th>지표</th></tr><tr><td>의도</td><td>${esc(k.intent_metric || (c.deep_why || {}).intent_metric)}</td></tr><tr><td>북극성</td><td><b>${esc(k.north_star)}</b></td></tr><tr><td>선행</td><td>${(k.leading || []).map(esc).join(', ')}</td></tr><tr><td>가드레일</td><td>${esc(k.guardrail)}</td></tr><tr><td>허영(쫓지 않음)</td><td><s>${esc(k.vanity)}</s></td></tr></table>
     ${sm.methods ? `<p class="muted" style="margin:8px 0 0">고른 방법: ${sm.methods.map(m => tag(L.method[m] || m)).join(' ')} ${esc(sm.how || '')}</p>${srcLine(sm)}` : ''}`; },
+  /* ⑤ 근거 만들기: 사례에서 설문(고른 방법)·숫자·고객 상황을 꺼내 보여 준다 */
+  survey(c){ const k = c.key_metrics || {}, sm = k.select_method || {};
+    return `${sm.methods ? `<p style="margin:0 0 8px">고른 방법: ${sm.methods.map(m => tag(L.method[m] || m, m === 'survey' ? 'on' : '')).join(' ')}</p><p class="muted" style="margin:0 0 8px">${esc(sm.how || '')}</p>${srcLine(sm)}` : ''}
+    <dl class="kv" style="margin-top:10px"><dt>확인한 것</dt><dd><b>${esc(k.north_star)}</b></dd><dt>선행 지표</dt><dd>${(k.leading || []).map(esc).join(', ')}</dd>${c.pro_opinion ? `<dt>고객의 말</dt><dd>“${esc(c.pro_opinion.says)}”</dd>` : ''}${c.anti_opinion ? `<dt>반대의 말</dt><dd>“${esc(c.anti_opinion.says)}”</dd>` : ''}</dl>`; },
+  numbers(c){ const o = (c.outcomes || []).filter(x => x.after);
+    return `<p style="margin:0 0 8px">주장: <b>${esc((c.so_what && c.so_what.conclusion) || c.solution)}</b></p>
+    ${o.length ? `<table class="t" style="margin:0"><tr><th>전</th><th>후</th><th>출처</th></tr>${o.map(x => `<tr><td>${esc(x.before)}</td><td><b>${esc(x.after)}</b>${x.context ? `<br><span class="muted">${esc(x.context)}</span>` : ''}</td><td>${isUrl(x.evidence) ? link(x.evidence) : tag('추정', 'warn')}</td></tr>`).join('')}</table>` : '<p class="muted">숫자 근거 없음</p>'}
+    ${(c.pest && (c.pest.focus || []).length) ? `<p class="muted" style="margin:8px 0 0">왜 지금: ${c.pest.focus.map(k => `${L.pest[k][1]} — ${esc(c.pest[L.pest[k][0]])}`).join(' / ')}</p>` : ''}`; },
+  journey(c){ const w = c.what || {}, f = c.five_why || {};
+    return `<div class="ex" style="margin-bottom:10px"><p>${esc(w.situation)}</p></div>
+    <table class="t" style="margin:0"><tr><th>단계</th><th>이 사례에서</th></tr><tr><td>겉으로 보이는 불편</td><td>${esc(w.symptom)}</td></tr>${(f.whys || []).length ? `<tr><td>속마음(왜?)</td><td>${f.whys.map(esc).join('<br>')}</td></tr>` : ''}<tr><td>감정이 가장 낮은 순간</td><td><b>${esc(w.problem)}</b></td></tr><tr><td>우리가 끼어드는 순간</td><td>${esc(c.solution)}</td></tr>${c.pro_opinion ? `<tr><td>쓰고 난 뒤</td><td>“${esc(c.pro_opinion.says)}” <span class="muted">— ${esc(c.pro_opinion.who)}</span></td></tr>` : ''}</table>`; },
   solution(c){ const o = (c.outcomes || []).filter(x => x.after);
     return `<p style="margin:0;font-size:15px"><b>${esc(c.solution)}</b></p>${o.map(x => `<p class="muted" style="margin:8px 0 0">결과: ${esc(x.before)} → <b>${esc(x.after)}</b>${x.context ? ' (' + esc(x.context) + ')' : ''}${isUrl(x.evidence) ? ' · ' + link(x.evidence) : ''}</p>`).join('')}
     ${c.lesson ? `<div class="note" style="margin-bottom:0">교훈: ${esc(c.lesson)}</div>` : ''}

@@ -11,7 +11,7 @@ let cases = null, byCase = {}, cur = null;
 function nav(){
   $('#steps').innerHTML = ACTS.map(a => {
     const items = T.filter(t => t.g === a.g); if (!items.length) return '';
-    return `<h4>${esc(a.g)}</h4>` + items.map(t => `<a href="${href('theory', t.id)}" data-id="${t.id}"><i><em>${esc(/^[①-④]/.test(a.g) ? a.g[0] : '')}</em>${esc(t.n || '·')}</i>${esc(t.t)}</a>`).join('');
+    return `<h4>${esc(a.g)}</h4>` + items.map(t => `<a href="${href('theory', t.id)}" data-id="${t.id}"><i><em>${esc(/^[①-⑤]/.test(a.g) ? a.g[0] : '')}</em>${esc(t.n || '·')}</i>${esc(t.t)}</a>`).join('');
   }).join('');
 }
 
@@ -50,7 +50,7 @@ function render(id){
     ${t.cite ? `<figure class="cite"><blockquote>${esc(t.cite[0])}</blockquote><figcaption>${esc(t.cite[1])}</figcaption></figure>` : ''}
     ${sec('언제 쓰나', t.when ? `<p>${esc(t.when)}</p>` : '')}
     ${sec('하는 순서', t.how ? `<ol class="how">${t.how.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : '')}
-    ${sec('예시: 치과 대기', t.ex ? `<div class="ex">${t.ex}</div>` : '')}
+    ${sec(t.exTitle || '예시: 치과 대기', t.ex ? `<div class="ex">${t.ex}</div>` : '')}
     ${t.id === 'intro' ? `<div class="prose">${t.more}</div>` : sec('더 알아보기', t.more ? `<div class="prose">${t.more}</div>` : '')}
     ${sec('흔한 실수', t.pit ? `<ul class="pit">${t.pit.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '')}
     ${sec('이어지는 툴', t.links ? `<ul class="links">${t.links.map(([lid, why]) => byId[lid] ? `<li><a href="${href('theory', lid)}">${esc(byId[lid].g.split(' ')[0])} ${esc(byId[lid].t)}</a><span>${esc(why)}</span></li>` : '').join('')}</ul>` : '')}
