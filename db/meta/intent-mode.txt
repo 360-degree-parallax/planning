@@ -1,0 +1,92 @@
+// 의도 방향: raise(의도 지표를 올려야 성공) | hold(의도 지표가 낮아지지만 않으면 성공). 예: 매출은 건드리지 않고 고객 만족도만 높이기.
+// 형식: id | raise 또는 hold | 성공 기준
+dental | hold | 환자 경험을 높이되 재방문율·소개 환자 수가 지금보다 줄지 않으면 성공
+elevator | hold | 대기 불만을 줄이되 엘리베이터 교체 같은 큰 비용 없이 임대 갱신율이 떨어지지 않으면 성공
+baggage | hold | 불만을 줄이되 수하물 처리 인력·비용을 늘리지 않으면 성공
+disney | raise | 1인당 파크 내 지출·재방문율이(가) 지금보다 오르면 성공
+cold | hold | 아이 안전을 높이되 학교 예산·교사 부담을 늘리지 않으면 성공
+mri | hold | 아이 경험을 높이되 하루 검사 건수가 줄지 않으면 성공
+embrace | raise | 사용 지역 미숙아 생존율이(가) 지금보다 오르면 성공
+airbnb | raise | 총 예약액·수수료 매출이(가) 지금보다 오르면 성공
+netflix | hold | 연체료를 없애되 구독 매출이 연체료 수익 감소를 메우면 성공
+dyson | raise | 평균 판매가·매출이(가) 지금보다 오르면 성공
+febreze | raise | 재구매율·매출이(가) 지금보다 오르면 성공
+milkshake | raise | 아침 시간대 매출이(가) 지금보다 오르면 성공
+southwest | raise | 좌석 마일당 비용·영업이익률이(가) 지금보다 오르면 성공
+spotify | raise | 유료 구독자 수·매출이(가) 지금보다 오르면 성공
+saju | hold | 다음 제안을 늘리되 리포트 환불률·신뢰가 나빠지지 않으면 성공
+amazon-prime | raise | 회원 연간 지출액이(가) 지금보다 오르면 성공
+zappos | hold | 무료 반품을 하되 반품 비용 증가가 늘어난 재구매 매출을 넘지 않으면 성공
+warby-parker | raise | 직판 매출·마진이(가) 지금보다 오르면 성공
+dollar-shave-club | raise | 구독 유지율·월 반복 매출이(가) 지금보다 오르면 성공
+costco | hold | 가격을 낮추되 회비 수익이 줄지 않으면 성공
+coupang-rocket-wow | raise | 회원 구매 비중·점유율이(가) 지금보다 오르면 성공
+container | raise | 톤당 운송 비용·물동량이(가) 지금보다 오르면 성공
+slack | raise | 유료 팀 수·좌석 매출이(가) 지금보다 오르면 성공
+shopify | raise | 가게 수·총 거래액이(가) 지금보다 오르면 성공
+dropbox | raise | 사용자 획득 비용·가입자 성장률이(가) 지금보다 오르면 성공
+mailchimp | raise | 유료 전환 매출이(가) 지금보다 오르면 성공
+square | raise | 총 결제액·수수료 매출이(가) 지금보다 오르면 성공
+mpesa | raise | 송금 수수료 매출·가입자 이탈률이(가) 지금보다 오르면 성공
+wise | raise | 송금액·고객 수이(가) 지금보다 오르면 성공
+netflix-streaming | raise | 스트리밍 구독자 성장이(가) 지금보다 오르면 성공
+house-of-cards | raise | 콘텐츠 비용 대비 구독 매출이(가) 지금보다 오르면 성공
+instagram | raise | 일일 활성 사용자 성장이(가) 지금보다 오르면 성공
+tiktok | raise | 광고 매출·체류 시간이(가) 지금보다 오르면 성공
+kakaopage | raise | 결제자 수·매출이(가) 지금보다 오르면 성공
+naver-webtoon | raise | 유료 매출·IP 매출이(가) 지금보다 오르면 성공
+fortnite | raise | 아이템 매출·결제자 비율이(가) 지금보다 오르면 성공
+duolingo | raise | 유료 구독자 수이(가) 지금보다 오르면 성공
+substack | raise | 유료 구독 거래액이(가) 지금보다 오르면 성공
+patreon | raise | 총 후원액이(가) 지금보다 오르면 성공
+nyt-paywall | hold | 유료화를 하되 전체 트래픽·광고 매출이 급감하지 않으면 성공
+millie | raise | 구독 유지율이(가) 지금보다 오르면 성공
+rolls-royce-power | raise | 서비스 계약 매출이(가) 지금보다 오르면 성공
+aravind | raise | 연간 시력 회복 환자 수이(가) 지금보다 오르면 성공
+five-whys | hold | 근본 원인을 막되 라인을 오래 멈추지 않으면 성공
+lego-turnaround | raise | 영업이익률이(가) 지금보다 오르면 성공
+adobe-cc | raise | 연 반복 매출이(가) 지금보다 오르면 성공
+kakao-emoticon | raise | 이모티콘 매출이(가) 지금보다 오르면 성공
+post-it | raise | 신제품 매출이(가) 지금보다 오르면 성공
+webvan | raise | 주문당 공헌이익이(가) 지금보다 오르면 성공
+calm | raise | 유료 구독자 수이(가) 지금보다 오르면 성공
+sajuai | raise | 신규 결제자 수·광고비 0 유지이(가) 지금보다 오르면 성공
+tight-saju | raise | 광고비 대비 매출이(가) 지금보다 오르면 성공
+tight-reunion | raise | 재구매율·고객당 매출이(가) 지금보다 오르면 성공
+justanswer | raise | 구독 전환율·구독 매출이(가) 지금보다 오르면 성공
+intercom-fin | raise | 해결 매출·순매출 유지율이(가) 지금보다 오르면 성공
+costar-ask | raise | 질문권 매출이(가) 지금보다 오르면 성공
+keen-psychic | raise | 고객당 상담 매출이(가) 지금보다 오르면 성공
+duolingo-explain | hold | 설명을 무료로 풀되 유료 전환율이 떨어지지 않으면 성공
+perplexity-cite | raise | 질의 수 성장이(가) 지금보다 오르면 성공
+chegg-ai | hold | 새 가치를 찾되 남은 구독자 이탈을 더 키우지 않으면 성공
+air-canada-bot | hold | 자동화 범위를 줄이되 상담 비용이 크게 늘지 않으면 성공
+neda-tessa | hold | 안전을 확보하되 상담 접근성이 사라지지 않으면 성공
+naver-expert | raise | 상담 거래액이(가) 지금보다 오르면 성공
+hellobot | raise | 이용자당 공헌이익이(가) 지금보다 오르면 성공
+iruda | hold | 동의 절차를 두되 대화 품질이 크게 떨어지지 않으면 성공
+zeta | hold | 청소년 보호를 강화하되 전체 매출 성장이 꺾이지 않으면 성공
+whif | raise | 결제자당 매출이(가) 지금보다 오르면 성공
+playtoon | raise | 결제자당 매출이(가) 지금보다 오르면 성공
+babechat | raise | 유료 매출·원가 회수율이(가) 지금보다 오르면 성공
+crack-kr | raise | 매출이(가) 지금보다 오르면 성공
+crack-global | raise | 해외 매출 비중이(가) 지금보다 오르면 성공
+naver-charchat | raise | 원작 매출·메시지 매출이(가) 지금보다 오르면 성공
+chat-gacha-risk | hold | 확률형 장치를 빼거나 바꾸되 결제 매출이 크게 줄지 않으면 성공
+zeta-vs-crack | raise | 매출이(가) 지금보다 오르면 성공
+crack-paywall | hold | 유료 차이를 만들되 무료 이용자가 이탈하지 않으면 성공
+crack-spinoff | hold | 앱을 나누되 결제 매출이 줄지 않으면 성공(MAU 감소는 허용)
+crack-creator | hold | 창작자 현금화를 열되 플랫폼 마진이 무너지지 않으면 성공
+crack-memory | hold | 기억 강화를 팔되 기본 기억 품질 불만이 늘지 않으면 성공
+crack-teen | hold | 청소년 상한을 두되 성인 이용과 전체 매출이 줄지 않으면 성공
+ooc-na | raise | 북미 설치·매출이(가) 지금보다 오르면 성공
+wrtn-pnl | raise | 영업이익률이(가) 지금보다 오르면 성공
+crack-pricing | raise | 공헌이익률이(가) 지금보다 오르면 성공
+tight-seo | raise | 자연 유입 결제 매출이(가) 지금보다 오르면 성공
+tight-popup | raise | 팝업 후 신규 유입이(가) 지금보다 오르면 성공
+tight-trust | hold | 명식 확인 단계를 두되 입력 완료율·결제 전환이 떨어지지 않으면 성공
+tight-ip | raise | 재구매율이(가) 지금보다 오르면 성공
+tight-adult | raise | 니치 상품 매출이(가) 지금보다 오르면 성공
+tight-growth | raise | 월 매출 성장률이(가) 지금보다 오르면 성공
+ux-explore-diagnose | raise | 결제 전환율·매출이(가) 지금보다 오르면 성공
+kr-dark-pattern | hold | 긴급성 장치를 빼되 결제 매출이 크게 줄지 않으면 성공

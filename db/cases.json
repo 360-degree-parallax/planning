@@ -328,7 +328,9 @@
      "떠나면 왜 문제인가: 치과 매출은 재방문과 소개에서 나온다"
     ],
     "intent": "재방문·소개 환자를 지켜 매출 유지",
-    "intent_metric": "재방문율·소개 환자 수"
+    "intent_metric": "재방문율·소개 환자 수",
+    "mode": "hold",
+    "criterion": "환자 경험을 높이되 재방문율·소개 환자 수가 지금보다 줄지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "대기 관련 불만 건수",
@@ -629,7 +631,9 @@
      "왜 문제인가: 불만이 공실과 임대료 협상력 약화로 이어진다"
     ],
     "intent": "공실을 막고 임대료를 지키기",
-    "intent_metric": "임대 갱신율·공실률"
+    "intent_metric": "임대 갱신율·공실률",
+    "mode": "hold",
+    "criterion": "대기 불만을 줄이되 엘리베이터 교체 같은 큰 비용 없이 임대 갱신율이 떨어지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "대기 불만 건수",
@@ -937,7 +941,9 @@
      "왜 문제인가: 항공사 유치와 이용객 선택에 영향을 준다"
     ],
     "intent": "공항 평판으로 항공사·이용객 유치",
-    "intent_metric": "공항 만족도 순위·취항 항공사 수"
+    "intent_metric": "공항 만족도 순위·취항 항공사 수",
+    "mode": "hold",
+    "criterion": "불만을 줄이되 수하물 처리 인력·비용을 늘리지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "수하물 대기 불만 건수",
@@ -1239,7 +1245,9 @@
      "왜 문제인가: 재방문과 파크 안 소비(음식·굿즈)가 줄어든다"
     ],
     "intent": "재방문과 파크 내 지출 늘리기",
-    "intent_metric": "1인당 파크 내 지출·재방문율"
+    "intent_metric": "1인당 파크 내 지출·재방문율",
+    "mode": "raise",
+    "criterion": "1인당 파크 내 지출·재방문율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "체감 대기 시간·만족도",
@@ -1523,7 +1531,9 @@
      "왜 학교가 신경 쓰나: 아이 안전과 학부모 신뢰가 학교의 책임이다"
     ],
     "intent": "아이 안전과 학부모 신뢰 지키기",
-    "intent_metric": "학부모 신뢰도"
+    "intent_metric": "학부모 신뢰도",
+    "mode": "hold",
+    "criterion": "아이 안전을 높이되 학교 예산·교사 부담을 늘리지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "비 오는 날 젖은 채 귀가한 아이 수",
@@ -1827,7 +1837,9 @@
      "병원은 왜 신경 쓰나: 진정에는 마취 인력·회복 시간·비용이 든다"
     ],
     "intent": "검사 비용을 줄이고 하루 검사 건수 늘리기",
-    "intent_metric": "검사당 비용·일일 검사 건수"
+    "intent_metric": "검사당 비용·일일 검사 건수",
+    "mode": "hold",
+    "criterion": "아이 경험을 높이되 하루 검사 건수가 줄지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "진정제 사용률",
@@ -2139,7 +2151,9 @@
      "왜 이 일을 하나: 사회적 기업의 목적은 사망률을 낮추는 것이다"
     ],
     "intent": "미숙아 생존이라는 사명 달성",
-    "intent_metric": "사용 지역 미숙아 생존율"
+    "intent_metric": "사용 지역 미숙아 생존율",
+    "mode": "raise",
+    "criterion": "사용 지역 미숙아 생존율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "저체온 미숙아 사망률",
@@ -2454,7 +2468,9 @@
      "왜 예약인가: 플랫폼 수익은 성사된 예약의 수수료다"
     ],
     "intent": "예약 수수료 매출 키우기",
-    "intent_metric": "총 예약액·수수료 매출"
+    "intent_metric": "총 예약액·수수료 매출",
+    "mode": "raise",
+    "criterion": "총 예약액·수수료 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "예약 성사율·재예약률",
@@ -2765,7 +2781,9 @@
      "왜 그게 중요한가: 구독 사업은 오래 머물러야 돈이 된다"
     ],
     "intent": "구독 유지로 장기 매출 확보",
-    "intent_metric": "구독 유지 기간·고객 생애 가치"
+    "intent_metric": "구독 유지 기간·고객 생애 가치",
+    "mode": "hold",
+    "criterion": "연체료를 없애되 구독 매출이 연체료 수익 감소를 메우면 성공"
    },
    "key_metrics": {
     "north_star": "구독 유지율",
@@ -3057,7 +3075,9 @@
      "왜 성능인가: 고가에도 사게 만드는 차별점이 된다"
     ],
     "intent": "프리미엄 가격으로 팔기",
-    "intent_metric": "평균 판매가·매출"
+    "intent_metric": "평균 판매가·매출",
+    "mode": "raise",
+    "criterion": "평균 판매가·매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "사용 기간별 흡입력 유지",
@@ -3354,7 +3374,9 @@
      "왜 계기인가: 소모품은 반복 구매로 매출이 난다"
     ],
     "intent": "반복 구매 매출",
-    "intent_metric": "재구매율·매출"
+    "intent_metric": "재구매율·매출",
+    "mode": "raise",
+    "criterion": "재구매율·매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "재구매율",
@@ -3666,7 +3688,9 @@
      "왜 아침인가: 비어 있던 시간대 매출이 생긴다"
     ],
     "intent": "아침 시간대 매출",
-    "intent_metric": "아침 시간대 매출"
+    "intent_metric": "아침 시간대 매출",
+    "mode": "raise",
+    "criterion": "아침 시간대 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "아침 시간대 판매량",
@@ -3955,7 +3979,9 @@
      "왜 가동률인가: 같은 비행기로 더 벌어 낮은 운임에도 이익이 난다"
     ],
     "intent": "저운임에서도 이익 내기",
-    "intent_metric": "좌석 마일당 비용·영업이익률"
+    "intent_metric": "좌석 마일당 비용·영업이익률",
+    "mode": "raise",
+    "criterion": "좌석 마일당 비용·영업이익률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "항공기 1대당 일일 운항 횟수",
@@ -4493,7 +4519,9 @@
      "왜 옮겨 와야 하나: 무료 이용자가 늘어야 유료 전환 매출이 생긴다"
     ],
     "intent": "유료 구독 매출",
-    "intent_metric": "유료 구독자 수·매출"
+    "intent_metric": "유료 구독자 수·매출",
+    "mode": "raise",
+    "criterion": "유료 구독자 수·매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "유료 전환율",
@@ -5545,7 +5573,9 @@
      "왜 재구매인가: 고단가 신규 고객 획득은 비싸다"
     ],
     "intent": "재구매로 고객 생애 가치 높이기",
-    "intent_metric": "고객당 누적 매출"
+    "intent_metric": "고객당 누적 매출",
+    "mode": "hold",
+    "criterion": "다음 제안을 늘리되 리포트 환불률·신뢰가 나빠지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "재구매율·재구매 간격",
@@ -6712,7 +6742,9 @@
      "왜 빈도인가: 회원 연간 지출이 비회원보다 커진다"
     ],
     "intent": "회원 지출 늘리기",
-    "intent_metric": "회원 연간 지출액"
+    "intent_metric": "회원 연간 지출액",
+    "mode": "raise",
+    "criterion": "회원 연간 지출액이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "회원당 연간 구매 횟수",
@@ -7126,7 +7158,9 @@
      "왜 안심인가: 온라인에서 신발을 사는 사람 자체가 늘어난다"
     ],
     "intent": "온라인 신발 매출 키우기",
-    "intent_metric": "매출·재구매율"
+    "intent_metric": "매출·재구매율",
+    "mode": "hold",
+    "criterion": "무료 반품을 하되 반품 비용 증가가 늘어난 재구매 매출을 넘지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "재구매율",
@@ -7436,7 +7470,9 @@
      "왜 온라인인가: 직판 마진을 지키며 판다"
     ],
     "intent": "높은 마진의 직판 매출",
-    "intent_metric": "직판 매출·마진"
+    "intent_metric": "직판 매출·마진",
+    "mode": "raise",
+    "criterion": "직판 매출·마진이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "홈 트라이온 후 구매 전환율",
@@ -7751,7 +7787,9 @@
      "왜 구독인가: 반복 매출이 회사 가치를 만든다"
     ],
     "intent": "반복 구독 매출",
-    "intent_metric": "구독 유지율·월 반복 매출"
+    "intent_metric": "구독 유지율·월 반복 매출",
+    "mode": "raise",
+    "criterion": "구독 유지율·월 반복 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "구독 유지율",
@@ -8062,7 +8100,9 @@
      "왜 갱신인가: 회비가 이익의 핵심이다"
     ],
     "intent": "회비 이익 지키기",
-    "intent_metric": "회원 갱신율·회비 수익"
+    "intent_metric": "회원 갱신율·회비 수익",
+    "mode": "hold",
+    "criterion": "가격을 낮추되 회비 수익이 줄지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "회원 갱신율",
@@ -11443,7 +11483,9 @@
      "왜 습관인가: 경쟁사로 가지 않게 잠근다"
     ],
     "intent": "고객 잠금으로 점유율 확보",
-    "intent_metric": "회원 구매 비중·점유율"
+    "intent_metric": "회원 구매 비중·점유율",
+    "mode": "raise",
+    "criterion": "회원 구매 비중·점유율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "회원 구매 빈도",
@@ -14593,7 +14635,9 @@
      "왜 비용인가: 운임을 낮춰 더 많은 화물을 가져온다"
     ],
     "intent": "운송 비용 우위로 물량 확보",
-    "intent_metric": "톤당 운송 비용·물동량"
+    "intent_metric": "톤당 운송 비용·물동량",
+    "mode": "raise",
+    "criterion": "톤당 운송 비용·물동량이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "톤당 하역 비용",
@@ -15950,7 +15994,9 @@
      "왜 매일인가: 쓰는 팀이 늘어야 유료 좌석이 팔린다"
     ],
     "intent": "유료 좌석 매출",
-    "intent_metric": "유료 팀 수·좌석 매출"
+    "intent_metric": "유료 팀 수·좌석 매출",
+    "mode": "raise",
+    "criterion": "유료 팀 수·좌석 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "팀 일일 활성 사용자",
@@ -16238,7 +16284,9 @@
      "왜 가게 수인가: 구독료와 결제 수수료가 가게 수와 거래액에 비례한다"
     ],
     "intent": "구독·결제 매출",
-    "intent_metric": "가게 수·총 거래액"
+    "intent_metric": "가게 수·총 거래액",
+    "mode": "raise",
+    "criterion": "가게 수·총 거래액이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "개설 가게 수",
@@ -16935,7 +16983,9 @@
      "왜 빠르게인가: 광고 없이 싸게 사용자를 모은다"
     ],
     "intent": "낮은 획득 비용으로 성장",
-    "intent_metric": "사용자 획득 비용·가입자 성장률"
+    "intent_metric": "사용자 획득 비용·가입자 성장률",
+    "mode": "raise",
+    "criterion": "사용자 획득 비용·가입자 성장률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "추천 가입 수·유료 전환율",
@@ -17624,7 +17674,9 @@
      "왜 시작인가: 자란 고객이 유료로 옮긴다"
     ],
     "intent": "성장한 고객의 유료 매출",
-    "intent_metric": "유료 전환 매출"
+    "intent_metric": "유료 전환 매출",
+    "mode": "raise",
+    "criterion": "유료 전환 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "무료→유료 전환율",
@@ -20645,7 +20697,9 @@
      "왜 작은 가게인가: 수수료 매출이 거래액에 비례한다"
     ],
     "intent": "결제 수수료 매출",
-    "intent_metric": "총 결제액·수수료 매출"
+    "intent_metric": "총 결제액·수수료 매출",
+    "mode": "raise",
+    "criterion": "총 결제액·수수료 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "가맹점 수·결제액",
@@ -21445,7 +21499,9 @@
      "왜 통신사가 하나: 송금 수수료와 가입자 유지가 생긴다"
     ],
     "intent": "송금 수수료와 가입자 잠금",
-    "intent_metric": "송금 수수료 매출·가입자 이탈률"
+    "intent_metric": "송금 수수료 매출·가입자 이탈률",
+    "mode": "raise",
+    "criterion": "송금 수수료 매출·가입자 이탈률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "활성 사용자·송금액",
@@ -21752,7 +21808,9 @@
      "왜 신뢰인가: 은행 고객을 빼앗아 송금량을 키운다"
     ],
     "intent": "송금량 점유율 키우기",
-    "intent_metric": "송금액·고객 수"
+    "intent_metric": "송금액·고객 수",
+    "mode": "raise",
+    "criterion": "송금액·고객 수이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "송금당 비용·송금액",
@@ -23533,7 +23591,9 @@
      "왜 먼저인가: 시장의 다음 주인이 되어야 성장이 계속된다"
     ],
     "intent": "다음 시장 선점",
-    "intent_metric": "스트리밍 구독자 성장"
+    "intent_metric": "스트리밍 구독자 성장",
+    "mode": "raise",
+    "criterion": "스트리밍 구독자 성장이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "스트리밍 구독자 수",
@@ -23823,7 +23883,9 @@
      "왜 협상력인가: 라이선스 비용 인상에 끌려가지 않는다"
     ],
     "intent": "콘텐츠 비용 통제",
-    "intent_metric": "콘텐츠 비용 대비 구독 매출"
+    "intent_metric": "콘텐츠 비용 대비 구독 매출",
+    "mode": "raise",
+    "criterion": "콘텐츠 비용 대비 구독 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "오리지널 시청 비중",
@@ -24226,7 +24288,9 @@
      "왜 쉬움인가: 사용자가 빨리 늘어야 가치가 커진다"
     ],
     "intent": "빠른 사용자 성장",
-    "intent_metric": "일일 활성 사용자 성장"
+    "intent_metric": "일일 활성 사용자 성장",
+    "mode": "raise",
+    "criterion": "일일 활성 사용자 성장이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "일일 업로드 수",
@@ -24651,7 +24715,9 @@
      "왜 남아야 하나: 체류 시간이 광고 매출이 된다"
     ],
     "intent": "체류 시간 기반 광고 매출",
-    "intent_metric": "광고 매출·체류 시간"
+    "intent_metric": "광고 매출·체류 시간",
+    "mode": "raise",
+    "criterion": "광고 매출·체류 시간이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "신규 이용자 첫날 체류 시간",
@@ -24980,7 +25046,9 @@
      "왜 결제자인가: 결제자가 작품 매출을 만든다"
     ],
     "intent": "유료 콘텐츠 매출",
-    "intent_metric": "결제자 수·매출"
+    "intent_metric": "결제자 수·매출",
+    "mode": "raise",
+    "criterion": "결제자 수·매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "첫 결제 전환율",
@@ -25331,7 +25399,9 @@
      "왜 완독인가: 독자가 쌓여야 미리보기·광고·IP 매출이 생긴다"
     ],
     "intent": "독자 기반의 콘텐츠·IP 매출",
-    "intent_metric": "유료 매출·IP 매출"
+    "intent_metric": "유료 매출·IP 매출",
+    "mode": "raise",
+    "criterion": "유료 매출·IP 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "회차 완독률·연재 독자 수",
@@ -26634,7 +26704,9 @@
      "왜 친구인가: 플레이어가 많을수록 꾸미기 매출이 커진다"
     ],
     "intent": "아이템 매출",
-    "intent_metric": "아이템 매출·결제자 비율"
+    "intent_metric": "아이템 매출·결제자 비율",
+    "mode": "raise",
+    "criterion": "아이템 매출·결제자 비율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "동시 접속자·시즌 패스 구매율",
@@ -26970,7 +27042,9 @@
      "왜 습관인가: 매일 오는 사람이 유료로 전환된다"
     ],
     "intent": "유료 구독 매출",
-    "intent_metric": "유료 구독자 수"
+    "intent_metric": "유료 구독자 수",
+    "mode": "raise",
+    "criterion": "유료 구독자 수이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "일일 활성 사용자·연속 학습일",
@@ -27402,7 +27476,9 @@
      "왜 플랫폼이 신경 쓰나: 구독 매출의 수수료가 플랫폼 수입이다"
     ],
     "intent": "수수료 매출",
-    "intent_metric": "유료 구독 거래액"
+    "intent_metric": "유료 구독 거래액",
+    "mode": "raise",
+    "criterion": "유료 구독 거래액이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "유료 구독자 수",
@@ -27721,7 +27797,9 @@
      "왜 플랫폼이 신경 쓰나: 후원액의 수수료가 플랫폼 수입이다"
     ],
     "intent": "후원 수수료 매출",
-    "intent_metric": "총 후원액"
+    "intent_metric": "총 후원액",
+    "mode": "raise",
+    "criterion": "총 후원액이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "후원자 수·창작자 수입",
@@ -28043,7 +28121,9 @@
      "왜 독자 매출인가: 광고 의존을 벗어나야 저널리즘을 지속한다"
     ],
     "intent": "독자 구독 매출",
-    "intent_metric": "디지털 구독 매출"
+    "intent_metric": "디지털 구독 매출",
+    "mode": "hold",
+    "criterion": "유료화를 하되 전체 트래픽·광고 매출이 급감하지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "디지털 유료 구독자 수",
@@ -28361,7 +28441,9 @@
      "왜 많이 읽게 하나: 많이 읽는 구독자가 해지하지 않는다"
     ],
     "intent": "구독 유지",
-    "intent_metric": "구독 유지율"
+    "intent_metric": "구독 유지율",
+    "mode": "raise",
+    "criterion": "구독 유지율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "구독자당 열람 권수",
@@ -30483,7 +30565,9 @@
      "왜 제조사에 이득인가: 장기 서비스 계약이 안정 매출을 만든다"
     ],
     "intent": "장기 서비스 매출",
-    "intent_metric": "서비스 계약 매출"
+    "intent_metric": "서비스 계약 매출",
+    "mode": "raise",
+    "criterion": "서비스 계약 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "엔진 가동률",
@@ -33592,7 +33676,9 @@
      "왜 지속인가: 실명을 없애는 것이 병원의 사명이다"
     ],
     "intent": "실명 퇴치라는 사명",
-    "intent_metric": "연간 시력 회복 환자 수"
+    "intent_metric": "연간 시력 회복 환자 수",
+    "mode": "raise",
+    "criterion": "연간 시력 회복 환자 수이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "연간 수술 건수·무료 수술 비중",
@@ -37174,7 +37260,9 @@
      "왜 중요한가: 라인 정지 손실이 줄어든다"
     ],
     "intent": "생산 손실 줄이기",
-    "intent_metric": "라인 가동률"
+    "intent_metric": "라인 가동률",
+    "mode": "hold",
+    "criterion": "근본 원인을 막되 라인을 오래 멈추지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "재발 건수",
@@ -37587,7 +37675,9 @@
      "왜 비용인가: 회사가 적자에서 벗어나야 한다"
     ],
     "intent": "수익성 회복",
-    "intent_metric": "영업이익률"
+    "intent_metric": "영업이익률",
+    "mode": "raise",
+    "criterion": "영업이익률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "영업이익률",
@@ -38393,7 +38483,9 @@
      "왜 안정인가: 반복 매출이 기업 가치를 높인다"
     ],
     "intent": "반복 매출과 기업 가치",
-    "intent_metric": "연 반복 매출"
+    "intent_metric": "연 반복 매출",
+    "mode": "raise",
+    "criterion": "연 반복 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "구독 매출 비중",
@@ -41695,7 +41787,9 @@
      "왜 메신저가 파나: 무료 메신저의 수익원이 필요하다"
     ],
     "intent": "메신저 수익화",
-    "intent_metric": "이모티콘 매출"
+    "intent_metric": "이모티콘 매출",
+    "mode": "raise",
+    "criterion": "이모티콘 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "이모티콘 구매자 수",
@@ -42884,7 +42978,9 @@
      "왜 팔아야 하나: 연구 투자를 매출로 회수한다"
     ],
     "intent": "연구 투자의 매출화",
-    "intent_metric": "신제품 매출"
+    "intent_metric": "신제품 매출",
+    "mode": "raise",
+    "criterion": "신제품 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "신제품 매출",
@@ -43664,7 +43760,9 @@
      "왜 먼저인가: 돈이 떨어지기 전에 이익 구조가 있어야 산다"
     ],
     "intent": "생존 가능한 이익 구조",
-    "intent_metric": "주문당 공헌이익"
+    "intent_metric": "주문당 공헌이익",
+    "mode": "raise",
+    "criterion": "주문당 공헌이익이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "주문당 공헌이익",
@@ -44789,7 +44887,9 @@
      "왜 수요인가: 매일 쓰는 이유가 유료 구독을 만든다"
     ],
     "intent": "유료 구독 매출",
-    "intent_metric": "유료 구독자 수"
+    "intent_metric": "유료 구독자 수",
+    "mode": "raise",
+    "criterion": "유료 구독자 수이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "유료 구독자·수면 콘텐츠 이용률",
@@ -46875,7 +46975,9 @@
      "왜 유입인가: 광고비 없이 규모를 키운다"
     ],
     "intent": "광고비 없는 성장",
-    "intent_metric": "신규 결제자 수·광고비 0 유지"
+    "intent_metric": "신규 결제자 수·광고비 0 유지",
+    "mode": "raise",
+    "criterion": "신규 결제자 수·광고비 0 유지이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "첫 결제 전환율·공유 유입",
@@ -47238,7 +47340,9 @@
      "왜 광고 효율인가: 광고비 대비 매출이 성장 속도를 정한다"
     ],
     "intent": "광고 효율 기반 매출 성장",
-    "intent_metric": "광고비 대비 매출"
+    "intent_metric": "광고비 대비 매출",
+    "mode": "raise",
+    "criterion": "광고비 대비 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "주제별 결제 전환율·재구매율",
@@ -48770,7 +48874,9 @@
      "왜 재구매인가: 신규 획득보다 싸게 매출을 만든다"
     ],
     "intent": "재구매 매출",
-    "intent_metric": "재구매율·고객당 매출"
+    "intent_metric": "재구매율·고객당 매출",
+    "mode": "raise",
+    "criterion": "재구매율·고객당 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "재구매율",
@@ -49081,7 +49187,9 @@
      "왜 시도인가: 첫 질문 고객을 구독으로 옮긴다"
     ],
     "intent": "구독 매출",
-    "intent_metric": "구독 전환율·구독 매출"
+    "intent_metric": "구독 전환율·구독 매출",
+    "mode": "raise",
+    "criterion": "구독 전환율·구독 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "질문당 만족도·반복 이용률",
@@ -49391,7 +49499,9 @@
      "왜 도입인가: 좌석이 줄어드는 시대에 새 매출원이 필요하다"
     ],
     "intent": "AI 해결 매출로 좌석 매출 대체",
-    "intent_metric": "해결 매출·순매출 유지율"
+    "intent_metric": "해결 매출·순매출 유지율",
+    "mode": "raise",
+    "criterion": "해결 매출·순매출 유지율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "해결률·해결 건수",
@@ -49719,7 +49829,9 @@
      "왜 팔아야 하나: 무료 앱의 수익원이 필요하다"
     ],
     "intent": "무료 앱 수익화",
-    "intent_metric": "질문권 매출"
+    "intent_metric": "질문권 매출",
+    "mode": "raise",
+    "criterion": "질문권 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "질문권 구매율",
@@ -50021,7 +50133,9 @@
      "왜 시작인가: 맞는 상담사를 찾은 고객이 분당 매출을 오래 만든다"
     ],
     "intent": "장기 상담 매출",
-    "intent_metric": "고객당 상담 매출"
+    "intent_metric": "고객당 상담 매출",
+    "mode": "raise",
+    "criterion": "고객당 상담 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "첫 상담 후 재상담률",
@@ -50312,7 +50426,9 @@
      "왜 무료인가: 학습이 이어져야 활성 이용자와 유료 전환이 유지된다"
     ],
     "intent": "학습 지속으로 활성·전환 유지",
-    "intent_metric": "학습 지속률·유료 전환"
+    "intent_metric": "학습 지속률·유료 전환",
+    "mode": "hold",
+    "criterion": "설명을 무료로 풀되 유료 전환율이 떨어지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "설명 이용률·학습 지속률",
@@ -50602,7 +50718,9 @@
      "왜 신뢰인가: 검색 대체재로 이용자를 빼앗는다"
     ],
     "intent": "검색 점유율 성장",
-    "intent_metric": "질의 수 성장"
+    "intent_metric": "질의 수 성장",
+    "mode": "raise",
+    "criterion": "질의 수 성장이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "재방문율·질의 수",
@@ -50912,7 +51030,9 @@
      "왜 구독자인가: 매출 전부가 구독이다"
     ],
     "intent": "구독 매출 방어",
-    "intent_metric": "구독자 수"
+    "intent_metric": "구독자 수",
+    "mode": "hold",
+    "criterion": "새 가치를 찾되 남은 구독자 이탈을 더 키우지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "구독자 수",
@@ -51197,7 +51317,9 @@
      "왜 오답이 문제인가: 회사가 법적 책임을 진다"
     ],
     "intent": "법적 책임 위험 줄이기",
-    "intent_metric": "챗봇 관련 분쟁 건수"
+    "intent_metric": "챗봇 관련 분쟁 건수",
+    "mode": "hold",
+    "criterion": "자동화 범위를 줄이되 상담 비용이 크게 늘지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "오답 관련 분쟁 건수",
@@ -51474,7 +51596,9 @@
      "왜 기관이 신경 쓰나: 피해가 나면 기관 신뢰와 존립이 흔들린다"
     ],
     "intent": "이용자 안전과 기관 신뢰",
-    "intent_metric": "유해 사건 건수"
+    "intent_metric": "유해 사건 건수",
+    "mode": "hold",
+    "criterion": "안전을 확보하되 상담 접근성이 사라지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "유해 답변 건수",
@@ -51772,7 +51896,9 @@
      "왜 포털이 하나: 검색 트래픽을 거래 수수료로 바꾼다"
     ],
     "intent": "검색의 거래 수익화",
-    "intent_metric": "상담 거래액"
+    "intent_metric": "상담 거래액",
+    "mode": "raise",
+    "criterion": "상담 거래액이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "재구매율·상담 건수",
@@ -52082,7 +52208,9 @@
      "왜 손실인가: 맞추지 못하면 회사가 존속하지 못한다"
     ],
     "intent": "생존 가능한 단위 경제",
-    "intent_metric": "이용자당 공헌이익"
+    "intent_metric": "이용자당 공헌이익",
+    "mode": "raise",
+    "criterion": "이용자당 공헌이익이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "이용자당 공헌이익",
@@ -52376,7 +52504,9 @@
      "왜 위험인가: 제재와 서비스 중단이 사업 전체를 멈춘다"
     ],
     "intent": "서비스 존속",
-    "intent_metric": "개인정보 제재 건수"
+    "intent_metric": "개인정보 제재 건수",
+    "mode": "hold",
+    "criterion": "동의 절차를 두되 대화 품질이 크게 떨어지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "동의 기반 데이터 비중",
@@ -52670,7 +52800,9 @@
      "왜 과몰입인가: 규제가 오면 성장 자체가 막힌다"
     ],
     "intent": "규제 위험을 줄이며 성장 지속",
-    "intent_metric": "청소년 보호 지표·매출 성장"
+    "intent_metric": "청소년 보호 지표·매출 성장",
+    "mode": "hold",
+    "criterion": "청소년 보호를 강화하되 전체 매출 성장이 꺾이지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "청소년 과몰입 지표·결제 한도 준수",
@@ -52987,7 +53119,9 @@
      "왜 마니아인가: 지출이 큰 소수가 매출을 만든다"
     ],
     "intent": "마니아 지출 매출",
-    "intent_metric": "결제자당 매출"
+    "intent_metric": "결제자당 매출",
+    "mode": "raise",
+    "criterion": "결제자당 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "결제자 체류 시간",
@@ -53292,7 +53426,9 @@
      "왜 결제 가치인가: 결제자당 매출이 커진다"
     ],
     "intent": "결제자당 매출",
-    "intent_metric": "결제자당 매출"
+    "intent_metric": "결제자당 매출",
+    "mode": "raise",
+    "criterion": "결제자당 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "결제자당 읽은 글자 수",
@@ -53607,7 +53743,9 @@
      "왜 결제인가: 무료 원가를 덮을 매출이 필요하다"
     ],
     "intent": "유료 매출로 무료 원가 회수",
-    "intent_metric": "유료 매출·원가 회수율"
+    "intent_metric": "유료 매출·원가 회수율",
+    "mode": "raise",
+    "criterion": "유료 매출·원가 회수율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "프로챗 전환율",
@@ -53922,7 +54060,9 @@
      "왜 많이 쓰나: 종량형이라 쓴 만큼 매출이 된다"
     ],
     "intent": "종량형 매출",
-    "intent_metric": "매출"
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "결제자당 매출",
@@ -54230,7 +54370,9 @@
      "왜 해외인가: 국내 시장만으로는 성장이 한계다"
     ],
     "intent": "해외 매출 성장",
-    "intent_metric": "해외 매출 비중"
+    "intent_metric": "해외 매출 비중",
+    "mode": "raise",
+    "criterion": "해외 매출 비중이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "해외 매출 비중",
@@ -54540,7 +54682,9 @@
      "왜 몰입인가: 원작 열람과 유료 메시지 매출이 늘어난다"
     ],
     "intent": "원작·메시지 매출 동반 성장",
-    "intent_metric": "원작 매출·메시지 매출"
+    "intent_metric": "원작 매출·메시지 매출",
+    "mode": "raise",
+    "criterion": "원작 매출·메시지 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "원작 열람 증가율·유료 메시지 비중",
@@ -54836,7 +54980,9 @@
      "왜 위험인가: 게임물·사행성 판정이 나면 사업 구조가 바뀐다"
     ],
     "intent": "사업 구조 위험 회피",
-    "intent_metric": "규제 조치 건수"
+    "intent_metric": "규제 조치 건수",
+    "mode": "hold",
+    "criterion": "확률형 장치를 빼거나 바꾸되 결제 매출이 크게 줄지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "규제 리스크 건수",
@@ -55140,7 +55286,9 @@
      "왜 차이인가: 같은 이용 시간도 수익 모델에 따라 매출이 다르다"
     ],
     "intent": "매출",
-    "intent_metric": "매출"
+    "intent_metric": "매출",
+    "mode": "raise",
+    "criterion": "매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "이용자당 매출",
@@ -55462,7 +55610,9 @@
      "왜 유료인가: 무료를 유지하려면 유료 매출이 필요하다"
     ],
     "intent": "유료 매출",
-    "intent_metric": "유료 매출"
+    "intent_metric": "유료 매출",
+    "mode": "hold",
+    "criterion": "유료 차이를 만들되 무료 이용자가 이탈하지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "상위 모델 전환율",
@@ -55775,7 +55925,9 @@
      "왜 집중인가: MAU가 아니라 매출이 회사 가치다"
     ],
     "intent": "결제 매출",
-    "intent_metric": "결제 매출"
+    "intent_metric": "결제 매출",
+    "mode": "hold",
+    "criterion": "앱을 나누되 결제 매출이 줄지 않으면 성공(MAU 감소는 허용)"
    },
    "key_metrics": {
     "north_star": "결제 매출",
@@ -56104,7 +56256,9 @@
      "왜 공급인가: 좋은 작품이 이용자와 매출을 데려온다"
     ],
     "intent": "공급 기반 성장",
-    "intent_metric": "인기 작품 수·매출"
+    "intent_metric": "인기 작품 수·매출",
+    "mode": "hold",
+    "criterion": "창작자 현금화를 열되 플랫폼 마진이 무너지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "정산 창작자 수·독점작 수",
@@ -56409,7 +56563,9 @@
      "왜 관계인가: 오래 쓰는 이용자가 매출을 만든다"
     ],
     "intent": "장기 이용자 매출",
-    "intent_metric": "장기 이용자 비율·매출"
+    "intent_metric": "장기 이용자 비율·매출",
+    "mode": "hold",
+    "criterion": "기억 강화를 팔되 기본 기억 품질 불만이 늘지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "장기 대화 지속률",
@@ -56719,7 +56875,9 @@
      "왜 양립인가: 규제와 여론 위험을 줄여야 사업을 지속한다"
     ],
     "intent": "규제 위험 관리로 사업 지속",
-    "intent_metric": "청소년 보호 지표"
+    "intent_metric": "청소년 보호 지표",
+    "mode": "hold",
+    "criterion": "청소년 상한을 두되 성인 이용과 전체 매출이 줄지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "과몰입·과결제 지표",
@@ -57062,7 +57220,9 @@
      "왜 첫인상인가: 북미 신규 설치가 늘어난다"
     ],
     "intent": "북미 시장 진입 성장",
-    "intent_metric": "북미 설치·매출"
+    "intent_metric": "북미 설치·매출",
+    "mode": "raise",
+    "criterion": "북미 설치·매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "신규 설치·결제 전환",
@@ -57377,7 +57537,9 @@
      "왜 원가인가: 적자를 벗어나야 상장과 투자 유치가 된다"
     ],
     "intent": "흑자 전환",
-    "intent_metric": "영업이익률"
+    "intent_metric": "영업이익률",
+    "mode": "raise",
+    "criterion": "영업이익률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "매출 대비 원가율",
@@ -57708,7 +57870,9 @@
      "왜 마진인가: 팔수록 손해면 성장이 독이 된다"
     ],
     "intent": "공헌이익 확보",
-    "intent_metric": "공헌이익률"
+    "intent_metric": "공헌이익률",
+    "mode": "raise",
+    "criterion": "공헌이익률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "공헌이익률",
@@ -58031,7 +58195,9 @@
      "왜 검색인가: 광고비 없이 신규를 데려온다"
     ],
     "intent": "낮은 비용 신규 유입",
-    "intent_metric": "자연 유입 결제 매출"
+    "intent_metric": "자연 유입 결제 매출",
+    "mode": "raise",
+    "criterion": "자연 유입 결제 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "검색 유입당 결제율",
@@ -58351,7 +58517,9 @@
      "왜 기억인가: 인지도와 SNS 유입이 신규를 데려온다"
     ],
     "intent": "브랜드 인지도와 신규 유입",
-    "intent_metric": "팝업 후 신규 유입"
+    "intent_metric": "팝업 후 신규 유입",
+    "mode": "raise",
+    "criterion": "팝업 후 신규 유입이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "팝업 후 SNS 언급·유입",
@@ -58665,7 +58833,9 @@
      "왜 믿음인가: 환불이 줄고 재구매가 생긴다"
     ],
     "intent": "환불 감소와 재구매 매출",
-    "intent_metric": "환불률·재구매율"
+    "intent_metric": "환불률·재구매율",
+    "mode": "hold",
+    "criterion": "명식 확인 단계를 두되 입력 완료율·결제 전환이 떨어지지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "계산 오류 불만·환불 사유 비중",
@@ -58969,7 +59139,9 @@
      "왜 다시 찾아야 하나: 재방문이 재구매 매출이 된다"
     ],
     "intent": "재구매 매출",
-    "intent_metric": "재구매율"
+    "intent_metric": "재구매율",
+    "mode": "raise",
+    "criterion": "재구매율이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "재방문율",
@@ -59280,7 +59452,9 @@
      "왜 광고인가: 높은 전환이 매출을 키운다"
     ],
     "intent": "니치 상품 매출",
-    "intent_metric": "니치 상품 매출"
+    "intent_metric": "니치 상품 매출",
+    "mode": "raise",
+    "criterion": "니치 상품 매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "니치 상품 결제 전환",
@@ -59596,7 +59770,9 @@
      "왜 빨리인가: 투자 없이 매출로 성장해야 한다"
     ],
     "intent": "무투자 매출 성장",
-    "intent_metric": "월 매출 성장률"
+    "intent_metric": "월 매출 성장률",
+    "mode": "raise",
+    "criterion": "월 매출 성장률이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "월 매출·소재 실험 속도",
@@ -59908,7 +60084,9 @@
      "왜 결제인가: 운세 앱 매출은 유료 콘텐츠·상담 결제에서 나온다"
     ],
     "intent": "결제 매출",
-    "intent_metric": "결제 전환율·매출"
+    "intent_metric": "결제 전환율·매출",
+    "mode": "raise",
+    "criterion": "결제 전환율·매출이(가) 지금보다 오르면 성공"
    },
    "key_metrics": {
     "north_star": "화면 유형별 결제 전환",
@@ -60208,7 +60386,9 @@
      "왜 지금인가: 법 위반이면 제재와 환불 비용이 생긴다"
     ],
     "intent": "제재 위험 피하며 매출 지키기",
-    "intent_metric": "제재·환불 비용"
+    "intent_metric": "제재·환불 비용",
+    "mode": "hold",
+    "criterion": "긴급성 장치를 빼되 결제 매출이 크게 줄지 않으면 성공"
    },
    "key_metrics": {
     "north_star": "환불률·민원 건수",

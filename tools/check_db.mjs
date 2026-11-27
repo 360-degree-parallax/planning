@@ -58,6 +58,7 @@ for (const c of d.cases) {
   if (c.depth === 'deep') for (const [k, f] of [['goal', 'goal.txt'], ['issue_tree', 'issuetree.txt'], ['pareto', 'pareto.txt'], ['deep_why', 'deep-why.txt'], ['key_metrics', 'key-metrics.txt']]) if (!c[k]) errs.push(`${at} deep인데 ${k} 없음 (db/meta/${f})`);
   if (c.depth === 'deep' && c.pareto && !c.pareto.matrix) errs.push(`${at} deep인데 속도·임팩트 선별 없음 (db/meta/speed-impact.txt)`);
   if (c.depth === 'deep' && c.key_metrics && !c.key_metrics.select_method) errs.push(`${at} deep인데 선별 방법 없음 (db/meta/select-method.txt)`);
+  if (c.depth === 'deep' && c.deep_why && !c.deep_why.mode) errs.push(`${at} deep인데 의도 방향 없음 (db/meta/intent-mode.txt)`);
   if (c.depth === 'deep' && !c.pro_opinion) errs.push(`${at} deep인데 긍정 오피니언 없음 (db/meta/pro.txt)`);
   if (c.depth === 'deep' && !c.anti_opinion) errs.push(`${at} deep인데 안티오피니언 없음 (db/meta/anti.txt)`);
   if (!c.so_what) errs.push(`${at} so what 체인 없음 (db/meta/sowhat.txt)`);

@@ -481,6 +481,14 @@ def main():
             fail(f'deep-why.txt:{n} {p[0]} 중복')
         c['deep_why'] = {'type': p[1], 'whys': whys, 'intent': t[0], 'intent_metric': t[1]}
         c['key_metrics']['intent_metric'] = t[1]
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/intent-mode.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 3 or p[0] not in byid or p[1] not in ('raise', 'hold') or not p[2]:
+            fail(f'intent-mode.txt:{n} 형식: {line[:60]}')
+        if not byid[p[0]].get('deep_why'):
+            fail(f'intent-mode.txt:{n} {p[0]} 대체 왜가 먼저 필요')
+        byid[p[0]]['deep_why']['mode'] = p[1]
+        byid[p[0]]['deep_why']['criterion'] = p[2]
     SM = {'fgi', 'interview', 'observation', 'voc', 'quant', 'survey', 'experiment', 'scoring'}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/select-method.txt')):
         p = [x.strip() for x in line.split(' | ')]
