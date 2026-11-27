@@ -26,25 +26,25 @@ const L = {
 
 /* 방법론 순서. id는 이론 페이지 앵커와 같다 */
 const STEPS = [
-  {id:'five_why', g:'문제 깨닫기', n:'A', t:'5 Why'},
-  {id:'what', g:'문제 깨닫기', n:'', t:'현상 → WHAT'},
-  {id:'pest', g:'문제 깨닫기', n:'B', t:'PEST'},
-  {id:'swot', g:'문제 깨닫기', n:'C', t:'SWOT'},
-  {id:'three_c', g:'문제 깨닫기', n:'D', t:'3C 겹침'},
-  {id:'ansoff', g:'문제 깨닫기', n:'E', t:'앤소프'},
-  {id:'bcg', g:'문제 깨닫기', n:'F', t:'BCG 매트릭스'},
-  {id:'hyps', g:'본질 찾기', n:'1', t:'제한없는 가설'},
-  {id:'wny', g:'본질 찾기', n:'2', t:'의심 = Why not yet'},
-  {id:'so_what', g:'본질 찾기', n:'3', t:'관습 파괴 → So what'},
-  {id:'pro', g:'본질 찾기', n:'4', t:'긍정 오피니언'},
-  {id:'anti', g:'본질 찾기', n:'5', t:'안티오피니언'},
-  {id:'trade_on', g:'본질 찾기', n:'6', t:'트레이드온'},
-  {id:'goal', g:'구조화', n:'7', t:'목표 재분석'},
-  {id:'issue_tree', g:'구조화', n:'8', t:'이슈트리'},
-  {id:'pareto', g:'구조화', n:'9', t:'파레토'},
-  {id:'deep_why', g:'구조화', n:'10', t:'대체 왜'},
-  {id:'key_metrics', g:'구조화', n:'11', t:'중요 지표'},
-  {id:'solution', g:'결과', n:'', t:'해결·교훈'}
+  {id:'five_why', g:'① 문제 정의', n:'1', t:'5 Why'},
+  {id:'what', g:'① 문제 정의', n:'2', t:'현상 → WHAT'},
+  {id:'pest', g:'② 판 읽기', n:'1', t:'PEST'},
+  {id:'swot', g:'② 판 읽기', n:'2', t:'SWOT'},
+  {id:'three_c', g:'② 판 읽기', n:'3', t:'3C 겹침'},
+  {id:'ansoff', g:'② 판 읽기', n:'4', t:'앤소프'},
+  {id:'bcg', g:'② 판 읽기', n:'5', t:'BCG 매트릭스'},
+  {id:'hyps', g:'③ 본질 찾기', n:'1', t:'제한없는 가설'},
+  {id:'wny', g:'③ 본질 찾기', n:'2', t:'의심 = Why not yet'},
+  {id:'so_what', g:'③ 본질 찾기', n:'3', t:'관습 파괴 → So what'},
+  {id:'pro', g:'③ 본질 찾기', n:'4', t:'긍정 오피니언'},
+  {id:'anti', g:'③ 본질 찾기', n:'5', t:'안티오피니언'},
+  {id:'trade_on', g:'③ 본질 찾기', n:'6', t:'트레이드온'},
+  {id:'goal', g:'④ 실행 정리', n:'1', t:'목표 재분석'},
+  {id:'issue_tree', g:'④ 실행 정리', n:'2', t:'이슈트리'},
+  {id:'pareto', g:'④ 실행 정리', n:'3', t:'파레토'},
+  {id:'deep_why', g:'④ 실행 정리', n:'4', t:'대체 왜'},
+  {id:'key_metrics', g:'④ 실행 정리', n:'5', t:'중요 지표'},
+  {id:'solution', g:'맺음', n:'', t:'해결·교훈'}
 ];
 
 const tag = (t, cls = '') => `<span class="tag ${cls}">${esc(t)}</span>`;

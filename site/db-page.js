@@ -67,7 +67,7 @@ function detail(id){
   side.innerHTML = `<div class="dhead"><div><div class="rm">${esc(c.domain)} · ${L.kind[c.kind]} · ${L.depth[c.depth]}${c.verified ? ' · 출처 확인' : ''}</div><h2>${esc(c.title)}</h2></div><button class="ib close" id="close" aria-label="닫기"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
     <nav class="dtoc">${['한눈에'].concat(steps.map(s => s.t)).map((t, i) => `<a href="#d-${i ? steps[i - 1].id : 'glance'}" data-jump>${esc(t)}</a>`).join('')}</nav>
     <section class="dsec" id="d-glance"><h3>한눈에 <a href="${href('theory', 'intro')}">왜 구조화하나</a></h3>${glance(c)}</section>
-    ${steps.map(s => `<section class="dsec" id="d-${s.id}"><h3>${s.n ? `<i>${esc(s.n)}</i>` : ''}${esc(s.t)} <a href="${href('theory', s.id)}">이론 보기</a></h3>${R[s.id](c) || '<p class="muted" style="margin:0">-</p>'}</section>`).join('')}`;
+    ${steps.map(s => `<section class="dsec" id="d-${s.id}"><h3><i>${esc(s.g.split(' ')[0])}${s.n ? ' ' + esc(s.n) : ''}</i>${esc(s.t)} <a href="${href('theory', s.id)}">이론 보기</a></h3>${R[s.id](c) || '<p class="muted" style="margin:0">-</p>'}</section>`).join('')}`;
   side.scrollTop = 0;
   $('#close').onclick = () => { setHash('db', ''); detail(null); };
 }

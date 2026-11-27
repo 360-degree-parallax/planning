@@ -1,48 +1,41 @@
-/* 이론 공부 페이지: 왼쪽 단계 목록, 본문, 'DB 사례로 보기' */
+/* 이론 공부 페이지: 4막 단계 목록 + 같은 틀의 본문 + 단계별로 고른 DB 사례 */
 (function(){
 'use strict';
 const {$, esc, STEPS, R, load, theme, href, hashFor} = window.P;
-const T = window.THEORY;
+const T = window.THEORY, ACTS = window.ACTS;
 const meta = Object.fromEntries(STEPS.map(s => [s.id, s]));
 T.forEach(t => { const m = meta[t.id]; if (m) { t.g = t.g || m.g; t.n = t.n != null ? t.n : m.n; t.t = t.t || m.t; } });
-const ORDER = ['시작', '문제 깨닫기', '본질 찾기', '구조화', '결과', '참고'];
-let cases = null, cur = null;
+const byId = Object.fromEntries(T.map(t => [t.id, t]));
+let cases = null, byCase = {}, cur = null;
 
 function nav(){
-  let h = '';
-  for (const g of ORDER) {
-    const items = T.filter(t => t.g === g); if (!items.length) continue;
-    h += `<h4>${esc(g)}</h4>` + items.map(t => `<a href="${href('theory', t.id)}" data-id="${t.id}"><i>${esc(t.n || '·')}</i>${esc(t.t)}</a>`).join('');
-  }
-  $('#steps').innerHTML = h;
+  $('#steps').innerHTML = ACTS.map(a => {
+    const items = T.filter(t => t.g === a.g); if (!items.length) return '';
+    return `<h4>${esc(a.g)}</h4>` + items.map(t => `<a href="${href('theory', t.id)}" data-id="${t.id}"><i><em>${esc(/^[①-④]/.test(a.g) ? a.g[0] : '')}</em>${esc(t.n || '·')}</i>${esc(t.t)}</a>`).join('');
+  }).join('');
 }
 
-/* 이 단계를 잘 보여 주는 사례: 핵심(deep) 우선, BCG는 포트폴리오가 있는 사례만 */
-function pool(id){
-  if (!cases) return [];
-  let p = cases.filter(c => c.depth === 'deep');
-  if (id === 'bcg') p = cases.filter(c => c.bcg).sort((a, b) => (b.bcg.q_to_star - a.bcg.q_to_star));
-  if (id === 'five_why' || id === 'pest' || id === 'swot') p = p.filter(c => c[id === 'five_why' ? 'five_why' : id]);
-  return p.length ? p : cases;
+function actsMap(){
+  return ACTS.filter(a => a.d).map(a => `<div class="act"><b>${esc(a.g)}</b><span>${esc(a.d)}</span><div class="flow">${T.filter(t => t.g === a.g).map(t => `<a href="${href('theory', t.id)}">${esc(t.t)}</a>`).join('')}</div></div>`).join('');
 }
 
+function sec(title, html){ return html ? `<section class="tsec"><h2>${esc(title)}</h2>${html}</section>` : ''; }
+
+/* DB 사례 상자: 이 단계용으로 고른 3~5개를 칩으로 */
 function live(t){
-  if (!R[t.id]) return '';
-  return `<section class="live" id="live"><div class="live-h"><b>DB 사례로 보기</b><span class="grow"></span><select id="lsel" aria-label="사례 고르기"></select><button class="btn sm" id="lrnd">다른 사례</button></div><div class="live-b" id="lbody"><p class="muted" style="margin:0">사례를 불러오는 중…</p></div></section>`;
+  if (!R[t.id] || !t.cases) return '';
+  return `<section class="tsec"><h2>DB 사례로 보기 <small>${t.cases.length}건</small></h2><div class="live"><div class="chips" id="lchips" role="tablist">${t.cases.map(([id], i) => `<button role="tab" data-c="${esc(id)}" aria-selected="${i === 0}">${esc(id)}</button>`).join('')}</div><div class="live-b" id="lbody"><p class="muted" style="margin:0">사례를 불러오는 중…</p></div></div></section>`;
 }
-
-function fillLive(t, pick){
-  const sel = $('#lsel'); if (!sel || !cases) return;
-  const p = pool(t.id);
-  sel.innerHTML = p.map(c => `<option value="${esc(c.id)}">${esc(c.title)}</option>`).join('');
-  const c = p.find(x => x.id === pick) || p[0];
-  sel.value = c.id;
-  const show = c => {
-    $('#lbody').innerHTML = `<div class="live-t"><a href="${href('db', c.id)}">${esc(c.title)}</a> · ${esc(c.domain)}</div>${R[t.id](c)}`;
+function fillLive(t){
+  const box = $('#lchips'); if (!box || !cases) return;
+  box.querySelectorAll('button').forEach(b => { const c = byCase[b.dataset.c]; if (c) b.textContent = c.title; });
+  const show = id => {
+    const c = byCase[id], why = (t.cases.find(x => x[0] === id) || [])[1];
+    box.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.c === id));
+    $('#lbody').innerHTML = c ? `<div class="live-t"><b>${esc(why || '')}</b><br><a href="${href('db', c.id)}">${esc(c.title)}</a> · ${esc(c.domain)} · DB에서 전체 보기 →</div>${R[t.id](c)}` : '<p class="muted">사례를 찾지 못했어요.</p>';
   };
-  show(c);
-  sel.onchange = () => show(p.find(x => x.id === sel.value));
-  $('#lrnd').onclick = () => { const x = p[Math.floor(Math.random() * p.length)]; sel.value = x.id; show(x); };
+  box.onclick = e => { const b = e.target.closest('button'); if (b) show(b.dataset.c); };
+  show(t.cases[0][0]);
 }
 
 function render(id){
@@ -50,16 +43,21 @@ function render(id){
   const t = T[i]; cur = t;
   document.querySelectorAll('#steps a').forEach(a => a.setAttribute('aria-current', a.dataset.id === t.id ? 'true' : 'false'));
   const prev = T[i - 1], next = T[i + 1];
-  $('#tmain').innerHTML = `<div class="eyebrow">${esc(t.g)}${t.n ? ' · ' + esc(t.n) : ''}</div><h1>${esc(t.t)}</h1>
+  const act = ACTS.find(a => a.g === t.g);
+  $('#tmain').innerHTML = `<div class="eyebrow">${esc(t.g)}${act && act.d ? ' — ' + esc(act.d) : ''}</div><h1>${esc(t.t)}</h1>
+    ${t.def ? `<p class="lead">${esc(t.def)}</p>` : ''}
     <div class="ask"><small>묻는 것</small>${esc(t.ask)}</div>
-    <div class="prose">${t.body}</div>
+    ${t.cite ? `<figure class="cite"><blockquote>${esc(t.cite[0])}</blockquote><figcaption>${esc(t.cite[1])}</figcaption></figure>` : ''}
+    ${sec('언제 쓰나', t.when ? `<p>${esc(t.when)}</p>` : '')}
+    ${sec('하는 순서', t.how ? `<ol class="how">${t.how.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : '')}
+    ${sec('예시: 치과 대기', t.ex ? `<div class="ex">${t.ex}</div>` : '')}
+    ${t.id === 'intro' ? `<div class="prose">${t.more}</div>` : sec('더 알아보기', t.more ? `<div class="prose">${t.more}</div>` : '')}
+    ${sec('흔한 실수', t.pit ? `<ul class="pit">${t.pit.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '')}
+    ${sec('이어지는 툴', t.links ? `<ul class="links">${t.links.map(([lid, why]) => byId[lid] ? `<li><a href="${href('theory', lid)}">${esc(byId[lid].g.split(' ')[0])} ${esc(byId[lid].t)}</a><span>${esc(why)}</span></li>` : '').join('')}</ul>` : '')}
     ${t.try ? `<div class="try"><b>스스로 해 보기</b>${esc(t.try)}</div>` : ''}
     ${live(t)}
     <div class="next">${prev ? `<a class="btn" href="${href('theory', prev.id)}">← ${esc(prev.t)}</a>` : ''}<span class="grow"></span>${next ? `<a class="btn dark" href="${href('theory', next.id)}">${esc(next.t)} →</a>` : `<a class="btn dark" href="${href('db')}">사례 DB로 →</a>`}</div>`;
-  document.querySelectorAll('[data-flow]').forEach(el => {
-    const items = T.filter(x => x.g === el.dataset.flow);
-    el.innerHTML = items.map((x, k) => `${k ? '<span class="arr">→</span>' : ''}<a href="${href('theory', x.id)}">${esc(x.t)}</a>`).join('');
-  });
+  const am = document.querySelector('[data-acts]'); if (am) am.innerHTML = actsMap();
   if (cases) fillLive(t);
   const a = document.querySelector(`#steps a[data-id="${t.id}"]`); if (a && a.scrollIntoView) a.scrollIntoView({block: 'nearest', inline: 'center'});
 }
@@ -69,6 +67,6 @@ function route(){ const h = hashFor('theory'); if (h === null) return; render(h 
 theme(); nav();
 window.addEventListener('hashchange', route);
 route();
-load().then(cs => { cases = cs; if (cur) fillLive(cur); }).catch(() => { const b = $('#lbody'); if (b) b.innerHTML = '<p class="muted" style="margin:0">사례 데이터를 불러오지 못했어요.</p>'; });
+load().then(cs => { cases = cs; byCase = Object.fromEntries(cs.map(c => [c.id, c])); if (cur) fillLive(cur); }).catch(() => { const b = $('#lbody'); if (b) b.innerHTML = '<p class="muted" style="margin:0">사례 데이터를 불러오지 못했어요.</p>'; });
 window.TheoryPage = {route};
 })();
