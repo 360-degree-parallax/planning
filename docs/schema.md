@@ -272,3 +272,8 @@ deep이 아닌 사례에 분석 칸 15개를 한 덩어리로 쓴다. `@ id`로 
 - 입력: `db/service/unit-econ.json` (없으면 `unit-econ.example.json`, 모든 값은 가정). 모델 단가·토큰 수·라우팅 비중·결제 채널 수수료·환불률·검수 비율·무료 질문 비율·묶음 가격.
 - 출력: 묶음별 질문 1회 순매출·모델 원가·검수·무료 배분·수수료·환불·공헌이익·공헌이익률, 손익분기 판매가.
 - 근거 사례: crack-pricing, wrtn-pnl (docs/crack-deep-dive.md 10장).
+
+## three_c.overlap / entry / entry_why (3C 겹침)
+
+`db/meta/three-c-overlap.txt`, 전 사례 필수. 형식: `id | A ; B ; C ; D ; E ; F ; G ; H || 진입 | 이유`.
+A 고객만, B 고객∩경쟁, C 고객∩자사, D 셋 다, E 경쟁∩자사, F 경쟁만, G 자사만, H 밖. 진입은 A·B·C·D·H 중 쉼표로 여럿. 목적은 우리 상황에 맞는 시장 찾기.

@@ -130,6 +130,11 @@ for g, items in groups.items():
             tc = c['three_c']
             L.append(f"- **3C**: 고객 {tc['customer']} / 경쟁 {tc['competitor']} / 자사 {tc['company']}")
             L.append(f"  - 빈자리: {tc['gap']}")
+            if tc.get('overlap'):
+                ov = tc['overlap']
+                OVN = {'A': '고객만', 'B': '고객∩경쟁', 'C': '고객∩자사', 'D': '셋 다', 'E': '경쟁∩자사', 'F': '경쟁만', 'G': '자사만', 'H': '밖'}
+                L.append("  - 3C 겹침: " + ' / '.join(f"{k} {OVN[k]} {ov[k]}" for k in 'ABCDEFGH'))
+                L.append(f"  - 우리 상황에 맞는 시장(진입): **{', '.join(tc['entry'])}** — {tc['entry_why']}")
         L.append(f"- **가설 {sw['hyp']}**: {h['text']}")
         L.append(f"- **의심 (Why not yet)**: {sw['why_not_yet']}")
         for k, st in enumerate(sw['steps'], 1):

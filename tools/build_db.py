@@ -580,7 +580,31 @@ def main():
         if byid[cid].get('three_c'):
             fail(f'three-c.txt:{n} {cid} 중복')
         byid[cid]['three_c'] = {'customer': f['고객'], 'competitor': f['경쟁'], 'company': f['자사'], 'gap': gap.strip()}
+    OV = 'ABCDEFGH'
+    OVF = os.path.join(ROOT, 'db/meta/three-c-overlap.txt')
+    if os.path.exists(OVF):
+        for n, line in meta_lines(OVF):
+            head, _, tail = line.partition(' || ')
+            cid, _, body = head.partition(' | ')
+            cid = cid.strip()
+            cells = [x.strip() for x in body.split(' ; ')]
+            t = [x.strip() for x in tail.split(' | ')]
+            if cid not in byid or len(cells) != 8 or not all(cells) or len(t) != 2 or not t[1]:
+                fail(f'three-c-overlap.txt:{n} 형식(A~H 8칸 ; 구분, || 진입 | 이유): {line[:60]}')
+            entry = [x.strip() for x in t[0].split(',')]
+            if not entry or any(e not in 'ABCDH' or len(e) != 1 for e in entry):
+                fail(f'three-c-overlap.txt:{n} 진입은 A·B·C·D·H 중에서(고객이 없는 E·F·G는 진입 불가): {t[0]}')
+            tc = byid[cid].get('three_c')
+            if not tc:
+                fail(f'three-c-overlap.txt:{n} {cid}: three_c가 먼저 필요')
+            if tc.get('overlap'):
+                fail(f'three-c-overlap.txt:{n} {cid} 중복')
+            tc['overlap'] = dict(zip(OV, cells))
+            tc['entry'] = entry
+            tc['entry_why'] = t[1]
     for c in cases:
+        if c.get('three_c') and not c['three_c'].get('overlap'):
+            fail(f"{c['id']}: 3C 겹침(A~H) 없음 (db/meta/three-c-overlap.txt)")
         pe = c.get('pest')
         if pe:
             pe['focus'] = [k for k in pe['key'] if k in ('P', 'T')]
