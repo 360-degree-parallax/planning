@@ -156,7 +156,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 환자에게 대기 경험 개선"
+    "why": "같은 환자에게 대기 경험 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -547,7 +548,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 입주자 체감 개선"
+    "why": "같은 입주자 체감 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -898,7 +900,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 승객 동선 개선"
+    "why": "같은 승객 동선 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -1260,7 +1263,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 방문객 대기 경험"
+    "why": "같은 방문객 대기 경험",
+    "focus": false
    },
    "hyps": [
     {
@@ -1617,7 +1621,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 학생에게 우산 비치"
+    "why": "같은 학생에게 우산 비치",
+    "focus": false
    },
    "hyps": [
     {
@@ -1979,7 +1984,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 소아 환자 검사 경험"
+    "why": "같은 소아 환자 검사 경험",
+    "focus": false
    },
    "hyps": [
     {
@@ -2337,7 +2343,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "보온 기능을 병원 밖 가정으로"
+    "why": "보온 기능을 병원 밖 가정으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -2712,7 +2719,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 여행객에게 개인 숙소라는 새 상품"
+    "why": "같은 여행객에게 개인 숙소라는 새 상품",
+    "focus": true
    },
    "hyps": [
     {
@@ -3083,7 +3091,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 대여자에게 정액 우편 대여"
+    "why": "같은 대여자에게 정액 우편 대여",
+    "focus": true
    },
    "hyps": [
     {
@@ -3448,7 +3457,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 청소기 시장에 봉투 없는 제품"
+    "why": "같은 청소기 시장에 봉투 없는 제품",
+    "focus": true
    },
    "hyps": [
     {
@@ -3802,7 +3812,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 제품을 청소 마무리 용도로 재포지셔닝"
+    "why": "같은 제품을 청소 마무리 용도로 재포지셔닝",
+    "focus": false
    },
    "hyps": [
     {
@@ -4155,7 +4166,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 셰이크를 출근길 고객에게 더 팔기"
+    "why": "같은 셰이크를 출근길 고객에게 더 팔기",
+    "focus": false
    },
    "hyps": [
     {
@@ -4519,7 +4531,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "비행을 차·버스 이용자에게"
+    "why": "비행을 차·버스 이용자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -4829,7 +4842,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 가구 시장에 셀프 조립 제품"
+    "why": "같은 가구 시장에 셀프 조립 제품",
+    "focus": true
    },
    "hyps": [
     {
@@ -5128,7 +5142,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "비게이머에게 모션 게임기"
+    "why": "비게이머에게 모션 게임기",
+    "focus": false
    },
    "hyps": [
     {
@@ -5473,7 +5488,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 청취자에게 스트리밍"
+    "why": "같은 청취자에게 스트리밍",
+    "focus": true
    },
    "hyps": [
     {
@@ -5804,7 +5820,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 송금 고객에게 간편 송금"
+    "why": "같은 송금 고객에게 간편 송금",
+    "focus": true
    },
    "hyps": [
     {
@@ -6119,7 +6136,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 배달 고객에게 앱 주문"
+    "why": "같은 배달 고객에게 앱 주문",
+    "focus": true
    },
    "hyps": [
     {
@@ -6415,7 +6433,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 중고 거래자에게 동네 직거래"
+    "why": "같은 중고 거래자에게 동네 직거래",
+    "focus": true
    },
    "hyps": [
     {
@@ -6727,7 +6746,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 장보기 고객에게 새벽 배송"
+    "why": "같은 장보기 고객에게 새벽 배송",
+    "focus": true
    },
    "hyps": [
     {
@@ -7023,7 +7043,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 쇼핑객에게 직매입 로켓배송"
+    "why": "같은 쇼핑객에게 직매입 로켓배송",
+    "focus": true
    },
    "hyps": [
     {
@@ -7321,7 +7342,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "같은 좌석을 오후 재택근무자에게"
+    "why": "같은 좌석을 오후 재택근무자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -7677,7 +7699,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 결제자 재구매"
+    "why": "기존 결제자 재구매",
+    "focus": false
    },
    "hyps": [
     {
@@ -8024,7 +8047,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 회원 재등록"
+    "why": "기존 회원 재등록",
+    "focus": false
    },
    "hyps": [
     {
@@ -8337,7 +8361,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "신규 가입자 첫 주 유지"
+    "why": "신규 가입자 첫 주 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -8646,7 +8671,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 팀 회의 개선"
+    "why": "같은 팀 회의 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -8958,7 +8984,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 독자에게 독서 모임 경험"
+    "why": "같은 독자에게 독서 모임 경험",
+    "focus": true
    },
    "hyps": [
     {
@@ -9256,7 +9283,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 직장인 점심 대기 해소"
+    "why": "같은 직장인 점심 대기 해소",
+    "focus": false
    },
    "hyps": [
     {
@@ -9570,7 +9598,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 방문자 결제 완료"
+    "why": "기존 방문자 결제 완료",
+    "focus": false
    },
    "hyps": [
     {
@@ -9869,7 +9898,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 수강생 완강"
+    "why": "기존 수강생 완강",
+    "focus": false
    },
    "hyps": [
     {
@@ -10216,7 +10246,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객 구매 빈도"
+    "why": "기존 고객 구매 빈도",
+    "focus": false
    },
    "hyps": [
     {
@@ -10541,7 +10572,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 고객에게 외부 판매자 구색"
+    "why": "같은 고객에게 외부 판매자 구색",
+    "focus": true
    },
    "hyps": [
     {
@@ -10886,7 +10918,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "신발 구매자에게 무료 반품 온라인 판매"
+    "why": "신발 구매자에게 무료 반품 온라인 판매",
+    "focus": true
    },
    "hyps": [
     {
@@ -11241,7 +11274,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "안경 구매자에게 홈 트라이온 직판"
+    "why": "안경 구매자에게 홈 트라이온 직판",
+    "focus": true
    },
    "hyps": [
     {
@@ -11615,7 +11649,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "면도 고객에게 구독 배송"
+    "why": "면도 고객에게 구독 배송",
+    "focus": true
    },
    "hyps": [
     {
@@ -11982,7 +12017,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "회원 반복 구매"
+    "why": "회원 반복 구매",
+    "focus": false
    },
    "hyps": [
     {
@@ -12309,7 +12345,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "장보는 고객에게 자체 브랜드"
+    "why": "장보는 고객에게 자체 브랜드",
+    "focus": true
    },
    "hyps": [
     {
@@ -12617,7 +12654,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "동네 손님 결품 줄이기"
+    "why": "동네 손님 결품 줄이기",
+    "focus": false
    },
    "hyps": [
     {
@@ -12925,7 +12963,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 고객에게 반응 생산 신상품"
+    "why": "같은 고객에게 반응 생산 신상품",
+    "focus": true
    },
    "hyps": [
     {
@@ -13219,7 +13258,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 젊은 층에게 초소량 신상품"
+    "why": "같은 젊은 층에게 초소량 신상품",
+    "focus": true
    },
    "hyps": [
     {
@@ -13516,7 +13556,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "의류 고객에게 대신 고르는 박스"
+    "why": "의류 고객에게 대신 고르는 박스",
+    "focus": true
    },
    "hyps": [
     {
@@ -13811,7 +13852,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "반려인에게 정기배송·감정 응대"
+    "why": "반려인에게 정기배송·감정 응대",
+    "focus": true
    },
    "hyps": [
     {
@@ -14106,7 +14148,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "장보기 고객에게 대행 서비스"
+    "why": "장보기 고객에게 대행 서비스",
+    "focus": true
    },
    "hyps": [
     {
@@ -14405,7 +14448,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 구매자에게 에스크로 장터"
+    "why": "같은 구매자에게 에스크로 장터",
+    "focus": true
    },
    "hyps": [
     {
@@ -14704,7 +14748,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "온라인 쇼핑을 지방 저소득층에게"
+    "why": "온라인 쇼핑을 지방 저소득층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -15002,7 +15047,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "온라인 쇼핑을 소도시에게"
+    "why": "온라인 쇼핑을 소도시에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -15315,7 +15361,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "커뮤니티 회원에게 커머스"
+    "why": "커뮤니티 회원에게 커머스",
+    "focus": true
    },
    "hyps": [
     {
@@ -15624,7 +15671,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "콘텐츠 이용자에게 커머스"
+    "why": "콘텐츠 이용자에게 커머스",
+    "focus": true
    },
    "hyps": [
     {
@@ -15921,7 +15969,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "리셀 구매자에게 검수 거래"
+    "why": "리셀 구매자에게 검수 거래",
+    "focus": true
    },
    "hyps": [
     {
@@ -16222,7 +16271,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 쇼핑객에게 모아보기"
+    "why": "같은 쇼핑객에게 모아보기",
+    "focus": true
    },
    "hyps": [
     {
@@ -16531,7 +16581,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "운동화 시장에 울 소재"
+    "why": "운동화 시장에 울 소재",
+    "focus": true
    },
    "hyps": [
     {
@@ -16848,7 +16899,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "캐리어 시장에 직판 기능 제품"
+    "why": "캐리어 시장에 직판 기능 제품",
+    "focus": true
    },
    "hyps": [
     {
@@ -17146,7 +17198,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 고객에게 쿠션 용기"
+    "why": "같은 고객에게 쿠션 용기",
+    "focus": true
    },
    "hyps": [
     {
@@ -17459,7 +17512,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "라면 시장에 극한 매운맛"
+    "why": "라면 시장에 극한 매운맛",
+    "focus": true
    },
    "hyps": [
     {
@@ -17756,7 +17810,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "만두를 해외 현지인에게"
+    "why": "만두를 해외 현지인에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -18051,7 +18106,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "커피 고객에게 저가 대용량"
+    "why": "커피 고객에게 저가 대용량",
+    "focus": true
    },
    "hyps": [
     {
@@ -18359,7 +18415,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "커피 고객에게 앱 픽업"
+    "why": "커피 고객에게 앱 픽업",
+    "focus": true
    },
    "hyps": [
     {
@@ -18653,7 +18710,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 음료를 방문 배달로"
+    "why": "같은 음료를 방문 배달로",
+    "focus": false
    },
    "hyps": [
     {
@@ -18964,7 +19022,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "같은 제품을 농촌 소포장으로"
+    "why": "같은 제품을 농촌 소포장으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -19268,7 +19327,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "데이터를 저소득 다수에게"
+    "why": "데이터를 저소득 다수에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -19567,7 +19627,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "할인점을 소도시로"
+    "why": "할인점을 소도시로",
+    "focus": true
    },
    "hyps": [
     {
@@ -19863,7 +19924,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 방문객 체류 시간"
+    "why": "같은 방문객 체류 시간",
+    "focus": false
    },
    "hyps": [
     {
@@ -20218,7 +20280,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객 회비로 묶기"
+    "why": "기존 고객 회비로 묶기",
+    "focus": false
    },
    "hyps": [
     {
@@ -20550,7 +20613,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "택시 승객에게 앱 호출"
+    "why": "택시 승객에게 앱 호출",
+    "focus": true
    },
    "hyps": [
     {
@@ -20863,7 +20927,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "택시 승객에게 승합차 호출"
+    "why": "택시 승객에게 승합차 호출",
+    "focus": true
    },
    "hyps": [
     {
@@ -21176,7 +21241,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "차량 호출을 동남아로"
+    "why": "차량 호출을 동남아로",
+    "focus": true
    },
    "hyps": [
     {
@@ -21487,7 +21553,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 이용자에게 배달·결제"
+    "why": "같은 이용자에게 배달·결제",
+    "focus": true
    },
    "hyps": [
     {
@@ -21787,7 +21854,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "배달을 교외로"
+    "why": "배달을 교외로",
+    "focus": true
    },
    "hyps": [
     {
@@ -22094,7 +22162,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "식당에게 예약 관리 도구"
+    "why": "식당에게 예약 관리 도구",
+    "focus": true
    },
    "hyps": [
     {
@@ -22401,7 +22470,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "수공예 구매자에게 전용 장터"
+    "why": "수공예 구매자에게 전용 장터",
+    "focus": true
    },
    "hyps": [
     {
@@ -22714,7 +22784,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 거래자 신뢰 높이기"
+    "why": "같은 거래자 신뢰 높이기",
+    "focus": false
    },
    "hyps": [
     {
@@ -23023,7 +23094,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "외주 고객에게 정가 패키지"
+    "why": "외주 고객에게 정가 패키지",
+    "focus": true
    },
    "hyps": [
     {
@@ -23334,7 +23406,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "외주 고객에게 에스크로 패키지"
+    "why": "외주 고객에게 에스크로 패키지",
+    "focus": true
    },
    "hyps": [
     {
@@ -23645,7 +23718,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "반려인에게 개인 시터"
+    "why": "반려인에게 개인 시터",
+    "focus": true
    },
    "hyps": [
     {
@@ -23953,7 +24027,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "렌터카 고객에게 개인 차"
+    "why": "렌터카 고객에게 개인 차",
+    "focus": true
    },
    "hyps": [
     {
@@ -24263,7 +24338,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "장거리 이동자에게 카풀"
+    "why": "장거리 이동자에게 카풀",
+    "focus": true
    },
    "hyps": [
     {
@@ -24571,7 +24647,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "렌터카 고객에게 무인 분 단위"
+    "why": "렌터카 고객에게 무인 분 단위",
+    "focus": true
    },
    "hyps": [
     {
@@ -24879,7 +24956,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "도시 이동자에게 공유 킥보드"
+    "why": "도시 이동자에게 공유 킥보드",
+    "focus": true
    },
    "hyps": [
     {
@@ -25176,7 +25254,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 예약자 전환 높이기"
+    "why": "기존 예약자 전환 높이기",
+    "focus": false
    },
    "hyps": [
     {
@@ -25488,7 +25567,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "모텔을 일반 여행객에게"
+    "why": "모텔을 일반 여행객에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -25801,7 +25881,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "집주인에게 무료 시세"
+    "why": "집주인에게 무료 시세",
+    "focus": true
    },
    "hyps": [
     {
@@ -26107,7 +26188,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "매도자에게 즉시 매입"
+    "why": "매도자에게 즉시 매입",
+    "focus": true
    },
    "hyps": [
     {
@@ -26421,7 +26503,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "원룸 구하는 사람에게 앱 비교"
+    "why": "원룸 구하는 사람에게 앱 비교",
+    "focus": true
    },
    "hyps": [
     {
@@ -26715,7 +26798,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "스타트업에게 좌석 단위 사무실"
+    "why": "스타트업에게 좌석 단위 사무실",
+    "focus": true
    },
    "hyps": [
     {
@@ -27022,7 +27106,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기업에게 유연 공간"
+    "why": "기업에게 유연 공간",
+    "focus": true
    },
    "hyps": [
     {
@@ -27332,7 +27417,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "수입 업체에게 디지털 포워딩"
+    "why": "수입 업체에게 디지털 포워딩",
+    "focus": true
    },
    "hyps": [
     {
@@ -27657,7 +27743,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "화주에게 컨테이너 운송"
+    "why": "화주에게 컨테이너 운송",
+    "focus": true
    },
    "hyps": [
     {
@@ -27998,7 +28085,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기업에게 익일 보장 배송"
+    "why": "기업에게 익일 보장 배송",
+    "focus": true
    },
    "hyps": [
     {
@@ -28305,7 +28393,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 배송 효율"
+    "why": "같은 배송 효율",
+    "focus": false
    },
    "hyps": [
     {
@@ -28616,7 +28705,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "배송을 외딴 병원으로"
+    "why": "배송을 외딴 병원으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -28909,7 +28999,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 가게 대상 과금 변경"
+    "why": "같은 가게 대상 과금 변경",
+    "focus": false
    },
    "hyps": [
     {
@@ -29218,7 +29309,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "가게에게 배달 대행"
+    "why": "가게에게 배달 대행",
+    "focus": true
    },
    "hyps": [
     {
@@ -29530,7 +29622,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "카카오 이용자에게 택시 호출"
+    "why": "카카오 이용자에게 택시 호출",
+    "focus": true
    },
    "hyps": [
     {
@@ -29842,7 +29935,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "주민에게 무료 게시판"
+    "why": "주민에게 무료 게시판",
+    "focus": true
    },
    "hyps": [
     {
@@ -30149,7 +30243,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "통근자에게 소속 카풀"
+    "why": "통근자에게 소속 카풀",
+    "focus": true
    },
    "hyps": [
     {
@@ -30445,7 +30540,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "영업 조직에게 웹 CRM"
+    "why": "영업 조직에게 웹 CRM",
+    "focus": true
    },
    "hyps": [
     {
@@ -30771,7 +30867,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "게임사가 기업 협업 도구로"
+    "why": "게임사가 기업 협업 도구로",
+    "focus": false
    },
    "hyps": [
     {
@@ -31119,7 +31216,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "스노보드 가게가 쇼핑몰 빌더로"
+    "why": "스노보드 가게가 쇼핑몰 빌더로",
+    "focus": false
    },
    "hyps": [
     {
@@ -31433,7 +31531,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "개발자에게 결제 API"
+    "why": "개발자에게 결제 API",
+    "focus": true
    },
    "hyps": [
     {
@@ -31732,7 +31831,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "개발자에게 통신 API"
+    "why": "개발자에게 통신 API",
+    "focus": true
    },
    "hyps": [
     {
@@ -32043,7 +32143,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "커머스 회사가 클라우드로"
+    "why": "커머스 회사가 클라우드로",
+    "focus": false
    },
    "hyps": [
     {
@@ -32400,7 +32501,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기기 여러 대 쓰는 사람에게 동기화"
+    "why": "기기 여러 대 쓰는 사람에게 동기화",
+    "focus": true
    },
    "hyps": [
     {
@@ -32744,7 +32846,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "회의 시장에 쉬운 화상회의"
+    "why": "회의 시장에 쉬운 화상회의",
+    "focus": true
    },
    "hyps": [
     {
@@ -33044,7 +33147,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "개발팀에게 셀프 구매 도구"
+    "why": "개발팀에게 셀프 구매 도구",
+    "focus": true
    },
    "hyps": [
     {
@@ -33362,7 +33466,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "중소기업에게 인바운드 도구"
+    "why": "중소기업에게 인바운드 도구",
+    "focus": true
    },
    "hyps": [
     {
@@ -33719,7 +33824,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "이메일 마케팅을 작은 사업자에게"
+    "why": "이메일 마케팅을 작은 사업자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -34049,7 +34155,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "디자인을 비디자이너에게"
+    "why": "디자인을 비디자이너에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -34346,7 +34453,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "디자인 팀에게 브라우저 협업"
+    "why": "디자인 팀에게 브라우저 협업",
+    "focus": true
    },
    "hyps": [
     {
@@ -34644,7 +34752,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "팀에게 블록형 올인원"
+    "why": "팀에게 블록형 올인원",
+    "focus": true
    },
    "hyps": [
     {
@@ -34954,7 +35063,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "임원에게 유료 고속 이메일"
+    "why": "임원에게 유료 고속 이메일",
+    "focus": true
    },
    "hyps": [
     {
@@ -35268,7 +35378,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "개발·운영팀에게 통합 관측"
+    "why": "개발·운영팀에게 통합 관측",
+    "focus": true
    },
    "hyps": [
     {
@@ -35561,7 +35672,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "데이터팀에게 분리형 웨어하우스"
+    "why": "데이터팀에게 분리형 웨어하우스",
+    "focus": true
    },
    "hyps": [
     {
@@ -35875,7 +35987,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "급여 서비스를 작은 회사로"
+    "why": "급여 서비스를 작은 회사로",
+    "focus": true
    },
    "hyps": [
     {
@@ -36187,7 +36300,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "HR SaaS를 한국 스타트업으로"
+    "why": "HR SaaS를 한국 스타트업으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -36485,7 +36599,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "직장인에게 정확한 명함 관리"
+    "why": "직장인에게 정확한 명함 관리",
+    "focus": true
    },
    "hyps": [
     {
@@ -36797,7 +36912,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "쇼핑몰에게 상담 채팅"
+    "why": "쇼핑몰에게 상담 채팅",
+    "focus": true
    },
    "hyps": [
     {
@@ -37109,7 +37225,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "에이전시에게 단순 협업 도구"
+    "why": "에이전시에게 단순 협업 도구",
+    "focus": true
    },
    "hyps": [
     {
@@ -37422,7 +37539,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "앱 연동을 비개발자에게"
+    "why": "앱 연동을 비개발자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -37733,7 +37851,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "스타트업에게 제품 안 메신저"
+    "why": "스타트업에게 제품 안 메신저",
+    "focus": true
    },
    "hyps": [
     {
@@ -38047,7 +38166,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "원격 팀에게 비동기 영상"
+    "why": "원격 팀에게 비동기 영상",
+    "focus": true
    },
    "hyps": [
     {
@@ -38358,7 +38478,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "영업에게 예약 링크"
+    "why": "영업에게 예약 링크",
+    "focus": true
    },
    "hyps": [
     {
@@ -38666,7 +38787,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기업에게 전자서명"
+    "why": "기업에게 전자서명",
+    "focus": true
    },
    "hyps": [
     {
@@ -38977,7 +39099,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "DB를 비개발자에게"
+    "why": "DB를 비개발자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -39290,7 +39413,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "개발자에게 소셜 코딩"
+    "why": "개발자에게 소셜 코딩",
+    "focus": true
    },
    "hyps": [
     {
@@ -39601,7 +39725,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "홈페이지 제작을 작은 가게에게"
+    "why": "홈페이지 제작을 작은 가게에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -39916,7 +40041,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "체험 계정 전환"
+    "why": "체험 계정 전환",
+    "focus": false
    },
    "hyps": [
     {
@@ -40233,7 +40359,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "ERP를 중소 제조사로"
+    "why": "ERP를 중소 제조사로",
+    "focus": true
    },
    "hyps": [
     {
@@ -40531,7 +40658,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "카드 결제를 개인 판매자에게"
+    "why": "카드 결제를 개인 판매자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -40869,7 +40997,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "카드 결제를 작은 가게에게"
+    "why": "카드 결제를 작은 가게에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -41196,7 +41325,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "젊은 층에게 소셜 송금"
+    "why": "젊은 층에게 소셜 송금",
+    "focus": true
    },
    "hyps": [
     {
@@ -41511,7 +41641,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "주식 거래를 소액 젊은 층에게"
+    "why": "주식 거래를 소액 젊은 층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -41810,7 +41941,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "저소득층에게 무수수료 계좌"
+    "why": "저소득층에게 무수수료 계좌",
+    "focus": true
    },
    "hyps": [
     {
@@ -42122,7 +42254,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "은행 고객에게 디지털 카드"
+    "why": "은행 고객에게 디지털 카드",
+    "focus": true
    },
    "hyps": [
     {
@@ -42466,7 +42599,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "통신사가 계좌 없는 사람에게 송금"
+    "why": "통신사가 계좌 없는 사람에게 송금",
+    "focus": false
    },
    "hyps": [
     {
@@ -42832,7 +42966,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "해외 송금자에게 투명 송금"
+    "why": "해외 송금자에게 투명 송금",
+    "focus": true
    },
    "hyps": [
     {
@@ -43161,7 +43296,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "쇼핑객에게 후불 결제"
+    "why": "쇼핑객에게 후불 결제",
+    "focus": true
    },
    "hyps": [
     {
@@ -43478,7 +43614,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "젊은 층에게 AI 보험"
+    "why": "젊은 층에게 AI 보험",
+    "focus": true
    },
    "hyps": [
     {
@@ -43779,7 +43916,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "은행 고객에게 비대면 은행"
+    "why": "은행 고객에게 비대면 은행",
+    "focus": true
    },
    "hyps": [
     {
@@ -44080,7 +44218,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "금융 고객에게 통합 조회"
+    "why": "금융 고객에게 통합 조회",
+    "focus": true
    },
    "hyps": [
     {
@@ -44380,7 +44519,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "소비자에게 무료 신용점수"
+    "why": "소비자에게 무료 신용점수",
+    "focus": true
    },
    "hyps": [
     {
@@ -44697,7 +44837,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "디지털 결제를 소규모 가게로"
+    "why": "디지털 결제를 소규모 가게로",
+    "focus": true
    },
    "hyps": [
     {
@@ -45010,7 +45151,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "대출자에게 비교 조회"
+    "why": "대출자에게 비교 조회",
+    "focus": true
    },
    "hyps": [
     {
@@ -45324,7 +45466,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 가입자 청구율"
+    "why": "기존 가입자 청구율",
+    "focus": false
    },
    "hyps": [
     {
@@ -45639,7 +45782,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "사회초년생에게 선저축 상품"
+    "why": "사회초년생에게 선저축 상품",
+    "focus": true
    },
    "hyps": [
     {
@@ -45930,7 +46074,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "식당에게 빠른 정산"
+    "why": "식당에게 빠른 정산",
+    "focus": true
    },
    "hyps": [
     {
@@ -46237,7 +46382,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "대출을 담보 없는 빈곤층에게"
+    "why": "대출을 담보 없는 빈곤층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -46548,7 +46694,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "암호화폐를 일반인에게"
+    "why": "암호화폐를 일반인에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -46894,7 +47041,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 구독자에게 스트리밍"
+    "why": "기존 구독자에게 스트리밍",
+    "focus": true
    },
    "hyps": [
     {
@@ -47259,7 +47407,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 구독자에게 오리지널"
+    "why": "기존 구독자에게 오리지널",
+    "focus": true
    },
    "hyps": [
     {
@@ -47573,7 +47722,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "일반인에게 영상 공유"
+    "why": "일반인에게 영상 공유",
+    "focus": true
    },
    "hyps": [
     {
@@ -47907,7 +48057,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "사진 공유자에게 필터 앱"
+    "why": "사진 공유자에게 필터 앱",
+    "focus": true
    },
    "hyps": [
     {
@@ -48223,7 +48374,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "팟캐스트 회사가 실시간 SNS로"
+    "why": "팟캐스트 회사가 실시간 SNS로",
+    "focus": false
    },
    "hyps": [
     {
@@ -48562,7 +48714,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "짧은 영상 시청자에게 추천 피드"
+    "why": "짧은 영상 시청자에게 추천 피드",
+    "focus": true
    },
    "hyps": [
     {
@@ -48936,7 +49089,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "독자에게 기다리면 무료"
+    "why": "독자에게 기다리면 무료",
+    "focus": true
    },
    "hyps": [
     {
@@ -49330,7 +49484,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "독자에게 세로 스크롤 무료 연재"
+    "why": "독자에게 세로 스크롤 무료 연재",
+    "focus": true
    },
    "hyps": [
     {
@@ -49689,7 +49844,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 생방송을 게임에 집중"
+    "why": "기존 생방송을 게임에 집중",
+    "focus": false
    },
    "hyps": [
     {
@@ -50000,7 +50156,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "게임사가 커뮤니티 플랫폼으로"
+    "why": "게임사가 커뮤니티 플랫폼으로",
+    "focus": false
    },
    "hyps": [
     {
@@ -50315,7 +50472,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "휴대폰 이용자에게 무료 메신저"
+    "why": "휴대폰 이용자에게 무료 메신저",
+    "focus": true
    },
    "hyps": [
     {
@@ -50610,7 +50768,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "이용자에게 스티커 메신저"
+    "why": "이용자에게 스티커 메신저",
+    "focus": true
    },
    "hyps": [
     {
@@ -50907,7 +51066,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "해외 가족에게 무료 메신저"
+    "why": "해외 가족에게 무료 메신저",
+    "focus": true
    },
    "hyps": [
     {
@@ -51217,7 +51377,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "젊은 층에게 사라지는 메시지"
+    "why": "젊은 층에게 사라지는 메시지",
+    "focus": true
    },
    "hyps": [
     {
@@ -51527,7 +51688,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "대학생에게 실명 SNS"
+    "why": "대학생에게 실명 SNS",
+    "focus": true
    },
    "hyps": [
     {
@@ -51839,7 +52001,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "포켓몬 팬에게 위치 게임"
+    "why": "포켓몬 팬에게 위치 게임",
+    "focus": true
    },
    "hyps": [
     {
@@ -52178,7 +52341,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "게이머에게 무료 게임"
+    "why": "게이머에게 무료 게임",
+    "focus": true
    },
    "hyps": [
     {
@@ -52572,7 +52736,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "학습자에게 게임화 학습"
+    "why": "학습자에게 게임화 학습",
+    "focus": true
    },
    "hyps": [
     {
@@ -52916,7 +53081,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "홈트 고객에게 구독 수업"
+    "why": "홈트 고객에게 구독 수업",
+    "focus": true
    },
    "hyps": [
     {
@@ -53246,7 +53412,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "독자에게 작가 직접 구독"
+    "why": "독자에게 작가 직접 구독",
+    "focus": true
    },
    "hyps": [
     {
@@ -53623,7 +53790,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "팬에게 정기 후원"
+    "why": "팬에게 정기 후원",
+    "focus": true
    },
    "hyps": [
     {
@@ -54002,7 +54170,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 독자 유료화"
+    "why": "기존 독자 유료화",
+    "focus": false
    },
    "hyps": [
     {
@@ -54380,7 +54549,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "독자에게 독서 구독"
+    "why": "독자에게 독서 구독",
+    "focus": true
    },
    "hyps": [
     {
@@ -54722,7 +54892,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "웹툰을 해외로"
+    "why": "웹툰을 해외로",
+    "focus": true
    },
    "hyps": [
     {
@@ -55033,7 +55204,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "신규 회원 활동 유지"
+    "why": "신규 회원 활동 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -55330,7 +55502,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "SNS 이용자에게 음성 방"
+    "why": "SNS 이용자에게 음성 방",
+    "focus": true
    },
    "hyps": [
     {
@@ -55627,7 +55800,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "모바일 시청자에게 짧은 드라마"
+    "why": "모바일 시청자에게 짧은 드라마",
+    "focus": true
    },
    "hyps": [
     {
@@ -55923,7 +56097,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "직장인에게 제3의 공간"
+    "why": "직장인에게 제3의 공간",
+    "focus": true
    },
    "hyps": [
     {
@@ -56238,7 +56413,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객 대기 해소"
+    "why": "기존 고객 대기 해소",
+    "focus": false
    },
    "hyps": [
     {
@@ -56537,7 +56713,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객에게 개선 레시피"
+    "why": "기존 고객에게 개선 레시피",
+    "focus": false
    },
    "hyps": [
     {
@@ -56828,7 +57005,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "가족에게 빠른 표준 햄버거"
+    "why": "가족에게 빠른 표준 햄버거",
+    "focus": true
    },
    "hyps": [
     {
@@ -57139,7 +57317,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "외식 고객에게 빠른 건강식"
+    "why": "외식 고객에게 빠른 건강식",
+    "focus": true
    },
    "hyps": [
     {
@@ -57452,7 +57631,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "대체육을 고기 먹는 사람에게"
+    "why": "대체육을 고기 먹는 사람에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -57747,7 +57927,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "귀리 우유를 카페로"
+    "why": "귀리 우유를 카페로",
+    "focus": true
    },
    "hyps": [
     {
@@ -58061,7 +58242,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "에너지 음료를 서양 젊은 층에게"
+    "why": "에너지 음료를 서양 젊은 층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -58373,7 +58555,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "커피 애호가에게 캡슐 시스템"
+    "why": "커피 애호가에게 캡슐 시스템",
+    "focus": true
    },
    "hyps": [
     {
@@ -58668,7 +58851,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "면도 고객에게 교체 날 모델"
+    "why": "면도 고객에게 교체 날 모델",
+    "focus": true
    },
    "hyps": [
     {
@@ -58978,7 +59162,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기업에게 사용량 과금 복사"
+    "why": "기업에게 사용량 과금 복사",
+    "focus": true
    },
    "hyps": [
     {
@@ -59334,7 +59519,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "항공사에게 가동 시간 계약"
+    "why": "항공사에게 가동 시간 계약",
+    "focus": true
    },
    "hyps": [
     {
@@ -59662,7 +59848,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "건설사에게 공구 관리 서비스"
+    "why": "건설사에게 공구 관리 서비스",
+    "focus": true
    },
    "hyps": [
     {
@@ -59973,7 +60160,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "운송사에게 주행거리 과금"
+    "why": "운송사에게 주행거리 과금",
+    "focus": true
    },
    "hyps": [
     {
@@ -60288,7 +60476,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "컴퓨터 회사가 휴대폰으로"
+    "why": "컴퓨터 회사가 휴대폰으로",
+    "focus": false
    },
    "hyps": [
     {
@@ -60587,7 +60776,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "컴퓨터 회사가 음악 기기·스토어로"
+    "why": "컴퓨터 회사가 음악 기기·스토어로",
+    "focus": false
    },
    "hyps": [
     {
@@ -60901,7 +61091,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "가정에게 학습형 조절기"
+    "why": "가정에게 학습형 조절기",
+    "focus": true
    },
    "hyps": [
     {
@@ -61204,7 +61395,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "집주인에게 비디오 초인종"
+    "why": "집주인에게 비디오 초인종",
+    "focus": true
    },
    "hyps": [
     {
@@ -61516,7 +61708,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "군사 로봇 회사가 가정용으로"
+    "why": "군사 로봇 회사가 가정용으로",
+    "focus": false
    },
    "hyps": [
     {
@@ -61830,7 +62023,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "젊은 층에게 저가 고성능 폰"
+    "why": "젊은 층에게 저가 고성능 폰",
+    "focus": true
    },
    "hyps": [
     {
@@ -62140,7 +62334,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "충전기 구매자에게 신뢰 브랜드"
+    "why": "충전기 구매자에게 신뢰 브랜드",
+    "focus": true
    },
    "hyps": [
     {
@@ -62453,7 +62648,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "카메라를 액션 스포츠인에게"
+    "why": "카메라를 액션 스포츠인에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -62750,7 +62946,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "바쁜 가족에게 다기능 압력솥"
+    "why": "바쁜 가족에게 다기능 압력솥",
+    "focus": true
    },
    "hyps": [
     {
@@ -63060,7 +63257,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "보트 신발을 개성 소비 젊은 층에게"
+    "why": "보트 신발을 개성 소비 젊은 층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -63371,7 +63569,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "요가하는 여성에게 애슬레저"
+    "why": "요가하는 여성에게 애슬레저",
+    "focus": true
    },
    "hyps": [
     {
@@ -63682,7 +63881,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "젊은 층에게 반항적 생수"
+    "why": "젊은 층에게 반항적 생수",
+    "focus": true
    },
    "hyps": [
     {
@@ -63993,7 +64193,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "아웃도어 사용자에게 프리미엄 아이스박스"
+    "why": "아웃도어 사용자에게 프리미엄 아이스박스",
+    "focus": true
    },
    "hyps": [
     {
@@ -64306,7 +64507,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 제품을 메시지로 재포지셔닝"
+    "why": "같은 제품을 메시지로 재포지셔닝",
+    "focus": false
    },
    "hyps": [
     {
@@ -64619,7 +64821,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "가정에게 일회용 걸레"
+    "why": "가정에게 일회용 걸레",
+    "focus": true
    },
    "hyps": [
     {
@@ -64931,7 +65134,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "음악 재생을 이동 중으로"
+    "why": "음악 재생을 이동 중으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -65239,7 +65443,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 고객에게 디지털 카메라(실패: 하지 않음)"
+    "why": "기존 고객에게 디지털 카메라(실패: 하지 않음)",
+    "focus": true
    },
    "hyps": [
     {
@@ -65536,7 +65741,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "스마트폰을 소비자로(실패: 하지 않음)"
+    "why": "스마트폰을 소비자로(실패: 하지 않음)",
+    "focus": true
    },
    "hyps": [
     {
@@ -65830,7 +66036,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "건강 주스 고객에게 압착기"
+    "why": "건강 주스 고객에게 압착기",
+    "focus": true
    },
    "hyps": [
     {
@@ -66123,7 +66330,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "도시 이동자에게 균형 기구"
+    "why": "도시 이동자에게 균형 기구",
+    "focus": true
    },
    "hyps": [
     {
@@ -66418,7 +66626,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "착용형 화면을 산업 현장으로"
+    "why": "착용형 화면을 산업 현장으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -66743,7 +66952,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "백내장 수술을 빈곤층에게"
+    "why": "백내장 수술을 빈곤층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -67067,7 +67277,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "심장 수술을 저소득층에게"
+    "why": "심장 수술을 저소득층에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -67380,7 +67591,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "무보험자에게 약값 쿠폰"
+    "why": "무보험자에게 약값 쿠폰",
+    "focus": true
    },
    "hyps": [
     {
@@ -67690,7 +67902,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "만성질환자에게 시간별 포장"
+    "why": "만성질환자에게 시간별 포장",
+    "focus": true
    },
    "hyps": [
     {
@@ -68004,7 +68217,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "남성에게 원격 처방"
+    "why": "남성에게 원격 처방",
+    "focus": true
    },
    "hyps": [
     {
@@ -68303,7 +68517,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "직장인에게 비대면 진료"
+    "why": "직장인에게 비대면 진료",
+    "focus": true
    },
    "hyps": [
     {
@@ -68615,7 +68830,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "시술 고객에게 가격·후기 앱"
+    "why": "시술 고객에게 가격·후기 앱",
+    "focus": true
    },
    "hyps": [
     {
@@ -68924,7 +69140,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "부모에게 원격 상담"
+    "why": "부모에게 원격 상담",
+    "focus": true
    },
    "hyps": [
     {
@@ -69237,7 +69454,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "환자에게 간편 검사(실패)"
+    "why": "환자에게 간편 검사(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -69534,7 +69752,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "학생에게 개인 속도 영상"
+    "why": "학생에게 개인 속도 영상",
+    "focus": true
    },
    "hyps": [
     {
@@ -69829,7 +70048,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "명문대 강의를 일반 학습자에게"
+    "why": "명문대 강의를 일반 학습자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -70131,7 +70351,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "학생에게 사진 검색 풀이"
+    "why": "학생에게 사진 검색 풀이",
+    "focus": true
    },
    "hyps": [
     {
@@ -70445,7 +70666,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "수험생에게 AI 진단"
+    "why": "수험생에게 AI 진단",
+    "focus": true
    },
    "hyps": [
     {
@@ -70755,7 +70977,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "직장인에게 강의 + 키트"
+    "why": "직장인에게 강의 + 키트",
+    "focus": true
    },
    "hyps": [
     {
@@ -71068,7 +71291,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "유명 강의를 지방 학생에게"
+    "why": "유명 강의를 지방 학생에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -71366,7 +71590,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "전환 희망자에게 소득공유 교육"
+    "why": "전환 희망자에게 소득공유 교육",
+    "focus": true
    },
    "hyps": [
     {
@@ -71662,7 +71887,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "직장인에게 실무 강의"
+    "why": "직장인에게 실무 강의",
+    "focus": true
    },
    "hyps": [
     {
@@ -71959,7 +72185,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기업에게 수동적 구직자 채용"
+    "why": "기업에게 수동적 구직자 채용",
+    "focus": true
    },
    "hyps": [
     {
@@ -72272,7 +72499,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "구직자에게 재직자 리뷰"
+    "why": "구직자에게 재직자 리뷰",
+    "focus": true
    },
    "hyps": [
     {
@@ -72584,7 +72812,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "스타트업에게 보상형 추천"
+    "why": "스타트업에게 보상형 추천",
+    "focus": true
    },
    "hyps": [
     {
@@ -72899,7 +73128,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "구직자에게 통합 검색"
+    "why": "구직자에게 통합 검색",
+    "focus": true
    },
    "hyps": [
     {
@@ -73211,7 +73441,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "태양광을 농촌 가정으로"
+    "why": "태양광을 농촌 가정으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -73508,7 +73739,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "착한 소비자에게 1+1 신발"
+    "why": "착한 소비자에게 1+1 신발",
+    "focus": true
    },
    "hyps": [
     {
@@ -73818,7 +74050,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 채용 과정의 정착률"
+    "why": "기존 채용 과정의 정착률",
+    "focus": false
    },
    "hyps": [
     {
@@ -74130,7 +74363,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 환자 노쇼 줄이기"
+    "why": "기존 환자 노쇼 줄이기",
+    "focus": false
    },
    "hyps": [
     {
@@ -74440,7 +74674,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 학원생 유지"
+    "why": "기존 학원생 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -74738,7 +74973,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 환자 복약 지속"
+    "why": "기존 환자 복약 지속",
+    "focus": false
    },
    "hyps": [
     {
@@ -75028,7 +75264,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 시장 원가·품질"
+    "why": "같은 시장 원가·품질",
+    "focus": false
    },
    "hyps": [
     {
@@ -75346,7 +75583,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 현장 개선"
+    "why": "같은 현장 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -75684,7 +75922,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 생산 효율"
+    "why": "같은 생산 효율",
+    "focus": false
    },
    "hyps": [
     {
@@ -76028,7 +76267,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "핵심 브릭으로 기존 팬 집중"
+    "why": "핵심 브릭으로 기존 팬 집중",
+    "focus": false
    },
    "hyps": [
     {
@@ -76340,7 +76580,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "출판사가 영화 제작으로"
+    "why": "출판사가 영화 제작으로",
+    "focus": false
    },
    "hyps": [
     {
@@ -76645,7 +76886,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 시장에 제품 집중"
+    "why": "기존 시장에 제품 집중",
+    "focus": false
    },
    "hyps": [
     {
@@ -76952,7 +77194,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 시장 원가 구조"
+    "why": "같은 시장 원가 구조",
+    "focus": false
    },
    "hyps": [
     {
@@ -77264,7 +77507,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 승객 부가 판매"
+    "why": "같은 승객 부가 판매",
+    "focus": false
    },
    "hyps": [
     {
@@ -77612,7 +77856,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 전문가를 구독으로"
+    "why": "기존 전문가를 구독으로",
+    "focus": false
    },
    "hyps": [
     {
@@ -77944,7 +78189,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 광고주·사용자 품질"
+    "why": "기존 광고주·사용자 품질",
+    "focus": false
    },
    "hyps": [
     {
@@ -78258,7 +78504,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객 결제 완료"
+    "why": "기존 고객 결제 완료",
+    "focus": false
    },
    "hyps": [
     {
@@ -78577,7 +78824,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 투숙객 경험"
+    "why": "기존 투숙객 경험",
+    "focus": false
    },
    "hyps": [
     {
@@ -78870,7 +79118,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "출장객에게 모듈 객실"
+    "why": "출장객에게 모듈 객실",
+    "focus": true
    },
    "hyps": [
     {
@@ -79176,7 +79425,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "내부 조직 개선"
+    "why": "내부 조직 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -79483,7 +79733,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "내부 조직 개선"
+    "why": "내부 조직 개선",
+    "focus": false
    },
    "hyps": [
     {
@@ -79789,7 +80040,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "내부 제작 품질"
+    "why": "내부 제작 품질",
+    "focus": false
    },
    "hyps": [
     {
@@ -80103,7 +80355,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "같은 차 시장에 하이브리드"
+    "why": "같은 차 시장에 하이브리드",
+    "focus": true
    },
    "hyps": [
     {
@@ -80400,7 +80653,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "차 시장에 고성능 전기차"
+    "why": "차 시장에 고성능 전기차",
+    "focus": true
    },
    "hyps": [
     {
@@ -80698,7 +80952,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "게이머에게 하이브리드 게임기"
+    "why": "게이머에게 하이브리드 게임기",
+    "focus": true
    },
    "hyps": [
     {
@@ -81007,7 +81262,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "차를 오토바이 가족에게(실패)"
+    "why": "차를 오토바이 가족에게(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -81300,7 +81556,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 고객에게 연체료 없는 대여(실패: 늦음)"
+    "why": "기존 고객에게 연체료 없는 대여(실패: 늦음)",
+    "focus": true
    },
    "hyps": [
     {
@@ -81596,7 +81853,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 고객에게 스마트폰(실패: 늦음)"
+    "why": "기존 고객에게 스마트폰(실패: 늦음)",
+    "focus": true
    },
    "hyps": [
     {
@@ -81895,7 +82153,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 이용자에게 검색(실패: 외주)"
+    "why": "기존 이용자에게 검색(실패: 외주)",
+    "focus": true
    },
    "hyps": [
     {
@@ -82191,7 +82450,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 투숙객 직접 예약"
+    "why": "기존 투숙객 직접 예약",
+    "focus": false
    },
    "hyps": [
     {
@@ -82505,7 +82765,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 구독자 유지"
+    "why": "기존 구독자 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -82800,7 +83061,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객 가격 인상"
+    "why": "기존 고객 가격 인상",
+    "focus": false
    },
    "hyps": [
     {
@@ -83099,7 +83361,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 대기업 시장 진입 속도"
+    "why": "기존 대기업 시장 진입 속도",
+    "focus": false
    },
    "hyps": [
     {
@@ -83414,7 +83677,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 장터 매물 확보"
+    "why": "기존 장터 매물 확보",
+    "focus": false
    },
    "hyps": [
     {
@@ -83711,7 +83975,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "동네 손님에게 예약 픽업"
+    "why": "동네 손님에게 예약 픽업",
+    "focus": true
    },
    "hyps": [
     {
@@ -84010,7 +84275,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 배달 손님 평점"
+    "why": "기존 배달 손님 평점",
+    "focus": false
    },
    "hyps": [
     {
@@ -84308,7 +84574,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "검색 이용자에게 Q&A"
+    "why": "검색 이용자에게 Q&A",
+    "focus": true
    },
    "hyps": [
     {
@@ -84618,7 +84885,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "가정에게 렌털 + 관리"
+    "why": "가정에게 렌털 + 관리",
+    "focus": true
    },
    "hyps": [
     {
@@ -84934,7 +85202,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "팬에게 공식 플랫폼"
+    "why": "팬에게 공식 플랫폼",
+    "focus": true
    },
    "hyps": [
     {
@@ -85247,7 +85516,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "게이머에게 정식 배틀로얄"
+    "why": "게이머에게 정식 배틀로얄",
+    "focus": true
    },
    "hyps": [
     {
@@ -85583,7 +85853,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "메신저 이용자에게 유료 이모티콘"
+    "why": "메신저 이용자에게 유료 이모티콘",
+    "focus": true
    },
    "hyps": [
     {
@@ -85913,7 +86184,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "이메일을 일반인에게"
+    "why": "이메일을 일반인에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -86227,7 +86499,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 이용자에게 모바일(실패: 늦음)"
+    "why": "기존 이용자에게 모바일(실패: 늦음)",
+    "focus": true
    },
    "hyps": [
     {
@@ -86528,7 +86801,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "10대 커뮤니티에 커머스"
+    "why": "10대 커뮤니티에 커머스",
+    "focus": true
    },
    "hyps": [
     {
@@ -86834,7 +87108,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "생활 서비스 고객에게 견적 매칭"
+    "why": "생활 서비스 고객에게 견적 매칭",
+    "focus": true
    },
    "hyps": [
     {
@@ -87144,7 +87419,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "자유여행자에게 현지 투어 마켓"
+    "why": "자유여행자에게 현지 투어 마켓",
+    "focus": true
    },
    "hyps": [
     {
@@ -87459,7 +87735,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "영화 고르는 사람에게 예측 별점"
+    "why": "영화 고르는 사람에게 예측 별점",
+    "focus": true
    },
    "hyps": [
     {
@@ -87768,7 +88045,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "수집가에게 취미 장터"
+    "why": "수집가에게 취미 장터",
+    "focus": true
    },
    "hyps": [
     {
@@ -88117,7 +88395,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "사무직에게 붙였다 떼는 메모"
+    "why": "사무직에게 붙였다 떼는 메모",
+    "focus": true
    },
    "hyps": [
     {
@@ -88447,7 +88726,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "같은 약을 새 적응증 환자에게"
+    "why": "같은 약을 새 적응증 환자에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -88760,7 +89040,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "벽지 세정제를 아이 놀이로"
+    "why": "벽지 세정제를 아이 놀이로",
+    "focus": true
    },
    "hyps": [
     {
@@ -89072,7 +89353,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "벽지 소재를 포장재로"
+    "why": "벽지 소재를 포장재로",
+    "focus": true
    },
    "hyps": [
     {
@@ -89366,7 +89648,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "할인 고객에게 지역 딜(실패)"
+    "why": "할인 고객에게 지역 딜(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -89691,7 +89974,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "장보기 고객에게 대형 자동화 배송(실패)"
+    "why": "장보기 고객에게 대형 자동화 배송(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -90013,7 +90297,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "반려인에게 온라인 판매(실패)"
+    "why": "반려인에게 온라인 판매(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -90303,7 +90588,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "창작자에게 6초 영상(실패)"
+    "why": "창작자에게 6초 영상(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -90600,7 +90886,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "학생에게 익명 게시판(실패)"
+    "why": "학생에게 익명 게시판(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -90905,7 +91192,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "디자인 고객에게 플래시 세일(실패)"
+    "why": "디자인 고객에게 플래시 세일(실패)",
+    "focus": true
    },
    "hyps": [
     {
@@ -91200,7 +91488,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "여성에게 드레스 대여"
+    "why": "여성에게 드레스 대여",
+    "focus": true
    },
    "hyps": [
     {
@@ -91509,7 +91798,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "안 입는 옷 가진 사람에게 위탁 판매"
+    "why": "안 입는 옷 가진 사람에게 위탁 판매",
+    "focus": true
    },
    "hyps": [
     {
@@ -91819,7 +92109,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "맞벌이에게 밀키트"
+    "why": "맞벌이에게 밀키트",
+    "focus": true
    },
    "hyps": [
     {
@@ -92170,7 +92461,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "명상을 잠 못 드는 사람에게"
+    "why": "명상을 잠 못 드는 사람에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -92483,7 +92775,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "아이디어 모으는 사람에게 보드"
+    "why": "아이디어 모으는 사람에게 보드",
+    "focus": true
    },
    "hyps": [
     {
@@ -92793,7 +93086,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "관심사 토론자에게 서브레딧"
+    "why": "관심사 토론자에게 서브레딧",
+    "focus": true
    },
    "hyps": [
     {
@@ -93107,7 +93401,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 장터 이용자 신뢰(결제·물류)"
+    "why": "기존 장터 이용자 신뢰(결제·물류)",
+    "focus": false
    },
    "hyps": [
     {
@@ -93418,7 +93713,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "해외 카드 사용자에게 다통화 계좌"
+    "why": "해외 카드 사용자에게 다통화 계좌",
+    "focus": true
    },
    "hyps": [
     {
@@ -93728,7 +94024,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "여성에게 얇은 보정 속옷"
+    "why": "여성에게 얇은 보정 속옷",
+    "focus": true
    },
    "hyps": [
     {
@@ -94044,7 +94341,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "뷰티 블로그가 화장품 브랜드로"
+    "why": "뷰티 블로그가 화장품 브랜드로",
+    "focus": false
    },
    "hyps": [
     {
@@ -94356,7 +94654,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "신규 사용자 첫 달 유지"
+    "why": "신규 사용자 첫 달 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -94651,7 +94950,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "무료 사용자 유료 전환"
+    "why": "무료 사용자 유료 전환",
+    "focus": false
    },
    "hyps": [
     {
@@ -94954,7 +95254,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 장터 수요자 확보"
+    "why": "기존 장터 수요자 확보",
+    "focus": false
    },
    "hyps": [
     {
@@ -95248,7 +95549,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 구독자 유지"
+    "why": "기존 구독자 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -95543,7 +95845,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "꽃 고객에게 일상 구독"
+    "why": "꽃 고객에게 일상 구독",
+    "focus": true
    },
    "hyps": [
     {
@@ -95838,7 +96141,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 가게 해지 방어"
+    "why": "기존 가게 해지 방어",
+    "focus": false
    },
    "hyps": [
     {
@@ -96151,7 +96455,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "배달 고객에게 다회용기"
+    "why": "배달 고객에게 다회용기",
+    "focus": true
    },
    "hyps": [
     {
@@ -96473,7 +96778,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "사주 고객에게 웹툰형 사주"
+    "why": "사주 고객에게 웹툰형 사주",
+    "focus": true
    },
    "hyps": [
     {
@@ -96836,7 +97142,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "사주를 가벼운 MZ에게 990원"
+    "why": "사주를 가벼운 MZ에게 990원",
+    "focus": true
    },
    "hyps": [
     {
@@ -97276,7 +97583,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "사주 고객에게 니치 주제"
+    "why": "사주 고객에게 니치 주제",
+    "focus": true
    },
    "hyps": [
     {
@@ -97648,7 +97956,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "무료 이용자를 공유로 유료 전환"
+    "why": "무료 이용자를 공유로 유료 전환",
+    "focus": false
    },
    "hyps": [
     {
@@ -97955,7 +98264,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "고민자에게 비대면 사람 상담"
+    "why": "고민자에게 비대면 사람 상담",
+    "focus": true
    },
    "hyps": [
     {
@@ -98262,7 +98572,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "매일 이용자를 상담으로"
+    "why": "매일 이용자를 상담으로",
+    "focus": false
    },
    "hyps": [
     {
@@ -98559,7 +98870,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "유료 고객 방어(정확도)"
+    "why": "유료 고객 방어(정확도)",
+    "focus": false
    },
    "hyps": [
     {
@@ -98865,7 +99177,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 방문자 결제 완료"
+    "why": "기존 방문자 결제 완료",
+    "focus": false
    },
    "hyps": [
     {
@@ -99170,7 +99483,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 방문자 가입률"
+    "why": "기존 방문자 가입률",
+    "focus": false
    },
    "hyps": [
     {
@@ -99473,7 +99787,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 방문자 전환"
+    "why": "기존 방문자 전환",
+    "focus": false
    },
    "hyps": [
     {
@@ -99780,7 +100095,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 회원 유지 방식 변경"
+    "why": "기존 회원 유지 방식 변경",
+    "focus": false
    },
    "hyps": [
     {
@@ -100087,7 +100403,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 방문자 전환 방식 변경"
+    "why": "기존 방문자 전환 방식 변경",
+    "focus": false
    },
    "hyps": [
     {
@@ -100394,7 +100711,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 구독자 유지 방식 변경"
+    "why": "기존 구독자 유지 방식 변경",
+    "focus": false
    },
    "hyps": [
     {
@@ -100741,7 +101059,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "재회 고객에게 자미두수"
+    "why": "재회 고객에게 자미두수",
+    "focus": true
    },
    "hyps": [
     {
@@ -101111,7 +101430,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "질문자에게 질문 단위 상담"
+    "why": "질문자에게 질문 단위 상담",
+    "focus": true
    },
    "hyps": [
     {
@@ -101480,7 +101800,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 고객사에 해결당 과금 AI"
+    "why": "기존 고객사에 해결당 과금 AI",
+    "focus": true
    },
    "hyps": [
     {
@@ -101851,7 +102172,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 이용자에게 질문권"
+    "why": "기존 이용자에게 질문권",
+    "focus": true
    },
    "hyps": [
     {
@@ -102226,7 +102548,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "신규 상담 고객 첫 전환"
+    "why": "신규 상담 고객 첫 전환",
+    "focus": false
    },
    "hyps": [
     {
@@ -102591,7 +102914,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 학습자 습관 유지"
+    "why": "기존 학습자 습관 유지",
+    "focus": false
    },
    "hyps": [
     {
@@ -102942,7 +103266,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "검색 이용자에게 인용 답변"
+    "why": "검색 이용자에게 인용 답변",
+    "focus": true
    },
    "hyps": [
     {
@@ -103295,7 +103620,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "학생에게 AI 학습 도움(실패: 늦음)"
+    "why": "학생에게 AI 학습 도움(실패: 늦음)",
+    "focus": true
    },
    "hyps": [
     {
@@ -103655,7 +103981,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 승객 안내 방식"
+    "why": "기존 승객 안내 방식",
+    "focus": false
    },
    "hyps": [
     {
@@ -103992,7 +104319,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 상담 이용자 안내 방식"
+    "why": "기존 상담 이용자 안내 방식",
+    "focus": false
    },
    "hyps": [
     {
@@ -104349,7 +104677,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "검색 이용자에게 1:1 상담"
+    "why": "검색 이용자에게 1:1 상담",
+    "focus": true
    },
    "hyps": [
     {
@@ -104700,7 +105029,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "운세 이용자에게 대화형 운세"
+    "why": "운세 이용자에게 대화형 운세",
+    "focus": true
    },
    "hyps": [
     {
@@ -105067,7 +105397,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "이용자에게 AI 친구"
+    "why": "이용자에게 AI 친구",
+    "focus": true
    },
    "hyps": [
     {
@@ -105420,7 +105751,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "청소년에게 안전한 캐릭터챗"
+    "why": "청소년에게 안전한 캐릭터챗",
+    "focus": true
    },
    "hyps": [
     {
@@ -105782,7 +106114,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "BL 팬에게 특화 캐릭터챗"
+    "why": "BL 팬에게 특화 캐릭터챗",
+    "focus": true
    },
    "hyps": [
     {
@@ -106146,7 +106479,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "캐릭터챗 이용자에게 장면형 답"
+    "why": "캐릭터챗 이용자에게 장면형 답",
+    "focus": true
    },
    "hyps": [
     {
@@ -106520,7 +106854,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "이용자에게 무료 무제한 캐릭터챗"
+    "why": "이용자에게 무료 무제한 캐릭터챗",
+    "focus": true
    },
    "hyps": [
     {
@@ -106894,7 +107229,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "서브컬처 팬에게 종량형 캐릭터챗"
+    "why": "서브컬처 팬에게 종량형 캐릭터챗",
+    "focus": true
    },
    "hyps": [
     {
@@ -107259,7 +107595,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "같은 엔진을 일본·북미로"
+    "why": "같은 엔진을 일본·북미로",
+    "focus": true
    },
    "hyps": [
     {
@@ -107628,7 +107965,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "웹툰 팬에게 공식 캐릭터챗"
+    "why": "웹툰 팬에게 공식 캐릭터챗",
+    "focus": true
    },
    "hyps": [
     {
@@ -107982,7 +108320,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 이용자 이벤트 방식 변경"
+    "why": "기존 이용자 이벤트 방식 변경",
+    "focus": false
    },
    "hyps": [
     {
@@ -108342,7 +108681,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "각자 기존 이용자에 맞춘 수익 모델"
+    "why": "각자 기존 이용자에 맞춘 수익 모델",
+    "focus": false
    },
    "hyps": [
     {
@@ -108723,7 +109063,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 이용자 유료 전환"
+    "why": "기존 이용자 유료 전환",
+    "focus": false
    },
    "hyps": [
     {
@@ -109093,7 +109434,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "돈 내는 기존 팬 집중"
+    "why": "돈 내는 기존 팬 집중",
+    "focus": false
    },
    "hyps": [
     {
@@ -109464,7 +109806,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 플랫폼 공급 확대"
+    "why": "기존 플랫폼 공급 확대",
+    "focus": false
    },
    "hyps": [
     {
@@ -109844,7 +110187,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 이용자에게 기억 기능"
+    "why": "기존 이용자에게 기억 기능",
+    "focus": true
    },
    "hyps": [
     {
@@ -110214,7 +110558,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 청소년 이용 방식 변경"
+    "why": "기존 청소년 이용 방식 변경",
+    "focus": false
    },
    "hyps": [
     {
@@ -110599,7 +110944,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "같은 엔진을 북미 애니 팬에게"
+    "why": "같은 엔진을 북미 애니 팬에게",
+    "focus": true
    },
    "hyps": [
     {
@@ -110988,7 +111334,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 사업 원가 구조"
+    "why": "기존 사업 원가 구조",
+    "focus": false
    },
    "hyps": [
     {
@@ -111363,7 +111710,8 @@
    },
    "ansoff": {
     "cell": "market_dev",
-    "why": "같은 제품을 나라별 가격으로"
+    "why": "같은 제품을 나라별 가격으로",
+    "focus": true
    },
    "hyps": [
     {
@@ -111759,7 +112107,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "같은 고객층 검색 유입"
+    "why": "같은 고객층 검색 유입",
+    "focus": false
    },
    "hyps": [
     {
@@ -112136,7 +112485,8 @@
    },
    "ansoff": {
     "cell": "diversify",
-    "why": "앱 사주가 오프라인 체험·굿즈로"
+    "why": "앱 사주가 오프라인 체험·굿즈로",
+    "focus": false
    },
    "hyps": [
     {
@@ -112510,7 +112860,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 고객 정확도 신뢰"
+    "why": "기존 고객 정확도 신뢰",
+    "focus": false
    },
    "hyps": [
     {
@@ -112873,7 +113224,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "기존 고객에게 캐릭터 해석자"
+    "why": "기존 고객에게 캐릭터 해석자",
+    "focus": true
    },
    "hyps": [
     {
@@ -113244,7 +113596,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "성인 고객에게 금기 주제 사주"
+    "why": "성인 고객에게 금기 주제 사주",
+    "focus": true
    },
    "hyps": [
     {
@@ -113619,7 +113972,8 @@
    },
    "ansoff": {
     "cell": "product_dev",
-    "why": "다양한 고민 수요에 새 주제"
+    "why": "다양한 고민 수요에 새 주제",
+    "focus": true
    },
    "hyps": [
     {
@@ -113991,7 +114345,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 이용자 화면 설계"
+    "why": "기존 이용자 화면 설계",
+    "focus": false
    },
    "hyps": [
     {
@@ -114349,7 +114704,8 @@
    },
    "ansoff": {
     "cell": "penetration",
-    "why": "기존 결제 화면 개선"
+    "why": "기존 결제 화면 개선",
+    "focus": false
    },
    "hyps": [
     {

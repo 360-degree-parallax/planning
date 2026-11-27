@@ -609,7 +609,7 @@ def main():
             fail(f'ansoff.txt:{n} 형식(id | 침투·신제품·개척·다각화 | 이유): {line[:60]}')
         if byid[p[0]].get('ansoff'):
             fail(f'ansoff.txt:{n} {p[0]} 중복')
-        byid[p[0]]['ansoff'] = {'cell': ANS[p[1]], 'why': p[2]}
+        byid[p[0]]['ansoff'] = {'cell': ANS[p[1]], 'why': p[2], 'focus': ANS[p[1]] in ('product_dev', 'market_dev')}
     for c in cases:
         if not c.get('ansoff'):
             fail(f"{c['id']}: 앤소프 없음 (db/meta/ansoff.txt)")
