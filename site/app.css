@@ -248,3 +248,15 @@ ul.links span{color:var(--t2)}
 @media(max-width:640px){ul.links li{grid-template-columns:1fr}.lead{font-size:16px}}
 .steps a i em{display:none;font-style:normal}
 @media(max-width:900px){.steps a i em{display:inline;margin-right:1px}}
+/* 컨슈머 저니 장면 타임라인 */
+ol.scenes{margin:14px 0 0;padding:0;list-style:none;position:relative}
+ol.scenes li{position:relative;padding:0 0 14px 26px;border-left:2px solid var(--line2);margin-left:6px}
+ol.scenes li:last-child{border-color:transparent;padding-bottom:0}
+ol.scenes li::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+ol.scenes b{display:block;font-size:15px}
+ol.scenes span{display:block;font-size:14px;margin-top:2px}
+ol.scenes em{display:block;font-style:normal;font-size:13px;color:var(--ondark);background:var(--dark);border-radius:6px;padding:4px 8px;margin-top:6px;width:fit-content;max-width:100%}
+.chain{display:flex;flex-direction:column;align-items:center;gap:2px;margin:16px auto 0;max-width:320px}
+.chain span{width:100%;text-align:center;padding:8px 12px;border:1px solid var(--line2);border-radius:999px;background:var(--bg);font-size:14px;font-weight:600}
+.chain span.on{background:var(--dark);border-color:transparent;color:var(--ondark)}
+.chain i{font-style:normal;color:var(--t3)}
