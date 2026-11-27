@@ -34,7 +34,7 @@ def write_data():
 
 def body(name):
     h = open(os.path.join(SITE, name), encoding='utf-8').read()
-    m = re.search(r'</nav>\s*(<div class="wrap".*?)\n<(?:div class="toast"|script)', h, re.S)
+    m = re.search(r'</nav>\s*(<div class="wrap.*?)\n<(?:div class="toast"|script)', h, re.S)
     return m.group(1)
 
 
@@ -44,12 +44,12 @@ def bundle(out):
     js = lambda n: rd(n).replace('</script', '<\\/script')
     html = f'''<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>기획 공부 — 이론·사례 DB</title>
+<title>기획 공부 — 1장·사례 DB</title>
 <style>{rd('app.css')}</style></head>
 <body>
 <header class="gnb"><a class="wordmark" href="#theory:intro">기획 공부<span>본질 파악 방법론 · 사례 DB</span></a>
 <div class="right"><button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button></div></header>
-<nav class="topnav" aria-label="보기"><a href="#theory:intro" data-v="theory"><b>1</b>이론 공부</a><a href="#db:" data-v="db"><b>2</b>사례 DB</a></nav>
+<nav class="topnav" aria-label="장"><a href="#theory:intro" data-v="theory"><b>1</b>1장 기획의 여섯 단계</a><a href="#db:" data-v="db"><b>DB</b>사례 DB</a></nav>
 <section id="v-theory">{body('index.html')}</section>
 <section id="v-db" hidden>{body('db.html')}</section>
 <div class="toast" id="toast" role="status"></div>
@@ -58,7 +58,7 @@ def bundle(out):
 document.getElementById('v-db').hidden=!db;document.getElementById('v-theory').hidden=db;
 document.querySelectorAll('.topnav a').forEach(function(a){{a.toggleAttribute('aria-current',a.dataset.v===(db?'db':'theory'));if(a.hasAttribute('aria-current'))a.setAttribute('aria-current','page')}})}}
 v();addEventListener('hashchange',v)}})();</script>
-<script>{js('shared.js')}</script><script>{js('theory.js')}</script><script>{js('theory-page.js')}</script><script>{js('db-page.js')}</script>
+<script>{js('shared.js')}</script><script>{js('theory.js')}</script><script>{js('viz.js')}</script><script>{js('theory-page.js')}</script><script>{js('db-page.js')}</script>
 </body></html>'''
     open(out, 'w', encoding='utf-8').write(html)
     print(f'{out} ({len(html.encode()) // 1024} KB)')

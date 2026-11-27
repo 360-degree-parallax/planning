@@ -44,7 +44,7 @@ const STEPS = [
   {id:'three_c', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'3C 겹침'},
   {id:'ansoff', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'앤소프'},
   {id:'bcg', g:'WHY · 4. 분석방법을 정하고 분석한다', k:'WHY 4', t:'BCG 매트릭스'},
-  {id:'solution', g:'HOW · 6. 솔루션을 제안한다', k:'HOW 6', t:'해결·교훈', theory:'integrate'}
+  {id:'solution', g:'HOW · 6. 솔루션을 제안한다', k:'HOW 6', t:'해결·교훈', theory:'how'}
 ];
 
 const KEY = g => { const m = /^(\w+) · (\d)/.exec(g || ''); return m ? m[1] + ' ' + m[2] : (g || ''); };
@@ -151,6 +151,17 @@ const R = {
     <tr><td>어디서</td><td>3C 진입 ${esc((c.three_c.entry || []).join('·'))} — ${esc(c.three_c.entry_why)}</td></tr>
     <tr><td>무엇을 잴까</td><td>${esc(km.north_star || '')}${dw.intent_metric ? ` · 의도 ${esc(dw.intent_metric)}(${esc(L.mode[dw.mode] || '')})` : ''}</td></tr>
     <tr><td>해결</td><td>${esc(c.solution)}</td></tr>${c.lesson ? `<tr><td>교훈</td><td>${esc(c.lesson)}</td></tr>` : ''}</table>`; },
+  /* HOW: 솔루션의 원칙을 사례에서 꺼내 보기 */
+  distrust(c){ const h0 = (c.hyps || [])[0], sv = (c.hyps || []).filter(h => L.pass[h.verdict]);
+    return `<table class="t" style="margin:0"><tr><th>먼저 떠오른 답(믿지 않을 것)</th><th>살아남은 답</th></tr><tr><td>${h0 ? `${esc(h0.text)}<br>${tag(L.verdict[h0.verdict] || h0.verdict, L.pass[h0.verdict] ? 'ok' : 'no')} <span class="muted">${esc(h0.why_not_yet)}</span>` : '-'}</td><td>${sv.map(h => `<b>${esc(h.text)}</b> ${tag(L.verdict[h.verdict], 'ok')}`).join('<br>')}</td></tr></table>${c.so_what && c.so_what.conclusion ? `<div class="concl">${esc(c.so_what.conclusion)}</div>` : ''}`; },
+  leak(c){ const t = c.issue_tree || {}, a = c.anti_opinion, k = c.key_metrics || {};
+    return `<dl class="kv"><dt>새던 곳</dt><dd>${a ? `<b>${esc(a.reveals)}</b><br><span class="muted">“${esc(a.says)}” — ${esc(a.who)}</span>` : '-'}</dd><dt>공략한 갈래</dt><dd>${(t.branches || []).filter(b => b.chosen).map(b => esc(b.issue)).join(', ') || '-'}</dd><dt>덮지 않은 갈래</dt><dd>${(t.branches || []).filter(b => !b.chosen).map(b => esc(b.issue)).join(', ') || '-'}</dd><dt>가드레일</dt><dd>${esc(k.guardrail || '-')}</dd></dl>${c.lesson ? `<div class="note" style="margin-bottom:0">교훈: ${esc(c.lesson)}</div>` : ''}${a ? srcLine(a) : ''}`; },
+  answers(c){ const sel = ((c.pareto || {}).matrix || []).filter(x => x.selected);
+    return `<div class="plus">${sel.map((x, i) => `${i ? '<i>+</i>' : ''}<div><b>${esc(x.issue)}</b><span>${esc(L.quad[x.quadrant] || '')} · 속도 ${x.speed} 임팩트 ${x.impact}</span></div>`).join('')}</div><p style="margin:10px 0 0;font-size:14px">묶은 해결: <b>${esc(c.solution)}</b></p>${c.trade_on ? `<p class="muted" style="margin:6px 0 0">둘 다 잡은 것: ${esc(c.trade_on.tradeoff)} → ${esc(c.trade_on.how)}</p>` : ''}`; },
+  uturn(c){ const b = c.bcg;
+    return `<ol class="chain">${(c.hyps || []).map(h => `<li>${esc(h.text)} ${tag(L.verdict[h.verdict] || h.verdict, L.pass[h.verdict] ? 'ok' : 'no')}</li>`).join('')}</ol>${b ? `<p class="muted" style="margin:0 0 6px">${esc(b.target)}: ${L.bcg[b.before]} → ${L.bcg[b.after]} — ${esc(b.why)}</p>` : ''}<div class="concl">${esc((c.so_what && c.so_what.conclusion) || c.solution)}</div>${c.lesson ? `<p class="muted" style="margin:8px 0 0">교훈: ${esc(c.lesson)}</p>` : ''}`; },
+  followup(c){ const a = c.ansoff, b = c.bcg;
+    return `<dl class="kv">${a ? `<dt>이번 단계</dt><dd><b>${esc(L.ansoff[a.cell])}</b>${a.focus ? ' (집중)' : ''} — ${esc(a.why)}</dd>` : ''}${b ? `<dt>포트폴리오</dt><dd>${b.units.map(u => `${esc(u.name)}(${L.bcg[u.cell]})`).join(', ')}</dd><dt>이 사업</dt><dd>${esc(b.target)}: ${L.bcg[b.before]} → ${L.bcg[b.after]}</dd>${b.funders.length ? `<dt>돈줄</dt><dd>${b.funders.map(esc).join(', ')}</dd>` : ''}` : ''}<dt>다음 기준</dt><dd>${esc((c.key_metrics || {}).north_star || '-')}</dd></dl>`; },
   solution(c){ const o = (c.outcomes || []).filter(x => x.after);
     return `<p style="margin:0;font-size:15px"><b>${esc(c.solution)}</b></p>${o.map(x => `<p class="muted" style="margin:8px 0 0">결과: ${esc(x.before)} → <b>${esc(x.after)}</b>${x.context ? ' (' + esc(x.context) + ')' : ''}${isUrl(x.evidence) ? ' · ' + link(x.evidence) : ''}</p>`).join('')}
     ${c.lesson ? `<div class="note" style="margin-bottom:0">교훈: ${esc(c.lesson)}</div>` : ''}
@@ -183,5 +194,5 @@ const href = (view, id) => BUNDLE ? `#${view}:${id ? encodeURIComponent(id) : ''
 const hashFor = view => { const h = decodeURIComponent(location.hash.slice(1)); if (!BUNDLE) return h; return h.startsWith(view + ':') ? h.slice(view.length + 1) : null; };
 const setHash = (view, id) => history.replaceState(null, '', BUNDLE ? `#${view}:${encodeURIComponent(id || '')}` : (id ? '#' + encodeURIComponent(id) : location.pathname + location.search));
 
-window.P = {KEY, $, esc, link, tag, L, STEPS, R, load, theme, PAGES, isUrl, href, hashFor, setHash, BUNDLE};
+window.P = {venn, paretoPlot, KEY, $, esc, link, tag, L, STEPS, R, load, theme, PAGES, isUrl, href, hashFor, setHash, BUNDLE};
 })();
