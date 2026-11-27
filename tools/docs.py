@@ -70,13 +70,27 @@ for c in deep:
 write('docs/idea-validation.md', L)
 
 
-# So what 체인
+# 본질 파악 체인
 cs = J('db/cases.json')['cases']
-L = ['# So what 체인', '', '목표는 **본질 파악**이다. 각 사례에서 핵심 가설의 Why not yet(왜 아무도 안 했나)에서 출발해 "그래서?"를 거듭 물어, 그 사례가 실제로 한 해결까지 잇는다.',
-     '해결책은 사례가 실제로 한 것이며, 체인은 그 해결이 왜 그 모양이 되었는지를 보여 주는 해석이다. 원본: `db/meta/sowhat.txt`', '']
+MODE = {'break': '관습 파괴', 'shift': '조건 변화', 'other': '기타'}
+L = ['# 본질 파악 체인', '',
+     '목표는 **본질 파악**이다. 가설을 세우는 힘과 가설을 부수는 힘을 함께 쓴다.', '',
+     '| 단계 | 이 DB에서 | 무엇을 묻나 |', '|---|---|---|',
+     '| 1. 제한없는 가설설정 | 가설 목록 | 가능한 해법을 제한 없이 모두 적는다 |',
+     '| 2. 의심 | Why not yet | 클라이언트·업계의 가설을 의심한다: 왜 아무도 안 했나 |',
+     '| 3. 관습과 파괴 | So what | 그 관습을 깨면 무엇이 열리나: "그래서?"를 반복한다 (타이밍형은 "조건 변화") |',
+     '| 4. 긍정 오피니언 | 긍정 오피니언 | 핵심 고객은 왜 좋아하나 |',
+     '| 5. 안티오피니언 | 안티오피니언 | 안 쓰는 사람·떠난 사람·비판자는 뭐라 하나 |',
+     '| 6. 트레이드온 | 트레이드온 | 둘 중 하나라던 것을 어떻게 둘 다 잡았나 |', '',
+     '- 해결은 그 사례가 실제로 한 것이다. 체인·오피니언·트레이드온은 그 해결이 왜 그 모양이 되었는지를 보여 주는 해석이다.',
+     '- 오피니언 출처가 "추정"인 것은 사례 내용에서 도출한 해석이며 실제 발언 기록이 아니다. 출처 URL이 붙은 것만 실제 목소리에 근거한다.',
+     '- 긍정·안티 오피니언은 deep 사례에만 있다. 원본: `db/meta/sowhat.txt`, `db/meta/pro.txt`, `db/meta/anti.txt`, `db/meta/tradeon.txt`', '']
 groups = {}
 for c in cs:
     groups.setdefault(c.get('domain_group') or '기타', []).append(c)
+def op(o):
+    src = '추정' if o['inferred'] else f"[출처]({o['source']})"
+    return f"{o['who']}: \"{o['says']}\" → {o['reveals']} ({src})"
 for g, items in groups.items():
     L += [f'## {g} ({len(items)})', '']
     for c in items:
@@ -85,9 +99,14 @@ for g, items in groups.items():
         L.append(f"### `{c['id']}` {c['title']}")
         L.append(f"- **문제**: {c['what']['problem']}")
         L.append(f"- **가설 {sw['hyp']}**: {h['text']}")
-        L.append(f"- **Why not yet**: {sw['why_not_yet']}")
-        for i, st in enumerate(sw['steps'], 1):
-            L.append(f"- **So what {i}**: {st}")
+        L.append(f"- **의심 (Why not yet)**: {sw['why_not_yet']}")
+        for k, st in enumerate(sw['steps'], 1):
+            L.append(f"- **{MODE[sw['mode']]} (So what {k})**: {st}")
+        if c.get('pro_opinion'):
+            L.append(f"- **긍정 오피니언**: {op(c['pro_opinion'])}")
+        if c.get('anti_opinion'):
+            L.append(f"- **안티오피니언**: {op(c['anti_opinion'])}")
+        L.append(f"- **트레이드온**: {c['trade_on']['tradeoff']} → {c['trade_on']['how']}")
         L.append(f"- **해결**: {sw['solution']}")
         L.append('')
 write('docs/so-what.md', L)

@@ -54,6 +54,9 @@ for (const c of d.cases) {
     if (h.test?.guardrail && !T.metrics[h.test.guardrail]) errs.push(`${hat} test.guardrail=${h.test.guardrail}`);
     if (c.depth === 'deep' && h.test && !h.test.ice) errs.push(`${hat} deep 실험에 ICE·목표·가드레일 없음 (db/meta/ice.txt)`);
   });
+  if (!c.trade_on) errs.push(`${at} 트레이드온 없음 (db/meta/tradeon.txt)`);
+  if (c.depth === 'deep' && !c.pro_opinion) errs.push(`${at} deep인데 긍정 오피니언 없음 (db/meta/pro.txt)`);
+  if (c.depth === 'deep' && !c.anti_opinion) errs.push(`${at} deep인데 안티오피니언 없음 (db/meta/anti.txt)`);
   if (!c.so_what) errs.push(`${at} so what 체인 없음 (db/meta/sowhat.txt)`);
   else if (c.so_what.steps.length < 2) errs.push(`${at} so what 단계가 2개 미만`);
   if (c.depth === 'deep') {
