@@ -73,7 +73,7 @@ write('docs/idea-validation.md', L)
 # 본질 파악 체인
 cs = J('db/cases.json')['cases']
 MODE = {'break': '관습 파괴', 'shift': '조건 변화', 'other': '기타'}
-L = ['# 본질 파악 체인', '',
+L = ['# 본질 파악·구조화 체인', '',
      '목표는 **본질 파악**이다. 가설을 세우는 힘과 가설을 부수는 힘을 함께 쓴다.', '',
      '| 단계 | 이 DB에서 | 무엇을 묻나 |', '|---|---|---|',
      '| 1. 제한없는 가설설정 | 가설 목록 | 가능한 해법을 제한 없이 모두 적는다 |',
@@ -81,7 +81,11 @@ L = ['# 본질 파악 체인', '',
      '| 3. 관습과 파괴 | So what | 그 관습을 깨면 무엇이 열리나: "그래서?"를 반복한다 (타이밍형은 "조건 변화") |',
      '| 4. 긍정 오피니언 | 긍정 오피니언 | 핵심 고객은 왜 좋아하나 |',
      '| 5. 안티오피니언 | 안티오피니언 | 안 쓰는 사람·떠난 사람·비판자는 뭐라 하나 |',
-     '| 6. 트레이드온 | 트레이드온 | 둘 중 하나라던 것을 어떻게 둘 다 잡았나 |', '',
+     '| 6. 트레이드온 | 트레이드온 | 둘 중 하나라던 것을 어떻게 둘 다 잡았나 |',
+     '| 7. 목표 재분석 | 목표 재분석 | 처음 목표를 본질에 맞게 다시 정의하면 무엇인가 |',
+     '| 8. 이슈트리 | 이슈트리 | 재정의한 목표를 MECE로 쪼개면 어느 가지를 공략했나 |',
+     '| 9. 파레토 | 파레토 | 결과의 대부분을 만드는 핵심 소수는 무엇인가 |', '',
+     '1~6은 문제를 깨닫고 본질을 찾는 단계, 7~9는 찾은 문제를 구조화하는 단계다. 4·5·7·8·9는 deep 사례에만 있다.', '',
      '- 해결은 그 사례가 실제로 한 것이다. 체인·오피니언·트레이드온은 그 해결이 왜 그 모양이 되었는지를 보여 주는 해석이다.',
      '- 오피니언 출처가 "추정"인 것은 사례 내용에서 도출한 해석이며 실제 발언 기록이 아니다. 출처 URL이 붙은 것만 실제 목소리에 근거한다.',
      '- 긍정·안티 오피니언은 deep 사례에만 있다. 원본: `db/meta/sowhat.txt`, `db/meta/pro.txt`, `db/meta/anti.txt`, `db/meta/tradeon.txt`', '']
@@ -107,6 +111,20 @@ for g, items in groups.items():
         if c.get('anti_opinion'):
             L.append(f"- **안티오피니언**: {op(c['anti_opinion'])}")
         L.append(f"- **트레이드온**: {c['trade_on']['tradeoff']} → {c['trade_on']['how']}")
+        if c.get('goal'):
+            g = c['goal']
+            L.append(f"- **목표 재분석**: {g['surface']} → {g['reframed']} (지표: {g['metric']})")
+        if c.get('issue_tree'):
+            t = c['issue_tree']
+            L.append(f"- **이슈트리**: {t['root']}")
+            for b in t['branches']:
+                mark = ' ← 공략' if b['chosen'] else ''
+                L.append(f"  - {'**' + b['issue'] + '**' if b['chosen'] else b['issue']}: {', '.join(b['sub'])}{mark}")
+            L.append(f"  - 고른 이유: {t['why']}")
+        if c.get('pareto'):
+            pa = c['pareto']
+            src = '추정' if pa['inferred'] else f"[근거]({pa['source']})"
+            L.append(f"- **파레토**: {pa['vital_few']} → {pa['effect']} ({src})")
         L.append(f"- **해결**: {sw['solution']}")
         L.append('')
 write('docs/so-what.md', L)

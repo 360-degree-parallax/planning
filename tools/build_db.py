@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'lesson']
 
 
 def fail(msg):
@@ -383,6 +383,40 @@ def main():
              fail(f'{fname}:{n} {p[0]} 중복')
          byid[p[0]][key] = {'who': p[1], 'says': p[2], 'reveals': p[3],
                                        'source': None if src == '추정' else src, 'inferred': src == '추정'}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/goal.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 4 or p[0] not in byid or not all(p[1:]):
+            fail(f'goal.txt:{n} 형식: {line[:60]}')
+        if byid[p[0]].get('goal'):
+            fail(f'goal.txt:{n} {p[0]} 중복')
+        byid[p[0]]['goal'] = {'surface': p[1], 'reframed': p[2], 'metric': p[3]}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/issuetree.txt')):
+        head, _, why = line.partition(' || ')
+        p = [x.strip() for x in head.split(' | ')]
+        if len(p) != 3 or p[0] not in byid or not why.strip():
+            fail(f'issuetree.txt:{n} 형식: {line[:60]}')
+        branches = []
+        for b in p[2].split(' ; '):
+            name, _, leaves = b.partition(': ')
+            chosen = name.startswith('*')
+            branches.append({'issue': name.lstrip('*').strip(), 'chosen': chosen,
+                             'sub': [x.strip() for x in leaves.split(', ') if x.strip()]})
+        if len(branches) < 2 or sum(b['chosen'] for b in branches) != 1 or not all(b['sub'] for b in branches):
+            fail(f'issuetree.txt:{n} 가지 2개 이상, 하위 이슈 필수, 선택(*) 정확히 1개: {p[0]}')
+        if byid[p[0]].get('issue_tree'):
+            fail(f'issuetree.txt:{n} {p[0]} 중복')
+        byid[p[0]]['issue_tree'] = {'root': p[1], 'branches': branches, 'why': why.strip()}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/pareto.txt')):
+        p = [x.strip() for x in line.split(' | ')]
+        if len(p) != 4 or p[0] not in byid or not all(p[1:3]):
+            fail(f'pareto.txt:{n} 형식: {line[:60]}')
+        src = p[3]
+        if src != '추정' and not src.startswith('http'):
+            fail(f'pareto.txt:{n} 근거는 URL 또는 추정: {src}')
+        if byid[p[0]].get('pareto'):
+            fail(f'pareto.txt:{n} {p[0]} 중복')
+        byid[p[0]]['pareto'] = {'vital_few': p[1], 'effect': p[2],
+                                'source': None if src == '추정' else src, 'inferred': src == '추정'}
     groups = {}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/domains.txt')):
         g, _, toks = line.partition(' | ')
@@ -407,6 +441,8 @@ def main():
         c.setdefault('trade_on', None)
         c.setdefault('anti_opinion', None)
         c.setdefault('pro_opinion', None)
+        for k in ('goal', 'issue_tree', 'pareto'):
+            c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)
     base['v'] = 4
