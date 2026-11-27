@@ -86,7 +86,19 @@
 
 `outcome_note`: 결과 수치를 넣지 않은 이유 (`db/meta/no-outcome.txt`). 강의용 예시·방법론·가상 사례처럼 측정된 수치가 원래 없는 경우, 또는 1차 출처를 찾지 못한 경우를 구분해 적는다.
 
-### So what 체인 (`so_what`, `db/meta/sowhat.txt`)
+### 5 Why (`five_why`, `db/meta/five-why.txt`, deep 필수)
+
+과정이다. 증상에서 "왜?"를 3~5번 파고들어 근본 원인까지 간다. 형식: `id | 왜1 > 왜2 > 왜3 (> 왜4 > 왜5) || 근본 원인`
+
+### PEST (`pest`, `db/meta/pest.txt`, deep 필수)
+
+분석 단계의 외부 환경. 형식: `id | P: ... ; E: ... ; S: ... ; T: ... || 핵심 요인(P,E,S,T 중 쉼표)`. 핵심 요인은 Why not yet의 타이밍 장벽과 함께 읽는다.
+
+### So what 결론 (`so_what.conclusion`, `db/meta/sowhat-conclusion.txt`)
+
+결론이다. 5 Why와 관습 파괴 과정을 거쳐 내린 한 문장. deep 사례는 직접 쓴다(필수). 나머지는 관습 파괴 과정의 마지막 단계를 자동으로 쓰고 `conclusion_auto: true`로 표시한다.
+
+### 관습 파괴 체인 (`so_what.steps`, `db/meta/sowhat.txt`)
 
 모든 사례에 하나씩 있다. 핵심 가설의 Why not yet에서 출발해 "그래서?"를 2~3번 거듭 물어 그 사례가 실제로 한 해결까지 잇는다.
 

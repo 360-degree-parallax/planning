@@ -39,7 +39,7 @@ V = {'O': 'obvious', 'I': 'impossible', 'B': 'blindspot', 'T': 'timing'}
 P = {'cu': 'customer', 'ti': 'timing', 'pr': 'price', 'ch': 'channel', 'co': 'competitor', 'cn': 'constraint', 'be': 'belief'}
 HKEYS = {'barrier', 'holder', 'changed', 'year', 'ev', 'test', 'metric'}
 KEYS = ['id', 'kind', 'domain', 'domain_group', 'title', 'source', 'source_status', 'source_note', 'verified', 'refs', 'depth', 'business', 'problem_metric',
-        'outcomes', 'outcome_note', 'saju', 'what', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
+        'outcomes', 'outcome_note', 'saju', 'what', 'five_why', 'pest', 'hyps', 'solution', 'so_what', 'pro_opinion', 'anti_opinion', 'trade_on', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics', 'lesson']
 
 
 def fail(msg):
@@ -464,6 +464,42 @@ def main():
         if c.get('key_metrics'):
             fail(f'key-metrics.txt:{n} {p[0]} 중복')
         c['key_metrics'] = {'north_star': c['goal']['metric'], 'leading': lead, 'guardrail': p[2], 'vanity': p[3]}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/five-why.txt')):
+        head, _, root = line.partition(' || ')
+        cid, _, chain = head.partition(' | ')
+        cid = cid.strip()
+        whys = [x.strip() for x in chain.split(' > ') if x.strip()]
+        if cid not in byid or not root.strip() or not 3 <= len(whys) <= 5:
+            fail(f'five-why.txt:{n} 형식(왜 3~5단계, 근본 원인 필수): {line[:60]}')
+        if byid[cid].get('five_why'):
+            fail(f'five-why.txt:{n} {cid} 중복')
+        byid[cid]['five_why'] = {'whys': whys, 'root_cause': root.strip()}
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/sowhat-conclusion.txt')):
+        cid, _, concl = line.partition(' | ')
+        cid = cid.strip()
+        if cid not in byid or not concl.strip() or not byid[cid].get('so_what'):
+            fail(f'sowhat-conclusion.txt:{n} 형식: {line[:60]}')
+        byid[cid]['so_what']['conclusion'] = concl.strip()
+        byid[cid]['so_what']['conclusion_auto'] = False
+    for c in cases:
+        sw = c.get('so_what')
+        if sw and 'conclusion' not in sw:
+            sw['conclusion'] = sw['steps'][-1]
+            sw['conclusion_auto'] = True
+    for n, line in meta_lines(os.path.join(ROOT, 'db/meta/pest.txt')):
+        head, _, key = line.partition(' || ')
+        cid, _, body = head.partition(' | ')
+        cid = cid.strip()
+        f = {}
+        for part in body.split(' ; '):
+            k, _, v = part.partition(': ')
+            f[k.strip()] = v.strip()
+        keys = [x.strip() for x in key.split(',') if x.strip()]
+        if cid not in byid or set(f) != {'P', 'E', 'S', 'T'} or not all(f.values()) or not keys or any(k not in f for k in keys):
+            fail(f'pest.txt:{n} 형식(P·E·S·T 모두, 핵심 요인 필수): {line[:60]}')
+        if byid[cid].get('pest'):
+            fail(f'pest.txt:{n} {cid} 중복')
+        byid[cid]['pest'] = {'political': f['P'], 'economic': f['E'], 'social': f['S'], 'technological': f['T'], 'key': keys}
     IT = {'revenue', 'profit', 'retention', 'growth', 'risk', 'trust', 'mission'}
     for n, line in meta_lines(os.path.join(ROOT, 'db/meta/deep-why.txt')):
         head, _, tail = line.partition(' || ')
@@ -527,7 +563,7 @@ def main():
         c.setdefault('trade_on', None)
         c.setdefault('anti_opinion', None)
         c.setdefault('pro_opinion', None)
-        for k in ('goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
+        for k in ('five_why', 'pest', 'goal', 'issue_tree', 'pareto', 'deep_why', 'key_metrics'):
             c.setdefault(k, None)
         for k in ('business', 'problem_metric', 'saju'):
             c.setdefault(k, None)

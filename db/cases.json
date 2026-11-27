@@ -103,6 +103,24 @@
     "symptom": "대기실 불만이 많다",
     "problem": "환자들이 기다리는 시간을 지루하고 불안하게 느낀다 (공간의 질이 아니라 시간의 질)"
    },
+   "five_why": {
+    "whys": [
+     "왜 대기실 불만이 많나: 기다리는 게 괴롭다",
+     "왜 괴로운가: 얼마나 더 기다려야 할지 모른다",
+     "왜 모르나: 진료 진행 상황을 환자에게 알려 주는 장치가 없다"
+    ],
+    "root_cause": "대기 시간이 환자에게 보이지 않는다"
+   },
+   "pest": {
+    "political": "의료 광고·환자 정보 규정",
+    "economic": "대기실 확장 비용 부담",
+    "social": "기다림을 손해로 느끼는 문화",
+    "technological": "대기 상태 알림 도구 보급",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "대기실을 넓히고 꾸민다",
@@ -209,7 +227,9 @@
      "끝을 예측하게 하고 그 시간에 쓸모를 주면 같은 시간도 짧게 느낀다"
     ],
     "solution": "예상 대기 시간 안내와 진료 과정 설명 콘텐츠",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "기다림을 줄이지 말고 보이게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "대기 안내를 받은 환자",
@@ -438,6 +458,24 @@
     "symptom": "엘리베이터가 느리다는 불만",
     "problem": "사람들은 기다리는 시간 자체가 짜증 나고 지루하다"
    },
+   "five_why": {
+    "whys": [
+     "왜 엘리베이터가 느리다고 불평하나: 기다리는 시간이 길게 느껴진다",
+     "왜 길게 느끼나: 서서 할 일이 없다",
+     "왜 할 일이 없나: 대기 공간에 주의를 둘 곳이 없다"
+    ],
+    "root_cause": "대기 중 주의를 둘 대상이 없다"
+   },
+   "pest": {
+    "political": "건물 안전 규제로 설비 교체가 어렵다",
+    "economic": "엘리베이터 교체 비용이 크다",
+    "social": "기다림에 대한 짜증",
+    "technological": "큰 기술 없이 거울로 해결",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "엘리베이터를 교체한다",
@@ -512,7 +550,9 @@
      "사람은 자기 모습을 보는 데 주의를 쉽게 뺏긴다"
     ],
     "solution": "엘리베이터 옆에 거울 설치",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "속도를 바꾸지 말고 기다리는 동안의 주의를 바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "건물 입주자",
@@ -733,6 +773,24 @@
     "symptom": "수하물 대기 불만",
     "problem": "승객은 전체 시간보다 '멍하니 서서 기다리는 시간'을 길게 느낀다"
    },
+   "five_why": {
+    "whys": [
+     "왜 수하물 불만이 많나: 기다리는 시간이 길다고 느낀다",
+     "왜 길게 느끼나: 벨트 앞에 멍하니 서 있다",
+     "왜 서 있나: 게이트에서 벨트까지 너무 빨리 도착한다"
+    ],
+    "root_cause": "걷는 시간보다 서 있는 시간이 길다"
+   },
+   "pest": {
+    "political": "공항 운영 규정",
+    "economic": "수하물 인력 증원 비용",
+    "social": "승객의 체감 대기 민감도",
+    "technological": "게이트 배정 운영",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "수하물 인력을 늘려 대기 시간을 줄인다",
@@ -822,7 +880,9 @@
      "서 있는 시간을 걷는 시간으로 바꾸면 불만이 준다"
     ],
     "solution": "도착 게이트를 멀리 배정해 걷는 시간을 늘림",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "처리를 빠르게 하지 말고 서 있는 시간을 걷는 시간으로 바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "승객",
@@ -1037,6 +1097,24 @@
     "symptom": "대기 줄이 길다",
     "problem": "손님은 할 일 없이 끝이 안 보이는 줄에서 기다리는 걸 힘들어한다"
    },
+   "five_why": {
+    "whys": [
+     "왜 줄 서기가 힘든가: 오래 기다린다",
+     "왜 더 힘든가: 끝이 안 보이고 할 일이 없다",
+     "왜 그런가: 대기열을 통로로만 설계했다"
+    ],
+    "root_cause": "대기열이 경험 설계에서 빠져 있다"
+   },
+   "pest": {
+    "political": "테마파크 안전 규정",
+    "economic": "수용량 확장 비용",
+    "social": "경험 소비 확대",
+    "technological": "대기 시간 표시·예약 시스템",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "놀이기구를 더 짓는다",
@@ -1126,7 +1204,9 @@
      "이야기와 볼거리로 채우고 끝이 안 보이지 않게 동선을 꺾는다"
     ],
     "solution": "줄 서는 공간을 이야기 무대로 꾸미고 대기 동선 설계",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "대기열을 통로가 아니라 무대로 설계하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "테마파크 방문객",
@@ -1338,6 +1418,24 @@
     "symptom": "아이가 감기에 걸렸다",
     "problem": "갑자기 비가 올 때 아이 스스로 대비할 수단이 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 아이가 비를 맞고 오나: 우산이 없다",
+     "왜 없나: 아침엔 비가 안 왔다",
+     "왜 대비 못 하나: 보호자가 데리러 가는 것 말고 방법이 없다"
+    ],
+    "root_cause": "아이 스스로 쓸 대비 수단이 없다"
+   },
+   "pest": {
+    "political": "학교 안전 책임",
+    "economic": "저렴한 접이식 우산",
+    "social": "맞벌이로 하교 마중 어려움",
+    "technological": "해당 적음",
+    "key": [
+     "S",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "엄마가 덜 바쁘면 된다",
@@ -1412,7 +1510,9 @@
      "아이 손이 닿는 곳에 미리 두면 된다"
     ],
     "solution": "학교 사물함·가방에 접이식 우산 상비",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "보호자를 부르지 말고 아이 손에 대비 수단을 두라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "학부모",
@@ -1644,6 +1744,24 @@
     "symptom": "소아 진정제 사용이 많다",
     "problem": "아이에게 MRI는 시끄럽고 낯선 기계 속에 갇히는 무서운 경험이다"
    },
+   "five_why": {
+    "whys": [
+     "왜 진정제를 쓰나: 아이가 가만히 있지 못한다",
+     "왜 못 있나: 무서워한다",
+     "왜 무서워하나: 시끄럽고 좁은 낯선 기계에 혼자 갇힌다"
+    ],
+    "root_cause": "검사 경험이 아이에게 낯설고 위협적이다"
+   },
+   "pest": {
+    "political": "소아 진정 관련 의료 안전 기준",
+    "economic": "진정 인력·회복 비용",
+    "social": "아동 친화 의료 요구",
+    "technological": "장비 교체 없이 연출",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "장비를 더 빠르고 조용하게",
@@ -1718,7 +1836,9 @@
      "낯선 경험을 아는 이야기로 바꾸면 아이가 스스로 견딘다"
     ],
     "solution": "검사실을 해적선 모험으로 꾸며 진정제 사용 감소",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "장비를 바꾸지 말고 아이의 이야기를 바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "소아 환자 부모",
@@ -1943,6 +2063,25 @@
     "symptom": "인큐베이터가 비싸다",
     "problem": "미숙아 대부분이 병원에서 먼 농촌에서 태어나, 병원 인큐베이터까지 오지 못한다"
    },
+   "five_why": {
+    "whys": [
+     "왜 미숙아가 저체온으로 죽나: 보온을 못 받는다",
+     "왜 못 받나: 인큐베이터에 못 온다",
+     "왜 못 오나: 대부분 병원에서 먼 농촌에서 태어난다",
+     "왜 거기서 못 쓰나: 기존 장비는 비싸고 전기가 필요하다"
+    ],
+    "root_cause": "보온 수단이 병원 안에만 있다"
+   },
+   "pest": {
+    "political": "개발도상국 의료 정책",
+    "economic": "인큐베이터 가격과 낮은 소득",
+    "social": "농촌 출산과 병원 접근성",
+    "technological": "전기 없는 상변화 보온 소재",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "병원용 인큐베이터를 싸게 만든다",
@@ -2032,7 +2171,9 @@
      "전기 없이 집에서 엄마가 쓸 수 있어야 한다"
     ],
     "solution": "전기 없이 쓰는 저렴한 보온 침낭",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "아기를 병원으로 데려오지 말고 보온을 아기에게 가져가라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "농촌 산모",
@@ -2260,6 +2401,24 @@
     "symptom": "호텔 예약이 안 된다",
     "problem": "숙소 공급이 수요가 몰리는 순간에 탄력적으로 늘지 않는다"
    },
+   "five_why": {
+    "whys": [
+     "왜 행사 때 숙소가 모자라나: 호텔이 꽉 찬다",
+     "왜 다른 공급이 없나: 빈 방은 많지만 빌려주지 않는다",
+     "왜 안 빌려주나: 낯선 사람을 믿을 근거가 없다"
+    ],
+    "root_cause": "개인 간 거래를 보증할 신뢰 장치가 없다"
+   },
+   "pest": {
+    "political": "단기 임대 규제",
+    "economic": "2008년 이후 부수입 필요",
+    "social": "낯선 사람에 대한 불신",
+    "technological": "온라인 결제·프로필·리뷰",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "호텔을 더 짓는다",
@@ -2349,7 +2508,9 @@
      "장치를 갖추면 빈 방이라는 거대한 공급이 열린다"
     ],
     "solution": "빈 방 중개 + 리뷰·프로필·결제 보호",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공급을 늘리려면 먼저 낯선 사람 사이의 신뢰를 설계하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "여행객",
@@ -2573,6 +2734,24 @@
     "symptom": "연체료 불만이 많다",
     "problem": "고객은 '정해진 날까지 매장에 가야 하는' 대여 방식 자체를 번거로워한다"
    },
+   "five_why": {
+    "whys": [
+     "왜 대여가 번거로운가: 매장에 가서 정해진 날까지 반납해야 한다",
+     "왜 반납이 부담인가: 늦으면 연체료를 낸다",
+     "왜 연체료가 있나: 대여점 수익 구조가 연체료에 기대고 있다"
+    ],
+    "root_cause": "대여 수익 구조가 고객을 벌주는 방식이다"
+   },
+   "pest": {
+    "political": "우편 배송 제도",
+    "economic": "DVD 보급으로 가벼운 배송",
+    "social": "연체료에 대한 반감",
+    "technological": "DVD와 온라인 주문",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "대여료 인하",
@@ -2662,7 +2841,9 @@
      "정액제로 바꾸면 연체료가 필요 없어진다"
     ],
     "solution": "월정액 + 우편 배송 + 연체료 없음",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "고객을 벌주는 수익을 버리고 머무는 수익으로 바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "초기 구독자",
@@ -2882,6 +3063,23 @@
     "symptom": "흡입력이 떨어진다",
     "problem": "먼지봉투의 미세한 구멍이 막히면서 흡입력이 떨어지는 구조다"
    },
+   "five_why": {
+    "whys": [
+     "왜 청소기가 약해지나: 흡입력이 떨어진다",
+     "왜 떨어지나: 먼지봉투 구멍이 막힌다",
+     "왜 봉투를 쓰나: 업계가 봉투 방식과 봉투 판매 수익을 당연하게 여긴다"
+    ],
+    "root_cause": "쓸수록 막히는 봉투 구조"
+   },
+   "pest": {
+    "political": "특허 제도로 발명 보호",
+    "economic": "봉투 소모품 시장",
+    "social": "성능 유지에 대한 기대",
+    "technological": "사이클론 분리 기술",
+    "key": [
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "모터 출력 경쟁",
@@ -2956,7 +3154,9 @@
      "막히는 구조를 원심력으로 대체하면 쓸수록 약해지지 않는다"
     ],
     "solution": "봉투 없는 사이클론 청소기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "봉투를 개선하지 말고 봉투를 없애라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "구매자",
@@ -3181,6 +3381,23 @@
     "symptom": "판매 부진",
     "problem": "냄새에 익숙해진 사람은 자기 집 냄새를 못 느껴서 쓸 계기(신호)가 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 안 팔리나: 사람들이 쓰지 않는다",
+     "왜 안 쓰나: 자기 집 냄새를 못 느낀다",
+     "왜 못 느끼나: 매일 맡는 냄새에 익숙해진다"
+    ],
+    "root_cause": "사용 계기(신호)가 없다"
+   },
+   "pest": {
+    "political": "생활화학제품 규제",
+    "economic": "생활용품 경쟁",
+    "social": "냄새 둔감화와 청소 습관",
+    "technological": "향 기술",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "냄새 제거 효과를 더 크게 광고",
@@ -3255,7 +3472,9 @@
      "청소 끝의 '마무리 보상'으로 자리 잡게 한다"
     ],
     "solution": "향을 넣어 청소 마무리 보상으로 재출시",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "문제 해결이 아니라 습관의 보상으로 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "재출시 후 사용자",
@@ -3480,6 +3699,23 @@
     "symptom": "밀크셰이크 매출 정체",
     "problem": "아침 고객은 '길고 지루한 운전을 버티며 배를 채울 것'을 사러 온다"
    },
+   "five_why": {
+    "whys": [
+     "왜 맛을 바꿔도 판매가 그대로인가: 고객이 맛 때문에 사지 않는다",
+     "왜 사나: 아침 출근길에 산다",
+     "왜 출근길인가: 길고 지루한 운전을 버티며 배를 채울 것이 필요하다"
+    ],
+    "root_cause": "고객이 셰이크를 고용한 일이 출근길 버티기다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "아침 시간대 매출 공백",
+    "social": "긴 자동차 출퇴근",
+    "technological": "빠른 결제 동선",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "고객 설문으로 맛을 개선",
@@ -3569,7 +3805,9 @@
      "오래 먹고 빨리 사 가게 만들면 그 일을 이긴다"
     ],
     "solution": "더 걸쭉하게 만들고 아침 구매 동선을 빠르게",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "맛이 아니라 고객이 고용한 일에 맞춰라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "아침 출근 고객",
@@ -3786,6 +4024,24 @@
     "symptom": "비행기가 부족하다",
     "problem": "비행기가 지상에 오래 머물러 있어 돈을 못 버는 시간이 길다"
    },
+   "five_why": {
+    "whys": [
+     "왜 수익이 안 나나: 비행기가 돈을 덜 번다",
+     "왜 덜 버나: 지상에 오래 머문다",
+     "왜 오래 머무나: 회항 준비를 각자 따로 순서대로 한다"
+    ],
+    "root_cause": "지상 회항 과정이 길다"
+   },
+   "pest": {
+    "political": "항공 규제 완화(1978)",
+    "economic": "저운임 수요",
+    "social": "차·버스 대체 수요",
+    "technological": "단일 기종 운영",
+    "key": [
+     "P",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "운항 편수를 줄인다",
@@ -3860,7 +4116,9 @@
      "지상 시간을 줄이면 같은 비행기로 더 많이 띄운다"
     ],
     "solution": "10분 회항으로 지상 시간을 극단적으로 단축",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "싼 비행은 지상 시간을 줄이는 데서 나온다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "단골 승객",
@@ -4040,6 +4298,8 @@
     "symptom": "가구가 비싸다",
     "problem": "가격의 상당 부분이 조립된 부피를 보관·운송하는 비용이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "무료 배송을 해 준다",
@@ -4097,7 +4357,9 @@
      "부피를 줄이고 조립을 고객과 나누면 가격이 내려간다"
     ],
     "solution": "납작 포장 + 셀프 조립",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "부피를 줄이고 조립을 고객과 나누면 가격이 내려간다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -4152,6 +4414,8 @@
     "symptom": "후발 주자가 성능 경쟁에서 밀린다",
     "problem": "시장 전체가 '게임을 하는 사람'만 고객으로 보고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 높은 그래픽 성능으로 경쟁한다",
@@ -4209,7 +4473,9 @@
      "성능 대신 누구나 바로 하는 조작을 주면 새 시장이 열린다"
     ],
     "solution": "직관적 모션 조작으로 가족·어르신 공략",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "성능 대신 누구나 바로 하는 조작을 주면 새 시장이 열린다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -4311,6 +4577,24 @@
     "symptom": "음반 매출 감소",
     "problem": "합법적인 방법이 불법보다 불편하다"
    },
+   "five_why": {
+    "whys": [
+     "왜 사람들이 불법을 쓰나: 합법보다 낫다",
+     "왜 낫나: 바로 찾고 바로 듣는다",
+     "왜 합법은 못 하나: 합법 서비스가 구매·다운로드 중심으로 불편하다"
+    ],
+    "root_cause": "합법이 불법보다 불편하다"
+   },
+   "pest": {
+    "political": "저작권 단속과 음반사 협상",
+    "economic": "음원 매출 감소",
+    "social": "불법 다운로드 습관",
+    "technological": "스트리밍·모바일 데이터",
+    "key": [
+     "T",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "불법 다운로드 단속·소송",
@@ -4400,7 +4684,9 @@
      "무료로 진입시키고 편의로 유료 전환한다"
     ],
     "solution": "광고 무료 + 유료 구독 스트리밍",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "불법을 막지 말고 불법보다 편해져라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "무료·유료 이용자",
@@ -4584,6 +4870,8 @@
     "symptom": "송금 앱 이탈이 많다",
     "problem": "소액 송금에도 고액 거래 수준의 인증 절차를 요구한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "은행 앱 화면을 더 깔끔하게 바꾼다",
@@ -4658,7 +4946,9 @@
      "책임을 감수하고 단계를 줄이면 편의가 차별점이 된다"
     ],
     "solution": "몇 단계로 줄인 간편송금",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "책임을 감수하고 단계를 줄이면 편의가 차별점이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -4713,6 +5003,8 @@
     "symptom": "전단지를 찾기 어렵다",
     "problem": "동네 가게 정보가 흩어져 있어 비교하고 고르기 어렵다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "동네 배달 책자를 만든다",
@@ -4770,7 +5062,9 @@
      "모으면 비교·주문이 한곳에서 된다"
     ],
     "solution": "위치 기반 배달 가게 모음 앱",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "모으면 비교·주문이 한곳에서 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -4825,6 +5119,8 @@
     "symptom": "중고거래 사기 신고가 많다",
     "problem": "얼굴 모르는 먼 상대와 거래하니 신뢰와 전달 비용이 크다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "안전결제(에스크로)를 도입한다",
@@ -4897,7 +5193,9 @@
      "위치 인증으로 동네를 경계로 삼는다"
     ],
     "solution": "위치 인증 기반 동네 직거래",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "위치 인증으로 동네를 경계로 삼는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -4952,6 +5250,8 @@
     "symptom": "신선식품 구매 빈도가 낮다",
     "problem": "신선식품이 필요한 시점(아침)과 살 수 있는 시점이 어긋난다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "마트 영업시간을 늘린다",
@@ -5009,7 +5309,9 @@
      "밤 주문을 새벽에 문 앞까지 보내면 된다"
     ],
     "solution": "밤 주문 → 새벽 배송",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "밤 주문을 새벽에 문 앞까지 보내면 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -5064,6 +5366,8 @@
     "symptom": "배송 지연 문의가 많다",
     "problem": "플랫폼이 배송을 통제하지 못하는 구조다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "판매자에게 배송 기준을 강하게 요구한다",
@@ -5121,7 +5425,9 @@
      "직접 사고 직접 배송하면 약속을 플랫폼이 책임진다"
     ],
     "solution": "직매입 + 자체 물류(로켓배송)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "직접 사고 직접 배송하면 약속을 플랫폼이 책임진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -5176,6 +5482,8 @@
     "symptom": "평일 오후 매출이 낮다",
     "problem": "평일 오후에 카페에 머물 이유가 있는 고객층을 놓치고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "가격이 비싸다 → 오후 할인",
@@ -5263,7 +5571,9 @@
      "재택근무자·학부모에게 오후를 판다"
     ],
     "solution": "오후 콘센트석·작업권 판매",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "재택근무자·학부모에게 오후를 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -5347,6 +5657,23 @@
     "situation": "AI 사주 사이트의 4만원대 총운 리포트가 잘 팔리지만 같은 고객이 다시 사지 않는다.",
     "symptom": "고단가 상품 재구매율이 낮다",
     "problem": "고단가 리포트가 고객의 결정·불안 시점과 연결되지 않아 한 번 소비되고 끝난다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 재구매가 없나: 리포트 한 번으로 끝난다",
+     "왜 끝나나: 다음에 찾을 계기가 없다",
+     "왜 없나: 고객의 결정 시점과 리포트가 연결되지 않는다"
+    ],
+    "root_cause": "리포트가 고객의 결정 시점과 끊겨 있다"
+   },
+   "pest": {
+    "political": "상담·결제 관련 소비자 보호",
+    "economic": "고단가 상품 구매 부담",
+    "social": "결정 앞 불안",
+    "technological": "상담 기록 관리",
+    "key": [
+     "S"
+    ]
    },
    "hyps": [
     {
@@ -5454,7 +5781,9 @@
      "리포트를 상담 데이터로 쓰면 결정 시점에 다음 상품을 낸다"
     ],
     "solution": "리포트를 상담 기반 데이터로, 결정 시점에 심화 리포트 제안",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "리포트를 팔지 말고 결정 시점의 조언자가 되라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "고단가 리포트 재구매 고객",
@@ -5638,6 +5967,8 @@
     "symptom": "재등록률이 낮다",
     "problem": "회원이 첫 몇 주 안에 운동 습관을 못 붙이고 사실상 그만둔다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "재등록 할인을 준다",
@@ -5710,7 +6041,9 @@
      "출석 신호로 이탈을 잡으면 장기 회원이 남는다"
     ],
     "solution": "등록 직후 2주 습관 프로그램 + 출석 이탈 신호",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "출석 신호로 이탈을 잡으면 장기 회원이 남는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -5765,6 +6098,8 @@
     "symptom": "첫 주 리텐션이 낮다",
     "problem": "사용자가 핵심 가치를 경험하기 전에 가입·설정 단계에서 지친다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "푸시 알림을 늘린다",
@@ -5837,7 +6172,9 @@
      "저장할 때 가입받으면 이탈이 준다"
     ],
     "solution": "먼저 써 보고 저장 시 가입, 대화형 설정",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "저장할 때 가입받으면 이탈이 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -5888,6 +6225,8 @@
     "symptom": "회의 시간이 길다",
     "problem": "회의에서 무엇을 결정할지 미리 정해지지 않은 채 모인다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "회의 시간을 30분으로 제한한다",
@@ -5960,7 +6299,9 @@
      "질문과 선택지를 미리 돌리면 회의는 결정만 한다"
     ],
     "solution": "결정 질문 사전 공유 + 결정 회의 + 기록 자동화",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "질문과 선택지를 미리 돌리면 회의는 결정만 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -6015,6 +6356,8 @@
     "symptom": "책 판매량 감소",
     "problem": "서점에서 사야 할 이유(온라인에 없는 가치)가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "온라인만큼 할인한다",
@@ -6072,7 +6415,9 @@
      "경험을 반복 상품으로 만들면 방문 이유가 생긴다"
     ],
     "solution": "큐레이션과 북클럽 멤버십",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "경험을 반복 상품으로 만들면 방문 이유가 생긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -6127,6 +6472,8 @@
     "symptom": "점심 손님 이탈",
     "problem": "직장인의 점심 시간은 고정돼 있는데 대기 시간을 예측할 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "좌석을 늘린다",
@@ -6201,7 +6548,9 @@
      "미리 주문하게 하면 피크가 흩어진다"
     ],
     "solution": "원격 줄서기 + 11시대 사전 주문·픽업",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "미리 주문하게 하면 피크가 흩어진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -6256,6 +6605,8 @@
     "symptom": "결제 직전 이탈률이 높다",
     "problem": "결제 직전에야 배송비 등 총액이 드러나 기대가 깨진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "이탈 고객에게 할인 쿠폰을 다시 보낸다",
@@ -6314,7 +6665,9 @@
      "총액을 처음부터 보이면 직전 이탈이 준다"
     ],
     "solution": "상품 페이지부터 배송비 포함 총액 표시",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "총액을 처음부터 보이면 직전 이탈이 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -6369,6 +6722,8 @@
     "symptom": "완강률이 낮다",
     "problem": "혼자 듣다 막히면 도움받을 곳도, 이어 갈 이유도 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "강의를 더 짧게 쪼갠다",
@@ -6441,7 +6796,9 @@
      "기수로 묶고 막히는 순간을 바로 풀어 준다"
     ],
     "solution": "기수제 + AI 튜터",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "기수로 묶고 막히는 순간을 바로 풀어 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -6534,6 +6891,23 @@
     "symptom": "소액 주문이 적고 구매 빈도가 낮다",
     "problem": "주문마다 배송비를 계산하는 순간이 구매를 막는 심리적 장벽이다"
    },
+   "five_why": {
+    "whys": [
+     "왜 더 자주 안 사나: 주문을 망설인다",
+     "왜 망설이나: 배송비가 붙는다",
+     "왜 배송비가 문제인가: 매 주문마다 최소 금액과 비용을 계산하게 만든다"
+    ],
+    "root_cause": "매 주문의 배송비 계산"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "배송비 원가와 규모의 경제",
+    "social": "즉시 구매 욕구",
+    "technological": "물류 네트워크",
+    "key": [
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "일정 금액 이상 무료배송",
@@ -6623,7 +6997,9 @@
      "배송비 고민을 통째로 없애면 구매 빈도가 오른다"
     ],
     "solution": "연회비 79달러 2일 무료배송 멤버십",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "배송비를 깎지 말고 계산 자체를 없애라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "프라임 회원",
@@ -6803,6 +7179,8 @@
     "symptom": "고객이 찾는 상품이 없다",
     "problem": "구색 확대가 회사의 재고 투자 속도에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "투자를 받아 재고를 더 산다",
@@ -6860,7 +7238,9 @@
      "재고 투자 없이 구색이 늘어난다"
     ],
     "solution": "같은 상품 페이지에 제3자 판매자 입점",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "재고 투자 없이 구색이 늘어난다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -6965,6 +7345,24 @@
     "symptom": "온라인 신발 구매 전환율이 낮다",
     "problem": "고객이 '안 맞으면 손해'라는 위험을 혼자 떠안는다"
    },
+   "five_why": {
+    "whys": [
+     "왜 신발을 온라인으로 안 사나: 안 맞을까 걱정한다",
+     "왜 걱정하나: 신어 볼 수 없다",
+     "왜 위험인가: 안 맞으면 반품 비용과 수고를 고객이 진다"
+    ],
+    "root_cause": "사이즈 위험을 고객이 떠안는다"
+   },
+   "pest": {
+    "political": "소비자 반품 권리",
+    "economic": "반품 물류 비용",
+    "social": "온라인 구매 불신",
+    "technological": "온라인 쇼핑 보급",
+    "key": [
+     "S",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "할인 쿠폰",
@@ -7039,7 +7437,9 @@
      "위험을 회사가 지면 구매가 늘고 반품비는 마케팅비가 된다"
     ],
     "solution": "양방향 무료 배송 + 365일 무료 반품",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "고객의 위험을 회사가 떠안아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "단골 구매자",
@@ -7262,6 +7662,24 @@
     "symptom": "안경이 비싸다",
     "problem": "고객은 써 보지 않고 온라인으로 안경을 살 수 없다고 생각해 비싼 매장 유통에 묶여 있다"
    },
+   "five_why": {
+    "whys": [
+     "왜 안경을 온라인으로 안 사나: 써 봐야 한다고 생각한다",
+     "왜 매장에서만인가: 써 볼 방법이 매장뿐이다",
+     "왜 비싼가: 매장 유통 마진이 가격에 붙는다"
+    ],
+    "root_cause": "써 보기가 매장에 묶여 있다"
+   },
+   "pest": {
+    "political": "안경 처방 규정",
+    "economic": "소수 업체의 유통 마진",
+    "social": "온라인 구매 확산",
+    "technological": "온라인 직판·배송",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "매장 할인 행사",
@@ -7351,7 +7769,9 @@
      "직판 가격과 시착을 함께 준다"
     ],
     "solution": "직판 + 테 5개 5일 무료 홈 트라이온",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "써 보기를 매장에서 꺼내 집으로 보내라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "구매자",
@@ -7579,6 +7999,24 @@
     "symptom": "면도날 가격 불만",
     "problem": "남성들은 면도날 교체 시기를 놓치고 살 때마다 번거롭다"
    },
+   "five_why": {
+    "whys": [
+     "왜 면도날이 불만인가: 비싸고 사기 번거롭다",
+     "왜 번거롭나: 교체 시기를 놓치고 매장에 가야 한다",
+     "왜 비싼가: 업계가 기술 경쟁으로 가격을 올렸다"
+    ],
+    "root_cause": "충분히 좋은 날을 편하게 받는 방법이 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "비싼 면도날 가격",
+    "social": "구독 소비 확산",
+    "technological": "온라인 구독 결제·바이럴 영상",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "날이 더 많은 고급 면도기",
@@ -7668,7 +8106,9 @@
      "정기 배송으로 둘 다 없앤다"
     ],
     "solution": "충분히 좋은 면도날 월 구독",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "최고 성능이 아니라 신경 쓸 필요 없음을 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "구독자",
@@ -7892,6 +8332,23 @@
     "symptom": "가격 경쟁으로 마진이 줄어든다",
     "problem": "상품 마진으로 돈을 벌려는 구조에서는 가격을 더 낮출 수 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 가격을 더 못 낮추나: 마진이 필요하다",
+     "왜 필요한가: 상품 마진으로 돈을 번다",
+     "왜 거기서 버나: 유통업 수익 구조가 그렇다"
+    ],
+    "root_cause": "이익을 상품 마진에서 내는 구조"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "가격 민감 소비",
+    "social": "대량 구매 가구",
+    "technological": "물류 효율",
+    "key": [
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "더 큰 할인 행사",
@@ -7981,7 +8438,9 @@
      "낮은 가격이 신뢰가 되어 회원이 유지된다"
     ],
     "solution": "회비 수익 + 마진 상한 + 적은 품목",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "상품이 아니라 회비에서 벌어 가격 신뢰를 사라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "회원",
@@ -8165,6 +8624,8 @@
     "symptom": "객단가와 방문이 줄어든다",
     "problem": "대형마트와 같은 게임(많은 브랜드, 많은 품목)을 하고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "품목을 늘린다",
@@ -8237,7 +8698,9 @@
      "자체 브랜드와 계속 바뀌는 상품으로 발견의 재미를 판다"
     ],
     "solution": "적은 품목 + 자체 브랜드 + 순환 신상품",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "자체 브랜드와 계속 바뀌는 상품으로 발견의 재미를 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8288,6 +8751,8 @@
     "symptom": "폐기와 품절이 동시에 생긴다",
     "problem": "본사가 정한 일률적 발주로는 매장별 수요 변화를 못 따라간다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -8360,7 +8825,9 @@
      "직원이 데이터로 가설을 세우고 단품으로 주문하면 결품·폐기가 준다"
     ],
     "solution": "POS 데이터 기반 점포 가설 발주 + 다회 소량 배송",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "직원이 데이터로 가설을 세우고 단품으로 주문하면 결품·폐기가 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8411,6 +8878,8 @@
     "symptom": "시즌 말 대량 할인과 재고",
     "problem": "예측에 의존하는 긴 생산 주기가 문제다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "트렌드 예측 팀을 강화한다",
@@ -8468,7 +8937,9 @@
      "가까이서 적게 만들고 반응 보고 더 만들면 예측이 필요 없다"
     ],
     "solution": "근거리 소량 생산 + 짧은 주기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "가까이서 적게 만들고 반응 보고 더 만들면 예측이 필요 없다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8519,6 +8990,8 @@
     "symptom": "신상품 실패율이 높다",
     "problem": "수요를 확인하기 전에 대량 생산하는 순서가 문제다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "디자이너를 늘린다",
@@ -8576,7 +9049,9 @@
      "팔리는 것만 더 만들면 재고 위험이 없다"
     ],
     "solution": "초소량 테스트 → 데이터 → 추가 생산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "팔리는 것만 더 만들면 재고 위험이 없다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8631,6 +9106,8 @@
     "symptom": "쇼핑 이탈",
     "problem": "고객은 선택지가 많을수록 결정을 못 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "검색·필터를 더 좋게",
@@ -8688,7 +9165,9 @@
      "취향 데이터와 사람이 몇 벌만 골라 보내면 된다"
     ],
     "solution": "취향 설문 + 스타일리스트 큐레이션 박스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "취향 데이터와 사람이 몇 벌만 골라 보내면 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8743,6 +9222,8 @@
     "symptom": "사료 구매가 번거롭다",
     "problem": "반려인은 사료 떨어지는 시점을 놓치고 무거운 짐을 옮겨야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "온라인 최저가",
@@ -8800,7 +9281,9 @@
      "감정을 챙기는 응대가 충성도가 된다"
     ],
     "solution": "정기배송 + 생일·애도 카드 고객 응대",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "감정을 챙기는 응대가 충성도가 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8851,6 +9334,8 @@
     "symptom": "온라인 장보기가 비싸거나 없다",
     "problem": "식료품 배송이 자체 창고와 물류를 전제로 설계되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "자체 창고·트럭으로 식료품 배송",
@@ -8908,7 +9393,9 @@
      "사람이 대신 장을 보면 창고 없이 배송된다"
     ],
     "solution": "기존 마트 + 개인 쇼퍼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사람이 대신 장을 보면 창고 없이 배송된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -8963,6 +9450,8 @@
     "symptom": "거래가 성사되지 않는다",
     "problem": "서로 모르는 사람 사이에 신뢰를 보증할 장치가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "판매 수수료를 낮춘다",
@@ -9020,7 +9509,9 @@
      "플랫폼이 맡았다 주면 거래가 열린다"
     ],
     "solution": "에스크로 결제(알리페이) + 무료 입점",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "플랫폼이 맡았다 주면 거래가 열린다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9078,6 +9569,8 @@
     "symptom": "지방 소비자 구매 저조",
     "problem": "쇼핑이 혼자 검색하는 행동으로만 설계되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "쿠폰 지급",
@@ -9135,7 +9628,9 @@
      "메신저 공유가 곧 유입 채널이 된다"
     ],
     "solution": "메신저 공유 공동구매",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "메신저 공유가 곧 유입 채널이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9193,6 +9688,8 @@
     "symptom": "온라인 구매 저조",
     "problem": "신뢰는 플랫폼이 아니라 아는 사람에게 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "광고를 늘린다",
@@ -9265,7 +9762,9 @@
      "그 사람을 판매자로 만들면 된다"
     ],
     "solution": "메신저 리셀러 모델",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 사람을 판매자로 만들면 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9323,6 +9822,8 @@
     "symptom": "작은 브랜드 판매 부진",
     "problem": "패션 정보(콘텐츠)와 구매(커머스)가 분리되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "오픈마켓에 입점",
@@ -9395,7 +9896,9 @@
      "콘텐츠 위에 커머스를 얹는다"
     ],
     "solution": "패션 커뮤니티·매거진 + 커머스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "콘텐츠 위에 커머스를 얹는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9450,6 +9953,8 @@
     "symptom": "인테리어 구매 결정이 느리다",
     "problem": "상품 사진만으로는 '내 집에서의 모습'을 상상할 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "상품 사진을 고화질로",
@@ -9507,7 +10012,9 @@
      "사진에서 바로 사게 하면 된다"
     ],
     "solution": "집들이 사진 상품 태그 → 구매",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사진에서 바로 사게 하면 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9562,6 +10069,8 @@
     "symptom": "리셀 거래 사기",
     "problem": "구매자가 진품 여부를 확인할 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "에스크로 결제",
@@ -9619,7 +10128,9 @@
      "플랫폼이 검수하면 신뢰가 상품이 된다"
     ],
     "solution": "검수센터 + 시세 공개",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "플랫폼이 검수하면 신뢰가 상품이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9677,6 +10188,8 @@
     "symptom": "쇼핑몰 탐색 피로",
     "problem": "상품이 몰별로 흩어져 비교가 어렵다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "개별 몰 앱 출시",
@@ -9749,7 +10262,9 @@
      "모으기만 해도 쇼핑 시작점이 된다"
     ],
     "solution": "소호몰 모아보기 앱",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "모으기만 해도 쇼핑 시작점이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9804,6 +10319,8 @@
     "symptom": "신생 브랜드가 끼어들 틈이 없다",
     "problem": "모두가 같은 축(기능·스타 마케팅)으로 경쟁하고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기능성으로 경쟁",
@@ -9876,7 +10393,9 @@
      "자연 소재와 단순함을 내세운다"
     ],
     "solution": "울 소재 단순한 일상 운동화",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "자연 소재와 단순함을 내세운다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -9934,6 +10453,8 @@
     "symptom": "캐리어 구매 불만",
     "problem": "중간 가격대의 좋은 캐리어가 유통 마진 때문에 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "백화점 입점",
@@ -9991,7 +10512,9 @@
      "여행 중 불편까지 풀면 차별이 된다"
     ],
     "solution": "직판 + 충전 배터리 캐리어",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "여행 중 불편까지 풀면 차별이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10046,6 +10569,8 @@
     "symptom": "베이스 메이크업이 번거롭다",
     "problem": "액체 제품을 위생적이고 간편하게 바를 도구가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 가벼운 제형",
@@ -10118,7 +10643,9 @@
      "스펀지에 머금게 하면 바르기와 수정이 한 번에 된다"
     ],
     "solution": "스펀지 용기 + 퍼프 쿠션",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "스펀지에 머금게 하면 바르기와 수정이 한 번에 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10173,6 +10700,8 @@
     "symptom": "매운맛 때문에 대중성이 낮다",
     "problem": "너무 매운 맛을 단점으로만 보고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "덜 맵게 바꾼다",
@@ -10230,7 +10759,9 @@
      "도전을 콘텐츠로 퍼뜨리고 순한 맛으로 입구를 넓힌다"
     ],
     "solution": "매운맛 챌린지 + 맛 변형 제품",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "도전을 콘텐츠로 퍼뜨리고 순한 맛으로 입구를 넓힌다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10285,6 +10816,8 @@
     "symptom": "해외 판매 부진",
     "problem": "현지 소비자의 식습관에 맞는 형태가 아니다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "한인 마트 중심 판매",
@@ -10342,7 +10875,9 @@
      "바꿔서 주류 마트에 올린다"
     ],
     "solution": "현지화 만두 + 주류 유통 입점",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "바꿔서 주류 마트에 올린다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10397,6 +10932,8 @@
     "symptom": "커피 소비 위축",
     "problem": "큰 용량을 싸게 마실 선택지가 부족하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "프리미엄 원두로 경쟁",
@@ -10470,7 +11007,9 @@
      "좌석을 줄이고 대용량 저가로 판다"
     ],
     "solution": "대용량·저가·테이크아웃 소형 매장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "좌석을 줄이고 대용량 저가로 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10521,6 +11060,8 @@
     "symptom": "매장 비용 부담",
     "problem": "주문·결제가 매장 안에서 이뤄진다는 전제 때문에 큰 매장이 필요하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 큰 매장",
@@ -10578,7 +11119,9 @@
      "작은 매장을 촘촘히 낸다"
     ],
     "solution": "앱 주문 + 소형 픽업 매장",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "작은 매장을 촘촘히 낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10633,6 +11176,8 @@
     "symptom": "신제품 인지도 부족",
     "problem": "매일 마시는 습관을 만들 사람 접점이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "마트 광고",
@@ -10705,7 +11250,9 @@
      "동네 판매원이 정기 배달하며 관계를 맺는다"
     ],
     "solution": "동네 여성 판매원 정기 배달",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "동네 판매원이 정기 배달하며 관계를 맺는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10760,6 +11307,8 @@
     "symptom": "농촌 시장 매출 저조",
     "problem": "제품 단위가 고객의 현금 흐름과 맞지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대용량 할인",
@@ -10819,7 +11368,9 @@
      "작게 쪼개고 현지 판매원으로 닿는다"
     ],
     "solution": "사셰 소포장 + 농촌 여성 판매원",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작게 쪼개고 현지 판매원으로 닿는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10877,6 +11428,8 @@
     "symptom": "데이터 사용량이 낮다",
     "problem": "음성 중심 요금 구조가 데이터 시장을 막고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "소폭 요금 인하",
@@ -10936,7 +11489,9 @@
      "데이터 전용망으로 파격 가격을 내면 시장이 커진다"
     ],
     "solution": "4G 데이터 전용망 + 초기 무료·초저가",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "데이터 전용망으로 파격 가격을 내면 시장이 커진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -10991,6 +11546,8 @@
     "symptom": "소도시에는 할인점이 없다",
     "problem": "소도시는 시장이 작다는 가정 때문에 아무도 안 들어갔다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -11048,7 +11605,9 @@
      "물류센터를 중심으로 촘촘히 내면 비용도 낮다"
     ],
     "solution": "소도시 선점 + 물류센터 밀집 출점",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "물류센터를 중심으로 촘촘히 내면 비용도 낮다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -11103,6 +11662,8 @@
     "symptom": "매장 방문 빈도가 낮다",
     "problem": "가구 매장은 '필요할 때만 가는 곳'이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "할인 행사",
@@ -11175,7 +11736,9 @@
      "식당·놀이 공간으로 반나절을 보내게 한다"
     ],
     "solution": "매장 식당 + 놀이 공간 + 한 방향 동선",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "식당·놀이 공간으로 반나절을 보내게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -11275,6 +11838,24 @@
     "symptom": "고객 충성도가 낮다",
     "problem": "배송 속도 우위를 고객의 반복 구매로 묶을 장치가 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 빠른 배송이 반복 구매로 안 이어지나: 고객이 매번 비교한다",
+     "왜 비교하나: 쿠팡에 묶일 이유가 없다",
+     "왜 없나: 반복 구매를 묶는 장치가 없다"
+    ],
+    "root_cause": "반복 구매 잠금 장치가 없다"
+   },
+   "pest": {
+    "political": "유통·노동 규제",
+    "economic": "물류 투자 규모",
+    "social": "빠른 배송 기대",
+    "technological": "자체 물류·수요 예측",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "적립금",
@@ -11364,7 +11945,9 @@
      "회비로 묶으면 반복 구매가 고정된다"
     ],
     "solution": "무료·새벽배송·반품·영상 묶은 월 회비 멤버십",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "빠른 배송을 회비로 묶어 습관으로 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "와우 회원",
@@ -11548,6 +12131,8 @@
     "symptom": "택시 잡기가 어렵다",
     "problem": "차와 승객이 서로의 위치를 모르고, 공급(차량 수)이 면허로 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "택시 면허를 늘린다",
@@ -11620,7 +12205,9 @@
      "수요 연동 가격으로 공급을 끌어낸다"
     ],
     "solution": "스마트폰 위치 매칭 + 수요 연동 가격",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "수요 연동 가격으로 공급을 끌어낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -11675,6 +12262,8 @@
     "symptom": "택시 서비스 불만",
     "problem": "승차 거부 없는 깨끗한 이동 경험에 대한 수요가 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "배차를 자동으로 하고 승차 거부를 없앤다",
@@ -11747,7 +12336,9 @@
      "그러나 경험이 맞아도 규제를 먼저 풀어야 한다"
     ],
     "solution": "자동 배차로 경험은 검증했으나 규제로 중단",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그러나 경험이 맞아도 규제를 먼저 풀어야 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -11802,6 +12393,8 @@
     "symptom": "택시 불신",
     "problem": "요금과 기사 신원이 투명하지 않다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "해외 차량 호출 앱 그대로 도입",
@@ -11874,7 +12467,9 @@
      "현금을 받고 신원·요금을 미리 보여 준다"
     ],
     "solution": "현금 결제 허용 + 기사 신원·요금 사전 공개",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "현금을 받고 신원·요금을 미리 보여 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -11929,6 +12524,8 @@
     "symptom": "기사 수입이 낮다",
     "problem": "기사와 승객이 만나는 방법이 '길에서 기다리기'뿐이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기사 대기 장소를 늘린다",
@@ -11986,7 +12583,9 @@
      "서비스를 얹을수록 기사 수입과 고객 빈도가 오른다"
     ],
     "solution": "오토바이 기사망 위 배달·택배·결제 슈퍼앱",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "서비스를 얹을수록 기사 수입과 고객 빈도가 오른다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12041,6 +12640,8 @@
     "symptom": "교외 주민 배달 수요 미충족",
     "problem": "교외는 배달 효율이 낮다고 다들 피했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대도시에서 경쟁",
@@ -12113,7 +12714,9 @@
      "먼저 들어가 선점한다"
     ],
     "solution": "교외 가족 주문 시장 우선 공략",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "먼저 들어가 선점한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12164,6 +12767,8 @@
     "symptom": "양쪽 모두 참여 저조",
     "problem": "닭이 먼저냐 달걀이 먼저냐 문제"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "손님 광고를 많이 한다",
@@ -12236,7 +12841,9 @@
      "식당 도구로 공급을 모으고 손님을 연다"
     ],
     "solution": "식당 예약 관리 소프트웨어 → 손님 예약 네트워크",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "식당 도구로 공급을 모으고 손님을 연다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12287,6 +12894,8 @@
     "symptom": "수공예품 판매 부진",
     "problem": "작가와 수공예를 좋아하는 구매자가 만날 전용 공간이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대형 오픈마켓 입점",
@@ -12359,7 +12968,9 @@
      "작가 커뮤니티로 신뢰와 소속감을 준다"
     ],
     "solution": "수공예·빈티지 전문 장터 + 작가 커뮤니티",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작가 커뮤니티로 신뢰와 소속감을 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12414,6 +13025,8 @@
     "symptom": "사기 걱정",
     "problem": "거래 상대의 평판을 알 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "회사가 모든 거래를 보증",
@@ -12486,7 +13099,9 @@
      "서로 평가하게 하면 신뢰가 분산된다"
     ],
     "solution": "상호 거래 평가 누적 평판",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "서로 평가하게 하면 신뢰가 분산된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12541,6 +13156,8 @@
     "symptom": "소규모 외주 거래가 적다",
     "problem": "견적과 협상 과정이 작은 일에 비해 너무 크다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "견적 요청 게시판",
@@ -12615,7 +13232,9 @@
      "정찰 상품처럼 진열하면 바로 산다"
     ],
     "solution": "정가 서비스 상품 진열",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "정찰 상품처럼 진열하면 바로 산다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12670,6 +13289,8 @@
     "symptom": "프리랜서 거래 분쟁",
     "problem": "서로 모르는 사이에 결과물 기준과 대금이 보장되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "지인 소개로만 맡긴다",
@@ -12742,7 +13363,9 @@
      "패키지로 기준을 정하고 대금을 맡는다"
     ],
     "solution": "패키지 상품화 + 에스크로",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "패키지로 기준을 정하고 대금을 맡는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12797,6 +13420,8 @@
     "symptom": "반려견 맡기기 불만",
     "problem": "반려견에게 집 같은 환경과 사람의 돌봄이 필요하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "반려견 호텔 가격 인하",
@@ -12869,7 +13494,9 @@
      "리뷰·보험을 붙인 동네 시터를 연결한다"
     ],
     "solution": "동네 펫시터 + 리뷰·보험",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "리뷰·보험을 붙인 동네 시터를 연결한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -12920,6 +13547,8 @@
     "symptom": "차량 유휴 시간",
     "problem": "놀고 있는 개인 차를 빌려줄 신뢰 장치가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -12992,7 +13621,9 @@
      "보험을 붙이면 개인 차가 공급이 된다"
     ],
     "solution": "개인 간 차량 대여 + 보험",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "보험을 붙이면 개인 차가 공급이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13047,6 +13678,8 @@
     "symptom": "장거리 이동 비용",
     "problem": "같은 방향으로 가는 운전자와 승객이 연결되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "저가 버스",
@@ -13119,7 +13752,9 @@
      "비용 분담으로 운전자도 이득을 본다"
     ],
     "solution": "장거리 카풀 + 신뢰 프로필·평가",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "비용 분담으로 운전자도 이득을 본다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13170,6 +13805,8 @@
     "symptom": "가끔 필요한 차량 수요 미충족",
     "problem": "렌터카는 지점 방문과 하루 단위라 가끔·짧은 이용에 안 맞는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "렌터카 지점 확대",
@@ -13242,7 +13879,9 @@
      "주차장에 무인으로 두면 짧게 빌린다"
     ],
     "solution": "동네·대학가 무인 카셰어링",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "주차장에 무인으로 두면 짧게 빌린다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13293,6 +13932,8 @@
     "symptom": "마지막 구간 이동 불편",
     "problem": "짧은 거리를 위한 이동 수단이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "마을버스 증편",
@@ -13350,7 +13991,9 @@
      "다만 주차·안전 규칙이 함께 가야 오래간다"
     ],
     "solution": "앱 잠금 공유 킥보드 + 주차·안전 규칙",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "다만 주차·안전 규칙이 함께 가야 오래간다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13405,6 +14048,8 @@
     "symptom": "독립 호텔 온라인 예약 저조",
     "problem": "호텔은 선결제 시스템이 없고 고객은 선결제가 불안하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "선결제 할인",
@@ -13479,7 +14124,9 @@
      "결제를 현장으로 미루고 수수료를 호텔에서 받는다"
     ],
     "solution": "무료 취소 + 현장 결제 예약",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "결제를 현장으로 미루고 수수료를 호텔에서 받는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13534,6 +14181,8 @@
     "symptom": "모텔 이용 이미지가 나쁘다",
     "problem": "시설과 가격 정보를 당당하게 비교할 곳이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "모텔 광고",
@@ -13606,7 +14255,9 @@
      "사진·후기·가격 공개로 카테고리를 다시 정의한다"
     ],
     "solution": "모텔을 중소형 호텔로 정보 공개",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사진·후기·가격 공개로 카테고리를 다시 정의한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13661,6 +14312,8 @@
     "symptom": "부동산 정보 비대칭",
     "problem": "집값을 알려면 중개인을 만나야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "중개인 목록 사이트",
@@ -13733,7 +14386,9 @@
      "무료 공개로 방문자를 모으고 중개인 광고로 번다"
     ],
     "solution": "무료 집값 추정가 + 중개인 광고 수익",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "무료 공개로 방문자를 모으고 중개인 광고로 번다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13784,6 +14439,8 @@
     "symptom": "매도 기간이 길다",
     "problem": "매도자는 확실성과 속도를 원한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "회사가 알고리즘 가격으로 집을 바로 사 주고 나중에 되판다",
@@ -13856,7 +14513,9 @@
      "다만 집을 떠안으니 재고 위험 관리가 전부다"
     ],
     "solution": "알고리즘 즉시 매입·재판매, 재고 위험이 과제로 남음",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "다만 집을 떠안으니 재고 위험 관리가 전부다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -13914,6 +14573,8 @@
     "symptom": "원룸 구하기 피로",
     "problem": "매물 정보가 중개업소마다 흩어져 있고 믿을 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "생활 정보지 광고",
@@ -13971,7 +14632,9 @@
      "플랫폼이 검증하면 비교가 믿을 만해진다"
     ],
     "solution": "앱 매물 비교 + 허위 매물 검증",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "플랫폼이 검증하면 비교가 믿을 만해진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -14026,6 +14689,8 @@
     "symptom": "사무실 계약 부담",
     "problem": "사무실 계약 단위가 작은 회사의 변동성에 안 맞는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "저렴한 소형 사무실",
@@ -14100,7 +14765,9 @@
      "미리 꾸며 좌석·월 단위로 판다"
     ],
     "solution": "좌석·월 단위 공유오피스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "미리 꾸며 좌석·월 단위로 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -14151,6 +14818,8 @@
     "symptom": "상장 실패와 대규모 손실",
     "problem": "장기 임대 부채와 단기 회원 수익의 기간 불일치"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "커뮤니티·브랜드 경험으로 프리미엄 가격",
@@ -14223,7 +14892,9 @@
      "불가능 신호를 무시하면 성장할수록 위험이 커진다"
     ],
     "solution": "커뮤니티 경험은 검증, 구조적 기간 불일치로 위기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "불가능 신호를 무시하면 성장할수록 위험이 커진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -14274,6 +14945,8 @@
     "symptom": "화물 추적 불가와 지연",
     "problem": "여러 업체(선사·세관·트럭)의 정보가 흩어져 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "포워더 직원 늘리기",
@@ -14331,7 +15004,9 @@
      "전 과정을 한 화면에 모으면 소프트웨어가 경쟁력이 된다"
     ],
     "solution": "디지털 포워딩",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "전 과정을 한 화면에 모으면 소프트웨어가 경쟁력이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -14411,6 +15086,24 @@
     "situation": "1950년대 항구에서는 부두 노동자가 화물을 하나하나 손으로 옮겨 배가 항구에 며칠씩 머물렀다. 트럭 운송업자 말콤 맥린은 항구에서 기다리는 시간에 지쳐 있었다.",
     "symptom": "해운 비용이 높다",
     "problem": "비용 대부분이 바다가 아니라 항구에서 짐을 옮기는 데 든다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 해운이 비싼가: 운송비가 크다",
+     "왜 큰가: 항구에서 오래 걸린다",
+     "왜 오래 걸리나: 화물마다 모양이 달라 사람이 하나씩 옮긴다"
+    ],
+    "root_cause": "화물 형태가 표준화돼 있지 않다"
+   },
+   "pest": {
+    "political": "항만 노동 협약",
+    "economic": "하역 인건비",
+    "social": "해당 적음",
+    "technological": "표준 컨테이너·크레인",
+    "key": [
+     "T",
+     "E"
+    ]
    },
    "hyps": [
     {
@@ -14516,7 +15209,9 @@
      "트럭·배·항구를 한 시스템으로 본다"
     ],
     "solution": "표준 컨테이너",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "배가 아니라 화물의 모양을 표준화하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "화주",
@@ -14696,6 +15391,8 @@
     "symptom": "긴급 배송 지연",
     "problem": "도시와 도시를 직접 잇는 방식으로는 다음 날 배송을 보장할 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "여객기 화물칸 계약 확대",
@@ -14768,7 +15465,9 @@
      "한 곳에 모았다 흩으면 다음 날 보장이 된다"
     ],
     "solution": "야간 허브-스포크 + 자체 항공기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "한 곳에 모았다 흩으면 다음 날 보장이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -14819,6 +15518,8 @@
     "symptom": "연료비와 사고",
     "problem": "최단 거리 경로가 반드시 가장 효율적이지는 않다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "연비 좋은 트럭",
@@ -14891,7 +15592,9 @@
      "회전을 피하는 경로가 시간·연료를 줄인다"
     ],
     "solution": "좌회전 최소화 경로 설계",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "회전을 피하는 경로가 시간·연료를 줄인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -14942,6 +15645,8 @@
     "symptom": "수혈 지연",
     "problem": "필요할 때 빠르게 보낼 수단이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "모든 병원에 혈액 은행 설치",
@@ -14999,7 +15704,9 @@
      "착륙 없이 투하하면 빠르고 단순하다"
     ],
     "solution": "고정익 드론 낙하산 투하 의료품 배송",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "착륙 없이 투하하면 빠르고 단순하다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15050,6 +15757,8 @@
     "symptom": "수익 모델 갈등",
     "problem": "가게가 낼 수 있는 비용 형태가 맞지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "높은 주문 수수료",
@@ -15122,7 +15831,9 @@
      "정액 광고로 받으면 가게가 쉽게 들어온다"
     ],
     "solution": "월 정액 광고 중심 수익(이후 정책 변화와 논란 반복)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "정액 광고로 받으면 가게가 쉽게 들어온다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15173,6 +15884,8 @@
     "symptom": "배달 인력 부족",
     "problem": "가게 단위로는 배달 수요가 들쭉날쭉해 전담 기사가 비효율이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "가게마다 기사 고용",
@@ -15245,7 +15958,9 @@
      "지역 단위 기사 풀이 묶어 처리한다"
     ],
     "solution": "지역 단위 배달 대행 네트워크",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "지역 단위 기사 풀이 묶어 처리한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15300,6 +16015,8 @@
     "symptom": "기사 참여 저조",
     "problem": "기사에게 추가 비용 없이 손님을 늘려 줄 수단이 필요했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기사 수수료 부과",
@@ -15372,7 +16089,9 @@
      "메신저 계정으로 승객도 바로 가입한다"
     ],
     "solution": "무료 호출로 양쪽을 모은 뒤 부가 서비스로 수익",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "메신저 계정으로 승객도 바로 가입한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15427,6 +16146,8 @@
     "symptom": "생활 광고 비용",
     "problem": "지역 생활 정보를 무료로 나눌 공간이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "신문 광고 할인",
@@ -15499,7 +16220,9 @@
      "일부 항목만 받으면 운영비는 충분하다"
     ],
     "solution": "대부분 무료인 단순한 지역 게시판",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "일부 항목만 받으면 운영비는 충분하다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15550,6 +16273,8 @@
     "symptom": "출퇴근 정체",
     "problem": "같은 경로를 가는 사람들이 서로 연결되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "도로 확장",
@@ -15607,7 +16332,9 @@
      "그 경계 안에서만 매칭한다"
     ],
     "solution": "같은 회사·단지 기반 정기 카풀",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 경계 안에서만 매칭한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15662,6 +16389,8 @@
     "symptom": "CRM 도입 실패와 비용",
     "problem": "소프트웨어를 '사서 설치하는' 방식 자체가 무겁다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "라이선스 가격 인하",
@@ -15721,7 +16450,9 @@
      "브라우저로 바로 쓰고 월로 내면 장벽이 없다"
     ],
     "solution": "설치 없는 구독형 웹 소프트웨어(SaaS)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "브라우저로 바로 쓰고 월로 내면 장벽이 없다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -15801,6 +16532,24 @@
     "symptom": "주력 제품 실패",
     "problem": "진짜 가치는 게임이 아니라 팀이 매일 쓰던 내부 도구에 있었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 팀 소통이 느린가: 이메일로 주고받는다",
+     "왜 느린가: 실시간이 아니고 흩어진다",
+     "왜 흩어지나: 대화와 기록을 함께 담는 도구가 없다"
+    ],
+    "root_cause": "실시간 대화와 기록이 분리돼 있다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "협업 SaaS 시장 성장",
+    "social": "원격·분산 협업",
+    "technological": "클라우드·모바일",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "게임을 고쳐 다시 출시",
@@ -15875,7 +16624,9 @@
      "그 도구를 외부에 팔면 된다"
     ],
     "solution": "팀 채팅 + 도구 연동 + 대화 검색",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "대화와 기록을 한곳에 두라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "팀 사용자",
@@ -16091,6 +16842,24 @@
     "symptom": "쇼핑몰 구축이 어렵다",
     "problem": "소상공인이 개발자 없이 쇼핑몰을 열 도구가 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 소상공인이 온라인 가게를 못 여나: 만들 수 없다",
+     "왜 못 만드나: 개발자가 필요하다",
+     "왜 필요한가: 쇼핑몰 도구가 기술자 기준이다"
+    ],
+    "root_cause": "가게 개설 기술 장벽"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "소상공인 온라인 진출 수요",
+    "social": "온라인 쇼핑 확산",
+    "technological": "클라우드·온라인 결제",
+    "key": [
+     "T",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "스노보드 판매에 집중",
@@ -16165,7 +16934,9 @@
      "남에게도 팔면 플랫폼이 된다"
     ],
     "solution": "누구나 쓰는 쇼핑몰 플랫폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "상품이 아니라 가게를 여는 기술 장벽을 없애라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "소상공인 판매자",
@@ -16349,6 +17120,8 @@
     "symptom": "결제 연동 지연",
     "problem": "결제가 금융 담당자 기준으로 설계되어 개발자에게 너무 어렵다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "수수료 인하",
@@ -16408,7 +17181,9 @@
      "몇 줄 코드와 좋은 문서면 도입이 빨라진다"
     ],
     "solution": "개발자 중심 결제 API",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "몇 줄 코드와 좋은 문서면 도입이 빨라진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -16463,6 +17238,8 @@
     "symptom": "통신 기능 개발 지연",
     "problem": "통신 기능이 통신사 인프라에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "통신사와 직접 계약",
@@ -16537,7 +17314,9 @@
      "API와 종량제로 팔면 누구나 붙인다"
     ],
     "solution": "통신 기능 API + 종량제",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "API와 종량제로 팔면 누구나 붙인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -16588,6 +17367,8 @@
     "symptom": "신규 서비스 출시 지연",
     "problem": "모든 팀이 같은 인프라 문제를 반복해서 풀고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "서버 팀 확대",
@@ -16660,7 +17441,9 @@
      "쓴 만큼 빌려주면 외부에도 같은 가치다"
     ],
     "solution": "종량제 클라우드 인프라",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쓴 만큼 빌려주면 외부에도 같은 가치다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -16759,6 +17542,23 @@
     "situation": "USB를 잊고 오거나 이메일로 파일을 자기에게 보내는 일이 흔했다.",
     "symptom": "파일 이동 불편",
     "problem": "파일이 기기에 묶여 있다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 파일 관리가 번거롭나: 기기마다 따로 있다",
+     "왜 따로인가: 파일이 기기에 묶여 있다",
+     "왜 기존 방식은 불편한가: 직접 올리고 받아야 한다"
+    ],
+    "root_cause": "자동 동기화가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "저장 공간 원가 하락",
+    "social": "여러 기기 사용",
+    "technological": "클라우드 동기화",
+    "key": [
+     "T"
+    ]
    },
    "hyps": [
     {
@@ -16864,7 +17664,9 @@
      "초대한 사람과 받은 사람 모두에게 주면 퍼진다"
     ],
     "solution": "자동 동기화 + 양쪽 저장 공간 추천 보상",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "동기화를 보이지 않게 하고 공유하는 사람끼리 퍼지게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "초기 이용자",
@@ -17048,6 +17850,8 @@
     "symptom": "화상회의 불만",
     "problem": "기존 제품이 '그냥 잘 되는 것'에 실패하고 있었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -17105,7 +17909,9 @@
      "링크 하나 접속과 끊기지 않는 품질에 집중한다"
     ],
     "solution": "쉬운 접속 + 안정적 품질 화상회의",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "링크 하나 접속과 끊기지 않는 품질에 집중한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -17163,6 +17969,8 @@
     "symptom": "판매 비용 과다",
     "problem": "영업 비용이 소프트웨어 가격을 높인다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "영업팀 확대",
@@ -17237,7 +18045,9 @@
      "웹에서 싸게 팔고 입소문에 맡긴다"
     ],
     "solution": "영업팀 없는 셀프 구매 + 낮은 가격",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "웹에서 싸게 팔고 입소문에 맡긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -17295,6 +18105,8 @@
     "symptom": "영업 효율 하락",
     "problem": "고객이 스스로 검색해 정보를 찾는 시대에 밀어붙이는 방식을 쓰고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "광고비 증액",
@@ -17367,7 +18179,9 @@
      "콘텐츠로 먼저 찾아오게 하고 도구로 이어 준다"
     ],
     "solution": "인바운드 마케팅 도구",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "콘텐츠로 먼저 찾아오게 하고 도구로 이어 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -17466,6 +18280,24 @@
     "symptom": "소상공인 마케팅 도구 부재",
     "problem": "도구가 대기업 기준으로 설계되어 있다"
    },
+   "five_why": {
+    "whys": [
+     "왜 작은 사업자가 이메일 마케팅을 안 하나: 시작을 못 한다",
+     "왜 못 하나: 비싸고 어렵다",
+     "왜 그런가: 도구가 대기업 기준이다"
+    ],
+    "root_cause": "작은 사업자용 시작 경로가 없다"
+   },
+   "pest": {
+    "political": "스팸 규제",
+    "economic": "작은 사업자 증가",
+    "social": "이메일 마케팅 보편화",
+    "technological": "SaaS",
+    "key": [
+     "E",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "대기업 영업",
@@ -17555,7 +18387,9 @@
      "작은 규모를 무료로 열어 성장하면 유료로 옮긴다"
     ],
     "solution": "2009년 프리미엄 전환 + 쉬운 사용성",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작게 무료로 시작해 함께 자라라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "소상공인",
@@ -17739,6 +18573,8 @@
     "symptom": "비디자이너의 디자인 불가",
     "problem": "도구가 전문가 기준으로 설계되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "전문 툴 기능 경쟁",
@@ -17796,7 +18632,9 @@
      "템플릿을 고르고 끌어다 놓게 한다"
     ],
     "solution": "템플릿 기반 브라우저 디자인 도구",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "템플릿을 고르고 끌어다 놓게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -17851,6 +18689,8 @@
     "symptom": "협업 지연과 버전 혼란",
     "problem": "디자인 도구가 '혼자 쓰는 데스크톱 프로그램'이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "파일 공유 기능 추가",
@@ -17908,7 +18748,9 @@
      "브라우저로 모두가 같은 파일에 들어오게 한다"
     ],
     "solution": "브라우저 실시간 협업 디자인 툴",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "브라우저로 모두가 같은 파일에 들어오게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -17963,6 +18805,8 @@
     "symptom": "도구 전환 피로",
     "problem": "업무 정보가 도구마다 쪼개져 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 문서 도구",
@@ -18035,7 +18879,9 @@
      "블록을 조립해 한곳에서 만들게 한다"
     ],
     "solution": "블록 조립형 올인원 워크스페이스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "블록을 조립해 한곳에서 만들게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18090,6 +18936,8 @@
     "symptom": "이메일 처리 시간 과다",
     "problem": "이메일 앱이 '무료 기본 도구'로만 여겨져 속도를 위해 돈 낼 사람이 없다고 본다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "무료 앱으로 경쟁",
@@ -18164,7 +19012,9 @@
      "비싸게 받고 단축키와 온보딩으로 속도를 보장한다"
     ],
     "solution": "유료 고속 이메일 + 1:1 온보딩",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "비싸게 받고 단축키와 온보딩으로 속도를 보장한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18219,6 +19069,8 @@
     "symptom": "장애 대응 지연",
     "problem": "개발과 운영이 같은 데이터를 보지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "운영팀 전용 모니터링 강화",
@@ -18276,7 +19128,9 @@
      "한 화면에 모은다"
     ],
     "solution": "통합 관측 플랫폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "한 화면에 모은다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18327,6 +19181,8 @@
     "symptom": "분석 지연과 비용",
     "problem": "저장 공간과 계산 능력을 함께 늘려야 하는 구조"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 큰 장비 구매",
@@ -18399,7 +19255,9 @@
      "쓴 계산량만큼 받는다"
     ],
     "solution": "저장·계산 분리 + 종량제 데이터 웨어하우스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쓴 계산량만큼 받는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18454,6 +19312,8 @@
     "symptom": "급여 처리 실수와 시간 소모",
     "problem": "급여 시스템이 대기업 기준이고 작은 회사는 세무사에게 맡겨야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "세무 대행",
@@ -18526,7 +19386,9 @@
      "쉬운 화면으로 자동화하면 직접 한다"
     ],
     "solution": "소규모 회사용 자동 급여 처리",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쉬운 화면으로 자동화하면 직접 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18581,6 +19443,8 @@
     "symptom": "인사 업무 과부하",
     "problem": "한국 노동법·관행에 맞는 쉬운 인사 시스템이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "해외 HR 툴 도입",
@@ -18638,7 +19502,9 @@
      "국내 법을 반영한 쉬운 웹 툴을 만든다"
     ],
     "solution": "국내 맞춤 HR SaaS",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "국내 법을 반영한 쉬운 웹 툴을 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18693,6 +19559,8 @@
     "symptom": "명함 관리 포기",
     "problem": "자동 인식 정확도가 낮아 결국 손으로 고쳐야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 OCR",
@@ -18765,7 +19633,9 @@
      "쌓인 정확한 데이터가 다음 사업의 자산이 된다"
     ],
     "solution": "사람이 입력하는 명함 관리 → 경력 네트워크",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쌓인 정확한 데이터가 다음 사업의 자산이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18820,6 +19690,8 @@
     "symptom": "문의 이탈",
     "problem": "고객이 쓰는 메신저 같은 즉시 대화 채널이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "전화 상담 확대",
@@ -18894,7 +19766,9 @@
      "상담 화면에 고객·주문 정보를 붙이면 상담이 매출이 된다"
     ],
     "solution": "고객 데이터 기반 채팅 상담 + 마케팅",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "상담 화면에 고객·주문 정보를 붙이면 상담이 매출이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -18949,6 +19823,8 @@
     "symptom": "협업 혼란",
     "problem": "도구가 기능 과잉이라 고객도 함께 쓰기 어렵다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기능을 더 넣는다",
@@ -19021,7 +19897,9 @@
      "꼭 필요한 기능만 남긴다"
     ],
     "solution": "단순함 전략 협업 도구",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "꼭 필요한 기능만 남긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19076,6 +19954,8 @@
     "symptom": "반복 수작업",
     "problem": "앱 간 연동이 개발자 일로 되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "앱마다 연동 기능 개발 요청",
@@ -19148,7 +20028,9 @@
      "셀프서비스로 쓴 작업 수만큼 받는다"
     ],
     "solution": "노코드 자동화 + 작업 수 과금",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "셀프서비스로 쓴 작업 수만큼 받는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19203,6 +20085,8 @@
     "symptom": "사용자 이탈 이유를 모른다",
     "problem": "제품 안에서 사용자와 대화할 채널이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "설문 이메일",
@@ -19275,7 +20159,9 @@
      "그 자리에서 행동에 맞춰 말을 건다"
     ],
     "solution": "제품 안 메신저",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 자리에서 행동에 맞춰 말을 건다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19330,6 +20216,8 @@
     "symptom": "회의 과다",
     "problem": "화면을 보며 설명하는 일에 '동시에 모이는 것'이 필요하다고 여긴다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "회의 시간 단축",
@@ -19402,7 +20290,9 @@
      "화면과 얼굴을 녹화해 링크로 보낸다"
     ],
     "solution": "비동기 화면 녹화 메시지",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "화면과 얼굴을 녹화해 링크로 보낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19457,6 +20347,8 @@
     "symptom": "일정 조율 시간 낭비",
     "problem": "상대가 내 빈 시간을 볼 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "공유 캘린더",
@@ -19529,7 +20421,9 @@
      "링크 하나로 조율을 없앤다"
     ],
     "solution": "예약 링크",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "링크 하나로 조율을 없앤다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19580,6 +20474,8 @@
     "symptom": "계약 지연",
     "problem": "서명이 종이에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "팩스·택배",
@@ -19652,7 +20548,9 @@
      "순서와 진행을 추적해 준다"
     ],
     "solution": "클릭 전자서명 + 진행 추적",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "순서와 진행을 추적해 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19707,6 +20605,8 @@
     "symptom": "데이터 관리 혼란",
     "problem": "비개발자가 쓸 수 있는 데이터베이스가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "엑셀 공유 기능",
@@ -19779,7 +20679,9 @@
      "익숙한 시트 모양으로 DB를 준다"
     ],
     "solution": "스프레드시트 모양 협업 DB",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "익숙한 시트 모양으로 DB를 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19834,6 +20736,8 @@
     "symptom": "기여 장벽",
     "problem": "코드 협업이 사람 간 소통 도구 없이 명령어로만 이뤄진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "버전 관리 도구 개선",
@@ -19906,7 +20810,9 @@
      "웹에서 포크·풀 리퀘스트로 기여하게 한다"
     ],
     "solution": "소셜 코딩 플랫폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "웹에서 포크·풀 리퀘스트로 기여하게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -19961,6 +20867,8 @@
     "symptom": "홈페이지 제작 비용 부담",
     "problem": "홈페이지 제작이 개발 외주로만 가능하다고 여긴다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "외주 단가 낮추기",
@@ -20035,7 +20943,9 @@
      "업종 템플릿에 사진만 바꾸게 한다"
     ],
     "solution": "업종 템플릿 셀프 빌더 + 월 구독",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "업종 템플릿에 사진만 바꾸게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -20093,6 +21003,8 @@
     "symptom": "무료 체험 전환율 저조",
     "problem": "혼자서는 협업 도구의 가치를 느낄 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "첫 달 할인",
@@ -20167,7 +21079,9 @@
      "첫 단계에서 팀원을 부르게 한다"
     ],
     "solution": "첫 단계 팀원 초대 + 팀 단위 활성화 지표",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "첫 단계에서 팀원을 부르게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -20225,6 +21139,8 @@
     "symptom": "납기 실수",
     "problem": "ERP 도입이 비싸고 현장 직원이 입력을 안 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대기업 ERP 도입",
@@ -20282,7 +21198,9 @@
      "휴대폰으로 찍기만 하면 입력되게 한다"
     ],
     "solution": "현장 사진·바코드 모바일 재고 관리",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "휴대폰으로 찍기만 하면 입력되게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -20337,6 +21255,8 @@
     "symptom": "결제 지연",
     "problem": "개인이 카드 결제를 받을 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "판매자마다 카드 가맹점 가입",
@@ -20396,7 +21316,9 @@
      "그들의 필요(카드 결제 받기)에 맞춘다"
     ],
     "solution": "이메일 기반 개인 간 결제",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그들의 필요(카드 결제 받기)에 맞춘다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -20489,6 +21411,24 @@
     "symptom": "카드 결제를 못 받아 판매 손실",
     "problem": "카드 결제 시스템이 큰 가맹점 기준으로 설계되어 있다"
    },
+   "five_why": {
+    "whys": [
+     "왜 작은 가게가 카드를 못 받나: 가맹점 가입이 어렵다",
+     "왜 어렵나: 심사와 장기 계약이 필요하다",
+     "왜 그런가: 결제 업계가 작은 가게를 위험하다고 본다"
+    ],
+    "root_cause": "카드 결제가 큰 가맹점 기준이다"
+   },
+   "pest": {
+    "political": "결제 규제",
+    "economic": "소상공인 카드 수요",
+    "social": "현금 사용 감소",
+    "technological": "스마트폰 리더",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "단말기 할부",
@@ -20578,7 +21518,9 @@
      "쉬운 가입·단일 수수료·무계약으로 받는다"
     ],
     "solution": "스마트폰 리더 + 쉬운 가입 + 단일 수수료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "단말기보다 가입과 계약의 문턱을 없애라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "소상공인",
@@ -20762,6 +21704,8 @@
     "symptom": "소액 정산 불편",
     "problem": "송금이 '금융 거래'로만 설계되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "은행 송금 단순화",
@@ -20834,7 +21778,9 @@
      "피드에 보여 주면 재미와 확산이 생긴다"
     ],
     "solution": "소셜 피드 송금",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "피드에 보여 주면 재미와 확산이 생긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -20892,6 +21838,8 @@
     "symptom": "젊은 층 주식 투자 저조",
     "problem": "수수료 구조가 소액 투자자를 배제한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "수수료 소폭 인하",
@@ -20951,7 +21899,9 @@
      "0원이 곧 유입 엔진이 된다"
     ],
     "solution": "무료 거래 모바일 증권",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "0원이 곧 유입 엔진이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -21009,6 +21959,8 @@
     "symptom": "은행 수수료 불만",
     "problem": "은행 수익이 고객의 실수(잔고 부족)에서 나온다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "수수료 일부 인하",
@@ -21081,7 +22033,9 @@
      "급여 조기 입금 같은 혜택을 준다"
     ],
     "solution": "무수수료 계좌 + 급여 조기 지급",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "급여 조기 입금 같은 혜택을 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -21136,6 +22090,8 @@
     "symptom": "금융 서비스 불만",
     "problem": "지점 중심 은행 구조가 비용과 불편을 만든다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "지점 확대",
@@ -21193,7 +22149,9 @@
      "지점 비용을 빼고 그 돈을 응대에 쓴다"
     ],
     "solution": "지점 없는 디지털 카드 + 친절한 응대",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "지점 비용을 빼고 그 돈을 응대에 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -21291,6 +22249,25 @@
     "symptom": "송금 위험과 비용",
     "problem": "은행 계좌 없이는 돈을 안전하게 보낼 방법이 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 돈을 안전하게 못 보내나: 은행 계좌가 없다",
+     "왜 없나: 지점이 멀고 서류가 어렵다",
+     "왜 대안이 없나: 금융은 은행만 한다고 여겨졌다"
+    ],
+    "root_cause": "계좌 없이 쓸 송금 수단이 없다"
+   },
+   "pest": {
+    "political": "비은행 금융 허용 규제 공백",
+    "economic": "계좌 없는 인구와 도시 이주 노동",
+    "social": "가족 송금 문화",
+    "technological": "휴대폰 문자 보급",
+    "key": [
+     "P",
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "은행 지점 확대",
@@ -21380,7 +22357,9 @@
      "문자로 보내고 가게에서 현금으로 바꾼다"
     ],
     "solution": "문자 송금 + 동네 대리점 현금 교환",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "은행 대신 이미 있는 휴대폰과 동네 가게로 돈을 보내라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "도시 노동자",
@@ -21600,6 +22579,24 @@
     "symptom": "해외 송금 비용",
     "problem": "돈이 실제로 국경을 넘어야 한다고 생각한다"
    },
+   "five_why": {
+    "whys": [
+     "왜 해외 송금이 비싼가: 수수료가 크다",
+     "왜 큰가: 환율 마진이 숨어 있다",
+     "왜 붙나: 돈이 실제로 국경을 넘으며 중개 은행을 거친다"
+    ],
+    "root_cause": "돈이 실제로 국경을 넘는 구조"
+   },
+   "pest": {
+    "political": "송금·전자금융 규제",
+    "economic": "숨은 환율 마진",
+    "social": "해외 이주 증가",
+    "technological": "국가별 계좌 풀·핀테크",
+    "key": [
+     "E",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "은행 수수료 비교",
@@ -21689,7 +22686,9 @@
      "국가별 계좌 풀로 상계한다"
     ],
     "solution": "국가별 계좌 풀 + 투명한 수수료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "돈을 옮기지 말고 맞바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "해외 송금자",
@@ -21873,6 +22872,8 @@
     "symptom": "결제 단계 이탈",
     "problem": "돈을 먼저 내야 하는 위험을 고객이 진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "카드 보안 강조",
@@ -21947,7 +22948,9 @@
      "받고 나서 내게 한다"
     ],
     "solution": "후불 결제(BNPL)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "받고 나서 내게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22002,6 +23005,8 @@
     "symptom": "보험 불신",
     "problem": "보험사가 지급하지 않은 돈이 이익이 되는 구조라 이해가 충돌한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "광고로 이미지 개선",
@@ -22059,7 +23064,9 @@
      "남은 돈을 기부하면 사기 동기도 준다"
     ],
     "solution": "고정 수수료 + 잔여 보험료 기부 + 앱 청구",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "남은 돈을 기부하면 사기 동기도 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22117,6 +23124,8 @@
     "symptom": "모바일 뱅킹 불편",
     "problem": "은행 앱이 지점 업무를 화면에 옮긴 수준이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기존 앱 개선",
@@ -22174,7 +23183,9 @@
      "생활형 기능을 넣는다"
     ],
     "solution": "쉬운 모바일 은행 + 모임통장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "생활형 기능을 넣는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22232,6 +23243,8 @@
     "symptom": "자산 관리 포기",
     "problem": "금융 정보가 회사마다 따로 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "은행별 앱 사용",
@@ -22289,7 +23302,9 @@
      "진단에 맞춘 추천으로 번다"
     ],
     "solution": "통합 자산 조회 + 맞춤 추천",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "진단에 맞춘 추천으로 번다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22347,6 +23362,8 @@
     "symptom": "신용점수에 대한 무지",
     "problem": "소비자가 자기 신용 상태를 모른 채 대출·카드를 고른다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "조회료 인하",
@@ -22419,7 +23436,9 @@
      "맞춤 추천 수수료로 번다"
     ],
     "solution": "무료 신용점수 + 추천 수수료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "맞춤 추천 수수료로 번다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22477,6 +23496,8 @@
     "symptom": "상거래 마비",
     "problem": "현금 없이 결제할 수단이 작은 가게에 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "카드 단말기 보급",
@@ -22551,7 +23572,9 @@
      "QR 스티커 하나면 된다"
     ],
     "solution": "QR 스티커 모바일 결제",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "QR 스티커 하나면 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22606,6 +23629,8 @@
     "symptom": "대출 비교 포기",
     "problem": "여러 금융사 조건을 한 번에 볼 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "은행 상담",
@@ -22680,7 +23705,9 @@
      "안 떨어진다고 알리고 한 번에 비교하게 한다"
     ],
     "solution": "한 번 조회 다수 금융사 대출 비교",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "안 떨어진다고 알리고 한 번에 비교하게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22735,6 +23762,8 @@
     "symptom": "소액 보험금 미청구",
     "problem": "청구 절차가 금액에 비해 너무 번거롭다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "청구 앱 화면 개선",
@@ -22807,7 +23836,9 @@
      "그때 알림을 띄우고 제도와 연동한다"
     ],
     "solution": "결제 시점 청구 알림 + 제도 연동",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그때 알림을 띄우고 제도와 연동한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22865,6 +23896,8 @@
     "symptom": "저축률 낮음",
     "problem": "저축이 '쓰고 남은 돈'으로 설계되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "금리 높은 적금",
@@ -22922,7 +23955,9 @@
      "월급날 자동으로 먼저 뗀다"
     ],
     "solution": "선저축 자동화 + 잔돈 저축",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "월급날 자동으로 먼저 뗀다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -22973,6 +24008,8 @@
     "symptom": "현금 흐름 압박",
     "problem": "매출과 입금 사이의 시간 차가 문제다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "은행 대출",
@@ -23045,7 +24082,9 @@
      "그걸 근거로 다음 날 지급한다"
     ],
     "solution": "매출 데이터 기반 선정산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그걸 근거로 다음 날 지급한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -23096,6 +24135,8 @@
     "symptom": "빈곤의 악순환",
     "problem": "담보가 없으면 은행이 돈을 빌려주지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "정부 보조금",
@@ -23168,7 +24209,9 @@
      "그룹이 함께 책임지게 한다"
     ],
     "solution": "5명 그룹 연대 소액 대출",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그룹이 함께 책임지게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -23223,6 +24266,8 @@
     "symptom": "일반인 진입 장벽",
     "problem": "암호화폐가 기술자 중심으로만 설계되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기술 설명 강화",
@@ -23295,7 +24340,9 @@
      "은행 연결과 규제 준수를 내세운다"
     ],
     "solution": "쉬운 구매 + 규제 친화 거래소",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "은행 연결과 규제 준수를 내세운다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -23382,6 +24429,24 @@
     "situation": "DVD 우편 대여 사업이 잘되고 있지만, 인터넷 속도가 빨라지며 영상을 바로 보는 시대가 오고 있었다.",
     "symptom": "미래 사업 불확실",
     "problem": "지금 돈 버는 사업(DVD)이 다음 사업(스트리밍)을 막는다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 다음 사업으로 못 가나: 지금 사업이 잘된다",
+     "왜 망설이나: 스트리밍이 DVD 매출을 깎는다",
+     "왜 문제인가: 잘되는 사업을 스스로 깎기 어렵다"
+    ],
+    "root_cause": "현재 수익원이 다음 사업을 막는다"
+   },
+   "pest": {
+    "political": "저작권 계약",
+    "economic": "콘텐츠 라이선스 비용",
+    "social": "즉시 시청 습관",
+    "technological": "초고속 인터넷 보급",
+    "key": [
+     "T",
+     "S"
+    ]
    },
    "hyps": [
     {
@@ -23472,7 +24537,9 @@
      "스스로 전환한다"
     ],
     "solution": "주력 사업을 스트리밍으로 전환",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "남이 깎기 전에 스스로 깎아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "구독자",
@@ -23690,6 +24757,24 @@
     "symptom": "판권료 상승",
     "problem": "콘텐츠를 소유하지 않아 협상력이 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 협상력이 없나: 콘텐츠를 빌려 쓴다",
+     "왜 빌리나: 자체 콘텐츠가 없다",
+     "왜 위험한가: 권리자가 가격을 올리거나 회수한다"
+    ],
+    "root_cause": "콘텐츠를 소유하지 않는다"
+   },
+   "pest": {
+    "political": "저작권·배급 계약",
+    "economic": "라이선스 비용 상승",
+    "social": "몰아 보기",
+    "technological": "시청 데이터 분석",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "모든 콘텐츠를 자체 제작",
@@ -23764,7 +24849,9 @@
      "데이터로 바로 주문하고 몰아 보게 한다"
     ],
     "solution": "데이터 기반 오리지널 + 전편 공개",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "빌린 콘텐츠 대신 데이터로 고른 자기 콘텐츠를 가져라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "시청자",
@@ -23947,6 +25034,8 @@
     "symptom": "영상 공유 불가",
     "problem": "누구나 영상을 올리고 다른 사이트에 붙일 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "영상 파일 압축 프로그램",
@@ -24004,7 +25093,9 @@
      "용도를 열고 퍼가기를 쉽게 한다"
     ],
     "solution": "누구나 올리고 퍼가는 영상 플랫폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "용도를 열고 퍼가기를 쉽게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -24095,6 +25186,24 @@
     "symptom": "사용자 정체",
     "problem": "사람들이 원한 건 체크인이 아니라 예쁜 사진 공유였다"
    },
+   "five_why": {
+    "whys": [
+     "왜 첫 앱이 안 컸나: 사람들이 안 쓴다",
+     "왜 안 쓰나: 기능이 많고 복잡하다",
+     "왜 복잡한가: 실제로 쓰이는 사진 공유 말고도 다 담았다"
+    ],
+    "root_cause": "핵심 아닌 기능이 핵심을 가렸다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "앱 개발 비용 하락",
+    "social": "사진 공유 문화",
+    "technological": "스마트폰 카메라",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "체크인 기능 강화",
@@ -24169,7 +25278,9 @@
      "나머지를 다 뺀다"
     ],
     "solution": "사진 + 필터 + 피드만 남긴 앱",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쓰이는 하나만 남기고 다 빼라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "초기 사용자",
@@ -24353,6 +25464,8 @@
     "symptom": "주력 사업 위기",
     "problem": "회사의 강점은 팟캐스트가 아니라 빠른 실험 문화였다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "팟캐스트 사업 강화",
@@ -24410,7 +25523,9 @@
      "문자 길이로 실시간 공유하게 한다"
     ],
     "solution": "짧은 실시간 공유 서비스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "문자 길이로 실시간 공유하게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -24507,6 +25622,24 @@
     "symptom": "신규 사용자 이탈",
     "problem": "피드가 '누구와 친구인가'에 의존한다"
    },
+   "five_why": {
+    "whys": [
+     "왜 신규가 떠나나: 첫날 재미가 없다",
+     "왜 없나: 피드가 비어 있다",
+     "왜 비어 있나: 피드가 친구 관계에 의존한다"
+    ],
+    "root_cause": "친구 없는 신규의 피드가 비어 있다"
+   },
+   "pest": {
+    "political": "데이터·청소년 규제",
+    "economic": "광고 시장",
+    "social": "짧은 영상 소비",
+    "technological": "추천 알고리즘",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "친구 초대 보상",
@@ -24596,7 +25729,9 @@
      "친구 없이도 첫날부터 재미있는 피드를 준다"
     ],
     "solution": "관심사 기반 전체 화면 추천 피드",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "친구가 아니라 관심사로 첫날을 채워라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -24823,6 +25958,24 @@
     "symptom": "유료 전환율 낮음",
     "problem": "무료 아니면 유료라는 이분법 때문에 결제 경험이 생기지 않는다"
    },
+   "five_why": {
+    "whys": [
+     "왜 결제를 안 하나: 결제해 본 적이 없다",
+     "왜 없나: 무료 아니면 유료뿐이다",
+     "왜 그게 문제인가: 첫 결제의 문턱이 너무 높다"
+    ],
+    "root_cause": "결제 첫 경험을 만들 중간 선택지가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "콘텐츠 유료화 압력",
+    "social": "무료 콘텐츠 기대",
+    "technological": "모바일 결제",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "회차 가격 인하",
@@ -24927,7 +26080,9 @@
      "기다리거나 내거나 고르게 한다"
     ],
     "solution": "기다리면 무료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "시간도 가격이 되게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "독자",
@@ -25159,6 +26314,24 @@
     "symptom": "만화 시장 축소",
     "problem": "만화 형식이 종이책 페이지에 묶여 있다"
    },
+   "five_why": {
+    "whys": [
+     "왜 디지털 만화를 끝까지 안 읽나: 읽기 불편하다",
+     "왜 불편한가: 종이 페이지를 화면에 옮겼다",
+     "왜 맞지 않나: 휴대폰은 위아래로 스크롤한다"
+    ],
+    "root_cause": "형식이 화면에 맞지 않는다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "종이 만화 시장 축소",
+    "social": "휴대폰 이동 중 소비",
+    "technological": "스마트폰 세로 스크롤",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "모든 회차 유료화",
@@ -25280,7 +26453,9 @@
      "연재는 무료, 미리보기는 유료로 둔다"
     ],
     "solution": "세로 스크롤 무료 연재 + 유료 미리보기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "종이를 옮기지 말고 화면에 맞춰 다시 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "독자",
@@ -25464,6 +26639,8 @@
     "symptom": "성장 정체",
     "problem": "일반 생방송이 아니라 '게임 보기'가 핵심 수요였다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "일반 생방송 기능 강화",
@@ -25536,7 +26713,9 @@
      "게임 방송만 떼어 전용 공간을 만든다"
     ],
     "solution": "게임 생방송 전용 플랫폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "게임 방송만 떼어 전용 공간을 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -25591,6 +26770,8 @@
     "symptom": "주력 게임 실패",
     "problem": "게이머들은 무겁고 불편한 음성 채팅 프로그램을 쓰고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "새 게임 개발",
@@ -25663,7 +26844,9 @@
      "설치 없이 쓰는 커뮤니티로 만든다"
     ],
     "solution": "게이머용 음성·텍스트 커뮤니티",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "설치 없이 쓰는 커뮤니티로 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -25721,6 +26904,8 @@
     "symptom": "문자 요금 부담",
     "problem": "메시지가 통신사 요금 체계에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "문자 요금제",
@@ -25778,7 +26963,9 @@
      "가입 없이 번호로 바로 시작한다"
     ],
     "solution": "전화번호 기반 무료 메신저",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "가입 없이 번호로 바로 시작한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -25833,6 +27020,8 @@
     "symptom": "재난 시 연락 두절",
     "problem": "소중한 사람과 연락할 가벼운 수단이 필요하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "전화망 증설",
@@ -25890,7 +27079,9 @@
      "스티커를 대화의 중심에 둔다"
     ],
     "solution": "스티커 중심 메신저",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "스티커를 대화의 중심에 둔다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -25945,6 +27136,8 @@
     "symptom": "국제 문자 비용",
     "problem": "메시지가 국가별 통신사 요금에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "국제 문자 할인",
@@ -26017,7 +27210,9 @@
      "광고 없이 단순하게 만든다"
     ],
     "solution": "광고 없는 단순한 무료 메신저",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "광고 없이 단순하게 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -26072,6 +27267,8 @@
     "symptom": "자연스러운 공유 위축",
     "problem": "모든 게시물이 기록으로 남는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "비공개 설정 강화",
@@ -26144,7 +27341,9 @@
      "보고 나면 사라지게 한다"
     ],
     "solution": "사라지는 사진 메시지",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "보고 나면 사라지게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -26199,6 +27398,8 @@
     "symptom": "소셜 사이트 불신",
     "problem": "온라인 신원이 실제 신원과 연결되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기능 많은 소셜 사이트",
@@ -26271,7 +27472,9 @@
      "한 대학씩 실명으로 연다"
     ],
     "solution": "대학 이메일 실명 가입, 한 학교씩 확장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "한 대학씩 실명으로 연다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -26326,6 +27529,8 @@
     "symptom": "위치 게임 대중성 부족",
     "problem": "사람들을 밖으로 나가게 할 강한 동기가 부족했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "게임 메커니즘 개선",
@@ -26383,7 +27588,9 @@
      "IP와 위치 데이터를 결합한다"
     ],
     "solution": "강력한 IP + 축적된 위치 데이터",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "IP와 위치 데이터를 결합한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -26480,6 +27687,24 @@
     "situation": "게임을 패키지로 팔면 출시 초기에 매출이 몰리고 끝난다.",
     "symptom": "출시 후 매출 급감",
     "problem": "게임 매출이 '한 번 사는 것'에 묶여 있다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 플레이어가 더 안 느나: 친구를 못 데려온다",
+     "왜 못 데려오나: 게임을 사야 한다",
+     "왜 문제인가: 가격이 친구 전원 합류를 막는다"
+    ],
+    "root_cause": "유료 진입이 친구 네트워크를 막는다"
+   },
+   "pest": {
+    "political": "미성년 결제·확률형 아이템 규제",
+    "economic": "부분 유료화 수익성",
+    "social": "친구와 함께 노는 게임",
+    "technological": "크로스플랫폼",
+    "key": [
+     "S",
+     "E"
+    ]
    },
    "hyps": [
     {
@@ -26585,7 +27810,9 @@
      "시즌 패스·꾸미기로 번다"
     ],
     "solution": "무료 + 시즌 패스 + 꾸미기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "게임은 공짜로, 친구는 전부, 매출은 꾸미기로",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "플레이어",
@@ -26817,6 +28044,24 @@
     "symptom": "학습 지속률 낮음",
     "problem": "학습이 '의지'에 맡겨져 있다"
    },
+   "five_why": {
+    "whys": [
+     "왜 학습을 그만두나: 매일 안 한다",
+     "왜 안 하나: 의지에 맡겨져 있다",
+     "왜 의지인가: 돌아올 이유를 주는 장치가 없다"
+    ],
+    "root_cause": "습관 장치가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "무료 교육 시장",
+    "social": "자기 계발 수요",
+    "technological": "모바일 알림·A/B 실험",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "콘텐츠 품질 향상",
@@ -26923,7 +28168,9 @@
      "연속일·리그·알림으로 게임처럼 만든다"
     ],
     "solution": "게임화 매일 학습",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "의지를 기대하지 말고 습관 장치를 설계하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "연속 학습자",
@@ -27107,6 +28354,8 @@
     "symptom": "홈 운동 지속 실패",
     "problem": "집에는 스튜디오의 에너지와 함께하는 사람이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 기구",
@@ -27164,7 +28413,9 @@
      "실시간 수업과 순위를 화면에 넣는다"
     ],
     "solution": "하드웨어 + 구독 수업 + 커뮤니티",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "실시간 수업과 순위를 화면에 넣는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -27252,6 +28503,24 @@
     "situation": "작가와 기자는 광고 중심 매체에서 조회수 압박을 받고 독자와 직접 관계가 없다.",
     "symptom": "작가 수입 불안정",
     "problem": "독자와 작가 사이에 광고 모델이 끼어 있다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 작가가 글로 못 버나: 수익이 작다",
+     "왜 작나: 광고에 기댄다",
+     "왜 광고인가: 독자가 작가에게 직접 낼 통로가 없다"
+    ],
+    "root_cause": "독자 직접 결제 통로가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "광고 수익 감소",
+    "social": "작가 개인 브랜드",
+    "technological": "이메일·결제 연동",
+    "key": [
+     "E",
+     "S"
+    ]
    },
    "hyps": [
     {
@@ -27357,7 +28626,9 @@
      "뉴스레터를 유료 구독으로 판다"
     ],
     "solution": "작가 중심 유료 뉴스레터",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "광고를 빼고 작가와 독자를 직접 이어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "유료 구독 독자",
@@ -27574,6 +28845,24 @@
     "symptom": "창작자 수입 불안정",
     "problem": "팬의 응원이 돈으로 연결되는 통로가 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 창작자가 생계가 어렵나: 수입이 불안정하다",
+     "왜 불안정한가: 단건 판매나 광고에 기댄다",
+     "왜 팬 응원이 수입이 안 되나: 정기 후원 통로가 없다"
+    ],
+    "root_cause": "팬 응원이 돈으로 이어지는 통로가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "창작자 수익 불안",
+    "social": "팬덤 후원 문화",
+    "technological": "정기 결제",
+    "key": [
+     "S",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "일회성 기부 버튼",
@@ -27678,7 +28967,9 @@
      "매달 후원하고 등급별 보상을 준다"
     ],
     "solution": "팬 정기 후원 플랫폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "팬의 응원을 정기 수입으로 바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "후원자",
@@ -27898,6 +29189,24 @@
     "symptom": "매출 감소",
     "problem": "독자에게 직접 돈을 받는 구조가 없다"
    },
+   "five_why": {
+    "whys": [
+     "왜 수익이 줄어드나: 광고가 준다",
+     "왜 대안이 없나: 독자에게 직접 받지 않는다",
+     "왜 안 받나: 온라인 뉴스는 무료여야 한다는 통념과 이전 실패"
+    ],
+    "root_cause": "독자 직접 매출 구조가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "광고 수익 감소",
+    "social": "온라인 뉴스는 무료라는 통념",
+    "technological": "미터제 기술",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "전면 유료화",
@@ -28002,7 +29311,9 @@
      "가볍게는 무료, 많이 읽으면 구독으로 나눈다"
     ],
     "solution": "미터제 유료 구독 + 생활 콘텐츠 번들",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "모두에게가 아니라 많이 읽는 소수에게 받아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "유료 구독자",
@@ -28218,6 +29529,24 @@
     "symptom": "독서량 감소",
     "problem": "권당 구매가 '시도'를 비싸게 만든다"
    },
+   "five_why": {
+    "whys": [
+     "왜 책을 덜 읽나: 시도가 비싸다",
+     "왜 비싼가: 권마다 산다",
+     "왜 문제인가: 좋아할지 모르는 책에 돈을 걸어야 한다"
+    ],
+    "root_cause": "권당 구매가 시도를 막는다"
+   },
+   "pest": {
+    "political": "도서정가제",
+    "economic": "전자책 시장 성장",
+    "social": "독서 감소",
+    "technological": "구독·오디오 기술",
+    "key": [
+     "P",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "전자책 할인",
@@ -28322,7 +29651,9 @@
      "월 구독 무제한으로 바꾼다"
     ],
     "solution": "독서 구독 + 오디오·요약",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "권당 구매를 없애 시도를 공짜처럼 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "구독자",
@@ -28506,6 +29837,8 @@
     "symptom": "해외 독자 확보 부진",
     "problem": "현지 창작자와 독자 생태계가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "한국 작품 번역만 제공",
@@ -28578,7 +29911,9 @@
      "아마추어 창작 공간을 연다"
     ],
     "solution": "번역 작품 + 현지 창작자 생태계",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "아마추어 창작 공간을 연다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -28633,6 +29968,8 @@
     "symptom": "활성 작성자 감소",
     "problem": "처음 글을 쓴 사람이 반응을 못 받아 다시 안 쓴다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "글쓰기 이벤트 경품",
@@ -28690,7 +30027,9 @@
      "첫 글 반응을 보장한다"
     ],
     "solution": "첫 글 댓글 보장 장치",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "첫 글 반응을 보장한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -28748,6 +30087,8 @@
     "symptom": "이후 급격한 이용 감소",
     "problem": "사람들이 집에 갇혀 대화에 굶주린 일시적 상황이었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "실시간 음성 대화방",
@@ -28805,7 +30146,9 @@
      "타이밍 요인만으로는 남지 못한다"
     ],
     "solution": "일시적 타이밍 효과가 사라지며 이용자 이탈",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "타이밍 요인만으로는 남지 못한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -28863,6 +30206,8 @@
     "symptom": "구독자 부족과 종료",
     "problem": "사람들은 짧은 모바일 영상을 무료로 이미 충분히 보고 있었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "고품질 짧은 영상",
@@ -28921,7 +30266,9 @@
      "문제 없는 해법은 큰 투자로도 못 산다"
     ],
     "solution": "대규모 투자에도 서비스 종료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "문제 없는 해법은 큰 투자로도 못 산다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -28976,6 +30323,8 @@
     "symptom": "커피는 가격 경쟁 상품",
     "problem": "커피 자체가 아니라 머물 공간과 경험이 빠져 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 싼 커피",
@@ -29048,7 +30397,9 @@
      "공간과 경험을 판다"
     ],
     "solution": "제3의 공간 카페",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공간과 경험을 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29106,6 +30457,8 @@
     "symptom": "출근 시간 매출 손실",
     "problem": "주문과 결제가 매장 줄 안에서만 이뤄진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -29165,7 +30518,9 @@
      "그래도 대면의 따뜻함은 닉네임 호명으로 남긴다"
     ],
     "solution": "모바일 사전 주문 + 닉네임 호명",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그래도 대면의 따뜻함은 닉네임 호명으로 남긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29220,6 +30575,8 @@
     "symptom": "브랜드 평판 하락",
     "problem": "회사가 맛 문제를 인정하지 않아 신뢰가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "할인과 광고",
@@ -29277,7 +30634,9 @@
      "인정하고 바꿨다고 보여 주면 다시 믿는다"
     ],
     "solution": "광고로 약점 인정 + 레시피 개선 + 피자 트래커",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "인정하고 바꿨다고 보여 주면 다시 믿는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29328,6 +30687,8 @@
     "symptom": "서비스 지연과 비용",
     "problem": "메뉴와 동선이 복잡해 속도가 안 난다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -29400,7 +30761,9 @@
      "주방을 조립 라인처럼 만든다"
     ],
     "solution": "단순 메뉴 + 주방 공정화",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "주방을 조립 라인처럼 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29455,6 +30818,8 @@
     "symptom": "빠른 건강식 부재",
     "problem": "빠름과 품질이 양자택일로 여겨진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "패스트푸드 메뉴에 샐러드 추가",
@@ -29527,7 +30892,9 @@
      "눈앞 조립 줄로 품질과 속도를 함께 준다"
     ],
     "solution": "패스트캐주얼 조립 라인",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "눈앞 조립 줄로 품질과 속도를 함께 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29582,6 +30949,8 @@
     "symptom": "대체육 시장이 작다",
     "problem": "고기를 먹는 사람을 만족시킬 맛과 식감이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "채식 시장 마케팅 강화",
@@ -29639,7 +31008,9 @@
      "유명 버거 식당에 먼저 들어간다"
     ],
     "solution": "고기 맛 재현 + 버거 식당 우선 입점",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "유명 버거 식당에 먼저 들어간다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29694,6 +31065,8 @@
     "symptom": "판매 부진",
     "problem": "소비자가 맛을 경험할 계기가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "마트 할인 행사",
@@ -29766,7 +31139,9 @@
      "바리스타가 쓰면 그 맛이 곧 시음이 된다"
     ],
     "solution": "바리스타용 제품으로 카페 라테에 먼저 입점",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "바리스타가 쓰면 그 맛이 곧 시음이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29821,6 +31196,8 @@
     "symptom": "소비자 테스트 실패",
     "problem": "기존 음료와 같은 기준(맛)으로 평가받고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "맛을 서양 입맛에 맞춘다",
@@ -29893,7 +31270,9 @@
      "작은 비싼 캔과 익스트림 이미지로 새 칸을 만든다"
     ],
     "solution": "에너지 드링크라는 새 카테고리",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작은 비싼 캔과 익스트림 이미지로 새 칸을 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -29948,6 +31327,8 @@
     "symptom": "가정용 에스프레소 품질 불만",
     "problem": "사용자가 바리스타 기술을 가져야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 머신",
@@ -30005,7 +31386,9 @@
      "캡슐이 반복 매출이 된다"
     ],
     "solution": "캡슐 시스템 + 직판 클럽",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "캡슐이 반복 매출이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -30060,6 +31443,8 @@
     "symptom": "면도기 판매 부진",
     "problem": "수익이 한 번 사는 본체에 걸려 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "면도기 할인",
@@ -30132,7 +31517,9 @@
      "본체를 싸게 깔고 날로 번다"
     ],
     "solution": "본체-소모품 모델",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "본체를 싸게 깔고 날로 번다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -30187,6 +31574,8 @@
     "symptom": "판매 부진",
     "problem": "고객은 장비 가격과 실제 사용량의 가치를 비교할 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -30260,7 +31649,9 @@
      "빌려주고 장수로 받는다"
     ],
     "solution": "리스 + 복사 장수 과금",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "빌려주고 장수로 받는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -30357,6 +31748,24 @@
     "symptom": "정비비 변동",
     "problem": "엔진 제조사는 고장이 나야 부품을 팔아 돈을 번다"
    },
+   "five_why": {
+    "whys": [
+     "왜 항공사가 불만인가: 엔진이 멈춘다",
+     "왜 멈추나: 고장이 난다",
+     "왜 제조사가 막지 않나: 고장 나야 부품을 팔아 번다"
+    ],
+    "root_cause": "제조사와 고객의 이해가 반대다"
+   },
+   "pest": {
+    "political": "항공 안전 규제",
+    "economic": "항공사 비용 압박",
+    "social": "해당 적음",
+    "technological": "엔진 원격 모니터링",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "엔진 고장을 아예 없앤다",
@@ -30446,7 +31855,9 @@
      "시간으로 받고 정비를 떠안으면 이해가 같아진다"
     ],
     "solution": "비행 시간당 과금 서비스 계약",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "부품이 아니라 뜨는 시간을 팔아 이해를 맞춰라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "항공사",
@@ -30630,6 +32041,8 @@
     "symptom": "공구 관리 비용",
     "problem": "고객은 공구가 아니라 '일이 멈추지 않는 것'을 원한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "공구 가격 인하",
@@ -30702,7 +32115,9 @@
      "관리까지 월 요금으로 맡는다"
     ],
     "solution": "공구 관리 서비스 계약",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "관리까지 월 요금으로 맡는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -30757,6 +32172,8 @@
     "symptom": "타이어 비용 변동",
     "problem": "타이어를 오래 쓰게 할수록 제조사 판매가 줄어드는 이해충돌"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "타이어 할인",
@@ -30829,7 +32246,9 @@
      "관리까지 맡아 이해를 맞춘다"
     ],
     "solution": "주행 거리 과금 타이어 서비스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "관리까지 맡아 이해를 맞춘다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -30887,6 +32306,8 @@
     "symptom": "모바일 웹 사용 불편",
     "problem": "입력 장치가 화면을 차지하고 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 키보드",
@@ -30944,7 +32365,9 @@
      "전면을 화면으로 쓴다"
     ],
     "solution": "전면 터치스크린 + 소프트웨어 키보드",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "전면을 화면으로 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -30999,6 +32422,8 @@
     "symptom": "디지털 음악 불편",
     "problem": "기기와 음악 구매가 분리되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 큰 용량 MP3",
@@ -31073,7 +32498,9 @@
      "기기·프로그램·스토어를 하나로 잇는다"
     ],
     "solution": "기기·소프트웨어·스토어 통합",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "기기·프로그램·스토어를 하나로 잇는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31128,6 +32555,8 @@
     "symptom": "냉난방 에너지 낭비",
     "problem": "사람이 일정을 프로그래밍해야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 많은 설정 버튼",
@@ -31185,7 +32614,9 @@
      "디자인과 학습을 넣는다"
     ],
     "solution": "디자인 + 학습형 스마트 온도 조절기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "디자인과 학습을 넣는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31243,6 +32674,8 @@
     "symptom": "방문자 확인 불가",
     "problem": "현관이 집주인과 연결되어 있지 않다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기존 보안 카메라",
@@ -31315,7 +32748,9 @@
      "다만 사생활 문제가 함께 따라온다"
     ],
     "solution": "스마트폰 비디오 초인종(사생활·경찰 협력 논란 동반)",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "다만 사생활 문제가 함께 따라온다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31370,6 +32805,8 @@
     "symptom": "가정용 로봇 부재",
     "problem": "완벽한 지능을 목표로 해 비싸다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "고성능 지능형 로봇",
@@ -31444,7 +32881,9 @@
      "단순 규칙으로 값을 낮춘다"
     ],
     "solution": "단순 규칙 저가 청소 로봇",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "단순 규칙으로 값을 낮춘다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31502,6 +32941,8 @@
     "symptom": "가성비 스마트폰 부재",
     "problem": "유통·마케팅 비용이 가격을 높인다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대리점 유통",
@@ -31574,7 +33015,9 @@
      "팬 의견을 받아 계속 고친다"
     ],
     "solution": "온라인 직판 + 팬 참여 개발",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "팬 의견을 받아 계속 고친다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31629,6 +33072,8 @@
     "symptom": "충전기 구매 불안",
     "problem": "저가 시장에 신뢰할 브랜드가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 싼 충전기",
@@ -31701,7 +33146,9 @@
      "불만을 고치고 보증하면 믿을 저가 브랜드가 된다"
     ],
     "solution": "리뷰 분석 개선 + 확실한 보증",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "불만을 고치고 보증하면 믿을 저가 브랜드가 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31756,6 +33203,8 @@
     "symptom": "액션 촬영 불가",
     "problem": "카메라는 '찍는 사람'이 따로 있다고 가정한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "고화질 카메라",
@@ -31813,7 +33262,9 @@
      "몸에 다는 작고 튼튼한 카메라를 만든다"
     ],
     "solution": "착용형 액션 카메라",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "몸에 다는 작고 튼튼한 카메라를 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31868,6 +33319,8 @@
     "symptom": "집밥 감소",
     "problem": "여러 조리 도구를 오가며 지켜봐야 한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 압력솥",
@@ -31940,7 +33393,9 @@
      "리뷰와 커뮤니티로 퍼뜨린다"
     ],
     "solution": "다기능 전기 압력솥 + 레시피 커뮤니티",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "리뷰와 커뮤니티로 퍼뜨린다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -31995,6 +33450,8 @@
     "symptom": "브랜드 쇠퇴",
     "problem": "못생김을 약점으로만 대한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "평범한 디자인으로 바꾼다",
@@ -32067,7 +33524,9 @@
      "장식과 협업으로 개성 도구로 만든다"
     ],
     "solution": "지비츠 장식 + 협업 개성 표현",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "장식과 협업으로 개성 도구로 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32122,6 +33581,8 @@
     "symptom": "여성 요가복 부재",
     "problem": "여성의 운동과 일상 사이 옷이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기존 스포츠 브랜드 여성 라인",
@@ -32194,7 +33655,9 @@
      "강사를 앰배서더로, 매장을 수업 공간으로 쓴다"
     ],
     "solution": "커뮤니티 기반 애슬레저",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "강사를 앰배서더로, 매장을 수업 공간으로 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32249,6 +33712,8 @@
     "symptom": "생수 차별화 불가",
     "problem": "생수가 '건강'이라는 같은 이미지로만 팔린다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 싼 생수",
@@ -32321,7 +33786,9 @@
      "맥주 캔과 과격한 유머로 반항을 판다"
     ],
     "solution": "반항적 브랜드의 캔 생수",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "맥주 캔과 과격한 유머로 반항을 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32376,6 +33843,8 @@
     "symptom": "낮은 가격대 고착",
     "problem": "진지한 아웃도어 사용자를 위한 내구성 제품이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 싼 제품",
@@ -32450,7 +33919,9 @@
      "비싸게 받고 내구성을 증명한다"
     ],
     "solution": "프리미엄 내구성 아이스박스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "비싸게 받고 내구성을 증명한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32505,6 +33976,8 @@
     "symptom": "브랜드 피로",
     "problem": "모든 브랜드가 같은 이상적 아름다움을 판다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "유명 모델 기용",
@@ -32577,7 +34050,9 @@
      "실제 사람을 보여 주면 공감이 된다"
     ],
     "solution": "실제 여성 모델 자기 긍정 캠페인",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "실제 사람을 보여 주면 공감이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32632,6 +34107,8 @@
     "symptom": "청소 피로",
     "problem": "더러운 걸레를 다시 빠는 과정이 가장 싫다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 세제",
@@ -32704,7 +34181,9 @@
      "쓰고 버리게 한다"
     ],
     "solution": "일회용 정전기 패드 밀대",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쓰고 버리게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32759,6 +34238,8 @@
     "symptom": "휴대용 음악 부재",
     "problem": "오디오는 녹음·재생 모두 해야 한다는 가정"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 좋은 오디오",
@@ -32831,7 +34312,9 @@
      "재생과 헤드폰만 남긴다"
     ],
     "solution": "재생 전용 휴대용 카세트",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "재생과 헤드폰만 남긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32882,6 +34365,8 @@
     "symptom": "디지털 전환 실패",
     "problem": "현재 수익원(필름)이 미래 사업을 막았다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "필름 품질 개선",
@@ -32939,7 +34424,9 @@
      "알고도 미루면 늦는다"
     ],
     "solution": "디지털 기술을 갖고도 전환이 늦어 몰락",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "알고도 미루면 늦는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -32994,6 +34481,8 @@
     "symptom": "시장 점유율 급락",
     "problem": "고객의 중심이 기업 IT에서 일반 소비자로 옮겨 갔다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "키보드·보안 강화",
@@ -33051,7 +34540,9 @@
      "앱 생태계가 없으면 선택받지 못한다"
     ],
     "solution": "소비자 전환을 놓쳐 점유율 급락",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "앱 생태계가 없으면 선택받지 못한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -33106,6 +34597,8 @@
     "symptom": "서비스 종료",
     "problem": "고가 기계가 해결하는 문제가 실제로 없었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "고가 기계 + 전용 팩 구독",
@@ -33164,7 +34657,9 @@
      "문제 검증 없이 기술부터 만들면 망한다"
     ],
     "solution": "고가 착즙기, 문제 검증 실패로 중단",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "문제 검증 없이 기술부터 만들면 망한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -33215,6 +34710,8 @@
     "symptom": "판매 부진",
     "problem": "비싸고 인도·차도 어디에도 맞지 않았다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "보행로에서 대중 이동 수단으로",
@@ -33272,7 +34769,9 @@
      "사용 맥락이 있는 니치(경찰·관광)에만 남는다"
     ],
     "solution": "혁신 기술이었지만 사용 맥락 부재로 니치에 머묾",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사용 맥락이 있는 니치(경찰·관광)에만 남는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -33327,6 +34826,8 @@
     "symptom": "소비자 판매 중단",
     "problem": "주변 사람들이 촬영당하는 불안을 느꼈다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "일상 착용 소비자 제품",
@@ -33384,7 +34885,9 @@
      "불안이 없는 산업 현장으로 간다"
     ],
     "solution": "소비자 대신 공장·물류 현장용으로 전환",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "불안이 없는 산업 현장으로 간다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -33467,6 +34970,24 @@
     "situation": "인도에서 많은 사람이 수술만 받으면 고칠 수 있는 백내장으로 시력을 잃는다. 수술비가 비싸 가난한 사람은 받지 못한다.",
     "symptom": "예방 가능한 실명",
     "problem": "수술 원가가 높아 가난한 환자에게 닿지 못한다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 가난한 환자가 수술을 못 받나: 비싸다",
+     "왜 비싼가: 원가가 높다",
+     "왜 높나: 의사가 수술 외 일까지 하고 건수가 적다"
+    ],
+    "root_cause": "수술 공정이 비효율적이다"
+   },
+   "pest": {
+    "political": "인도 의료 정책",
+    "economic": "낮은 소득과 높은 수술 원가",
+    "social": "백내장 실명 인구",
+    "technological": "저가 인공수정체 생산",
+    "key": [
+     "E",
+     "S"
+    ]
    },
    "hyps": [
     {
@@ -33557,7 +35078,9 @@
      "공정을 표준화하고 유료가 무료를 돕는다"
     ],
     "solution": "조립 라인식 공정 + 교차 보조",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "원가를 낮추는 공정이 곧 접근성이다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "저소득 환자",
@@ -33737,6 +35260,8 @@
     "symptom": "수술 접근성 부족",
     "problem": "수술 건수가 적어 장비·인력 고정비가 환자 한 명에게 크게 붙는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "장비 할부",
@@ -33809,7 +35334,9 @@
      "대량 수술로 원가와 숙련도를 함께 얻는다"
     ],
     "solution": "대량 수술 심장 병원",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "대량 수술로 원가와 숙련도를 함께 얻는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -33864,6 +35391,8 @@
     "symptom": "약값 부담",
     "problem": "약값 정보가 공개되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "제약사 할인 요청",
@@ -33936,7 +35465,9 @@
      "무료로 비교하고 쿠폰을 준다"
     ],
     "solution": "약국별 약값 비교 + 쿠폰",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "무료로 비교하고 쿠폰을 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -33991,6 +35522,8 @@
     "symptom": "복약 실수",
     "problem": "약이 약 종류별 통에 담겨 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "복약 알림 앱",
@@ -34063,7 +35596,9 @@
      "시간별로 포장하고 날짜를 찍는다"
     ],
     "solution": "시간별 개별 포장 약국 배송",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "시간별로 포장하고 날짜를 찍는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34118,6 +35653,8 @@
     "symptom": "치료 회피",
     "problem": "대면 진료가 수치심을 만든다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "병원 광고",
@@ -34177,7 +35714,9 @@
      "원격 진료와 세련된 브랜드로 문턱을 낮춘다"
     ],
     "solution": "원격 진료 + 소비자 브랜드",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "원격 진료와 세련된 브랜드로 문턱을 낮춘다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34232,6 +35771,8 @@
     "symptom": "경증 진료 지연",
     "problem": "진료가 대면에만 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "비대면 진료 상시 허용",
@@ -34304,7 +35845,9 @@
      "약국 연결까지 한 흐름으로 잇는다"
     ],
     "solution": "비대면 진료 + 약 배송 연결(제도에 따라 범위 변동)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "약국 연결까지 한 흐름으로 잇는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34359,6 +35902,8 @@
     "symptom": "시술 정보 불신",
     "problem": "가격과 진짜 후기가 공개되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "병원 광고",
@@ -34431,7 +35976,9 @@
      "공개하고 인증한다"
     ],
     "solution": "시술 가격 공개 + 인증 후기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공개하고 인증한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34482,6 +36029,8 @@
     "symptom": "응급실 과다 이용",
     "problem": "의사와 상담할 수단이 병원 방문뿐이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "야간 진료 병원 확대",
@@ -34554,7 +36103,9 @@
      "원격으로 분산하면 보험사·기업이 돈을 낸다"
     ],
     "solution": "전화·영상 원격 상담",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "원격으로 분산하면 보험사·기업이 돈을 낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34609,6 +36160,8 @@
     "symptom": "기술 사기로 회사 해체",
     "problem": "극소량 혈액으로 정확한 다종 검사는 당시 기술로 불가능했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "극소량 혈액으로 다종 검사",
@@ -34666,7 +36219,9 @@
      "불가능 신호를 무시한 확장은 사기로 끝난다"
     ],
     "solution": "극소량 혈액 검사 주장, 사기로 귀결",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "불가능 신호를 무시한 확장은 사기로 끝난다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34721,6 +36276,8 @@
     "symptom": "학습 격차",
     "problem": "학생마다 이해 속도가 다른데 교실은 같은 속도로 진도를 나간다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "보충 수업",
@@ -34778,7 +36335,9 @@
      "교실은 문제 풀이에 쓴다"
     ],
     "solution": "무료 짧은 강의 영상 + 개인 속도 학습",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "교실은 문제 풀이에 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34833,6 +36392,8 @@
     "symptom": "고등교육 접근성 부족",
     "problem": "강의가 캠퍼스에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "원격 대학",
@@ -34892,7 +36453,9 @@
      "수강은 무료, 인증은 유료로 나눈다"
     ],
     "solution": "무료 수강 + 유료 수료증·학위",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "수강은 무료, 인증은 유료로 나눈다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -34950,6 +36513,8 @@
     "symptom": "학습 포기",
     "problem": "막힌 순간에 즉시 도움을 받을 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "질문 게시판",
@@ -35022,7 +36587,9 @@
      "사진 검색으로 국경을 넘는다"
     ],
     "solution": "사진 검색 문제 풀이 + 동남아 확장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사진 검색으로 국경을 넘는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35080,6 +36647,8 @@
     "symptom": "점수 정체",
     "problem": "내가 약한 부분을 정확히 모른다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "문제집 추가",
@@ -35152,7 +36721,9 @@
      "진단해 약점만 시키고 시간을 약속한다"
     ],
     "solution": "AI 진단 + 맞춤 학습",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "진단해 약점만 시키고 시간을 약속한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35207,6 +36778,8 @@
     "symptom": "취미 클래스 시작 포기",
     "problem": "강의와 준비물이 분리되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "영상 강의만 판매",
@@ -35279,7 +36852,9 @@
      "키트를 같이 보낸다"
     ],
     "solution": "영상 + 준비물 키트",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "키트를 같이 보낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35334,6 +36909,8 @@
     "symptom": "지역 교육 격차",
     "problem": "강의가 학원 교실에 묶여 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "지방 분원 개설",
@@ -35393,7 +36970,9 @@
      "교실 밖으로 강의를 판다"
     ],
     "solution": "인터넷 강의 + 강사 수익 배분",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "교실 밖으로 강의를 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35448,6 +37027,8 @@
     "symptom": "취업률 논란과 규제 문제",
     "problem": "학교와 학생의 이해를 '취업'으로 맞추려 했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "취업해야 학비를 내는 구조",
@@ -35506,7 +37087,9 @@
      "성과 검증 없이 키우면 무너진다"
     ],
     "solution": "소득 공유 계약, 성과 검증 실패로 신뢰 하락",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "성과 검증 없이 키우면 무너진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35561,6 +37144,8 @@
     "symptom": "직무 역량 격차",
     "problem": "현업 실무자의 노하우를 배울 통로가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대학 평생교육원",
@@ -35620,7 +37205,9 @@
      "현업이 직접 가르친다"
     ],
     "solution": "실무자 강사 직무 강의",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "현업이 직접 가르친다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35675,6 +37262,8 @@
     "symptom": "경력 채용 어려움",
     "problem": "구직 중이 아닌 인재에게 닿을 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "구인 광고",
@@ -35747,7 +37336,9 @@
      "인맥 관리로 평소에도 쓰게 한다"
     ],
     "solution": "상시 경력 프로필 + 채용 솔루션",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "인맥 관리로 평소에도 쓰게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35802,6 +37393,8 @@
     "symptom": "입사 후 조기 퇴사",
     "problem": "회사 정보가 회사 홍보물뿐이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "회사 홍보 강화",
@@ -35874,7 +37467,9 @@
      "보려면 나도 쓰게 해 공급을 모은다"
     ],
     "solution": "익명 리뷰 + 공유해야 열람",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "보려면 나도 쓰게 해 공급을 모은다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -35932,6 +37527,8 @@
     "symptom": "채용 실패",
     "problem": "추천이 개인 인맥에만 의존한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "채용 광고 확대",
@@ -36004,7 +37601,9 @@
      "추천인과 합격자 모두에게 준다"
     ],
     "solution": "양쪽 보상 지인 추천 채용",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "추천인과 합격자 모두에게 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36062,6 +37661,8 @@
     "symptom": "구직 탐색 피로",
     "problem": "공고를 한곳에서 볼 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "또 하나의 채용 사이트",
@@ -36134,7 +37735,9 @@
      "모아 검색하고 클릭으로 번다"
     ],
     "solution": "채용 공고 검색엔진 + 클릭당 광고",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "모아 검색하고 클릭으로 번다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36189,6 +37792,8 @@
     "symptom": "보급 저조",
     "problem": "구매 단위(목돈)가 고객 현금 흐름과 맞지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -36248,7 +37853,9 @@
      "같은 돈을 나눠 내게 한다"
     ],
     "solution": "소액 분납 태양광",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "같은 돈을 나눠 내게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36303,6 +37910,8 @@
     "symptom": "기부 지속성 문제",
     "problem": "기부가 사업과 분리되면 지속되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "자선 단체 기부",
@@ -36375,7 +37984,9 @@
      "구매 이유가 기부가 된다"
     ],
     "solution": "한 켤레 사면 한 켤레 기부",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "구매 이유가 기부가 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36430,6 +38041,8 @@
     "symptom": "조기 퇴사율 증가",
     "problem": "입사 전 기대와 실제 업무 사이의 차이를 아무도 관리하지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "입사 축하금",
@@ -36502,7 +38115,9 @@
      "현실을 미리 보이고 첫 성공을 설계한다"
     ],
     "solution": "현실 직무 미리보기 + 첫 2주 성공 설계",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "현실을 미리 보이고 첫 성공을 설계한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36557,6 +38172,8 @@
     "symptom": "예약 부도",
     "problem": "환자가 예약을 잊거나 바꾸기 번거로워 그냥 안 온다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "부도 시 벌금",
@@ -36629,7 +38246,9 @@
      "알림에서 한 번에 바꾸고 빈자리를 채운다"
     ],
     "solution": "버튼 한 번 변경 + 빈자리 자동 재배정",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "알림에서 한 번에 바꾸고 빈자리를 채운다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36684,6 +38303,8 @@
     "symptom": "3개월 이탈",
     "problem": "성적이 오르기 전까지 학부모가 진척을 볼 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "장기 등록 할인",
@@ -36741,7 +38362,9 @@
      "작은 진척을 매주 보인다"
     ],
     "solution": "주간 진척 리포트",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작은 진척을 매주 보인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36796,6 +38419,8 @@
     "symptom": "복약 중단",
     "problem": "증상이 없으니 약의 효과를 체감하지 못한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "복약 알림",
@@ -36853,7 +38478,9 @@
      "자동 기록으로 비교해 준다"
     ],
     "solution": "혈압 수치 자동 기록 + 복약 비교",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "자동 기록으로 비교해 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -36904,6 +38531,8 @@
     "symptom": "재고 과다와 불량",
     "problem": "앞 공정이 만들 수 있는 만큼 만들어 뒤로 밀어낸다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "창고를 늘린다",
@@ -36961,7 +38590,9 @@
      "뒤 공정이 당기고 문제는 멈춰서 고친다"
     ],
     "solution": "적시 생산(JIT) + 칸반 + 정지 권한",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "뒤 공정이 당기고 문제는 멈춰서 고친다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -37036,6 +38667,25 @@
     "situation": "공장 기계가 과부하로 퓨즈가 끊어져 멈추는 일이 반복된다. 매번 퓨즈를 갈아 끼운다.",
     "symptom": "기계 정지 반복",
     "problem": "퓨즈가 아니라 윤활 펌프에 거름망(스트레이너)이 없어 쇳가루가 들어가 펌프 축이 마모된 것이 근본 원인이다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 기계가 멈췄나: 과부하로 퓨즈가 끊겼다",
+     "왜 과부하인가: 베어링 윤활이 부족했다",
+     "왜 부족한가: 윤활 펌프가 제대로 돌지 않았다",
+     "왜 안 돌았나: 펌프 축이 마모됐다",
+     "왜 마모됐나: 거름망이 없어 쇳가루가 들어갔다"
+    ],
+    "root_cause": "윤활 펌프에 거름망이 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "라인 정지 손실",
+    "social": "현장 개선 문화",
+    "technological": "간단한 장치",
+    "key": [
+     "E"
+    ]
    },
    "hyps": [
     {
@@ -37141,7 +38791,9 @@
      "원인을 막는 작은 조치가 가장 싸다"
     ],
     "solution": "윤활 펌프에 거름망 설치",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "부품을 갈지 말고 원인을 막아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "현장 작업자",
@@ -37320,6 +38972,8 @@
     "symptom": "높은 이직률",
     "problem": "이직에 따른 채용·훈련 비용이 임금 절약보다 크다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "채용을 더 많이 한다",
@@ -37392,7 +39046,9 @@
      "임금을 올려 붙잡고 고객으로도 만든다"
     ],
     "solution": "일급 5달러",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "임금을 올려 붙잡고 고객으로도 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -37482,6 +39138,23 @@
     "symptom": "대규모 적자",
     "problem": "핵심(브릭)에서 멀어진 확장과 복잡성이 비용을 키웠다"
    },
+   "five_why": {
+    "whys": [
+     "왜 적자인가: 비용이 크다",
+     "왜 큰가: 부품과 제품이 너무 많다",
+     "왜 많은가: 브릭에서 먼 영역으로 확장했다"
+    ],
+    "root_cause": "핵심에서 먼 확장과 복잡성"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "적자와 부채",
+    "social": "장난감 소비 변화",
+    "technological": "디지털 놀이의 부상",
+    "key": [
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "신사업을 더 늘린다",
@@ -37556,7 +39229,9 @@
      "브릭으로 돌아가 부품을 줄이고 팬을 듣는다"
     ],
     "solution": "핵심 집중 + 부품 수 축소 + 팬 참여",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "넓히지 말고 핵심으로 돌아가라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "팬",
@@ -37740,6 +39415,8 @@
     "symptom": "판권 수익이 작다",
     "problem": "가치의 대부분(영화 흥행)을 남이 가져간다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "판권료 인상",
@@ -37812,7 +39489,9 @@
      "직접 만들고 세계관으로 묶는다"
     ],
     "solution": "판권 담보 직접 제작 + 공유 세계관",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "직접 만들고 세계관으로 묶는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -37863,6 +39542,8 @@
     "symptom": "적자와 혼란",
     "problem": "선택과 집중이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "모델을 더 출시",
@@ -37935,7 +39616,9 @@
      "네 칸만 남긴다"
     ],
     "solution": "2×2 제품 매트릭스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "네 칸만 남긴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -37986,6 +39669,8 @@
     "symptom": "항공업 저수익",
     "problem": "비행기가 지상에 오래 머무르고 기종·노선이 복잡하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "서비스 고급화",
@@ -38058,7 +39743,9 @@
      "그 가격을 맞추려 운영을 단순화한다"
     ],
     "solution": "단일 기종 + 직항 + 짧은 지상 시간",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 가격을 맞추려 운영을 단순화한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -38113,6 +39800,8 @@
     "symptom": "저마진",
     "problem": "수익이 항공권 하나에 걸려 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "항공권 가격 유지",
@@ -38185,7 +39874,9 @@
      "기본은 싸게, 나머지는 따로 판다"
     ],
     "solution": "초저가 기본 운임 + 부가 서비스 분리",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "기본은 싸게, 나머지는 따로 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -38274,6 +39965,24 @@
     "situation": "비싼 패키지 소프트웨어는 몇 년마다 업그레이드 판매에 의존하고 불법 복제가 많았다.",
     "symptom": "매출 변동과 불법 복제",
     "problem": "한 번에 큰돈을 받는 판매 구조"
+   },
+   "five_why": {
+    "whys": [
+     "왜 매출이 출렁이나: 신버전 출시에 달려 있다",
+     "왜 달려 있나: 한 번에 큰돈을 받는다",
+     "왜 문제인가: 고객이 업그레이드를 미룬다"
+    ],
+    "root_cause": "일시불 판매 구조"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "일시불 매출 변동",
+    "social": "구독 수용 확산",
+    "technological": "클라우드 배포",
+    "key": [
+     "T",
+     "E"
+    ]
    },
    "hyps": [
     {
@@ -38364,7 +40073,9 @@
      "견디면 안정적 반복 매출이 된다"
     ],
     "solution": "월 구독 전환",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "한 번 팔지 말고 계속 함께하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "전문가 사용자",
@@ -38551,6 +40262,8 @@
     "symptom": "광고와 품질의 충돌",
     "problem": "광고 순위가 돈으로만 정해진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "높은 입찰가 순서",
@@ -38623,7 +40336,9 @@
      "클릭률을 함께 반영하면 수익과 품질이 같이 오른다"
     ],
     "solution": "품질 반영 광고 경매",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "클릭률을 함께 반영하면 수익과 품질이 같이 오른다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -38678,6 +40393,8 @@
     "symptom": "결제 이탈",
     "problem": "반복 구매자에게도 매번 같은 입력을 요구한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "결제 화면 디자인 개선",
@@ -38752,7 +40469,9 @@
      "버튼 한 번으로 끝낸다"
     ],
     "solution": "원클릭 주문",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "버튼 한 번으로 끝낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -38810,6 +40529,8 @@
     "symptom": "체크인 대기 불만",
     "problem": "모든 손님이 같은 시간에 같은 창구에서 같은 절차를 밟는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "직원 증원",
@@ -38869,7 +40590,9 @@
      "미리 처리하고 남은 대기는 환영으로 채운다"
     ],
     "solution": "모바일 체크인 + 웰컴 대기 경험",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "미리 처리하고 남은 대기는 환영으로 채운다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -38920,6 +40643,8 @@
     "symptom": "출장 숙박비 부담",
     "problem": "출장객이 쓰지 않는 공간과 서비스에 돈을 낸다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "객실 할인",
@@ -38992,7 +40717,9 @@
      "객실을 줄이고 침구·공용 공간에 쓴다"
     ],
     "solution": "작은 객실 + 고급 침구 + 공용 라운지",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "객실을 줄이고 침구·공용 공간에 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39043,6 +40770,8 @@
     "symptom": "인재 이탈과 속도 저하",
     "problem": "규칙이 평균적 직원을 기준으로 만들어진다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "규칙을 더 정교하게",
@@ -39115,7 +40844,9 @@
      "맥락을 공유하고 규칙을 줄인다"
     ],
     "solution": "인재 밀도 + 맥락 공유 + 최소 규칙",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "맥락을 공유하고 규칙을 줄인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39166,6 +40897,8 @@
     "symptom": "출시 지연",
     "problem": "소통 비용이 팀 크기에 따라 폭증한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "조율 회의 강화",
@@ -39238,7 +40971,9 @@
      "작은 팀에 독립 책임을 준다"
     ],
     "solution": "피자 두 판 팀",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작은 팀에 독립 책임을 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39289,6 +41024,8 @@
     "symptom": "제작 중 품질 저하",
     "problem": "솔직한 피드백을 줄 구조가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "상급자 승인 단계 추가",
@@ -39361,7 +41098,9 @@
      "결정권은 감독에게 두고 동료는 의견만 준다"
     ],
     "solution": "브레인트러스트 회의",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "결정권은 감독에게 두고 동료는 의견만 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39416,6 +41155,8 @@
     "symptom": "친환경차 수요 부진",
     "problem": "친환경 가치가 일부 소비자에게만 의미 있었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기존 차 연비 소폭 개선",
@@ -39473,7 +41214,9 @@
      "한눈에 알아보는 디자인으로 만든다"
     ],
     "solution": "하이브리드 + 상징적 디자인",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "한눈에 알아보는 디자인으로 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39528,6 +41271,8 @@
     "symptom": "전기차 수요 부재",
     "problem": "처음부터 대중차를 만들면 규모가 안 돼 원가를 낮출 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "처음부터 저가 대중 전기차",
@@ -39587,7 +41332,9 @@
      "비싼 차로 돈을 벌어 다음 차 원가를 낮춘다"
     ],
     "solution": "고가 → 중가 → 대중차 순서",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "비싼 차로 돈을 벌어 다음 차 원가를 낮춘다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39642,6 +41389,8 @@
     "symptom": "개발력 분산과 부진",
     "problem": "두 기기가 같은 게임을 나눠 갖지 못한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "더 강력한 거치형",
@@ -39714,7 +41463,9 @@
      "한 기기로 둘 다 되게 한다"
     ],
     "solution": "하이브리드 게임기",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "한 기기로 둘 다 되게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39769,6 +41520,8 @@
     "symptom": "판매 부진",
     "problem": "고객은 차를 지위의 상징으로도 산다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "극단적 원가 절감",
@@ -39827,7 +41580,9 @@
      "가장 싼 차라는 낙인이 구매를 막았다"
     ],
     "solution": "극단적 원가 절감, 정체성 문제로 실패",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "가장 싼 차라는 낙인이 구매를 막았다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39878,6 +41633,8 @@
     "symptom": "사업 몰락",
     "problem": "연체료와 매장 중심 수익 구조가 변화를 막았다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "매장 확대",
@@ -39935,7 +41692,9 @@
      "알고도 늦으면 끝난다"
     ],
     "solution": "연체료·매장 모델을 못 버리고 파산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "알고도 늦으면 끝난다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -39990,6 +41749,8 @@
     "symptom": "점유율 급락",
     "problem": "경쟁의 축이 하드웨어에서 소프트웨어·생태계로 옮겨 갔다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "하드웨어 라인업 확대",
@@ -40047,7 +41808,9 @@
      "개발자 생태계가 없으면 진다"
     ],
     "solution": "생태계 전환을 놓쳐 휴대폰 사업 몰락",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "개발자 생태계가 없으면 진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40105,6 +41868,8 @@
     "symptom": "검색 시장 주도권 상실",
     "problem": "검색이 인터넷의 관문이 될 것을 과소평가했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "포털 콘텐츠 확대",
@@ -40162,7 +41927,9 @@
      "핵심 기능을 놓치면 관문을 잃는다"
     ],
     "solution": "검색 품질 경쟁에서 밀림",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "핵심 기능을 놓치면 관문을 잃는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40217,6 +41984,8 @@
     "symptom": "수수료 부담",
     "problem": "고객이 호텔 홈페이지에서 직접 예약할 이유가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "직접 예약 할인",
@@ -40289,7 +42058,9 @@
      "직접 예약에만 업그레이드를 준다"
     ],
     "solution": "직접 예약 전용 경험 혜택",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "직접 예약에만 업그레이드를 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40344,6 +42115,8 @@
     "symptom": "3개월 해지",
     "problem": "매달 '새로움'이 줄어 기대가 꺾인다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "해지 시 할인 제안",
@@ -40401,7 +42174,9 @@
      "투표·선택과 쉬어 가기를 준다"
     ],
     "solution": "고객 참여 구성 + 쉬어 가기 옵션",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "투표·선택과 쉬어 가기를 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40456,6 +42231,8 @@
     "symptom": "마진 감소",
     "problem": "가격이 고객이 얻는 가치(예약 건수)와 연결되어 있지 않다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "일괄 가격 인상",
@@ -40515,7 +42292,9 @@
      "쓰는 양에 맞춰 구간을 나눈다"
     ],
     "solution": "예약 건수 구간 요금 + 효과 리포트",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쓰는 양에 맞춰 구간을 나눈다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40570,6 +42349,8 @@
     "symptom": "영업 기간 장기화",
     "problem": "첫 계약이 '전사 도입'이라 결재 단계가 너무 많다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "영업 인력 증원",
@@ -40644,7 +42425,9 @@
      "작게 들어가 증명하고 넓힌다"
     ],
     "solution": "부서 단위 파일럿 → 확장 계약",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "작게 들어가 증명하고 넓힌다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40699,6 +42482,8 @@
     "symptom": "매물 부족",
     "problem": "판매자가 등록 과정(사진·가격 책정·검수)을 귀찮아한다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "판매 수수료 인하",
@@ -40756,7 +42541,9 @@
      "수거·촬영·가격을 대신 한다"
     ],
     "solution": "방문 수거 대행 + 자동 가격 추정",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "수거·촬영·가격을 대신 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40811,6 +42598,8 @@
     "symptom": "저녁 시간 품절과 매출 손실",
     "problem": "고객이 미리 확보할 방법이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "생산량을 늘린다",
@@ -40870,7 +42659,9 @@
      "그때 예약받고 퇴근길에 준다"
     ],
     "solution": "메신저 사전 예약 + 퇴근길 픽업",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그때 예약받고 퇴근길에 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -40925,6 +42716,8 @@
     "symptom": "평점 하락",
     "problem": "음식이 아니라 배달 지연 경험이 평점을 깎는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "리뷰 이벤트로 좋은 리뷰 유도",
@@ -40982,7 +42775,9 @@
      "조금 길게 말하고 빨리 주면 만족이 오른다"
     ],
     "solution": "예상 시간 보수적 안내 + 선제 소통",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "조금 길게 말하고 빨리 주면 만족이 오른다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -41040,6 +42835,8 @@
     "symptom": "검색 결과 부족",
     "problem": "검색할 한국어 콘텐츠 자체가 부족하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "검색 알고리즘 개선",
@@ -41112,7 +42909,9 @@
      "묻고 답하게 해 검색 재료를 만든다"
     ],
     "solution": "지식iN 질문·답변",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "묻고 답하게 해 검색 재료를 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -41167,6 +42966,8 @@
     "symptom": "정수기 판매 부진",
     "problem": "목돈과 필터 관리 부담이 구매를 막는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "가격 인하",
@@ -41241,7 +43042,9 @@
      "방문 관리가 관계가 된다"
     ],
     "solution": "렌털 + 방문 관리(코디)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "방문 관리가 관계가 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -41299,6 +43102,8 @@
     "symptom": "팬 경험 분산",
     "problem": "팬과 아티스트를 잇는 공식 공간이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "SNS 계정 운영 강화",
@@ -41371,7 +43176,9 @@
      "커뮤니티·콘텐츠·커머스를 한곳에 모은다"
     ],
     "solution": "자체 팬 플랫폼 위버스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "커뮤니티·콘텐츠·커머스를 한곳에 모은다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -41426,6 +43233,8 @@
     "symptom": "글로벌 흥행작 부재",
     "problem": "검증된 장르 아이디어를 정식 게임으로 만든 곳이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "국내형 RPG 개발",
@@ -41483,7 +43292,9 @@
      "제작자를 데려와 먼저 내고 같이 고친다"
     ],
     "solution": "배틀로얄 정식화 + 얼리 액세스 + 스트리머 확산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "제작자를 데려와 먼저 내고 같이 고친다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -41579,6 +43390,23 @@
     "symptom": "무료 메신저 수익 부재",
     "problem": "사용자가 돈을 낼 만한 '감정 표현'이 비어 있다"
    },
+   "five_why": {
+    "whys": [
+     "왜 메신저로 돈을 못 버나: 무료 서비스다",
+     "왜 수익원이 없나: 사용자가 돈 낼 대상이 없다",
+     "왜 없나: 감정 표현을 상품으로 보지 않았다"
+    ],
+    "root_cause": "돈을 낼 감정 표현 상품이 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "메신저 수익화 필요",
+    "social": "이미지로 감정 표현하는 문화",
+    "technological": "모바일 메신저",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "메신저 유료화",
@@ -41668,7 +43496,9 @@
      "돈을 받고, 공급은 외부 작가에게 연다"
     ],
     "solution": "유료 이모티콘 + 작가 생태계",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "말로 못 하는 마음을 상품으로 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -41852,6 +43682,8 @@
     "symptom": "개인 이메일 부재",
     "problem": "일반인이 쓸 이메일 계정이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "기업용 메일 서버 판매",
@@ -41924,7 +43756,9 @@
      "무료로 주면 가입자 기반이 자산이 된다"
     ],
     "solution": "무료 웹메일",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "무료로 주면 가입자 기반이 자산이 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -41982,6 +43816,8 @@
     "symptom": "이용자 이탈",
     "problem": "사용 환경이 PC에서 모바일로 바뀌었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "PC 기능 고도화",
@@ -42039,7 +43875,9 @@
      "전환 시점을 놓치면 끝난다"
     ],
     "solution": "모바일 전환 실패",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "전환 시점을 놓치면 끝난다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -42098,6 +43936,8 @@
     "symptom": "또래 패션 정보 부족",
     "problem": "일반인 코디를 공유하는 공간이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "패션 잡지 콘텐츠",
@@ -42170,7 +44010,9 @@
      "공유 커뮤니티 위에 구매를 붙인다"
     ],
     "solution": "또래 코디 커뮤니티 + 커머스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공유 커뮤니티 위에 구매를 붙인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -42221,6 +44063,8 @@
     "symptom": "생활 서비스 탐색 어려움",
     "problem": "고객이 여러 전문가에게 견적을 받기 어렵다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "전문가 목록 사이트",
@@ -42293,7 +44137,9 @@
      "견적을 보내는 쪽이 비용을 내게 한다"
     ],
     "solution": "역경매형 견적 매칭",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "견적을 보내는 쪽이 비용을 내게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -42348,6 +44194,8 @@
     "symptom": "현지 투어 불신",
     "problem": "현지 가이드와 여행자를 잇는 신뢰 채널이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "여행사 패키지",
@@ -42420,7 +44268,9 @@
      "후기로 신뢰를 붙인다"
     ],
     "solution": "현지 가이드 투어 마켓플레이스",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "후기로 신뢰를 붙인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -42478,6 +44328,8 @@
     "symptom": "선택 피로",
     "problem": "평균 평점은 내 취향을 반영하지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "전문가 리뷰",
@@ -42550,7 +44402,9 @@
      "예상 별점으로 고르게 한다"
     ],
     "solution": "개인 예상 별점 추천 → 스트리밍",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "예상 별점으로 고르게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -42605,6 +44459,8 @@
     "symptom": "취미 거래 불만",
     "problem": "전문 취미 거래에는 커뮤니티 지식이 필요하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "일반 중고 앱 기능 추가",
@@ -42677,7 +44533,9 @@
      "카테고리별 커뮤니티와 시세를 붙인다"
     ],
     "solution": "취미 특화 중고 거래 + 커뮤니티",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "카테고리별 커뮤니티와 시세를 붙인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -42770,6 +44628,23 @@
     "symptom": "실패한 연구 결과",
     "problem": "접착제는 강해야 한다는 기준으로만 평가했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 접착제가 실패로 보였나: 잘 안 붙는다",
+     "왜 실패인가: 강해야 한다는 기준으로 평가했다",
+     "왜 그 기준인가: 쓸모를 다른 맥락에서 보지 않았다"
+    ],
+    "root_cause": "평가 기준이 쓸모를 가렸다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "연구 투자 회수",
+    "social": "사무실 메모 문화",
+    "technological": "약한 접착제",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "접착력을 높이는 연구 계속",
@@ -42859,7 +44734,9 @@
      "책갈피처럼 떼는 용도에 맞춘다"
     ],
     "solution": "붙였다 떼는 메모지",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "약점을 다른 맥락의 강점으로 읽어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "사무직",
@@ -43043,6 +44920,8 @@
     "symptom": "원래 적응증 실패",
     "problem": "약의 가치를 원래 목표로만 평가했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "협심증 연구 계속",
@@ -43115,7 +44994,9 @@
      "적응증을 바꿔 개발한다"
     ],
     "solution": "적응증 전환",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "적응증을 바꿔 개발한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -43170,6 +45051,8 @@
     "symptom": "주력 제품 수요 소멸",
     "problem": "제품의 가치를 원래 용도로만 보고 있었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "세정제 가격 인하",
@@ -43242,7 +45125,9 @@
      "안전하게 바꿔 장난감으로 판다"
     ],
     "solution": "아동용 점토 장난감 재출시",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "안전하게 바꿔 장난감으로 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -43297,6 +45182,8 @@
     "symptom": "제품 실패 반복",
     "problem": "공기 방울의 진짜 가치(완충)를 쓸 고객을 못 찾았다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "벽지 디자인 개선",
@@ -43354,7 +45241,9 @@
      "깨지기 쉬운 물건 포장에 판다"
     ],
     "solution": "포장용 완충재",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "깨지기 쉬운 물건 포장에 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -43409,6 +45298,8 @@
     "symptom": "이후 성장 정체와 가게 이탈",
     "problem": "할인 고객이 단골이 되지 않아 가게에 손해였다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "지역 가게를 위한 신규 고객 유치",
@@ -43466,7 +45357,9 @@
      "공급자가 손해 보면 떠난다"
     ],
     "solution": "빠른 성장 뒤 가게 이탈로 쇠퇴",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공급자가 손해 보면 떠난다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -43551,6 +45444,23 @@
     "situation": "닷컴 시절 식료품 온라인 배송 회사가 약 10억 달러 규모로 자동화 창고 건설을 계약하고 여러 도시로 동시에 확장했다. 창고는 수요보다 훨씬 크게 지어졌다.",
     "symptom": "파산",
     "problem": "수요가 검증되기 전에 막대한 고정비를 투입했다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 망했나: 손실이 컸다",
+     "왜 컸나: 고정비가 너무 일찍 너무 컸다",
+     "왜 그렇게 했나: 수요 검증 전에 창고를 지었다"
+    ],
+    "root_cause": "수요 검증 전 대규모 투자"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "닷컴 버블의 과잉 투자",
+    "social": "온라인 장보기 초기",
+    "technological": "물류 자동화 비용",
+    "key": [
+     "E"
+    ]
    },
    "hyps": [
     {
@@ -43641,7 +45551,9 @@
      "가볍게 시작해야 했다"
     ],
     "solution": "이른 대규모 물류 투자로 파산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "크게 짓기 전에 작게 증명하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "초기 이용자",
@@ -43820,6 +45732,8 @@
     "symptom": "파산",
     "problem": "상품 단가에 비해 배송비가 너무 컸다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대규모 광고",
@@ -43877,7 +45791,9 @@
      "반복 주문으로 묶어야 했다"
     ],
     "solution": "단위 경제 무시로 파산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "반복 주문으로 묶어야 했다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -43928,6 +45844,8 @@
     "symptom": "서비스 종료",
     "problem": "창작자 보상 구조가 없었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "짧은 영상 형식",
@@ -43985,7 +45903,9 @@
      "공급자 보상이 없으면 형식이 맞아도 진다"
     ],
     "solution": "창작자 이탈로 종료(형식은 이후 다른 곳에서 성공)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공급자 보상이 없으면 형식이 맞아도 진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -44040,6 +45960,8 @@
     "symptom": "괴롭힘 문제로 쇠퇴",
     "problem": "익명성이 괴롭힘과 혐오를 키웠다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "익명으로 솔직하게",
@@ -44112,7 +46034,9 @@
      "부작용을 통제할 장치가 없으면 남지 못한다"
     ],
     "solution": "괴롭힘·혐오 확산으로 종료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "부작용을 통제할 장치가 없으면 남지 못한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -44163,6 +46087,8 @@
     "symptom": "급성장 후 붕괴",
     "problem": "고객 획득 비용과 재고 확장이 매출보다 빨랐다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "디자인 상품 큐레이션",
@@ -44220,7 +46146,9 @@
      "단위 경제 없이 확장하면 무너진다"
     ],
     "solution": "피벗 뒤 확장 실패",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "단위 경제 없이 확장하면 무너진다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -44275,6 +46203,8 @@
     "symptom": "고가 드레스 구매 부담",
     "problem": "옷을 '소유'해야 입을 수 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "할인 판매",
@@ -44349,7 +46279,9 @@
      "세탁·배송을 대신 맡는다"
     ],
     "solution": "드레스 대여 → 의류 구독",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "세탁·배송을 대신 맡는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -44400,6 +46332,8 @@
     "symptom": "중고 의류 공급 부족",
     "problem": "판매자가 들이는 수고가 옷값보다 크다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "중고 거래 앱",
@@ -44472,7 +46406,9 @@
      "봉투만 보내면 대신 판다"
     ],
     "solution": "위탁 판매 대행",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "봉투만 보내면 대신 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -44527,6 +46463,8 @@
     "symptom": "외식·배달 의존",
     "problem": "요리 자체보다 계획과 장보기가 장벽이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "레시피 앱",
@@ -44599,7 +46537,9 @@
      "정량 재료와 레시피를 보낸다"
     ],
     "solution": "밀키트 구독",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "정량 재료와 레시피를 보낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -44694,6 +46634,23 @@
     "symptom": "명상 시장이 작다",
     "problem": "사람들은 명상이 아니라 '잠'과 '불안'을 해결하고 싶다"
    },
+   "five_why": {
+    "whys": [
+     "왜 명상 앱이 잘 안 컸나: 명상 수요가 작다",
+     "왜 사람들이 오나: 잠과 불안 때문이다",
+     "왜 놓쳤나: 명상을 가르친다는 정체성에 갇혔다"
+    ],
+    "root_cause": "실제 방문 이유를 놓쳤다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "웰니스 시장 성장",
+    "social": "불안·수면 문제 증가",
+    "technological": "모바일 오디오",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "명상 앱 할인",
@@ -44768,7 +46725,9 @@
      "잠과 불안을 푸는 콘텐츠로 넓힌다"
     ],
     "solution": "수면 스토리 + 불안 해소 콘텐츠",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "고객이 실제로 오는 이유를 따라가라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -44952,6 +46911,8 @@
     "symptom": "아이디어 수집 불편",
     "problem": "이미지 중심으로 모으고 다시 보는 도구가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "북마크 기능",
@@ -45024,7 +46985,9 @@
      "보드에 모으고 남의 보드를 둘러보게 한다"
     ],
     "solution": "이미지 보드 수집 + 발견",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "보드에 모으고 남의 보드를 둘러보게 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45079,6 +47042,8 @@
     "symptom": "커뮤니티 분산",
     "problem": "누구나 쉽게 관심사 공간을 만들 수 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "대형 포럼 사이트",
@@ -45151,7 +47116,9 @@
      "투표로 좋은 글을 올린다"
     ],
     "solution": "사용자 생성 커뮤니티 + 투표",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "투표로 좋은 글을 올린다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45206,6 +47173,8 @@
     "symptom": "온라인 거래 불신",
     "problem": "결제와 배송 인프라가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "해외 마켓플레이스 모델 그대로",
@@ -45278,7 +47247,9 @@
      "직접 결제와 물류를 만든다"
     ],
     "solution": "장터 + 메르카도파고 + 물류 수직 통합",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "직접 결제와 물류를 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45333,6 +47304,8 @@
     "symptom": "해외 결제 비용",
     "problem": "은행 환율 마진이 불투명하다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "환전소 비교",
@@ -45405,7 +47378,9 @@
      "실시간 환율로 투명하게 바꿔 준다"
     ],
     "solution": "다통화 앱 계좌 + 투명 환율",
-    "mode": "shift"
+    "mode": "shift",
+    "conclusion": "실시간 환율로 투명하게 바꿔 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45460,6 +47435,8 @@
     "symptom": "속옷 선 불만",
     "problem": "얇고 편한 보정 속옷이 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "두꺼운 보정 속옷 개선",
@@ -45534,7 +47511,9 @@
      "스타킹 발을 잘라 낸 발상으로 만든다"
     ],
     "solution": "얇은 보정 속옷",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "스타킹 발을 잘라 낸 발상으로 만든다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45589,6 +47568,8 @@
     "symptom": "고객 의견 단절",
     "problem": "제품 개발이 고객 대화와 분리되어 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "유명인 광고",
@@ -45661,7 +47642,9 @@
      "그 의견으로 만들고 독자를 홍보대사로 쓴다"
     ],
     "solution": "커뮤니티 주도 뷰티 브랜드",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 의견으로 만들고 독자를 홍보대사로 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45716,6 +47699,8 @@
     "symptom": "30일 리텐션 저조",
     "problem": "첫 가치(내 지출 한눈에 보기)를 보기 전에 연동 절차에서 지친다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "푸시 알림 강화",
@@ -45773,7 +47758,9 @@
      "대략 입력 결과를 먼저 보인다"
     ],
     "solution": "대략 입력으로 가치 체험 → 연동",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "대략 입력 결과를 먼저 보인다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45828,6 +47815,8 @@
     "symptom": "유료 전환 저조",
     "problem": "무료와 유료의 경계가 사용자의 '성장 순간'과 맞지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "유료 할인",
@@ -45886,7 +47875,9 @@
      "그 순간에만 유료 벽을 둔다"
     ],
     "solution": "사용 깊이 기준 유료 경계",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 순간에만 유료 벽을 둔다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -45944,6 +47935,8 @@
     "symptom": "수요 부족",
     "problem": "학부모는 낯선 대학생을 믿을 근거가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "학부모 대상 광고",
@@ -46001,7 +47994,9 @@
      "첫 수업 무료와 인증·후기를 한 지역에 모은다"
     ],
     "solution": "신뢰 장치 + 지역 밀도 집중",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "첫 수업 무료와 인증·후기를 한 지역에 모은다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -46056,6 +48051,8 @@
     "symptom": "가입-해지 반복",
     "problem": "구독 이유가 특정 작품 하나에 걸려 있다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "오리지널 작품 더 많이",
@@ -46113,7 +48110,9 @@
      "일정을 설계하고 연간 약정을 권한다"
     ],
     "solution": "분할 공개 일정 + 연간 약정",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "일정을 설계하고 연간 약정을 권한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -46168,6 +48167,8 @@
     "symptom": "매출 편중",
     "problem": "꽃이 '특별한 날 선물'로만 인식된다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "평일 할인",
@@ -46225,7 +48226,9 @@
      "정기 배달로 판다"
     ],
     "solution": "꽃 정기 구독 + B2B 장식",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "정기 배달로 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -46280,6 +48283,8 @@
     "symptom": "해지율 높음",
     "problem": "고객 가게의 생존이 곧 우리 리텐션이다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "장기 약정 할인",
@@ -46352,7 +48357,9 @@
      "가게 매출을 돕는 리포트를 준다"
     ],
     "solution": "매출 분석 사장님 리포트",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "가게 매출을 돕는 리포트를 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -46407,6 +48414,8 @@
     "symptom": "환경 불만",
     "problem": "용기 회수 체계가 없다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "친환경 일회용기",
@@ -46479,7 +48488,9 @@
      "지역이 함께 세척하고 기사가 회수한다"
     ],
     "solution": "지역 공동 세척·회수 인프라",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "지역이 함께 세척하고 기사가 회수한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -46544,6 +48555,8 @@
     "symptom": "텍스트 풀이는 길고 지루해 끝까지 읽지 않는다",
     "problem": "사주 결과를 '정보'가 아니라 몰입되는 '이야기 경험'으로 전달할 방법이 없었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "텍스트 풀이 가격을 낮춘다",
@@ -46601,7 +48614,9 @@
      "웹툰으로 보여 주면 읽는 사주가 보는 이야기가 된다"
     ],
     "solution": "웹툰형 사주 본 상품 + GPT 스토어 무료 사주·타로 유입",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "웹툰으로 보여 주면 읽는 사주가 보는 이야기가 된다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -46719,6 +48734,24 @@
     "situation": "인사혁신처 사무관 출신 정현아 대표(미오스타)가 1인 개발로 웹 사주 서비스 사주아이를 만들었다. 2025년 7월 테스트, 9월 990원 유료화. 앱 설치 없이 웹에서 이름·생년월일을 넣고 연애·재물·직업·신년·월간 운세를 고르며, 고양이 캐릭터와 재화 '츄르' 충전 방식을 쓴다. 광고비 없이 누적 이용자 186만 명, 판매 600만 건, 1년 만에 매출 60억 원을 냈다고 밝혔다.",
     "symptom": "사주를 보고 싶어도 수만 원 상담은 시작 장벽이 높다",
     "problem": "첫 결제의 장벽은 가격 자체보다 '수만 원을 걸어도 될까'라는 위험 판단이었고, 결과를 친구와 나누는 재미가 빠져 있었다"
+   },
+   "five_why": {
+    "whys": [
+     "왜 첫 결제가 안 일어나나: 망설인다",
+     "왜 망설이나: 수만 원을 걸어도 될지 모른다",
+     "왜 모르나: 결과 품질을 미리 알 수 없다"
+    ],
+    "root_cause": "첫 결제의 위험이 크다"
+   },
+   "pest": {
+    "political": "전자상거래 규정",
+    "economic": "경기 불안과 저가 소비",
+    "social": "MZ 사주 놀이 문화",
+    "technological": "생성형 AI로 저원가 리포트",
+    "key": [
+     "T",
+     "S"
+    ]
    },
    "hyps": [
     {
@@ -46856,7 +48889,9 @@
      "990원과 고양이 캐릭터로 가볍게 하고 공유·궁합으로 퍼뜨린다"
     ],
     "solution": "990원 단건 + 츄르 재화 + 고양이 캐릭터 + 공유·궁합 무광고 성장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사주를 무겁게 팔지 말고 가볍게 나누게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "Blind 이용자 후기",
@@ -47102,6 +49137,24 @@
     "symptom": "비슷한 주제끼리 경쟁하며 광고비가 오른다",
     "problem": "고객의 구체적인 고민(재회, 정체성, 성)을 정면으로 다루는 상품이 없었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 사주 광고가 안 먹히나: 다 비슷하다",
+     "왜 비슷한가: 보편 주제만 다룬다",
+     "왜 보편인가: 민감한 주제를 피하는 관행"
+    ],
+    "root_cause": "고객의 구체적 고민을 정면으로 다루지 않는다"
+   },
+   "pest": {
+    "political": "청소년 보호·광고 규제",
+    "economic": "레드오션 광고 단가",
+    "social": "2030 여성의 자기 탐색",
+    "technological": "생성형 AI·숏폼",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "총운 리포트를 더 싸게 판다",
@@ -47221,7 +49274,9 @@
      "니치 주제를 연출·캐릭터·정확도로 판다"
     ],
     "solution": "좁은 주제 + 웹툰·숏폼 + 캐릭터 IP + 계산 정확도",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "모두의 주제가 아니라 그 사람의 고민을 정면으로 다뤄라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "2030 여성 이용자",
@@ -47418,6 +49473,8 @@
     "symptom": "무료 이용자는 많은데 결제로 이어지지 않는다",
     "problem": "무료 운세로 모은 사람을 소수의 유료 콘텐츠로 연결하는 구조가 필요했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "모든 운세를 유료로",
@@ -47475,7 +49532,9 @@
      "공유와 친구 초대로 무료 유입을 키우고 일부만 유료로 판다"
     ],
     "solution": "대부분 무료 + 약 5% 유료 + 공유·궁합 초대",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공유와 친구 초대로 무료 유입을 키우고 일부만 유료로 판다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -47539,6 +49598,8 @@
     "symptom": "AI 풀이만으로는 '내 상황'을 깊이 다뤄 주지 않는다는 불만",
     "problem": "고객이 원하는 것은 정답보다 내 사정을 듣고 답해 주는 경험이었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "AI 풀이를 더 많이 생성한다",
@@ -47596,7 +49657,9 @@
      "검증된 사람과 1:1로 잇는다"
     ],
     "solution": "사람 전문가 비대면 1:1 상담",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "검증된 사람과 1:1로 잇는다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -47661,6 +49724,8 @@
     "symptom": "운세 앱은 매일 쓰는 앱이 아니라 재방문이 약하다",
     "problem": "가끔 보는 운세를 매일 여는 습관으로 바꾸고, 그 트래픽을 상담 매출로 잇는 구조가 필요했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "상담료 할인",
@@ -47718,7 +49783,9 @@
      "그 트래픽을 상담 수수료로 바꾼다"
     ],
     "solution": "무료 일일 운세 + 상담사 수수료 20~40%",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "그 트래픽을 상담 수수료로 바꾼다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -47774,6 +49841,8 @@
     "symptom": "\"이제 돈 주고 사주 볼 필요 없다\"는 인식이 퍼진다",
     "problem": "유료 사주의 가치가 '풀이 문장'에 있다고 보면 무료 AI와 구분되지 않는다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "가격을 무료 AI 수준으로 내린다",
@@ -47831,7 +49900,9 @@
      "결제 전에 계산 정확도를 보여 차이를 드러낸다"
     ],
     "solution": "정확한 명식 계산 + 결정 중심 구성",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "결제 전에 계산 정확도를 보여 차이를 드러낸다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -47895,6 +49966,8 @@
     "symptom": "결제 직전 단계에서 이탈이 많다",
     "problem": "선택 입력란 '회사명'이 고객을 헷갈리게 해 은행 이름을 적었고, 그 결과 카드 주소 확인이 실패했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "결제 단계 할인 쿠폰",
@@ -47952,7 +50025,9 @@
      "칸 하나를 지우는 게 해법이다"
     ],
     "solution": "회사명 입력란 삭제",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "칸 하나를 지우는 게 해법이다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -48016,6 +50091,8 @@
     "symptom": "첫 화면 방문자 대부분이 가입하지 않고 떠난다",
     "problem": "캠프 직원들의 감(가장 좋아한 영상)으로 첫 화면을 정하고 있었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "직원들이 가장 좋아한 영상을 건다",
@@ -48073,7 +50150,9 @@
      "조합을 동시에 시험해 데이터로 고른다"
     ],
     "solution": "버튼 4 × 미디어 6 조합 실험",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "조합을 동시에 시험해 데이터로 고른다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -48137,6 +50216,8 @@
     "symptom": "전문성을 보이려고 어려운 말을 쓴 랜딩이 전환이 낮다",
     "problem": "'전문적으로 보이는 것'과 '이해되는 것'을 혼동했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "문장을 더 길고 자세하게",
@@ -48194,7 +50275,9 @@
      "쉬운 말로 다시 쓴다"
     ],
     "solution": "쉬운 문장 랜딩 재작성",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "쉬운 말로 다시 쓴다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -48259,6 +50342,8 @@
     "symptom": "해지율을 낮추려고 해지 절차를 복잡하게 만들었다",
     "problem": "단기 리텐션 지표를 위해 고객 동의와 해지 권리를 해치는 설계를 했다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "해지 화면에 혜택을 한 번 더 안내",
@@ -48316,7 +50401,9 @@
      "지속 가능한 리텐션은 쉽게 나갈 수 있어도 남는 것이다"
     ],
     "solution": "2025년 FTC 합의, 거액 납부 + 해지 절차 단순화",
-    "mode": "other"
+    "mode": "other",
+    "conclusion": "지속 가능한 리텐션은 쉽게 나갈 수 있어도 남는 것이다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -48381,6 +50468,8 @@
     "symptom": "품절 임박·인기 문구로 예약을 서두르게 했다",
     "problem": "사실과 다른 희소성·인기 표시로 결정을 서두르게 하는 것이 전환율 실험의 '승리안'이 되어 있었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "'지금 예약 시 할인' 문구",
@@ -48438,7 +50527,9 @@
      "정확한 재고와 총액만 보여 준다"
     ],
     "solution": "2019년 압박 판매·숨은 요금 시정 약속",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "정확한 재고와 총액만 보여 준다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -48503,6 +50594,8 @@
     "symptom": "구독 해지·유료 전환 과정의 불만이 이어졌다",
     "problem": "'업계 관행'이던 화면 설계가 법 위반이 되었다"
    },
+   "five_why": null,
+   "pest": null,
    "hyps": [
     {
      "text": "관행대로 유지한다",
@@ -48560,7 +50653,9 @@
      "해지·변경을 가입만큼 쉽게 해야 한다"
     ],
     "solution": "2025년 10월 구독 4개사 첫 제재",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "해지·변경을 가입만큼 쉽게 해야 한다",
+    "conclusion_auto": true
    },
    "pro_opinion": null,
    "anti_opinion": null,
@@ -48666,6 +50761,23 @@
     "symptom": "같은 재회 고민인데 사주 하나로만 보면 금방 '더 볼 게 없다'고 느낀다",
     "problem": "절실한 고민일수록 '다른 각도로 한 번 더' 보고 싶어 하는데, 같은 주제를 다른 해석 체계로 다시 파는 상품이 없었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 재구매가 적은가: 한 번 보고 끝난다",
+     "왜 끝나나: 같은 주제를 다시 팔면 중복이라 여겼다",
+     "왜 아쉬운가: 절실한 고객은 다시 확인하고 싶어 한다"
+    ],
+    "root_cause": "같은 고민을 다른 각도로 볼 상품이 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "재구매가 신규보다 싸다",
+    "social": "이별 후 확신 욕구",
+    "technological": "생성형 AI로 해석 체계 확장",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "재회사주 가격을 낮춘다",
@@ -48755,7 +50867,9 @@
      "해석 체계를 바꾸면 중복이 아니라 확인이 된다"
     ],
     "solution": "재회 전용 자미두수 상품, 재구매율 평균의 2.6배",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "같은 고민도 다른 각도면 새 상품이다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "재회 고민 이용자",
@@ -48979,6 +51093,24 @@
     "symptom": "전문가 상담은 시간 단위라 비싸고, 짧은 궁금증 하나에 돈을 내기 어렵다",
     "problem": "고객이 원하는 것은 '상담 시간'이 아니라 '내 질문 하나의 답'이었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 전문가 상담을 안 사나: 비싸다",
+     "왜 비싼가: 시간 단위로 판다",
+     "왜 문제인가: 고객은 질문 하나의 답만 원한다"
+    ],
+    "root_cause": "가격 단위가 고객 필요와 다르다"
+   },
+   "pest": {
+    "political": "구독 자동 갱신 규제",
+    "economic": "전문가 상담 비용",
+    "social": "즉시 답 요구",
+    "technological": "온라인 매칭",
+    "key": [
+     "P",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "상담을 30분 단위로 싸게 판다",
@@ -49068,7 +51200,9 @@
      "질문 단위로 받고 불만족이면 돌려주면 시도가 쉬워진다"
     ],
     "solution": "질문 1건 단위 결제 + 만족 보장 환불 + 반복 이용자 구독",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "시간이 아니라 답을 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -49291,6 +51425,24 @@
     "symptom": "기업은 AI 챗봇이 실제로 문제를 풀었는지 몰라 비용을 아까워한다",
     "problem": "고객이 사는 것은 답변 개수가 아니라 '해결된 문제'였다"
    },
+   "five_why": {
+    "whys": [
+     "왜 AI 상담 도입을 망설이나: 비용이 불확실하다",
+     "왜 불확실한가: 좌석·사용량으로 과금한다",
+     "왜 맞지 않나: 고객사는 해결된 문제에만 가치를 느낀다"
+    ],
+    "root_cause": "과금 단위가 가치와 다르다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "상담 인건비",
+    "social": "셀프 서비스 선호",
+    "technological": "생성형 AI",
+    "key": [
+     "T",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "상담원 좌석당 월 구독을 받는다",
@@ -49380,7 +51532,9 @@
      "해결될 때만 받으면 도입 저항이 없다"
     ],
     "solution": "해결 1건당 0.99달러",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "일이 줄어든 만큼만 받아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "도입 기업 리뷰어(G2)",
@@ -49604,6 +51758,24 @@
     "symptom": "매일 보는 무료 운세만으로는 매출이 나지 않는다",
     "problem": "운세를 읽은 뒤 생기는 '내 경우는?'이라는 궁금증을 상품으로 만들지 못했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 운세를 읽고 떠나나: 할 게 없다",
+     "왜 없나: 읽기만 할 수 있다",
+     "왜 문제인가: '내 경우는?'이라는 질문이 남는다"
+    ],
+    "root_cause": "읽은 뒤의 질문을 받을 통로가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "무료 앱 수익화",
+    "social": "점성술 놀이 문화",
+    "technological": "생성형 AI",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "프리미엄 월 구독으로 상세 운세를 판다",
@@ -49710,7 +51882,9 @@
      "그 질문을 단위로 판다"
     ],
     "solution": "무료 차트 + 유료 질문권 팩",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "읽은 뒤 남는 질문을 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "직접 써 본 기자",
@@ -49925,6 +52099,23 @@
     "symptom": "처음 보는 상담사에게 돈을 내기 전에 '맞는 사람인지' 알 수 없다",
     "problem": "상담 품질은 써 봐야 아는데 써 보는 비용이 컸다"
    },
+   "five_why": {
+    "whys": [
+     "왜 첫 상담을 망설이나: 비싸다",
+     "왜 비싸게 느끼나: 잘 맞을지 모른다",
+     "왜 모르나: 상담은 써 봐야 아는 경험이다"
+    ],
+    "root_cause": "시도 비용이 크다"
+   },
+   "pest": {
+    "political": "소비자 보호",
+    "economic": "분당 상담 시장",
+    "social": "상담 수요",
+    "technological": "온라인 통화",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "상담료를 낮춘다",
@@ -50014,7 +52205,9 @@
      "첫 몇 분을 무료로 주면 고를 수 있다"
     ],
     "solution": "분당 과금 + 첫 3분 무료 + 입문 상품 + 만족 보장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "맞는 사람을 찾을 때까지 시도를 싸게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -50233,6 +52426,24 @@
     "symptom": "AI 설명 기능이 비싼 상위 등급에 묶여 대부분이 써 보지 못한다",
     "problem": "'왜 틀렸지?'는 모든 학습자가 매번 갖는 질문인데 극소수만 답을 받았다"
    },
+   "five_why": {
+    "whys": [
+     "왜 학습자가 같은 실수를 반복하나: 이유를 모른다",
+     "왜 모르나: 설명을 못 받는다",
+     "왜 못 받나: 설명이 유료 기능이었다"
+    ],
+    "root_cause": "'왜 틀렸나'에 대한 답이 소수에게만 있다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "AI 원가 하락",
+    "social": "학습자의 이유 욕구",
+    "technological": "생성형 AI",
+    "key": [
+     "T",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "Max 가격을 낮춘다",
@@ -50307,7 +52518,9 @@
      "짧은 설명은 무료, 긴 대화만 유료로 둔다"
     ],
     "solution": "짧은 설명 무료 + 대화형 기능 Max 유료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "'왜 틀렸나'를 모두에게 열어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "학습자",
@@ -50525,6 +52738,24 @@
     "symptom": "챗봇 답이 그럴듯하지만 맞는지 확인할 수 없다",
     "problem": "고객은 답 자체보다 '왜 그렇게 말하는지'를 확인하고 싶었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 AI 답을 못 믿나: 틀릴 수 있다",
+     "왜 믿기 어렵나: 확인할 방법이 없다",
+     "왜 없나: 근거가 안 보인다"
+    ],
+    "root_cause": "답의 근거가 보이지 않는다"
+   },
+   "pest": {
+    "political": "저작권 소송",
+    "economic": "검색 광고 시장",
+    "social": "AI 답 불신",
+    "technological": "생성형 AI·검색",
+    "key": [
+     "T",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "더 큰 모델로 정확도를 올린다",
@@ -50599,7 +52830,9 @@
      "모든 답에 번호로 근거를 붙인다"
     ],
     "solution": "근거 인용형 답변 엔진",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "답과 함께 근거를 보여라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -50822,6 +53055,23 @@
     "symptom": "학생들이 Chegg 대신 무료 챗봇에 숙제를 묻는다",
     "problem": "고객이 산 것은 '전문가'가 아니라 '빠른 답'이었고, 그 답은 공짜가 됐다"
    },
+   "five_why": {
+    "whys": [
+     "왜 구독자가 떠나나: 다른 데서 답을 얻는다",
+     "왜 거기서 얻나: AI가 공짜로 답한다",
+     "왜 대체되나: 팔던 것이 답 자체였다"
+    ],
+    "root_cause": "상품이 공짜가 된 답 자체였다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "구독 가격 대비 무료 AI",
+    "social": "학생의 빠른 답 선호",
+    "technological": "생성형 AI 무료화",
+    "key": [
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "구독료를 낮춘다",
@@ -50911,7 +53161,9 @@
      "공짜가 될 부분과 남을 가치를 먼저 갈랐어야 했다"
     ],
     "solution": "대응이 늦어 구독자·매출 감소",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "공짜가 될 것을 팔지 말고 남을 가치를 먼저 찾아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "과거 구독자",
@@ -51124,6 +53376,24 @@
     "symptom": "챗봇이 약관과 다른 약속을 했다",
     "problem": "회사는 챗봇 답변을 자기 말로 여기지 않았다"
    },
+   "five_why": {
+    "whys": [
+     "왜 회사가 배상했나: 챗봇이 틀린 정책을 안내했다",
+     "왜 틀렸나: 정책을 생성형으로 답했다",
+     "왜 위험한가: 고객과 법원은 챗봇 말을 회사 말로 본다"
+    ],
+    "root_cause": "돈이 걸린 정책을 생성해 답했다"
+   },
+   "pest": {
+    "political": "소비자 분쟁·책임 법리",
+    "economic": "상담 비용 절감 압박",
+    "social": "챗봇 답을 회사 말로 믿음",
+    "technological": "생성형 챗봇",
+    "key": [
+     "P",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "챗봇 화면에 '정확하지 않을 수 있음' 문구를 단다",
@@ -51198,7 +53468,9 @@
      "돈이 걸린 정책 답은 생성하지 않고 정해진 문구로 답한다"
     ],
     "solution": "회사 책임 인정, 812.02캐나다달러 배상",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "회사가 지킬 수 없는 말은 챗봇이 하지 않게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -51403,6 +53675,24 @@
     "symptom": "위기에 있는 사람에게 챗봇이 해로운 답을 했다",
     "problem": "민감한 질문을 일반 질문처럼 처리했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 챗봇이 중단됐나: 해로운 조언을 했다",
+     "왜 했나: 민감 질문을 일반 질문처럼 처리했다",
+     "왜 그렇게 설계했나: 비용 절감이 먼저였다"
+    ],
+    "root_cause": "위기 신호를 사람에게 넘기는 장치가 없다"
+   },
+   "pest": {
+    "political": "의료·상담 책임",
+    "economic": "상담 인력 비용",
+    "social": "정신건강 위기 증가",
+    "technological": "챗봇",
+    "key": [
+     "P",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "답변 규칙을 조금 손본다",
@@ -51477,7 +53767,9 @@
      "위기 신호는 사람·기관으로 넘겨야 한다"
     ],
     "solution": "유해 조언 논란으로 챗봇 중단",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "위기의 사람은 기계가 아니라 사람에게 이어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -51703,6 +53995,24 @@
     "symptom": "운세 상담을 하고 싶어도 어디서 누구에게 해야 할지 모른다",
     "problem": "검색으로 생긴 질문을 믿을 만한 사람에게 바로 연결할 길이 없었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 검색으로 고민이 안 풀리나: 일반 정보뿐이다",
+     "왜 부족한가: 내 사정에 맞는 답이 아니다",
+     "왜 없나: 믿을 사람과 바로 이어 주는 길이 없다"
+    ],
+    "root_cause": "검색 질문을 전문가에게 잇는 통로가 없다"
+   },
+   "pest": {
+    "political": "상담 거래 규정",
+    "economic": "오프라인 상담 비용",
+    "social": "대면 부담 회피",
+    "technological": "검색·비대면 통화",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "운세 콘텐츠를 더 많이 노출한다",
@@ -51777,7 +54087,9 @@
      "검색에서 1:1 유료 상담으로 잇는다"
     ],
     "solution": "검색 연결형 1:1 유료 상담(운세·타로 최대)",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "검색 질문을 믿을 사람과의 1:1로 이어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "20대 이용자(언론 인터뷰)",
@@ -52000,6 +54312,23 @@
     "symptom": "챗봇 운세가 인기였지만 회사를 지킬 만큼 벌지 못했다",
     "problem": "대화형 경험은 사랑받았지만 재화 소비 구조와 원가가 맞지 않았다"
    },
+   "five_why": {
+    "whys": [
+     "왜 회사가 버티지 못했나: 손실이 났다",
+     "왜 났나: 많이 쓸수록 원가가 커졌다",
+     "왜 못 메웠나: 재화 가격과 소비 구조가 원가와 맞지 않았다"
+    ],
+    "root_cause": "사랑받는 경험과 원가 구조의 불일치"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "모델 원가와 재화 가격",
+    "social": "대화형 운세 선호",
+    "technological": "챗봇",
+    "key": [
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "하트 가격을 올린다",
@@ -52089,7 +54418,9 @@
      "경험이 맞아도 단위 경제가 안 맞으면 남지 못한다"
     ],
     "solution": "2025년 5월 법인 폐업, 운영사 변경",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사랑받는 경험도 원가가 맞아야 남는다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -52311,6 +54642,23 @@
     "symptom": "이용자는 자기 대화가 챗봇 학습에 쓰일 줄 몰랐다",
     "problem": "수집 목적과 다른 용도로 개인 대화를 썼다"
    },
+   "five_why": {
+    "whys": [
+     "왜 제재를 받았나: 개인정보를 잘못 썼다",
+     "왜 잘못 썼나: 다른 목적으로 모은 대화를 학습에 썼다",
+     "왜 그랬나: 서비스 데이터는 회사 자산이라 여겼다"
+    ],
+    "root_cause": "수집 목적 밖의 데이터 사용"
+   },
+   "pest": {
+    "political": "개인정보보호법",
+    "economic": "학습 데이터 확보 비용",
+    "social": "사적 대화에 대한 민감성",
+    "technological": "대화형 AI",
+    "key": [
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "약관에 학습 활용 문구를 넣는다",
@@ -52385,7 +54733,9 @@
      "답변 외 사용은 별도 동의와 가명 처리 후 한다"
     ],
     "solution": "과징금·과태료 1억 330만 원, 서비스 중단 후 재정비",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "자연스러움보다 동의가 먼저다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -52607,6 +54957,24 @@
     "symptom": "캐릭터 채팅은 인기가 있지만 미성년자 이용과 수익이 동시에 문제다",
     "problem": "성장과 보호를 함께 설계해야 했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 사회적 우려가 커졌나: 청소년이 과몰입한다",
+     "왜 과몰입하나: 이용 시간·결제에 한도가 없다",
+     "왜 없었나: 한도를 걸면 매출이 준다고 봤다"
+    ],
+    "root_cause": "청소년 이용 한도가 없다"
+   },
+   "pest": {
+    "political": "청소년 AI 보호 법안·국감",
+    "economic": "광고·구독 수익",
+    "social": "청소년 과몰입 우려",
+    "technological": "대화형 AI",
+    "key": [
+     "P",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "무료로만 키운다",
@@ -52681,7 +55049,9 @@
      "이용 시간·결제 한도를 먼저 건다"
     ],
     "solution": "광고 무료 + 제타패스 + 10대 이용 한도",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "막지도 방치하지도 말고 한도를 걸어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "10대 이용자",
@@ -52911,6 +55281,24 @@
     "symptom": "이성애 로맨스 중심 플랫폼에서는 BL 이용자의 설정이 자꾸 무너진다",
     "problem": "범용 모델은 이용자를 남성으로 설정해도 '그녀'라고 부르는 등 니치 장르의 규칙을 몰랐다"
    },
+   "five_why": {
+    "whys": [
+     "왜 BL 이용자가 몰입이 깨지나: 캐릭터가 잘못 부른다",
+     "왜 그런가: 범용 모델이 이성애 기본값을 쓴다",
+     "왜 안 고쳐지나: 큰 플랫폼은 니치 장르를 우선순위에서 뺀다"
+    ],
+    "root_cause": "장르 규칙을 모르는 범용 모델"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "마니아 지출",
+    "social": "BL 장르 팬덤",
+    "technological": "대화형 AI 프롬프트 설계",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "일반 로맨스로 선발주자와 경쟁한다",
@@ -53000,7 +55388,9 @@
      "장르 규칙에 맞추면 깊게 쓰는 소수가 생긴다"
     ],
     "solution": "BL 특화 프롬프트·클리셰, 결제자 하루 217분",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "소수 취향의 규칙을 지키면 마니아가 머문다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "BL 이용자 출신 CPO",
@@ -53218,6 +55608,24 @@
     "symptom": "캐릭터 채팅은 단답이 많고 재화가 비싸다는 불만이 크다",
     "problem": "이용자는 '메시지 수'가 아니라 '읽을거리의 양과 질'에 돈을 낸다고 느꼈다"
    },
+   "five_why": {
+    "whys": [
+     "왜 결제 가치가 낮다고 느끼나: 답이 짧다",
+     "왜 짧은가: 채팅은 짧아야 한다는 메신저식 설계",
+     "왜 문제인가: 이용자는 읽을거리에 돈을 낸다"
+    ],
+    "root_cause": "응답이 읽을거리가 되기에 짧다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "긴 응답 원가",
+    "social": "웹소설 읽기 문화",
+    "technological": "장면 생성·일러스트",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "재화 가격을 깎는다",
@@ -53307,7 +55715,9 @@
      "답 하나를 웹소설 한 화로 만든다"
     ],
     "solution": "메시지당 약 2000자 장면 + 분기점 + 일러스트",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "대화가 아니라 읽을거리를 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -53535,6 +55945,24 @@
     "symptom": "무료 채팅만으로는 비용을 감당할 수 없고, 유료를 걸면 이용자가 떠난다",
     "problem": "이용자가 돈을 내고 싶은 순간은 '더 똑똑하게 몰입되는 대화'였다"
    },
+   "five_why": {
+    "whys": [
+     "왜 돈을 안 내나: 무료로 충분하다",
+     "왜 충분한가: 유료와 차이가 작다",
+     "왜 작나: 무료를 막는 데만 집중했다"
+    ],
+    "root_cause": "무료와 유료의 품질 차이가 없다"
+   },
+   "pest": {
+    "political": "청소년·선정성 규제",
+    "economic": "무료 운영 원가",
+    "social": "캐릭터챗 몰입",
+    "technological": "상위 모델",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "대화 횟수를 제한하고 유료로 푼다",
@@ -53624,7 +56052,9 @@
      "기본은 무제한, 상위 모델만 판다"
     ],
     "solution": "무료 무제한 + 프로챗 + 크리에이터 정산",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "무료를 막지 말고 더 좋은 대화를 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -53852,6 +56282,24 @@
     "symptom": "범용 AI 무료화로 이용자는 모았지만 돈을 벌지 못했다",
     "problem": "돈을 내는 수요는 생산성 AI가 아니라 서브컬처 팬덤의 이야기 소비에 있었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 범용 AI로는 돈이 안 되나: 무료 대안이 많다",
+     "왜 많나: 생산성 AI는 상품화됐다",
+     "왜 크랙은 되나: 팬덤은 이야기를 오래 소비하며 쓴 만큼 낸다"
+    ],
+    "root_cause": "돈을 내는 수요가 범용이 아니라 팬덤에 있다"
+   },
+   "pest": {
+    "political": "선정성·청소년 규제",
+    "economic": "종량형 재화 매출",
+    "social": "서브컬처 팬덤",
+    "technological": "대화형 AI",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "범용 AI 구독을 판다",
@@ -53941,7 +56389,9 @@
      "대화량에 비례해 받고 창작자에게 나눈다"
     ],
     "solution": "종량형 재화(크래커) + 창작자 정산 + 서브컬처 IP",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "범용이 아니라 팬덤의 이야기 소비에 맞춰라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "서브컬처 팬",
@@ -54162,6 +56612,24 @@
     "symptom": "국내 캐릭터 채팅은 제타에 밀리고 시장이 작다",
     "problem": "한국에서 검증한 '팬덤이 이야기를 오래 소비하는 구조'를 더 큰 시장에 옮길 수 있는지가 문제였다"
    },
+   "five_why": {
+    "whys": [
+     "왜 해외에서 한국 앱이 안 통하나: 낯설다",
+     "왜 낯선가: 말투와 감성이 현지와 다르다",
+     "왜 그런가: 하나의 브랜드로 번역만 했다"
+    ],
+    "root_cause": "현지 팬덤 감성이 빠져 있다"
+   },
+   "pest": {
+    "political": "국가별 규제",
+    "economic": "해외 시장 규모",
+    "social": "국가별 팬덤 감성",
+    "technological": "번역·현지화",
+    "key": [
+     "S",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "국내 점유율 경쟁에 집중한다",
@@ -54251,7 +56719,9 @@
      "나라별 브랜드와 현지화로 낸다"
     ],
     "solution": "일본 캬라푸·북미 OOC 현지 브랜드, 해외 매출이 국내 추월",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "번역하지 말고 현지 팬덤의 말로 다시 내라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "해외 이용자",
@@ -54474,6 +56944,24 @@
     "symptom": "무단 2차 창작 캐릭터 채팅이 넘쳐 저작권·선정성 문제가 생긴다",
     "problem": "팬은 '진짜 그 캐릭터'와 이야기하고 싶었고, 원작자는 IP가 망가지지 않길 원했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 공식 캐릭터챗이 어려운가: 원작자가 꺼린다",
+     "왜 꺼리나: IP가 망가질까 걱정한다",
+     "왜 걱정하나: 캐릭터가 원작과 다르게 말할 수 있다"
+    ],
+    "root_cause": "공식성과 IP 보호 장치가 없다"
+   },
+   "pest": {
+    "political": "저작권·IP 계약",
+    "economic": "원작 매출 연계",
+    "social": "웹툰 팬덤",
+    "technological": "대화형 AI·안전 테스트",
+    "key": [
+     "S",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "이용자 제작 캐릭터를 무제한 허용한다",
@@ -54563,7 +57051,9 @@
      "원작자 승인과 안전 테스트로 원작 소비로 되돌린다"
     ],
     "solution": "공식 IP 캐릭터챗, 원작 소비 증가",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "팬과 원작자 모두에게 믿음을 줘라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자(언론 보도)",
@@ -54772,6 +57262,23 @@
     "symptom": "매출을 올리려 넣은 게임 장치가 규제와 여론의 표적이 됐다",
     "problem": "대화 서비스에 확률·보상 장치를 붙이면 서비스의 법적 성격이 바뀐다"
    },
+   "five_why": {
+    "whys": [
+     "왜 규제 위험이 생기나: 확률형 이벤트를 붙였다",
+     "왜 위험한가: 게임물·사행성으로 볼 수 있다",
+     "왜 몰랐나: 대화 앱은 게임이 아니라고 여겼다"
+    ],
+    "root_cause": "결제 장치가 서비스의 법적 성격을 바꿨다"
+   },
+   "pest": {
+    "political": "게임물·사행성 규제",
+    "economic": "결제 매출 압력",
+    "social": "선정성 민원",
+    "technological": "확률형 장치",
+    "key": [
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "재화 할인 이벤트를 자주 한다",
@@ -54861,7 +57368,9 @@
      "결제 장치 설계 전에 게임물·사행성 검토가 먼저다"
     ],
     "solution": "확률형 이벤트 게임물·사행성 검토 위험, 미성년자 보호 법안 논의",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "결제 장치가 서비스의 성격을 바꾸지 않게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -55078,6 +57587,23 @@
     "symptom": "이용 시간 1위가 매출 1위가 아니다",
     "problem": "이용 시간과 결제는 다른 지표이고, 수익 모델에 따라 갈린다"
    },
+   "five_why": {
+    "whys": [
+     "왜 이용 시간이 많은데 매출이 적나: 광고형이다",
+     "왜 광고형이 약한가: 이용자당 매출이 작다",
+     "왜 차이가 나나: 수익 모델이 키우는 지표가 다르다"
+    ],
+    "root_cause": "수익 모델과 키울 지표의 불일치"
+   },
+   "pest": {
+    "political": "청소년 보호",
+    "economic": "광고형 대 종량형 수익",
+    "social": "청소년 장시간 이용",
+    "technological": "대화형 AI",
+    "key": [
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "이용 시간을 늘리는 데 집중한다",
@@ -55167,7 +57693,9 @@
      "수익 모델이 무엇을 키울지 정한다"
     ],
     "solution": "제타는 광고형 대량 이용, 크랙은 종량형으로 매출 우위",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "수익 모델이 키울 지표를 먼저 정하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "각 서비스 이용자",
@@ -55402,6 +57930,24 @@
     "symptom": "무료로 이용자는 많은데 매출이 거의 없었다",
     "problem": "돈을 낼 이유가 '더 많이'가 아니라 '더 잘'에 있었는데, 무료와 유료의 차이가 없었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 유료 전환이 안 되나: 무료와 비슷하다",
+     "왜 비슷한가: 더 많이만 팔았다",
+     "왜 문제인가: 이용자는 더 잘을 원한다"
+    ],
+    "root_cause": "유료의 품질 차이가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "무료 원가",
+    "social": "몰입 품질 요구",
+    "technological": "상위 모델 차이",
+    "key": [
+     "T",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "무료 대화 횟수를 줄이고 횟수를 판다",
@@ -55491,7 +58037,9 @@
      "더 많이가 아니라 더 잘을 판다"
     ],
     "solution": "기본 무료 + 상위 모델 슈퍼챗 유료",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "더 많이가 아니라 더 잘을 팔아라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "유료 이용자",
@@ -55717,6 +58265,24 @@
     "symptom": "범용 AI 앱 안에 있으면 캐릭터챗 이용자에게 맞춘 결제·마케팅을 할 수 없다",
     "problem": "무료 범용 AI 이용자와 돈을 내는 서브컬처 팬은 다른 고객이었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 결제가 묻혔나: 범용 이용자와 섞였다",
+     "왜 섞였나: 한 앱에 다 담았다",
+     "왜 문제인가: 돈 내는 팬은 이야기 공간을 원한다"
+    ],
+    "root_cause": "다른 고객이 한 앱에 섞여 있다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "결제 중심 매출",
+    "social": "팬덤 공간 선호",
+    "technological": "앱 분리",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "범용 앱 안에 탭으로 둔다",
@@ -55806,7 +58372,9 @@
      "팬만을 위한 앱으로 분리한다"
     ],
     "solution": "별도 앱 분리 + 종량형, MAU 감소에도 매출 증가",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "돈 내는 고객을 위한 공간을 따로 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "팬 이용자",
@@ -56033,6 +58601,24 @@
     "symptom": "인기 창작자가 여러 플랫폼에 같은 캐릭터를 올려 차별이 사라진다",
     "problem": "콘텐츠 공급이 플랫폼 경쟁력인데 창작자를 붙잡을 장치가 약했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 좋은 창작자가 떠나나: 보상이 작다",
+     "왜 작나: 앱 재화로만 준다",
+     "왜 문제인가: 생계가 되려면 현금이 필요하다"
+    ],
+    "root_cause": "창작자 보상이 현금화되지 않는다"
+   },
+   "pest": {
+    "political": "정산·세무 규정",
+    "economic": "창작자 생계",
+    "social": "창작자 커뮤니티",
+    "technological": "캐릭터 제작 도구",
+    "key": [
+     "E",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "회사가 오리지널 콘텐츠를 더 만든다",
@@ -56137,7 +58723,9 @@
      "현금화와 독점작 정산 상향으로 묶는다"
     ],
     "solution": "창작자 정산 + 현금화 + 독점작 정산 상향",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "창작자가 생계를 꾸리게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "창작자",
@@ -56355,6 +58943,24 @@
     "symptom": "대화가 길어지면 캐릭터가 설정과 과거 사건을 잊는다",
     "problem": "이용자가 가장 화나는 순간은 답이 틀릴 때보다 '나를 잊을 때'였다"
    },
+   "five_why": {
+    "whys": [
+     "왜 이용자가 화를 내나: 캐릭터가 나를 잊는다",
+     "왜 잊나: 맥락 길이에 한계가 있다",
+     "왜 방치됐나: 기억은 기본 기능이라 따로 설계하지 않았다"
+    ],
+    "root_cause": "장기 기억 설계가 없다"
+   },
+   "pest": {
+    "political": "개인정보",
+    "economic": "기억 저장 원가",
+    "social": "관계 애착",
+    "technological": "장기 기억 기술",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "맥락 창을 늘린다",
@@ -56444,7 +59050,9 @@
      "기억을 층으로 관리하고 강화를 판다"
     ],
     "solution": "다층 기억 + 기억 강화 유료 기능",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "나를 기억하는 것이 관계의 시작이다",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -56667,6 +59275,24 @@
     "symptom": "청소년 과몰입·선정성 민원과 국정감사 압박이 커졌다",
     "problem": "성장이 청소년 이용에 기대는 동안 보호 장치는 뒤처졌다"
    },
+   "five_why": {
+    "whys": [
+     "왜 비판받나: 청소년 보호가 약하다",
+     "왜 약한가: 성장이 청소년 이용에 기댄다",
+     "왜 늦었나: 막지 않으면 보호가 아니라고 봐서 차단 말고 대안을 못 찾았다"
+    ],
+    "root_cause": "보호와 이용을 함께 둘 장치가 없다"
+   },
+   "pest": {
+    "political": "청소년 AI 보호 법안·국감",
+    "economic": "청소년 결제 매출",
+    "social": "과몰입 여론",
+    "technological": "PASS 인증·필터",
+    "key": [
+     "P",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "약관에 연령 제한을 적는다",
@@ -56756,7 +59382,9 @@
      "인증과 자율 가이드라인으로 신뢰를 쌓는다"
     ],
     "solution": "청소년 하루 3시간·월 10만 원 상한 + 보호자 동의 + 인증",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "차단 대신 상한과 가족 동의를 둬라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "보호자",
@@ -56997,6 +59625,23 @@
     "symptom": "북미 캐릭터챗 시장은 Character.AI·Talkie 등으로 붐볐다",
     "problem": "'또 하나의 AI 친구 앱'으로는 눈에 띌 수 없었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 북미에서 눈에 안 띄나: 비슷한 앱이 많다",
+     "왜 비슷해 보이나: AI 친구 앱으로 소개된다",
+     "왜 문제인가: 범주 이름이 비교 대상을 정한다"
+    ],
+    "root_cause": "범주 정의가 경쟁 앱과 같다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "북미 시장 규모",
+    "social": "애니·웹소설 팬덤",
+    "technological": "대화형 AI",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "Character.AI와 같은 '동반자 채팅'으로 경쟁한다",
@@ -57101,7 +59746,9 @@
      "플레이 가능한 애니로 이야기 상품이 된다"
     ],
     "solution": "범주 재정의 + 현지 브랜드 + 크레딧·시즌 팩",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "범주 이름을 바꿔 비교 대상을 바꿔라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "북미 이용자",
@@ -57329,6 +59976,24 @@
     "symptom": "매출이 늘수록 모델 호출비·앱 마켓 수수료·광고비도 같이 커진다",
     "problem": "종량형 AI 엔터는 매출과 원가가 함께 늘어, 단위 경제가 맞는지가 핵심이었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 적자인가: 원가가 크다",
+     "왜 큰가: 많이 쓸수록 모델 호출이 는다",
+     "왜 못 줄이나: 최고 모델 하나를 쓰는 것이 품질이라 여겼다"
+    ],
+    "root_cause": "이용량에 비례하는 원가 구조"
+   },
+   "pest": {
+    "political": "상장 공시",
+    "economic": "모델 원가와 적자",
+    "social": "해당 적음",
+    "technological": "다중 모델 조합",
+    "key": [
+     "E",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "가격을 올린다",
@@ -57418,7 +60083,9 @@
      "상황별로 모델을 섞어 단위 경제를 맞춘다"
     ],
     "solution": "다중 모델 조합 + 종량형 + 해외 확장, 아직 적자",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "많이 쓸수록 손해 보지 않는 원가 구조를 먼저 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -57647,6 +60314,24 @@
     "symptom": "앱 결제는 마켓 수수료 때문에 같은 재화를 더 비싸게 팔아야 한다",
     "problem": "원가(모델 호출·마켓 수수료)가 메시지 길이와 결제 채널에 따라 달라지는데, 가격표가 이를 감추면서도 남겨야 했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 마진이 흔들리나: 원가가 제각각이다",
+     "왜 제각각인가: 채널 수수료와 응답 길이가 다르다",
+     "왜 안 보이나: 가격표가 원가 차이를 감춘다"
+    ],
+    "root_cause": "가격이 원가 차이를 반영하지 않는다"
+   },
+   "pest": {
+    "political": "앱 마켓 결제 정책",
+    "economic": "마켓 수수료·원가",
+    "social": "가격 공정성 인식",
+    "technological": "응답 등급 차감",
+    "key": [
+     "E",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "큰 묶음일수록 크게 할인한다",
@@ -57751,7 +60436,9 @@
      "할인을 첫 구매·시즌으로 한정하고 응답 등급별로 차감한다"
     ],
     "solution": "국가·채널별 가격표 + 첫 구매·시즌 할인 + 등급별 차감",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "가격이 원가 차이를 감추지 않게 하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -57987,6 +60674,24 @@
     "symptom": "사주 광고비는 오르는데 2030 여성이 사주를 처음 검색하는 순간을 잡지 못한다",
     "problem": "2030 여성의 사주 진입 관심사는 '운명'보다 '내 매력·외모·연애'였는데, 사주 업계 콘텐츠는 총운·재물 중심이었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 검색 유입이 비싼가: 같은 키워드에 입찰한다",
+     "왜 같은가: 모두 '사주'로만 경쟁한다",
+     "왜 그런가: 2030 여성의 첫 관심(매력)을 놓쳤다"
+    ],
+    "root_cause": "고객의 진입 관심사와 키워드가 다르다"
+   },
+   "pest": {
+    "political": "연예인 퍼블리시티",
+    "economic": "키워드 광고 단가",
+    "social": "MBTI 이후 유형 콘텐츠 소비",
+    "technological": "블로그 SEO",
+    "key": [
+     "S",
+     "E"
+    ]
+   },
    "hyps": [
     {
      "text": "검색 광고 입찰가를 올린다",
@@ -58076,7 +60781,9 @@
      "그 언어로 검색 입구를 만든다"
     ],
     "solution": "매력·연애 언어 SEO 블로그 + 셀럽·MBTI 글",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "고객이 처음 궁금해하는 말로 입구를 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "2030 여성 독자",
@@ -58309,6 +61016,23 @@
     "symptom": "온라인 사주는 화면 속 글이라 브랜드를 기억하고 말할 계기가 적다",
     "problem": "사주는 원래 '점집에 가는 경험'이었는데 온라인 서비스는 그 경험과 공유거리를 잃었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 기억에 안 남나: 화면 속 글이다",
+     "왜 약한가: 가 본 경험이 없다",
+     "왜 없나: 온라인 사주가 점집 경험을 잃었다"
+    ],
+    "root_cause": "경험과 공유거리가 없다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "오프라인 임대 비용",
+    "social": "MZ 무속 콘텐츠 유행",
+    "technological": "NFC 굿즈",
+    "key": [
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "온라인 광고를 늘린다",
@@ -58398,7 +61122,9 @@
      "공간과 굿즈로 인증거리를 만든다"
     ],
     "solution": "백화점 팝업 'AI 신당' + NFC 굿즈 + 해시태그",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "사주를 다시 가 보는 경험으로 만들어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "팝업 방문객",
@@ -58625,6 +61351,24 @@
     "symptom": "빨리 큰 AI 사주일수록 '계산부터 틀렸다'는 후기가 신뢰를 깎는다",
     "problem": "사주 고객이 가장 먼저 확인하는 것은 해석이 아니라 내 일간·명식이 맞는지였고, 틀리면 나머지 전부를 믿지 않았다"
    },
+   "five_why": {
+    "whys": [
+     "왜 환불·불만이 나오나: 결과를 못 믿는다",
+     "왜 못 믿나: 명식이 틀렸다",
+     "왜 틀렸나: 만세력 계산(절기·시각)이 부정확했다"
+    ],
+    "root_cause": "계산 정확도 부족"
+   },
+   "pest": {
+    "political": "전자상거래법 청약철회",
+    "economic": "환불 비용",
+    "social": "사주를 아는 고객 증가",
+    "technological": "범용 AI 만세력 오류",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "해석 문장을 더 길고 그럴듯하게 만든다",
@@ -58714,7 +61458,9 @@
      "계산을 보정하고 명식을 먼저 보여야 한다"
     ],
     "solution": "전문가 협업·천문 데이터로 만세력 보정, 재구매율 약 35%",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "해석보다 계산을 먼저 맞춰라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "재구매 고객",
@@ -58931,6 +61677,24 @@
     "symptom": "AI 사주는 누가 말하는지 얼굴이 없어 다 비슷해 보인다",
     "problem": "사주 고객은 '누가 봐 줬는지'로 신뢰와 재방문을 정하는데, AI 서비스에는 해석자가 없었다"
    },
+   "five_why": {
+    "whys": [
+     "왜 다시 안 찾나: 다 비슷해 보인다",
+     "왜 비슷한가: 해석자가 없다",
+     "왜 없나: AI는 중립 문체여야 한다고 여겼다"
+    ],
+    "root_cause": "해석자에게 얼굴이 없다"
+   },
+   "pest": {
+    "political": "AI 기본법 생성물 표시",
+    "economic": "캐릭터 제작 비용",
+    "social": "캐릭터 IP 소비",
+    "technological": "생성형 이미지·숏폼",
+    "key": [
+     "S",
+     "T"
+    ]
+   },
    "hyps": [
     {
      "text": "실존 역술가를 모델로 섭외한다",
@@ -59020,7 +61784,9 @@
      "해석자에게 얼굴과 말투를 준다"
     ],
     "solution": "무당 캐릭터 IP + 웹툰·숏폼",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "해석자에게 얼굴과 말투를 줘라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -59244,6 +62010,24 @@
     "symptom": "연애·궁합 주제는 이미 붐벼 차별이 어렵다",
     "problem": "고객이 진짜 궁금하지만 묻기 민망한 주제(성향·속궁합·정체성)는 아무도 정면으로 다루지 않았다"
    },
+   "five_why": {
+    "whys": [
+     "왜 연애 상품이 차별이 안 되나: 붐빈다",
+     "왜 붐비나: 모두 같은 주제를 다룬다",
+     "왜 비켜 가나: 민망한 주제는 피하는 관행"
+    ],
+    "root_cause": "묻기 민망한 고민을 다루지 않는다"
+   },
+   "pest": {
+    "political": "청소년 보호·앱 마켓 정책",
+    "economic": "니치 광고 효율",
+    "social": "금기 주제 개방",
+    "technological": "간편 본인인증",
+    "key": [
+     "P",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "연애운 리포트를 싸게 판다",
@@ -59333,7 +62117,9 @@
      "성인 대상으로 정면으로 판다(연령 확인·규제 위험 동반)"
     ],
     "solution": "29금·퀴어·속궁합 니치 상품",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "묻기 민망한 고민에 혼자 볼 곳을 줘라(연령 확인 동반)",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -59562,6 +62348,24 @@
     "symptom": "사주 시장은 레드오션이라 광고 효율 싸움이 된다",
     "problem": "이기려면 수요가 있는 주제를 빨리 찾고, 소재를 많이 만들어 빨리 버리는 실험 속도가 필요했다"
    },
+   "five_why": {
+    "whys": [
+     "왜 성장이 느렸나: 처음 서비스(멘탈 헬스) 수요가 작았다",
+     "왜 바꿨나: 이용자가 사주를 가장 많이 찾았다",
+     "왜 빨라졌나: 주제·소재를 대량으로 시험했다"
+    ],
+    "root_cause": "수요가 있는 곳과 하던 일이 달랐다"
+   },
+   "pest": {
+    "political": "해당 적음",
+    "economic": "투자 없이 성장",
+    "social": "사주 수요 증가",
+    "technological": "생성형 소재 제작",
+    "key": [
+     "T",
+     "S"
+    ]
+   },
    "hyps": [
     {
      "text": "대규모 투자를 받아 광고를 늘린다",
@@ -59651,7 +62455,9 @@
      "피벗하고 주제·소재를 빠르게 실험한다"
     ],
     "solution": "사주 피벗 + 니치 포트폴리오 + 생성형 소재 실험, 무투자 성장",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "고객이 찾는 주제로 옮기고 빠르게 시험하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "이용자",
@@ -59876,6 +62682,24 @@
     "symptom": "같은 사주 결과를 보여 줘도 어떤 사용자는 가볍게 떠나고 어떤 사용자는 결제한다",
     "problem": "사용자의 감정 상태(가벼운 호기심 대 절박한 불안)에 따라 맞는 화면 문법이 다른데, 대부분 서비스는 한 가지 화면만 쓴다"
    },
+   "five_why": {
+    "whys": [
+     "왜 같은 결과에 반응이 다른가: 사람마다 상태가 다르다",
+     "왜 다른가: 호기심과 불안은 원하는 것이 다르다",
+     "왜 못 맞추나: 화면을 한 가지 문법으로만 만든다"
+    ],
+    "root_cause": "화면이 고객의 감정 상태를 모른다"
+   },
+   "pest": {
+    "political": "다크패턴 규제",
+    "economic": "운세 앱 결제 매출",
+    "social": "불안과 호기심의 공존",
+    "technological": "개인화 랜딩",
+    "key": [
+     "S",
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "한 가지 화면 톤으로 모든 사용자를 받는다",
@@ -59965,7 +62789,9 @@
      "탐색형과 진단형으로 문법을 나눈다"
     ],
     "solution": "포스텔러 탐색·공감형, 점신 진단·확신형",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "고객의 마음 상태에 맞는 화면으로 말 걸어라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "포스텔러·점신 이용자",
@@ -60178,6 +63004,23 @@
     "symptom": "결제 화면 전환율을 올리는 흔한 장치(카운트다운, 미리 체크된 옵션, 나중에 붙는 금액)가 이제 법 위반이 될 수 있다",
     "problem": "운세 결제 화면은 '지금 아니면 못 본다'식 긴급성 장치를 많이 썼는데, 이 중 상당수가 금지 유형과 겹친다"
    },
+   "five_why": {
+    "whys": [
+     "왜 제재 위험이 커졌나: 법이 바뀌었다",
+     "왜 걸리나: 결제 화면에 긴급성 장치가 많다",
+     "왜 많았나: 전환율 실험에서 이겼기 때문이다"
+    ],
+    "root_cause": "전환율만 보는 화면 설계"
+   },
+   "pest": {
+    "political": "개정 전자상거래법(2025)",
+    "economic": "환불·제재 비용",
+    "social": "소비자 권리 의식",
+    "technological": "결제 화면 설계",
+    "key": [
+     "P"
+    ]
+   },
    "hyps": [
     {
      "text": "가짜 카운트다운·한정 할인으로 결제를 서두르게 한다",
@@ -60267,7 +63110,9 @@
      "총액·조건을 먼저 보이는 것이 기준이 됐다"
     ],
     "solution": "2025년 전자상거래법 다크패턴 13개 유형 금지",
-    "mode": "break"
+    "mode": "break",
+    "conclusion": "속여서 얻는 전환보다 정직한 거래를 택하라",
+    "conclusion_auto": false
    },
    "pro_opinion": {
     "who": "소비자",
