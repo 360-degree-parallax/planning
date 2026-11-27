@@ -19741,18 +19741,18 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "승객",
-    "says": "거부 없이 조용히 간다",
+    "who": "쏘카 대표(이재웅)",
+    "says": "국민 3분의 2 찬성, 150만 이용자가 금지에 반대했다",
     "reveals": "서비스 경험이 가치다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.ajunews.com/view/20191208125959060",
+    "inferred": false
    },
    "anti_opinion": {
-    "who": "택시 업계",
-    "says": "불법 영업이다",
+    "who": "국회·택시 업계",
+    "says": "여객운수법 개정(타다 금지법)으로 베이직 서비스가 2020년 4월 멈췄다",
     "reveals": "규제 갈등이 사업을 멈춘다",
-    "source": null,
-    "inferred": true
+    "source": "https://www.hankyung.com/amp/2020031301741",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "서비스 품질 대 기존 규제",
@@ -26792,9 +26792,9 @@
    },
    "pareto": {
     "vital_few": "좌회전 대기",
-    "effect": "공회전 손실의 상당 부분",
-    "source": null,
-    "inferred": true,
+    "effect": "연 약 1천만 갤런 연료 절감(UPS 추산)",
+    "source": "https://qz.com/895691/ups-drivers-dont-turn-left-and-it-saves-them-10-million-gallons-of-gas-a-year",
+    "inferred": false,
     "matrix": [
      {
       "branch": "차량",
@@ -27015,11 +27015,11 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "의사",
-    "says": "수혈이 늦지 않았다",
+    "who": "와튼 연구진",
+    "says": "드론 배송 병원에서 산후출혈 산모 사망 51% 감소, 혈액 폐기 40% 감소",
     "reveals": "속도가 생명이다",
-    "source": null,
-    "inferred": true
+    "source": "https://knowledge.wharton.upenn.edu/article/how-rwanda-is-using-drones-to-improve-health-care/",
+    "inferred": false
    },
    "anti_opinion": {
     "who": "비평가",
@@ -27896,11 +27896,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "기사",
-    "says": "가맹 택시에 콜을 몰아준다",
+    "who": "공정위",
+    "says": "경쟁 가맹택시 콜을 막아 과징금 724억원(가맹 점유율 51%→79%)",
     "reveals": "공정성 논란",
-    "source": null,
-    "inferred": true
+    "source": "https://biz.sbs.co.kr/amp/article/20000194364",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "무료 이용 대 수익",
@@ -30911,11 +30911,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "보안 전문가",
-    "says": "보안이 허술했다",
+    "who": "창업자(에릭 위안)",
+    "says": "개인정보·보안 기대에 못 미쳤다며 사과하고 신기능 개발을 멈췄다(줌바밍)",
     "reveals": "성장 중 보안 이슈",
-    "source": null,
-    "inferred": true
+    "source": "https://www.itpro.com/software/video-conferencing/355229/zoom-we-moved-too-fast",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "기능 대 쉬움",
@@ -33002,11 +33002,11 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "창업자",
-    "says": "이메일 시간이 절반으로 줄었다",
-    "reveals": "시간 절약이 가치다",
-    "source": null,
-    "inferred": true
+    "who": "창업자(라훌 보라)",
+    "says": "매우 아쉽다는 응답을 22%에서 40% 넘게 끌어올리는 데 집중했다",
+    "reveals": "시간 절약에 돈 낼 핵심 고객이 있다",
+    "source": "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit",
+    "inferred": false
    },
    "anti_opinion": {
     "who": "사용자",
@@ -33136,9 +33136,9 @@
       "survey",
       "interview"
      ],
-     "how": "제품-시장 적합성 설문(40% 기준)",
-     "source": null,
-     "inferred": true
+     "how": "제품-시장 적합성 설문(매우 아쉽다 40% 기준)",
+     "source": "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit",
+     "inferred": false
     }
    },
    "analysis_full": true,
@@ -33288,11 +33288,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "재무",
-    "says": "청구서가 너무 크다",
+    "who": "고객(코인베이스)",
+    "says": "한 해 6500만 달러 청구서를 받고 자체 도구로 옮기려 했다",
     "reveals": "사용량 비용 관리",
-    "source": null,
-    "inferred": true
+    "source": "https://newsletter.pragmaticengineer.com/p/datadogs-65myear-customer-mystery",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "팀별 전문성 대 통합",
@@ -36210,11 +36210,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "받는 사람",
-    "says": "링크 보내는 게 무례하게 느껴진다",
+    "who": "전 페이스북 VP(샘 레신)",
+    "says": "캘린들리 링크는 내가 더 중요하다는 사회적 자본 과시다",
     "reveals": "예절 논란",
-    "source": null,
-    "inferred": true
+    "source": "https://theamericangenius.com/?p=147080",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "상대 존중 대 조율 시간",
@@ -52479,11 +52479,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "시청자",
-    "says": "무료 영상이 넘치는데 왜 돈을 내나",
+    "who": "창업자(카첸버그·휘트먼)",
+    "says": "아이디어가 단독 스트리밍을 정당화할 만큼 강하지 않았거나 타이밍 탓이라고 밝혔다",
     "reveals": "대체재",
-    "source": null,
-    "inferred": true
+    "source": "https://www.pbs.org/newshour/arts/short-video-app-quibi-shutting-down-just-months-after-launch",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "고품질 콘텐츠 대 짧은 모바일 시청",
@@ -61511,11 +61511,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "분석가",
-    "says": "발명하고도 놓쳤다",
+    "who": "발명자(스티브 새슨)",
+    "says": "경영진은 누가 사진을 TV로 보겠냐며 디지털 카메라 잠재력을 보지 못했다",
     "reveals": "자기 잠식 회피",
-    "source": null,
-    "inferred": true
+    "source": "https://petapixel.com/2017/09/21/kodak-said-digital-photography-1975/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "필름 수익 대 디지털 전환",
@@ -62067,11 +62067,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "기자",
-    "says": "손으로 짜도 똑같다",
+    "who": "블룸버그 기자",
+    "says": "손으로 짜니 1분 30초에 7.5온스, 기계는 2분에 8온스였다",
     "reveals": "가치 없음",
-    "source": null,
-    "inferred": true
+    "source": "https://www.snopes.com/2017/04/19/juicer-two-hands/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "신선함 대 가격",
@@ -62617,11 +62617,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "일반인",
-    "says": "몰래 찍힐까 불안하다",
+    "who": "술집·식당",
+    "says": "몰래 촬영이 불안해 샌프란시스코 등 10여 곳이 착용 금지(글래스홀)",
     "reveals": "사회적 거부",
-    "source": null,
-    "inferred": true
+    "source": "https://www.cbsnews.com/sanfrancisco/news/website-tracks-growing-number-of-sf-bars-banning-google-glass/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "손 자유로운 정보 대 주변 사생활",
@@ -72817,18 +72817,18 @@
     "conclusion_auto": false
    },
    "pro_opinion": {
-    "who": "여행자",
-    "says": "짐 없이 가니 정말 싸다",
+    "who": "라이언에어 CEO(마이클 오리어리)",
+    "says": "수하물·체크인 요금으로 승객 행동을 바꿔 운임을 낮춘다",
     "reveals": "선택형 가격",
-    "source": null,
-    "inferred": true
+    "source": "https://qz.com/ryanair-easyjet-budget-airlines-abusive-luggage-fees-1851705790",
+    "inferred": false
    },
    "anti_opinion": {
-    "who": "여행자",
-    "says": "추가 요금이 너무 많다",
+    "who": "스페인 소비자부",
+    "says": "기내 가방·좌석 등 부가 요금이 남용이라며 과징금 1억 800만 유로",
     "reveals": "숨은 요금 불만",
-    "source": null,
-    "inferred": true
+    "source": "https://www.gulf-times.com/article/695443/business/spain-hits-budget-airlines-with-historic-179mn-fines-for-abusive-practices",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "초저가 대 수익",
@@ -76333,11 +76333,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "소비자",
-    "says": "가장 싼 차라 부끄럽다",
+    "who": "라탄 타타",
+    "says": "가장 싼 차로 브랜딩한 것이 가장 큰 실수, 사람들은 싼 차와 엮이길 원하지 않았다",
     "reveals": "정체성 손상",
-    "source": null,
-    "inferred": true
+    "source": "https://www.business-standard.com/article/news-ians/branding-nano-as-cheap-car-was-wrong-tata-115071500527_1.html",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "초저가 대 지위 상징",
@@ -76885,11 +76885,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "분석가",
-    "says": "소프트웨어를 놓쳤다",
+    "who": "노키아 CEO(스티븐 엘롭)",
+    "says": "경쟁사는 기기가 아니라 생태계로 점유율을 가져간다, 우리는 불타는 플랫폼 위에 있다",
     "reveals": "축 변화 놓침",
-    "source": null,
-    "inferred": true
+    "source": "https://www.engadget.com/2011/02/08/nokia-ceo-stephen-elop-rallies-troops-in-brutally-honest-burnin/",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "하드웨어 강점 대 소프트웨어 생태계",
@@ -93178,9 +93178,9 @@
    },
    "pareto": {
     "vital_few": "회사명 입력란",
-    "effect": "결제 실패의 상당 부분",
-    "source": null,
-    "inferred": true,
+    "effect": "연 1200만 달러 이익 회복",
+    "source": "https://flowingdata.com/2010/11/05/simple-analysis-makes-expedia-extra-12m",
+    "inferred": false,
     "matrix": [
      {
       "branch": "결제 수단",
@@ -93257,9 +93257,9 @@
      "methods": [
       "quant"
      ],
-     "how": "결제 실패 데이터 분석",
-     "source": null,
-     "inferred": true
+     "how": "구매 버튼 이후 실패 거래 분석(SAS)",
+     "source": "https://flowingdata.com/2010/11/05/simple-analysis-makes-expedia-extra-12m",
+     "inferred": false
     }
    },
    "analysis_full": true,
@@ -93750,9 +93750,9 @@
    },
    "pareto": {
     "vital_few": "문장 난이도",
-    "effect": "전환 차이의 상당 부분",
-    "source": null,
-    "inferred": true,
+    "effect": "초등 5~7학년 수준 랜딩이 전문가 수준보다 전환 약 2배",
+    "source": "https://prnewswire.com/news-releases/unbounces-2024-conversion-benchmark-report-proves-that-attention-spans-are-declining-and-so-are-conversion-rates-302239407.html",
+    "inferred": false,
     "matrix": [
      {
       "branch": "디자인",
@@ -93830,9 +93830,9 @@
       "quant",
       "experiment"
      ],
-     "how": "랜딩 4만여 개 분석과 A/B 테스트",
-     "source": null,
-     "inferred": true
+     "how": "랜딩 4만 1천여 개·전환 5700만 건 분석",
+     "source": "https://prnewswire.com/news-releases/unbounces-2024-conversion-benchmark-report-proves-that-attention-spans-are-declining-and-so-are-conversion-rates-302239407.html",
+     "inferred": false
     }
    },
    "analysis_full": true,
@@ -94281,11 +94281,11 @@
     "inferred": true
    },
    "anti_opinion": {
-    "who": "규제 기관",
-    "says": "소비자를 압박했다",
+    "who": "영국 CMA",
+    "says": "객실 잔여·인기를 거짓으로 보여 예약을 서두르게 한 압박 판매를 고치도록 약속을 받았다",
     "reveals": "신뢰와 법 위반",
-    "source": null,
-    "inferred": true
+    "source": "https://www.gov.uk/government/news/hotel-booking-sites-to-make-major-changes-after-cma-probe",
+    "inferred": false
    },
    "trade_on": {
     "tradeoff": "전환율 대 정직한 표시",
@@ -94328,9 +94328,9 @@
    },
    "pareto": {
     "vital_few": "허위 희소성 표시",
-    "effect": "규제 위험의 대부분",
-    "source": null,
-    "inferred": true,
+    "effect": "점검한 남은 방 1개 표시 10건 중 5건이 부정확(Which?)",
+    "source": "https://www.which.co.uk/news/2019/09/booking-com-still-misleading-holidaymakers-with-1-room-left-claims/",
+    "inferred": false,
     "matrix": [
      {
       "branch": "압박 표시",
