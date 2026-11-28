@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>기획 공부 — 프레임워크</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="framework">
+<nav class="topnav" aria-label="메뉴">
+  <a href="index.html">이론</a>
+  <a href="reports.html">시장 리포트</a>
+  <a href="db.html">기획 사례</a>
+  <a href="saju.html">사주 DB</a>
+  <a href="noah.html">노아</a>
+  <a href="framework.html" aria-current="page">프레임워크</a>
+  <span class="grow"></span><button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
+</nav>
+<div class="wrap fw-page">
+  <h1 class="noprint">프레임워크</h1>
+  <p class="desc noprint">아이데이션 → 프로덕트 → 검증 → 토론. 단계마다 Claude가 이론 1~6장 · 기획 사례 DB · 사주 DB를 근거로 초안을 내고, 당신이 고쳐서 확정해요. 확정한 내용만 다음 단계로 넘어가고, 끝나면 보고서로 봐요.</p>
+  <div id="fw"><p class="muted">불러오는 중…</p></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="shared.js"></script>
+<script src="theory.js"></script>
+<script src="ch2.js"></script>
+<script src="ch3.js"></script>
+<script src="ch4.js"></script>
+<script src="ch5.js"></script>
+<script src="methods.js"></script>
+<script src="triggers.js"></script>
+<script src="ch6.js"></script>
+<script src="lab-core.js"></script>
+<script type="module" src="framework.js"></script>
+</body>
+</html>

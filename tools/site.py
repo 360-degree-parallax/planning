@@ -32,6 +32,24 @@ def write_data():
     open(p, 'w', encoding='utf-8').write(s)
     print(f'{p} ({len(s.encode()) // 1024} KB)')
     write_saju()
+    write_context()
+
+
+def write_context():
+    """사주 경쟁사 지도 · 외부 벤치마크 · 규정 체크리스트 → site/data/framework-context.min.json (framework.html이 읽음)"""
+    comp = json.load(open(os.path.join(ROOT, 'db/saju/competitors.json'), encoding='utf-8'))
+    bench = json.load(open(os.path.join(ROOT, 'db/benchmarks.json'), encoding='utf-8'))
+    law = open(os.path.join(ROOT, 'docs/compliance.md'), encoding='utf-8').read()
+    out = {
+        'competitors': [{k: c.get(k) for k in ('name', 'company', 'model', 'scale', 'has', 'notes')} for c in comp['competitors']],
+        'features': comp.get('features'),
+        'benchmarks': bench['items'],
+        'compliance': law,
+    }
+    s = json.dumps(out, ensure_ascii=False, separators=(',', ':'))
+    p = os.path.join(SITE, 'data/framework-context.min.json')
+    open(p, 'w', encoding='utf-8').write(s)
+    print(f'{p} ({len(s.encode()) // 1024} KB)')
 
 
 SAJU_KEYS = ('concepts', 'rules', 'pair_rules', 'timing_rules', 'procedures', 'cases', 'expressions', 'videos', 'meta')
