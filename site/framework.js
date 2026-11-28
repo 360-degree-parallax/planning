@@ -1,6 +1,6 @@
 // 프레임워크 페이지 — 아이데이션 → 프로덕트 → 검증 → 토론을 한 단계씩 Claude와 만든다.
 // 단계마다 생성 → 사람이 고치고 → 확정. 확정한 것만 다음 단계의 맥락이 된다. 결과는 사이트 안 보고서로 본다.
-import { STAGES, STEPS, STEP, MODEL, runStep, check } from './framework-ai.mjs';
+import { STAGES, STEPS, STEP, MODEL, runStep, check, parseBrief, BRIEF_SCHEMA } from './framework-ai.mjs';
 
 const P = window.P, LAB = window.LAB;
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -113,16 +113,24 @@ function keyBox(show) {
   return `<div class="fw-key" ${show ? '' : 'hidden'}><p><b>Claude API 키</b> — 노아와 같은 키를 써요. 이 브라우저에만 저장되고 Anthropic API로만 보내져요.</p><form data-keyform><input type="password" placeholder="sk-ant-…" autocomplete="off" aria-label="Anthropic API 키"><button class="btn sm dark">저장</button>${key ? '<button type="button" class="btn sm" data-act="keydel">지우기</button>' : ''}</form><span class="muted">${key ? '저장된 키 있음 · ' + key.slice(0, 10) + '…' : '키가 없어요'}</span></div>`;
 }
 function bar() {
-  return `<div class="fw-bar0"><select data-proj aria-label="프로젝트">${store.list.map(p => `<option value="${p.id}"${proj && p.id === proj.id ? ' selected' : ''}>${esc(p.brief.title || p.brief.situation.slice(0, 30))}</option>`).join('')}<option value="">+ 새 프로젝트</option></select><span class="grow"></span>${proj ? `<a class="btn sm" href="#report">결과 보기</a><button class="btn sm" data-act="export">JSON 내보내기</button>` : ''}<label class="btn sm">JSON 가져오기<input type="file" accept=".json,application/json" data-import hidden></label>${proj ? '<button class="btn sm" data-act="delproj">삭제</button>' : ''}<button class="ib" data-act="key" aria-label="API 키" title="API 키">${ICON.gear}</button></div>${keyBox(!key)}`;
+  return `<div class="fw-bar0"><select data-proj aria-label="프로젝트">${store.list.map(p => `<option value="${p.id}"${proj && p.id === proj.id ? ' selected' : ''}>${esc(p.brief.title || (p.brief.text || p.brief.situation || '').slice(0, 30))}</option>`).join('')}<option value="">+ 새 프로젝트</option></select><span class="grow"></span>${proj ? `<a class="btn sm" href="#report">결과 보기</a><button class="btn sm" data-act="export">JSON 내보내기</button>` : ''}<label class="btn sm">JSON 가져오기<input type="file" accept=".json,application/json" data-import hidden></label>${proj ? '<button class="btn sm" data-act="delproj">삭제</button>' : ''}<button class="ib" data-act="key" aria-label="API 키" title="API 키">${ICON.gear}</button></div>${keyBox(!key)}`;
 }
 function briefForm() {
-  return `<form class="fw-brief" data-brief><h2>새 프로젝트</h2><p class="muted">상황과 목표만 정확하면 돼요. 나머지는 단계마다 Claude가 제안하고, 당신이 고쳐서 확정해요.</p>
-  <label>프로젝트 이름<input name="title" placeholder="예: 사주 사이트 결제 전환 올리기"></label>
-  <label>상황 <b>*</b><textarea name="situation" rows="4" required placeholder="지금 어떤 서비스·조직에서 무엇이 문제인지. 숫자가 있으면 숫자로."></textarea></label>
-  <label>목표 <b>*</b><textarea name="goal" rows="2" required placeholder="언제까지 무엇을 얼마나. 예: 3개월 안에 1p→결제 전환 2%→3%"></textarea></label>
-  <div class="fw-2"><label>제약<textarea name="constraints" rows="2" placeholder="인원, 예산, 기간, 못 바꾸는 것"></textarea></label><label>타겟 짐작<textarea name="target" rows="2" placeholder="아직 짐작이어도 괜찮아요"></textarea></label></div>
+  return `<form class="fw-brief" data-brief><h2>새 프로젝트</h2><p class="muted">생각나는 대로 줄글로 쭉 써 주세요. 어떤 서비스인지, 뭐가 문제인지, 뭘 원하는지, 숫자·기한·제약이 있으면 그것까지. 상황 · 목표 · 제약 · 타겟은 Claude가 읽고 정리해요.</p>
+  <textarea name="text" rows="12" required placeholder="예: 우리는 AI 사주 웹사이트를 운영 중이고, 웹툰처럼 1페이지에서 사주 이야기를 보여 준 뒤 2페이지에서 결제를 유도해. 요즘 1페이지 방문은 하루 3천 명 정도인데 결제까지 가는 건 2% 남짓이야. 석 달 안에 3%까지 올리고 싶은데 개발자는 한 명뿐이고 광고비는 월 300만 원 정도 쓸 수 있어. 20~30대 여성이 주로 오는 것 같긴 한데 확실하진 않아."></textarea>
   <label class="fw-check"><input type="checkbox" name="saju" checked> 사주 모드 — 사주 DB · 경쟁사 지도 · 벤치마크 · 규정 체크리스트를 맥락으로 씀</label>
   <div><button class="btn dark">시작하기</button></div></form>`;
+}
+const parsed = () => !!proj.brief.parsedAt;
+function briefSum() {
+  const b = proj.brief;
+  if (busy === 'brief') return `<div class="fw-brief-sum"><div class="fw-run"><span class="fw-spin"></span><span data-status>글을 읽는 중</span></div></div>`;
+  if (!parsed()) return `<div class="fw-brief-sum"><p class="fw-warn">${b.err ? esc(b.err) : '아직 글을 파악하지 못했어요. API 키를 넣고 파악하기를 눌러 주세요.'}</p><textarea class="fw-btext" data-btext rows="5">${esc(b.text)}</textarea><div><button class="btn sm dark" data-act="understand">파악하기</button></div></div>`;
+  const f = ['situation', 'goal', 'constraints', 'target', 'domain'], L2 = { situation: '상황', goal: '목표', constraints: '제약', target: '타겟', domain: '서비스' };
+  return `<details class="fw-brief-sum"${proj.cur === STEPS[0].id && !proj.steps[STEPS[0].id] ? ' open' : ''}><summary><b>${esc(b.title || '프로젝트')}</b><span>${esc(b.goal)}</span>${b.saju ? '<span class="tag on">사주 모드</span>' : ''}<span class="muted fw-more">Claude가 파악한 개요 ▾</span></summary>
+    <div class="fw-bgrid">${f.map(k => `<div class="fw-kv"><span class="fw-k">${L2[k]}</span><div class="fw-v"><span class="fw-ed" contenteditable="plaintext-only" data-bp="${k}">${esc(b[k])}</span></div></div>`).join('')}
+    ${(b.unknowns || []).length ? `<div class="fw-kv"><span class="fw-k">빠진 정보</span><div class="fw-v"><ul class="fw-list">${b.unknowns.map(u => `<li>${esc(u)}</li>`).join('')}</ul><span class="muted">아래 원문에 덧붙이고 다시 파악하면 반영돼요.</span></div></div>` : ''}</div>
+    <details class="fw-orig"><summary>원문 보기 · 고치기</summary><textarea class="fw-btext" data-btext rows="6">${esc(b.text)}</textarea><button class="btn sm" data-act="understand">원문으로 다시 파악</button></details></details>`;
 }
 function stepper() {
   const cur = proj.cur;
@@ -146,7 +154,7 @@ function render() {
   const el = root(); if (!el) return;
   if (location.hash === '#report' && proj) { el.innerHTML = report(); document.body.classList.add('fw-printable'); return; }
   document.body.classList.remove('fw-printable');
-  el.innerHTML = bar() + (proj ? `<div class="fw-brief-sum"><b>${esc(proj.brief.title || '프로젝트')}</b><span>${esc(proj.brief.goal)}</span>${proj.brief.saju ? '<span class="tag on">사주 모드</span>' : ''}</div><div class="fw-main">${stepper()}${panel()}</div>` : briefForm());
+  el.innerHTML = bar() + (proj ? `${briefSum()}<div class="fw-main">${stepper()}${panel()}</div>` : briefForm());
 }
 
 /* ───── 이벤트 ───── */
@@ -154,11 +162,21 @@ function onInput(e) {
   const t = e.target, p = t.dataset.p;
   if (p && proj) { const step = STEP[proj.cur], st = proj.steps[step.id]; if (!st?.out) return; const path = JSON.parse(p); const v = t.type === 'checkbox' ? t.checked : t.type === 'number' ? (t.value === '' ? 0 : +t.value) : t.tagName === 'SELECT' ? t.value : t.textContent; setAt(st.out, path, v); st.edited = true; save(); if (['unit', 'experiments', 'ice'].includes(step.id) && e.type === 'change') rerenderViz(step); return; }
   if (t.dataset.res && proj) { const k = t.dataset.res; proj.results[k] = proj.results[k] || {}; proj.results[k][t.dataset.f] = t.value === '' ? '' : +t.value; judge(k); save(); const v = proj.results[k].verdict, td = t.closest('tr').children; td[5].innerHTML = v ? pct(v.delta) : '-'; td[6].innerHTML = v ? v.chi.toFixed(2) : '-'; td[7].innerHTML = v ? `<span class="tag ${v.verdict === '채택' ? 'ok' : 'no'}">${esc(v.verdict)}</span>` : '-'; return; }
+  if (t.dataset.bp && proj) { proj.brief[t.dataset.bp] = t.textContent; save(); return; }
+  if (t.dataset.btext !== undefined && proj) { proj.brief.text = t.value; save(); return; }
   if (t.dataset.instr !== undefined && proj) { (proj.steps[proj.cur] = proj.steps[proj.cur] || {}).instr = t.value; save(); }
 }
 function rerenderViz(step) { const v = root().querySelector('.fw-viz'); if (v) v.outerHTML = extra(step, false); }
 
+async function understand() {
+  if (!key) { render(); toast('API 키를 먼저 넣어 주세요'); return false; }
+  if (busy) return false; const b = proj.brief; busy = 'brief'; ctrl = new AbortController(); delete b.err; render();
+  try { const { out } = await parseBrief(key, b.text, b.saju, { signal: ctrl.signal, onStatus: st => { const n = root().querySelector('[data-status]'); if (n) n.textContent = st; } }); Object.keys(BRIEF_SCHEMA.properties).forEach(k => b[k] = out[k]); b.parsedAt = Date.now(); return true; }
+  catch (e) { b.err = ctrl.signal.aborted ? '멈췄어요' : (/401|authentication/i.test(e.message) ? 'API 키가 올바르지 않아요. 키를 확인해 주세요' : e.message || String(e)); return false; }
+  finally { busy = null; ctrl = null; save(); render(); }
+}
 async function generate() {
+  if (!parsed() && !(await understand())) return;
   const step = STEP[proj.cur]; if (!key) { render(); toast('API 키를 먼저 넣어 주세요'); return; }
   if (busy) return; const st = proj.steps[step.id] = proj.steps[step.id] || {};
   busy = step.id; ctrl = new AbortController(); delete st.err; render();
@@ -195,6 +213,7 @@ function bind() {
     if (t.dataset.add) { const path = JSON.parse(t.dataset.add), st = proj.steps[proj.cur]; let sc = STEP[proj.cur].schema; path.forEach(k => { sc = typeof k === 'number' ? sc.items : sc.properties[k]; }); getAt(st.out, path).push(blank(sc.items)); save(); render(); return; }
     const a = t.dataset.act;
     if (a === 'gen') generate();
+    else if (a === 'understand') understand();
     else if (a === 'cancel') ctrl?.abort();
     else if (a === 'confirm') confirmStep();
     else if (a === 'key') { const k = el.querySelector('.fw-key'); k.hidden = !k.hidden; }
@@ -206,7 +225,7 @@ function bind() {
   });
   el.addEventListener('submit', async e => {
     e.preventDefault(); const f = e.target;
-    if (f.dataset.brief !== undefined) { const d = new FormData(f), brief = { title: d.get('title').trim(), situation: d.get('situation').trim(), goal: d.get('goal').trim(), constraints: d.get('constraints').trim(), target: d.get('target').trim(), saju: !!d.get('saju') }; if (!brief.situation || !brief.goal) return; proj = newProject(brief); save(); render(); if (!key) toast('API 키를 넣으면 단계를 생성할 수 있어요'); return; }
+    if (f.dataset.brief !== undefined) { const d = new FormData(f), text = String(d.get('text') || '').trim(); if (!text) return; proj = newProject({ text, saju: !!d.get('saju'), title: '', situation: '', goal: '', constraints: '', target: '', domain: '', unknowns: [] }); save(); render(); if (key) understand(); else toast('API 키를 넣으면 글을 파악해요'); return; }
     if (f.dataset.keyform !== undefined) { const v = f.querySelector('input').value.trim(); if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v) || v.startsWith('sk-ant-admin')) { alert('Claude API 키 형식이 아니에요 (sk-ant-로 시작하는 일반 키)'); return; } try { await check(v); } catch (err) { if (!confirm(`키 확인에 실패했어요(${err.status || err.message}). 그래도 저장할까요?`)) return; } key = v; ls.set(KEY, key); render(); toast('키를 저장했어요'); }
   });
   el.addEventListener('change', e => {
@@ -252,7 +271,7 @@ function mdNode(sc, v, depth) {
   return String(v);
 }
 function markdown() {
-  const b = proj.brief, out = [`# ${b.title || '기획'}`, '', `- 상황: ${b.situation}`, `- 목표: ${b.goal}`, b.constraints && `- 제약: ${b.constraints}`, b.target && `- 타겟 짐작: ${b.target}`, `- 사주 모드: ${b.saju ? '켜짐' : '꺼짐'}`, proj.selected.length && `- 프로덕트로 넘긴 아이디어: ${proj.selected.map(ideaName).join(', ')}`, proj.picked && `- 깊게 간 아이디어: ${ideaName(proj.picked)}`].filter(Boolean);
+  const b = proj.brief, out = [`# ${b.title || '기획'}`, '', b.text && `> ${b.text.replace(/\n+/g, ' ')}`, b.text && '', `- 상황: ${b.situation}`, `- 목표: ${b.goal}`, b.constraints && `- 제약: ${b.constraints}`, b.target && `- 타겟 짐작: ${b.target}`, `- 사주 모드: ${b.saju ? '켜짐' : '꺼짐'}`, proj.selected.length && `- 프로덕트로 넘긴 아이디어: ${proj.selected.map(ideaName).join(', ')}`, proj.picked && `- 깊게 간 아이디어: ${ideaName(proj.picked)}`].filter(Boolean);
   STAGES.forEach(st => { out.push('', `## ${st.name}`); STEPS.filter(s => s.stage === st.id && done(s.id)).forEach(s => { out.push('', `### ${s.name}`, '', mdNode(s.schema, O(s.id), 1)); if (s.id === 'unit') { const c = unitCalc(O('unit')); out.push('', `- 건당 공헌이익 ${won(c.margin)} · LTV ${won(c.ltv)} · 월 손익분기 ${Number.isFinite(c.breakeven) ? c.breakeven + '건' : '-'}`, ...c.ch.map(x => `- ${x.name}: LTV/CAC ${Number.isFinite(x.ratio) ? x.ratio.toFixed(1) : '-'}`)); } if (s.id === 'experiments') out.push('', ...expRows().map((r, n) => `${n + 1}. ${r.assumption_id} ${r.method} — ICE ${r.ice}${r.days ? `, ${r.days}일` : ''}`)); }); });
   const res = Object.values(proj.results).filter(r => r.verdict); if (res.length) out.push('', '## 실험 결과', '', ...res.map(r => `- ${r.experiment}: ${r.verdict.verdict} (상승 ${pct(r.verdict.delta)}, χ² ${r.verdict.chi.toFixed(2)})`));
   if (proj.accepted.length) out.push('', '## 받아들인 레드팀 지적', '', ...proj.accepted.map(a => `- [${a.persona}] ${a.claim} → ${a.suggestion}`));
@@ -264,4 +283,4 @@ try { P.theme && P.theme(); } catch (e) {}
 proj = store.list.find(p => p.id === store.cur) || null;
 document.addEventListener('click', e => { const a = e.target.closest('[data-jump]'); if (a) { e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); } });
 bind(); render();
-window.FW = { STEPS, markdown: () => proj && markdown(), get project() { return proj; } };
+window.FW = { STEPS, BRIEF_SCHEMA, markdown: () => proj && markdown(), get project() { return proj; } };

@@ -104,7 +104,7 @@ function theorySnippet(ids) {
 export function buildContext(project, step, data) {
   const out = [];
   const b = project.brief;
-  out.push(`[프로젝트]\n상황: ${b.situation}\n목표: ${b.goal}\n제약: ${b.constraints || '-'}\n타겟 짐작: ${b.target || '-'}\n사주 모드: ${b.saju ? '켜짐 — 기준 서비스는 AI 사주 웹사이트(커머스형, 웹툰형 스토리 1p → 마케팅 2p → 결제 → 전체 결과 공개, 최종 지표 = 결제)' : '꺼짐'}`);
+  out.push(`[프로젝트]${b.text ? `\n사용자가 쓴 원문: ${b.text}` : ''}\n상황: ${b.situation}\n목표: ${b.goal}\n제약: ${b.constraints || '-'}\n타겟 짐작: ${b.target || '-'}\n사주 모드: ${b.saju ? '켜짐 — 기준 서비스는 AI 사주 웹사이트(커머스형, 웹툰형 스토리 1p → 마케팅 2p → 결제 → 전체 결과 공개, 최종 지표 = 결제)' : '꺼짐'}`);
   const done = STEPS.slice(0, STEPS.indexOf(step)).filter(s => project.steps[s.id] && project.steps[s.id].done);
   if (done.length) out.push('[앞 단계에서 확정한 내용]\n' + done.map(s => `## ${s.name}\n${JSON.stringify(project.steps[s.id].out)}`).join('\n'));
   if (project.selected && project.selected.length) out.push(`[프로덕트로 넘긴 아이디어] ${project.selected.join(', ')}`);
@@ -112,7 +112,7 @@ export function buildContext(project, step, data) {
   if (step.id === 'revise' && project.accepted) out.push('[받아들인 레드팀 지적]\n' + JSON.stringify(project.accepted));
   if (step.id === 'results' && project.results) out.push('[실험 결과와 판정]\n' + JSON.stringify(project.results));
   const th = theorySnippet(step.theory || []); if (th) out.push('[학습 자료]\n' + th);
-  const text = [b.situation, b.goal, b.target].join(' ');
+  const text = [b.text, b.situation, b.goal, b.target, b.domain].join(' ');
   if (step.cases || step.id === 'opportunity') { const cs = pickCases(data.cases, text, step.cases ? 6 : 3); if (cs.length) out.push('[비슷한 사례 (사례 DB)]\n' + JSON.stringify(cs)); }
   if (b.saju && data.context) {
     if (['three_c', 'compare', 'gtm', 'ideas'].includes(step.id)) out.push('[사주 경쟁사 (경쟁사 지도)]\n' + JSON.stringify(data.context.competitors));
@@ -126,13 +126,10 @@ export function buildContext(project, step, data) {
 
 /* ───── 호출 ───── */
 export async function check(apiKey) { await client(apiKey).models.retrieve(MODEL); return true; }
-export async function runStep(apiKey, project, step, data, { instruction = '', onStatus, signal } = {}) {
-  onStatus?.('자료를 모으는 중');
-  const ctx = buildContext(project, step, data);
-  const user = `${ctx}\n\n[이번 단계: ${step.name}]\n${step.ask}${instruction ? `\n\n[사용자 지시]\n${instruction}` : ''}`;
+async function run(apiKey, user, schema, { onStatus, signal } = {}) {
   const stream = client(apiKey).beta.messages.stream({
     model: MODEL, max_tokens: 32000,
-    output_config: { effort: 'medium', format: { type: 'json_schema', schema: step.schema } },
+    output_config: { effort: 'medium', format: { type: 'json_schema', schema } },
     betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default',
     system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }],
     messages: [{ role: 'user', content: user }]
@@ -144,4 +141,18 @@ export async function runStep(apiKey, project, step, data, { instruction = '', o
   if (msg.stop_reason === 'max_tokens') throw new Error('응답이 길어 잘렸어요. 다시 생성해 주세요');
   const text = msg.content.filter(b => b.type === 'text').map(b => b.text).join('');
   return { out: JSON.parse(text), usage: msg.usage, model: msg.model };
+}
+export async function runStep(apiKey, project, step, data, { instruction = '', onStatus, signal } = {}) {
+  onStatus?.('자료를 모으는 중');
+  const ctx = buildContext(project, step, data);
+  const user = `${ctx}\n\n[이번 단계: ${step.name}]\n${step.ask}${instruction ? `\n\n[사용자 지시]\n${instruction}` : ''}`;
+  return run(apiKey, user, step.schema, { onStatus, signal });
+}
+
+/* 줄글 → 프로젝트 개요. 쓰여 있지 않은 것은 지어내지 않고 짐작임을 표시한다. */
+export const BRIEF_SCHEMA = obj({ title: str('프로젝트 이름 (15자 안팎)'), situation: str('상황 — 어떤 서비스·조직에서 무엇이 문제인지, 글에 있는 숫자 그대로'), goal: str('목표 — 언제까지 무엇을 얼마나. 글에 없으면 합리적으로 제안하고 끝에 "(제안)"'), constraints: str('제약 — 인원·예산·기간·못 바꾸는 것. 없으면 "언급 없음"'), target: str('타겟 — 글에서 읽히는 고객. 짐작이면 "(짐작)"'), domain: str('서비스 · 업종 한 줄'), unknowns: strs('다음 단계 전에 확인하면 좋은, 글에 빠진 정보 2~4개') });
+export async function parseBrief(apiKey, text, saju, opts = {}) {
+  opts.onStatus?.('글을 읽는 중');
+  const user = `[사용자가 쓴 글]\n${text}\n\n[사주 모드] ${saju ? '켜짐 — 기준 서비스는 AI 사주 웹사이트(커머스형, 최종 지표 = 결제). 글이 다른 서비스를 말하면 글을 따른다' : '꺼짐'}\n\n[이번 단계: 개요 파악]\n이 글을 읽고 기획 프로젝트의 개요를 정리해 줘. 글에 있는 사실과 네 추론을 구분한다.`;
+  return run(apiKey, user, BRIEF_SCHEMA, opts);
 }
