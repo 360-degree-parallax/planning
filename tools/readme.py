@@ -33,7 +33,7 @@ L = f'''# planning
 
 - **사례 중심**: 이 저장소에는 사례만 모읍니다. 제품 기획은 여기서 하지 않고, 기획자가 따로 합니다.
 - **처음 읽는다면**: [docs/method-guide.md](docs/method-guide.md)에서 이론을 처음부터 끝까지 읽을 수 있습니다.
-- **웹에서 보기**: `site/`의 이론 페이지(1~7장, `index.html` · `ch2~7.html`, 7장 데이터 분석 지표), 시장 리포트(`reports.html`), 기획 사례(`db.html`, 이 사례 DB), 사주 DB(`saju.html`, 원본 `db/saju/rules/` — 포스텔러 유튜브 영상 자막에서 뽑은 명리 개념·해석 규칙 연구 자료, 사례 DB와 별개), 노아(`noah.html`, 논술·토론), 프레임워크(`framework.html`, 아이데이션→프로덕트→검증→토론을 Claude API로 단계별 생성·확정하고 결과를 보고서로 보는 추론 툴 · 엔진 `site/framework-ai.mjs`, 맥락 `site/data/framework-context.min.json`). 6장 실무 도구의 원본은 방법 DB `site/methods.js`·`site/triggers.js`, 계산 엔진 `site/lab-core.js`, 실행 UI `site/tools-ui.js`(기획 툴에서 재사용 예정). 배포 주소 https://360-degree-parallax.github.io/planning/ · 로컬은 `python3 tools/site.py && python3 -m http.server -d site`. 이론 내용은 `site/theory.js`(원본 docs/method-guide.md와 함께 고친다).
+- **웹에서 보기**: `site/`의 이론 페이지(1~7장, `index.html` · `ch2~7.html`, 7장 데이터 분석 지표), 시장 리포트(`reports.html`), 기획 사례(`db.html`, 이 사례 DB), 사주 DB(`saju.html`, 원본 `db/saju/rules/` — 포스텔러 유튜브 영상 자막에서 뽑은 명리 개념·해석 규칙 연구 자료, 사례 DB와 별개), 노아(`noah.html`, 논술·토론), 프레임워크(`framework.html`, 아이데이션→프로덕트→검증→토론 네 단계마다 주관식 지시로 Claude가 푸는 방향·도구를 골라 기획안을 쌓고, 채택안을 이어 결과 보고서로 보는 추론 툴 · 엔진 `site/framework-ai.mjs`, 맥락 `site/data/framework-context.min.json`). 6장 실무 도구의 원본은 방법 DB `site/methods.js`·`site/triggers.js`, 계산 엔진 `site/lab-core.js`, 실행 UI `site/tools-ui.js`(기획 툴에서 재사용 예정). 배포 주소 https://360-degree-parallax.github.io/planning/ · 로컬은 `python3 tools/site.py && python3 -m http.server -d site`. 이론 내용은 `site/theory.js`(원본 docs/method-guide.md와 함께 고친다).
 - **가설을 세우는 힘과 부수는 힘**: 본질은 두 힘을 함께 쓸 때 보입니다. 이 DB는 '문제 본질 발견의 기술' 단계를 다음처럼 담습니다.
 
 | 단계 | 이 DB에서 | 범위 |
