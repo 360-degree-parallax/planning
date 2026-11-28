@@ -564,6 +564,12 @@ svg.curve{max-height:220px}
 .noah-acts{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px}
 .noah.busy .noah-go,.noah.busy .noah-input button{opacity:.5;pointer-events:none}
 @media(max-width:900px){.lab-grid2,.noah-grid{grid-template-columns:1fr}.lab-side,.noah-side{position:static;max-height:none}.lab-3{grid-template-columns:1fr}.noah-log{max-height:none}}
+.lab-checks{list-style:none;padding:0;margin:10px 0;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.lab-checks li::before{content:'•';margin-right:6px;color:var(--t3)}
+.lab-checks li.ok::before{content:'✓';color:#2fa36b}.lab-checks li.no::before{content:'!';color:#d64545;font-weight:800}
+.lab-url code{display:block;word-break:break-all;background:var(--surface);padding:10px 12px;border-radius:8px;font-size:13px}
+.lab-script{line-height:1.8;font-size:14px}.lab-script b{color:var(--accent);margin-right:6px}
+.lab-tool-h input[data-q],.lab-tool-h input[data-prod]{min-width:140px}
 
 /* ===== 사주 DB (saju.html) ===== */
 .sj-note{max-width:900px}
