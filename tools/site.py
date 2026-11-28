@@ -47,9 +47,7 @@ def bundle(out):
 <title>기획 공부 — 이론 1~4장 · 시장 리포트 · 기획 사례</title>
 <style>{rd('app.css')}</style></head>
 <body>
-<header class="gnb"><a class="wordmark" href="#theory:">기획 공부<span>본질 파악 방법론 · 기획 사례</span></a>
-<div class="right"><button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button></div></header>
-<nav class="topnav" aria-label="메뉴"><a href="#theory:" data-g="theory">이론</a><a href="#reports:" data-g="reports">시장 리포트</a><a href="#db:" data-g="db">기획 사례</a></nav>
+<nav class="topnav" aria-label="메뉴"><a href="#theory:" data-g="theory">이론</a><a href="#reports:" data-g="reports">시장 리포트</a><a href="#db:" data-g="db">기획 사례</a><span class="grow"></span><button class="ib" id="theme" aria-label="테마 바꾸기" title="테마 바꾸기"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button></nav>
 <nav class="subnav" aria-label="이론 — 장"><a href="#theory:" data-v="theory"><b>1</b>1장 기획의 여섯 단계</a><a href="#ch2:" data-v="ch2"><b>2</b>2장 인사이트 도출</a><a href="#ch3:" data-v="ch3"><b>3</b>3장 기획자의 몸값</a><a href="#ch4:" data-v="ch4"><b>4</b>4장 기획의 선명도</a></nav>
 <section id="v-theory" data-v="theory">{body('index.html')}</section>
 <section id="v-ch2" data-v="ch2" hidden>{body('ch2.html')}</section>

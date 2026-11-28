@@ -22,7 +22,7 @@
 }
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:120px}
+html{scroll-padding-top:64px}
 body{margin:0;background:var(--bg);color:var(--t1);font:500 15px/1.65 var(--font);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer;background:none;border:0;padding:0}
@@ -42,13 +42,14 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .btn:hover{background:var(--hover)}
 .btn.dark{background:var(--dark);border-color:transparent;color:var(--ondark)}
 .btn.sm{height:32px;padding:0 12px;font-size:13px}
-.topnav{position:sticky;top:56px;z-index:19;display:flex;gap:4px;padding:0 24px;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto}
+.topnav{position:sticky;top:0;align-items:center;z-index:19;display:flex;gap:4px;padding:0 24px;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto}
 .topnav a{display:flex;align-items:center;height:48px;padding:0 14px;font-size:15px;font-weight:600;color:var(--t3);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;text-decoration:none}
 .topnav a:hover{color:var(--t2)}
 .topnav a[aria-current=page]{color:var(--t1);border-color:var(--accent)}
 .topnav a b{display:inline-grid;place-items:center;width:20px;height:20px;margin-right:6px;border-radius:50%;background:var(--surface);font-size:12px;color:var(--t2)}
 .topnav a[aria-current=page] b{background:var(--dark);color:var(--ondark)}
-.subnav{position:sticky;top:104px;z-index:18;display:flex;gap:2px;padding:0 24px;background:var(--surface);border-bottom:1px solid var(--line);overflow-x:auto}
+.topnav .ib{flex:none}
+.subnav{position:sticky;top:48px;z-index:18;display:flex;gap:2px;padding:0 24px;background:var(--surface);border-bottom:1px solid var(--line);overflow-x:auto}
 .subnav[hidden]{display:none}
 .subnav a{flex:none;display:flex;align-items:center;height:40px;padding:0 12px;font-size:14px;font-weight:600;color:var(--t3);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;text-decoration:none}
 .subnav a:hover{color:var(--t2)}
@@ -56,10 +57,10 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .subnav a b{display:inline-grid;place-items:center;flex:none;width:18px;height:18px;margin-right:6px;border-radius:50%;background:var(--bg);font-size:11px;color:var(--t2)}
 .subnav a[aria-current=page] b{background:var(--dark);color:var(--ondark)}
 /* 이론 하위 탭(40px)이 있는 페이지는 고정 영역이 그만큼 길다 */
-html:has(.subnav:not([hidden])){scroll-padding-top:160px}
-body:has(.subnav:not([hidden])) .toc-side{top:164px;max-height:calc(100vh - 180px)}
-body:has(.subnav:not([hidden])) .art,body:has(.subnav:not([hidden])) .ah{scroll-margin-top:158px}
-body:has(.subnav:not([hidden])) .steps{top:168px}
+html:has(.subnav:not([hidden])){scroll-padding-top:104px}
+body:has(.subnav:not([hidden])) .toc-side{top:108px;max-height:calc(100vh - 124px)}
+body:has(.subnav:not([hidden])) .art,body:has(.subnav:not([hidden])) .ah{scroll-margin-top:102px}
+body:has(.subnav:not([hidden])) .steps{top:112px}
 
 .wrap{max-width:1280px;margin:0 auto;padding:32px 40px 80px}
 h1{margin:0;font-size:28px;line-height:1.4;font-weight:700;letter-spacing:-.02em}
@@ -72,7 +73,7 @@ h3{margin:24px 0 8px;font-size:16px;font-weight:700}
 
 /* 이론: 왼쪽 단계 목록 + 본문 (러프 툴 씬 목록과 같은 배치) */
 .tgrid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;align-items:start}
-.steps{position:sticky;top:128px;max-height:calc(100vh - 148px);overflow:auto;padding:4px 0}
+.steps{position:sticky;top:72px;max-height:calc(100vh - 92px);overflow:auto;padding:4px 0}
 .steps h4{margin:16px 0 4px;padding:0 10px;font-size:12px;font-weight:700;color:var(--t3)}
 .steps h4:first-child{margin-top:0}
 .steps a{display:grid;grid-template-columns:26px 1fr;align-items:center;gap:4px;padding:7px 10px;border-radius:8px;font-size:14px;font-weight:600;color:var(--t2);text-decoration:none}
@@ -135,7 +136,7 @@ table.t tr.hi td{background:var(--dark);color:var(--ondark)}
 .row .rb{display:flex;gap:4px;align-items:start;flex-wrap:wrap;justify-content:flex-end}
 .more{display:block;width:100%;padding:12px;font-size:14px;font-weight:600;color:var(--t2);border-top:1px solid var(--line)}
 .more:hover{background:var(--hover)}
-.dbside{position:sticky;top:128px;border:1px solid var(--line);border-radius:12px;max-height:calc(100vh - 148px);overflow:auto}
+.dbside{position:sticky;top:72px;border:1px solid var(--line);border-radius:12px;max-height:calc(100vh - 92px);overflow:auto}
 .dbside .empty{padding:24px 16px}
 .dhead{padding:18px 18px 12px;border-bottom:1px solid var(--line)}
 .dhead .rm{font-size:12px;color:var(--t2)}
@@ -207,7 +208,7 @@ ol.chain li.end{font-weight:700}
 @media(max-width:1100px){.dbgrid{grid-template-columns:minmax(0,1fr) 420px}}
 @media(max-width:900px){
   .tgrid{grid-template-columns:1fr;gap:0}
-  .steps{position:sticky;top:104px;z-index:5;max-height:none;display:flex;gap:4px;overflow-x:auto;background:var(--bg);margin:0 -16px;padding:8px 16px;border-bottom:1px solid var(--line)}
+  .steps{position:sticky;top:48px;z-index:5;max-height:none;display:flex;gap:4px;overflow-x:auto;background:var(--bg);margin:0 -16px;padding:8px 16px;border-bottom:1px solid var(--line)}
   .steps h4{display:none}
   .steps a{flex:none;grid-template-columns:auto auto;white-space:nowrap;padding:6px 10px}
   .tmain{padding-top:20px}
@@ -301,7 +302,7 @@ ol.toc li a:hover{text-decoration:underline}
 ol.toc li.lv1{margin-top:6px}ol.toc li.lv1 a{font-weight:700}
 ol.toc li.lv2{padding-left:16px}ol.toc li.lv3{padding-left:32px}ol.toc li.lv3 a{font-size:13px;color:var(--t2)}
 ol.toc li a.cur{color:var(--accent)}
-.toc-side{position:sticky;top:124px;max-height:calc(100vh - 140px);overflow:auto;padding:14px 14px 14px 16px;border-left:2px solid var(--line2);font-size:13px}
+.toc-side{position:sticky;top:68px;max-height:calc(100vh - 84px);overflow:auto;padding:14px 14px 14px 16px;border-left:2px solid var(--line2);font-size:13px}
 .toc-side>b{display:block;font-size:13px;margin-bottom:6px;color:var(--t2)}
 .toc-side ol.toc li a{font-size:13px;padding:2px 6px;border-radius:6px}
 .toc-side ol.toc li.lv3 a{font-size:12px}
@@ -309,7 +310,7 @@ ol.toc li a.cur{color:var(--accent)}
 .toc-fab{display:none;position:fixed;right:16px;bottom:20px;z-index:30;height:44px;padding:0 18px;border-radius:999px;background:var(--dark);color:var(--ondark);font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.18)}
 .toc-sheet{position:fixed;inset:auto 0 0 0;max-height:75vh;overflow:auto;z-index:41;background:var(--bg);border-top:1px solid var(--line2);border-radius:16px 16px 0 0;padding:8px 18px 28px;box-shadow:0 -8px 30px rgba(0,0,0,.2)}
 .sheet-h{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--bg);padding:6px 0}
-.art,.ah{scroll-margin-top:118px}
+.art,.ah{scroll-margin-top:62px}
 h2.ah{margin:56px 0 0;padding-bottom:10px;border-bottom:2px solid var(--t1);font-size:26px}
 h2.ah small{font-size:15px;font-weight:600;color:var(--t2);margin-left:6px}
 h3.ah{margin:40px 0 0;padding-bottom:8px;border-bottom:1px solid var(--line2);font-size:21px}
@@ -447,7 +448,7 @@ svg.curve{max-height:220px}
 .rp-how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
 .rp-how span{padding:10px 12px;border-radius:8px;background:var(--bg);font-size:13px;color:var(--t2)}
 .rp-how i{display:block;font-style:normal;font-weight:700;color:var(--t1)}
-.rp-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 0;position:sticky;top:104px;z-index:5;background:var(--bg);padding:8px 0}
+.rp-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 0;position:sticky;top:48px;z-index:5;background:var(--bg);padding:8px 0}
 .rp-bar .seg{display:flex;gap:4px;flex-wrap:wrap}
 .rp-bar .seg button{height:34px;padding:0 12px;border:1px solid var(--line2);border-radius:17px;background:var(--bg);color:var(--t2);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .rp-bar .seg button em{font-style:normal;margin-left:5px;color:var(--t3);font-weight:500}
