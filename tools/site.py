@@ -6,6 +6,7 @@
                                    이론+DB를 데이터까지 한 파일에 담은 미리보기 페이지
 
 cases.min.json은 db/cases.json에서 사이트가 안 쓰는 칸(사주 적용, 가설 실험 등)을 뺀 것.
+saju-rules.min.json은 사주 DB(db/saju/rules/saju_db.json)의 사이트용 사본. 사주 DB는 묶음 페이지에 넣지 않는다.
 """
 import json, os, re, sys
 
@@ -28,6 +29,22 @@ def write_data():
     os.makedirs(os.path.join(SITE, 'data'), exist_ok=True)
     p = os.path.join(SITE, 'data/cases.min.json')
     s = json.dumps(slim(), ensure_ascii=False, separators=(',', ':'))
+    open(p, 'w', encoding='utf-8').write(s)
+    print(f'{p} ({len(s.encode()) // 1024} KB)')
+    write_saju()
+
+
+SAJU_KEYS = ('concepts', 'rules', 'pair_rules', 'timing_rules', 'procedures', 'cases', 'expressions', 'videos', 'meta')
+
+
+def write_saju():
+    """사주 DB(db/saju/rules/saju_db.json) → site/data/saju-rules.min.json (saju.html이 읽음)"""
+    src = os.path.join(ROOT, 'db/saju/rules/saju_db.json')
+    if not os.path.exists(src):
+        return
+    d = json.load(open(src, encoding='utf-8'))
+    s = json.dumps({k: d[k] for k in SAJU_KEYS if k in d}, ensure_ascii=False, separators=(',', ':'))
+    p = os.path.join(SITE, 'data/saju-rules.min.json')
     open(p, 'w', encoding='utf-8').write(s)
     print(f'{p} ({len(s.encode()) // 1024} KB)')
 
