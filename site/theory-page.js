@@ -84,7 +84,7 @@ function mount(ch){
       });
     });
     const next = (window.CHAPTERS || []).find(c => c.no === ch.no + 1);
-    h += `<div class="next"><a class="btn" href="${href(V, 'top')}">↑ 처음으로</a><span class="grow"></span>${next ? `<a class="btn dark" href="${href(next.view)}">${next.no}장 ${esc(next.title)} →</a>` : `<a class="btn dark" href="${href('db')}">사례 DB로 →</a>`}</div>`;
+    h += `<div class="next"><a class="btn" href="${href(V, 'top')}">↑ 처음으로</a><span class="grow"></span>${next ? `<a class="btn dark" href="${href(next.view)}">${next.no}장 ${esc(next.title)} →</a>` : `<a class="btn dark" href="${href('db')}">기획 사례로 →</a>`}</div>`;
     q('.doc').innerHTML = h;
     q('.toc-side').innerHTML = `<b>목차</b>${tocList('toc side')}`;
     q('.toc-sheet').innerHTML = `<div class="sheet-h"><b>목차</b><button class="ib sheet-x" aria-label="닫기">✕</button></div>${tocList('toc')}`;

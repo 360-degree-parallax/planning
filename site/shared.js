@@ -200,7 +200,7 @@ const hashFor = view => { const h = decodeURIComponent(location.hash.slice(1)); 
 const setHash = (view, id) => history.replaceState(null, '', BUNDLE ? `#${view}:${encodeURIComponent(id || '')}` : (id ? '#' + encodeURIComponent(id) : location.pathname + location.search));
 
 /* 현재 장 탭이 가로 스크롤 밖에 있으면 보이게 */
-const showTab = () => { const a = document.querySelector('.topnav a[aria-current=page]'); if (a) a.scrollIntoView({inline: 'center', block: 'nearest'}); };
+const showTab = () => { document.querySelectorAll('.topnav a[aria-current=page], .subnav a[aria-current=page]').forEach(a => { const n = a.parentElement; n.scrollLeft = a.offsetLeft - (n.clientWidth - a.offsetWidth) / 2; }); };
 addEventListener('DOMContentLoaded', showTab); addEventListener('hashchange', () => setTimeout(showTab, 0));
 
 window.P = {venn, paretoPlot, KEY, $, esc, link, tag, L, STEPS, R, load, theme, PAGES, isUrl, href, hashFor, setHash, BUNDLE};
