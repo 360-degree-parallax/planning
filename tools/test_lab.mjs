@@ -15,4 +15,9 @@ ok('오퍼 수락률 4분면', () => { const rows = [{c: 'x', v: '57', k: '5', t
 ok('연관 규칙 향상도', () => { const b = [['a', 'b'], ['a', 'b'], ['a'], ['c'], ['b', 'c']]; const r = L.associationRules(b, {minSupport: 0.1, minConfidence: 0.1}).rows.find(x => x['이걸 산 사람은'] === 'a' && x['이것도 산다'] === 'b'); near(r['향상도'], (2 / 3) / (3 / 5), 0.01); });
 ok('CSV 파싱 (따옴표·쉼표)', () => { const p = L.parseCSV('a,b\n"x, y",2\n'); assert.equal(p.rows[0].a, 'x, y'); });
 ok('매체 소스 정리', () => { assert.equal(L.normSource('"naver","naver"'), 'naver'); assert.equal(L.normSource('m.tiktok.com'), 'tiktok.com'); });
+ok('가격 공식 (강의 예제: 정상가 12,000 · 상시 10,900 · 원가 3,500)', () => { const r = L.pricing({cost: 3500, list: 12000, sale: 10900}); near(r.disc, 9.17, 0.01); near(r.crSale, 32.1, 0.1); near(r.crList, 29.17, 0.01); });
+ok('상품 회계 (설계서 1행: 호텔식 암막커튼 99,000원)', () => { const r = L.productAccounting([{n: '커튼', p: 99000}], {name: 'n', price: 'p'}).rows[0]; assert.equal(r['이익'], 62040); assert.equal(r['판매당 마케팅비'], 7445); assert.equal(r['추천 입찰 CPC'], 4343); });
+ok('선형 예측 ± STEYX', () => { const r = L.forecast([{x: 1, y: 2}, {x: 2, y: 4.1}, {x: 3, y: 5.9}, {x: 4, y: 8.2}], {x: 'x', y: 'y', targets: [5]}); near(r.rows[0]['예상 (예측)'], 10, 1); });
+ok('K-means 두 군집 분리', () => { const rows = [...Array(10)].map((_, i) => ({a: i < 5 ? 1 : 10, b: i < 5 ? 1 : 10})); const r = L.kmeans(rows, {features: ['a', 'b'], k: 2}); assert.deepEqual(JSON.parse(JSON.stringify(r.rows.map(x => x['고객 수']).sort())), [5, 5]); });
+ok('UTM 캠페인 = 유형_타겟', () => assert.ok(L.utm({url: 'https://x.com/a', source: 'meta', medium: 'display', campaignType: '전환', target: '2030-재회'}).includes('utm_campaign=%EC%A0%84%ED%99%98_2030-%EC%9E%AC%ED%9A%8C')));
 console.log(`${n}개 통과`);

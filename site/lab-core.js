@@ -244,7 +244,46 @@ function clientMap(rows, { dims, revenue }) {
   return { rows: items.slice(0, 40).map(x => ({ '세그먼트': x.k, '고객 수': x.n, '수익': Math.round(x.v), '점유율': round(x.v / V * 100, 1) + '%', '1인당 수익': Math.round(x.v / x.n) })), summary: { '기준': dims.join(' × '), '세그먼트 수': items.length, '총 수익': Math.round(V) } };
 }
 
+
+/* ───── 마케팅 전략: 가격 · 회계 · 예산 · 예측 · 군집 · UTM ───── */
+function pricing({ cost, list, sale }) { // 강의 실습 공식: 할인율 = (1 − 상시판매가/정상가)×100, 원가율 = 원가/가격×100
+  const disc = (1 - sale / list) * 100, crList = cost / list * 100, crSale = cost / sale * 100, margin = 100 - disc - crList;
+  const ninePrice = p => { const r = Math.round(p / 100) * 100; return r - 10 >= 0 ? r - 10 : p; };
+  return { disc, crList, crSale, margin, markup: list / cost, inRange: list / cost >= 2.5 && list / cost <= 5, discOk: disc <= 10, nineSale: ninePrice(sale) };
+}
+function productAccounting(rows, { name, price, costRate = 0.3, feeRate = 0.04, shipSell = 0, shipBuy = 3300, mktRate = 0.12, cvr = 0.07 }) {
+  // 「전체 상품 회계 설계서」 공식 그대로: 매입가=판매가×30%, 수수료=판매가×4%, 이익=판매가−(매입가+수수료+매입배송비+판매배송비),
+  // 마케팅비=이익×12%, ROI=이익/(매입가+수수료+판매배송비+매입배송비+마케팅비), 최소ROAS=판매가/이익, 최대ROAS=판매가/마케팅비,
+  // 추천 입찰 CPC=이익×추정전환율, 고정비 계산 최소 판매 수=((판매가−이익)/(판매가−마케팅비))×100
+  return { rows: rows.map(r => { const C = num(r[price]); if (!Number.isFinite(C)) return null; const D = C * costRate, E = C * feeRate, F = num(r.shipSell ?? shipSell) || shipSell, G = shipBuy, H = C - (D + E + G + F), J = H * mktRate;
+    return { '제품명': r[name], '판매가': Math.round(C), '매입가': Math.round(D), '수수료': Math.round(E), '이익': Math.round(H), '이익율': round(H / C * 100, 1) + '%', '판매당 마케팅비': Math.round(J), 'ROI': round(H / (D + E + F + G + J), 2), '최소 ROAS': round(C / H * 100) + '%', '최대 ROAS': round(C / J * 100) + '%', '추천 입찰 CPC': Math.round(H * cvr), '최소 판매 수(고정비)': round((C - H) / (C - J) * 100, 1) }; }).filter(Boolean), summary: { '매입 원가율': costRate * 100 + '%', '수수료': feeRate * 100 + '%', '마케팅비(이익 대비)': mktRate * 100 + '%', '추정 전환율': cvr * 100 + '%', '판단': '최소 ROAS 아래로 떨어지면 팔수록 손해 — 광고 ROAS 목표의 바닥선' } };
+}
+function budgetSplit({ revenue, adShare = 0.2, months = 12, weights }) {
+  const year = revenue * adShare, month = year / months, week = month / 4, day = month / 31; const W = sum(Object.values(weights)) || 1;
+  return { year, month, week, day, rows: Object.entries(weights).map(([k, w]) => ({ '매체': k, '비중': round(w / W * 100, 1) + '%', '월 예산': Math.round(month * w / W), '주 예산': Math.round(week * w / W), '일 예산': Math.round(day * w / W) })) };
+}
+function forecast(rows, { x, y, targets }) { // 엑셀 FORECAST(선형 회귀) ± STEYX(추정 표준오차) — 「주요 성과 예측표」
+  const P = rows.map(r => [num(r[x]), num(r[y])]).filter(([a, b]) => Number.isFinite(a) && Number.isFinite(b)); const n = P.length;
+  const mx = mean(P.map(p => p[0])), my = mean(P.map(p => p[1])); const sxx = sum(P.map(p => (p[0] - mx) ** 2)), sxy = sum(P.map(p => (p[0] - mx) * (p[1] - my)));
+  const b = sxy / sxx, a = my - b * mx, steyx = Math.sqrt(sum(P.map(p => (p[1] - (a + b * p[0])) ** 2)) / (n - 2)); const r2 = 1 - sum(P.map(p => (p[1] - (a + b * p[0])) ** 2)) / sum(P.map(p => (p[1] - my) ** 2));
+  return { rows: targets.map(t => ({ [x]: t, '예상 (최소)': Math.round(a + b * t - steyx), '예상 (예측)': Math.round(a + b * t), '예상 (최대)': Math.round(a + b * t + steyx) })), summary: { '데이터': n + '일', '기울기': round(b, 2), 'R²': round(r2, 3), '오차(STEYX)': Math.round(steyx) } };
+}
+function kmeans(rows, { features, k = 3, iters = 50 }) { // 「퍼널링크」 ③ 집단 분류 군집화 · ④ 특징 추출 (유클리드 거리)
+  const X0 = rows.map(r => features.map(f => num(r[f]))).filter(v => v.every(Number.isFinite));
+  const mu = features.map((_, j) => mean(X0.map(v => v[j]))), sd = features.map((_, j) => Math.sqrt(variance(X0.map(v => v[j]))) || 1);
+  const X = X0.map(v => v.map((x, j) => (x - mu[j]) / sd[j])); const d2 = (a, b) => sum(a.map((x, j) => (x - b[j]) ** 2));
+  let C = [X[0]]; while (C.length < k) { const far = X.reduce((m, v) => { const d = Math.min(...C.map(c => d2(v, c))); return d > m.d ? { v, d } : m; }, { d: -1 }); C.push(far.v); }
+  let lab = [];
+  for (let it = 0; it < iters; it++) { lab = X.map(v => C.reduce((m, c, i) => d2(v, c) < d2(v, C[m]) ? i : m, 0)); C = C.map((c, i) => { const m = X.filter((_, n) => lab[n] === i); return m.length ? features.map((_, j) => mean(m.map(v => v[j]))) : c; }); }
+  return { rows: C.map((_, i) => { const m = X0.filter((_, n) => lab[n] === i); const o = { '군집': i + 1, '고객 수': m.length, '비중': round(m.length / X0.length * 100, 1) + '%' }; features.forEach((f, j) => { const v = mean(m.map(x => x[j])); o[f] = round(v, 2); }); const z = features.map((f, j) => [f, (mean(m.map(x => x[j])) - mu[j]) / sd[j]]).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 2); o['특징'] = z.map(([f, v]) => `${f} ${v > 0 ? '높음' : '낮음'}`).join(' · '); return o; }), summary: { '고객 수': X0.length, '군집 수': k, '기준': features.join(', ') } };
+}
+function utm({ url, source, medium, campaignType, target, content, term, id }) { // 「② UTM 설계」: 캠페인 = 캠페인유형_메인타겟
+  const camp = [campaignType, target].filter(Boolean).join('_'); const q = [['utm_id', id || source], ['utm_source', source], ['utm_medium', medium], ['utm_campaign', camp], ['utm_term', term], ['utm_content', content]].filter(([, v]) => v).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+  return (url || '') + (String(url).includes('?') ? '&' : '?') + q;
+}
+function engagement({ likes = 0, comments = 0, saves = 0, shares = 0, followers }) { const e = (likes + comments + saves + shares) / followers * 100; return { rate: e, good: e >= 5 }; }
+
 const API = { parseCSV, num, mean, variance, welch, anova, ibeta, tTwoSidedP, fUpperP, chiUpperP, kaplanMeier, betaQuantile, ols, normSource, tokens,
-  conversionProbability, adActivation, abTest, abDuration, ice, scrollRetention, promotionTest, promotionCompare, mediaContribution, topicKeywords, associationRules, conjoint, recommend, offerAcceptance, clientMap };
+  conversionProbability, adActivation, abTest, abDuration, ice, pricing, productAccounting, budgetSplit, forecast, kmeans, utm, engagement, scrollRetention, promotionTest, promotionCompare, mediaContribution, topicKeywords, associationRules, conjoint, recommend, offerAcceptance, clientMap };
 if (typeof module !== 'undefined') module.exports = API; else root.LAB = API;
 })(typeof window !== 'undefined' ? window : globalThis);
