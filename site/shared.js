@@ -193,7 +193,7 @@ function theme(){
 
 /* 묶음(한 파일) 페이지에서는 이론↔DB 링크를 같은 파일 안의 보기 전환으로 바꾼다 */
 const BUNDLE = !!window.__BUNDLE;
-const PAGES = {theory:'index.html', ch2:'ch2.html', ch3:'ch3.html', ch4:'ch4.html', reports:'reports.html', db:'db.html'};
+const PAGES = {theory:'index.html', ch2:'ch2.html', ch3:'ch3.html', ch4:'ch4.html', ch5:'ch5.html', reports:'reports.html', db:'db.html'};
 /* 링크 주소: 사이트는 page.html#id, 한 파일 묶음은 #view:id */
 const href = (view, id) => BUNDLE ? `#${view}:${id ? encodeURIComponent(id) : ''}` : `${PAGES[view]}${id ? '#' + encodeURIComponent(id) : ''}`;
 const hashFor = view => { const h = decodeURIComponent(location.hash.slice(1)); if (!BUNDLE) return h; return h.startsWith(view + ':') ? h.slice(view.length + 1) : null; };

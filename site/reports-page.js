@@ -7,7 +7,7 @@ const {PUBS, R, asof} = window.REPORTS;
 const $ = s => root.querySelector(s);
 const PUB = Object.fromEntries(PUBS.map(p => [p.id, p]));
 const CATS = ['전체', '렙사', '공영', '회계펌', '보너스'];
-const CH = {theory: '1장', ch2: '2장', ch3: '3장', ch4: '4장'};
+const CH = {theory: '1장', ch2: '2장', ch3: '3장', ch4: '4장', ch5: '5장'};
 const st = {cat: '전체', pub: '', q: ''};
 
 $('#rpdesc').textContent = `마케팅·사업개발에서 바로 찾아 쓰는 리포트 ${R.length}개 — 렙사 3곳, 공영 3곳, 회계펌 4곳, 그리고 보너스. 2025년 말~${asof} 발행분.`;
