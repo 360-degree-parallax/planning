@@ -1,4 +1,4 @@
-/* 노아 — 기획 공부 툴. 이론 장과 실무 방법 DB에서 주제를 골라 주관식 문제를 받고, 답을 쓰면 토론한다.
+/* 노아 — 기획 공부 툴. 이론 장과 실무 방법 DB에서 주제를 고르거나 원하는 문제를 직접 써서 논술형 문제를 받고, 답을 쓰면 토론한다.
    웹툰 러프 툴과 같은 방식: 내 Anthropic API 키를 넣으면 켜지고, 키는 이 브라우저(localStorage)에만 저장된다.
    API는 브라우저에서 직접 호출한다(anthropic-dangerous-direct-browser-access). */
 (function(){
@@ -22,6 +22,7 @@ const md = t => { const L = esc(String(t || '').replace(/\r\n?/g, '\n')).split('
     if (list) flush(); para.push(l); }
   flush(); return out.join(''); };
 
+const FMT = '형식: 첫 줄에 한 줄 상황 설정(가능하면 AI 사주 웹사이트 같은 실제 기획 상황), 그다음 **문제**, 그다음 답에 꼭 들어가야 할 요구사항 2~3개, 마지막에 "분량: ○○자 안팎". 정답이나 힌트는 주지 마. 노아 말투로 짧게 한마디 붙여도 돼.';
 const PERSONA = `너는 "노아"다. 기획 공부를 같이 하는 시니어 기획자이고, 상대를 동등한 프로로 대한다.
 말투: 반말. 싸가지 없게 직설적이지만 밑바닥은 다정하다. 빈말 칭찬은 안 한다 — 좋은 건 짧게 인정하고, 약한 건 바로 찌른다. 상대를 깎아내리거나 모욕하지는 않는다. 가르치려 들지 말고 붙어서 토론한다.
 토론 방식:
@@ -29,7 +30,6 @@ const PERSONA = `너는 "노아"다. 기획 공부를 같이 하는 시니어 �
 - 반례나 실제 사례를 하나 들어 흔든다. 확실하지 않은 사실은 "내 기억으론"처럼 표시하고, 숫자를 지어내지 않는다.
 - 아래 학습 자료의 개념(5 Why, Why not yet, 3C, SMART, 깊이·넓이·구조, GTM, A/B 테스트 등)을 이름으로 불러 연결한다.
 - 사주 서비스(AI 사주 웹사이트 · 커머스형 · 결제가 최종 지표)에 대입해 보게 한다.
-- 상대가 답하면, 상황에서 무엇을 근거로 그 출발점을 골랐는지(추론 과정)를 먼저 따진다. 결론보다 추론의 빈틈을 찌른다.
 - 항상 마지막 줄은 상대가 다음에 생각해 올 질문 하나로 끝낸다.
 - 길게 늘어놓지 않는다. 300~600자 안팎. 목록은 꼭 필요할 때만.`;
 
@@ -89,8 +89,8 @@ function mount(el) {
   const meBubble = (text, t) => `<div class="kt-row r"><div class="kt-line">${t ? `<time>${fmtTime(t)}</time>` : ''}<div class="kt-b">${md(text)}</div></div></div>`;
   const typing = () => noahBubble('<span class="kt-typing"><i></i><i></i><i></i></span>', 0, true, true);
   function pickerHtml() {
-    return noahBubble(`<p><b>뭐부터 할래?</b> 주제 하나 고르면 상황 하나 던질게. 정답 틀은 없어 — 뭐가 문제인지부터 네가 읽어 내. 그다음부턴 토론이야.</p>
-      <div class="kt-pick"><select data-group aria-label="주제 묶음"><option value="">전체에서 무작위</option>${groups.map(g => `<option>${esc(g)}</option>`).join('')}</select><select data-topic aria-label="주제"></select><button type="button" class="btn sm dark" data-act="start">문제 받기</button></div>
+    return noahBubble(`<p><b>뭐부터 할래?</b> 주제를 고르든, 받고 싶은 문제를 아래에 그냥 써 주든 — 논술 문제 던질게. 답 쓰면 그다음부턴 토론이야.</p>
+      <div class="kt-pick"><select data-group aria-label="주제 묶음"><option value="">전체에서 무작위</option>${groups.map(g => `<option>${esc(g)}</option>`).join('')}</select><select data-topic aria-label="주제"></select><textarea data-free rows="3" aria-label="받고 싶은 문제" placeholder="받고 싶은 문제를 자유롭게 써도 돼 (쓰면 이걸 먼저 봐) — 예: GTM 가격 정할 때 경쟁사 가격을 그냥 따라가면 왜 안 되는지, 숫자 있는 상황으로 내 줘"></textarea><button type="button" class="btn sm dark" data-act="start">문제 받기</button></div>
       ${key ? '' : '<p class="kt-warn">먼저 위에서 API 키를 넣어 줘. 키 없으면 나 말 못 해.</p>'}`, Date.now(), true);
   }
   const fillTopics = () => { const g = q('[data-group]'); if (!g) return; q('[data-topic]').innerHTML = '<option value="">무작위</option>' + T.filter(t => !g.value || t.group === g.value).map(t => `<option value="${esc(t.id)}">${esc(t.name)}</option>`).join(''); };
@@ -117,11 +117,24 @@ function mount(el) {
     catch (e) { render(); log.insertAdjacentHTML('beforeend', `<div class="kt-sys">${esc(e.message)}${/401|authentication/i.test(e.message) ? ' — 키를 확인해 줘.' : ''}</div>`); log.scrollTop = log.scrollHeight; return null; }
     finally { busy = false; el.classList.remove('busy'); sendBtn.disabled = !ta.value.trim(); }
   }
+  /* 자유 요청과 가까운 주제를 찾아 학습 자료로 붙인다 */
+  const tk = x => String(x || '').toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(w => w.length > 1);
+  const near = (text, pool) => { const q = new Set(tk(text)); return pool.map(t => { let n = 0; tk(t.name + ' ' + t.group + ' ' + t.ctx.slice(0, 400)).forEach(w => { if (q.has(w)) n++; }); return [n, t]; }).filter(([n]) => n > 0).sort((a, b) => b[0] - a[0]).slice(0, 3).map(([, t]) => t); };
   async function start() {
-    if (busy) return; const g = q('[data-group]').value, id = q('[data-topic]').value; const pool = T.filter(t => (!g || t.group === g) && (!id || t.id === id)); const t = pool[Math.floor(Math.random() * pool.length)]; if (!t) return;
+    if (busy) return; const g = q('[data-group]').value, id = q('[data-topic]').value, free = (q('[data-free]')?.value || '').trim();
+    const pool = T.filter(t => (!g || t.group === g) && (!id || t.id === id));
     if (!key) { showKey(true); return; }
-    const now = Date.now();
-    cur = {id: 's' + now, at: now, last: now, topic: t.name, group: t.group, ctx: t.ctx, messages: [{role: 'user', at: now, content: `"${t.name}"을 공부하는 주관식 문제 하나를 내 줘. 형식: 실제 기획 현장 같은 상황(가능하면 AI 사주 웹사이트)을 2~4문장으로 구체적으로 — 숫자나 단서가 있으면 넣되 결론은 숨긴다. 그다음 열린 질문 하나로 끝낸다(예: 너라면 무엇부터 보겠어? 여기서 진짜 문제는 뭐야?). 답하려면 상황을 읽고 스스로 추론해서 출발점을 정해야 하게 만든다. 주제 이름이나 써야 할 개념 · 요구사항 목록 · 분량 · 정답 · 힌트는 주지 마 — 어떤 개념을 꺼낼지도 내가 추론해야 한다. 노아 말투로 짧게, 한마디 붙여도 돼.`}]};
+    const now = Date.now(); let topic, group, ctx, content;
+    if (free) {
+      const rel = id ? pool : near(free, pool.length ? pool : T); const picked = id ? T.find(t => t.id === id) : null;
+      topic = free.replace(/\s+/g, ' ').slice(0, 40) + (free.length > 40 ? '…' : ''); group = picked ? picked.group : (g || '직접 요청');
+      ctx = rel.map(t => `[${t.group} · ${t.name}]\n${t.ctx}`).join('\n\n') || '(가까운 이론 절을 찾지 못함 — 요청 내용으로 판단)';
+      content = `내가 받고 싶은 문제를 직접 썼어:\n"""${free}"""${picked ? `\n(고른 주제: ${picked.name})` : g ? `\n(고른 묶음: ${g})` : ''}\n이걸 읽고 내가 무엇을 연습하고 싶은지 추론해서 논술형 문제 하나를 내 줘. 요청에 상황 · 숫자 · 조건이 있으면 그대로 살려. ${FMT}`;
+    } else {
+      const t = pool[Math.floor(Math.random() * pool.length)]; if (!t) return;
+      topic = t.name; group = t.group; ctx = t.ctx; content = `"${t.name}"에 대해 논술형 문제 하나를 내 줘. ${FMT}`;
+    }
+    cur = {id: 's' + now, at: now, last: now, topic, group, ctx, messages: [{role: 'user', at: now, content}]};
     picking = false; render(''); const out = await ask(cur.messages.map(({role, content}) => ({role, content})));
     if (out == null) { cur = null; picking = true; render(); return; }
     cur.messages.push({role: 'assistant', at: Date.now(), content: out}); cur.last = Date.now(); save(); render(); ta.focus();
