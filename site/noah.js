@@ -7,7 +7,20 @@ const KEY = 'noah-key', HIST = 'noah-sessions';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ls = { get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }, del(k) { try { localStorage.removeItem(k); } catch (e) {} } };
 const strip = h => String(h || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-const md = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/^#+\s?(.*)$/gm, '<b>$1</b>').replace(/\n/g, '<br>');
+const inl = s => s.replace(/`([^`\n]+)`/g, '<code>$1</code>').replace(/\*\*([^*\n][^\n]*?)\*\*/g, '<b>$1</b>').replace(/__([^_\n]+?)__/g, '<b>$1</b>').replace(/(^|[^*\w])\*([^*\s][^*\n]*?)\*(?!\*)/g, '$1<i>$2</i>').replace(/~~([^~\n]+)~~/g, '<s>$1</s>');
+/* 마크다운 일부(문단 · 제목 · 목록 · 인용 · 구분선 · 표)를 말풍선용 HTML로. 스트리밍 중 덜 닫힌 기호는 그대로 둔다. */
+const md = t => { const L = esc(String(t || '').replace(/\r\n?/g, '\n')).split('\n'), out = []; let list = null, para = [];
+  const flush = () => { if (para.length) { out.push(`<p>${para.map(inl).join('<br>')}</p>`); para = []; } if (list) { out.push(`<${list.tag}>${list.items.map(x => `<li>${inl(x)}</li>`).join('')}</${list.tag}>`); list = null; } };
+  for (let i = 0; i < L.length; i++) { const l = L[i]; let m;
+    if (!l.trim()) { flush(); continue; }
+    if (/^\s*([-*_])(\s*\1){2,}\s*$/.test(l)) { flush(); out.push('<hr>'); continue; }
+    if ((m = /^\s*#{1,6}\s+(.*)$/.exec(l))) { flush(); out.push(`<p class="kt-h">${inl(m[1])}</p>`); continue; }
+    if ((m = /^\s*&gt;\s?(.*)$/.exec(l))) { flush(); out.push(`<blockquote>${inl(m[1])}</blockquote>`); continue; }
+    if (/^\s*\|.*\|\s*$/.test(l)) { flush(); const rows = []; while (i < L.length && /^\s*\|.*\|\s*$/.test(L[i])) { if (!/^\s*\|[\s:|-]+\|\s*$/.test(L[i])) rows.push(L[i].trim().slice(1, -1).split('|').map(c => inl(c.trim()))); i++; } i--; out.push(`<div class="kt-tbl"><table>${rows.map((r, j) => `<tr>${r.map(c => j ? `<td>${c}</td>` : `<th>${c}</th>`).join('')}</tr>`).join('')}</table></div>`); continue; }
+    if ((m = /^\s*(?:([-*•])|(\d+)[.)])\s+(.*)$/.exec(l))) { const tag = m[1] ? 'ul' : 'ol'; if (para.length) { out.push(`<p>${para.map(inl).join('<br>')}</p>`); para = []; } if (!list || list.tag !== tag) { if (list) flush(); list = {tag, items: []}; } list.items.push(m[3]); continue; }
+    if (list && /^\s{2,}\S/.test(l)) { list.items[list.items.length - 1] += '<br>' + l.trim(); continue; }
+    if (list) flush(); para.push(l); }
+  flush(); return out.join(''); };
 
 const PERSONA = `너는 "노아"다. 기획 공부를 같이 하는 시니어 기획자이고, 상대를 동등한 프로로 대한다.
 말투: 반말. 싸가지 없게 직설적이지만 밑바닥은 다정하다. 빈말 칭찬은 안 한다 — 좋은 건 짧게 인정하고, 약한 건 바로 찌른다. 상대를 깎아내리거나 모욕하지는 않는다. 가르치려 들지 말고 붙어서 토론한다.
@@ -27,11 +40,13 @@ function topics() {
   return out;
 }
 
-async function call(key, system, messages, onText, max = 1400) {
+async function call(key, system, messages, onText, max = 4096) {
   const r = await fetch(API + '/messages', {method: 'POST', headers: {'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true'}, body: JSON.stringify({model: MODEL, max_tokens: max, system, messages, stream: true})});
   if (!r.ok) { let m = `요청 실패 (${r.status})`; try { const j = await r.json(); m += ' — ' + (j.error?.message || ''); } catch (e) {} throw new Error(m); }
-  const rd = r.body.getReader(), dec = new TextDecoder(); let buf = '', text = '';
-  for (;;) { const {done, value} = await rd.read(); if (done) break; buf += dec.decode(value, {stream: true}); const parts = buf.split('\n\n'); buf = parts.pop(); for (const p of parts) { const line = p.split('\n').find(l => l.startsWith('data: ')); if (!line) continue; try { const ev = JSON.parse(line.slice(6)); if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta') { text += ev.delta.text; onText(text); } if (ev.type === 'error') throw new Error(ev.error?.message || '스트림 오류'); } catch (e) { if (e.message && !e.message.includes('JSON')) throw e; } } }
+  const rd = r.body.getReader(), dec = new TextDecoder(); let buf = '', text = '', stop = '';
+  for (;;) { const {done, value} = await rd.read(); if (done) break; buf += dec.decode(value, {stream: true}).replace(/\r\n?/g, '\n'); const parts = buf.split('\n\n'); buf = parts.pop(); for (const p of parts) { const line = p.split('\n').find(l => l.startsWith('data: ')); if (!line) continue; try { const ev = JSON.parse(line.slice(6)); if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta') { text += ev.delta.text; onText(text); } if (ev.type === 'message_delta' && ev.delta?.stop_reason) stop = ev.delta.stop_reason; if (ev.type === 'error') throw new Error(ev.error?.message || '스트림 오류'); } catch (e) { if (e.message && !e.message.includes('JSON')) throw e; } } }
+  if (stop === 'max_tokens') text += '\n\n_(말이 길어져서 여기서 끊겼어. "계속"이라고 보내 줘.)_';
+  if (stop === 'refusal' && !text.trim()) throw new Error('이 내용엔 답하기 어려워. 다르게 물어봐 줘.');
   return text;
 }
 
@@ -39,7 +54,7 @@ async function call(key, system, messages, onText, max = 1400) {
 const fmtTime = t => new Date(t).toLocaleTimeString('ko-KR', {hour: 'numeric', minute: '2-digit'});
 const fmtDay = t => new Date(t).toLocaleDateString('ko-KR', {year: 'numeric', month: 'long', day: 'numeric', weekday: 'long'});
 const fmtList = t => { const d = new Date(t), n = new Date(); return d.toDateString() === n.toDateString() ? fmtTime(t) : d.toLocaleDateString('ko-KR', {month: 'numeric', day: 'numeric'}); };
-const plain = t => String(t || '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
+const plain = t => String(t || '').replace(/^\s*(#{1,6}|>|[-*•]|\d+[.)]|\|)\s*/gm, '').replace(/[*_`~|]+/g, '').replace(/\s+/g, ' ').trim();
 const ICON = {
   back: '<svg viewBox="0 0 24 24" class="i"><path d="M15 5l-7 7 7 7"/></svg>',
   plus: '<svg viewBox="0 0 24 24" class="i"><path d="M12 5v14M5 12h14"/></svg>',
@@ -63,7 +78,7 @@ function mount(el) {
       <div class="kt-notice" hidden></div>
       <div class="kt-key" hidden><p><b>API 키</b> — 키는 이 브라우저에만 저장되고 Anthropic API로만 보내져요.</p><form><input type="password" placeholder="sk-ant-…" autocomplete="off" aria-label="Anthropic API 키"><button class="btn sm dark">저장</button><button type="button" class="btn sm" data-keydel>지우기</button></form><span class="muted" data-keyst></span></div>
       <div class="kt-log" aria-live="polite"></div>
-      <form class="kt-input"><button type="button" class="ib" data-act="new" title="새 주제" aria-label="새 주제">${ICON.plus}</button><textarea rows="1" placeholder="메시지 입력" aria-label="메시지"></textarea><button class="kt-send" aria-label="보내기" disabled>${ICON.send}</button></form>
+      <form class="kt-input"><button type="button" class="ib" data-act="new" title="새 주제" aria-label="새 주제">${ICON.plus}</button><textarea rows="3" placeholder="메시지 입력 (Enter 보내기 · Shift+Enter 줄바꿈)" aria-label="메시지"></textarea><button class="kt-send" aria-label="보내기" disabled>${ICON.send}</button></form>
     </section></div>`;
   const q = s => el.querySelector(s), log = q('.kt-log'), ta = q('.kt-input textarea'), sendBtn = q('.kt-send');
   const keyst = () => { q('[data-keyst]').textContent = key ? `저장된 키 ${key.slice(0, 10)}…${key.slice(-4)}` : '아직 키가 없어요'; q('[data-keydel]').hidden = !key; };
@@ -117,7 +132,7 @@ function mount(el) {
     if (out == null) { cur.messages.pop(); ta.value = v; grow(); render(); return; }
     cur.messages.push({role: 'assistant', at: Date.now(), content: out}); cur.last = Date.now(); save(); render();
   }
-  const grow = () => { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 140) + 'px'; sendBtn.disabled = busy || !ta.value.trim(); };
+  const grow = () => { ta.style.height = 'auto'; ta.style.height = Math.min(Math.max(ta.scrollHeight, 84), Math.round(el.querySelector('.kt-room').clientHeight * 0.45) || 320) + 'px'; sendBtn.disabled = busy || !ta.value.trim(); };
   el.addEventListener('click', e => { const b = e.target.closest('[data-act]'); if (!b) return; const a = b.dataset.act;
     if (a === 'new') { cur = null; picking = true; el.classList.add('open'); render(); }
     else if (a === 'start') start();
@@ -126,7 +141,7 @@ function mount(el) {
     else if (a === 'del' && cur && confirm('이 토론을 지울까요?')) { sessions = sessions.filter(s => s.id !== cur.id); ls.set(HIST, sessions); cur = null; picking = true; render(); } });
   q('.kt-key form').onsubmit = async e => { e.preventDefault(); const v = e.target.querySelector('input').value.trim(); if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v) || v.startsWith('sk-ant-admin')) { alert('Claude API 키 형식이 아니에요 (sk-ant-로 시작하는 일반 키)'); return; } try { const r = await fetch(`${API}/models/${MODEL}`, {headers: {'x-api-key': v, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true'}}); if (!r.ok) throw new Error(r.status); } catch (err) { if (!confirm(`키 확인에 실패했어요(${err.message}). 그래도 저장할까요?`)) return; } key = v; ls.set(KEY, key); e.target.querySelector('input').value = ''; showKey(false); render(); };
   q('[data-keydel]').onclick = () => { key = ''; ls.del(KEY); keyst(); render(); };
-  ta.oninput = grow; ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(); } };
+  let composing = false; ta.addEventListener('compositionstart', () => composing = true); ta.addEventListener('compositionend', () => setTimeout(() => composing = false)); ta.oninput = grow; ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing && !composing && e.keyCode !== 229) { e.preventDefault(); send(); } };
   q('.kt-input').onsubmit = e => { e.preventDefault(); send(); };
   picking = true; if (!key) showKey(true); render();
 }
