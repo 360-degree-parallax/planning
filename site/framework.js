@@ -30,14 +30,14 @@ async function loadData(saju) {
 /* ───── 단계 상태 ───── */
 const done = id => !!(proj.steps[id] && proj.steps[id].done);
 const stale = id => { const s = proj.steps[id]; if (!s || !s.at) return false; const i = STEPS.findIndex(x => x.id === id); return STEPS.slice(0, i).some(x => proj.steps[x.id] && proj.steps[x.id].doneAt > s.at); };
-function blocker(step) {
-  const i = STEPS.indexOf(step), prev = STEPS[i - 1];
-  if (prev && !done(prev.id)) return `앞 단계 "${prev.name}"을 먼저 확정해 주세요`;
-  if (step.id === 'compare' && !proj.selected.length) return '수렴 단계에서 아이디어를 하나 이상 골라 주세요';
-  if (i > STEPS.indexOf(STEP.compare) && !proj.picked) return '비교 카드에서 깊게 갈 아이디어를 골라 주세요';
+/* 막지 않는다 — 비어 있는 앞 단계는 Claude가 있는 데이터로 추론한다는 안내만 */
+function hint(step) {
+  const i = STEPS.indexOf(step), skipped = STEPS.slice(0, i).filter(s => !proj.steps[s.id]?.out).length;
+  if (step.id === 'compare' && !proj.selected.length) return '고른 아이디어가 없어요. 생성하면 개요와 지금까지 만든 내용에서 후보를 추론해 비교해요.';
+  if (skipped) return `앞 단계 ${skipped}개를 건너뛰었어요. 필요한 내용은 개요와 지금까지 만든 내용으로 추론해 채우고 "(추론)"으로 표시해요.`;
   return '';
 }
-const ideaName = id => { const it = (proj.steps.ideas?.out?.ideas || []).find(x => x.id === id); return it ? `${id} ${it.title}` : id; };
+const ideaName = id => { const it = (proj.steps.ideas?.out?.ideas || []).find(x => x.id === id) || (proj.steps.compare?.out?.cards || []).find(x => x.id === id); return it && it.title ? `${id} ${it.title}` : id; };
 
 /* ───── 편집 가능한 일반 렌더러 ───── */
 const getAt = (o, path) => path.reduce((a, k) => a == null ? a : a[k], o);
@@ -134,19 +134,19 @@ function briefSum() {
 }
 function stepper() {
   const cur = proj.cur;
-  return `<nav class="fw-steps" aria-label="단계">${STAGES.map((st, n) => `<div class="fw-stage"><div class="fw-sn"><em>${n + 1}</em>${st.name}</div>${STEPS.filter(s => s.stage === st.id).map(s => { const d = done(s.id), sl = stale(s.id), has = !!proj.steps[s.id]?.out; return `<button data-go="${s.id}" aria-current="${s.id === cur}" class="${d ? 'done' : has ? 'has' : ''}"><i class="fw-dot"></i>${esc(s.name)}${sl ? ' <span class="tag warn">앞이 바뀜</span>' : ''}</button>`; }).join('')}</div>`).join('')}</nav>`;
+  return `<nav class="fw-steps" aria-label="단계"><button class="btn sm dark fw-quick" data-act="quickbrief" title="지금까지 만든 내용으로 기획서를 바로 만들어요">기획서 바로 만들기</button><p class="muted fw-tip">필요한 단계만 골라서 해요. 순서는 자유예요.</p>${STAGES.map((st, n) => `<div class="fw-stage"><div class="fw-sn"><em>${n + 1}</em>${st.name}</div>${STEPS.filter(s => s.stage === st.id).map(s => { const d = done(s.id), sl = stale(s.id), has = !!proj.steps[s.id]?.out; return `<button data-go="${s.id}" aria-current="${s.id === cur}" class="${d ? 'done' : has ? 'has' : ''}"><i class="fw-dot"></i>${esc(s.name)}${sl ? ' <span class="tag warn">앞이 바뀜</span>' : ''}</button>`; }).join('')}</div>`).join('')}</nav>`;
 }
 function panel() {
-  const step = STEP[proj.cur], st = proj.steps[step.id] || {}, b = blocker(step), stage = STAGES.find(s => s.id === step.stage);
+  const step = STEP[proj.cur], st = proj.steps[step.id] || {}, b = hint(step), stage = STAGES.find(s => s.id === step.stage);
   const running = busy === step.id;
-  const head = `<header class="fw-ph"><span class="muted">${stage.name} · ${STEPS.filter(s => s.stage === step.stage).indexOf(step) + 1}/${STEPS.filter(s => s.stage === step.stage).length}</span><h2>${esc(step.name)}</h2><p>${esc(step.ask)}</p>${stale(step.id) ? '<p class="fw-warn">앞 단계를 이 단계 이후에 다시 확정했어요. 다시 생성하면 바뀐 내용이 반영돼요.</p>' : ''}</header>`;
+  const head = `<header class="fw-ph"><span class="muted">${stage.name} · ${STEPS.filter(s => s.stage === step.stage).indexOf(step) + 1}/${STEPS.filter(s => s.stage === step.stage).length}</span><h2>${esc(step.name)}</h2><p>${esc(step.ask)}</p>${stale(step.id) ? '<p class="fw-warn">이 단계를 만든 뒤에 앞 단계를 다시 확정했어요. 다시 생성하면 바뀐 내용이 반영돼요.</p>' : ''}</header>`;
   let body = '';
   if (step.id === 'results') body += resultsForm();
   if (running) body += `<div class="fw-run"><span class="fw-spin"></span><span data-status>준비 중</span><button class="btn sm" data-act="cancel">멈추기</button></div>`;
   else if (st.err) body += `<p class="fw-warn">${esc(st.err)}</p>`;
   if (st.out && !running) body += extra(step, false) + `<details class="fw-raw" ${['ice', 'compare', 'unit', 'experiments', 'redteam', 'issue_tree', 'three_c'].includes(step.id) ? '' : 'open'}><summary>내용 고치기</summary>${node(step.schema, st.out, [], false)}</details>`;
   const gen = st.out ? '다시 생성' : '생성';
-  const foot = running ? '' : `<footer class="fw-foot">${b ? `<p class="fw-warn">${esc(b)}</p>` : ''}<textarea data-instr rows="2" placeholder="지시를 덧붙일 수 있어요 (예: 20대 여성 직장인에 집중해 줘, 가격은 9,900원 고정)">${esc(st.instr || '')}</textarea><div class="fw-btns"><button class="btn ${st.out ? '' : 'dark'}" data-act="gen" ${b ? 'disabled' : ''}>${gen}</button>${st.out ? `<button class="btn dark" data-act="confirm">${done(step.id) ? '다시 확정' : '확정하고 다음'}</button>` : ''}<span class="grow"></span>${st.usage ? `<span class="muted">입력 ${st.usage.input_tokens?.toLocaleString()} · 출력 ${st.usage.output_tokens?.toLocaleString()} 토큰${st.model && st.model !== MODEL ? ' · ' + esc(st.model) : ''}</span>` : ''}</div></footer>`;
+  const foot = running ? '' : `<footer class="fw-foot">${b ? `<p class="muted">${esc(b)}</p>` : ''}<textarea data-instr rows="2" placeholder="지시를 덧붙일 수 있어요 (예: 20대 여성 직장인에 집중해 줘, 가격은 9,900원 고정)">${esc(st.instr || '')}</textarea><div class="fw-btns"><button class="btn ${st.out ? '' : 'dark'}" data-act="gen">${gen}</button>${st.out ? `<button class="btn dark" data-act="confirm">${done(step.id) ? '다시 확정' : '확정'}</button>` : ''}${step.id === 'brief' && st.out ? '<a class="btn" href="#report">결과 보기</a>' : ''}<span class="grow"></span>${st.usage ? `<span class="muted">입력 ${st.usage.input_tokens?.toLocaleString()} · 출력 ${st.usage.output_tokens?.toLocaleString()} 토큰${st.model && st.model !== MODEL ? ' · ' + esc(st.model) : ''}</span>` : ''}</div></footer>`;
   return `<section class="fw-panel">${head}${body}${foot}</section>`;
 }
 
@@ -194,9 +194,7 @@ function confirmStep() {
   const step = STEP[proj.cur], st = proj.steps[step.id]; if (!st?.out) return;
   if (step.id === 'ice' && !proj.selected.length) { toast('아이디어를 하나 이상 골라 주세요'); return; }
   if (step.id === 'compare' && !proj.picked) { toast('깊게 갈 아이디어를 골라 주세요'); return; }
-  st.done = true; st.doneAt = Date.now(); const i = STEPS.indexOf(step);
-  proj.cur = (STEPS[i + 1] || step).id; save(); render(); window.scrollTo({ top: root().offsetTop - 60, behavior: 'smooth' });
-  if (!STEPS[i + 1]) { toast('모든 단계를 확정했어요. 결과 보기로 이동해요'); location.hash = 'report'; }
+  st.done = true; st.doneAt = Date.now(); save(); render(); toast(`${step.name} 확정 — 다음에 할 단계를 왼쪽에서 골라요`);
 }
 
 function bind() {
@@ -216,6 +214,7 @@ function bind() {
     else if (a === 'understand') understand();
     else if (a === 'cancel') ctrl?.abort();
     else if (a === 'confirm') confirmStep();
+    else if (a === 'quickbrief') { proj.cur = 'brief'; save(); generate(); }
     else if (a === 'key') { const k = el.querySelector('.fw-key'); k.hidden = !k.hidden; }
     else if (a === 'keydel') { key = ''; ls.del(KEY); render(); }
     else if (a === 'export') download(`${proj.brief.title || 'framework'}.json`, JSON.stringify(proj, null, 2), 'application/json');
@@ -242,12 +241,12 @@ const sec = (id, title, html) => html ? `<section class="rp-sec" id="rp-${id}"><
 const ro = id => O(id) ? node(STEP[id].schema, O(id), [], true) : '';
 function report() {
   const b = proj.brief, brief = O('brief'), prob = O('problem'), pick = proj.picked, cmp = O('compare'), u = O('unit'), c = unitCalc(u), it = O('issue_tree'), gtm = O('gtm'), rev = O('revise');
-  const doneN = STEPS.filter(s => done(s.id)).length;
+  const doneN = STEPS.filter(s => done(s.id)).length, madeN = STEPS.filter(s => O(s.id)).length;
   const toc = [['summary', '요약'], ['problem', '문제'], ['idea', '아이디어'], ['three_c', '3C'], ['gtm', 'GTM'], ['issue_tree', '이슈트리'], ['product', '경험 · MVP · 단위 경제'], ['verify', '검증 계획'], ['debate', '토론'], ['press', '보도자료'], ['roadmap', '로드맵']];
   const kv = (k, v) => v ? `<div class="rp-kv"><span>${esc(k)}</span><b>${esc(v)}</b></div>` : '';
-  return `<div class="fw-bar0 noprint"><a class="btn sm" href="#">← 편집으로</a><span class="grow"></span><span class="muted">${doneN}/${STEPS.length} 단계 확정</span><button class="btn sm" data-act="md">마크다운 내려받기</button><button class="btn sm dark" data-act="print">인쇄 · PDF</button></div>
+  return `<div class="fw-bar0 noprint"><a class="btn sm" href="#">← 편집으로</a><span class="grow"></span><span class="muted">만든 단계 ${madeN}개 · 확정 ${doneN}개</span><button class="btn sm" data-act="md">마크다운 내려받기</button><button class="btn sm dark" data-act="print">인쇄 · PDF</button></div>
   <article class="rp">
-    <header class="rp-hero"><span class="muted">기획 프레임워크 · ${new Date(proj.updated).toLocaleDateString('ko-KR')}${b.saju ? ' · 사주 모드' : ''}</span><h1>${esc(brief?.slogan || b.title || '기획')}</h1>${brief ? `<p class="rp-lead">${esc(brief.summary)}</p>` : `<p class="rp-lead">${esc(b.goal)}</p>`}${doneN < STEPS.length ? `<p class="fw-warn noprint">아직 확정하지 않은 단계가 있어요. 확정한 내용만 실려요.</p>` : ''}</header>
+    <header class="rp-hero"><span class="muted">기획 프레임워크 · ${new Date(proj.updated).toLocaleDateString('ko-KR')}${b.saju ? ' · 사주 모드' : ''}</span><h1>${esc(brief?.slogan || b.title || '기획')}</h1>${brief ? `<p class="rp-lead">${esc(brief.summary)}</p>` : `<p class="rp-lead">${esc(b.goal)}</p>`}${madeN > doneN ? `<p class="fw-warn noprint">확정하지 않은 단계 ${madeN - doneN}개는 초안 그대로 실려요. 하지 않은 단계는 비어 있어요 — 기획서에는 Claude가 추론해 채운 내용이 들어가요.</p>` : ''}</header>
     <nav class="rp-toc noprint">${toc.map(([id, t]) => `<a href="#rp-${id}" data-jump>${t}</a>`).join('')}</nav>
     ${sec('summary', '요약', brief ? `<div class="rp-grid">${kv('왜', brief.why)}${kv('누구에게', brief.who)}${kv('무엇을', brief.what)}${kv('어떻게', brief.how)}</div><div class="rp-kpis">${(brief.expected || []).map(e => `<div><span>${esc(e.metric)}</span><b>${esc(e.target)}</b></div>`).join('')}</div><p class="rp-sowhat">${esc(brief.so_what)}</p>` : `<div class="rp-grid">${kv('상황', b.situation)}${kv('목표', b.goal)}${kv('제약', b.constraints)}</div>`)}
     ${sec('problem', '문제', prob ? `<p class="rp-big">${esc(prob.problem_statement)}</p><div class="rp-grid">${kv('표면 목표', prob.surface_goal)}${kv('재정의한 목표', prob.redefined_goal)}${kv('근본 원인', prob.root_cause)}${kv('지표', prob.metric)}</div><ol class="rp-why">${(prob.five_why || []).map(w => `<li><b>${esc(w.q)}</b> ${esc(w.a)}</li>`).join('')}</ol>` : '')}
@@ -272,7 +271,7 @@ function mdNode(sc, v, depth) {
 }
 function markdown() {
   const b = proj.brief, out = [`# ${b.title || '기획'}`, '', b.text && `> ${b.text.replace(/\n+/g, ' ')}`, b.text && '', `- 상황: ${b.situation}`, `- 목표: ${b.goal}`, b.constraints && `- 제약: ${b.constraints}`, b.target && `- 타겟 짐작: ${b.target}`, `- 사주 모드: ${b.saju ? '켜짐' : '꺼짐'}`, proj.selected.length && `- 프로덕트로 넘긴 아이디어: ${proj.selected.map(ideaName).join(', ')}`, proj.picked && `- 깊게 간 아이디어: ${ideaName(proj.picked)}`].filter(Boolean);
-  STAGES.forEach(st => { out.push('', `## ${st.name}`); STEPS.filter(s => s.stage === st.id && done(s.id)).forEach(s => { out.push('', `### ${s.name}`, '', mdNode(s.schema, O(s.id), 1)); if (s.id === 'unit') { const c = unitCalc(O('unit')); out.push('', `- 건당 공헌이익 ${won(c.margin)} · LTV ${won(c.ltv)} · 월 손익분기 ${Number.isFinite(c.breakeven) ? c.breakeven + '건' : '-'}`, ...c.ch.map(x => `- ${x.name}: LTV/CAC ${Number.isFinite(x.ratio) ? x.ratio.toFixed(1) : '-'}`)); } if (s.id === 'experiments') out.push('', ...expRows().map((r, n) => `${n + 1}. ${r.assumption_id} ${r.method} — ICE ${r.ice}${r.days ? `, ${r.days}일` : ''}`)); }); });
+  STAGES.forEach(st => { out.push('', `## ${st.name}`); STEPS.filter(s => s.stage === st.id && O(s.id)).forEach(s => { out.push('', `### ${s.name}${done(s.id) ? '' : ' (초안)'}`, '', mdNode(s.schema, O(s.id), 1)); if (s.id === 'unit') { const c = unitCalc(O('unit')); out.push('', `- 건당 공헌이익 ${won(c.margin)} · LTV ${won(c.ltv)} · 월 손익분기 ${Number.isFinite(c.breakeven) ? c.breakeven + '건' : '-'}`, ...c.ch.map(x => `- ${x.name}: LTV/CAC ${Number.isFinite(x.ratio) ? x.ratio.toFixed(1) : '-'}`)); } if (s.id === 'experiments') out.push('', ...expRows().map((r, n) => `${n + 1}. ${r.assumption_id} ${r.method} — ICE ${r.ice}${r.days ? `, ${r.days}일` : ''}`)); }); });
   const res = Object.values(proj.results).filter(r => r.verdict); if (res.length) out.push('', '## 실험 결과', '', ...res.map(r => `- ${r.experiment}: ${r.verdict.verdict} (상승 ${pct(r.verdict.delta)}, χ² ${r.verdict.chi.toFixed(2)})`));
   if (proj.accepted.length) out.push('', '## 받아들인 레드팀 지적', '', ...proj.accepted.map(a => `- [${a.persona}] ${a.claim} → ${a.suggestion}`));
   return out.join('\n') + '\n';

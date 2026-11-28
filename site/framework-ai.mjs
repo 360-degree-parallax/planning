@@ -36,8 +36,8 @@ export const STEPS = [
   { id: 'ice', stage: 'idea', name: '수렴 (ICE)', theory: ['m_ice', 'pareto'], select: { max: 3, label: '프로덕트로 넘길 아이디어 (최대 3개)' }, ask: '생존한 아이디어마다 ICE 점수(각 1~5)를 매겨 줘. Impact는 재정의한 목표에 가까울수록, Confidence는 근거가 있을수록, Ease는 리소스가 적을수록 높게.',
     schema: obj({ scores: arr(obj({ id: str('아이디어 id'), impact: int('1~5'), confidence: int('1~5'), ease: int('1~5'), reason: str('점수 근거 한 줄') }), '생존 아이디어 전부') }) },
 
-  { id: 'compare', stage: 'product', name: '비교 카드 → 하나 고르기', theory: ['three_c', 'gtm_intro'], pick: { label: '깊게 갈 아이디어 하나' }, ask: '고른 아이디어들을 같은 틀로 가볍게 비교해 줘: 3C 진입 칸, 누구에게 · 무엇으로 · 얼마에, 가장 위험한 가정. 그리고 하나를 추천해.',
-    schema: obj({ cards: arr(obj({ id: str('아이디어 id'), entry_cell: en(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'], '3C 겹침 칸'), who: str('누구에게'), what: str('무엇으로 (포지셔닝 한 줄)'), price: str('얼마에'), riskiest_assumption: str('가장 위험한 가정'), strength: str('강점'), weakness: str('약점') }), '아이디어마다'), recommend_id: str('추천 아이디어 id'), reason: str('추천 이유') }) },
+  { id: 'compare', stage: 'product', name: '비교 카드 → 하나 고르기', theory: ['three_c', 'gtm_intro'], pick: { label: '깊게 갈 아이디어 하나' }, ask: '고른 아이디어들(없으면 개요와 있는 데이터에서 후보 2~3개를 추론해서)을 같은 틀로 가볍게 비교해 줘: 3C 진입 칸, 누구에게 · 무엇으로 · 얼마에, 가장 위험한 가정. 그리고 하나를 추천해.',
+    schema: obj({ cards: arr(obj({ id: str('아이디어 id (아이디어 단계가 없으면 C1, C2 …)'), title: str('아이디어 이름'), entry_cell: en(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'], '3C 겹침 칸'), who: str('누구에게'), what: str('무엇으로 (포지셔닝 한 줄)'), price: str('얼마에'), riskiest_assumption: str('가장 위험한 가정'), strength: str('강점'), weakness: str('약점') }), '아이디어마다'), recommend_id: str('추천 아이디어 id'), reason: str('추천 이유') }) },
   { id: 'three_c', stage: 'product', name: '3C', theory: ['three_c', 'risk_3c'], ask: '고른 아이디어로 3C를 분석해 줘. 고객 · 경쟁사 · 자사를 정리하고, A~H 8칸에 무엇이 있는지 적고, 진입 칸과 이유를 쓴다. 경쟁사는 제공된 경쟁사 자료를 우선 쓴다.',
     schema: obj({ customer: strs('고객 니즈 3~5개'), competitors: arr(obj({ name: str('경쟁사·대안'), strength: str(''), weakness: str('') }), '3~6개'), company: strs('자사 강점·자원 3~5개'), cells: arr(obj({ cell: en(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'], ''), meaning: str('이 칸의 뜻'), here: str('여기에 해당하는 것') }), '8칸 전부'), entry_cell: en(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'], '진입 칸'), entry_reason: str('왜 이 칸인가'), d_risk: str('성공하면 D로 바뀌는 위험과 대비') }) },
   { id: 'gtm', stage: 'product', name: 'GTM', theory: ['gtm_intro', 'gtm_beachhead', 'gtm_position', 'gtm_pricing', 'gtm_channel'], ask: '5장 GTM의 여섯 질문으로 GTM 한 장을 써 줘. 칸마다 근거 강도를 표시한다.',
@@ -68,7 +68,7 @@ export const STEPS = [
     schema: obj({ critiques: arr(obj({ persona: en(['노아', '결정권자', '회의적인 고객', '경쟁사 PM'], ''), claim: str('지적'), why: str('왜 문제인가'), severity: int('1~5'), target_step: str('고칠 단계 이름'), suggestion: str('고칠 방향') }), '8~12개') }) },
   { id: 'revise', stage: 'debate', name: '수정 반영', theory: ['uturn'], ask: '받아들인 레드팀 지적을 반영한 수정안을 단계별로 써 줘. 무엇이 어떻게 바뀌는지(전 → 후)와 이유.',
     schema: obj({ changes: arr(obj({ step: str('단계'), before: str('전'), after: str('후'), reason: str('이유') }), ''), summary: str('토론으로 바뀐 점 한 문단') }) },
-  { id: 'brief', stage: 'debate', name: '기획서', theory: ['m_brief', 'str_use'], ask: '전체를 3W1H · 두괄식 전략 기획서로 정리해 줘. 기대 효과는 숫자로.',
+  { id: 'brief', stage: 'debate', name: '기획서', theory: ['m_brief', 'str_use'], ask: '지금까지 만든 내용(확정 · 초안)을 바탕으로 3W1H · 두괄식 전략 기획서를 써 줘. 하지 않은 단계의 내용은 개요와 있는 데이터로 추론해 채우고 "(추론)"을 붙인다. 기대 효과는 숫자로.',
     schema: obj({ slogan: str('메인 슬로건'), summary: str('세 줄 요약'), why: str('왜 — 문제와 목적'), who: str('누구에게'), what: str('무엇을'), how: str('어떻게 — 채널·가격·일정'), expected: arr(obj({ metric: str(''), target: str('') }), '3~4개'), so_what: str('한 줄 결론') }) },
   { id: 'press', stage: 'debate', name: '보도자료', theory: ['gtm_message'], ask: '아마존 Working Backwards 방식으로, 출시일에 고객이 읽을 보도자료 1장과 FAQ를 써 줘. 고객의 언어로.',
     schema: obj({ headline: str(''), subhead: str(''), body: str('3~4문단'), customer_quote: str(''), team_quote: str(''), faq: arr(obj({ q: str(''), a: str('') }), '4~6개') }) },
@@ -81,7 +81,8 @@ const SYSTEM = `너는 시니어 서비스 기획자이자 그로스 전략가�
 원칙:
 - 한국어로, 실무자가 바로 쓸 수 있게 구체적으로 쓴다. 형용사 대신 상황 · 숫자 · 행동.
 - 숫자를 지어내지 않는다. 추정한 숫자는 "(가정)"을 붙이고 근거를 쓴다. 제공된 사례·벤치마크·규정을 인용하면 그 id나 출처를 괄호로 단다.
-- 앞 단계에서 확정한 내용과 일관되게 쓴다. 바꿔야 한다면 바꾸는 이유를 쓴다.
+- 다른 단계에서 만든 내용(특히 사용자가 확정한 것)과 일관되게 쓴다. 바꿔야 한다면 바꾸는 이유를 쓴다.
+- 사용자는 필요한 단계만 골라서 한다. 비어 있는 단계에 필요한 내용은 개요와 있는 데이터로 추론해 채우고, 그 부분에 "(추론)"을 붙인다.
 - 제공된 학습 자료(이론 절)의 방법과 흔한 실수를 지킨다.
 - 결과는 주어진 JSON 스키마로만 낸다.`;
 
@@ -105,8 +106,10 @@ export function buildContext(project, step, data) {
   const out = [];
   const b = project.brief;
   out.push(`[프로젝트]${b.text ? `\n사용자가 쓴 원문: ${b.text}` : ''}\n상황: ${b.situation}\n목표: ${b.goal}\n제약: ${b.constraints || '-'}\n타겟 짐작: ${b.target || '-'}\n사주 모드: ${b.saju ? '켜짐 — 기준 서비스는 AI 사주 웹사이트(커머스형, 웹툰형 스토리 1p → 마케팅 2p → 결제 → 전체 결과 공개, 최종 지표 = 결제)' : '꺼짐'}`);
-  const done = STEPS.slice(0, STEPS.indexOf(step)).filter(s => project.steps[s.id] && project.steps[s.id].done);
-  if (done.length) out.push('[앞 단계에서 확정한 내용]\n' + done.map(s => `## ${s.name}\n${JSON.stringify(project.steps[s.id].out)}`).join('\n'));
+  const have = STEPS.filter(s => s !== step && project.steps[s.id] && project.steps[s.id].out);
+  if (have.length) out.push('[지금까지 만든 내용 — (확정)은 사용자가 검토해 확정, (초안)은 아직 검토 전]\n' + have.map(s => `## ${s.name} (${project.steps[s.id].done ? '확정' : '초안'})\n${JSON.stringify(project.steps[s.id].out)}`).join('\n'));
+  const skipped = STEPS.slice(0, STEPS.indexOf(step)).filter(s => !(project.steps[s.id] && project.steps[s.id].out)).map(s => s.name);
+  if (skipped.length) out.push(`[건너뛴 앞 단계] ${skipped.join(', ')} — 이 단계에 필요한 만큼만 개요와 있는 데이터로 추론하고 "(추론)"이라고 표시한다.`);
   if (project.selected && project.selected.length) out.push(`[프로덕트로 넘긴 아이디어] ${project.selected.join(', ')}`);
   if (project.picked) out.push(`[깊게 갈 아이디어] ${project.picked}`);
   if (step.id === 'revise' && project.accepted) out.push('[받아들인 레드팀 지적]\n' + JSON.stringify(project.accepted));
