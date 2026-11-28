@@ -23,7 +23,7 @@ const PERSONA = `너는 "노아"다. 기획 공부를 같이 하는 시니어 �
 function topics() {
   const out = [], meta = Object.fromEntries(((window.P && window.P.STEPS) || []).map(s => [s.id, s]));
   (window.CHAPTERS || []).forEach(ch => ch.T.forEach(t => out.push({id: `${ch.view}:${t.id}`, group: `${ch.no}장 ${ch.title.split(' — ')[0]}`, name: t.t || meta[t.id]?.t || t.id, ctx: [t.ask && `질문: ${t.ask}`, t.def && `정의: ${t.def}`, t.how && `방법: ${t.how.join(' / ')}`, t.pit && `흔한 실수: ${t.pit.join(' / ')}`, t.more && `보충: ${strip(t.more).slice(0, 900)}`].filter(Boolean).join('\n')})));
-  const M = window.METHODS; if (M) M.ITEMS.forEach(m => out.push({id: `m:${m.id}`, group: `실무 · ${M.GROUPS.find(g => g.id === m.g).name}`, name: m.name, ctx: [m.short, m.why && `왜: ${m.why.join(' / ')}`, m.how && `어떻게: ${m.how.join(' / ')}`, m.points && m.points.map(p => p.join(': ')).join(' / '), m.rules && `판단 규칙: ${m.rules.join(' / ')}`, m.saju && `사주 적용: ${m.saju}`].filter(Boolean).join('\n')}));
+  const M = window.METHODS; if (M && !(window.CHAPTERS || []).some(c => c.view === 'ch6')) M.ITEMS.forEach(m => out.push({id: `m:${m.id}`, group: `실무 · ${M.GROUPS.find(g => g.id === m.g).name}`, name: m.name, ctx: [m.short, m.why && `왜: ${m.why.join(' / ')}`, m.how && `어떻게: ${m.how.join(' / ')}`, m.points && m.points.map(p => p.join(': ')).join(' / '), m.rules && `판단 규칙: ${m.rules.join(' / ')}`, m.saju && `사주 적용: ${m.saju}`].filter(Boolean).join('\n')}));
   return out;
 }
 
@@ -35,49 +35,100 @@ async function call(key, system, messages, onText, max = 1400) {
   return text;
 }
 
+/* 톡방 UI — 카카오톡 PC 구조(왼쪽 대화 목록 · 오른쪽 방), 색은 사이트 토큰 */
+const fmtTime = t => new Date(t).toLocaleTimeString('ko-KR', {hour: 'numeric', minute: '2-digit'});
+const fmtDay = t => new Date(t).toLocaleDateString('ko-KR', {year: 'numeric', month: 'long', day: 'numeric', weekday: 'long'});
+const fmtList = t => { const d = new Date(t), n = new Date(); return d.toDateString() === n.toDateString() ? fmtTime(t) : d.toLocaleDateString('ko-KR', {month: 'numeric', day: 'numeric'}); };
+const plain = t => String(t || '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
+const ICON = {
+  back: '<svg viewBox="0 0 24 24" class="i"><path d="M15 5l-7 7 7 7"/></svg>',
+  plus: '<svg viewBox="0 0 24 24" class="i"><path d="M12 5v14M5 12h14"/></svg>',
+  send: '<svg viewBox="0 0 24 24" class="i"><path d="M4 12l16-8-6 16-3-7-7-1z"/></svg>',
+  gear: '<svg viewBox="0 0 24 24" class="i"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>',
+  trash: '<svg viewBox="0 0 24 24" class="i"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>',
+  pin: '<svg viewBox="0 0 24 24" class="i"><path d="M12 3l3 6 5 1-4 4 1 6-5-3-5 3 1-6-4-4 5-1z"/></svg>'
+};
+
 function mount(el) {
   const T = topics(), groups = [...new Set(T.map(t => t.group))];
-  let key = ls.get(KEY, ''), sessions = ls.get(HIST, []), cur = null, busy = false;
-  const save = () => { if (cur) { const i = sessions.findIndex(s => s.id === cur.id); if (i < 0) sessions.unshift(cur); else sessions[i] = cur; sessions = sessions.slice(0, 30); ls.set(HIST, sessions); } };
-  el.innerHTML = `<div class="noah-grid">
-    <aside class="noah-side">
-      <div class="noah-hero"><div class="noah-av" aria-hidden="true">N</div><div><b>노아</b><span>직설적이고, 결국은 네 편인 시니어 기획자</span></div></div>
-      <div class="noah-key"><span data-keyst></span><button class="btn sm" data-keybtn></button></div>
-      <form class="noah-keyform" hidden><input type="password" placeholder="sk-ant-…" autocomplete="off" aria-label="Anthropic API 키"><button class="btn sm dark">저장</button><button type="button" class="btn sm" data-keydel>지우기</button><p class="muted">키는 이 브라우저에만 저장되고, Anthropic API로 직접 보내져요. 다른 곳에는 보내지 않아요.</p></form>
-      <label class="noah-lb">주제 묶음<select data-group><option value="">전체에서 무작위</option>${groups.map(g => `<option>${esc(g)}</option>`).join('')}</select></label>
-      <label class="noah-lb">주제<select data-topic></select></label>
-      <button class="btn dark noah-go" data-new>논술 문제 받기</button>
-      <h4>지난 토론</h4><div class="noah-hist"></div>
+  let key = ls.get(KEY, ''), sessions = ls.get(HIST, []), cur = null, busy = false, picking = false;
+  const save = () => { if (!cur) return; const i = sessions.findIndex(s => s.id === cur.id); if (i < 0) sessions.unshift(cur); else sessions[i] = cur; sessions.sort((a, b) => (b.last || b.at) - (a.last || a.at)); sessions = sessions.slice(0, 40); ls.set(HIST, sessions); };
+  el.innerHTML = `<div class="kt">
+    <aside class="kt-list">
+      <div class="kt-lh"><b>채팅</b><span class="grow"></span><button class="ib" data-act="new" title="새 토론" aria-label="새 토론">${ICON.plus}</button><button class="ib" data-act="key" title="API 키" aria-label="API 키 설정">${ICON.gear}</button></div>
+      <div class="kt-rooms"></div>
     </aside>
-    <section class="noah-main"><div class="noah-log" aria-live="polite"></div>
-      <form class="noah-input" hidden><textarea rows="5" placeholder="네 답을 써. 근거랑 숫자 있으면 더 좋고."></textarea><div class="noah-acts"><span class="muted" data-hint>Ctrl+Enter로 보내기</span><span class="grow"></span><button class="btn dark">보내기</button></div></form>
+    <section class="kt-room">
+      <header class="kt-rh"><button class="ib kt-back" data-act="back" aria-label="목록으로">${ICON.back}</button><i class="kt-av">N</i><div class="kt-rt"><b>노아</b><span data-sub>기획 토론 · 1:1</span></div><span class="grow"></span><button class="ib" data-act="new" title="새 주제" aria-label="새 주제">${ICON.plus}</button><button class="ib" data-act="del" title="이 토론 지우기" aria-label="이 토론 지우기">${ICON.trash}</button><button class="ib" data-act="key" title="API 키" aria-label="API 키 설정">${ICON.gear}</button></header>
+      <div class="kt-notice" hidden></div>
+      <div class="kt-key" hidden><p><b>API 키</b> — 키는 이 브라우저에만 저장되고 Anthropic API로만 보내져요.</p><form><input type="password" placeholder="sk-ant-…" autocomplete="off" aria-label="Anthropic API 키"><button class="btn sm dark">저장</button><button type="button" class="btn sm" data-keydel>지우기</button></form><span class="muted" data-keyst></span></div>
+      <div class="kt-log" aria-live="polite"></div>
+      <form class="kt-input"><button type="button" class="ib" data-act="new" title="새 주제" aria-label="새 주제">${ICON.plus}</button><textarea rows="1" placeholder="메시지 입력" aria-label="메시지"></textarea><button class="kt-send" aria-label="보내기" disabled>${ICON.send}</button></form>
     </section></div>`;
-  const q = s => el.querySelector(s);
-  const renderKey = () => { q('[data-keyst]').textContent = key ? `API 키 ${key.slice(0, 10)}…${key.slice(-4)}` : 'API 키 없음 — 넣어야 노아가 말해요'; q('[data-keyst]').classList.toggle('on', !!key); q('[data-keybtn]').textContent = key ? '키 변경' : 'API 키 입력'; q('[data-keydel]').hidden = !key; };
-  const fillTopics = () => { const g = q('[data-group]').value; q('[data-topic]').innerHTML = `<option value="">무작위</option>` + T.filter(t => !g || t.group === g).map(t => `<option value="${esc(t.id)}">${esc(t.name)}</option>`).join(''); };
-  const renderHist = () => { q('.noah-hist').innerHTML = sessions.length ? sessions.map(s => `<button type="button" data-s="${s.id}" aria-selected="${cur && cur.id === s.id}"><b>${esc(s.topic)}</b><span>${new Date(s.at).toLocaleDateString('ko-KR')} · ${Math.max(0, s.messages.length - 1)}턴</span></button>`).join('') : '<p class="muted">아직 없어요.</p>'; el.querySelectorAll('[data-s]').forEach(b => b.onclick = () => { cur = sessions.find(s => s.id === b.dataset.s); renderLog(); renderHist(); }); };
-  const bubble = (role, text, live) => `<div class="noah-msg ${role}${live ? ' live' : ''}">${role === 'assistant' ? '<i class="noah-av sm">N</i>' : ''}<div>${md(text)}</div></div>`;
-  const renderLog = (liveText) => { const log = q('.noah-log'); if (!cur) { log.innerHTML = `<div class="noah-empty"><p><b>뭐부터 할래?</b></p><p>왼쪽에서 주제를 고르고 "논술 문제 받기"를 눌러. 문제 하나 던질 테니까 네 생각을 써. 그다음부터는 토론이야.</p><p class="muted">주제는 이론 1~5장과 실무 툴(데이터 분석 · 실험 · 브랜딩 · 마케팅 전략 · 콘텐츠) 전체에서 나와.</p></div>`; q('.noah-input').hidden = true; return; } log.innerHTML = `<p class="noah-topic">${esc(cur.group)} · <b>${esc(cur.topic)}</b></p>` + cur.messages.map((m, i) => i === 0 ? '' : bubble(m.role, m.content)).join('') + (liveText != null ? bubble('assistant', liveText || '…', true) : ''); q('.noah-input').hidden = false; log.scrollTop = log.scrollHeight; };
+  const q = s => el.querySelector(s), log = q('.kt-log'), ta = q('.kt-input textarea'), sendBtn = q('.kt-send');
+  const keyst = () => { q('[data-keyst]').textContent = key ? `저장된 키 ${key.slice(0, 10)}…${key.slice(-4)}` : '아직 키가 없어요'; q('[data-keydel]').hidden = !key; };
+  const showKey = on => { q('.kt-key').hidden = !on; if (on) { keyst(); q('.kt-key input').focus(); } };
+  const renderRooms = () => { q('.kt-rooms').innerHTML = sessions.length ? sessions.map(s => { const lastM = [...s.messages].reverse().find(m => m.role === 'assistant' || m !== s.messages[0]); return `<button type="button" data-s="${s.id}" aria-selected="${!!(cur && cur.id === s.id)}"><i class="kt-av">N</i><span class="kt-rmeta"><b>${esc(s.topic)}</b><small>${esc(plain(lastM && lastM !== s.messages[0] ? lastM.content : '문제를 받는 중…')).slice(0, 60)}</small></span><time>${fmtList(s.last || s.at)}</time></button>`; }).join('') : '<p class="kt-empty-l">아직 대화가 없어요.<br>＋를 눌러 주제를 골라 봐.</p>'; el.querySelectorAll('[data-s]').forEach(b => b.onclick = () => { cur = sessions.find(s => s.id === b.dataset.s); picking = false; el.classList.add('open'); render(); }); };
+  const noahBubble = (html, t, first, live) => `<div class="kt-row l${first ? ' first' : ''}">${first ? '<i class="kt-av">N</i>' : '<i class="kt-av sp"></i>'}<div class="kt-col">${first ? '<span class="kt-name">노아</span>' : ''}<div class="kt-line"><div class="kt-b${live ? ' live' : ''}">${html}</div>${t ? `<time>${fmtTime(t)}</time>` : ''}</div></div></div>`;
+  const meBubble = (text, t) => `<div class="kt-row r"><div class="kt-line">${t ? `<time>${fmtTime(t)}</time>` : ''}<div class="kt-b">${md(text)}</div></div></div>`;
+  const typing = () => noahBubble('<span class="kt-typing"><i></i><i></i><i></i></span>', 0, true, true);
+  function pickerHtml() {
+    return noahBubble(`<p><b>뭐부터 할래?</b> 주제 하나 고르면 논술 문제 던질게. 답 쓰면 그다음부턴 토론이야.</p>
+      <div class="kt-pick"><select data-group aria-label="주제 묶음"><option value="">전체에서 무작위</option>${groups.map(g => `<option>${esc(g)}</option>`).join('')}</select><select data-topic aria-label="주제"></select><button type="button" class="btn sm dark" data-act="start">문제 받기</button></div>
+      ${key ? '' : '<p class="kt-warn">먼저 위에서 API 키를 넣어 줘. 키 없으면 나 말 못 해.</p>'}`, Date.now(), true);
+  }
+  const fillTopics = () => { const g = q('[data-group]'); if (!g) return; q('[data-topic]').innerHTML = '<option value="">무작위</option>' + T.filter(t => !g.value || t.group === g.value).map(t => `<option value="${esc(t.id)}">${esc(t.name)}</option>`).join(''); };
+  function render(liveText) {
+    const has = !!cur && !picking;
+    q('.kt-notice').hidden = !has; q('[data-sub]').textContent = has ? cur.group : '기획 토론 · 1:1'; q('[data-act="del"]').hidden = !cur || picking;
+    if (has) q('.kt-notice').innerHTML = `${ICON.pin}<span><b>공지</b> ${esc(cur.topic)}</span>`;
+    let h = '';
+    if (!has) { h = `<div class="kt-day"><span>${fmtDay(Date.now())}</span></div>` + pickerHtml(); }
+    else {
+      let lastDay = '', prevRole = '';
+      cur.messages.forEach((m, i) => { if (i === 0) return; const t = m.at || cur.at; const d = fmtDay(t); if (d !== lastDay) { h += `<div class="kt-day"><span>${d}</span></div>`; lastDay = d; prevRole = ''; } h += m.role === 'assistant' ? noahBubble(md(m.content), t, prevRole !== 'assistant') : meBubble(m.content, t); prevRole = m.role; });
+      if (liveText != null) h += liveText ? noahBubble(md(liveText), 0, prevRole !== 'assistant', true) : typing();
+    }
+    log.innerHTML = h; log.scrollTop = log.scrollHeight;
+    q('.kt-input').hidden = !has; if (!has) { fillTopics(); q('[data-group]').onchange = fillTopics; }
+    renderRooms();
+  }
   const sys = () => `${PERSONA}\n\n[이번 주제] ${cur.group} — ${cur.topic}\n[학습 자료]\n${cur.ctx}`;
   async function ask(messages) {
-    if (!key) { q('.noah-keyform').hidden = false; q('.noah-keyform input').focus(); return null; }
-    busy = true; el.classList.add('busy');
-    try { return await call(key, sys(), messages, t => renderLog(t)); }
-    catch (e) { renderLog(); q('.noah-log').insertAdjacentHTML('beforeend', `<p class="msg">${esc(e.message)}${/401|authentication/i.test(e.message) ? ' — 키를 확인해 줘.' : ''}</p>`); return null; }
-    finally { busy = false; el.classList.remove('busy'); }
+    if (!key) { showKey(true); return null; }
+    busy = true; el.classList.add('busy'); sendBtn.disabled = true;
+    try { return await call(key, sys(), messages, t => render(t)); }
+    catch (e) { render(); log.insertAdjacentHTML('beforeend', `<div class="kt-sys">${esc(e.message)}${/401|authentication/i.test(e.message) ? ' — 키를 확인해 줘.' : ''}</div>`); log.scrollTop = log.scrollHeight; return null; }
+    finally { busy = false; el.classList.remove('busy'); sendBtn.disabled = !ta.value.trim(); }
   }
-  q('[data-group]').onchange = fillTopics; fillTopics();
-  q('[data-keybtn]').onclick = () => { const f = q('.noah-keyform'); f.hidden = !f.hidden; if (!f.hidden) f.querySelector('input').focus(); };
-  q('[data-keydel]').onclick = () => { key = ''; ls.del(KEY); renderKey(); };
-  q('.noah-keyform').onsubmit = async e => { e.preventDefault(); const v = e.target.querySelector('input').value.trim(); if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v) || v.startsWith('sk-ant-admin')) { alert('Claude API 키 형식이 아니에요 (sk-ant-로 시작하는 일반 키)'); return; } try { const r = await fetch(`${API}/models/${MODEL}`, {headers: {'x-api-key': v, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true'}}); if (!r.ok) throw new Error(r.status); } catch (err) { if (!confirm(`키 확인에 실패했어요(${err.message}). 그래도 저장할까요?`)) return; } key = v; ls.set(KEY, key); e.target.hidden = true; e.target.querySelector('input').value = ''; renderKey(); };
-  q('[data-new]').onclick = async () => {
+  async function start() {
     if (busy) return; const g = q('[data-group]').value, id = q('[data-topic]').value; const pool = T.filter(t => (!g || t.group === g) && (!id || t.id === id)); const t = pool[Math.floor(Math.random() * pool.length)]; if (!t) return;
-    cur = {id: 's' + Date.now(), at: Date.now(), topic: t.name, group: t.group, ctx: t.ctx, messages: [{role: 'user', content: `"${t.name}"에 대해 논술형 문제 하나를 내 줘. 형식: 첫 줄에 한 줄 상황 설정(가능하면 AI 사주 웹사이트 같은 실제 기획 상황), 그다음 **문제**, 그다음 답에 꼭 들어가야 할 요구사항 2~3개, 마지막에 "분량: ○○자 안팎". 정답이나 힌트는 주지 마. 노아 말투로 짧게 한마디 붙여도 돼.`}]};
-    renderLog(''); renderHist(); const out = await ask(cur.messages); if (out == null) { if (!key) { cur = null; renderLog(); } return; } cur.messages.push({role: 'assistant', content: out}); save(); renderLog(); renderHist(); q('.noah-input textarea').focus();
-  };
-  q('.noah-input').onsubmit = async e => { e.preventDefault(); if (busy || !cur) return; const ta = e.target.querySelector('textarea'), v = ta.value.trim(); if (!v) return; cur.messages.push({role: 'user', content: v}); ta.value = ''; save(); renderLog(''); const out = await ask(cur.messages.map(m => ({role: m.role, content: m.content}))); if (out == null) { cur.messages.pop(); ta.value = v; renderLog(); return; } cur.messages.push({role: 'assistant', content: out}); save(); renderLog(); renderHist(); };
-  q('.noah-input textarea').onkeydown = e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) q('.noah-input').requestSubmit(); };
-  renderKey(); renderHist(); renderLog();
+    if (!key) { showKey(true); return; }
+    const now = Date.now();
+    cur = {id: 's' + now, at: now, last: now, topic: t.name, group: t.group, ctx: t.ctx, messages: [{role: 'user', at: now, content: `"${t.name}"에 대해 논술형 문제 하나를 내 줘. 형식: 첫 줄에 한 줄 상황 설정(가능하면 AI 사주 웹사이트 같은 실제 기획 상황), 그다음 **문제**, 그다음 답에 꼭 들어가야 할 요구사항 2~3개, 마지막에 "분량: ○○자 안팎". 정답이나 힌트는 주지 마. 노아 말투로 짧게 한마디 붙여도 돼.`}]};
+    picking = false; render(''); const out = await ask(cur.messages.map(({role, content}) => ({role, content})));
+    if (out == null) { cur = null; picking = true; render(); return; }
+    cur.messages.push({role: 'assistant', at: Date.now(), content: out}); cur.last = Date.now(); save(); render(); ta.focus();
+  }
+  async function send() {
+    const v = ta.value.trim(); if (!v || busy || !cur) return;
+    cur.messages.push({role: 'user', at: Date.now(), content: v}); ta.value = ''; grow(); cur.last = Date.now(); save(); render('');
+    const out = await ask(cur.messages.map(({role, content}) => ({role, content})));
+    if (out == null) { cur.messages.pop(); ta.value = v; grow(); render(); return; }
+    cur.messages.push({role: 'assistant', at: Date.now(), content: out}); cur.last = Date.now(); save(); render();
+  }
+  const grow = () => { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 140) + 'px'; sendBtn.disabled = busy || !ta.value.trim(); };
+  el.addEventListener('click', e => { const b = e.target.closest('[data-act]'); if (!b) return; const a = b.dataset.act;
+    if (a === 'new') { cur = null; picking = true; el.classList.add('open'); render(); }
+    else if (a === 'start') start();
+    else if (a === 'key') showKey(q('.kt-key').hidden);
+    else if (a === 'back') el.classList.remove('open');
+    else if (a === 'del' && cur && confirm('이 토론을 지울까요?')) { sessions = sessions.filter(s => s.id !== cur.id); ls.set(HIST, sessions); cur = null; picking = true; render(); } });
+  q('.kt-key form').onsubmit = async e => { e.preventDefault(); const v = e.target.querySelector('input').value.trim(); if (!/^sk-ant-[A-Za-z0-9_-]{20,}$/.test(v) || v.startsWith('sk-ant-admin')) { alert('Claude API 키 형식이 아니에요 (sk-ant-로 시작하는 일반 키)'); return; } try { const r = await fetch(`${API}/models/${MODEL}`, {headers: {'x-api-key': v, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true'}}); if (!r.ok) throw new Error(r.status); } catch (err) { if (!confirm(`키 확인에 실패했어요(${err.message}). 그래도 저장할까요?`)) return; } key = v; ls.set(KEY, key); e.target.querySelector('input').value = ''; showKey(false); render(); };
+  q('[data-keydel]').onclick = () => { key = ''; ls.del(KEY); keyst(); render(); };
+  ta.oninput = grow; ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(); } };
+  q('.kt-input').onsubmit = e => { e.preventDefault(); send(); };
+  picking = true; if (!key) showKey(true); render();
 }
 window.NOAH = { mount, topics, PERSONA, MODEL };
 })();

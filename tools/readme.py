@@ -33,7 +33,7 @@ L = f'''# planning
 
 - **사례 중심**: 이 저장소에는 사례만 모읍니다. 제품 기획은 여기서 하지 않고, 기획자가 따로 합니다.
 - **처음 읽는다면**: [docs/method-guide.md](docs/method-guide.md)에서 이론을 처음부터 끝까지 읽을 수 있습니다.
-- **웹에서 보기**: `site/`의 이론 페이지(1~5장, `index.html` · `ch2~5.html`), 시장 리포트(`reports.html`), 기획 사례(`db.html`, 이 사례 DB), 실무 툴(`lab.html`: 노아 토론 · 데이터 분석 · A/B 실험 · 브랜딩 · 마케팅 전략 · 콘텐츠 — 방법 DB `site/methods.js`·`site/triggers.js`, 계산 엔진 `site/lab-core.js`). 배포 주소 https://360-degree-parallax.github.io/planning/ · 로컬은 `python3 tools/site.py && python3 -m http.server -d site`. 이론 내용은 `site/theory.js`(원본 docs/method-guide.md와 함께 고친다).
+- **웹에서 보기**: `site/`의 이론 페이지(1~6장, `index.html` · `ch2~6.html`), 시장 리포트(`reports.html`), 기획 사례(`db.html`, 이 사례 DB), 노아(`noah.html`, 논술·토론). 6장 실무 도구의 원본은 방법 DB `site/methods.js`·`site/triggers.js`, 계산 엔진 `site/lab-core.js`, 실행 UI `site/tools-ui.js`(기획 툴에서 재사용 예정). 배포 주소 https://360-degree-parallax.github.io/planning/ · 로컬은 `python3 tools/site.py && python3 -m http.server -d site`. 이론 내용은 `site/theory.js`(원본 docs/method-guide.md와 함께 고친다).
 - **가설을 세우는 힘과 부수는 힘**: 본질은 두 힘을 함께 쓸 때 보입니다. 이 DB는 '문제 본질 발견의 기술' 단계를 다음처럼 담습니다.
 
 | 단계 | 이 DB에서 | 범위 |
